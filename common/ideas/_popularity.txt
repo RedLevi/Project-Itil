@@ -1,0 +1,52 @@
+ideas = {
+
+	popularity = {
+	law = yes
+		very_low_popularity = {
+			available = { always = no }
+			removal_cost = -1
+			modifier = {}
+			picture = generic_morale_bonus
+			
+			traits = { popularity_trait }
+		}
+		
+		low_popularity = {
+			available = { always = no }
+			removal_cost = -1
+			modifier = {political_power_gain = 0.3}
+			picture = generic_morale_bonus
+			
+			traits = { popularity_trait }
+		}
+		
+		normal_popularity = {
+			available = { always = no }
+			default = yes
+			removal_cost = -1
+			modifier = {political_power_gain = 0.6}
+			picture = generic_morale_bonus 
+			
+			traits = { popularity_trait }
+		}
+		
+		high_popularity = {
+			available = { always = no }
+			removal_cost = -1
+			modifier = {political_power_gain = 0.8}
+			picture = generic_morale_bonus
+			
+			traits = { popularity_trait }
+		}
+		
+		very_high_popularity = {
+			available = { always = no }
+			removal_cost = -1
+			modifier = {political_power_gain = 1}
+			picture = generic_morale_bonus
+			
+			traits = { popularity_trait }
+		}
+	
+	}
+}

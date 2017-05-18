@@ -1,0 +1,26 @@
+
+state={
+	id=381
+	name="STATE_381"
+	manpower = 225564
+	state_category = rural
+	
+	history={
+		owner = AME
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = USA
+		add_core_of = WYO
+		add_core_of = AME
+                
+		victory_points = {
+			4723 1 
+		}
+	}
+
+	provinces={
+		1815 4610 4723 4794 4820 7688 7814 7888 10640 10711 12561 12633 12651 
+	}
+	
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=769
+	name="STATE_769"
+
+	history={
+		owner = JAP
+		add_core_of = CHI
+		add_core_of = MAN
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+
+		}
+		victory_points = {
+			1150 1 
+		}
+
+	}
+
+	provinces={
+		1150
+	}
+	manpower = 1264620
+	buildings_max_level_factor = 1.000
+	state_category = town
+}

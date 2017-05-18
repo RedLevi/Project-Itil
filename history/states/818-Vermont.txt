@@ -1,0 +1,25 @@
+
+state={
+	id=818
+	name="Vermont"
+
+	history={
+		owner = AME
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+
+		}
+		add_core_of = USA
+		add_core_of = VER
+		add_core_of = AME
+
+	}
+
+	provinces={
+		4445 7629 9675 13158 
+	}
+	manpower=1000000
+	buildings_max_level_factor=1.000
+	state_category= town
+}

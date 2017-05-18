@@ -1,0 +1,25 @@
+
+state={
+	id=798
+	name="Pljevlja"
+	resources={
+		aluminium=50.000
+	}
+	history={
+		owner = MNT
+		add_core_of = MNT
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+
+	}
+
+	provinces={
+		937 3922 6913 
+	}
+	manpower=395500
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,27 @@
+
+state=
+{
+	id = 778
+	name = "Budjak"
+	manpower = 500000
+	
+	state_category = rural
+	
+	history=
+	{
+		owner = ROM
+		buildings = {
+			infrastructure = 4
+			dockyard = 1
+			6727 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = ROM
+        add_claim_by = SOV
+        add_claim_by = UKR			
+	}
+	provinces=
+	{
+3701 6727 9683  	}
+}

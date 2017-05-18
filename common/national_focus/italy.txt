@@ -1,0 +1,21 @@
+focus_tree = {
+	id = italian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = ITA
+		}
+
+		#modifier = {
+		#	add = 10
+		#	original_tag = ITA
+		#}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+	}

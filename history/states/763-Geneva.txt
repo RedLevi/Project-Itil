@@ -1,0 +1,26 @@
+
+state={
+	id=763
+	name="STATE_763"
+
+	history={
+                victory_points = {
+			6666 3
+		}
+		owner = SWI
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+
+		}
+		add_core_of = SWI
+
+	}
+
+	provinces={
+		6666 11590 13124 
+	}
+	manpower=600000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

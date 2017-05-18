@@ -1,0 +1,18 @@
+﻿l_english:
+
+####events####
+politics.1.t:0 "Downfall in stability"
+politics.1.d:0 "Recent political changes have made us more unstable."
+politics.1.a:0 "Terrible news!"
+politics.2.t:0 "Increase our stability?"
+politics.2.d:0 "Recent political development have made it possible for us to increase our stability. Should we invest our political capital now or save it for later?"
+politics.2.a:0 "Raise our stability"
+politics.2.b:0 "Maybe later"
+politics.3.t:0 "Change in ruling party support"
+politics.3.d:0 "Changes in the political situation have affected the amount of public support to our ruling party."
+politics.3.a:0 "Very well"
+
+
+####tooltip####
+stability_downgrade_tooltip:0 "Lose one level of stability"
+stability_upgrade_tooltip:0 "Gain one level of stability"

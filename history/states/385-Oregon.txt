@@ -1,0 +1,32 @@
+
+state={
+	id = 385
+	name = "Salem"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			air_base = 6
+			12211 = {
+				naval_base = 3
+
+			}
+
+		}
+		add_core_of = USA
+		add_core_of = ORE
+		victory_points = {
+			4328 1 
+		}
+
+	}
+
+	provinces={
+		505 528 4328 4380 10183 11495 11733 12211 12281 
+	}
+	manpower = 500000
+	buildings_max_level_factor=1.000
+	state_category= average
+}

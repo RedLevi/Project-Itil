@@ -1,0 +1,137 @@
+﻿capital = 613 # Nanjing
+
+oob = "CHI_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+	early_fighter = 1
+	early_bomber = 1
+	mass_assault = 1
+	fleet_in_being = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+}
+
+set_convoys = 40
+
+set_politics = {
+
+	parties = {
+	    conservatism = {
+			popularity = 15
+		}
+
+		national_integralism = {
+			popularity = 10
+		}
+
+		liberalism = {
+			popularity = 5
+		}
+		
+		communism = {
+			popularity = 2
+		}
+		
+		socialism = {
+			popularity = 5
+		}
+		
+		reactionarism = {
+			popularity = 63
+		}
+		
+	}
+	
+	ruling_party = reactionarism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Aisin Gioro Puyi"
+	
+	picture = "gfx/leaders/MAN/Portrait_Manchuria_Henry_Pu_Yi.dds"
+	expire = "1960.1.1"
+	ideology = absolutionism
+	traits = {
+		warrior_code
+	}
+}
+
+create_country_leader = {
+	name = "Aisin Gioro Puyi"
+	
+	picture = "gfx/leaders/MAN/Portrait_Manchuria_Henry_Pu_Yi.dds"
+	expire = "1960.1.1"
+	ideology = autocracy
+	traits = {
+		warrior_code
+	}
+}
+
+create_country_leader = {
+	name = "Mao Zedong"
+	desc = "POLITICS_MAO_ZEDONG_DESC"
+	picture = "Portrait_China_Mao_Zedong.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		cornered_fox
+	}
+}
+
+create_country_leader = {
+	name = "Wang Jingwei"
+	desc = "POLITICS_WANG_JINGWEI_DESC"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_fascism.dds"
+	expire = "1965.1.1"
+	ideology = national_integralism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Zhang Lan"
+	desc = "POLITICS_ZHANG_LAN_DESC"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = fabianism
+	traits = {
+		#
+	}
+}
+
+add_opinion_modifier = { target = PRC modifier = hostile_status }
+
+create_field_marshal = {
+	name = "Tu Yu-ming"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
+	traits = { defensive_doctrine }
+	skill = 4
+}
+
+create_field_marshal = {
+	name = "Hsueh Yueh"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
+	traits = { offensive_doctrine }
+	skill = 3
+}
+
+create_field_marshal = {
+	name = "Tai An-lan"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+	traits = {  offensive_doctrine }
+	skill = 3
+}
+
+create_field_marshal = {
+	name = "Wang Yao-wu"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
+	traits = { defensive_doctrine }
+	skill = 2
+}

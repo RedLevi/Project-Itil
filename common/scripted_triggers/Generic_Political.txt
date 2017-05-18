@@ -1,0 +1,297 @@
+very_low_popularity_trigger = {
+
+	OR = {
+	
+		AND = {
+		
+			has_government = national_integralism
+			
+			national_integralism < 0.1 
+		
+		}
+		
+		AND = {
+		
+			has_government = reactionarism
+			
+			reactionarism < 0.1 
+		
+		}
+		
+		AND = {
+		
+			has_government = conservatism
+			
+			conservatism < 0.1 
+		
+		}
+		
+		AND = {
+		
+			has_government = liberalism
+			
+			liberalism < 0.1 
+		
+		}
+		
+		AND = {
+		
+			has_government = socialism
+			
+			socialism < 0.1 
+		
+		}
+		
+		AND = {
+		
+			has_government = communism	
+			
+			communism < 0.1 
+		
+		}
+		
+	}
+
+}
+
+low_popularity_trigger = {
+
+	OR = {
+	
+		AND = {
+		
+			has_government = national_integralism
+			
+			national_integralism < 0.2
+			national_integralism > 0.1
+		
+		}
+		
+		AND = {
+		
+			has_government = reactionarism
+			
+			reactionarism < 0.2 
+			reactionarism > 0.1 
+		
+		}
+		
+		AND = {
+		
+			has_government = conservatism
+			
+			conservatism < 0.2 
+			conservatism > 0.1 
+		
+		}
+		
+		AND = {
+		
+			has_government = liberalism
+			
+			liberalism < 0.2 
+			liberalism > 0.1 
+		
+		}
+		
+		AND = {
+		
+			has_government = socialism
+			
+			socialism < 0.2 
+			socialism > 0.1 
+		
+		}
+		
+		AND = {
+		
+			has_government = communism	
+			
+			communism < 0.2 
+			communism > 0.1 
+		
+		}
+		
+	}
+
+}
+
+normal_popularity_trigger = {
+
+	OR = {
+	
+		AND = {
+		
+			has_government = national_integralism
+			
+			national_integralism < 0.4
+			national_integralism > 0.2
+		
+		}
+		
+		AND = {
+		
+			has_government = reactionarism
+			
+			reactionarism < 0.4
+			reactionarism > 0.2 
+		
+		}
+		
+		AND = {
+		
+			has_government = conservatism
+			
+			conservatism < 0.4 
+			conservatism > 0.2 
+		
+		}
+		
+		AND = {
+		
+			has_government = liberalism
+			
+			liberalism < 0.4 
+			liberalism > 0.2 
+		
+		}
+		
+		AND = {
+		
+			has_government = socialism
+			
+			socialism < 0.4 
+			socialism > 0.2 
+		
+		}
+		
+		AND = {
+		
+			has_government = communism	
+			
+			communism < 0.4  
+			communism > 0.2 
+		
+		}
+		
+	}
+
+}
+
+high_popularity_trigger = {
+
+	OR = {
+	
+		AND = {
+		
+			has_government = national_integralism
+			
+			national_integralism < 0.65
+			national_integralism > 0.4
+		
+		}
+		
+		AND = {
+		
+			has_government = reactionarism
+			
+			reactionarism < 0.65
+			reactionarism > 0.4 
+		
+		}
+		
+		AND = {
+		
+			has_government = conservatism
+			
+			conservatism < 0.65
+			conservatism > 0.4 
+		
+		}
+		
+		AND = {
+		
+			has_government = liberalism
+			
+			liberalism < 0.65 
+			liberalism > 0.4 
+		
+		}
+		
+		AND = {
+		
+			has_government = socialism
+			
+			socialism < 0.65 
+			socialism > 0.4
+		
+		}
+		
+		AND = {
+		
+			has_government = communism	
+			
+			communism < 0.65 
+			communism > 0.4
+		
+		}
+		
+	}
+
+}
+
+very_high_popularity_trigger = {
+
+	OR = {
+	
+		AND = {
+		
+			has_government = national_integralism
+			
+			national_integralism > 0.65
+		
+		}
+		
+		AND = {
+		
+			has_government = reactionarism
+			
+			reactionarism > 0.65 
+		
+		}
+		
+		AND = {
+		
+			has_government = conservatism
+
+			conservatism > 0.65 
+		
+		}
+		
+		AND = {
+		
+			has_government = liberalism
+
+			liberalism > 0.65
+		
+		}
+		
+		AND = {
+		
+			has_government = socialism
+
+			socialism > 0.65
+		
+		}
+		
+		AND = {
+		
+			has_government = communism	
+
+			communism > 0.65
+		
+		}
+		
+	}
+
+}

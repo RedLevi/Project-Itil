@@ -1,0 +1,26 @@
+
+state={
+	id=47
+	name="STATE_47"
+
+	history={
+		owner = GRE
+                victory_points = {
+			6930 1
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+
+		}
+		add_core_of = GRE
+
+	}
+
+	provinces={
+		863 3864 3973 6930 11786
+	}
+	manpower = 1000000
+	buildings_max_level_factor = 1.000
+	state_category = town
+}

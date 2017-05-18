@@ -1,0 +1,29 @@
+
+state={
+	id=165
+	name="Barcelona"
+
+	history={
+		owner = SPR
+                victory_points = {
+			6836 1 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1
+
+		}
+		add_core_of = SPR
+		add_core_of = CAT
+
+	}
+
+	provinces={
+		854 6927 9764 9824 11779 13213
+	}
+	manpower = 1636537
+	buildings_max_level_factor=1.000
+	state_category = town
+}

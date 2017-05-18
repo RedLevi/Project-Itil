@@ -1,0 +1,21 @@
+state={
+	id=841
+	name="Warmia-Masuria"
+	manpower = 1964599
+	state_category = town
+
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+		}
+		add_core_of = GER
+	}
+
+	provinces={
+		266 3351 3380 6375 6402 9327 9346 9372 9398 11245 11386 
+	}
+}
+
+

@@ -1,0 +1,23 @@
+
+state={
+	id=822
+	name="Cameroon"
+
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 1
+
+		}
+
+	}
+
+	provinces={
+		1993 2080 5036 5054 6008 6039 7963 8078 9137 11012 11194 12830 
+	}
+	manpower= 1564000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

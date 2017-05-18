@@ -1,0 +1,34 @@
+
+state={
+	id=816
+	name="West Virginia"
+
+	history={
+		owner = AME
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			air_base = 10
+
+		}
+		add_core_of = USA
+		add_core_of = WVI
+		add_core_of = AME
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 4
+				dockyard = 5
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		801 3941 3975 4627 6850 6958 6971 7466 7588 7646 9923 10441 11888 
+	}
+	manpower=1500000
+	buildings_max_level_factor=1.000
+	state_category= town
+}

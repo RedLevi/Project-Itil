@@ -1,0 +1,102 @@
+﻿capital = 107
+
+oob = "YUG_1936"
+
+set_research_slots = 3
+
+set_technology = {
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	early_fighter = 1
+	gwtank = 1
+	basic_light_tank = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+}
+
+set_convoys = 0
+
+set_politics = {
+
+	parties = {
+	    conservatism = {
+			popularity = 25
+		}
+
+		national_integralism = {
+			popularity = 10
+		}
+
+		liberalism = {
+			popularity = 15
+		}
+		
+		communism = {
+			popularity = 2
+		}
+		
+		socialism = {
+			popularity = 5
+		}
+		
+		reactionarism = {
+			popularity = 43
+		}
+		
+	}
+	
+	ruling_party = reactionarism
+	last_election = "1936.1.1"
+	election_frequency = 36
+	elections_allowed = yes
+}
+
+set_national_unity = 0.6
+
+create_country_leader = {
+	name = "Draza Mihailovic"
+	desc = ""
+	picture = "Portrait_Yugoslavia_Prince_Paul.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_conservatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Milan Nedic"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+	expire = "1965.1.1"
+	ideology = national_integralism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Peter Karadordevic"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+	expire = "1965.1.1"
+	ideology = autocracy
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Zivorad Jovanovic"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}

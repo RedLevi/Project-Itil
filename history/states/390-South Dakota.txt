@@ -1,0 +1,29 @@
+
+state={
+	id=390
+	name="East South Dakota"
+
+	history={
+		owner = AME
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+		add_core_of = USA
+		add_core_of = SDA
+		add_core_of = AME
+		victory_points = {
+			12620 1 
+		}
+
+	}
+
+	provinces={
+		4880 7862 10569 10595 12620 12667 
+	}
+	manpower=352849
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

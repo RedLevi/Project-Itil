@@ -1,0 +1,26 @@
+
+state={
+	id=103
+	name="Lika" 
+	manpower = 731700
+
+	state_category = town
+
+
+	history={
+		owner = CRO
+		victory_points = {
+			11564 3
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+		}
+		#add_claim_by = ITA #added by focus
+		add_core_of = CRO
+	}
+
+	provinces={
+		591 3601 6611 11564  
+	}
+}

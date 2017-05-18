@@ -1,0 +1,22 @@
+
+state={
+	id = 756
+	name = "STATE_756"
+	manpower = 982940
+	state_category = rural
+	resources={
+		steel=8
+	}
+
+	history={
+		owner = LBA
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = LBA
+	}
+
+	provinces={
+		1037 1046 4061 4129 7077 7180 
+	}
+}

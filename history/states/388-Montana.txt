@@ -1,0 +1,28 @@
+
+state={
+	id=388
+	name="Gold West Country"
+
+	history={
+		owner = AME
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+
+		}
+		add_core_of = USA
+		add_core_of = MNN
+		add_core_of = AME
+		victory_points = {
+			7779 1 
+		}
+
+	}
+
+	provinces={
+		1736 1854 1857 4838 6742 7779 12676 
+	}
+	manpower=187605
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

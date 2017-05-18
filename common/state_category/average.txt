@@ -1,0 +1,8 @@
+state_categories={
+	average = {
+		local_building_slots = 3
+	
+		color = { 220 175 0 }
+
+	}
+}

@@ -1,0 +1,56 @@
+﻿capital = 298
+
+oob = "LIB_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 10
+
+set_politics = {
+
+	parties = {
+	    conservatism = {
+			popularity = 40
+		}
+
+		national_integralism = {
+			popularity = 1
+		}
+
+		liberalism = {
+			popularity = 30
+		}
+		
+		communism = {
+			popularity = 5
+		}
+		
+		socialism = {
+			popularity = 9
+		}
+		
+		reactionarism = {
+			popularity = 15
+		}
+		
+	}
+	
+	ruling_party = conservatism
+	last_election = "1931.1.1"
+	election_frequency = 96
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Edwin Barclay"
+	desc = "POLITICS_EDWIN_BARCLAY_DESC"
+	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = democratic_conservatism
+	traits = {
+		#
+	}
+}

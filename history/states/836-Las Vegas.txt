@@ -1,0 +1,30 @@
+
+state={
+	id = 836
+	name="South Nevada"
+	resources={
+		tungsten=62.000
+		aluminium=44.000
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = USA
+		add_core_of = NEV
+		victory_points = {
+			4799 1 
+		}
+
+	}
+
+	provinces={
+		4521 4799 4816 7879 12399 12425
+	}
+	manpower=51057
+	buildings_max_level_factor=1.000
+	state_category= pastoral
+}

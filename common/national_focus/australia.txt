@@ -1,0 +1,21 @@
+focus_tree = {
+	id = australian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = AST
+		}
+
+		#modifier = {
+		#	add = 10
+		#	original_tag = AST
+		#}
+	}
+	
+	default = no
+	
+	continuous_focus_position = { x = 50 y = 1000 }
+	}

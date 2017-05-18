@@ -1,0 +1,30 @@
+
+state={
+	id=379
+	name="North Nevada"
+	resources={
+		steel=136.000
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 4
+                        industrial_complex = 1
+
+		}
+		add_core_of = USA
+		add_core_of = NEV
+		victory_points = {
+			4607 1 
+		}
+
+	}
+
+	provinces={
+		1862 4607 4736 7756 7827 10422 10591 12134 
+	}
+	manpower= 40000
+	buildings_max_level_factor=1.000
+	state_category= pastoral
+}

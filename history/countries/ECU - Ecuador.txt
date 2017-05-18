@@ -1,0 +1,58 @@
+﻿capital = 305
+
+oob = "ECU_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	early_fighter = 1
+}
+set_country_flag = monroe_doctrine
+
+set_convoys = 5
+
+set_politics = {
+
+	parties = {
+	    conservatism = {
+			popularity = 10
+		}
+
+		national_integralism = {
+			popularity = 1
+		}
+
+		liberalism = {
+			popularity = 30
+		}
+		
+		communism = {
+			popularity = 5
+		}
+		
+		socialism = {
+			popularity = 39
+		}
+		
+		reactionarism = {
+			popularity = 15
+		}
+	
+	}
+	
+	ruling_party = socialism
+	last_election = "1933.12.15"
+	election_frequency = 84
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Federico Páez"
+	desc = "POLITICS_FEDERICO_PAEZ_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
+	expire = "1965.1.1"
+	ideology = fabianism
+	traits = {
+		#
+	}
+}

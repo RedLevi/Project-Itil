@@ -1,0 +1,26 @@
+
+state={
+	id=786
+	name="Tarnovo"
+
+	history={
+		owner = BUL
+                victory_points = {
+			9612 1 
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+
+		}
+		add_core_of = BUL
+
+	}
+
+	provinces={
+		3796 3819 3952 6842 9610 9612 
+	}
+	manpower=1111100
+	buildings_max_level_factor=1.000
+	state_category= rural
+}

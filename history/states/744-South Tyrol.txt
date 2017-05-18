@@ -1,0 +1,25 @@
+
+state={
+	id=744
+	name="STATE_744"
+	manpower = 300000
+	
+	state_category = town
+	
+	resources={
+		aluminium=22
+	}
+
+	history={
+		owner = AUS
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+		}
+		add_core_of = AUS
+	}
+
+	provinces={
+		6675 9630 11615 
+	}
+}

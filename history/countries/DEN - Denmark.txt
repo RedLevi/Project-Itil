@@ -1,0 +1,108 @@
+﻿capital = 37
+
+oob = "DEN_1936"
+
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	early_fighter = 1
+	cv_early_fighter = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_heavy_cruiser = 1
+	transport = 1
+}
+
+set_politics = {
+
+	parties = {
+	    conservatism = {
+			popularity = 25
+		}
+
+		national_integralism = {
+			popularity = 1
+		}
+
+		liberalism = {
+			popularity = 20
+		}
+		
+		communism = {
+			popularity = 5
+		}
+		
+		socialism = {
+			popularity = 34
+		}
+		
+		reactionarism = {
+			popularity = 15
+		}
+	}
+	
+	ruling_party = socialism
+	last_election = "1935.10.22"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_convoys = 40
+
+create_country_leader = {
+	name = "Thorvald Stauning"
+	desc = "POLITICS_THORVALD_STAUNING_DESC"
+	picture = "Portrait_Denmark_Thorvald_Stauning.dds"
+	expire = "1965.1.1"
+	ideology = fabianism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Frits Clausen"
+	desc = "POLITICS_FRITS_CLAUSEN_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = national_integralism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Aksel Larsen"
+	desc = "POLITICS_AKSEL_LARSEN_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Peter Rochegune Munch"
+	desc = "POLITICS_PETER_ROCHEGUNE_MUNCH_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+	expire = "1965.1.1"
+	ideology = democratic_conservatism
+	traits = {
+		#
+	}
+}
+
+
+create_corps_commander = {
+	name = "Wilhelm Wain Prior"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { trickster }
+	skill = 3
+}

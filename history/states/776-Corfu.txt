@@ -1,0 +1,22 @@
+
+state={
+	id = 776
+	name="Corfu"
+
+	history={
+		owner = GRE
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = GRE
+
+	}
+
+	provinces={
+		10203 
+	}
+	manpower= 20000
+	buildings_max_level_factor=1.000
+	state_category = small_island
+}

@@ -1,0 +1,24 @@
+state={
+	id=856
+	name="Suwalki"
+	history={
+		owner = LIT
+		victory_points = {
+			3393 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+
+		}
+		add_core_of = LIT
+		add_core_of = POL 
+
+	}
+	provinces={
+		400 3254 
+	}
+	manpower=98900
+	state_category=rural
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=771
+	name="Styria"
+
+	history={
+		owner = AUS
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 1
+
+		}
+		victory_points = {
+			9648 5 
+		}
+		add_core_of = AUS
+
+	}
+
+	provinces={
+		653 6687 6690 6691 9646 9648 9650 9679 
+	}
+	manpower=1500000
+	buildings_max_level_factor=1.000
+	state_category = city
+}

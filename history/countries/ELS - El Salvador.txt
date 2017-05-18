@@ -1,0 +1,59 @@
+﻿capital = 314
+
+oob = "ELS_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	early_fighter = 1
+}
+set_country_flag = monroe_doctrine
+
+set_convoys = 5
+
+
+set_politics = {
+
+	parties = {
+	    conservatism = {
+			popularity = 20
+		}
+
+		national_integralism = {
+			popularity = 40
+		}
+
+		liberalism = {
+			popularity = 10
+		}
+		
+		communism = {
+			popularity = 7
+		}
+		
+		socialism = {
+			popularity = 15
+		}
+		
+		reactionarism = {
+			popularity = 8
+		}
+		
+	}
+	
+	ruling_party = national_integralism
+	last_election = "1935.1.15"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Maximiliano Hernández Martínez"
+	desc = "POLITICS_MAXIMILIANO_HERNANDEZ_MARTINEZ_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+	expire = "1965.1.1"
+	ideology = national_integralism
+	traits = {
+		#
+	}
+}

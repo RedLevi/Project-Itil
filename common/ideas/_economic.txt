@@ -1,0 +1,331 @@
+ideas = {
+
+	economy = { 
+		law = yes
+		free_market_law = {
+			
+			
+			available = {
+				
+				OR = {
+				
+					has_government = liberalism
+					has_government = conservatism
+				
+				}
+				
+			}
+			
+			removal_cost = -1
+			cost = 200 
+		
+			modifier = {
+				consumer_goods_factor = 0.05  
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				industrial_capacity_factory = -0.15 
+                production_factory_max_efficiency_factor = -0.1
+			}
+			
+			default = yes
+		
+		}
+		
+		mixed_economy_law = {
+			
+			available = {
+		
+				OR = { 
+				
+					has_government = conservatism 
+					has_government = reactionarism
+					has_government = socialism
+					
+					AND = {
+					
+						has_government = liberalism
+						
+						has_country_flag = government_intervention
+					
+					}
+					
+					AND = {
+					
+						has_government = national_integralism
+						
+						has_country_flag = market_cooperation
+					
+					}
+				
+				}
+				
+			}
+			removal_cost = -1
+			cost = 200 
+			
+			modifier = {
+				consumer_goods_factor = 0.15 
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				conversion_cost_civ_to_mil_factor= -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				industrial_capacity_factory = -0.05  
+				
+			}
+			
+			default = yes
+			
+		}
+		
+		socialized_economy_law = {
+		
+			available = {
+			
+				OR = {
+				
+					has_government = socialism
+					
+					AND = {
+					
+						has_government = liberalism
+						
+						has_country_flag = government_intervention
+					
+					}
+				
+				}
+			
+			}
+			
+			cost = 200 
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.2  
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_arms_factory_factor = -0.2
+				industrial_capacity_factory = -0.1 
+				political_power_gain = 0.05 
+			}
+			
+			default = yes
+			
+		}
+		
+		collectivized_economy_law = {
+			
+			available = {
+			
+				OR = {
+					
+					has_government = socialism
+					
+					AND = {
+					
+						has_government = communism
+						
+						NOT = {
+							
+							has_country_flag = state_socialism
+						
+						}
+					
+					}
+					
+				}			
+			}
+			
+			cost = 200
+			removal_cost = -1
+			
+			modifier = {
+			
+				consumer_goods_factor = 0.1 
+				industrial_capacity_factory = -0.1 
+				political_power_gain = 0.1
+				
+			}
+			
+			default = yes 
+		}
+		
+		nationalized_economy_law = {
+			
+			available = {
+			
+				OR = {
+				
+					has_government = national_integralism
+					has_government = reactionarism
+					
+					AND = {
+					
+						OR = {
+						
+							has_government = communism
+							has_government = socialism
+						
+						}
+						
+						has_country_flag = state_socialism
+					
+					}
+				}			
+			}
+
+			cost = 200 
+			removal_cost = -1
+			
+			modifier = {
+			
+				consumer_goods_factor = 0.25  
+				production_speed_arms_factory_factor = 0.5
+				conversion_cost_civ_to_mil_factor= -0.5
+				conversion_cost_mil_to_civ_factor = -0.5
+				production_factory_max_efficiency_factor = 0.1 
+				industrial_capacity_factory = 0.2 
+				political_power_gain = -0.05 
+				
+			}
+			
+			default = yes 
+		}
+	}
+	
+	trade_laws = { 
+		law = yes
+
+		free_trade = {
+			
+			
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				min_export = 0.8
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.15
+				research_time_factor = -0.10
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		export_focus = {
+			
+			
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				min_export = 0.5
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+				research_time_factor = -0.05
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = no
+		}
+		
+		limited_exports = {
+			
+			
+			available = {
+				OR = {
+					AND = {
+						has_government = democratic
+						has_war = yes
+						any_enemy_country = {
+							ic_ratio = { 
+								tag = ROOT 
+								ratio > 0.2
+							}
+						}
+					}
+					AND = {
+						NOT = { has_government = democratic }
+						OR = {
+							has_idea = partial_economic_mobilisation
+							has_idea = war_economy
+							has_idea = tot_economic_mobilisation
+						}
+					}
+				}
+			}
+		
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				min_export = 0.25
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+				research_time_factor = -0.01
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 0
+					
+					is_major = no
+					is_in_faction = yes
+					has_war = yes
+				}
+   			}
+		}
+		
+		closed_economy = {
+			
+			
+			available = {
+				has_war = yes
+				OR = { 
+					has_government = fascism
+					has_government = communism
+				}
+				OR = {
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation
+				}
+				OR = {
+					NOT = {	tag = SOV }
+					NOT = { has_opinion_modifier = MR_pact }
+				}
+			}
+			
+			cost = 150
+			removal_cost = -1
+			
+			
+			modifier = {
+				min_export = 0
+			}
+			
+			on_add = {
+				custom_effect_tooltip = closed_economy_TT
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 0
+					
+					is_major = no
+					is_in_faction = yes
+					has_war = yes
+				}
+   			}
+		}
+	}
+}

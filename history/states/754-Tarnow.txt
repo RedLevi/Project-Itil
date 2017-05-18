@@ -1,0 +1,27 @@
+
+state={
+	id = 754
+	name= "STATE_754"
+	resources={
+		steel=8.000
+		oil=4.000
+	}
+
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+
+		}
+		add_core_of = POL
+
+	}
+
+	provinces={
+		417 442 466 3410 6499 6522 9412 11398 11413 11507 
+	}
+	manpower = 3392800
+	buildings_max_level_factor = 1.000
+	state_category = town
+}

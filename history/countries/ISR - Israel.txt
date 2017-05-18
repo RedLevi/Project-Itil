@@ -1,0 +1,74 @@
+﻿capital = 554
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+}
+
+set_convoys = 5
+
+set_politics = {
+
+	parties = {
+	    conservatism = {
+			popularity = 25
+		}
+
+		national_integralism = {
+			popularity = 6
+		}
+
+		liberalism = {
+			popularity = 10
+		}
+		
+		communism = {
+			popularity = 20
+		}
+		
+		socialism = {
+			popularity = 34
+		}
+		
+		reactionarism = {
+			popularity = 15
+		}
+	}
+	
+	ruling_party = socialism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "David Ben-Gurion"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	ideology = democratic_socialism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Itzhak Gaster"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+	ideology = national_integralism
+	traits = {
+		#
+	}
+}
+
+
+create_country_leader = {
+	name = "Shmuel Mikunis"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+	ideology = anarcho_communism
+	traits = {
+		#
+	}
+}

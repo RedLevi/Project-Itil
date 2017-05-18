@@ -1,0 +1,55 @@
+﻿capital = 104
+
+oob = "BOS_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	early_fighter = 1
+	early_submarine = 1
+	gwtank = 1
+}
+
+set_research_slots = 3
+
+add_ideas = {
+	
+}
+
+set_politics = {
+
+	parties = {
+	    conservatism = {
+			popularity = 20
+		}
+
+		national_integralism = {
+			popularity = 10
+		}
+
+		liberalism = {
+			popularity = 10
+		}
+		
+		communism = {
+			popularity = 7
+		}
+		
+		socialism = {
+			popularity = 15
+		}
+		
+		reactionarism = {
+			popularity = 38
+		}
+		
+	}
+	
+	ruling_party = reactionarism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_national_unity = 0.60
+

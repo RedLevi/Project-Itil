@@ -1,0 +1,130 @@
+ideas = {
+
+	citizenship_policy = {
+	law = yes
+		supremacy_citizenship_law = {
+		
+			cost = 150
+				
+			available = {
+			
+				OR = {
+				
+					has_government = national_integralism
+					has_government = reactionarism
+					
+					AND = {
+					
+						has_government = communism
+						
+						has_country_flag = socialist_nationalism
+					
+					}
+				
+				}
+			
+			}	
+			
+			removal_cost = -1
+			modifier = {
+			
+				unity_factor = 0.15
+				political_power_gain = -0.1
+				
+			
+			}
+			
+			picture = generic_manpower_bonus
+			default = yes
+		}
+		
+		residency_law = {
+			cost = 150
+			removal_cost = -1
+			
+			available = {
+			
+				OR = {
+				
+					has_government = national_integralism
+					has_government = conservatism
+					has_government = reactionarism
+				
+				}
+			
+			}
+			
+			modifier = { 
+			
+				political_power_gain = -0.05
+				unity_factor = 0.075
+
+				}
+			picture = generic_manpower_bonus
+			default = yes
+		}
+		
+		limited_naturalization_law = {
+		
+			available = {
+			
+				OR = {
+				
+					has_government = conservatism 
+					has_government = liberalism
+					has_government = socialism
+				
+				}
+			
+			}
+		
+			cost = 150
+			removal_cost = -1
+			
+			
+			modifier = { 
+			
+				political_power_gain = 0.05 
+							
+		}
+		
+		picture = generic_manpower_bonus
+		default = yes
+		
+	}
+		
+		full_naturalization_law = {
+		
+			cost = 150
+			
+			available = {
+			
+				OR = {
+				
+					has_government = liberalism
+					has_government = socialism
+					has_government = communism
+				
+				}
+				
+				NOT = {
+				
+					has_country_flag = socialist_dictatorship
+				
+				}
+			
+			}
+			
+			removal_cost = -1
+			modifier = { 
+			
+				political_power_gain = 0.15
+                unity_factor = -0.05
+				
+				}
+			picture = generic_manpower_bonus
+			default = yes
+		}
+			
+	}
+}

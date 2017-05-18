@@ -1,0 +1,27 @@
+
+state={
+	id=350
+	name="STATE_350"
+
+	history={
+		owner = KUR
+		buildings = {
+			infrastructure = 3
+			air_base = 2
+
+		}
+		victory_points = {
+			4512 3 
+		}
+		add_core_of = TUR
+		add_core_of = KUR
+
+	}
+
+	provinces={
+		1549 1578 4512 9823 11739 11759 11871 12387 12416 
+	}
+	manpower=1047156
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

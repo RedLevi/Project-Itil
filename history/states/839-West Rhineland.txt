@@ -1,0 +1,39 @@
+
+state={
+	id= 839
+	name="West Rhineland"
+	resources={
+		steel=27.000
+	}
+
+	history={
+		owner = GER
+		victory_points = {
+			6469 10 
+		}
+		buildings = {
+			infrastructure = 8
+			arms_factory = 2
+			industrial_complex = 1
+
+		}
+		add_core_of = GER
+		1939.1.1 = {
+			buildings = {
+				air_base = 6
+				radar_station = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		587 3444 3547 9522   
+	}
+	manpower=3000000
+	buildings_max_level_factor=1.000
+	state_category= city
+}
+

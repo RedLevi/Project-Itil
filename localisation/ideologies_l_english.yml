@@ -1,0 +1,26 @@
+﻿l_english: 
+###Ideologies###
+conservatism:0 "Conservatism"
+liberalism:0 "Liberalism"
+communism:0 "Socialism"
+national_integralism:0 "National Integralism"
+socialism:0 "Social Democracy"
+
+
+###Subideologies###
+authoritarain_conservatis:0 "Authoritarian Conservatism"
+authoritarain_conservatism_desc:0 "Authoritarian Conservatism is a combination of socially conservative policies and ideas with a relatively authoritarian form of government. It sees maintaining political stability and order as necessary for a functioning society and believe their authoritarian regime protects the traditions of the nation. While not excluding democracy, authoritarian countries are not known for extensive political rights. Often has more government control over the economy and the public sphere."
+democratic_conservatism:0 "Democratic Conservatism"
+democratic_conservatism_desc:0 "Democratic Conservatism is the combination of socially conservative policies and ideas with a democratic form of government. It sees democracy as the ultimate form of the manifestation of the people's morals and heritage and as the only way their traditions can survive in a changing world. Staunch defenders of constitutional rights, conservatives hold rule of law as paramount. Often promote a mixed economy."
+market_liberalism:0 "Market Liberalism"
+market_liberalism_desc:0 "Market Liberalism, also known as classical liberalism, is a political ideology combining the promotion of free market capitalism and increased political freedoms, Liberalism opposes any type of government intervention and welfare programs and sees democracy as the ideal form of government."
+social_liberalism:0 "Social Liberalism"
+social_liberalism_desc:0 "Social Liberalism developed out of the disappointment in classical liberalism's failure to address and solve the growing social and economic issues of the 20th century. While still promoting liberal economics and political rights, social liberals are staunch supporters of civil and personal rights, and also support small amounts of welfare programs."
+marxism:0 "Marxism"
+marxism_desc:0 "Marxism is a communist ideology beliving the history of mankind is a history of class struggle. They claim that only through the abolution of classes, states and money can the vicious cycle of history end, and that the only way to achieve this communist utopia is through a worldwide socialist state. Progressive in social issues, Marxists often seek to establish democratic governments, but more authoritarian forms also exist. They seek a collectivization of the economy and extensive welfare services."
+socialist_revolutionary:0 "Socialist Revolutionary"
+socialist_revolutionary_desc:0 "A wide range of radical socialist groups who are unaligned with mainstream Marxism. While they may have a similar communistic goal, these socialists are much more focused on the progress and development of socialism and the struggle of socialist states agaist capitalism. May or may not seek to establish democratic governments, radical socialists usually have progressive social stances. May have different economic programs from one another, but all advocate to the socialization of the economy."
+anarcho_communism:0 "Anarcho-Communism"
+anarcho_communism_desc:0 "Anarcho-Communism, or Anarchist Communism is a communist ideology that opposes mainstream Marxism in that it does not see a socialist state as a necessary step towards communism, and instead sees it as an obstacle. Wishing to create a stateless communist society through revolutionary means, Anarchists are often considered the most radical of the left. "
+syndicalism:0 "Syndicalism"
+syndicalism_desc:0 "Syndicalism is a socialist ideology based on trade unions as basic political-ecconomic units who's goal is to achieve a democratic socialist society, organized either on Marxist or Anarchist lines. Strong believers in mass action, Syndicalists see a general strike as their main revolutionary tool."

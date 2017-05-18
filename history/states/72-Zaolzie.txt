@@ -1,0 +1,24 @@
+state={
+	id=72
+	name="STATE_72"
+	manpower = 152000
+	
+	state_category = pastoral
+	
+	history={
+		owner = BOH
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+		}
+		add_core_of = BOH
+		add_core_of = POL
+		add_core_of = AUS
+		
+
+	}
+
+	provinces={
+		9567 
+	}
+}

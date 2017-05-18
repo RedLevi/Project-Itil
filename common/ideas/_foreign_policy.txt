@@ -1,0 +1,191 @@
+ideas = {
+
+	foreign_policy = { 
+		law = yes
+ 
+		aggressive_expansionism_law = {
+	    
+			available = { 
+			
+				OR = {
+				
+					has_government = national_integralism
+					has_government = reactionarism
+					
+					AND = {
+					
+						has_government = communism
+						
+						has_country_flag = world_revolution
+					
+					}
+					
+				
+				}
+
+			}
+			
+			removal_cost = -1
+			cost = 300
+			
+			
+			modifier = {
+			
+				opinion_gain_monthly_factor = -0.9
+				opinion_gain_monthly_same_ideology_factor = 0.25
+				ai_focus_aggressive_factor = 0.8
+				justify_war_goal_time = -0.75
+				enemy_justify_war_goal_tim = -0.6 
+				enemy_declare_war_tension = -0.2 
+				political_power_gain = -0.35 
+				subversive_activites_upkeep = -0.2 
+			
+			}
+			
+		}
+		
+		expansionism_law = {
+		
+			available = { 
+			
+				OR = {
+				
+					has_government = national_integralism
+					has_government = reactionarism
+					has_government = conservatism 
+					has_government = communism
+					
+					AND = {
+					
+						OR = { 
+						
+							has_government = liberalism
+							has_government = socialism
+						
+						}
+						
+						has_country_flag = freedom_crusaders
+					
+					}
+				
+				}
+				
+			}
+			
+            removal_cost = -1
+			cost = 200 
+			
+			modifier = {
+			
+				opinion_gain_monthly_factor = -0.3
+				opinion_gain_monthly_same_ideology_factor = 0.1
+				ai_focus_aggressive_factor = 0.3  
+				justify_war_goal_time = -0.4 
+				enemy_justify_war_goal_tim = -0.25  
+				enemy_declare_war_tension = -0.05 
+				political_power_gain = -0.05
+				subversive_activites_upkeep = -0.075  
+				
+			}
+					
+		}
+		
+		balanced_diplomacy_law = {
+		
+			available = {
+			
+				NOT = {
+				
+					has_country_flag = world_revolution 
+					has_country_flag = freedom_crusaders
+					
+					has_government = national_integralism
+				
+				}
+				
+				}
+			removal_cost = -1
+			cost = 150 
+
+			modifier = {
+			
+				opinion_gain_monthly_factor = 0.1
+				political_power_gain = 0.05  
+			
+			}
+			
+			default = yes 
+			
+		}
+		
+		pacifist_diplomacy_law = {
+		
+		    available = { 
+				
+				NOT = {
+				
+					has_government = national_integralism
+					has_government = reactionarism
+					has_government = communism
+				
+				}
+				
+			}
+			
+			removal_cost = -1
+			cost = 200 
+			
+			modifier = {
+			
+				opinion_gain_monthly_factor = 0.5 
+				opinion_gain_monthly_same_ideology_factor = 0.3 
+				ai_focus_defense_factor = 0.3  
+				justify_war_goal_time = 0.3 
+				enemy_justify_war_goal_time = 0.25  
+				enemy_declare_war_tension = 0.1  
+				political_power_gain = 0.15
+				subversive_activites_upkeep = 0.15 
+				
+			}
+			
+			cancel_if_invalid = no
+			picture = generic_manpower_bonus
+		}
+		
+		isolationism_law = {
+		
+			available = { 
+
+				NOT = {
+				
+					has_government = national_integralism
+					has_government = communism 
+					has_country_flag = freedom_crusaders
+				
+				}
+				
+				has_war = no 
+			
+			}
+			removal_cost = -1
+			cost = 300 
+
+			modifier = {
+			
+				opinion_gain_monthly_factor = -0.2 
+				opinion_gain_monthly_same_ideology_factor = -0.2 
+				ai_focus_defense_factor = 0.8 
+				justify_war_goal_time = -0.75  
+				enemy_justify_war_goal_time = 0.4   
+				enemy_declare_war_tension = 0.5  
+				political_power_gain = 0.3 
+				subversive_activites_upkeep = 0.45 
+				unity_factor = 0.1 
+				
+			}
+			
+
+		}
+		
+	}
+}

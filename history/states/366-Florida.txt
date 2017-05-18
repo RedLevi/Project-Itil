@@ -1,0 +1,38 @@
+
+state={
+	id=366
+	name="Jacksonville"
+
+	history={
+		owner = AME
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 8
+			1572 = {
+				naval_base = 2
+
+			}
+			7388 = {
+				naval_base = 3
+
+			}
+
+		}
+		add_core_of = USA
+		add_core_of = FLO
+		add_core_of = AME
+                victory_points = {
+			12381 3
+		}
+
+	}
+
+	provinces={
+		866 1572 1584 7388 10489 12381 12439 
+	}
+	manpower= 550000
+	buildings_max_level_factor=1.000
+	state_category= town
+}

@@ -1,0 +1,23 @@
+
+state={
+	id=757
+	name="Antakya"
+	manpower = 200000
+	
+	state_category = pastoral
+	
+	history={
+		owner = SYR
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SYR
+		add_core_of = TUR
+
+	}
+
+	
+	provinces={
+		12029
+	}
+}

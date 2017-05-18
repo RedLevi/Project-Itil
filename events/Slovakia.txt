@@ -1,0 +1,67 @@
+﻿###########################
+# Slovak Events
+###########################
+
+add_namespace = slo
+
+country_event = {
+	id = slo.1
+	title = slo.1.t
+	desc = slo.1.d
+	picture = GFX_report_event_german_reichstag_gathering
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SLO
+		SLO = {
+			has_government = reactionarism
+			owns_state = 70 
+		}
+	}
+
+	option = { #a great idea!
+		name = slo.1.a
+		ai_chance = {
+			base = 100
+		}
+		set_province_name = { id = 9692 name = "Presporok"}
+	}
+	option = { #rather not
+		name = slo.1.b
+		ai_chance = {
+			base = 0
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

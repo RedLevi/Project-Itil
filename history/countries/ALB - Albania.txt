@@ -1,0 +1,48 @@
+﻿capital = 44
+
+OOB = "ALB_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+set_politics = {
+
+	parties = {
+	    conservatism = {
+			popularity = 25
+		}
+
+		national_integralism = {
+			popularity = 5
+		}
+
+		liberalism = {
+			popularity = 10
+		}
+		
+		communism = {
+			popularity = 2
+		}
+		
+		socialism = {
+			popularity = 5
+		}
+		
+		reactionarism = {
+			popularity = 53
+		}
+	}
+	
+	ruling_party = reactionarism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+
+set_national_unity = 0.60
+
+

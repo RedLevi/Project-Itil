@@ -1,0 +1,111 @@
+
+stability_downgrade = {
+	
+	if = {
+	
+		limit = {
+		
+			has_idea = low_stability
+		
+		}
+		
+		remove_ideas = low_stability
+		add_ideas = very_low_stability
+		
+	}
+
+	
+	if = {
+	
+		limit = {
+		
+			has_idea = normal_stability
+		
+		}
+		
+		remove_ideas = normal_stability
+		add_ideas = low_stability
+		
+	}
+
+	if = {
+	
+		limit = {
+		
+			has_idea = high_stability
+		
+		}
+		
+		remove_ideas = high_stability
+		add_ideas = normal_stability
+		
+	}
+
+	if = {
+	
+		limit = {
+		
+			has_idea = very_high_stability
+		
+		}	
+		remove_ideas = very_high_stability
+		add_ideas = high_stability
+		
+	}
+}
+	
+stability_upgrade = {
+	
+	if = {
+	
+		limit = {
+		
+			has_idea = high_stability
+		
+		}
+		
+		remove_ideas = high_stability
+		add_ideas = very_high_stability
+		
+	}
+	
+	if = {
+	
+		limit = {
+		
+			has_idea = normal_stability
+		
+		}
+		
+		remove_ideas = normal_stability
+		add_ideas = high_stability
+		
+	}
+	
+	if = {
+	
+		limit = {
+		
+			has_idea = low_stability
+		
+		}
+		
+		remove_ideas = low_stability
+		add_ideas = normal_stability
+		
+	}
+
+	if = {
+	
+		limit = {
+		
+			has_idea = very_low_stability
+		
+		}
+		
+		remove_ideas = very_low_stability
+		add_ideas = low_stability
+		
+	}
+
+}

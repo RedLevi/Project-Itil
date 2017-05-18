@@ -1,0 +1,58 @@
+﻿capital = 312
+
+oob = "HON_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+set_country_flag = monroe_doctrine
+
+set_convoys = 10
+
+set_politics = {
+
+	parties = {
+	    conservatism = {
+			popularity = 40
+		}
+
+		national_integralism = {
+			popularity = 1
+		}
+
+		liberalism = {
+			popularity = 30
+		}
+		
+		communism = {
+			popularity = 5
+		}
+		
+		socialism = {
+			popularity = 9
+		}
+		
+		reactionarism = {
+			popularity = 15
+		}
+	
+	}
+	
+	ruling_party = conservatism
+	last_election = "1932.10.28"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Tiburcio Carías Andino"
+	desc = "POLITICS_TIBURCIO_CARIAS_ANDINO_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_2.dds"
+	expire = "1965.1.1"
+	ideology = democratic_conservatism
+	traits = {
+		#
+	}
+}
+

@@ -1,11 +1,14 @@
 state={
 	id=717
 	name="STATE_717"
+	resources={
+		tungsten=2
+	}
 	
 	state_category = pastoral
 
 	history={
-		owner = JAP
+		owner = MAN
 		add_core_of = CHI
 		add_core_of = MAN
 		add_core_of = PRC

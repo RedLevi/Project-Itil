@@ -10,16 +10,15 @@ state={
 			air_base = 3
 
 		}
-		add_claim_of = BLR
-		add_claim_of = LIT
 		add_core_of = SOV
+		add_core_of = BLR
 
 	}
 
 	provinces={
-		277 358 406 9236 9341  
+		3366 3393 6340 6359 6413 9236 9304 9359 11341 
 	}
-	manpower=657200
+	manpower=1157200
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

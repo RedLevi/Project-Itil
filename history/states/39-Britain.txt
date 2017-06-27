@@ -1,22 +1,27 @@
 
 state={
 	id=39
-	name="STATE_39" # South Tyrol
-	manpower = 641650
-	
-	state_category = town
-	
+	name="STATE_39"
+	resources={
+		aluminium=22.000
+	}
+
 	history={
 		owner = AUS
 		buildings = {
 			infrastructure = 6
 			industrial_complex = 1
+
 		}
-		add_core_of = ITA
 		add_core_of = AUS
+		add_claim_by = ITA
+
 	}
 
 	provinces={
-		656 6631 9598 11598  
+		6675 9630 11615 
 	}
+	manpower=641650
+	buildings_max_level_factor=1.000
+	state_category=town
 }

@@ -6,17 +6,11 @@ state={
 	state_category = rural
 	
 	history={
-		owner = AME
+		owner = USA
 		buildings = {
 			infrastructure = 3
 		}
 		add_core_of = USA
-		add_core_of = WYO
-		add_core_of = AME
-                
-		victory_points = {
-			4723 1 
-		}
 	}
 
 	provinces={

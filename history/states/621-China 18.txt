@@ -6,11 +6,10 @@ state={
 	state_category = pastoral
 
 	history={
-		owner = MEN
+		owner = SHX
 		add_core_of = SHX
 		add_core_of = CHI
 		add_core_of = PRC
-		add_core_of = MEN
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

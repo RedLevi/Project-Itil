@@ -3,7 +3,7 @@ state={
 	name="STATE_656"
 	manpower = 80000
 	
-	state_category = pastoral
+	state_category = rural
 	
 	history={
 		owner = ENG
@@ -15,7 +15,8 @@ state={
 			8085 = {
 				naval_base = 4
 			}
-		}  
+		}
+
 	}
 	provinces={
 		8085

@@ -1,8 +1,11 @@
 
 state={
 	id=77
-	name="South Dobrudja"
+	name="STATE_77"
 	manpower = 378000
+	resources={
+		oil=12
+	}
 	
 	state_category = rural
 
@@ -13,7 +16,7 @@ state={
 			industrial_complex = 2
 		}
 		add_core_of = ROM
-		add_core_of = BUL
+		add_claim_by = BUL
 	}
 
 	provinces={

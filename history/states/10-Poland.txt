@@ -2,6 +2,9 @@ state={
 	id=10
 	name="STATE_10"
 	manpower = 3089000
+	resources={
+		steel=8
+	}
 
 	state_category = large_city
 
@@ -17,7 +20,7 @@ state={
 			anti_air_building = 2
 			air_base = 5
 		}
-		add_core_of = POL	
+		add_core_of = POL
 	}
 
 	provinces={

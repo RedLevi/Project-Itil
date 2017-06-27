@@ -7,20 +7,14 @@ state={
 	state_category = large_town
 
 	history={
-		owner = AME
+		owner = USA
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 1
 		}
 		add_core_of = USA
-		add_core_of = NEB
-		add_core_of = AME
 		victory_points = {
 			12586 1 
-		}
-                
-		victory_points = {
-			10676 1 
 		}
 
 	}

@@ -20,13 +20,12 @@ state={
 			}
 
 		}
-		add_core_of = POL
 		add_core_of = GER
 
 	}
 
 	provinces={
-		279 334 362 389 3295 3324 6347 9263 
+		279 334 362 389 3324 9263 
 	}
 	manpower=1080100
 	buildings_max_level_factor=1.000

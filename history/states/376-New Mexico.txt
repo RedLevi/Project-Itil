@@ -13,18 +13,12 @@ state={
 
 
 	history={
-		owner = AME
+		owner = USA
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 1
 		}
 		add_core_of = USA
-		add_core_of = NEM
-		add_core_of = AME
-                
-		victory_points = {
-			4975 1 
-		}
 	}
 
 	provinces={

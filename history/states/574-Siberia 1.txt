@@ -4,10 +4,10 @@ state={
 	name="STATE_574" # Yakutsk
 	manpower = 407866
 	
-	state_category = pastoral
+	state_category = wasteland
 
 	history={
-		owner = RUS
+		owner = SOV
 		victory_points = {
 			10641 1
 		}
@@ -16,7 +16,6 @@ state={
 			air_base = 1
 		}
 		add_core_of = SOV
-		add_core_of = RUS
 	}
 
 	provinces={

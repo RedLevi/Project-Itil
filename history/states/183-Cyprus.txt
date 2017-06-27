@@ -5,13 +5,12 @@ state= {
 	
 	state_category = rural
 	resources={
-		chromium=4
+		chromium=8
 	}
 
 	history=
 	{
 		owner = ENG
-		add_core_of = GRE
 		buildings = {
 			infrastructure = 4
 			air_base = 1

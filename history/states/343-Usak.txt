@@ -7,7 +7,7 @@ state={
 		chromium=32
 	}
 	
-	state_category = average
+	state_category = rural
 
 	history={
 		owner = TUR

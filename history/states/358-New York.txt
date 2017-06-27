@@ -3,12 +3,13 @@ state={
 	name="STATE_358"
 	resources={
 		steel=24.000
+		aluminium=4
 	}
 	
 	state_category = megalopolis
 
 	history={
-		owner = AME
+		owner = USA
 		buildings = {
 			infrastructure = 8
 			arms_factory = 2
@@ -22,8 +23,6 @@ state={
 
 		}
 		add_core_of = USA
-		add_core_of = NEY
-		add_core_of = AME
 		victory_points = {
 			3878 30.0 
 		}

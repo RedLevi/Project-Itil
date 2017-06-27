@@ -1,6 +1,6 @@
 state={
 	id=584
-	name="STATE_584"
+	name="STATE_584" # Ashkhabad
 
 	history={
 		owner = TUK
@@ -9,9 +9,7 @@ state={
 			industrial_complex = 1
 
 		}
-		add_core_of = SOV
 		add_core_of = TUK
-		
 
 	}
 

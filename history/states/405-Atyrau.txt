@@ -1,6 +1,9 @@
 state={
 	id=405
-	name="STATE_405"
+	name="STATE_405" #Tashkent
+	resources={
+		chromium=46
+	}
 
 	history={
 		owner = TUK
@@ -13,7 +16,6 @@ state={
 			air_base = 1
 
 		}
-		add_core_of = SOV
 		add_core_of = TUK
 		1939.1.1 = {
 			buildings = {

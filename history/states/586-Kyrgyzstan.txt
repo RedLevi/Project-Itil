@@ -6,7 +6,7 @@ state={
 		steel=48
 		chromium=44
 		tungsten=14
-		aluminium=32
+		aluminium=56
 	}
 
 
@@ -22,8 +22,8 @@ state={
 		victory_points = {
 			1591 3 
 		}
-		add_core_of = SOV
 		add_core_of = TUK
+		#add_core_of = KAZ
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 4

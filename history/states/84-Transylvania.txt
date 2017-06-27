@@ -1,9 +1,9 @@
 
 state={
 	id=84
-	name="South Transylvania"
+	name="STATE_84"
 	resources={
-		steel=4.000
+		steel=8.000
 	}
 
 	history={
@@ -18,14 +18,13 @@ state={
 			690 1 
 		}
 		add_core_of = ROM
-		add_core_of = HUN
 
 	}
 
 	provinces={
-		676 690 711 3665 3676 3689 6679 6709 9619 9668 9670 9685 11622 11639 
+		676 690 711 3665 3676 3689 6679 6709 9619 9668 9670 11639 
 	}
 	manpower=1622300
 	buildings_max_level_factor=1.000
-	state_category = average
+	state_category=rural
 }

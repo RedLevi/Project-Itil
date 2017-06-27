@@ -10,17 +10,12 @@ state=
 	history=
 	{
 		owner = BOH
-                victory_points = {
-			3583 3
-		}
 		buildings = {
 			infrastructure = 7
 			arms_factory = 1
 		}
 		add_core_of = BOH
-		add_core_of = GER
 		add_core_of = AUS
-
 	}
 	provinces= {
 		421 3414 3583 6485

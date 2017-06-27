@@ -3,7 +3,8 @@ state={
 	name="STATE_75"
 	manpower = 2598400
 	resources={
-		steel=8
+		steel=12
+		oil=1
 	}
 
 	state_category = city
@@ -11,7 +12,7 @@ state={
 	history={
 		owner = BOH
 		victory_points = {
-			3569 5 
+			3569 1 
 		}
 		buildings = {
 			infrastructure = 7
@@ -21,7 +22,6 @@ state={
 		}
 		add_core_of = BOH
 		add_core_of = AUS
-
 	}
 
 	provinces={

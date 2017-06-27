@@ -1,26 +1,26 @@
 
 state={
 	id=184
-	name="Western Thrace"
+	name="STATE_184"
 	resources={
 		chromium=16.000
 	}
 
 	history={
-		owner = GRE
+		owner = BUL
 		buildings = {
 			infrastructure = 4
 
 		}
 		add_core_of = GRE
-		add_claim_by = BUL
+		add_core_of = BUL
 
 	}
 
 	provinces={
-		6990 9791 9930 
+		11774 11905 
 	}
-	manpower = 200000
+	manpower=382500
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

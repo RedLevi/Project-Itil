@@ -3,17 +3,21 @@ state={
 	id=541
 	name="STATE_541"
 	manpower = 462000
+	resources={
+		steel=2
+	}
 	
 	state_category = wasteland
 
 	history={
-		owner = GER
+		owner = SAF
 		buildings = {
 			infrastructure = 3
 		}
 		victory_points = {
 			4879 1
 		}
+		add_core_of = SAF
 	}
 
 	provinces={

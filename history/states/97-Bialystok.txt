@@ -15,13 +15,14 @@ state={
 
 		}
 		add_core_of = POL
+		add_core_of = BLR
 
 	}
 
 	provinces={
-		290 318 347 3281 11247 11274 11301 11329 11357 
+		400 3254 11274 11329 11357 
 	}
-	manpower=150000
+	manpower=1598900
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

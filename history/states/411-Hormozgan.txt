@@ -3,7 +3,9 @@ state={
 	id=411
 	name="STATE_411"
 	resources={
-		oil=14.000
+		oil=16.000
+		aluminium=8.000
+		steel=8.000
 	}
 
 	history={
@@ -20,7 +22,7 @@ state={
 	}
 
 	provinces={
-		1922 1963 2026 4928 4983 5067 8031 8074 10828 12756 
+		1963 2026 4928 4966 4983 5067 8031 8074 10828 12756 12780 
 	}
 	manpower=885272
 	buildings_max_level_factor=1.000

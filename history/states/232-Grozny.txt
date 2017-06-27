@@ -7,7 +7,7 @@ state={
 	state_category = rural
 	
 	resources={
-		oil=26
+		oil=30
 	}
 
 	history={
@@ -19,7 +19,6 @@ state={
 			3672 5 
 		}
 		add_core_of = SOV
-		add_core_of = CIR
 	}
 
 	provinces={

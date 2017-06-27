@@ -2,6 +2,9 @@
 state={
 	id=76
 	name="STATE_76"
+	resources={
+		steel=2.000
+	}
 
 	history={
 		owner = HUN
@@ -19,7 +22,7 @@ state={
 	}
 
 	provinces={
-		693 713 727 746 3694 3696 3709 6711 6714 6731 9672 9687 9704 11676 
+		693 713 727 746 3694 3696 3709 6711 6714 6731 9672 9685 9687 9704 11622 11676 
 	}
 	manpower=2352700
 	buildings_max_level_factor=1.000

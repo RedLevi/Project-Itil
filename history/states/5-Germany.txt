@@ -1,15 +1,11 @@
 
 state={
 	id=5
-	name="East Prussia"
-	manpower = 1413509
-	state_category = city
+	name="STATE_5"
 
 	history={
 		owner = GER
 		controller = GER
-		
-		
 		victory_points = {
 			6332 10 
 		}
@@ -26,17 +22,23 @@ state={
 
 			}
 			air_base = 6
+
 		}
 		add_core_of = GER
 		1939.1.1 = {
 			buildings = {
 				anti_air_building = 5
+
 			}
+
 		}
+
 	}
 
 	provinces={
-		281 348 395 3384 6332 11265 
+		266 281 348 395 3295 3351 3380 3384 6332 6347 6375 6402 9327 9346 9372 9398 11245 11265 11386 
 	}
+	manpower=3378108
+	buildings_max_level_factor=1.000
+	state_category=large_city
 }
-

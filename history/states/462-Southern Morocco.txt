@@ -3,13 +3,17 @@ state={
 	id=462
 	name="STATE_462"
 	manpower = 1865552
+	resources={
+		steel=4
+	}
 	
-	state_category = pastoral
+	state_category = wasteland
 
 	history={
-		owner = GER
+		owner = MOR
+		add_core_of = MOR
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
 	}
 

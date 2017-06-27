@@ -1,4 +1,5 @@
-state = {
+state=
+{
 	id=646
 	name="STATE_646"
 	state_category = small_island
@@ -6,6 +7,7 @@ state = {
 	history=
 	{
 		owner = JAP
+		add_core_of = JAP
 		buildings = {
 			infrastructure = 3
 			air_base = 3

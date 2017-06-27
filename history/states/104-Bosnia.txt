@@ -1,14 +1,14 @@
 
 state={
 	id=104
-	name="Sarajevo"
-	manpower = 750000
+	name="STATE_104"
+	manpower =2457400
 	
-	
-	state_category = rural
+	state_category = town
 	
 	resources={
 		aluminium=10
+		steel=14
 	}
 
 	history={
@@ -18,15 +18,13 @@ state={
 		}
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 1
+			industrial_complex = 2
 			air_base = 2
 		}
-		add_core_of = BOS
-		add_claim_by = AUS
 		add_core_of = SER
 	}
 
 	provinces={
-		953 982 9922 11572 11899
+		606 953 982 3985 6614 6619 6799 6942 6957 6983 9586 9588 9591 9894 9922 11572 11574 11741 11845 11872 11899 
 	}
 }

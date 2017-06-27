@@ -3,6 +3,9 @@ state={
 	id=538
 	name="STATE_538" # Central Congo
 	manpower = 1693974
+	resources={
+		rubber=2
+	}
 	
 	state_category = wasteland
 

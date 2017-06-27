@@ -3,8 +3,11 @@ state={
 	id=444
 	name="STATE_444" # Baluchistan
 	manpower = 463500
+	resources={
+		steel=2
+	}
 	
-	state_category = pastoral
+	state_category = wasteland
 
 	history={
 		owner = RAJ

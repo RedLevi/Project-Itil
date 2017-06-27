@@ -8,9 +8,8 @@ state={
 			infrastructure = 1
 
 		}
-		add_core_of = SOV
-		add_core_of = KAZ
 		add_core_of = TUK
+		#add_core_of = KAZ
 	}
 
 	provinces={

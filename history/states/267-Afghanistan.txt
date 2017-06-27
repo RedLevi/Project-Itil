@@ -7,7 +7,10 @@ state={
 	state_category = town
 	
 	resources={
-		tungsten=3
+		tungsten=16
+		steel=8
+		oil=6
+		chromium=18
 	}
 	history={
 		owner = AFG

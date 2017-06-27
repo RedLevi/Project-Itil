@@ -18,14 +18,12 @@ state={
 
 		}
 		add_core_of = EST
-		add_core_of = SOV
 
 	}
 
 	provinces={
-		592 4640 6099 9221 11057 11443 13127 
+		592 4640 6099 6178 6408 9221 9485 11057 11443 13127 
 	}
-	manpower=326400
+	manpower=376400
 	buildings_max_level_factor=1.000
 }
-

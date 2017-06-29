@@ -4,6 +4,12 @@ state={
 	provinces={
 		4744 13063 13204 
 	}
+	history = {
+		add_core_of = RUS
+		add_core_of = SOV
+		owner = JAP
+
+}
 	manpower=1500
 	buildings_max_level_factor=1.000
 	category = rural 

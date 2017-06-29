@@ -2,15 +2,12 @@
 state={
 	id=558
 	name="STATE_558"
-	manpower = 19757000
 	resources={
-		rubber=12
-		steel=2
-		aluminium=2
+		rubber=12.000
+		steel=2.000
+		aluminium=2.000
 	}
-	
-	state_category = rural
-	
+
 	history={
 		owner = ENG
 		buildings = {
@@ -19,10 +16,12 @@ state={
 			industrial_complex = 1
 			2050 = {
 				naval_base = 3
+
 			}
+
 		}
 		victory_points = {
-			2050 1
+			2050 1 
 		}
 
 	}
@@ -30,4 +29,7 @@ state={
 	provinces={
 		1891 1932 1969 1992 2025 2050 4889 4938 4952 4972 4997 5028 7978 8021 8034 8109 10820 10831 12731 12817 12900 
 	}
+	manpower=18000000
+	buildings_max_level_factor=1.000
+	state_category=rural
 }

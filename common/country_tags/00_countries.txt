@@ -132,4 +132,6 @@ MAN = "countries/Manchukou.txt"
 FLA = "countries/Flanders.txt"
 WLL = "countries/Wallonia.txt"
 MOR = "countries/Morocco.txt"
-
+GUO = "countries/Guominjun.txt"
+ZHI = "countries/Zhili_Clique.txt"
+ANH = "countries/Anhui_Clique.txt"

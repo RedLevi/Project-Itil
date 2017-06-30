@@ -12,9 +12,8 @@ state=
 	}
 	history=
 	{
-		owner = CHI
-		add_core_of = CHI
-		add_core_of = PRC
+		owner = SIC
+		add_core_of = SIC
 		
 		buildings = {
 			infrastructure = 4

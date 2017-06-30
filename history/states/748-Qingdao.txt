@@ -1,0 +1,31 @@
+state={
+	id=748
+	name="STATE_748"
+	
+	history={
+		owner = JAP
+		add_core_of = ANH
+		victory_points = {
+			10000 5 
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			10000 = {
+				naval_base = 5
+				coastal_bunker = 1
+				bunker = 1
+
+			}
+
+		}
+
+	}
+	
+	provinces={
+		10000 
+	}
+	manpower=425000
+	state_category=large_city
+	buildings_max_level_factor=1.000
+}

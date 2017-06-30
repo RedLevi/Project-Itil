@@ -8,6 +8,11 @@ state={
 		add_core_of = RUS
 		add_core_of = SOV
 		owner = JAP
+		
+		13204 = {
+				naval_base = 1
+
+			}
 
 }
 	manpower=1500

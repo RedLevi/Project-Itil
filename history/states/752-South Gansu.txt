@@ -1,0 +1,21 @@
+state={
+	id=752
+	name="STATE_752"
+	
+	history={
+		owner = XSM
+		add_core_of = XSM
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+	
+	provinces={
+		1257 4375 4403 9966 10787 10903 
+	}
+	manpower=1676350
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

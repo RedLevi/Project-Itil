@@ -41,7 +41,7 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 2
+			popularity = 40
 		}
 		
 		socialism = {
@@ -49,12 +49,12 @@ set_politics = {
 		}
 		
 		reactionarism = {
-			popularity = 38
+			popularity = 0
 		}
 		
 	}
 	
-	ruling_party = conservatism
+	ruling_party = communism
 	last_election = "1935.9.8"
 	election_frequency = 36
 	elections_allowed = no

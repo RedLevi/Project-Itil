@@ -72,7 +72,7 @@ set_politics = {
 		
 	}
 	
-	ruling_party = reactionarism
+	ruling_party = liberalism 
 	last_election = "1932.5.1"
 	election_frequency = 48
 	elections_allowed = yes

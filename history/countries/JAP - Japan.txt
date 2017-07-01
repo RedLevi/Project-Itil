@@ -1,6 +1,6 @@
 ﻿capital = 282
 
-oob = "JAP_1936"
+oob = "JAP"
 
 set_national_unity = 0.65
 
@@ -50,6 +50,59 @@ create_import = {
 		factories = 2
 		exporter = USA
 }
+
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = RUS
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.1
+	}
+	else = {
+		puppet = RUS
+	}
+}
+	
+	RUS = {
+	
+		set_politics = {
+
+	parties = {
+	    conservatism = {
+			popularity = 10
+		}
+
+		national_integralism = {
+			popularity = 25
+		}
+
+		liberalism = {
+			popularity = 5
+		}
+		
+		communism = {
+			popularity = 0
+		}
+		
+		socialism = {
+			popularity = 0
+		}
+		
+		reactionarism = {
+			popularity = 60
+		}
+		
+	}
+	
+	ruling_party = reactionarism
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+	
+	}
 
 set_convoys = 400
 

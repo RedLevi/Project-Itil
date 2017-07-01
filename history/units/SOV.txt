@@ -991,5 +991,77 @@ units = {
 
 	}
 	
+	navy = {	
+		name = "Soviet Fleet"
+		base = 3151
+		location = 3151 # Leningrad
+		ship = { name = "Parizhskaya Kommuna" definition = battleship equipment = { battleship_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Krasni Rossiya" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Kazan" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Minsk Ukraina" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "International" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Lenin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }		
+		ship = { name = "Trotsky" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }		
+		ship = { name = "Bukharin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }		
+		ship = { name = "Martov" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }	
+	}
+	
+}
+	
+air_wings = {
+
+	219 = {
+	
+		fighter_equipment_0 = {
+			owner = "SOV" 
+			amount = 120
+		}
+		
+		tac_bomber_equipment_0 =  {
+			owner = "SOV" 
+			amount = 80
+		}
+		
+			strat_bomber_equipment_1 =  {
+			owner = "SOV" 
+			amount = 30 
+		}
+	
+	}
+	
+	206 = {
+	
+		fighter_equipment_0 = {
+			owner = "SOV" 
+			amount = 70
+		}
+		
+		tac_bomber_equipment_0 =  {
+			owner = "SOV" 
+			amount = 25
+		}
+		
+			strat_bomber_equipment_1 =  {
+			owner = "SOV" 
+			amount = 40 
+		}
+	
+	}
+	
+	208 = {
+	
+		fighter_equipment_0 = {
+			owner = "SOV" 
+			amount = 60
+		}
+		
+		tac_bomber_equipment_0 =  {
+			owner = "SOV" 
+			amount = 20
+		}
+		
+	
+	}
+
 }
 	#####################

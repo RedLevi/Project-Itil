@@ -192,6 +192,8 @@ country_event = {#Popularity change event
 		
 	}
 	
+	mean_time_to_happen = { days = 15 }
+	
 	option = {
 	
 		name = politics.3.a 

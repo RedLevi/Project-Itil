@@ -126,7 +126,7 @@ bookmarks = {
 		"RAJ"={
 			minor = yes
 			history = "RAJ_GATHERING_STORM_DESC"
-			ideology = autocratism
+			ideology = reactionarism
 			ideas = {
 			}
 			focuses = {

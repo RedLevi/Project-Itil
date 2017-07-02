@@ -140,7 +140,7 @@ create_country_leader = {
 	desc = "POLITICS_MARCELO_ALVEAR_DESC"
 	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
 	expire = "1965.1.1"
-	ideology = fabianisn
+	ideology = fabianism
 	traits = {
 		#
 	}

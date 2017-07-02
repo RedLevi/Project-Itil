@@ -1,0 +1,57 @@
+﻿division_template = {
+	name = "Jalavediviisi"				# Infantry Division	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	######## LAND OOB ########
+	##### Eesti ?lemjuhatus #####
+	division = {
+		name = "I Jalavediviisi"
+		location = 3152
+		division_template = "Jalavediviisi"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	division = {
+		name = "II Jalavediviisi"
+		location = 4640
+		division_template = "Jalavediviisi"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "III Jalavediviisi"
+		location = 6099
+		division_template = "Jalavediviisi"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "EST" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+
+	##### No Naval OOB -- 2 SSs in 1937 #####
+}
+
+air_wings = {
+	### Eesti Ohuv?gi
+	13 = {
+		# H?vitajate Grupp -- Bristol Bulldogs, GL 22.B3s
+		fighter_equipment_0 =  {
+			owner = "EST" 
+			amount = 18
+		}
+	}
+}
+

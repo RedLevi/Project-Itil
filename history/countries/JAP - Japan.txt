@@ -1,6 +1,6 @@
 ﻿capital = 282
 
-oob = "JAP_1936"
+oob = "JAP"
 
 set_national_unity = 0.65
 
@@ -51,6 +51,49 @@ create_import = {
 		exporter = USA
 }
 
+
+	
+	RUS = {
+	
+		set_politics = {
+
+	parties = {
+	    conservatism = {
+			popularity = 10
+		}
+
+		national_integralism = {
+			popularity = 25
+		}
+
+		liberalism = {
+			popularity = 5
+		}
+		
+		communism = {
+			popularity = 0
+		}
+		
+		socialism = {
+			popularity = 0
+		}
+		
+		reactionarism = {
+			popularity = 60
+		}
+		
+	}
+	
+	ruling_party = reactionarism
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+	
+	}
+	
+	
+
 set_convoys = 400
 
 set_politics = {
@@ -65,7 +108,7 @@ set_politics = {
 		}
 
 		liberalism = {
-			popularity = 0
+			popularity = 60
 		}
 		
 		communism = {
@@ -77,15 +120,40 @@ set_politics = {
 		}
 		
 		reactionarism = {
-			popularity = 82
+			popularity = 22
 		}
 		
 	}
 	
-	ruling_party = reactionarism
+	ruling_party = liberalism 
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+create_faction = co_prosperity_sphere
+add_to_faction = MAN
+add_to_faction = RUS
+
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = RUS
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.1
+	}
+	
+	set_autonomy = {
+		target = MAN
+		autonomous_state = autonomy_colony
+		freedom_level = 0.1
+	}
+	else = {
+		puppet = RUS
+		puppet = MAN
+	}
 }
 
 create_country_leader = {
@@ -93,7 +161,7 @@ create_country_leader = {
 	desc = "POLITICS_Hirohito_DESC"
 	picture = "Portrait_Japan_Hirohito.dds"
 	expire = "1989.1.1"
-	ideology = absolutionism
+	ideology = autocracy
 	traits = {
 		warrior_code
 	}

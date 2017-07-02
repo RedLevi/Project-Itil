@@ -1,0 +1,142 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Gvardiya Diviziya"			# Guards Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	
+	}
+}
+
+division_template = {
+	name = "Kavaleriyskaya Diviziya" 	# Kavaleriyskaya Diviziya
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		
+	}
+	support = {
+	}
+}
+
+division_template = {
+	name = "Militsya Diviziya" 	# Militia Diviziya
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 2 y = 0 }
+		militia = { x = 2 y = 1 }
+		
+	}
+	support = {
+	}
+}
+
+##### OOB #####
+
+units = {
+
+	division= {			
+		name = "1ya Gvardiya Diviziya"		
+		location = 1730
+		division_template = "Gvardiya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}	
+
+	division= {			
+		name = "Black Hundreds"		
+		location = 1730
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.4
+		start_equipment_factor = 1.0
+
+	}
+	
+	division= {			
+		name = "1ya Kavaleriyskaya Diviziya"		
+		location = 7786
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+
+	}
+	
+	division= {			
+		name = "2ya Kavaleriyskaya Diviziya"		
+		location = 10565
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+
+	}
+	
+	division= {			
+		name = "1ya Belaya Militsya"		
+		location = 4837
+		division_template = "Militsya Diviziya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+
+	}
+	
+	division= {			
+		name = "2ya Belaya Militsya"		
+		location = 4837
+		division_template = "Militsya Diviziya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+
+	}
+	
+	division= {			
+		name = "3ya Belaya Militsya"		
+		location = 12575
+		division_template = "Militsya Diviziya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+
+	}
+	
+	division= {			
+		name = "4ya Belaya Militsya"		
+		location = 10654
+		division_template = "Militsya Diviziya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+
+	}
+
+}
+
+air_wings = {
+
+	563 = {
+	
+		fighter_equipment_0 = {
+			owner = "RUS" 
+			amount = 25
+		}
+	
+	}
+
+}

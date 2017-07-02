@@ -45,23 +45,23 @@ set_politics = {
 
 	parties = {
 	    conservatism = {
-			popularity = 40
+			popularity = 5
 		}
 
 		national_integralism = {
-			popularity = 1
+			popularity = 80
 		}
 
 		liberalism = {
-			popularity = 30
+			popularity = 0
 		}
 		
 		communism = {
-			popularity = 5
+			popularity = 0
 		}
 		
 		socialism = {
-			popularity = 9
+			popularity = 0
 		}
 		
 		reactionarism = {
@@ -70,10 +70,10 @@ set_politics = {
 		
 	}
 	
-	ruling_party = conservatism
+	ruling_party = national_integralism
 	last_election = "1934.6.3"
 	election_frequency = 36
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 

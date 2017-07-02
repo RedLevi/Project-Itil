@@ -76,7 +76,7 @@ set_politics = {
 		}
 	}
 	
-	ruling_party = conservatism
+	ruling_party = liberalism
 	last_election = "1935.11.14"
 	election_frequency = 48
 	elections_allowed = yes ##suspended through duration of war, which is handled via event
@@ -87,6 +87,17 @@ set_politics = {
 
 
 # Order matters - here Chamberlain becomes starting leader
+
+create_country_leader = {
+	name = "John Simon"
+	desc = ""
+	picture = "John_Simon.dds"
+	expire = "1965.1.1"
+	ideology = market_liberalism
+	traits = {
+		
+	}
+}
 
 create_country_leader = {
 	name = "Stanley Baldwin"

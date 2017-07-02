@@ -42,7 +42,7 @@ bookmarks = {
 		}
 		"ENG"={
 			history = "ENG_GATHERING_STORM_DESC"
-			ideology = conservatism
+			ideology = liberalisn
 			ideas = {
 			}	
 			focuses = {
@@ -59,7 +59,7 @@ bookmarks = {
 		}
 		"USA"={
 			history = "USA_GATHERING_STORM_DESC"
-			ideology = conservatism
+			ideology = national_integralism
 			ideas = {
 			}
 			focuses = {

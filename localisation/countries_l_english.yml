@@ -1064,7 +1064,7 @@ SAU_socialism_DEF:0 "Arabia"
 SAU_reactionarism:0 "Saudi Arabia"
 SAU_reactionarism_ADJ:0 "Arab"
 SAU_reactionarism_DEF:0 "Saudi Arabia"
-=======
+
 LAT_conservatism:0 "Republic of Latvia"
 LAT_conservatism_ADJ:0 "Lettish"
 LAT_conservatism_DEF:0 "Latvia"
@@ -1121,4 +1121,3 @@ MAN_socialism_DEF:0 "Manchuria"
 MAN_reactionarism:0 "Empire of Manchuria"
 MAN_reactionarism_ADJ:0 "Manchurian"
 MAN_reactionarism_DEF:0 "Manchuria"
->>>>>>> 9abc1d96a437db40e2fc2575ee16137618b9f020

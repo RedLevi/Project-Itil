@@ -8,8 +8,8 @@ socialism:0 "Social Democracy"
 
 
 ###Subideologies###
-authoritarain_conservatis:0 "Authoritarian Conservatism"
-authoritarain_conservatism_desc:0 "Authoritarian Conservatism is a combination of socially conservative policies and ideas with a relatively authoritarian form of government. It sees maintaining political stability and order as necessary for a functioning society and believe their authoritarian regime protects the traditions of the nation. While not excluding democracy, authoritarian countries are not known for extensive political rights. Often has more government control over the economy and the public sphere."
+authoritarian_conservatism:0 "Authoritarian Conservatism"
+authoritarian_conservatism_desc:0 "Authoritarian Conservatism is a combination of socially conservative policies and ideas with a relatively authoritarian form of government. It sees maintaining political stability and order as necessary for a functioning society and believe their authoritarian regime protects the traditions of the nation. While not excluding democracy, authoritarian countries are not known for extensive political rights. Often has more government control over the economy and the public sphere."
 democratic_conservatism:0 "Democratic Conservatism"
 democratic_conservatism_desc:0 "Democratic Conservatism is the combination of socially conservative policies and ideas with a democratic form of government. It sees democracy as the ultimate form of the manifestation of the people's morals and heritage and as the only way their traditions can survive in a changing world. Staunch defenders of constitutional rights, conservatives hold rule of law as paramount. Often promote a mixed economy."
 market_liberalism:0 "Market Liberalism"

@@ -1,4 +1,4 @@
-﻿capital = 775
+﻿capital = 47
 
 oob = "GRE_1936"
 
@@ -98,7 +98,7 @@ create_country_leader = {
 	desc = "POLITICS_GEORGIOS_KOSMIDIS_DESC"
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
 	expire = "1965.1.1"
-	ideology = national_integralism
+	ideology = integralism
 	traits = {
 		#
 	}

@@ -251,7 +251,7 @@ ideologies = {
 	 
 	    types = { 
 		
-		    national_integralism = {
+		    integralism = {
 			
 				
 			

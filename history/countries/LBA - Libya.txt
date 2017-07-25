@@ -57,7 +57,7 @@ create_country_leader = {
 	name = "Ettore Bastico"
 	desc = ""
 	picture = "gfx/leaders/LBA/Portrait_Italy_Guiseppe_Fioravanzo.dds"
-	ideology = national_integralism
+	ideology = integralism
 	traits = {
 		#
 	}

@@ -81,7 +81,7 @@ create_country_leader = {
 	name = "George Van Horn Moseley"
 	desc = "POLITICS_GEORGE_MOSELEY_DESC"
 	picture = "George_Moseley.dds"
-	ideology = national_integralism
+	ideology = integralism
 	traits = {
 	}
 }

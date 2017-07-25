@@ -1,6 +1,6 @@
 ﻿capital = 41
 
-oob = "SPR_1936"
+oob = "SPR"
 
 set_research_slots = 3
 
@@ -90,7 +90,7 @@ create_country_leader = {
 	desc = "POLITICS_FRANCISCO_FRANCO_DESC"
 	picture = "Portrait_Spain_Francisco_Franco.dds"
 	expire = "1965.1.1"
-	ideology = national_integralism
+	ideology = integralism
 	traits = {
 		#
 	}

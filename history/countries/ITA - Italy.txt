@@ -1,6 +1,6 @@
 ﻿capital = 2
 
-oob = "ITA_1936"
+oob = "ITA"
 
 set_research_slots = 3
 

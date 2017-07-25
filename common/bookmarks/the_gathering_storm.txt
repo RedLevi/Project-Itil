@@ -17,7 +17,7 @@ bookmarks = {
 		}
 		"GER"={
 			history = "GER_GATHERING_STORM_DESC"
-			ideology = reactionarism
+			ideology = conservatism
 			ideas = {
 			Overconfident_general_staff
 			}
@@ -26,7 +26,7 @@ bookmarks = {
 		}
 		"FRA"={
 			history = "FRA_GATHERING_STORM_DESC"
-			ideology = reactionarism
+			ideology = liberalism
 			ideas = {
 			}
 			focuses = {
@@ -42,7 +42,7 @@ bookmarks = {
 		}
 		"ENG"={
 			history = "ENG_GATHERING_STORM_DESC"
-			ideology = liberalisn
+			ideology = liberalism
 			ideas = {
 			}	
 			focuses = {
@@ -63,7 +63,7 @@ bookmarks = {
 			ideas = {
 			}
 			focuses = {
-			}	
+			}
 		}
 
 		"---"={
@@ -117,7 +117,7 @@ bookmarks = {
 		"SPR"={
 			minor = yes
 			history = "SAF_GATHERING_STORM_DESC"
-			ideology = liberalism
+			ideology = socialism
 			ideas = {
 			}
 			focuses = {

@@ -57,7 +57,7 @@ create_country_leader = {
 	name = "Pierre Gemayel"
 	desc = ""
 	picture = "gfx/leaders/SAU/Portrait_Europe_Generic_fascism1.dds"
-	ideology = national_integralism
+	ideology = integralism
 	traits = {
 		#
 	}

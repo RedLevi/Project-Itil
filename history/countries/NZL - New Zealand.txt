@@ -88,7 +88,7 @@ create_country_leader = {
 	desc = "POLITICS_JOHN_ORMOND_DESC"
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 	expire = "1965.1.1"
-	ideology = national_integralism
+	ideology = integralism
 	traits = {
 		#
 	}

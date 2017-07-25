@@ -57,7 +57,7 @@ create_country_leader = {
 	name = "Ahmed Husayn"
 	desc = ""
 	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
-	ideology = national_integralism
+	ideology = integralism
 	traits = {
 		#
 	}

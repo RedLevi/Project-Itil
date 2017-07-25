@@ -1,6 +1,6 @@
 ﻿capital = 126
 
-oob = "ENG_1936"
+oob = "ENG"
 
 set_research_slots = 4
 
@@ -173,7 +173,7 @@ create_country_leader = {
 	desc = "POLITICS_OSWALD_MOSLEY_DESC"
 	picture = "Portrait_Britain_Oswald_Mosley.dds"
 	expire = "1965.1.1"
-	ideology = national_integralism
+	ideology = integralism
 	traits = {
 		
 	}

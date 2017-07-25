@@ -57,7 +57,7 @@ create_country_leader = {
 	name = "Saeed Ahmadi"
 	desc = ""
 	picture = "gfx/leaders/JOR/Portrait_Arabia_Generic_fascism1.dds"
-	ideology = national_integralism
+	ideology = integralism
 	traits = {
 		#
 	}

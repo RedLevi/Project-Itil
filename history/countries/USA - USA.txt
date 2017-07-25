@@ -1,4 +1,4 @@
-﻿capital = 826
+﻿capital = 361
 
 oob = "USA_1936"
 
@@ -93,7 +93,7 @@ create_country_leader = {
 	desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
 	picture = "Portrait_USA_William_Dudley_Pelley.dds"
 	expire = "1965.1.1"
-	ideology = national_integralism
+	ideology = integralism
 	traits = {
 		
 	}

@@ -71,7 +71,7 @@ create_country_leader = {
 	desc = "POLITICS_PLINIO_SALGADO_DESC"
 	picture = "Portrait_Brazil_Plinio_Salgado.dds"
 	expire = "1965.1.1"
-	ideology = national_integralism
+	ideology = integralism
 	traits = {
 		#
 	}

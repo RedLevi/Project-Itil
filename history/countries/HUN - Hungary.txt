@@ -55,7 +55,7 @@ create_country_leader = {
 	desc = "POLITICS_MIKLOS_HORTHY_DESC"
 	picture = "Portrait_Hungary_Miklos_Horthy.dds"
 	expire = "1965.1.1"
-	ideology = national_integralism
+	ideology = integralism
 	traits = {
 		#
 	}

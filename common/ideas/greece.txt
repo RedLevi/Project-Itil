@@ -21,6 +21,7 @@ GRE_Megali_Idea = {
 			generate_wargoal_tension = -0.4
 		}
 	}
+}
 	
 	political_advisor = {
 
@@ -316,4 +317,4 @@ theorist = {
 			traits = { naval_manufacturer }
 		}
 	}
-}}
+}

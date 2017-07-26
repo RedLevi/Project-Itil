@@ -406,83 +406,83 @@ units = {
 	}
 	#### Kolonialkräfte Africa ### #Colonial Army
     division= {	
-		name = 1. Kolonialkräfte von Afrika
+		name = "1. Kolonialkräfte von Afrika"
 		location = 8244
-		division_template = Kolonialkräfte
+		division_template = "Kolonialkräfte"
 		start_experience_factor = 0.3
 	}
     division= {	
-		name = 2. Kolonialkräfte von Afrika
+		name = "2. Kolonialkräfte von Afrika"
 		location = 191
-		division_template = Kolonialkräfte
+		division_template = "Kolonialkräfte"
 		start_experience_factor = 0.3
 	}		
     division= {	
-		name = 3. Kolonialkräfte von Afrika
+		name = "3. Kolonialkräfte von Afrika"
 		location = 3181
-		division_template = Kolonialkräfte
+		division_template = "Kolonialkräfte"
 		start_experience_factor = 0.3
 	}		
     division= {	
-		name = 1. Kavallerie-Brigade von Afrika
+		name = "1. Kavallerie-Brigade von Afrika"
 		location = 5224
-		division_template = Kavallerie-Brigade
+		division_template = "Kavallerie-Brigade"
 		start_experience_factor = 0.3
 	}	
     division= {	
-		name = 4. Kolonialkräfte von Afrika
+		name = "4. Kolonialkräfte von Afrika"
 		location = 5224
-		division_template = Kolonialkräfte
+		division_template = "Kolonialkräfte"
 		start_experience_factor = 0.3
 	}	
     division= {
-		name = 5. Kolonialkräfte von Afrika
+		name = "5. Kolonialkräfte von Afrika"
 		location = 10919
-		division_template = Kolonialkräfte
+		division_template = "Kolonialkräfte"
 		start_experience_factor = 0.3
 	}	
     division= {	#Madagaskar
-		name = 2. Kavallerie-Brigade von Afrika
+		name = "2. Kavallerie-Brigade von Afrika"
 		location = 5222
-		division_template = Kavallerie-Brigade
+		division_template = "Kavallerie-Brigade"
 		start_experience_factor = 0.3
 	}	
     division= {	#Namibia
-		name = 3. Kavallerie-Brigade von Afrika
+		name = "3. Kavallerie-Brigade von Afrika"
 		location = 4879
-		division_template = Kavallerie-Brigade
+		division_template = "Kavallerie-Brigade"
 		start_experience_factor = 0.3
 	}	
 	#### Kolonialkräfte Somalia ###
     division= {	
-		name = Mogadischu Kolonialkräfte
+		name = "Mogadischu Kolonialkräfte"
 		location = 12991
-		division_template = Kolonialkräfte
+		division_template = "Kolonialkräfte"
 		start_experience_factor = 0.3
 	}	
     division= {	
-		name = Eritrea Kolonialkräfte
+		name = "Eritrea Kolonialkräfte"
 		location = 12766
 		division_template = Kolonialkräfte
 		start_experience_factor = 0.3
 	}	
     division= {	
-		name = Dschibuti Kolonialkräfte
+		name = "Dschibuti Kolonialkräfte"
 		location = 4985
-		division_template = Kolonialkräfte
+		division_template = "Kolonialkräfte"
 		start_experience_factor = 0.3
 	}
 	#### Kolonialkräfte Indochina ###
     division= {	
-		name = Hanoi Kolonialkräfte
+		name = "Hanoi Kolonialkräfte"
 		location = 4075
-		division_template = Kolonialkräfte
+		division_template = "Kolonialkräfte"
 		start_experience_factor = 0.3
 	}	
     division= {	
-		name = Saigon Kolonialkräfte
+		name = "Saigon Kolonialkräfte"
 		location = 4401
-		division_template = Kolonialkräfte
+		division_template = "Kolonialkräfte"
 		start_experience_factor = 0.3
 	}
 	
@@ -654,3 +654,145 @@ air_wings = {
 		# Küstenfliegergruppe 206
 	}
 }
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "GER"
+		}
+		requested_factories = 15
+		progress = 0.1
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_2
+			creator = "GER" 
+		}
+		requested_factories = 2
+		progress = 0.4
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 2
+		progress = 0.4
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = CAS_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.2
+		efficiency = 50
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = tac_bomber_equipment_1
+			creator = "GER" 
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+	}
+
+	### Ships Under Contruction ###
+	# SS: Type IIA (x2) ("U-25" "U-26"), Type IIB (x6) ("U-14" "U-16" "U-18" "U-15" "U-20" "U-19")
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "GER" 
+		}
+		requested_factories = 5
+		progress = 0.75
+		amount = 8
+	}
+	# DD: 1934 class (x4) ("Z1" "Z2" "Z3" "Z4")
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "GER"
+		}
+		requested_factories = 3
+		progress = 0.75
+		amount = 4
+	}
+	# CA: "Graf Spee"
+	add_equipment_production = {
+		equipment = {
+			type = heavy_cruiser_1
+			creator = "GER"
+			version_name = "Deutschland Class"
+		}
+		requested_factories = 1
+		progress = 0.95
+		amount = 1
+	}
+		# Scharnhorst
+	add_equipment_production = {
+		equipment = {
+			type = battleship_2
+			creator = "GER"
+		}
+		requested_factories = 3
+		progress = 0.25
+		amount = 1
+	}
+		# Gneisenau
+	add_equipment_production = {
+		equipment = {
+			type = battleship_2
+			creator = "GER"
+		}
+		requested_factories = 3
+		progress = 0.1
+		amount = 1
+	}
+}
+
+#####################

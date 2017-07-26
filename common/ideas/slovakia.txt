@@ -2,7 +2,7 @@ ideas = {
 
 	political_advisor = {
 
-		Terka_Beňadiková = {
+		Terka_Beniadikova = {
 
 			picture = generic_political_advisor_europe_1
 			
@@ -13,7 +13,7 @@ ideas = {
 			traits = { popular_figurehead }
 		}
 
-		Adam_Senkjú = {
+		Adam_Senkju = {
 
 			picture = generic_political_advisor_europe_2
 				
@@ -35,7 +35,7 @@ ideas = {
 			traits = { war_industrialist }
 		}
 
-		Miška_Dorušiaková = {
+		Mishka_Dorushiakova = {
 
 			picture = generic_political_advisor_europe_1
 			

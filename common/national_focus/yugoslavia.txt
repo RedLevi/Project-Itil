@@ -1,0 +1,7 @@
+focus_tree = {
+	id = generic_focus
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1100 }
+}

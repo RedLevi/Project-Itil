@@ -107,5 +107,7 @@ create_country_leader = {
 	}
 }
 
+set_cosmetic_tag = INS_HOL # Netherlands East Indies
+
 
 

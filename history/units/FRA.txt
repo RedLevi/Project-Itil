@@ -879,7 +879,7 @@ air_wings = {
 	}
 
 	# Z.d'Op. Aériennes Africain -- Algérie
-	12760 = {
+	459 = {
 		# Groupement de Chasse du Nord-Africain
 		fighter_equipment_0 = {
 			owner = "FRA" 

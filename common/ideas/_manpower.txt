@@ -28,8 +28,6 @@ ideas = {
 			
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.015 group = mobilization_laws }
-				NOT = { has_idea = undisturbed_isolation }
-				NOT = { has_idea = isolation }
 			}
 
 			modifier = {
@@ -49,8 +47,6 @@ ideas = {
 
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.025 group = mobilization_laws }
-				NOT = { has_idea = undisturbed_isolation }
-				NOT = { has_idea = isolation }
 				if = {
 					limit = {
 						original_tag = AST
@@ -87,7 +83,7 @@ ideas = {
 			available = {
 				#has_manpower_for_recruit_change_to = { value = 0.05 group = mobilization_laws }
 				OR = {
-					has_government = fascism
+					has_government = national_integralism
 					has_government = communism
 					AND = {
 						has_war = yes
@@ -147,7 +143,7 @@ ideas = {
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.1 group = mobilization_laws }
 				OR = {
-					has_government = fascism
+					has_government = national_integralism
 					has_government = communism
 					AND = {
 						has_war = yes

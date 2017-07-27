@@ -1,4 +1,4 @@
-﻿capital = 802
+﻿capital = 70
 
 oob = "SLO_1939"
 

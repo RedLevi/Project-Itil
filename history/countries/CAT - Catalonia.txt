@@ -1,4 +1,4 @@
-﻿capital = 755
+﻿capital = 165
 
 oob = "CAT_1936"
 

@@ -1,0 +1,8 @@
+﻿l_english:
+ FACTION_LEADER:0 "Faction leader: §Y$COUNTRY$§!"
+ FACTION_MEMBER:0 "Faction member: §Y$COUNTRY$§!"
+ FACTION_NAME_IDEOLOGY_DEFAULT:0 "Supporters of $IDEOLOGY$"
+ entente:0 "Entente"
+ imperial_mutual_assistance_pact:0 "Imperial Mutual Assistance Pact"
+ second_international:0 "Second International"
+ co_prosperity_sphere:0 "Co-Prosperity Sphere"

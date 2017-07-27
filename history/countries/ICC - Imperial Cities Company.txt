@@ -1,4 +1,4 @@
-﻿capital = 811
+﻿capital = 750
 
 oob = "ICC_1936"
 

@@ -275,20 +275,20 @@ units = {
 	# IV Corpo d'Armata dell'A.O.I. #
 	division= {	
 		name = "5a Divisione di Fanteria 'Cosseria'"
-		location = 11583
+		location = 9904
 		division_template = "Divisione di Fanteria"	
 		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "2a Divisione CC.NN. '28 Ottobre'"
-		location = 11583
+		location = 9904
 		division_template = "Divisione di Fanteria"		# CCNN militia, lower training and equipment
 		start_experience_factor = 0.2
 
 	}
 	division= {	
 		name = "5a Divisione CC.NN. '1 Febbraio'"
-		location = 11583
+		location = 9904
 		division_template = "Divisione di Fanteria"		# CCNN militia, lower training and equipment
 		start_experience_factor = 0.2
 

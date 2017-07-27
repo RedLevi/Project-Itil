@@ -132,6 +132,7 @@ set_politics = {
 }
 
 create_faction = co_prosperity_sphere
+add_to_faction = JAP
 add_to_faction = MAN
 add_to_faction = RUS
 

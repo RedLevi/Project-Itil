@@ -41,6 +41,7 @@ set_convoys = 50
 set_national_unity = 0.55
 
 create_faction = "second_international"
+add_to_faction = SOV
 add_to_faction = POL
 add_to_faction = PER
 add_to_faction = LAT 

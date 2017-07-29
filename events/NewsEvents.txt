@@ -1,1 +1,46 @@
-﻿
+﻿add_namespace = news
+
+news_event = {
+	id = news.1
+	title = news.1.t
+	desc = news.1.d
+	picture = GFX_fra_communist
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.1.a
+		trigger = {
+			NOT = { 
+			    TAG = FRA 
+			    has_government = communism
+			}
+		}
+	}
+	option = {
+		name = news.1.b
+		trigger = {
+			has_government = communism
+		}
+	}
+}
+
+news_event = {
+	id = news.2
+	title = news.2.t
+	desc = news.2.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.2.a
+		trigger = {
+		NOT = { TAG = FRA }
+		}	
+	}
+}

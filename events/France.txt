@@ -1,1 +1,100 @@
-﻿
+﻿add_namespace = france
+
+country_event = {
+
+	id = france.1 
+	title = france.1.t 
+	desc = france.1.d 
+	picture = GFX_fra_communist
+	
+    fire_only_once = yes	
+	
+	trigger = {
+	date > 1936.4.26	
+	tag = FRA
+	}
+
+	mean_time_to_happen = { days = 5 }
+	
+	option = {
+		name = france.1.a 
+		 add_political_power = 50
+		 set_politics = { ruling_party = communism elections_allowed = no }
+		 hidden_effect = {
+		 news_event = news.1
+		 }
+	}
+}
+
+country_event = {
+
+	id = france.2 
+	title = france.2.t 
+	desc = france.2.d 
+	
+    fire_only_once = yes	
+	
+	trigger = {
+	tag = FRA
+	has_government = communism
+	}
+	mean_time_to_happen = { days = 30 }
+	
+	option = {
+		name = france.2.a 
+		add_political_power = -50
+		hidden_effect = { 
+		set_global_flag = fra_com_troub
+		}
+	}
+}
+
+country_event = {
+
+	id = france.3 
+	title = france.3.t 
+	desc = france.3.d 
+	
+    fire_only_once = yes	
+	
+	trigger = {
+	tag = FRA
+	has_government = communism
+	has_global_flag = fra_com_troub
+	}
+	mean_time_to_happen = { days = 15 }
+	
+	option = {
+		name = france.3.a 
+		start_civil_war = { ideology = reactionarism size = 0.5 }
+		hidden_effect = {
+	    clr_global_flag = fra_com_troub
+		set_global_flag = fra_civil_war
+		news_event = news.2
+		}
+	}
+}
+
+country_event = {
+
+	id = france.4
+	title = france.4.t 
+	desc = france.4.d 
+
+    fire_only_once = yes
+	
+	trigger = {
+	any_enemy_country = {
+	    original_tag = FRA
+		has_government = communism
+	}
+	has_global_flag = fra_civil_war
+	}
+	
+	option = {
+		name = france.4.a 
+		hidden_effect = {
+		set_cosmetic_tag = FRA_AUT
+		}
+	}
+}

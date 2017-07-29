@@ -13,3 +13,8 @@ BYZ = {
     color = rgb { 100 0 225 }
     color_ui = rgb { 255 179 96 }
 }
+
+FRA_AUT = {
+    color = { 20 20 100 }
+    color_ui = rgb { 255 179 96 }
+}

@@ -18,3 +18,8 @@ FRA_AUT = {
     color = { 20 20 100 }
     color_ui = rgb { 255 179 96 }
 }
+
+MOR_GER = {
+    color = { 153 0 0 }
+    color_ui = rgb { 255 179 96 }
+}

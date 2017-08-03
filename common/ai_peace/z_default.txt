@@ -372,6 +372,165 @@ default_peace = {
 				}
 			}
 		}
+		#####Country Specific Conference Rules#####
+		#AFG - Afghanistan
+		modifier = {
+			factor = 0
+			OR = {
+				ROOT = { #Is country, is in a faction and not a faction leader
+					tag = AFG
+					NOT = { is_faction_leader = yes }
+					is_in_faction = yes	
+				}
+				ROOT = { #Is faction leader of this country
+					is_faction_leader = yes
+					is_in_faction_with = AFG
+					NOT = { tag = AFG }
+				}
+			}
+			IF = { #Country
+				LIMIT = {
+					ROOT = { #Is country, is in a faction and not a faction leader
+						tag = AFG
+						NOT = { is_faction_leader = yes }
+						is_in_faction = yes	
+					}				
+				}
+				FROM = { #Take only the following states and/or core/claimed territory
+					NOT = {
+						state = 267 #Kabul
+						state = 415 #Herat
+						is_claimed_by = ROOT
+						is_core_of = ROOT
+					}
+				}
+			}
+			IF = { #Country Faction Leader
+				LIMIT = {
+					ROOT = { #Is faction leader of this country
+						is_faction_leader = yes
+						is_in_faction_with = AFG
+						NOT = { tag = AFG }
+					}				
+				}
+				FROM = { #Take only the following states and/or core/claimed territory
+					OR = {
+						state = 267 #Kabul
+						state = 415 #Herat
+						is_claimed_by = ROOT
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
+		#ALB - Albania
+		modifier = {
+			factor = 0
+			OR = {
+				ROOT = { #Is country, is in a faction and not a faction leader
+					tag = ALB
+					NOT = { is_faction_leader = yes }
+					is_in_faction = yes	
+				}
+				ROOT = { #Is faction leader of this country
+					is_faction_leader = yes
+					is_in_faction_with = ALB
+					NOT = { tag = ALB }
+				}
+			}
+			IF = { #Country
+				LIMIT = {
+					ROOT = { #Is country, is in a faction and not a faction leader
+						tag = ALB
+						NOT = { is_faction_leader = yes }
+						is_in_faction = yes	
+					}				
+				}
+				FROM = { #Take only the following states and/or core/claimed territory
+					NOT = {
+						state = 185 #Epirus
+						state = 44 #Albania
+						state = 106 #Macedonia
+						state = 108 #Morova
+						state = 105 #Montenegro
+						is_claimed_by = ROOT
+						is_core_of = ROOT
+					}
+				}
+			}
+			IF = { #Country Faction Leader
+				LIMIT = {
+					ROOT = { #Is faction leader of this country
+						is_faction_leader = yes
+						is_in_faction_with = ALB
+						NOT = { tag = ALB }
+					}				
+				}
+				FROM = { #Take only the following states and/or core/claimed territory
+					OR = {
+						state = 185 #Epirus
+						state = 44 #Albania
+						state = 106 #Macedonia
+						state = 108 #Morova
+						state = 105 #Montenegro
+						is_claimed_by = ROOT
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
+		#POL - Poland
+		modifier = {
+			factor = 0
+			OR = {
+				ROOT = { #Is country, is in a faction and not a faction leader
+					tag = POL
+					NOT = { is_faction_leader = yes }
+					is_in_faction = yes	
+				}
+				ROOT = { #Is faction leader of this country
+					is_faction_leader = yes
+					is_in_faction_with = POL
+					NOT = { tag = POL }
+				}
+			}
+			IF = { #Country
+				LIMIT = {
+					ROOT = { #Is country, is in a faction and not a faction leader
+						tag = POL
+						NOT = { is_faction_leader = yes }
+						is_in_faction = yes	
+					}				
+				}
+				FROM = { #Take only the following states and/or core/claimed territory
+					NOT = {
+						region = 38 #Western Poland
+						region = 39 #Eastern Poland
+						state = 67 #Oberschelesian
+						is_claimed_by = ROOT
+						is_core_of = ROOT
+					}
+				}
+			}
+			IF = { #Country Faction Leader
+				LIMIT = {
+					ROOT = { #Is faction leader of this country
+						is_faction_leader = yes
+						is_in_faction_with = POL
+						NOT = { tag = POL }
+					}				
+				}
+				FROM = { #Take only the following states and/or core/claimed territory
+					OR = {
+						region = 38 #Western Poland
+						region = 39 #Eastern Poland
+						state = 67 #Oberschelesian
+						is_claimed_by = ROOT
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
 	}
 
 	# ROOT = Taker, FROM = Giver

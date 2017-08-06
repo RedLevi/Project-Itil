@@ -1,0 +1,134 @@
+﻿division_template = {
+	name = "Jund el-Mashaa"	# Infantry Division	
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Jund el-Jubal"	# Mountain Division
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Liwa el-Farsan"  # Cavalry Brigade
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+    #Syria
+	
+	division = {
+		name = "1. Damascus Guard"  			
+		location = 4111
+		division_template = "Jund el-Mashaa"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Damascus Guard"  			
+		location = 4111
+		division_template = "Jund el-Mashaa"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1. Jund el-Mashaa"  			
+		location = 12473
+		division_template = "Jund el-Mashaa"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "Jund el-Jubal"  			
+		location = 10882
+		division_template = "Jund el-Jubal"
+		start_experience_factor = 0.3
+	}
+	
+	#Baghdad
+	
+	division = {
+		name = "2. Jund el-Mashaa"  			
+		location = 2097
+		division_template = "Jund el-Mashaa"
+		start_experience_factor = 0.3
+	}	
+	division = {
+		name = "3. Jund el-Mashaa"  			
+		location = 2097
+		division_template = "Jund el-Mashaa"
+		start_experience_factor = 0.3
+	}		
+	division = {
+		name = "1. Liwa el-Farsan"  			
+		location = 2097
+		division_template = "Liwa el-Farsan"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	
+	#Basra
+	division = {
+		name = "2. Liwa el-Farsan"  			
+		location = 2089
+		division_template = "Liwa el-Farsan"
+		start_experience_factor = 0.3
+	}	
+	division = {
+		name = "3. Liwa el-Farsan"  			
+		location = 2089
+		division_template = "Liwa el-Farsan"
+		start_experience_factor = 0.3
+	}		
+	division = {
+		name = "4. Jund el-Mashaa"  			
+		location = 2089
+		division_template = "Jund el-Mashaa"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	
+	##### NAVAL UNITS #####
+	navy = {					
+		name = "Austul el-Bahr a-Suri"
+		base = 792
+		location = 792 # Beirut		
+		# Destroyer Flotilla
+		ship = { name = "RHS Faisal" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SYR } } }		
+		ship = { name = "RHS Aziz" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SYR } } }		
+		ship = { name = "RHS Hashim" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SYR } } }		
+		ship = { name = "RHS Hussein" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SYR } } }	
+	}
+}
+
+### Air Wings ###
+air_wings = {
+	554 = {
+		fighter_equipment_0 = {
+			owner = "SYR" 
+			creator = "ENG"
+			amount = 40
+		}
+		tac_bomber_equipment_0 =  {
+			owner = "SYR"
+			creator = "ENG"
+			amount = 28
+		}
+    }
+}

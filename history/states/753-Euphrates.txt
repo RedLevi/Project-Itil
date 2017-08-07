@@ -1,22 +1,23 @@
 
 state={
-	id=680
-	name="STATE_680"
+	id=753
+	name="Al Hasakah"
 
 	history={
-		owner = SYR
+		owner = TUR
 		buildings = {
 			infrastructure = 2
 
 		}
+		add_core_of = TUR
 		add_core_of = SYR
 
 	}
 
 	provinces={
-		901 1606 1634 2013 3942 6883 7513 10383 12316 12442 
+		1549 1578 10882 
 	}
-	manpower=254110
+	manpower=158743
 	buildings_max_level_factor=1.000
-	state_category=wasteland
+	state_category=rural
 }

@@ -14,9 +14,9 @@ state={
 	}
 
 	provinces={
-		901 1606 1634 2013 3942 6883 7513 10383 12316 12442 10882
+		901 1606 1634 2013 3942 6883 7513 10383 12316 12442 
 	}
-	manpower=324110
+	manpower=254110
 	buildings_max_level_factor=1.000
 	state_category=wasteland
 }

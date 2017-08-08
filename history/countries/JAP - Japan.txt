@@ -50,50 +50,7 @@ create_import = {
 		factories = 2
 		exporter = USA
 }
-
-
 	
-	RUS = {
-	
-		set_politics = {
-
-	parties = {
-	    conservatism = {
-			popularity = 10
-		}
-
-		national_integralism = {
-			popularity = 25
-		}
-
-		liberalism = {
-			popularity = 5
-		}
-		
-		communism = {
-			popularity = 0
-		}
-		
-		socialism = {
-			popularity = 0
-		}
-		
-		reactionarism = {
-			popularity = 60
-		}
-		
-	}
-	
-	ruling_party = reactionarism
-	last_election = "1933.7.1"
-	election_frequency = 48
-	elections_allowed = no
-}
-	
-	}
-	
-	
-
 set_convoys = 400
 
 set_politics = {
@@ -156,6 +113,48 @@ if = {
 		puppet = MAN
 	}
 }
+
+
+
+	
+	RUS = {
+	
+		set_politics = {
+
+	parties = {
+	    conservatism = {
+			popularity = 10
+		}
+
+		national_integralism = {
+			popularity = 25
+		}
+
+		liberalism = {
+			popularity = 5
+		}
+		
+		communism = {
+			popularity = 0
+		}
+		
+		socialism = {
+			popularity = 0
+		}
+		
+		reactionarism = {
+			popularity = 60
+		}
+		
+	}
+	
+	ruling_party = reactionarism
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+	
+	}
 
 create_country_leader = {
 	name = "Hirohito"

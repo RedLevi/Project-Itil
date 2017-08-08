@@ -1,0 +1,23 @@
+
+state={
+	id=753
+	name="Al Hasakah"
+
+	history={
+		owner = TUR
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = TUR
+		add_core_of = SYR
+
+	}
+
+	provinces={
+		1549 1578 10882 
+	}
+	manpower=158743
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

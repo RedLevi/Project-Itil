@@ -1,5 +1,5 @@
-﻿name="Project Itil"
-path="mod/Project-Itil/"
+﻿name="Ante Rebellum"
+path="mod/Ante Rebellum/"
 tags={
 	"Alternative History"
 }

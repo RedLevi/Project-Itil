@@ -1,0 +1,57 @@
+﻿division_template = {
+	name = "Jund el-Mashaa"	# Infantry Division	
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Jund el-Jubal"	# Mountain Division
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Liwa el-Farsan"  # Cavalry Brigade
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+	division = {
+		name = "1. Colonial Brigade"  			
+		location = 7069
+		division_template = "Jund el-Mashaa"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1. Liwa el-Farsan"  			
+		location = 9945
+		division_template = "Liwa el-Farsan"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "1. Jund el-Jubal"
+		location = 12100
+		division_template = "Jund el-Jubal"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+}

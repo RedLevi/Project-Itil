@@ -4,7 +4,7 @@ news_event = {
 	id = news.1
 	title = news.1.t
 	desc = news.1.d
-	picture = GFX_fra_communist
+	picture = GFX_news_event_generic_sign_treaty1
 	
 	major = yes
 	

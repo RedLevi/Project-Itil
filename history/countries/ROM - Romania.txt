@@ -1,6 +1,6 @@
 ﻿capital = 46
 
-oob = "ROM_1936"
+oob = "ROM"
 
 set_research_slots = 3
 

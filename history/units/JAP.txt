@@ -392,7 +392,7 @@ units = {
 	}
 	division = {
 		name = "2 Dokuritsu Shubirentai"
-		location = 6969
+		location = 12478
 		division_template = "Chuton-chi Shidan"		# Japanese garrison (better than militia, but still with older equipment)
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.7		
@@ -446,12 +446,6 @@ units = {
 	division = {
 		name = "8 'Sugi' Hohei Shidan"
 		location = 4837
-		division_template = "Hohei Shidan"
-		start_experience_factor = 0.3
-	}
-	division = {
-		name = "12 'Ken' Hohei Shidan"
-		location = 12043
 		division_template = "Hohei Shidan"
 		start_experience_factor = 0.3
 	}
@@ -522,13 +516,13 @@ units = {
 	#Independents
 	division = {
 		name = "5 'Koi' Hohei Shidan"
-		location = 3955 #East Hebei Autonomous Council
+		location = 1508 #East Hebei Autonomous Council
 		division_template = "Jidousha Shidan"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "1 Dokuritsu Konsei Ryodan"
-		location = 3900 #East Hebei Autonomous Council
+		location = 9835 #East Hebei Autonomous Council
 		division_template = "Dokuritsu Konsei Ryodan"
 		start_experience_factor = 0.3
 	}
@@ -579,13 +573,13 @@ units = {
 
 	division = {
 		name = "10 'Tetsu' Hohei Shidan"
-		location = 881
+		location = 1508
 		division_template = "Hohei Shidan"
 		start_experience_factor = 0.3
 	}
 	division = {
 		name = "16 'Kaki' Hohei Shidan"
-		location = 9768
+		location = 9788
 		division_template = "Hohei Shidan"
 		start_experience_factor = 0.3
 	}

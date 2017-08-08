@@ -1,0 +1,308 @@
+﻿division_template = {
+	name = "Pikhotna Divizia"			# Infantry Division
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }   
+	}
+}
+division_template = {
+	name = "Hirs'ka Brihada"				# Mountain Brigade
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+}
+division_template = {
+	name = "Kavaleryska Brihada" 				# Cavalry Brigade
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Bronetankovyy Polk" 				# Armor Regiment
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+}
+
+
+units = {
+	######## LAND UNITS ########
+    # Kiev
+	division = {
+		name = "1. Pikhotna Divizia"
+		location = 525
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "2. Pikhotna Divizia"
+		location = 525
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "3. Pikhotna Divizia"
+		location = 525
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "1. Kavaleryska Brihada"
+		location = 525
+		division_template = "Kavaleryska Brihada"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+    
+	# Northern Border
+	division = {
+		name = "4. Pikhotna Divizia"
+		location = 3520
+		division_template = "Pikhotna Divizia"			
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5. Pikhotna Divizia"
+		location = 3520
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "6. Pikhotna Divizia"
+		location = 3520
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "2. Kavaleryska Brihada"
+		location = 3520
+		division_template = "Kavaleryska Brihada"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+
+	division = {
+		name = "7. Pikhotna Divizia"
+		location = 9568
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "8. Pikhotna Divizia"
+		location = 9568
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "9. Pikhotna Divizia"
+		location = 474
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	# Eastern Border
+	division = {
+		name = "10. Pikhotna Divizia"
+		location = 9417
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "11. Pikhotna Divizia"
+		location = 9417
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "12. Pikhotna Divizia"
+		location = 9461
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "3. Kavaleryska Brihada"
+		location = 9461
+		division_template = "Kavaleryska Brihada"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	division = {
+		name = "13. Pikhotna Divizia"
+		location = 418
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "14. Pikhotna Diviziaie"
+		location = 418
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "15. Pikhotna Divizia"
+		location = 418
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	# Southern Border - Odessa
+	division = {
+		name = "16. Pikhotna Divizia"
+		location = 11670
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "4. Kavaleryska Brihada"
+		location = 11670
+		division_template = "Kavaleryska Brihada"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+
+	}
+	
+	#Lwow
+	division = {
+		name = "17. Pikhotna Divizia"
+		location = 11479
+		division_template = "Pikhotna Divizia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "1. Hirs'ka Brihada"
+		location = 9425
+		division_template = "Hirs'ka Brihada"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+
+	##### NAVAL UNITS #####
+	navy = {				
+		name = "Ukrayinskyy Morsʹkyy Flot"			
+		base = 3686
+		location = 3686 # Crimea
+		ship = { name = "NMS Vladislaw" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = UKR } } }
+		ship = { name = "NMS Kyril" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = UKR } } }
+		ship = { name = "NMS Skoropadski" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = UKR } } }
+		ship = { name = "NMS Illya" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = UKR } } }
+	}				
+}
+
+
+### Fortele Aeriene Regale ale României (FFAR) ###
+air_wings = {
+	202 = {
+		fighter_equipment_0 = {
+			owner = "UKR"
+			amount = 48
+		}
+	}
+	193 = {
+		fighter_equipment_0 = {
+			owner = "UKR" 
+			amount = 24
+		}
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "UKR"
+		}
+		requested_factories = 2
+		progress = 0.87
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "UKR"
+		}
+		requested_factories = 1
+		progress = 0.19
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "UKR"
+		}
+		requested_factories = 1
+		progress = 0.24
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_1
+			creator = "UKR" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}
+}

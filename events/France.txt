@@ -5,7 +5,7 @@ country_event = {
 	id = france.1 
 	title = france.1.t 
 	desc = france.1.d 
-	picture = GFX_fra_communist
+	picture = GFX_thorez
 	
     fire_only_once = yes	
 	
@@ -54,6 +54,7 @@ country_event = {
 	id = france.3 
 	title = france.3.t 
 	desc = france.3.d 
+	picture = GFX_fra_communist
 	
     fire_only_once = yes	
 	
@@ -71,6 +72,7 @@ country_event = {
 	    clr_global_flag = fra_com_troub
 		set_global_flag = fra_civil_war
 		news_event = news.2
+        every_enemy_country = { limit = { has_civil_war = yes } country_event = { days = 1 id = france.4 } }
 		}
 	}
 }
@@ -81,15 +83,7 @@ country_event = {
 	title = france.4.t 
 	desc = france.4.d 
 
-    fire_only_once = yes
-	
-	trigger = {
-	any_enemy_country = {
-	    original_tag = FRA
-		has_government = communism
-	}
-	has_global_flag = fra_civil_war
-	}
+    is_triggered_only = yes
 	
 	option = {
 		name = france.4.a 

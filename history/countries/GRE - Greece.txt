@@ -1,6 +1,6 @@
 ﻿capital = 47
 
-oob = "GRE_1936"
+oob = "GRE"
 
 set_research_slots = 3
 

@@ -562,7 +562,26 @@ units = {
 		ship = { name = "Falke" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
 		ship = { name = "Kondor" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
 		ship = { name = "Wolf" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
-		ship = { name = "Iltis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Kormoran" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Pelikan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		# 4. Torpedobootflottille		
+		ship = { name = "Gannet" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Fischadler" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Falken" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Drachen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Gänse" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Schakal" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		ship = { name = "Fuchs" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = GER } } }
+		# 5. Torpedobootflottille
+		ship = { name = "Bayern" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Dresden" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Elsass" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Oldenburg" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Rhine" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Braunschweig" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Göttingen" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }
+		ship = { name = "Worms" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = GER } } }		
+		
 	}
 	
 	navy = {
@@ -594,7 +613,14 @@ units = {
 		ship = { name = "U-19" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
 		ship = { name = "U-20" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
 		ship = { name = "U-21" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
-		ship = { name = "U-22" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }	
+		ship = { name = "U-22" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-23" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-24" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-25" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-26" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-27" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-28" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-29" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }	
 	}	
 
 	navy = {
@@ -616,18 +642,19 @@ units = {
 		base = 362
 		location = 362  # Danzig
 		# 7. Unterseebootsflottille
-		ship = { name = "U-23" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
-		ship = { name = "U-24" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
-		ship = { name = "U-25" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
-		ship = { name = "U-26" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
-		ship = { name = "U-27" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
-		ship = { name = "U-28" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
-		ship = { name = "U-29" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
 		ship = { name = "U-30" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
 		ship = { name = "U-31" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
 		ship = { name = "U-32" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
 		ship = { name = "U-33" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
-		ship = { name = "U-34" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }		
+		ship = { name = "U-34" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-35" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-36" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-37" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-38" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-39" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-40" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
+		ship = { name = "U-41" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }	
+		ship = { name = "U-42" definition = submarine equipment = { submarine_2 = { amount = 1 owner = GER } } }
 	}
 	
 	#Awesome Imperial Battleships

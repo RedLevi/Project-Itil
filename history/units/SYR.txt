@@ -10,15 +10,7 @@
 		infantry = { x = 1 y = 2 }
 	}
 }
-division_template = {
-	name = "Jund el-Jubal"	# Mountain Division
 
-	regiments = {
-		mountaineers = { x = 0 y = 0 }
-		mountaineers = { x = 0 y = 1 }
-		mountaineers = { x = 0 y = 2 }
-	}
-}
 division_template = {
 	name = "Liwa el-Farsan"  # Cavalry Brigade
 
@@ -52,12 +44,6 @@ units = {
 		name = "1. Jund el-Mashaa"  			
 		location = 12473
 		division_template = "Jund el-Mashaa"
-		start_experience_factor = 0.3
-	}
-		division = {
-		name = "Jund el-Jubal"  			
-		location = 10882
-		division_template = "Jund el-Jubal"
 		start_experience_factor = 0.3
 	}
 	

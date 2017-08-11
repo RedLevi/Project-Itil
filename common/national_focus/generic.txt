@@ -2030,7 +2030,7 @@ focus_tree = {
 		y = 4 
 		cost = 10 
 		
-		prerequisite = { focus = adopt_communism_focus }
+		prerequisite = { focus = adopt_communism_focus focus = adopt_socialism_focus }
 		mutually_exclusive = { focus = international_brotherhood_focus }
 		
 		available_if_capitulated = no 
@@ -2337,7 +2337,8 @@ focus_tree = {
 	focus = {
 		id = pacifism_focus
 		icon = GFX_
-		prerequisite = { focus = the_constitution_focus focus = adopt_socialism_focus }
+		prerequisite = { focus = the_constitution_focus }
+
 		mutually_exclusive = { focus = freedom_crusader_focus }
 		x = 26
 		y = 6

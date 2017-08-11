@@ -1,6 +1,37 @@
 ﻿l_english:
 ####focuses####
-
+equality_path_focus:0 "Path of Equality"
+equality_path_focus_desc:0 "'We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights'. No more shall man be a slave to another man in our nation. We will all walk together the path of equality."
+socialist_path_focus:0 "Socialist Reform"
+socialist_path_focus_desc:0 "It is true that Capitalism is corrupt and immoral, cruely exploiting the workers for the benefit of a few. Only by reforming the system and ensuring the rights of the workers are upheld can we create a more equitable society!"
+adopt_socialism_focus:0 "Social Transformation"
+adopt_socialism_focus_desc:0 "The people have spoken! Let us transform our society to be a caring, supporting and equal one for all its citizens!"
+social_welfare_focus:0 "Social Welfare Programs"
+social_welfare_focus_desc:0 "It is the state's duty to care and provide for its citizens, to ensure they all start on an equal footing. A progressive social welfare program would fullfil our part in fixing society!"
+joint_ventures_focus:0 "State-Corporate Joint Ventures"
+joint_ventures_focus_desc:0 "In order to maintain our extensive reforms, and to protect the workers in our ever growing economy, let us invest in joint projects with private companies and individuals, for the prosperity of our people. "
+communist_path_focus:0 "The Red Dawn"
+communist_path_focus_desc:0 "The fundemental evil that is Capitalism and Imperialism can be defeated in one way, and one way only - a classless, stateless society. This society can only be achieved through a rightous revolution of the working class. Let us unite the workers in a call for freedom!"
+adopt_communism_focus:0 "The People's Revolution"
+adopt_communism_focus_desc:0 "The time has come. The people are amassing in the streets, waiting for the signal, the spark that would light the flames of revolution. No more shall we be slaves to any masters. Workers of the world unite! You have nothing to lose but your chains!"
+socialist_democracy_focus:0 "The Workers' Democracy"
+socialist_democracy_focus_desc:0 "We know all too well the pain and devestation tyrrany brings, and the danger that state power can bring to the revolution. We shall do away with the authoritarianism of the past and create a new society, where every worker has equal power."
+workers_councils_focus:0 "Workers' Councils"
+workers_councils_focus_desc:0 "Let us maintain the freedoms of the people by establishing a country-wide system of democratic workers' councils which will act as the supreme holder of political power in our new state."
+socialist_progress_focus:0 "Socialist Progress"
+socialist_progress_focus_desc:0 "The abundant freedoms our citizens enjoy both in self expression and thought have contributed to a boom in our academic capabilities!"
+socialist_dictatorship_focus:0 "The Dictatorship of The Proletariat"
+socialist_dictatorship_focus_desc:0 "The only way for us to completely sweep away the remnants of the old order and transform our society to true Communism is by establishing a strong and uncompromising Workers' state."
+political_commissars_focus:0 "Political Commissars"
+political_commissars_focus_desc:0 "By training and deploying specialized political officers to various public institutions we can maintain the ideological purity and revolutionary motivation of our people."
+revolutionary_youth_focus:0 "Revolutionary Youth"
+revolutionary_youth_focus_desc:0 "By educating our children from a young age to uphold our revolutionary principles we can ensure the survival of the state into the next generation!"
+world_revolution_focus:0 "World Revolution"
+world_revolution_focus_desc:0 "To survive the revolution must spread, then spread further until the entire world is engulfed by the flames of freedom! It is time for us to act as a vanguard in the world revolution! Urah!"
+international_brotherhood_focus:0 "Brotherhood of Man"
+international_brotherhood_focus_desc:0 "Let us join arms with our struggling brothers throughout the world, and create one big human family."
+united_front_focus:0 "The United Front"
+united_front_focus_desc:0 ""
 
 ####events####
 politics.1.t:0 "Downfall in stability"
@@ -15,8 +46,18 @@ politics.3.d:0 "Changes in the political situation have affected the amount of p
 politics.3.a:0 "Very well"
 
 ####ideas####
-
+equality_path_idea:0 "Path of Equality"
+communist_path_idea:0 "Communist Path"
+workers_councils_idea:0 "Workers' Council"
+socialist_progress_idea:0 "Socialist Progress"
+political_commissars_idea:0 "Political Commissars"
+revolutionary_youth_idea:0 "Revolutionary Youth"
+socialist_path_idea:0 "Socialist Path"
+social_welfare_idea:0 "Social Welfare Programs"
+joint_ventures_idea:0 "Joint Ventures"
 
 ####tooltip####
 stability_downgrade_tooltip:0 "Lose one level of stability"
 stability_upgrade_tooltip:0 "Gain one level of stability"
+socialist_democracy_tooltip:0 "%GYou can now enact democratic lawsG%"
+socialist_dictatorship_tooltip:0 "%GYou can now enact authoritarian lawsG%"

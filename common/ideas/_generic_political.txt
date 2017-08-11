@@ -328,6 +328,357 @@ ideas = {
 		
 		}
 	
+	
+	order_path_idea = {
+	
+		available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				OR = {
+				
+					has_government = reactionarism 
+					has_government = national_integralism
+				
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				reactionarism_drift = 0.05
+				national_integralism_drift = 0.05
+				
+			
+			}
+	
+	}
+	
+	reactionarism_path_idea = {
+	
+		available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = reactionarism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				reactionarism_drift = 0.125 
+				
+			}
+	
+	}
+	
+	integralism_path_idea = {
+	
+		available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = national_integralism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				national_integralism_drift = 0.125 
+				
+			}
+		}
+		
+		restored_monarchy_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = reactionarism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				unity_factor = 0.1 
+				
+			}
+		
+		}
+		
+		absolute_power_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = reactionarism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				political_power_gain = 0.5
+				
+			}
+		
+		}
+		
+		autocratic_power_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = reactionarism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				conscription = 0.05
+				army_morale_factor = 0.075
+				
+			}
+		
+		}
+		
+		personality_cult_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = reactionarism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				drift_defence_factor = 0.5
+				unity_factor = 0.035
+				
+			}
+		
+		}
+		
+		corporate_state_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = national_integralism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				production_speed_buildings_factor = 0.5 
+				industry_repair_factor = 0.5 
+				political_power_gain = -0.1 
+				
+			}
+		
+		}
+		
+		corporate_workforce_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = national_integralism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				conscription = 0.075 
+				army_morale_factor = -0.1 
+				training_time_factor = -0.45 
+				production_speed_buildings_factor = 0.1 
+				
+			}
+		
+		}
+		
+		national_integrity_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = national_integralism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				unity_factor = 0.15 
+				
+			}
+		
+		}
+		
+		political_purge_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = national_integralism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				MONTHLY_POPULATION = -0.075
+				
+			}
+		
+		}
+		
+		pure_state_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = national_integralism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				MONTHLY_POPULATION = -0.075
+				army_morale_factor = 0.15 
+				conscription = 0.035 
+				
+			}
+		
+		}
+		
+		diplomatic_protectionism_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				OR = {
+				
+					has_government = national_integralism
+					has_government = reactionarism
+				
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				army_core_attack_factor = 0.1 
+				army_core_defence_factor = 0.1 
+				political_power_gain = 0.1 
+				
+			}
+		
+		}
+		
+		world_domination_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				OR = {
+				
+					has_government = national_integralism
+					has_government = reactionarism
+				
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				political_power_gain = -0.1 
+				justify_war_goal_time = -0.55
+				
+			}
+		
+		}
+		
 	}
 	
 }

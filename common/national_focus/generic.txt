@@ -2126,7 +2126,7 @@ focus_tree = {
 	
 		id = liberty_path_focus
 		icon = GFX_ 
-		x = 28 
+		x = 27 
 		y = 1 
 		cost = 10 
 		
@@ -2158,7 +2158,8 @@ focus_tree = {
 		
 		completion_reward = {
 			
-			add_ideas = liberalism_path_idea
+			remove_ideas = liberalism_path_idea
+			add_timed_idea = { idea = liberalism_path_idea days = 70 }
 			
 		}
 	
@@ -2221,7 +2222,8 @@ focus_tree = {
 		
 		completion_reward = {
 			
-			add_ideas = conservatism_path_idea
+			remove_ideas = liberalism_path_idea
+			add_timed_idea = { idea = conservatism_path_idea days = 70 }
 			
 		}
 	
@@ -2335,7 +2337,7 @@ focus_tree = {
 	focus = {
 		id = pacifism_focus
 		icon = GFX_
-		prerequisite = { focus = the_constitution_focus }
+		prerequisite = { focus = the_constitution_focus focus = adopt_socialism_focus }
 		mutually_exclusive = { focus = freedom_crusader_focus }
 		x = 26
 		y = 6
@@ -2352,7 +2354,7 @@ focus_tree = {
 					NOT = {
 					
 						has_war_with = ROOT
-						has_government = national_integralist
+						has_government = national_integralism
 					
 					}
 				
@@ -2397,6 +2399,14 @@ focus_tree = {
 		y = 7 
 		cost = 10 
 		
+		available = {
+		
+			is_in_faction = no 
+			
+			num_of_factories > 40
+		
+		}
+		
 		prerequisite = { focus = freedom_crusader_focus focus = pacifism_focus }
 		
 		available_if_capitulated = no 
@@ -2408,5 +2418,408 @@ focus_tree = {
 		}
 	
 	}
+	
+	focus = { 
+
+		id = order_path_focus
+		icon = GFX_ 
+		x = 35
+		y = 1 
+		cost = 10 
+		
+		prerequisite = { focus = political_effort }
+		mutually_exclusive = { focus = equality_path_focus focus = liberty_path_focus }
+		
+		available_if_capitulated = yes 
+		
+		completion_reward = {
+			
+			add_ideas = order_path_idea
+			
+		}
+		
+	}
+	
+	focus = {
+	
+		id = reactionarism_path_focus
+		icon = GFX_ 
+		x = 32 
+		y = 2 
+		cost = 10 
+		
+		prerequisite = { focus = order_path_focus }
+		mutually_exclusive = { focus = integralism_path_focus }
+		
+		available_if_capitulated = yes 
+		
+		completion_reward = {
+			
+			remove_ideas = order_path_idea	
+			add_timed_idea = { idea = reactionarism_path_idea days = 70 }
+			
+		}
+	
+	}
+	
+	focus = {
+		
+		id = adopt_reactionarism_focus 
+		icon = GFX_
+		x = 32 
+		y = 3
+		cost = 10 
+		
+		prerequisite = { focus = reactionarism_path_focus }
+		
+		
+		available_if_capitulated = no 
+		
+		completion_reward = { 
+		
+			if = {
+			
+				limit = {
+				
+					NOT = {
+					
+						has_government = reactionarism
+					
+					}
+				
+				}
+				
+				set_politics = { 
+					
+					ruling_party = reactionarism 
+					elections_allowed = no 
+				
+				}
+			
+			}
+			
+			add_political_power = 50 
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = royal_restoration_focus
+		icon = GFX_ 
+		x = 31 
+		y = 4 
+		cost = 10 
+		
+		prerequisite = { focus = adopt_reactionarism_focus }
+		mutually_exclusive = { focus = autocratic_power_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+		
+			add_ideas = restored_monarchy_idea
+		
+		}
+		
+	
+	}
+	
+	focus = {
+	
+		id = absolute_power_focus
+		icon = GFX_ 
+		x = 31 
+		y = 5 
+		cost = 10 
+		
+		prerequisite = { focus = royal_restoration_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+		
+			add_ideas = absolute_power_idea
+		
+		}
+		
+	
+	}
+	
+	
+	
+	focus = {
+	
+		id = autocratic_power_focus
+		icon = GFX_ 
+		x = 33 
+		y = 4 
+		cost = 10 
+		
+		prerequisite = { focus = adopt_reactionarism_focus }
+		mutually_exclusive = { focus = royal_restoration_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+		
+			add_ideas = autocratic_power_idea
+		
+		}
+		
+	
+	}
+	
+	focus = {
+	
+		id = personality_cult_focus
+		icon = GFX_ 
+		x = 33 
+		y = 5 
+		cost = 10 
+		
+		prerequisite = { focus = autocratic_power_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+		
+			add_ideas = personality_cult_idea
+		
+		}
+		
+	
+	}
+	
+	focus = {
+	
+		id = integralism_path_focus
+		icon = GFX_ 
+		x = 38 
+		y = 2 
+		cost = 10 
+		
+		prerequisite = { focus = order_path_focus }
+		mutually_exclusive = { focus = reactionarism_path_focus }
+		
+		available_if_capitulated = yes 
+		
+		completion_reward = {
+			
+			remove_ideas = order_path_idea	
+			add_timed_idea = { idea = integralism_path_idea days = 70 }
+			
+		}
+	
+	}
+	
+	
+	
+	focus = {
+		
+		id = adopt_integralism_focus 
+		icon = GFX_
+		x = 38 
+		y = 3
+		cost = 10 
+		
+		prerequisite = { focus = integralism_path_focus }
+		
+		
+		available_if_capitulated = no 
+		
+		completion_reward = { 
+		
+			if = {
+			
+				limit = {
+				
+					NOT = {
+					
+						has_government = national_integralism
+					
+					}
+				
+				}
+				
+				set_politics = { 
+					
+					ruling_party = national_integralism 
+					elections_allowed = no 
+				
+				}
+			
+			}
+			
+			add_political_power = 50 
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = corporate_state_focus
+		icon = GFX_ 
+		x = 37 
+		y = 4 
+		cost = 10 
+		
+		prerequisite = { focus = adopt_integralism_focus }
+		mutually_exclusive = { focus = national_integrity_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+			
+			add_ideas = corporate_state_idea
+			
+		}
+	
+	}
+	
+	focus = {
+	
+		id = corporate_workforce_focus
+		icon = GFX_ 
+		x = 37 
+		y = 5 
+		cost = 12 
+		
+		prerequisite = { focus = corporate_state_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+			
+			add_ideas = corporate_workforce_idea
+			
+		}
+	
+	}
+	
+	focus = {
+	
+		id = national_integrity_focus
+		icon = GFX_ 
+		x = 39 
+		y = 4 
+		cost = 10 
+		
+		prerequisite = { focus = adopt_integralism_focus }
+		mutually_exclusive = { focus = corporate_state_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+			
+			add_ideas = national_integrity_idea
+			add_timed_idea = { idea = political_purge_idea days = 100 }
+			
+		}
+	
+	}
+	
+	focus = {
+	
+		id = pure_state_focus
+		icon = GFX_ 
+		x = 39 
+		y = 5 
+		cost = 12 
+		
+		prerequisite = { focus = national_integrity_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+			
+			add_political_power = 300 
+			add_ideas = pure_state_idea
+			
+		}
+	
+	}
+	
+	focus = {
+	
+		id = diplomatic_protectionism_focus
+		icon = GFX_ 
+		x = 36 
+		y = 6 
+		cost = 10 
+		
+		prerequisite = { focus = adopt_reactionarism_focus focus = adopt_integralism_focus }
+		mutually_exclusive = { focus = world_domination_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+			
+			
+			add_ideas = diplomatic_protectionism_idea
+			
+		}
+	
+	}
+	
+	focus = {
+	
+		id = world_domination_focus
+		icon = GFX_ 
+		x = 34  
+		y = 6 
+		cost = 10 
+		
+		prerequisite = { focus = adopt_reactionarism_focus focus = adopt_integralism_focus }
+		mutually_exclusive = { focus = diplomatic_protectionism_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+			
+			every_other_country = {
+		
+				
+				
+				add_opinion_modifier = { target = ROOT modifier = world_domination_opinion }
+			
+			}
+			
+			add_ideas = world_domination_idea
+			
+		}
+	
+	}
+	
+	focus = {
+	
+		id = international_protection_focus
+		icon = GFX_ 
+		x = 35  
+		y = 7 
+		cost = 10 
+		
+		available = {
+		
+			is_in_faction = no 
+			
+			num_of_factories > 40
+		
+		}
+		
+		prerequisite = { focus = diplomatic_protectionism_focus focus = world_domination_focus }
+
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+			
+			set_rule = { can_create_factions = yes }
+			
+		}
+	
+	} 
 	
 }

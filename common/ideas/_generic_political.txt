@@ -227,7 +227,107 @@ ideas = {
 			}
 		
 		}
+		
+		liberty_path_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				OR = {
+				
+					has_government = conservatism
+					has_government = liberalism
+				
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				conservatism_drift = 0.05
+				liberalism_drift = 0.05
+				
+			
+			}
+		
+		
+		}
+		
+		liberalism_path_idea = {
+	
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = liberalism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				liberalism_drift = 0.125 
+				
+			}
+	
+		}
+
+		conservatism_path_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = conservatism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				conservatism_drift = 0.125 
+				
+			}
+		
+		}
+		
+		progressive_society_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			
+				research_time_factor = -0.03 
+				
+			}
+		
+		}
 	
 	}
-
+	
 }

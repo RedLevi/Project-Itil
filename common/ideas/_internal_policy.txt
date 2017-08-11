@@ -12,6 +12,7 @@ ideas = {
 				
 					has_government = national_integralism
 					has_government = reactionarism
+					has_country_flag = traditionalist_society
 				
 				}
 				
@@ -111,6 +112,7 @@ ideas = {
 				
 					has_government = national_integralism
 					has_government = reactionarism
+					has_country_flag = traditionalist_society
 					
 					AND = {
 					

@@ -1641,7 +1641,7 @@ focus_tree = {
 	focus = {
 		id = political_effort
 		icon = GFX_goal_generic_demand_territory
-		x = 26
+		x = 27
 		y = 0
 		cost = 10
 
@@ -1662,7 +1662,7 @@ focus_tree = {
 		
 		prerequisite = { focus = political_effort }
 		
-		mutually_exclusive = { focus = liberty_path_focus focus = order_path_effort }
+		mutually_exclusive = { focus = liberty_path_focus focus = order_path_focus }
 		
 		available_if_capitulated = yes 
 		
@@ -1678,7 +1678,7 @@ focus_tree = {
 	
 		id = socialist_path_focus
 		icon = GFX_ 
-		x = 23 
+		x = 24 
 		y = 2 
 		cost = 10 
 		
@@ -1700,7 +1700,7 @@ focus_tree = {
 		
 		id = adopt_socialism_focus 
 		icon = GFX_focus_generic_join_comintern
-		x = 23
+		x = 24
 		y = 3 
 		cost = 10 
 		
@@ -1742,7 +1742,7 @@ focus_tree = {
 	
 		id = social_welfare_focus 
 		icon = GFX_ 
-		x = 23 
+		x = 24 
 		y = 4 
 		cost = 10 
 		
@@ -1763,7 +1763,7 @@ focus_tree = {
 	
 		id = joint_ventures_focus
 		icon = GFX_ 
-		x = 23 
+		x = 24 
 		y = 5 
 		cost = 10 
 		
@@ -2117,6 +2117,293 @@ focus_tree = {
 		completion_reward = {
 		
 				set_rule = { can_create_factions = yes }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = liberty_path_focus
+		icon = GFX_ 
+		x = 28 
+		y = 1 
+		cost = 10 
+		
+		prerequisite = { focus = political_effort }
+		mutually_exclusive = { focus = equality_path_focus focus = order_path_focus }
+		
+		available_if_capitulated = yes 
+		
+		completion_reward = {
+			
+			add_ideas = liberty_path_idea
+			
+		}
+	
+	}
+	
+	focus = {
+	
+		id = liberalism_path_focus
+		icon = GFX_ 
+		x = 26 
+		y = 2 
+		cost = 10 
+		
+		prerequisite = { focus = liberty_path_focus }
+		mutually_exclusive = { focus = conservatism_path_focus }
+		
+		available_if_capitulated = yes 
+		
+		completion_reward = {
+			
+			add_ideas = liberalism_path_idea
+			
+		}
+	
+	}
+	
+	focus = {
+		
+		id = adopt_liberalism_focus 
+		icon = GFX_
+		x = 26 
+		y = 3 
+		cost = 10 
+		
+		prerequisite = { focus = liberalism_path_focus }
+		
+		
+		available_if_capitulated = no 
+		
+		completion_reward = { 
+		
+			if = {
+			
+				limit = {
+				
+					NOT = {
+					
+						has_government = liberalism
+					
+					}
+				
+				}
+				
+				set_politics = { 
+					
+					ruling_party = liberalism 
+					elections_allowed = no 
+				
+				}
+			
+			}
+			
+			add_political_power = 50 
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = conservatism_path_focus
+		icon = GFX_ 
+		x = 28 
+		y = 2 
+		cost = 10 
+		
+		prerequisite = { focus = liberty_path_focus }
+		mutually_exclusive = { focus = liberalism_path_focus }
+		
+		available_if_capitulated = yes 
+		
+		completion_reward = {
+			
+			add_ideas = conservatism_path_idea
+			
+		}
+	
+	}
+	
+	focus = {
+		
+		id = adopt_conservatism_focus 
+		icon = GFX_
+		x = 28 
+		y = 3
+		cost = 10 
+		
+		prerequisite = { focus = conservatism_path_focus }
+		
+		
+		available_if_capitulated = no 
+		
+		completion_reward = { 
+		
+			if = {
+			
+				limit = {
+				
+					NOT = {
+					
+						has_government = conservatism
+					
+					}
+				
+				}
+				
+				set_politics = { 
+					
+					ruling_party = conservatism 
+					elections_allowed = no 
+				
+				}
+			
+			}
+			
+			add_political_power = 50 
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = the_constitution_focus
+		icon = GFX_
+		x = 27
+		y = 4 
+		cost = 10 
+		
+		prerequisite = { focus = adopt_liberalism_focus focus = adopt_conservatism_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+		
+			add_national_unity = 0.1 
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = progressive_society_focus 
+		icon = GFX_
+		x = 26
+		y = 5 
+		cost = 10 
+		
+		prerequisite = { focus = the_constitution_focus }
+		mutually_exclusive = { focus = traditionalist_society_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+		
+			add_ideas = progressive_society_idea
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = traditionalist_society_focus 
+		icon = GFX_
+		x = 28
+		y = 5 
+		cost = 10 
+		
+		prerequisite = { focus = the_constitution_focus }
+		mutually_exclusive = { focus = progressive_society_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+		
+			custom_effect_tooltip = traditionalist_society_tooltip
+			set_country_flag = traditionalist_society
+		
+		}
+	
+	}
+	
+	focus = {
+		id = pacifism_focus
+		icon = GFX_
+		prerequisite = { focus = the_constitution_focus }
+		mutually_exclusive = { focus = freedom_crusader_focus }
+		x = 26
+		y = 6
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+		
+			every_other_country = {
+			
+				limit = {
+				
+					NOT = {
+					
+						has_war_with = ROOT
+						has_government = national_integralist
+					
+					}
+				
+				}
+				
+				add_opinion_modifier = { target = ROOT modifier = pacifism_opinion }
+			
+			}
+			
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+	
+		id = freedom_crusader_focus
+		icon = GFX_
+		x = 28
+		y = 6
+		cost = 10 
+		
+		prerequisite = { focus = the_constitution_focus }
+		mutually_exclusive = { focus = pacifism_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+		
+			add_political_power = -50 
+			set_country_flag = freedom_crusaders
+			custom_effect_tooltip = freedom_crusaders_tooltip
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = united_nations_focus
+		icon = GFX_
+		x = 27 
+		y = 7 
+		cost = 10 
+		
+		prerequisite = { focus = freedom_crusader_focus focus = pacifism_focus }
+		
+		available_if_capitulated = no 
+		
+		completion_reward = {
+		
+			set_rule = { can_create_factions = yes }
 		
 		}
 	

@@ -10,8 +10,11 @@
 
 opinion_modifiers = {
 
+#######generic#######
 	world_revolution_negative = { value = -100 }
 	world_revolution_positive = { value = 100 }
+	pacifism_opinion = { value = 50 }
+	
 
 
 }

@@ -1656,7 +1656,7 @@ focus_tree = {
 	
 		id = equality_path_focus
 		icon = GFX_goal_generic_neutrality_focus
-		x = 21
+		x = 22
 		y = 1 
 		cost = 10 
 		

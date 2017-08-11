@@ -4,8 +4,5 @@ national_crisis
 rightist_dictatorship
 socialist_democracy
 socialist_nationalism
-government_intervention
-market_cooperation
-state_socialism
 world_revolution
 freedom_crusaders

@@ -1,0 +1,233 @@
+ideas = {
+
+	country = {
+	
+		equality_path_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				OR = {
+				
+					has_government = communism
+					has_government = socialism
+				
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				communism_drift = 0.05
+				socialism_drift = 0.05
+				
+			
+			}
+		
+		}
+		
+		communist_path_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = communism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				communism_drift = 0.125
+				
+			
+			}
+		
+		}
+		
+		workers_councils_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = communism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				political_power_gain = 0.2
+				
+			
+			}
+		
+		}
+		
+		socialist_progress_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = communism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				research_time_factor = -0.05
+				
+			
+			}
+		
+		}
+		
+		political_commissars_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = communism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				army_morale_factor = 0.075 
+				drift_defence_factor = 0.1 
+				army_core_defence_factor = 0.1 
+				army_core_attack_factor = 0.1 
+				
+			
+			}
+		
+		}
+		
+		revolutionary_youth_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = communism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				conscription = 0.02
+			
+			}
+		
+		}
+		
+		socialist_path_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = socialism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				socialism_drift = 0.125
+				
+			
+			}
+		
+		}
+		
+		social_welfare_idea = {
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = socialism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				consumer_goods_factor = 0.05
+				unity_factor = 0.05 
+				MONTHLY_POPULATION = 0.005
+				
+			}
+		
+		}
+		
+		joint_ventures_idea = {
+		
+			
+		
+			available = {
+			
+				always = no
+			
+			}
+			
+			allowed_civil_war = {
+			
+				has_government = socialism
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				production_speed_buildings_factor = 0.35
+				
+			}
+		
+		}
+	
+	}
+
+}

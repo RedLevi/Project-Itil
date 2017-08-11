@@ -37,31 +37,14 @@ ideas = {
 			
 			available = {
 		
-				OR = { 
+				NOT = {
 				
-					has_government = conservatism 
-					has_government = reactionarism
-					has_government = socialism
-					
-					AND = {
-					
-						has_government = liberalism
-						
-						has_country_flag = government_intervention
-					
-					}
-					
-					AND = {
-					
-						has_government = national_integralism
-						
-						has_country_flag = market_cooperation
-					
-					}
+					has_government = communism
 				
 				}
 				
 			}
+				
 			removal_cost = -1
 			cost = 200 
 			
@@ -86,15 +69,8 @@ ideas = {
 				OR = {
 				
 					has_government = socialism
+					has_government = liberalism
 					
-					AND = {
-					
-						has_government = liberalism
-						
-						has_country_flag = government_intervention
-					
-					}
-				
 				}
 			
 			}
@@ -121,23 +97,14 @@ ideas = {
 				OR = {
 					
 					has_government = socialism
-					
-					AND = {
-					
-						has_government = communism
-						
-						NOT = {
-							
-							has_country_flag = state_socialism
-						
-						}
+					has_government = communism
 					
 					}
 					
 				}			
 			}
 			
-			cost = 200
+			cost = 250
 			removal_cost = -1
 			
 			modifier = {
@@ -159,23 +126,13 @@ ideas = {
 				
 					has_government = national_integralism
 					has_government = reactionarism
+					has_government = communism
+					has_government = socialism
 					
-					AND = {
-					
-						OR = {
-						
-							has_government = communism
-							has_government = socialism
-						
-						}
-						
-						has_country_flag = state_socialism
-					
-					}
 				}			
 			}
 
-			cost = 200 
+			cost = 350  
 			removal_cost = -1
 			
 			modifier = {

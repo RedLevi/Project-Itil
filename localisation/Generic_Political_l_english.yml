@@ -1,4 +1,6 @@
 ﻿l_english:
+####focuses####
+
 
 ####events####
 politics.1.t:0 "Downfall in stability"
@@ -11,6 +13,8 @@ politics.2.b:0 "Maybe later"
 politics.3.t:0 "Change in ruling party support"
 politics.3.d:0 "Changes in the political situation have affected the amount of public support to our ruling party."
 politics.3.a:0 "Very well"
+
+####ideas####
 
 
 ####tooltip####

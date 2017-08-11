@@ -141,27 +141,7 @@ ideas = {
 			
 			available = {
 			
-				OR = {
-				
-					has_government = national_integralism
-					has_government = reactionarism
-					has_government = communism
-					
-					AND = {
-					
-						OR = {
-						
-							has_government = conservatism
-							has_government = liberalism 
-							has_government = socialism 
-						
-						}
-						
-						has_country_flag = national_crisis
-					
-					}
-				
-				}
+				has_country_flag = national_crisis
 			
 			}
 			

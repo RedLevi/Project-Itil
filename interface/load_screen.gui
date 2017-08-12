@@ -23,7 +23,7 @@ guiTypes = {
 		iconType = {
 			name ="bg_ante_rebellum"
 			spriteType = "GFX_ante_rebellum"
-			position = { x= -250 y = -152 }
+			position = { x= -250 y = -180 }
 			Orientation = "LOWER_RIGHT"
 		}	
 				

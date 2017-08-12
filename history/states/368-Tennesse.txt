@@ -12,7 +12,8 @@ state={
 
 
 	history={
-		owner = USA
+		owner = AME
+		add_core_of = AME
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 3

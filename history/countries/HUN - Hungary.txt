@@ -20,7 +20,7 @@ set_politics = {
 	
 	parties = {
 	    conservatism = {
-			popularity = 20
+			popularity = 43
 		}
 
 		national_integralism = {
@@ -32,7 +32,7 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 9
+			popularity = 19
 		}
 		
 		socialism = {
@@ -40,12 +40,12 @@ set_politics = {
 		}
 		
 		reactionarism = {
-			popularity = 43
+			popularity = 10
 		}
 		
 	}
 	
-	ruling_party = reactionarism
+	ruling_party = conservatism
 	last_election = "1935.3.31"
 	election_frequency = 48
 	elections_allowed = yes
@@ -78,7 +78,7 @@ create_country_leader = {
 	desc = "POLITICS_ARPAD_SZAKASITS_DESC"
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
 	expire = "1965.1.1"
-	ideology = fabianism
+	ideology = democrtatic_conservatism
 	traits = {
 		#
 	}

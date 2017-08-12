@@ -31,7 +31,11 @@ world_revolution_focus_desc:0 "To survive the revolution must spread, then sprea
 international_brotherhood_focus:0 "Brotherhood of Man"
 international_brotherhood_focus_desc:0 "Let us join arms with our struggling brothers throughout the world, and create one big human family."
 united_front_focus:0 "The United Front"
-united_front_focus_desc:0 ""
+united_front_focus_desc:0 "In order to finally defeat the scourge that is Capitalism we must unite with our brothers and sisters thruoghout the world."
+liberty_path_focus:0 "The Path Of Liberty"
+liberty_path_focus_desc:0 "'Liberty means responsibility. That is why most men dread it.' /n Unlike most men, we must resist the temptation of power and populism and protect the light of liberty at any cost! let us fight for a truly free society!"
+
+
 
 ####events####
 politics.1.t:0 "Downfall in stability"
@@ -47,15 +51,32 @@ politics.3.a:0 "Very well"
 
 ####ideas####
 equality_path_idea:0 "Path of Equality"
-communist_path_idea:0 "Communist Path"
+communist_path_idea:0 "Red Dawn"
 workers_councils_idea:0 "Workers' Council"
 socialist_progress_idea:0 "Socialist Progress"
 political_commissars_idea:0 "Political Commissars"
 revolutionary_youth_idea:0 "Revolutionary Youth"
-socialist_path_idea:0 "Socialist Path"
+socialist_path_idea:0 "Social Responsibility"
 social_welfare_idea:0 "Social Welfare Programs"
 joint_ventures_idea:0 "Joint Ventures"
-
+liberty_path_idea:0 "Path of Liberty"
+liberalism_path_idea:0 "Bastion of Liberalism"
+conservatism_path_idea:0 "Conservatism"
+progressive_society_idea:0 "Progressive Society"
+order_path_idea:0 "Path of Order"
+reactionarism_path_idea:0 "The Reaction"
+integralism_path_idea:0 "The Strength of The Nation"
+restored_monarchy_idea:0 "A Royal House"
+absolute_power_idea:0 "Absolutism"
+autocratic_power_idea:0 "The Autocracy"
+personality_cult_idea:0 "Cult of Personality"
+corporate_state_idea:0 "A Corporate State"
+corporate_workforce_idea:0 "Corporate Workforce"
+national_integrity_idea:0 "National Integrity"
+political_purge_idea:0 "Political Purges"
+pure_state_idea:0 "The Pure State"
+diplomatic_protectionism_idea:0 "Protectionism"
+world_domination_idea:0 "World Domination"
 ####tooltip####
 stability_downgrade_tooltip:0 "Lose one level of stability"
 stability_upgrade_tooltip:0 "Gain one level of stability"

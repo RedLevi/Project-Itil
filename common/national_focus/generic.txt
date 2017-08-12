@@ -2,7 +2,7 @@ focus_tree = {
 	id = generic_focus
 	
 	country = {
-		factor = 10
+		factor = 5
 	}
 	
 	default = yes
@@ -1578,7 +1578,7 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		x = 11
+		x = 12
 		y = 6
 		cost = 10
 
@@ -1588,25 +1588,6 @@ focus_tree = {
 			add_research_slot = 1
 		}
 	}	
-	
-	focus = {
-		id = mechanized_agriculture
-		icon = GFX_goal_generic_construct_civilian
-		prerequisite = { focus = extra_tech_slot }
-		available = {
-			
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		x = 13
-		y = 6
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-		}
-	}
 
 	focus = {
 		id = secret_weapons
@@ -2222,7 +2203,7 @@ focus_tree = {
 		
 		completion_reward = {
 			
-			remove_ideas = liberalism_path_idea
+			remove_ideas = liberty_path_idea
 			add_timed_idea = { idea = conservatism_path_idea days = 70 }
 			
 		}

@@ -1,6 +1,6 @@
 ﻿capital = 613 # Nanjing
 
-oob = "CHI_1936"
+oob = "CHI"
 
 # Starting tech
 set_technology = {
@@ -53,48 +53,16 @@ set_politics = {
 
 
 create_country_leader = {
-	name = "Aisin Gioro Puyi"
+	name = "Chiang Kai-Shek"
 	
-	picture = "gfx/leaders/MAN/Portrait_Manchuria_Henry_Pu_Yi.dds"
+	picture = "gfx/leaders/CHI/Portrait_China_Chiang_Kai_Shek.dds"
 	expire = "1960.1.1"
 	ideology = autocracy
 	traits = {
-		warrior_code
 	}
 }
 
-create_country_leader = {
-	name = "Mao Zedong"
-	desc = "POLITICS_MAO_ZEDONG_DESC"
-	picture = "Portrait_China_Mao_Zedong.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		cornered_fox
-	}
-}
 
-create_country_leader = {
-	name = "Wang Jingwei"
-	desc = "POLITICS_WANG_JINGWEI_DESC"
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_fascism.dds"
-	expire = "1965.1.1"
-	ideology = integralism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Zhang Lan"
-	desc = "POLITICS_ZHANG_LAN_DESC"
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
-	expire = "1965.1.1"
-	ideology = fabianism
-	traits = {
-		#
-	}
-}
 
 add_opinion_modifier = { target = PRC modifier = hostile_status }
 

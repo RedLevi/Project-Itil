@@ -1,6 +1,6 @@
 ﻿capital = 361
 
-oob = "USA_1936"
+oob = "USA"
 
 set_research_slots = 4
 
@@ -45,23 +45,23 @@ set_politics = {
 
 	parties = {
 	    conservatism = {
-			popularity = 5
+			popularity = 30
 		}
 
 		national_integralism = {
-			popularity = 80
+			popularity = 1
 		}
 
 		liberalism = {
-			popularity = 0
+			popularity = 32
 		}
 		
 		communism = {
-			popularity = 0
+			popularity = 15
 		}
 		
 		socialism = {
-			popularity = 0
+			popularity = 7
 		}
 		
 		reactionarism = {
@@ -70,7 +70,7 @@ set_politics = {
 		
 	}
 	
-	ruling_party = national_integralism
+	ruling_party = liberalism
 	last_election = "1934.6.3"
 	election_frequency = 36
 	elections_allowed = no
@@ -84,7 +84,7 @@ create_country_leader = {
 	expire = "1947.1.1"
 	ideology = social_liberalism
 	traits = {
-		dislikes_germany
+		
 	}
 }
 

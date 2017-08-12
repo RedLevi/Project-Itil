@@ -10,7 +10,8 @@ state={
 	state_category = city
 
 	history={
-		owner = USA
+		owner = AME
+		add_core_of = AME
 		buildings = {
 			infrastructure = 4
 			arms_factory = 1

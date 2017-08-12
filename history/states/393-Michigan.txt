@@ -9,7 +9,8 @@ state={
 	state_category = metropolis
 
 	history={
-		owner = USA
+		owner = AME
+		add_core_of = AME
 		buildings = {
 			infrastructure = 6
 			arms_factory = 1

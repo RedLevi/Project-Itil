@@ -6,7 +6,8 @@ state={
 	state_category = megalopolis
 
 	history={
-		owner = USA
+		owner = AME
+		add_core_of = AME
 		buildings = {
 			infrastructure = 7
 			arms_factory = 1

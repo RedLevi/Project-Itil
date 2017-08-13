@@ -1,0 +1,263 @@
+﻿###koach###
+
+add_namespace = engfor
+
+country_event = {
+
+	id = engfor.1 
+	title = engfor.1.t
+	desc = engfor.1.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#British-Norwegian offer
+	
+		name = engfor.1.a 
+		ai_chance = { 
+		
+			factor = 60
+			
+			modifier = {
+			
+				AND = {
+				
+					SWE = {
+				
+					is_in_faction_with = GER
+				
+					}
+				
+					DEN = {
+				
+					is_in_faction_with = GER
+				
+					}
+					
+				
+				}
+				
+				add = 40
+			
+			}
+
+		}
+		
+		ENG = { country_event = { id = engfor.2 days = 1 } }
+		
+		add_political_power = -10
+	
+	}
+	
+	option = {
+	
+		name = engfor.1.b 
+		ai_chance = { 
+		
+			factor = 40
+			
+			modifier = {
+			
+				AND = {
+				
+					SWE = {
+				
+					is_in_faction_with = GER
+				
+					}
+				
+					DEN = {
+				
+					is_in_faction_with = GER
+				
+					}
+				
+				}
+				
+	
+			}
+			
+			add = -40
+
+		}
+		
+		ENG = { country_event = { id = engfor.3 days = 1 } }
+		
+		add_political_power = 15
+	
+	}
+
+
+}
+
+country_event = {#Norway approved
+
+	id = engfor.2 
+	title = engfor.2.t 
+	desc = engfor.2.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engfor.2.a 
+		
+		add_to_faction = NOR 
+		send_equipment = { target = NOR type = infantry_equipment amount = 500 }
+	
+	}
+
+}
+
+country_event = {#norway refused
+
+	id = engfor.3 
+	title = engfor.3.t 
+	desc = engfor.3.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engfor.3.a 
+		
+		add_political_power = -20
+	
+	}
+
+}
+
+country_event = {#UK demands albania 
+
+	id = engfor.4 
+	title = engfor.4.t
+	desc = engfor.4.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#comply 
+	
+		name = engfor.4.a 
+		ai_chance = { factor = 50 }
+		
+		add_political_power = -70
+		
+		ENG = { country_event = { id = engfor.5 days = 1 } }
+		
+		reverse_add_opinion_modifier = { target = ENG modifier = GRE_accept_ALB }
+	
+	}
+	
+	option = {#refuse 
+	
+		name = engfor.4.b 
+		ai_chance = { factor = 50 }
+		
+		add_political_power = 45
+		
+		ENG = { country_event = { id = engfor.6 days = 1 } }
+		
+		reverse_add_opinion_modifier = { target = ENG modifier = GRE_refuse_ALB }
+		
+	
+	}
+
+}
+
+country_event = {#the greeks agree 
+
+	id = engfor.5 
+	title = engfor.5.t 
+	desc = engfor.5.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engfor.5.a 
+		
+		add_political_power = 30 
+		
+		every_state = {
+		
+			limit = {
+			
+				is_controlled_by = GRE 
+				is_core_of = ALB
+			
+			}
+			
+			ALB = {
+		
+				transfer_state = PREV
+
+			}
+		
+		}
+		
+		puppet = ALB 
+		add_to_faction = ALB 
+	
+	}
+
+}
+
+country_event = {#greece refuses
+
+	id = engfor.6 
+	title = engfor.6.t 
+	desc = engfor.6.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engfor.6.a 
+		
+		add_political_power = -35
+	
+	}
+
+}
+
+country_event = {#British funding (SYR, ISR)
+
+	id = engfor.7 
+	title = engfor.7.t 
+	desc = engfor.7.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engfor.7.a 
+		
+		random_owned_state = {
+		
+			limit = {
+			
+				is_in_home_area = yes 
+				is_controlled_by = ROOT
+				
+			}
+			
+			add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+					
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+		
+		
+		}
+		
+		add_political_power = 10 
+	
+	}
+
+}

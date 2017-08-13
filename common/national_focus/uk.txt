@@ -1,0 +1,1357 @@
+focus_tree = {
+	id = ENG_focus
+	
+	country = {
+ 
+		factor = 0 
+		
+		modifier = {
+		
+			add = 10
+			tag = ENG
+			
+		}
+		
+	}
+	
+	default = yes
+	reset_on_civilwar = no
+	
+	###economic###
+	focus = {
+	
+		id = ENG_economic_reforms
+		icon = ? 
+		x = 3 
+		y = 0 
+		cost = 10 
+		
+		available = {
+		
+			always = yes 
+		
+		}
+		
+		available_if_capitulated = yes 
+		
+		completion_reward = {
+		
+			add_tech_bonus = {
+			
+				name = ENG_economic_reforms
+				bonus = 0.5
+				uses = 2
+				category = industry
+				
+			}
+		
+		}
+		
+	}
+		
+		focus = {
+		
+			id = ENG_austerity_focus
+			icon = ? 
+			x = 1 
+			y = 1 
+			cost = 10 
+			
+			available = {
+			
+				always = yes 
+			
+			}
+			
+			available_if_capitulated = no 
+			
+			prerequisite = { focus = ENG_economic_reforms }
+			mutually_exclusive = { focus = ENG_keynesian_revolution }
+			
+			completion_reward = { 
+			
+				add_ideas = ENG_austerity_policy
+			
+			}
+		
+		}
+		
+		focus = {
+		
+			id = ENG_inflation_control
+			icon = ? 
+			x = 0 
+			y = 2 
+			cost = 10 
+			
+			available = {
+			
+				always = yes 
+			
+			}
+			
+			available_if_capitulated = no 
+			
+			prerequisite = { focus = ENG_austerity_focus }
+			
+			completion_reward = { 
+			
+				add_ideas = ENG_inflation_policy
+			
+			}
+		
+		}
+		
+		focus = {
+		
+			id = ENG_measured_investments
+			icon = ? 
+			x = 0 
+			y = 3 
+			cost = 10 
+			
+			available = {
+			
+				controls_state = 128 
+				controls_state = 338 
+			
+			}
+			
+			available_if_capitulated = no 
+			
+			prerequisite = { focus = ENG_inflation_control }
+			
+			completion_reward = { 
+			
+				128 = {
+				
+					add_extra_state_shared_building_slots = 1 
+					
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				
+				}
+				
+				338 = {
+				
+					add_extra_state_shared_building_slots = 2 
+					
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				
+				}
+				
+			}
+		
+		} 
+		
+		focus = {
+		
+			id = ENG_agricultural_expansion
+			icon = ? 
+			x = 2 
+			y = 2 
+			cost = 10 
+			
+			available = {
+			
+				always = yes 
+			
+			}
+			
+			available_if_capitulated = no 
+			
+			prerequisite = { focus = ENG_austerity_focus }
+			
+			completion_reward = { 
+			
+				add_ideas = ENG_agricultural_plans
+			
+			}
+		
+		}
+		
+		focus = {
+		
+			id = ENG_organize_landlords
+			icon = ? 
+			x = 2 
+			y = 3 
+			cost = 10 
+			
+			available = {
+			
+				always = yes 
+			
+			}
+			
+			available_if_capitulated = no 
+			
+			prerequisite = { focus = ENG_agricultural_expansion }
+			
+			completion_reward = { 
+			
+				add_ideas = ENG_landlords_organized
+			
+			}
+		
+		}
+		
+		focus = {
+		
+			id = ENG_war_economy
+			icon = ? 
+			x = 1 
+			y = 4 
+			cost = 10 
+			
+			available = {
+			
+				controls_state = 125
+				controls_state = 126
+			
+			}
+			
+			available_if_capitulated = no 
+			
+			prerequisite = { focus = ENG_organize_landlords }
+			prerequisite = { focus = ENG_measured_investments }
+			
+			completion_reward = { 
+			
+				125 = {
+				
+					add_extra_state_shared_building_slots = 1 
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				
+				}
+				126 = {
+				
+					add_extra_state_shared_building_slots = 3 
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				
+				}
+			
+			}
+		
+		}
+		
+		focus = {
+		
+			id = ENG_keynesian_revolution
+			icon = ? 
+			x = 5 
+			y = 1 
+			cost = 10 
+			
+			available = {
+			
+				always = yes 
+			
+			}
+			
+			available_if_capitulated = no 
+			
+			prerequisite = { focus = ENG_economic_reforms }
+			mutually_exclusive = { focus = ENG_austerity_focus }
+			
+			completion_reward = { 
+			
+				add_ideas = ENG_keynesian_policy
+			
+			}
+		
+		}
+		
+		focus = {
+		
+			id = ENG_rail_revolution
+			icon = ? 
+			x = 4 
+			y = 2 
+			cost = 10 
+			
+			available = {
+			
+				always = yes 
+			
+			}
+			
+			available_if_capitulated = no 
+			
+			prerequisite = { focus = ENG_keynesian_revolution }
+			
+			completion_reward = { 
+			
+					add_ideas = ENG_rail_boom
+				
+				}
+			
+		}
+		
+		
+		focus = {
+		
+			id = ENG_southern_rail
+			icon = ? 
+			x = 4 
+			y = 3 
+			cost = 10 
+			
+			available = {
+			
+				always = yes 
+			
+			}
+			
+			available_if_capitulated = no 
+			
+			prerequisite = { focus = ENG_rail_revolution }
+			
+			completion_reward = { 
+			
+				125 = {
+			
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				
+				}
+				126 = {
+				
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				
+				}
+				127 = {
+				
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				
+				}
+				123 = {
+				
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				
+				}
+				
+			
+			}
+		
+		}
+		
+		focus = {
+		
+			id = ENG_northern_rail
+			icon = ? 
+			x = 4 
+			y = 4 
+			cost = 10 
+			
+			available = {
+			
+				always = yes 
+			
+			}
+			
+			available_if_capitulated = no 
+			
+			prerequisite = { focus = ENG_southern_rail }
+			
+			completion_reward = { 
+			
+				130 = {
+			
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				
+				}
+				133 = {
+				
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				
+				}
+				131 = {
+				
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				
+				}
+				121 = {
+				
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				
+				}
+				
+			
+			}
+		
+		}
+		
+		focus = {
+		
+			id = ENG_state_housing
+			icon = ? 
+			x = 6 
+			y = 2 
+			cost = 10 
+			
+			available = {
+			
+				always = yes 
+			
+			}
+			
+			available_if_capitulated = no 
+			
+			prerequisite = { focus = ENG_keynesian_revolution }
+			
+			completion_reward = { 
+			
+				126 = {
+			
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				
+				}
+				128 = {
+				
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				
+				}
+				130 = {
+				
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				
+				}
+				
+			
+			}
+		
+		}
+		
+		focus = {
+		
+			id = ENG_expand_industry
+			icon = ? 
+			x = 6 
+			y = 3 
+			cost = 10 
+			
+			available = {
+			
+				always = yes 
+			
+			}
+			
+			available_if_capitulated = no 
+			
+			prerequisite = { focus = ENG_state_housing }
+			
+			completion_reward = { 
+			
+				126 = {
+			
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				
+				}
+				128 = {
+				
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				
+				}
+				123 = {
+				
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				
+				}
+				
+			
+			}
+		
+		}
+		
+		focus = {
+		
+			id = ENG_royal_factories
+			icon = ? 
+			x = 6 
+			y = 4 
+			cost = 10 
+			
+			available = {
+			
+				always = yes 
+			
+			}
+			
+			available_if_capitulated = no 
+			
+			prerequisite = { focus = ENG_expand_industry }
+			
+			completion_reward = { 
+			
+				121 = {
+			
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				
+				}
+				311 = {
+				
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				
+				}
+				364 = {
+				
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				
+				}
+				
+			
+			}
+		
+		}
+		
+	####foreign/colonial####
+	
+	focus = {
+	
+		id = ENG_bastion_democracy
+		icon = ? 
+		x = 18
+		y = 0 
+		cost = 10 
+		
+		available = { 
+		
+			has_war = no
+		
+		}
+		
+		completion_reward = {
+		
+			add_ideas = ENG_democratic_defense
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_european_theater
+		icon = ? 
+		x = 12
+		y = 1 
+		cost = 10 
+		
+		available = { 
+		
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = ENG_bastion_democracy }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = SPR modifier = ENG_EUR_theater }
+			reverse_add_opinion_modifier = { target = POR modifier = ENG_EUR_theater }
+			reverse_add_opinion_modifier = { target = IRE modifier = ENG_EUR_theater } 
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_support_norway
+		icon = ? 
+		x = 8
+		y = 2 
+		cost = 10 
+		
+		available = { 
+		
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = ENG_european_theater }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = NOR modifier = ENG_dip_support }
+			give_guarantee = NOR
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_ally_norway
+		icon = ? 
+		x = 8
+		y = 3 
+		cost = 10 
+		
+		available = { 
+		
+			OR = {
+			
+				SWE = {
+				
+					is_in_faction_with = GER
+				
+				}
+				
+				DEN = {
+				
+					is_in_faction_with = GER
+				
+				}
+				
+				GER = {
+				
+					controls_state = 99
+				
+				}
+			
+			} 
+		
+		}
+		
+		prerequisite = { focus = ENG_support_norway }
+		
+		completion_reward = {
+		
+			NOR = { country_event = { id = engfor.1 } }
+		
+		}
+	
+	}
+	
+	
+	focus = {
+	
+		id = ENG_new_balkan_order
+		icon = ? 
+		x = 11
+		y = 2 
+		cost = 10 
+		
+		available = { 
+		
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = ENG_european_theater }
+		mutually_exclusive = { focus = ENG_support_yugoslavia }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = HUN modifier = ENG_dip_support }
+			reverse_add_opinion_modifier = { target = ROM modifier = ENG_dip_scorne }
+			reverse_add_opinion_modifier = { target = YUG modifier = ENG_dip_scorne }
+			
+			set_global_flag = ENG_new_balkan_flag
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_demand_ALB
+		icon = ? 
+		x = 10
+		y = 3
+		cost = 10 
+		
+		available = { 
+		
+			has_war = no
+		
+			GRE = { 
+
+				is_in_faction = no 
+				
+				controls_state = 754
+
+			}
+		
+		}
+		
+		cancel_if_invalid = yes
+		
+		prerequisite = { focus = ENG_new_balkan_order }
+		mutually_exclusive = { focus = ENG_support_GRE }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = GRE modifier = ENG_ALB_demand }
+			
+			GRE = { country_event = { id = engfor.4 } }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_support_GRE
+		icon = ? 
+		x = 12
+		y = 3
+		cost = 10 
+		
+		available = { 
+		
+			GRE = { exists = yes } 
+		
+		}
+		
+		cancel_if_invalid = yes
+		
+		prerequisite = { focus = ENG_new_balkan_order }
+		mutually_exclusive = { focus = ENG_demand_ALB }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = GRE modifier = ENG_support_GRE_amb }
+			
+			give_guarantee = GRE
+			
+			set_global_flag = ENG_support_GRE_flag
+			
+			#GRE = { country_event = { id = ? } }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_support_hungary
+		icon = ? 
+		x = 11
+		y = 4
+		cost = 10 
+		
+		available = { 
+		
+			always = yes 
+		
+		}
+		
+		cancel_if_invalid = yes
+		
+		prerequisite = { focus = ENG_new_balkan_order }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = HUN modifier = ENG_support_HUN }
+			
+				send_equipment = { target = HUN type = infantry_equipment amount = 750 }
+				send_equipment = { target = HUN type = support_equipment amount = 200 }
+
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_support_yugoslavia
+		icon = ? 
+		x = 15
+		y = 2 
+		cost = 10 
+		
+		available = { 
+		
+			YUG = { exists = yes }
+		
+		}
+		
+		prerequisite = { focus = ENG_european_theater }
+		mutually_exclusive = { focus = ENG_new_balkan_order }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = HUN modifier = ENG_dip_scorne }
+			reverse_add_opinion_modifier = { target = ROM modifier = ENG_dip_support }
+			reverse_add_opinion_modifier = { target = YUG modifier = ENG_dip_support }
+			
+			set_global_flag = ENG_supports_YUG
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_fund_yugoslavia
+		icon = ? 
+		x = 14
+		y = 3 
+		cost = 10 
+		
+		available = { 
+		
+			YUG = { exists = yes }
+		
+		}
+		
+		prerequisite = { focus = ENG_support_yugoslavia }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = YUG modifier = ENG_dip_fund }
+			
+			send_equipment = { target = YUG type = infantry_equipment amount = 750 }
+			send_equipment = { target = YUG type = support_equipment amount = 200 }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_fund_romania
+		icon = ? 
+		x = 16
+		y = 3 
+		cost = 10 
+		
+		available = { 
+		
+			ROM = { exists = yes }
+		
+		}
+		
+		prerequisite = { focus = ENG_support_yugoslavia }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = ROM modifier = ENG_dip_fund }
+			
+			send_equipment = { target = ROM type = infantry_equipment amount = 750 }
+			send_equipment = { target = ROM type = support_equipment amount = 200 }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_fortify_mediterranean 
+		icon = ?
+		x = 17 
+		y = 2 
+		cost = 10 
+		
+		available = {
+		
+			controls_state = 116 
+			controls_state = 118 
+			controls_state = 183
+		
+		}
+		
+		prerequisite = { focus = ENG_european_theater }
+		
+		cancel_if_invalid = yes
+		
+		completion_reward = {
+		
+			118 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 4135
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			116 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 12003
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			183 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 11984
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 7193
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_middle_east_theater
+		icon = ? 
+		x = 22 
+		y = 1 
+		cost = 10 
+		
+		prerequisite = { focus = ENG_bastion_democracy }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = SYR modifier = ENG_middle_theater }
+			reverse_add_opinion_modifier = { target = ISR modifier = ENG_middle_theater }
+			reverse_add_opinion_modifier = { target = OMA modifier = ENG_middle_theater }
+			reverse_add_opinion_modifier = { target = YEM modifier = ENG_middle_theater }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_fortify_egypt	
+		icon = ? 
+		x = 19 
+		y = 2 
+		cost = 10 
+		
+		prerequisite = { focus = ENG_middle_east_theater }
+		
+		completion_reward = {
+		
+			756 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 12049
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 1155
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker 
+					level = 1
+					province = 1155
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker 
+					level = 1
+					province = 12049
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker 
+					level = 1
+					province = 9947
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker 
+					level = 1
+					province = 4073
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			447 = {
+			
+				add_building_construction = {
+					type = bunker 
+					level = 3
+					province = 4076
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			
+			}
+		
+		}
+	
+	}
+	
+	focus = {
+
+		id = ENG_levantine_pact
+		icon = ?
+		x = 21 
+		y = 2 
+		cost = 10 
+		
+		available = {
+		
+			ISR = { 
+			
+				exists = yes
+				is_puppet_of = SYR
+
+			}
+			SYR = {
+			
+				exists = yes 
+				NOT = { has_war_with = ENG }
+			
+			}
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_middle_east_theater }
+		
+		completion_reward = {
+		
+			give_guarantee = SYR 
+			give_guarantee = ISR 
+			
+			reverse_add_opinion_modifier = { target = SYR modifier = ENG_dip_support }
+			reverse_add_opinion_modifier = { target = ISR modifier = ENG_dip_support }
+		}
+
+	}
+	
+	focus = {
+
+		id = ENG_levantine_funding
+		icon = ?
+		x = 21 
+		y = 3 
+		cost = 10 
+		
+		available = {
+		
+			ISR = { 
+			
+				exists = yes
+				is_puppet_of = SYR
+
+			}
+			SYR = {
+			
+				exists = yes 
+				NOT = { has_war_with = ENG }
+			
+			}
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_levantine_pact }
+		
+		completion_reward = {
+
+			SYR = { country_event = { id = engfor.7 } }
+			ISR = { country_event = { id = engfor.7 } }
+			
+			add_equipment_to_stockpile = { type = support_equipment amount = -150 }
+			
+			reverse_add_opinion_modifier = { target = SYR modifier = ENG_dip_fund }
+			reverse_add_opinion_modifier = { target = ISR modifier = ENG_dip_fund }
+		}
+
+	}
+	
+	focus = {
+	
+		id = ENG_support_arab
+		icon = ? 
+		x = 21
+		y = 4
+		cost = 10 
+		
+		available = { 
+		
+			SYR = {
+			
+				exists = yes 
+				NOT = { has_war_with = ENG }
+			
+			}
+		
+		}
+		
+		cancel_if_invalid = yes
+		
+		prerequisite = { focus = ENG_levantine_funding }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = SYR modifier = ENG_support_GRE_amb }
+			
+			
+			set_global_flag = ENG_support_SYR_flag
+			
+			#SYR = { country_event = { id = ? } }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_fortify_persia	
+		icon = ? 
+		x = 23 
+		y = 2 
+		cost = 10 
+		
+		available = {
+		
+			controls_state = 413
+			controls_state = 412 
+			controls_state = 410
+		
+		}
+		
+		prerequisite = { focus = ENG_middle_east_theater }
+		
+		completion_reward = {
+		
+			413 = {
+			
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7053
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 5089
+					instant_build = yes
+				}
+				
+			}
+			
+			412 = {
+			
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 8117
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 10881
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 12863
+					instant_build = yes
+				}
+				
+			}
+			
+			410 = {
+			
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 1986
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 2070
+					instant_build = yes
+				}
+				
+			}
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_persia_oil
+		icon = ? 
+		x = 23 
+		y = 3 
+		cost = 10 
+		
+		available = {
+		
+			controls_state = 413
+			controls_state = 412 
+			controls_state = 410
+		
+		}
+		
+		prerequisite = { focus = ENG_fortify_persia }
+		
+		completion_reward = {
+		
+			add_resource = { type = oil amount = 40 state = 413 }
+			add_resource = { type = oil amount = 25 state = 412 }
+		
+		}
+	
+	}
+	
+}
+	

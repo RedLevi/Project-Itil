@@ -1,0 +1,42 @@
+﻿l_english: 
+####focuses####
+ENG_economic_reforms:0 "Economic Reforms"
+####events####
+engfor.1.t:0 "Britain offers alliance"
+engfor.1.d:0 "We have recieved a telegraph from the British embassy offering us to join their political and military alliance, to counter German diplomatic advances in the region. If we accept Britain will send us military aid for the construction of our army. What should we reply?"
+engfor.1.a:0 "We accept!"
+engfor.1.b:0 "Norway will remain independent!"
+engfor.2.t:0 "Norway accepts our offer!"
+engfor.2.d:0 "Great news! Our ambassador in Norway has informed us the Norwegian cabinet accepted our alliance offer in exchange for aid."
+engfor.2.a:0 "Perfect!"
+engfor.3.t:0 "Norway refuses!"
+engfor.3.d:0 "We recieved word from our embassy in Norway informing us Norway refused our alliance offer. They will stand on their own."
+engfor.4.t:0 "Britain demands a free Albania"
+engfor.4.d:0 "Earlier today we recieved an official demand from the British to give independence for the Albanian speaking regions in Northern Epirus. They made it clear our relations will suffer greatly if we refuse... How should we reply?"
+engfor.4.a:0 "Very well.. We need the Brits"
+engfor.4.b:0 "Never!"
+engfor.5.t:0 "The Greek agree!"
+engfor.5.d:0 "The Greeks have informed us they have accepted our demands and have given independence to a new Albanian republic. This new state's sovereignty is still in danger and 'delegates' have asked for our protection."
+engfor.5.a:0 "We will defend them"
+engfor.6.t:0 "The Greeks refuse"
+engfor.6.d:0 "The foolish Greek have refused our demands and maintain their unlawful occupation of Albanian lands. This incident have tarnished our image both locally and abroad."
+engfor.6.a:0 "They will pay for this"
+engfor.7.t:0 "British investment"
+engfor.7.d:0 "The British have decided to invest in the industrial development of our country as a sign of our friendship and a token of good will. This will greatly aid our efforts."
+engfor.7.a:0 "Thank you kindly!"
+
+
+####ideas####
+george_v_idea:0 "His Majesty George V"
+george_v_idea_desc:0 "King George V was born on the 3rd of June 1865 and ascended to the throne on the 6th of May 1910."
+####opinion####
+ENG_EUR_theater:0 "European diplomacy"
+ENG_dip_support:0 "Supported us"
+ENG_dip_scorne:0 "Supported our rivals"
+ENG_ALB_demand:0 "Demanded free Albania"
+GRE_refuse_ALB:0 "Refused our demand"
+GRE_accept_ALB:0 "Accepted our demand"
+ENG_support_GRE_amb:0 "Supports our ambitions"
+ENG_support_HUN:0 "Military aid"
+ENG_dip_fund:0 "British funding"
+ENG_middle_theater:0 "Middle Eastern diplomacy"

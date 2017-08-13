@@ -74,7 +74,7 @@ units = {
 		location = 3273
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	division= {	
@@ -82,7 +82,7 @@ units = {
 		location = 9392
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	#Northern Command
@@ -91,7 +91,7 @@ units = {
 		location = 11297
 		division_template = "Cavalry Brigade"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	division= {	
@@ -99,13 +99,14 @@ units = {
 		location = 351
 		division_template = "Infantry Division"
 		start_experience_factor = 0.3
+		start_equipment_factor = 1.0 
 	}
 	division= {	
 		name = "50th 'Northumbrian' Motorized Division"
 		location = 9397
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	division= {	
@@ -113,7 +114,7 @@ units = {
 		location = 11218
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	#Eastern Command
@@ -128,7 +129,7 @@ units = {
 		location = 11221
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	division= {	
@@ -136,7 +137,7 @@ units = {
 		location = 3287
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	#Western Command	
@@ -145,7 +146,7 @@ units = {
 		location = 407
 		division_template = "Cavalry Brigade"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	division= {	
@@ -153,7 +154,7 @@ units = {
 		location = 6318
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	division= {	
@@ -161,7 +162,7 @@ units = {
 		location = 311
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	division= {	
@@ -169,7 +170,7 @@ units = {
 		location = 6384
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	#Southern Command
@@ -190,7 +191,7 @@ units = {
 		location = 3369
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	division= {	
@@ -198,7 +199,7 @@ units = {
 		location = 6351
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	
@@ -220,7 +221,27 @@ units = {
 		division_template = "Colonial Garrison"
 		force_equipment_variants = { infantry_equipment_0 = { owner = "ENG" } }
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	
+	division= {	
+		name = "Ahvaz Garrison"
+		location = 7953
+		division_template = "Colonial Garrison"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "ENG" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	
+	division= {	
+		name = "Shiraz Garrison"
+		location = 8117
+		division_template = "Colonial Garrison"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "ENG" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
 
 	}
 	#Aden
@@ -230,7 +251,7 @@ units = {
 		division_template = "Colonial Garrison"
 		force_equipment_variants = { infantry_equipment_0 = { owner = "ENG" } }
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	#Egypt
@@ -255,7 +276,7 @@ units = {
 		location = 4076
 		division_template = "Cavalry Brigade"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	#Gibraltar
@@ -284,7 +305,7 @@ units = {
 		location = 1939
 		division_template = "Colonial Garrison"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 	division= {	
@@ -292,7 +313,7 @@ units = {
 		location = 1939
 		division_template = "Colonial Garrison"			# Colonial militia (lowest equipment and experience)
 		force_equipment_variants = { infantry_equipment_0 = { owner = "ENG" } }
-		start_equipment_factor = 0.3
+		start_equipment_factor = 1.0
 
 	}
 

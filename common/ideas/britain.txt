@@ -1,6 +1,211 @@
 ideas = {
 
 	
+	country = {
+	
+		george_v_idea = {
+		
+			available = {
+			
+				NOT = { has_government = communism }
+			
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+				
+					has_government = communism
+				
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				unity_factor = 0.025
+				
+			
+			}
+		
+		
+		}
+		
+		ENG_austerity_policy = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				consumer_goods_factor = 0.04
+				industrial_capacity_factory = 0.075 
+			
+			}
+		
+		}
+		
+		ENG_keynesian_policy = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				production_speed_buildings_factor = 0.08  
+				industrial_capacity_factory = -0.15 
+			
+			}
+		
+		}
+		
+		
+		ENG_inflation_policy = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				industrial_capacity_factory = 0.1  
+			
+			}
+		
+		}
+		
+		ENG_agricultural_plans = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				global_building_slots_factor = 0.15
+			
+			}
+		
+		}
+		
+		ENG_landlords_organized = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				PRODUCTION_FACTORY_EFFICIENCY_GAIN_FACTOR = 0.30 
+				LINE_CHANGE_PRODUCTION_EFFICIENCY_FACTOR = 0.20
+			
+			}
+		
+		}
+		
+		ENG_rail_boom = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				production_speed_infrastructure_factor = 0.5 
+			
+			}
+		
+		}
+		
+		ENG_democratic_defense = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				drift_defence_factor = 0.1 
+			
+			}
+		
+		}
+	
+	}
+	
 	political_advisor = {
 		
 		harry_pollitt = {

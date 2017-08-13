@@ -96,7 +96,9 @@ if = {
 	}
 }
 
-create_faction = entente
+add_ideas = george_v_idea
+
+create_faction = leauge_of_nations
 add_to_faction = ENG
 add_to_faction = MAL
 add_to_faction = RAJ 
@@ -106,12 +108,13 @@ add_to_faction = AST
 add_to_faction = NZL 
 add_to_faction = SPR
 add_to_faction = IRE
+add_to_faction = POR 
 
 set_politics = {
 
 	parties = {
 	    conservatism = {
-			popularity = 40
+			popularity = 15
 		}
 
 		national_integralism = {
@@ -119,7 +122,7 @@ set_politics = {
 		}
 
 		liberalism = {
-			popularity = 30
+			popularity = 52
 		}
 		
 		communism = {
@@ -127,11 +130,11 @@ set_politics = {
 		}
 		
 		socialism = {
-			popularity = 9
+			popularity = 14
 		}
 		
 		reactionarism = {
-			popularity = 15
+			popularity = 13
 		}
 	}
 	
@@ -148,9 +151,9 @@ set_politics = {
 # Order matters - here Chamberlain becomes starting leader
 
 create_country_leader = {
-	name = "John Simon"
-	desc = ""
-	picture = "John_Simon.dds"
+	name = "David Lloyd George"
+	desc = "lloyd_george_desc"
+	picture = "Lloyd_George.dds"
 	expire = "1965.1.1"
 	ideology = market_liberalism
 	traits = {
@@ -181,9 +184,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Rajani Palme Dutt"
+	name = "James Maxton"
 	desc = "POLITICS_PALME_DUTT_DESC"
-	picture = "Portrait_Britain_Palme_Dutt.dds"
+	picture = "James_Maxton.dds"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {

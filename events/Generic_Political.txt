@@ -1,4 +1,4 @@
-﻿####Stability, Laws and Popularity events - Levi########
+﻿####Stability, Laws and Popularity events - Koach########
 
 add_namespace = politics
 

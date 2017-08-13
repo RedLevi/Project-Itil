@@ -45,4 +45,15 @@ set_politics = {
 	elections_allowed = no
 }
 
+create_country_leader = {
+	name = "Abdelaziz ben Hassan"
+	desc = ""
+	picture = "Abdelaziz_ben_hassan.dds"
+	expire = "1965.1.1"
+	ideology = absolutism
+	traits = {
+		
+	}
+}
+
 set_cosmetic_tag = MOR_GER #German Morocco

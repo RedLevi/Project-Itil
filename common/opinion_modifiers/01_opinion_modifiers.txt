@@ -26,5 +26,6 @@ ENG_support_GRE_amb = { value = 100 }
 ENG_support_HUN = { value = 50 }
 ENG_dip_fund = { value = 50 }
 ENG_middle_theater = { value = 25 }
+ENG_asia_theater = { value = 25 }
 
 }

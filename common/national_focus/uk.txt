@@ -1030,7 +1030,7 @@ focus_tree = {
 	
 		id = ENG_middle_east_theater
 		icon = ? 
-		x = 22 
+		x = 21 
 		y = 1 
 		cost = 10 
 		
@@ -1348,6 +1348,87 @@ focus_tree = {
 		
 			add_resource = { type = oil amount = 40 state = 413 }
 			add_resource = { type = oil amount = 25 state = 412 }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_east_asia_theater
+		icon = ? 
+		x = 31 
+		y = 1 
+		cost = 10 
+		
+		prerequisite = { focus = ENG_bastion_democracy }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = SIA modifier = ENG_asia_theater }
+			reverse_add_opinion_modifier = { target = PHI modifier = ENG_asia_theater }
+			reverse_add_opinion_modifier = { target = AST modifier = ENG_asia_theater }
+			reverse_add_opinion_modifier = { target = NZL modifier = ENG_asia_theater }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_fortify_asia	
+		icon = ? 
+		x = 25 
+		y = 2 
+		cost = 10 
+		
+		prerequisite = { focus = ENG_east_asia_theater }
+		
+		completion_reward = {
+		
+			326 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 10062
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker 
+					level = 3
+					province = 10062
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			336 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					province = 12299
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = bunker 
+					level = 3
+					province = 12299
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
 		
 		}
 	

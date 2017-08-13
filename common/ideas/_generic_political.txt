@@ -6,7 +6,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -36,7 +36,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -60,7 +60,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -84,7 +84,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -108,7 +108,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -135,7 +135,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -158,7 +158,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -182,7 +182,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -209,7 +209,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -232,7 +232,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -263,7 +263,7 @@ ideas = {
 	
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -286,7 +286,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -309,7 +309,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -333,7 +333,7 @@ ideas = {
 	
 		available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -363,7 +363,7 @@ ideas = {
 	
 		available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -386,7 +386,7 @@ ideas = {
 	
 		available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -408,7 +408,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -431,7 +431,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -454,7 +454,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -478,7 +478,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -502,7 +502,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -527,7 +527,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -553,7 +553,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -576,7 +576,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -599,7 +599,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -623,7 +623,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			
@@ -653,7 +653,7 @@ ideas = {
 		
 			available = {
 			
-				always = no
+				always = yes
 			
 			}
 			

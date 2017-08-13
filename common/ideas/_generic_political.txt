@@ -197,7 +197,7 @@ ideas = {
 				
 				consumer_goods_factor = 0.05
 				unity_factor = 0.05 
-				MONTHLY_POPULATION = 0.005
+				MONTHLY_POPULATION = 0.001
 				
 			}
 		
@@ -589,7 +589,7 @@ ideas = {
 			
 			modifier = {
 			
-				MONTHLY_POPULATION = -0.075
+				MONTHLY_POPULATION = -0.015
 				
 			}
 		
@@ -612,7 +612,6 @@ ideas = {
 			
 			modifier = {
 			
-				MONTHLY_POPULATION = -0.075
 				army_morale_factor = 0.15 
 				conscription = 0.035 
 				

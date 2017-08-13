@@ -34,7 +34,14 @@ united_front_focus:0 "The United Front"
 united_front_focus_desc:0 "In order to finally defeat the scourge that is Capitalism we must unite with our brothers and sisters thruoghout the world."
 liberty_path_focus:0 "The Path Of Liberty"
 liberty_path_focus_desc:0 "'Liberty means responsibility. That is why most men dread it.' /n Unlike most men, we must resist the temptation of power and populism and protect the light of liberty at any cost! let us fight for a truly free society!"
-
+liberalism_path_focus:0 "A Bastion of Liberalism"
+liberalism_path_focus_desc:0 "Our country should become a shining beacon of free markets and free people. Onwards, for progress!"
+adopt_liberalism_focus:0 "Democratic Achievments"
+adopt_liberalism_focus_desc:0 "-"
+adopt_conservatism_focus:0 "Moral Renissance"
+adopt_conservatism_focu_desc:0 "-"
+conservatism_path_focus_desc:0 "-"
+conservatism_path_desc:0 "Power Of Tradition"
 
 
 ####events####

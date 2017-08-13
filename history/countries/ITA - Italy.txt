@@ -74,6 +74,20 @@ set_politics = {
 	elections_allowed = no
 }
 
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = LBA
+		autonomous_state = autonomy_puppet
+		freedom_level = 0.1
+	}
+	else = {
+		puppet = LBA
+	}
+}
+
 create_country_leader = {
 	name = "Benito Mussolini"
 	desc = "POLITICS_BENITO_MUSSOLINI_DESC"

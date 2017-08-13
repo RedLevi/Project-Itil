@@ -48,37 +48,16 @@ set_politics = {
 	ruling_party = conservatism
 	last_election = "1935.3.31"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 
-create_country_leader = {
-	name = "Miklós Horthy"
-	desc = "POLITICS_MIKLOS_HORTHY_DESC"
-	picture = "Portrait_Hungary_Miklos_Horthy.dds"
-	expire = "1965.1.1"
-	ideology = integralism
-	traits = {
-		#
-	}
-}
 
 create_country_leader = {
-	name = "Mátyás Rákosi"
-	desc = "POLITICS_MATYAS_RAKOSKI_DESC"
-	picture = "Portrait_Hungary_Matyas_Rakoski.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Árpád Szakasits"
+	name = "Tildy Zoltán"
 	desc = "POLITICS_ARPAD_SZAKASITS_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	picture = "gfx/leaders/HUN/Tildy_Zoltan.dds"
 	expire = "1965.1.1"
-	ideology = democrtatic_conservatism
+	ideology = democratic_conservatism 
 	traits = {
 		#
 	}

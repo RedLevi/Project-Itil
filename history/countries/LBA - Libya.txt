@@ -16,15 +16,15 @@ set_politics = {
 		}
 
 		national_integralism = {
-			popularity = 10
+			popularity = 4
 		}
 
 		liberalism = {
-			popularity = 15
+			popularity = 12
 		}
 		
 		communism = {
-			popularity = 2
+			popularity = 10
 		}
 		
 		socialism = {
@@ -37,7 +37,7 @@ set_politics = {
 		
 	}
 	
-	ruling_party = reactionarism
+	ruling_party = communism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no

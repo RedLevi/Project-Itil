@@ -20,8 +20,6 @@ ideas = {
 				}
 			}
 			
-			picture = GFX_idea_george_v
-			
 			removal_cost = -1
 			
 			modifier = {

@@ -2637,10 +2637,6 @@ spriteTypes = {
 		name = "GFX_idea_GRE_fortification_focus"
 		texturefile = "gfx/interface/ideas/GRE_fortification_focus.dds"
 	}
-	
-	
-	####ante rebellum####
-	
 
 
 }

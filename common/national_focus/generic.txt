@@ -1636,7 +1636,7 @@ focus_tree = {
 	focus = {
 	
 		id = equality_path_focus
-		icon = GFX_goal_generic_neutrality_focus
+		icon = GFX_equality_path_focus
 		x = 22
 		y = 1 
 		cost = 10 
@@ -1658,7 +1658,7 @@ focus_tree = {
 	focus = {
 	
 		id = socialist_path_focus
-		icon = GFX_ 
+		icon = GFX_socialist_path_focus 
 		x = 24 
 		y = 2 
 		cost = 10 
@@ -1680,7 +1680,7 @@ focus_tree = {
 	focus = {
 		
 		id = adopt_socialism_focus 
-		icon = GFX_focus_generic_join_comintern
+		icon = GFX_adopt_socialism_focus
 		x = 24
 		y = 3 
 		cost = 10 
@@ -1764,7 +1764,7 @@ focus_tree = {
 	focus = {
 	
 		id = communist_path_focus 
-		icon = GFX_goal_generic_support_communism
+		icon = GFX_communist_path_focus
 		x = 19 
 		y = 2 
 		cost = 10
@@ -1786,7 +1786,7 @@ focus_tree = {
 	focus = {
 		
 		id = adopt_communism_focus 
-		icon = GFX_focus_generic_join_comintern
+		icon = GFX_adopt_communism_focus
 		x = 19
 		y = 3 
 		cost = 10 
@@ -2106,7 +2106,7 @@ focus_tree = {
 	focus = {
 	
 		id = liberty_path_focus
-		icon = GFX_ 
+		icon = GFX_liberty_path_focus 
 		x = 27 
 		y = 1 
 		cost = 10 
@@ -2127,7 +2127,7 @@ focus_tree = {
 	focus = {
 	
 		id = liberalism_path_focus
-		icon = GFX_ 
+		icon = GFX_liberalism_path_focus 
 		x = 26 
 		y = 2 
 		cost = 10 
@@ -2149,7 +2149,7 @@ focus_tree = {
 	focus = {
 		
 		id = adopt_liberalism_focus 
-		icon = GFX_
+		icon = GFX_adopt_liberalism_focus
 		x = 26 
 		y = 3 
 		cost = 10 
@@ -2191,7 +2191,7 @@ focus_tree = {
 	focus = {
 	
 		id = conservatism_path_focus
-		icon = GFX_ 
+		icon = GFX_conservatism_path_focus 
 		x = 28 
 		y = 2 
 		cost = 10 
@@ -2213,7 +2213,7 @@ focus_tree = {
 	focus = {
 		
 		id = adopt_conservatism_focus 
-		icon = GFX_
+		icon = GFX_adopt_conservatism_focus
 		x = 28 
 		y = 3
 		cost = 10 
@@ -2404,7 +2404,7 @@ focus_tree = {
 	focus = { 
 
 		id = order_path_focus
-		icon = GFX_ 
+		icon = GFX_order_path_focus
 		x = 35
 		y = 1 
 		cost = 10 
@@ -2425,7 +2425,7 @@ focus_tree = {
 	focus = {
 	
 		id = reactionarism_path_focus
-		icon = GFX_ 
+		icon = GFX_reactionarism_path_focus 
 		x = 32 
 		y = 2 
 		cost = 10 
@@ -2447,7 +2447,7 @@ focus_tree = {
 	focus = {
 		
 		id = adopt_reactionarism_focus 
-		icon = GFX_
+		icon = GFX_adopt_reactionarism_focus
 		x = 32 
 		y = 3
 		cost = 10 
@@ -2577,7 +2577,7 @@ focus_tree = {
 	focus = {
 	
 		id = integralism_path_focus
-		icon = GFX_ 
+		icon = GFX_integralism_path_focus
 		x = 38 
 		y = 2 
 		cost = 10 

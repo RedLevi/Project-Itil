@@ -1887,7 +1887,113 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			add_equipment_to_stockpile = { type = convoy_1 amount = 200 }
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = naval_doctrine }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_battleship_focus
+		icon = ? 
+		x = 15
+		y = 7 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_naval_doctrine } 
+		mutually_exclusive = { focus = ENG_carrier_focus }
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = bb_tech category = shbb_tech category = bc_tech }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_destroyer_focus
+		icon = ? 
+		x = 15
+		y = 8 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_battleship_focus } 
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = dd_tech category = cl_tech  }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_carrier_focus
+		icon = ? 
+		x = 17
+		y = 7 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_naval_doctrine } 
+		mutually_exclusive = { focus = ENG_battleship_focus }
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = cv_tech }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_submarine_focus
+		icon = ? 
+		x = 17
+		y = 8 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_carrier_focus } 
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = ss_tech }
 		
 		}
 	

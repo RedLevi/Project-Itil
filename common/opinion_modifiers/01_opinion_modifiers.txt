@@ -15,6 +15,7 @@ opinion_modifiers = {
 	world_revolution_positive = { value = 100 }
 	pacifism_opinion = { value = 50 }
 	world_domination_opinion = { value = -75 }
+	DIP_refuse_offer = { value = -10 }
 #####ENG####
 ENG_EUR_theater = { value = 25 }
 ENG_dip_support = { value = 50 }
@@ -27,5 +28,6 @@ ENG_support_HUN = { value = 50 }
 ENG_dip_fund = { value = 50 }
 ENG_middle_theater = { value = 25 }
 ENG_asia_theater = { value = 25 }
+ENG_dip_inf = { value = 35 }
 
 }

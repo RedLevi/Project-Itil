@@ -83,6 +83,8 @@ country_event = {
 		ENG = { country_event = { id = engfor.3 days = 1 } }
 		
 		add_political_power = 15
+		
+		reverse_add_opinion_modifier = { target = ENG modifier = DIP_refuse_offer }
 	
 	}
 
@@ -158,6 +160,7 @@ country_event = {#UK demands albania
 		
 		reverse_add_opinion_modifier = { target = ENG modifier = GRE_refuse_ALB }
 		
+		add_named_threat = 	{ threat = 1 name = refused_demands }
 	
 	}
 
@@ -257,6 +260,78 @@ country_event = {#British funding (SYR, ISR)
 		}
 		
 		add_political_power = 10 
+	
+	}
+
+}
+
+country_event = {#Siam-UK alliance 
+
+	id = engfor.8 
+	title = engfor.8.t 
+	desc = engfor.8.d 
+	
+	is_triggered_only = yes 
+	
+	
+	option = {
+	
+		name = engfor.8.a 
+		ai_chance = { factor = 50 }
+		
+		add_political_power = -10 
+		
+		ENG = { country_event = { id = engfor.9 days = 1 } }
+	
+	}
+	
+	option = {
+	
+		name = engfor.1.b 
+		ai_chance = { factor = 50 }
+		
+		ENG = { country_event = { id = engfor.10 days = 1 } }
+		
+		add_political_power = 15
+		
+		reverse_add_opinion_modifier = { target = ENG modifier = DIP_refuse_offer }
+	
+	}
+
+}
+
+country_event = {#siam agrees 
+
+	id = engfor.9 
+	title = engfor.9.t 
+	desc = engfor.9.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engfor.9.a 
+		
+		add_to_faction = SIA  
+		send_equipment = { target = NOR type = infantry_equipment amount = 500 }
+	
+	}
+
+}
+
+country_event = {#siam refuses 
+
+	id = engfor.10
+	title = engfor.10.t 
+	desc = engfor.10.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engfor.10.a 
+		
+		add_political_power = -15 
 	
 	}
 

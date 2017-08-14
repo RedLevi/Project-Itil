@@ -797,6 +797,7 @@ focus_tree = {
 			reverse_add_opinion_modifier = { target = GRE modifier = ENG_ALB_demand }
 			
 			GRE = { country_event = { id = engfor.4 } }
+			add_named_threat = 	{ threat = 1 name = albania_demand }
 		
 		}
 	
@@ -1137,9 +1138,8 @@ focus_tree = {
 		available = {
 		
 			ISR = { 
-			
-				exists = yes
-				is_puppet_of = SYR
+	
+				is_subject_of = SYR
 
 			}
 			SYR = {
@@ -1178,8 +1178,7 @@ focus_tree = {
 		
 			ISR = { 
 			
-				exists = yes
-				is_puppet_of = SYR
+				is_subject_of = SYR
 
 			}
 			SYR = {
@@ -1429,6 +1428,82 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_SIA_influence
+		icon = ? 
+		x = 27 
+		y = 2 
+		cost = 10 
+		
+		available = {
+		
+			SIA = {
+			
+				exists = yes 
+				is_in_faction = no 
+				
+				NOT = {
+				
+					has_war_with = ENG
+				
+				}
+			
+			}
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_east_asia_theater }
+		
+		completion_reward = {
+		
+			give_guarantee = SIA 
+			
+			reverse_add_opinion_modifier = { target = SIA modifier = ENG_dip_inf }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_SIA_alliance
+		icon = ? 
+		x = 27 
+		y = 3 
+		cost = 10 
+		
+		available = {
+		
+			SIA = {
+			
+				exists = yes 
+				is_in_faction = no 
+				
+				NOT = {
+				
+					has_war_with = ENG
+				
+				}
+			
+			}
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_SIA_influence }
+		
+		completion_reward = {
+		
+			SIA = { country_event = { id = engfor.8 } }
 		
 		}
 	

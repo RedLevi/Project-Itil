@@ -1,6 +1,10 @@
 ﻿l_english: 
 ####focuses####
-ENG_economic_reforms:0 "Economic Reforms"
+ENG_economic_reforms:0 "A New Chancellor Of The Exchequer "
+ENG_economic_reforms_desc:0 "Britain has solved its political crisis, and now with a united Britain, may the dreams of fiscal prosperity for all be realised, and may not just Britain itself feel the benefit, but all of her Dominions and far-flung territories."
+ENG_bastion_democracy:0 "Bastion of Democracy"
+ENG_bastion_democracy_desc:0 "Never has the flame of democracy been so small and faded, threatened on all sides by vile radical ideologies, but with a united empire, hope in our hearts and boots on the ground may we finally see the day when the horrors of Integralism and Socialism are memories of the past."
+
 ####events####
 engfor.1.t:0 "Britain offers alliance"
 engfor.1.d:0 "We have recieved a telegraph from the British embassy offering us to join their political and military alliance, to counter German diplomatic advances in the region. If we accept Britain will send us military aid for the construction of our army. What should we reply?"
@@ -35,6 +39,20 @@ engfor.9.a:0 "Perfect!"
 engfor.10.t:0 "Siam refuses!"
 engfor.10.d:0 "We recieved word from our embassy in Bangkok informing us the Siamese government refused our alliance offer. They will stand on their own."
 engfor.10.a:0 "Their loss"
+engfor.11.t:0 "Britain offers alliance"
+engfor.11.d:0 "We have recieved a telegraph from the British embassy offering us to join their political and military alliance, to better advance our common interests in the region. If we accept Britain will send us military aid for the construction of our army. What should we reply?"
+engfor.11.a:0 "We accept!"
+engfor.11.b:0 "We will remain independent!"
+engfor.12.t:0 "The Phillipines accepts our offer"
+engfor.12.d:0 "Great news! Our ambassador in The Phillipines has informed us the Phillipine cabinet accepted our alliance offer in exchange for aid."
+engfor.12.a:0 "Perfect!"
+engfor.13.t:0 "The Phillipines refuses!"
+engfor.13.d:0 "We recieved word from our embassy in Manila informing us the Phillipine government refused our alliance offer. They will stand on their own."
+engfor.13.a:0 "Their loss"
+engfor.14.t:0 "British aid arrives!"
+engfor.14.d:0 "The British have wisely chose us as their most suitable allies in the region and have sent us significant military aid in an effort to improve relations between our two nations."
+engfor.14.a:0 "Very good."
+
 
 ####ideas####
 george_v_idea:0 "His Majesty George V"
@@ -53,6 +71,7 @@ ENG_middle_theater:0 "Middle Eastern diplomacy"
 ENG_asia_theater:0 "Asian diplomacy"
 ENG_dip_inf:0 "Diplomatic influence"
 DIP_refuse_offer:0 "Refused our offer"
+ENG_chinese_direction:0 "Chinese ambitions"
 ####tooltip####
 albania_demand:0 "Demanded independence for Albania"
 refused_demands:0 "Refused demands"

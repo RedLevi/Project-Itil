@@ -19,7 +19,7 @@ opinion_modifiers = {
 #####ENG####
 ENG_EUR_theater = { value = 25 }
 ENG_dip_support = { value = 50 }
-ENG_dip_scorne = { value = -75 }
+ENG_dip_scorne = { value = -65 }
 ENG_ALB_demand = { value = -50 }
 GRE_refuse_ALB = { value = -50 }
 GRE_accept_ALB = { value = 50 }
@@ -29,5 +29,6 @@ ENG_dip_fund = { value = 50 }
 ENG_middle_theater = { value = 25 }
 ENG_asia_theater = { value = 25 }
 ENG_dip_inf = { value = 35 }
+ENG_chinese_direction = { value = -25 }
 
 }

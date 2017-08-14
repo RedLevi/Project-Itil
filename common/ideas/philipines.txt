@@ -7,7 +7,7 @@ ideas = {
 			picture = generic_political_advisor_asia_2
 			
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 			
 			traits = { silent_workhorse }
@@ -18,7 +18,7 @@ ideas = {
 			picture = generic_political_advisor_asia_3
 				
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 			
 			traits = { popular_figurehead }
@@ -29,7 +29,7 @@ ideas = {
 			picture = generic_political_advisor_asia_1
 			
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 			
 			traits = { prince_of_terror }
@@ -43,7 +43,7 @@ ideas = {
 			picture = generic_army_asia_2
 
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 			
 			traits = { army_chief_morale_2 }
@@ -59,7 +59,7 @@ ideas = {
 			picture = generic_army_asia_3
 			
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 			
 			traits = { army_chief_defensive_2 }
@@ -79,7 +79,7 @@ ideas = {
 			picture = generic_air_asia_2
 			
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 			
 			traits = { air_chief_all_weather_2 }
@@ -95,7 +95,7 @@ ideas = {
 			picture = generic_air_asia_3
 			
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 			
 			traits = { air_chief_reform_2 }
@@ -114,7 +114,7 @@ ideas = {
 			picture = generic_navy_asia_1
 
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 					
 			traits = { navy_chief_maneuver_2 }
@@ -130,7 +130,7 @@ ideas = {
 			picture = generic_navy_asia_3
 
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 					
 			traits = { navy_chief_commerce_raiding_2 }
@@ -148,7 +148,7 @@ ideas = {
 			picture = generic_army_asia_3
 			
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 			
 			traits = { army_regrouping_2 }
@@ -163,7 +163,7 @@ ideas = {
 			picture = generic_army_asia_1
 			
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 			
 			traits = { army_armored_2 }
@@ -178,7 +178,7 @@ ideas = {
 			picture = generic_air_asia_3
 			
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 			
 			traits = { air_airborne_2 }
@@ -193,7 +193,7 @@ ideas = {
 			picture = generic_navy_asia_1
 			
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 			
 			traits = { navy_fleet_logistics_2 }
@@ -212,7 +212,7 @@ ideas = {
 			picture = generic_army_asia_2
 			
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 			
 			research_bonus = {
@@ -227,7 +227,7 @@ ideas = {
 			picture = generic_air_asia_3
 			
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 			
 			research_bonus = {
@@ -242,7 +242,7 @@ ideas = {
 			picture = generic_navy_asia_3
 			
 			allowed = {
-				original_tag = PHI
+				original_tag = PHL
 			}
 			
 			research_bonus = {

@@ -622,7 +622,7 @@ focus_tree = {
 	
 		id = ENG_bastion_democracy
 		icon = ? 
-		x = 18
+		x = 21
 		y = 0 
 		cost = 10 
 		
@@ -1356,7 +1356,7 @@ focus_tree = {
 	
 		id = ENG_east_asia_theater
 		icon = ? 
-		x = 31 
+		x = 28 
 		y = 1 
 		cost = 10 
 		
@@ -1365,7 +1365,7 @@ focus_tree = {
 		completion_reward = {
 		
 			reverse_add_opinion_modifier = { target = SIA modifier = ENG_asia_theater }
-			reverse_add_opinion_modifier = { target = PHI modifier = ENG_asia_theater }
+			reverse_add_opinion_modifier = { target = PHL modifier = ENG_asia_theater }
 			reverse_add_opinion_modifier = { target = AST modifier = ENG_asia_theater }
 			reverse_add_opinion_modifier = { target = NZL modifier = ENG_asia_theater }
 		
@@ -1504,6 +1504,364 @@ focus_tree = {
 		completion_reward = {
 		
 			SIA = { country_event = { id = engfor.8 } }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_PHL_influence
+		icon = ? 
+		x = 29 
+		y = 2 
+		cost = 10 
+		
+		available = {
+		
+			PHL = {
+			
+				exists = yes 
+				is_in_faction = no 
+				
+				NOT = {
+				
+					has_war_with = ENG
+				
+				}
+			
+			}
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_east_asia_theater }
+		
+		completion_reward = {
+		
+			give_guarantee = PHL 
+			
+			reverse_add_opinion_modifier = { target = PHL modifier = ENG_dip_inf }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_PHL_alliance
+		icon = ? 
+		x = 29 
+		y = 3 
+		cost = 10 
+		
+		available = {
+		
+			PHL = {
+			
+				exists = yes 
+				is_in_faction = no 
+				
+				NOT = {
+				
+					has_war_with = ENG
+				
+				}
+			
+			}
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_PHL_influence }
+		
+		completion_reward = {
+		
+			PHL = { country_event = { id = engfor.11 } }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_china_focus 
+		icon = ? 
+		x = 32 
+		y = 2 
+		cost = 10 
+		
+		available = {
+		
+			OR ={
+			
+				ZHI = { exists = yes }
+				
+				CHI = { exists = yes }
+			
+			}
+		
+		}
+		
+		prerequisite = { focus = ENG_east_asia_theater }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = SOV modifier = ENG_chinese_direction }
+			reverse_add_opinion_modifier = { target = JAP modifier = ENG_chinese_direction }
+			reverse_add_opinion_modifier = { target = PRC modifier = ENG_chinese_direction }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_ZHI_focus 
+		icon = ? 
+		x = 31 
+		y = 3 
+		cost = 10 
+		
+		available = {
+		
+			ZHI = { 
+
+				exists = yes 
+				
+				is_subject = no 
+				
+
+			}
+		
+		}
+		
+		prerequisite = { focus = ENG_china_focus }
+		mutually_exclusive = { focus = ENG_CHI_focus }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = ZHI modifier = ENG_dip_support }
+			reverse_add_opinion_modifier = { target = CHI modifier = ENG_dip_scorne }
+			
+			send_equipment = { target = ZHI type = infantry_equipment amount = 1500 }
+			send_equipment = { target = ZHI type = motorized_equipment amount = 500 }
+			send_equipment = { target = ZHI type = support_equipment amount = 250 }
+			
+			ZHI = { country_event = { id = engfor.14 } }
+		
+			set_global_flag = ENG_support_ZHI
+			
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_CHI_focus 
+		icon = ? 
+		x = 33 
+		y = 3 
+		cost = 10 
+		
+		available = {
+		
+			CHI = { 
+
+				exists = yes 
+				
+				is_subject = no 
+				
+
+			}
+		
+		}
+		
+		prerequisite = { focus = ENG_china_focus }
+		mutually_exclusive = { focus = ENG_ZHI_focus }
+		
+		completion_reward = {
+		
+			reverse_add_opinion_modifier = { target = CHI modifier = ENG_dip_support }
+			reverse_add_opinion_modifier = { target = ZHI modifier = ENG_dip_scorne }
+			
+			send_equipment = { target = CHI type = infantry_equipment amount = 1500 }
+			send_equipment = { target = CHI type = motorized_equipment amount = 500 }
+			send_equipment = { target = CHI type = support_equipment amount = 250 }
+			
+			CHI = { country_event = { id = engfor.14 } }
+		
+			set_global_flag = ENG_support_CHI
+			
+		}
+	
+	}
+	
+	
+	####military####
+	
+	focus = {
+	
+		id = ENG_thalassocratic_ambitions
+		icon = ? 
+		x = 14
+		y = 5 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		completion_reward = {
+		
+			navy_experience = 25 
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_northern_port
+		icon = ? 
+		x = 12
+		y = 6 
+		cost = 10 
+		
+		available = {
+			
+			controls_state = 121 
+			controls_state = 133
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_thalassocratic_ambitions }
+		
+		completion_reward = {
+		
+			121 = {
+			
+				add_building_construction = {
+					type = naval_base 
+					level = 2
+					province = 6300
+					instant_build = yes
+				}
+			
+			}
+			
+			133 = {
+			
+				add_building_construction = {
+					type = naval_base 
+					level = 2
+					province = 6395
+					instant_build = yes
+				}
+			
+			}
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_liverpool_docks
+		icon = ? 
+		x = 11
+		y = 7 
+		cost = 10 
+		
+		available = {
+			
+			controls_state = 132 
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_northern_port }
+		
+		completion_reward = {
+		
+			132 = {
+			
+				add_extra_state_shared_building_slots = 3 
+				add_building_construction = {
+					type = dockyard 
+					level = 3
+					instant_build = yes
+				}
+			
+			}
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_newcastle_docks
+		icon = ? 
+		x = 12
+		y = 8 
+		cost = 10 
+		
+		available = {
+			
+			controls_state = 131 
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_northern_port }
+		
+		completion_reward = {
+		
+			131 = {
+			
+				add_extra_state_shared_building_slots = 3 
+				add_building_construction = {
+					type = dockyard 
+					level = 3
+					instant_build = yes
+				}
+			
+			}
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_merchant_fleet
+		icon = ? 
+		x = 13
+		y = 7 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_northern_port }
+		
+		completion_reward = {
+		
+			add_equipment_to_stockpile = { type = convoy_1 amount = 200 }
 		
 		}
 	

@@ -73,11 +73,10 @@ country_event = {
 				
 				}
 				
+				add = -40
 	
 			}
 			
-			add = -40
-
 		}
 		
 		ENG = { country_event = { id = engfor.3 days = 1 } }
@@ -287,7 +286,7 @@ country_event = {#Siam-UK alliance
 	
 	option = {
 	
-		name = engfor.1.b 
+		name = engfor.8.b 
 		ai_chance = { factor = 50 }
 		
 		ENG = { country_event = { id = engfor.10 days = 1 } }
@@ -313,7 +312,7 @@ country_event = {#siam agrees
 		name = engfor.9.a 
 		
 		add_to_faction = SIA  
-		send_equipment = { target = NOR type = infantry_equipment amount = 500 }
+		send_equipment = { target = SIA type = infantry_equipment amount = 500 }
 	
 	}
 
@@ -332,6 +331,96 @@ country_event = {#siam refuses
 		name = engfor.10.a 
 		
 		add_political_power = -15 
+	
+	}
+
+}
+
+country_event = {#PHL-UK alliance 
+
+	id = engfor.11 
+	title = engfor.11.t 
+	desc = engfor.11.d 
+	
+	is_triggered_only = yes 
+	
+	
+	option = {
+	
+		name = engfor.11.a 
+		ai_chance = { factor = 50 }
+		
+		add_political_power = -10 
+		
+		ENG = { country_event = { id = engfor.12 days = 1 } }
+	
+	}
+	
+	option = {
+	
+		name = engfor.11.b 
+		ai_chance = { factor = 50 }
+		
+		ENG = { country_event = { id = engfor.13 days = 1 } }
+		
+		add_political_power = 15
+		
+		reverse_add_opinion_modifier = { target = ENG modifier = DIP_refuse_offer }
+	
+	}
+
+}
+
+country_event = {#PHL agrees 
+
+	id = engfor.12
+	title = engfor.12.t 
+	desc = engfor.12.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engfor.12.a 
+		
+		add_to_faction = PHL  
+		send_equipment = { target = PHL type = infantry_equipment amount = 500 }
+	
+	}
+
+}
+
+country_event = {#PHL refuses 
+
+	id = engfor.13
+	title = engfor.13.t 
+	desc = engfor.13.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engfor.13.a 
+		
+		add_political_power = -15 
+	
+	}
+
+}
+
+country_event = {#aid from UK China
+
+	id = engfor.14
+	title = engfor.14.t 
+	desc = engfor.14.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engfor.14.a 
+		
+		add_political_power = 15
 	
 	}
 

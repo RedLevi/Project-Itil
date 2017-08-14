@@ -20,6 +20,8 @@ ideas = {
 				}
 			}
 			
+			picture = GFX_idea_george_v
+			
 			removal_cost = -1
 			
 			modifier = {
@@ -51,7 +53,8 @@ ideas = {
 			modifier = {
 			
 				consumer_goods_factor = 0.04
-				industrial_capacity_factory = 0.075 
+				industrial_capacity_factory = 0.075
+				production_speed_buildings_factor = 0.1
 			
 			}
 		
@@ -75,7 +78,7 @@ ideas = {
 			
 			modifier = {
 			
-				production_speed_buildings_factor = 0.08  
+				
 				industrial_capacity_factory = -0.15 
 			
 			}

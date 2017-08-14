@@ -1999,5 +1999,201 @@ focus_tree = {
 	
 	}
 	
+	focus = {
+	
+		id = ENG_military_reforms
+		icon = ? 
+		x = 21
+		y = 5 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		
+		completion_reward = {
+		
+			army_experience = 25
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_fire_support
+		icon = ? 
+		x = 19
+		y = 6 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = ENG_military_reforms }
+		
+		mutually_exclusive = { focus = ENG_grand_battle focus = ENG_mobile_warfare }
+		
+		cancel_if_invalid = yes 
+		
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_superior_firepower }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_artilery_focus
+		icon = ? 
+		x = 19
+		y = 7 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = ENG_fire_support }
+		
+		
+		cancel_if_invalid = yes 
+		
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = artillery }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_grand_battle
+		icon = ? 
+		x = 21
+		y = 6 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = ENG_military_reforms }
+		
+		mutually_exclusive = { focus = ENG_fire_support focus = ENG_mobile_warfare }
+		
+		cancel_if_invalid = yes 
+		
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_grand_battle_plan }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_support_tech_focus
+		icon = ? 
+		x = 21
+		y = 7 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = ENG_grand_battle }
+		
+		
+		cancel_if_invalid = yes 
+		
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = support_tech }
+		
+		}
+		
+	}
+	
+	focus = {
+	
+		id = ENG_mobile_warfare
+		icon = ? 
+		x = 23
+		y = 6 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = ENG_military_reforms }
+		
+		mutually_exclusive = { focus = ENG_fire_support focus = ENG_grand_battle }
+		
+		cancel_if_invalid = yes 
+		
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_mobile_warfare }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_motorized_focus
+		icon = ? 
+		x = 23
+		y = 7 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = ENG_mobile_warfare }
+		
+		
+		cancel_if_invalid = yes 
+		
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = motorized_equipment category = cat_mechanized_equipment }
+		
+		}
+		
+	}
+	
 }
 	

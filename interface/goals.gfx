@@ -2,20 +2,20 @@ spriteTypes = {
 	#### Generic Mod Goal Icons
 
 	SpriteType = {
-	name = "GFX_adopt_communism_focus"
-	texturefile = "gfx/interface/goals/adopt_communism_focus.dds"			
+	name = "GFX_communist_path_focus"
+	texturefile = "gfx/interface/goals/communist_path_focus.dds"			
 	}	
 	SpriteType = {
-	name = "GFX_adopt_conservatism_focus"
-	texturefile = "gfx/interface/goals/adopt_conservatism_focus.dds"			
+	name = "GFX_conservatism_path_focus"
+	texturefile = "gfx/interface/goals/conservatism_path_focus.dds"			
 	}
 	SpriteType = {
-	name = "GFX_adopt_liberalism_focus"
-	texturefile = "gfx/interface/goals/adopt_liberalism_focus.dds"			
+	name = "GFX_liberalism_path_focus"
+	texturefile = "gfx/interface/goals/liberalism_path_focus.dds"			
 	}
 	SpriteType = {
-	name = "GFX_adopt_socialism_focus"
-	texturefile = "gfx/interface/goals/adopt_socialism_focus.dds"			
+	name = "GFX_socialist_path_focus"
+	texturefile = "gfx/interface/goals/socialist_path_focus.dds"			
 	}
 	SpriteType = {
 	name = "GFX_equality_path_focus"

@@ -2,11 +2,11 @@ spriteTypes = {
 	#### Generic Goal Icons MOD
 	
 	SpriteType = {
-		name = "GFX_adopt_communism_focus_shine"
-		texturefile = "gfx/interface/goals/adopt_communism_focus.dds"			
+		name = "GFX_communist_path_focus_shine"
+		texturefile = "gfx/interface/goals/communist_path_focus.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/adopt_communism_focus.dds"			
+			animationmaskfile = "gfx/interface/goals/communist_path_focus.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -19,7 +19,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/adopt_communism_focus.dds"			
+			animationmaskfile = "gfx/interface/goals/communist_path_focus.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -33,11 +33,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_adopt_conservatism_focus_shine"
-		texturefile = "gfx/interface/goals/adopt_conservatism_focus.dds"			
+		name = "GFX_conservatism_path_focus_shine"
+		texturefile = "gfx/interface/goals/conservatism_path_focus.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/adopt_conservatism_focus.dds"			
+			animationmaskfile = "gfx/interface/goals/conservatism_path_focus.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -50,7 +50,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/adopt_conservatism_focus.dds"			
+			animationmaskfile = "gfx/interface/goals/conservatism_path_focus.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -64,11 +64,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_adopt_liberalism_focus_shine"
-		texturefile = "gfx/interface/goals/adopt_liberalism_focus.dds"			
+		name = "GFX_liberalism_path_focus_shine"
+		texturefile = "gfx/interface/goals/liberalism_path_focus.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/adopt_liberalism_focus.dds"			
+			animationmaskfile = "gfx/interface/goals/liberalism_path_focus.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -81,7 +81,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/adopt_liberalism_focus.dds"			
+			animationmaskfile = "gfx/interface/goals/liberalism_path_focus.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -126,11 +126,11 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	SpriteType = {
-		name = "GFX_adopt_socialism_focus_shine"
-		texturefile = "gfx/interface/goals/adopt_socialism_focus.dds"			
+		name = "GFX_socialist_path_focus_shine"
+		texturefile = "gfx/interface/goals/socialist_path_focus.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/adopt_socialism_focus.dds"			
+			animationmaskfile = "gfx/interface/goals/socialist_path_focus.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -143,7 +143,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/adopt_socialism_focus.dds"			
+			animationmaskfile = "gfx/interface/goals/socialist_path_focus.dds"			
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)

@@ -246,7 +246,7 @@ country_event = {#Egyptian response
 	option = {#anti uk 
 	
 		name = imperialwar.2.a 
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 85 }
 	
 			
 		declare_war_on = { target = ENG type = annex_everything }
@@ -272,7 +272,7 @@ country_event = {#Egyptian response
 	option = {#loyalty 
 	
 		name = imperialwar.2.b 
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 15 }
 		
 		add_political_power = 50
 		
@@ -303,7 +303,7 @@ country_event = {#Indian response
 	option = {#anti uk 
 	
 		name = imperialwar.2.a 
-		ai_chance = { factor = 99 }
+		ai_chance = { factor = 60 }
 	
 			
 		declare_war_on = { target = ENG type = annex_everything }
@@ -331,7 +331,7 @@ country_event = {#Indian response
 	option = {#loyalty 
 	
 		name = imperialwar.2.b 
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 40 }
 		
 		add_political_power = 50
 		
@@ -420,7 +420,7 @@ country_event = {#Australia response
 	option = {#anti uk 
 	
 		name = imperialwar.2.a 
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 20 }
 	
 			
 		declare_war_on = { target = ENG type = annex_everything }
@@ -447,7 +447,7 @@ country_event = {#Australia response
 	option = {#loyalty 
 	
 		name = imperialwar.2.b 
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 80 }
 		
 		add_political_power = 50
 		
@@ -579,6 +579,22 @@ country_event = {#South African response
 			add_to_faction = ROOT
 			
 		}
+	
+	}
+
+}
+
+news_event = {#The Imperial War News 
+
+	id = imperialwar.10 
+	title = imperialwar.10.t 
+	desc = imperialwar.10.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = imperialwar.10.a 
 	
 	}
 

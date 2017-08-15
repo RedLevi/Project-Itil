@@ -2195,5 +2195,192 @@ focus_tree = {
 		
 	}
 	
+	focus = {
+	
+		id = ENG_royal_army_focus 
+		icon = ? 
+		x = 21 
+		y = 8 
+		cost = 10 
+		
+		available = {
+		
+			always = yes 
+		
+		}	
+		
+		prerequisite = { focus = ENG_motorized_focus focus = ENG_support_tech_focus focus = ENG_artilery_focus }
+		
+		completion_reward = {
+		
+			add_ideas = ENG_royal_army 
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_royal_air_force
+		icon = ? 
+		x = 27
+		y = 5 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		
+		cancel_if_invalid = yes 
+		
+		
+		completion_reward = {
+		
+			air_experience = 25 
+		
+		}
+		
+	}
+	
+	focus = {
+	
+		id = ENG_air_doctrines
+		icon = ? 
+		x = 27
+		y = 6 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = ENG_royal_air_force }
+		
+		cancel_if_invalid = yes 
+		
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = air_doctrine }
+		
+		}
+		
+	}
+	
+	focus = {
+	
+		id = ENG_fighter_focus
+		icon = ? 
+		x = 27
+		y = 7 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = ENG_air_doctrines }
+		
+		cancel_if_invalid = yes 
+		
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = light_fighter }
+		
+		}
+		
+	}
+	
+	focus = {
+	
+		id = ENG_bomber_focus
+		icon = ? 
+		x = 26
+		y = 8 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = ENG_fighter_focus }
+		mutually_exclusive = { focus = ENG_coast_command }
+		
+		cancel_if_invalid = yes 
+		
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = tactical_bomber category = cat_strategic_bomber }
+		
+		}
+		
+	}
+	
+	focus = {
+	
+		id = ENG_coast_command
+		icon = ? 
+		x = 28
+		y = 8 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = ENG_fighter_focus }
+		mutually_exclusive = { focus = ENG_bomber_focus }
+		
+		cancel_if_invalid = yes 
+		
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = naval_bomber category = cas_bomber }
+		
+		}
+		
+	}
+	
+	focus = {
+	
+		id = ENG_radar_focus
+		icon = ? 
+		x = 27
+		y = 9 
+		cost = 10 
+		
+		available = {
+			
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = ENG_coast_command focus = ENG_bomber_focus }
+		
+		cancel_if_invalid = yes 
+		
+		
+		completion_reward = {
+		
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = radar_tech }
+		
+		}
+		
+	}
+	
 }
 	

@@ -206,6 +206,32 @@ ideas = {
 			}
 		
 		}
+		
+		ENG_royal_army = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				army_morale_factor = 0.075 
+				conscription = 0.015
+				
+			
+			}
+		
+		}
 	
 	}
 	

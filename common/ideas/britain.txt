@@ -232,6 +232,30 @@ ideas = {
 			}
 		
 		}
+		
+		ENG_imperial_war = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				unity_factor = 0.1 
+			
+			}
+		
+		}
 	
 	}
 	

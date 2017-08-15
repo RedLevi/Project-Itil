@@ -1,0 +1,576 @@
+﻿####koach####
+
+add_namespace = imperialwar 
+
+country_event = {#war trigger
+
+	id = imperialwar.1
+	title = imperialwar.1.t 
+	desc = imperialwar.1.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = imperialwar.1.a 
+		
+		if = {
+		
+			limit = {
+			
+				IRE = { NOT = { has_war_with = ENG } }
+			
+			}
+			
+			IRE = { country_event = { id = imperialwar.2 days = 1 } }
+		
+		}
+		
+		if = {
+		
+			limit = {
+			
+				CAN = { NOT = { has_war_with = ENG } }
+			
+			}
+			
+			CAN = { country_event = { id = imperialwar.3 days = 2 } }
+		
+		}
+		
+		
+		if = {
+		
+			limit = {
+			
+				EGY = { NOT = { has_war_with = ENG } }
+			
+			}
+			
+			EGY = { country_event = { id = imperialwar.4 days = 2 } }
+		
+		}
+		
+		if = {
+		
+			limit = {
+			
+				RAJ = { NOT = { has_war_with = ENG } }
+			
+			}
+			
+			RAJ = { country_event = { id = imperialwar.5 days = 4 } }
+		
+		}
+		
+		if = {
+		
+			limit = {
+			
+				ZIM = { NOT = { has_war_with = ENG } }
+			
+			}
+			
+			ZIM = { country_event = { id = imperialwar.6 days = 3 } }
+		
+		}
+		
+		if = {
+		
+			limit = {
+			
+				AST = { NOT = { has_war_with = ENG } }
+			
+			}
+			
+			AST = { country_event = { id = imperialwar.7 days = 5 } }
+		
+		}
+		
+		if = {
+		
+			limit = {
+			
+				NZL = { NOT = { has_war_with = ENG } }
+			
+			}
+			
+			NZL = { country_event = { id = imperialwar.8 days = 6 } }
+		
+		}
+		
+		if = {
+		
+			limit = {
+			
+				SAF = { NOT = { has_war_with = ENG } }
+			
+			}
+			
+			SAF = { country_event = { id = imperialwar.9 days = 3 } }
+		
+		}
+		
+		country_event = { id = imperialwar.11 }
+		
+		set_global_flag = imperial_war_flag
+		
+		add_named_threat = { threat = 5 name = imperial_war_flag }
+		
+		add_ideas = ENG_imperial_war
+	
+	}
+
+}
+
+country_event = {#Irish response 
+
+	id = imperialwar.2 
+	title = imperialwar.2.t
+	desc = imperialwar.2.d
+	
+	is_triggered_only = yes 
+	
+	option = {#anti uk 
+	
+		name = imperialwar.2.a 
+		ai_chance = { factor = 50 }
+		
+		declare_war_on = { target = ENG type = annex_everything }
+		
+		every_country = {
+		
+			limit = {
+			
+				has_country_flag = imperial_war_starter
+			
+			}
+			
+		}
+		
+		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+		
+		add_political_power = 50
+	
+	}
+	
+	option = {#loyalty 
+	
+		name = imperialwar.2.b 
+		ai_chance = { factor = 50 }
+		
+		ENG = {
+
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+			}
+			
+			add_to_faction = ROOT
+			
+		}
+		
+		add_political_power = 50
+	
+	}
+
+}
+
+country_event = {#Canadian response 
+
+	id = imperialwar.3 
+	title = imperialwar.3.t
+	desc = imperialwar.3.d
+	
+	is_triggered_only = yes 
+	
+	option = {#anti uk 
+	
+		name = imperialwar.2.a 
+		ai_chance = { factor = 90 }
+		
+		declare_war_on = { target = ENG type = annex_everything }
+		
+		every_country = {
+		
+			limit = {
+			
+				has_country_flag = imperial_war_starter
+			
+			}
+			
+			
+		}
+		
+		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+		
+		add_political_power = 50
+	
+	}
+	
+	option = {#loyalty 
+	
+		name = imperialwar.2.b 
+		ai_chance = { factor = 10 }
+		
+		add_political_power = 50
+		
+		ENG = {
+
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+			}
+			
+			add_to_faction = ROOT
+			
+		}
+	
+	}
+
+}
+
+country_event = {#Egyptian response 
+
+	id = imperialwar.4
+	title = imperialwar.4.t
+	desc = imperialwar.4.d
+	
+	is_triggered_only = yes 
+	
+	option = {#anti uk 
+	
+		name = imperialwar.2.a 
+		ai_chance = { factor = 90 }
+	
+			
+		declare_war_on = { target = ENG type = annex_everything }
+		
+		every_country = {
+		
+			limit = {
+			
+				has_country_flag = imperial_war_starter
+			
+			}
+			
+			
+		}
+		
+		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+		
+		add_political_power = 50
+	
+	}
+	
+	option = {#loyalty 
+	
+		name = imperialwar.2.b 
+		ai_chance = { factor = 10 }
+		
+		add_political_power = 50
+		
+		ENG = {
+
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_integrated_puppet
+				freedom_level = 0.2
+			}
+			
+			add_to_faction = ROOT
+			
+		}
+	
+	}
+
+}
+
+country_event = {#Indian response 
+
+	id = imperialwar.5
+	title = imperialwar.5.t
+	desc = imperialwar.5.d
+	
+	is_triggered_only = yes 
+	
+	option = {#anti uk 
+	
+		name = imperialwar.2.a 
+		ai_chance = { factor = 99 }
+	
+			
+		declare_war_on = { target = ENG type = annex_everything }
+		
+		every_country = {
+		
+			limit = {
+			
+				has_country_flag = imperial_war_starter
+			
+			}
+			
+			
+		}
+		
+		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+		
+		add_political_power = 50
+		
+		ENG = { country_event = imperialwar.11 }
+	
+	}
+	
+	option = {#loyalty 
+	
+		name = imperialwar.2.b 
+		ai_chance = { factor = 10 }
+		
+		add_political_power = 50
+		
+		ENG = {
+
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_integrated_puppet
+				freedom_level = 0.2
+			}
+			
+			add_to_faction = ROOT
+			
+		}
+	
+	}
+
+}
+
+country_event = {#Rhodesia response 
+
+	id = imperialwar.6
+	title = imperialwar.6.t
+	desc = imperialwar.6.d
+	
+	is_triggered_only = yes 
+	
+	option = {#anti uk 
+	
+		name = imperialwar.2.a 
+		ai_chance = { factor = 10 }
+	
+			
+		declare_war_on = { target = ENG type = annex_everything }
+		
+		every_country = {
+		
+			limit = {
+			
+				has_country_flag = imperial_war_starter
+			
+			}
+			
+			
+		}
+		
+		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+		
+		add_political_power = 50
+		
+	
+	}
+	
+	option = {#loyalty 
+	
+		name = imperialwar.2.b 
+		ai_chance = { factor = 90 }
+		
+		add_political_power = 50
+		
+		ENG = {
+
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_integrated_puppet
+				freedom_level = 0.2
+			}
+			
+			add_to_faction = ROOT
+			
+		}
+	
+	}
+
+}
+
+country_event = {#Australia response 
+
+	id = imperialwar.7
+	title = imperialwar.7.t
+	desc = imperialwar.7.d
+	
+	is_triggered_only = yes 
+	
+	option = {#anti uk 
+	
+		name = imperialwar.2.a 
+		ai_chance = { factor = 10 }
+	
+			
+		declare_war_on = { target = ENG type = annex_everything }
+		
+		every_country = {
+		
+			limit = {
+			
+				has_country_flag = imperial_war_starter
+			
+			}
+			
+			
+		}
+		
+		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+		
+		add_political_power = 50
+		
+	
+	}
+	
+	option = {#loyalty 
+	
+		name = imperialwar.2.b 
+		ai_chance = { factor = 90 }
+		
+		add_political_power = 50
+		
+		ENG = {
+
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_integrated_puppet
+				freedom_level = 0.2
+			}
+			
+			add_to_faction = ROOT
+			
+		}
+	
+	}
+
+}
+
+country_event = {#New zealand response 
+
+	id = imperialwar.8
+	title = imperialwar.8.t
+	desc = imperialwar.8.d
+	
+	is_triggered_only = yes 
+	
+	option = {#anti uk 
+	
+		name = imperialwar.2.a 
+		ai_chance = { factor = 10 }
+	
+			
+		declare_war_on = { target = ENG type = annex_everything }
+		
+		every_country = {
+		
+			limit = {
+			
+				has_country_flag = imperial_war_starter
+			
+			}
+			
+			
+		}
+		
+		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+		
+		add_political_power = 50
+		
+	
+	}
+	
+	option = {#loyalty 
+	
+		name = imperialwar.2.b 
+		ai_chance = { factor = 90 }
+		
+		add_political_power = 50
+		
+		ENG = {
+
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_integrated_puppet
+				freedom_level = 0.2
+			}
+			
+			add_to_faction = ROOT
+			
+		}
+	
+	}
+
+}
+
+country_event = {#South African response 
+
+	id = imperialwar.9
+	title = imperialwar.9.t
+	desc = imperialwar.9.d
+	
+	is_triggered_only = yes 
+	
+	option = {#anti uk 
+	
+		name = imperialwar.2.a 
+		ai_chance = { factor = 70 }
+	
+			
+		declare_war_on = { target = ENG type = annex_everything }
+		
+		every_country = {
+		
+			limit = {
+			
+				has_country_flag = imperial_war_starter
+			
+			}
+			
+			
+		}
+		
+		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+		
+		
+		add_political_power = 50
+		
+	
+	}
+	
+	option = {#loyalty 
+	
+		name = imperialwar.2.b 
+		ai_chance = { factor = 30 }
+		
+		add_political_power = 50
+		
+		ENG = {
+
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = autonomy_integrated_puppet
+				freedom_level = 0.2
+			}
+			
+			add_to_faction = ROOT
+			
+		}
+	
+	}
+
+}

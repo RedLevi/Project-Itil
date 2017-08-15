@@ -1,6 +1,6 @@
 #reload countrycolors
 GER = {
-	color = HSV { 0.1 0.15 0.4 }
+	color = rgb { 70 70 70 }
 	color_ui = rgb { 138 155 116 }
 }
 ENG = {
@@ -211,6 +211,10 @@ PAN = {
 PER = {
 	color = rgb { 71 113 97 }
 	color_ui = rgb { 92 147 126 }
+}
+PHI = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
 }
 PHL = {
 	color = rgb { 152 130 191 }
@@ -543,10 +547,6 @@ SHA = {
     color = rgb { 205 205 255 }
 	color_ui = rgb { 138 155 116 }
 }
-CIR = {
-    color = rgb { 35 175 35 }
-	color_ui = rgb { 138 155 116 }
-}
 KAZ = {
     color = rgb { 30 50 255 }
 	color_ui = rgb { 138 155 116 }
@@ -563,16 +563,8 @@ ISR = {
 	color = rgb { 40  140  255 }
 	color_ui = rgb { 255  204  204 }
 }
-DON = {
-	color = rgb { 150  150  0 }
-	color_ui = rgb { 255  204  204 }
-}
 AME = {
 	color = rgb { 0 40 104 }
-	color_ui = rgb { 255  204  204 }
-}
-NEF = {
-	color = rgb { 255 175 100 }
 	color_ui = rgb { 255  204  204 }
 }
 KUR = {

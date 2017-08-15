@@ -1,0 +1,298 @@
+﻿####koach####
+
+add_namespace = engdom
+
+country_event = {#the imperial conference 
+
+	id = engdom.1
+	title = engdom.1.t 
+	desc = engdom.1.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engdom.1.a 
+		
+		add_political_power = -50 
+	
+	}
+
+}
+
+country_event = {#Constitutional crisis 1936 
+
+	id = engdom.2 
+	title = engdom.2.t 
+	desc = engdom.2.d 
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	
+		tag = ENG 
+		
+		date > 1936.7.7
+	
+	}
+	
+	option = {
+	
+		name = engdom.2.a 
+		
+		add_political_power = -40 
+		
+		country_event = { id = engdom.3 days = 30 }
+	
+	}
+
+}
+
+country_event = {#British elections 1936 
+
+	id = engdom.3 
+	title = engdom.3.t 
+	desc = engdom.3.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#Liberal victory 
+	
+		name = engdom.3.a 
+		ai_chance = { factor = 50 }
+		
+		set_politics = { 
+		
+			ruling_party = liberalism 
+			elections_allowed = no 
+			
+		}
+		
+			add_popularity = { 
+			
+				ideology = liberalism  
+				popularity = 0.2 
+				
+			}
+			
+			add_political_power = 10 
+	
+	}
+	
+	option = {#tory victory 
+	
+		name = engdom.3.b 
+		ai_chance = { factor = 30 }
+		
+		set_politics = { 
+		
+			ruling_party = conservatism 
+			elections_allowed = no 
+			
+		}
+		
+			add_popularity = { 
+			
+				ideology = conservatism  
+				popularity = 0.2 
+				
+			}
+			
+			add_political_power = -20
+	
+	}
+	
+	option = { #democratic party 
+	
+		name = engdom.3.c 
+		ai_chance = { factor = 20 }
+		
+		set_politics = { 
+		
+			ruling_party = socialism 
+			elections_allowed = no 
+			
+		}
+		
+		add_popularity = { 
+			
+			ideology = socialism  
+			popularity = 0.2 
+				
+		}
+		
+		add_political_power = 30
+	
+	}
+
+}
+
+news_event = { #Federalization 
+
+	id = engdom.4 
+	title = engdom.4.t 
+	desc = engdom.4.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		trigger = {
+		
+			NOT = {
+			
+				is_subject_of = ENG 
+			
+			}
+		
+		}
+		
+		name = engdom.4.a 
+	
+	}
+	
+	option = {
+	
+		trigger = {
+		
+			is_subject_of = ENG 
+		
+		}
+		
+		name = engdom.4.b 
+
+		add_political_power = -10 
+	
+	}
+
+}
+
+country_event = {#IRE federal 
+
+	id = engdom.5 
+	title = engdom.5.t 
+	desc = engdom.5.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#Harsh
+	
+		name = engdom.5.a 
+		ai_chance = { factor = 70 }
+		
+		IRE = { country_event = { id = engdom.6 days = 3 } }
+		
+		add_political_power = 25
+	
+	}
+	
+	option = {#soft 
+	
+		name = engdom.5.b 
+		ai_chance = { factor = 30 }
+		
+		IRE = { country_event = { id = engdom.? days = 3 } }
+		
+		add_political_power = -15 
+	}
+	
+	option = {#leave them 
+	
+		name = engdom.5.c 
+		ai_chance = { factor = 0 }
+		
+		add_political_power = -150
+
+		reverse_add_opinion_modifier = { target = IRE modifier = spared_federal }
+	
+	}
+
+}
+
+country_event = {#Ireland annexation offer 
+
+	id = engdom.6 
+	title = engdom.6.t 
+	desc = engdom.6.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#comply 
+	
+		trigger = { NOT = { has_war_with = ENG } }
+		
+		name = engdom.6.a 
+		ai_chance = { factor = 50 }
+		
+		ENG = { country_event = { id = engdom.7 } }
+	
+	}
+	
+	option = {#revolt 
+	
+		name = engdom.6.b
+		ai_chance = { factor = 50 }
+		
+		ENG = { 
+		
+			end_puppet = IRE
+			end_puppet = CAN
+			end_puppet = ZIM 
+			end_puppet = SAF 
+			end_puppet = RAJ 
+			end_puppet = EGY 
+			end_puppet = AST 
+			end_puppet = NZL 
+			
+			remove_from_faction = CAN
+			remove_from_faction = ZIM 
+			remove_from_faction = SAF 
+			remove_from_faction = RAJ 
+			remove_from_faction = EGY 
+			remove_from_faction = AST 
+			remove_from_faction = NZL
+			remove_from_faction = IRE
+			
+			}
+		
+		declare_war_on = { target = ENG type = annex_everything }
+		
+		create_faction = anti_imperial_bloc
+		
+		ENG = { country_event = { id = imperialwar.1 } }
+
+		set_country_flag = imperial_war_starter
+	
+	}
+	
+	option = {#invalid 
+	
+		trigger = { 
+		
+			has_war_with = ENG
+		
+		}
+		
+		name = engdom.6.c 
+	
+	}	
+
+}
+
+country_event = {#The irish kneel 
+
+	id = engdom.7 
+	title = engdom.7.t 
+	desc = engdom.7.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engdom.7.a 
+		annex_country = { target = IRE transfer_troops = yes }
+		add_political_power = 40  
+	
+	}
+
+}

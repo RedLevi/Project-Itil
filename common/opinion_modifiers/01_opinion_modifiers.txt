@@ -30,5 +30,6 @@ ENG_middle_theater = { value = 25 }
 ENG_asia_theater = { value = 25 }
 ENG_dip_inf = { value = 35 }
 ENG_chinese_direction = { value = -25 }
+spared_federal = { value = 75 }
 
 }

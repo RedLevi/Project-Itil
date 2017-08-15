@@ -2382,5 +2382,98 @@ focus_tree = {
 		
 	}
 	
+	focus = {
+
+		id = ENG_imperial_conference
+		icon = ? 
+		x = 43 
+		y = 0 
+		cost = 10 
+		
+		available = {
+		
+			date > 1937.5.14
+		
+		}
+		
+		bypass = {
+		
+			date > 1937.5.14
+		
+		}
+		
+		completion_reward = {
+		
+			country_event = { id = engdom.1 }
+		
+		}
+	
+	}
+	
+	focus = {
+
+		id = ENG_federalization_focus
+		icon = ? 
+		x = 38 
+		y = 1 
+		cost = 10 
+		
+		available = {
+			
+			has_government = conservatism
+		
+		}
+		
+		prerequisite = { focus = ENG_imperial_conference }
+		
+		completion_reward = {
+		
+			country_event = { id = engdom.4 }
+			
+			add_political_power = -50 
+			
+			set_cosmetic_tag = ENG_federal 
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_fed_IRE
+		icon = ? 
+		x = 35 
+		y = 2 
+		cost = 3
+		
+		available = {
+		
+			IRE = {
+			
+				exists = yes 
+				is_subject_of = ENG
+			
+			}
+			
+			NOT = {
+			
+				has_global_flag = imperial_war_flag
+			
+			}
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_federalization_focus }
+		
+		completion_reward = {
+		
+			country_event = { id = engdom.5 }
+		
+		}
+	
+	}
+	
 }
 	

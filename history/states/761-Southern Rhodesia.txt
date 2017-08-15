@@ -1,0 +1,24 @@
+state={
+	id=761
+	name="STATE_761"
+
+	state_category = rural
+
+	history={
+		owner = ZIM
+		add_core_of = ZIM
+		buildings = {
+			infrastructure = 3
+
+		}
+		victory_points = {
+			10929 1 
+		}
+	}
+
+	provinces={
+		1874 2151 2216 4851 7842 10929 
+	}
+	manpower=2030730
+	buildings_max_level_factor=1.000
+}

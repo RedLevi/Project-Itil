@@ -1,0 +1,22 @@
+state={
+	id=762
+	name="STATE_762"
+	provinces={
+		4138 4961 7987 8103 10900 12836 
+	}
+	manpower=12312
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 0
+		}
+
+		add_core_of = EGY
+
+	}
+
+	state_category = wasteland
+
+	buildings_max_level_factor=1.000
+}

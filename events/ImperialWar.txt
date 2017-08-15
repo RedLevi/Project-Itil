@@ -146,9 +146,11 @@ country_event = {#Irish response
 			
 			}
 			
+			add_to_faction = ROOT
+			
 		}
 		
-		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+	
 		
 		add_political_power = 50
 	
@@ -200,10 +202,11 @@ country_event = {#Canadian response
 			
 			}
 			
+			add_to_faction = ROOT
 			
 		}
 		
-		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+	
 		
 		add_political_power = 50
 	
@@ -256,10 +259,11 @@ country_event = {#Egyptian response
 			
 			}
 			
+			add_to_faction = ROOT
 			
 		}
 		
-		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+	
 		
 		add_political_power = 50
 	
@@ -312,10 +316,11 @@ country_event = {#Indian response
 			
 			}
 			
+			add_to_faction = ROOT
 			
 		}
 		
-		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+	
 		
 		add_political_power = 50
 		
@@ -370,10 +375,11 @@ country_event = {#Rhodesia response
 			
 			}
 			
+			add_to_faction = ROOT
 			
 		}
 		
-		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+	
 		
 		add_political_power = 50
 		
@@ -427,10 +433,11 @@ country_event = {#Australia response
 			
 			}
 			
+			add_to_faction = ROOT
 			
 		}
 		
-		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+	
 		
 		add_political_power = 50
 		
@@ -484,10 +491,11 @@ country_event = {#New zealand response
 			
 			}
 			
+			add_to_faction = ROOT
 			
 		}
 		
-		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+	
 		
 		add_political_power = 50
 		
@@ -541,10 +549,11 @@ country_event = {#South African response
 			
 			}
 			
+			add_to_faction = ROOT
 			
 		}
 		
-		PREV = { add_to_war = { targeted_alliance = ROOT enemy = ENG } }
+	
 		
 		
 		add_political_power = 50

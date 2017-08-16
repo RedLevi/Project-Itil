@@ -1,0 +1,238 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Infantry Division"  	# Standard formation for frontline divisions
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # US Hvy Field Arty consisted of 2 Bns, 155mm howitzers
+		engineer = { x = 0 y = 1 }   # US Eng Rgt consisted of 2 Bns
+	}
+}
+division_template = {
+	name = "National Guard Division"  	# Standard formation for NG divisions through late 1940
+
+	regiments = {						
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Cavalry Division"  		# 1st Cavalry Division only
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # US Cav Recon consisted of 52 ACs, 13 L Arm
+		engineer = { x = 0 y = 1 }   # US Eng Bn
+	}
+}
+division_template = {
+	name = "Garrison Brigade"  		# used for island defense (older equipment, lower experience)
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+	priority = 0
+}
+division_template = {
+	name = "Mountain Brigade"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+	    mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+}
+
+units = {
+	division = {			
+		name = "1. Los Angeles Guard"
+		location = 9814
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+
+	}
+	division = {			
+		name = "2. Los Angeles Guard"
+		location = 9814
+		division_template = "National Guard Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "San Francisco Garrison"
+		location = 9671
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}
+	division = {			
+		name = "Phoenix Garrison"
+		location = 853
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}
+	division = {			
+		name = "1. Infantry Division"
+		location = 11763
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "1. Mountain Brigade"
+		location = 10645
+		division_template = "Mountain Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "2. Mountain Brigade"
+		location = 4865
+		division_template = "Mountain Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "1. Cavalry Division"
+		location = 4865
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "2. Infantry Division"
+		location = 5044
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}
+	division = {			
+		name = "3. Infantry Division"
+		location = 5044
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "4. Infantry Division"
+		location = 1562
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "2. Cavalry Division"
+		location = 1562
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}
+	
+	navy = {
+		name = "1st American Fleet"
+		base = 9814
+		location = 9814  # Los Angeles
+		ship = { name = "USS Dewey" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Farragut Class" } } }
+		ship = { name = "USS Hull" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Farragut Class" } } }
+		ship = { name = "USS MacDonough" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Farragut Class" } } }
+		ship = { name = "USS Worden" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA version_name = "Farragut Class" } } }	
+		ship = { name = "USS Northampton" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }				
+		ship = { name = "USS Chester" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }				
+		ship = { name = "USS Louisville" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA } } }					
+		ship = { name = "USS Portland" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = USA version_name = "Portland Class" } } }
+		ship = { name = "USS Richmond" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }				
+		ship = { name = "USS Trenton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }				
+		ship = { name = "USS Concord" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }	
+	}
+	
+	navy = {
+		name = "2nd American Fleet"
+		base = 9671
+		location = 9671  # Los Angeles
+		ship = { name = "USS S-1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-5" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-7" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-8" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-9" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-10" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }	
+		ship = { name = "USS Barker" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Parrott" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Bulmer" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Stewart" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+	}
+
+	
+}
+air_wings = {
+	### I. California ###
+	378 = { 	
+		fighter_equipment_0 =  {
+			owner = "USA" 
+			amount = 20
+		}
+	}
+
+	### II. Oregon ###
+	385 = { 		
+		fighter_equipment_0 =  {
+			owner = "USA" 
+			amount = 20
+		}		
+		tac_bomber_equipment_0 = {
+			owner = "USA" 
+			amount = 40
+		}
+	}
+
+	### III. Arizona ###
+	377 = {	
+		fighter_equipment_0 =  {
+			owner = "USA" 
+			amount = 20
+		}
+		# Sturzkampfgeschwader 162		
+		CAS_equipment_1 =  {
+			owner = "USA" 
+			amount = 40
+		}	
+	}
+}
+	

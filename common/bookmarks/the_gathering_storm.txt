@@ -7,14 +7,14 @@ bookmarks = {
 		default_country = "GER"
 		default = yes
 		
-		"AUS"={
-			history = "AUS_GATHERING_STORM_DESC"
-			ideology = reactionarism
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = liberalism
 			ideas = {
-			}
+			}	
 			focuses = {
-			}
-		}
+			}		
+		}		
 		"GER"={
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = conservatism
@@ -40,13 +40,13 @@ bookmarks = {
 			focuses = {
 			}
 		}
-		"ENG"={
-			history = "ENG_GATHERING_STORM_DESC"
-			ideology = liberalism
+		"AUS"={
+			history = "AUS_GATHERING_STORM_DESC"
+			ideology = reactionarism
 			ideas = {
-			}	
+			}
 			focuses = {
-			}		
+			}
 		}
 		"ITA"={
 			history = "ITA_GATHERING_STORM_DESC"
@@ -57,7 +57,7 @@ bookmarks = {
 			focuses = {
 			}			
 		}
-		"USA"={
+		"AME"={
 			history = "USA_GATHERING_STORM_DESC"
 			ideology = national_integralism
 			ideas = {

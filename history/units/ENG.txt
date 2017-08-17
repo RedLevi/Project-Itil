@@ -256,27 +256,11 @@ units = {
 	}
 	#Egypt
 	division= {	
-		name = "Cairo Force"
-		location = 7011
-		division_template = "Colonial Garrison"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-	division= {	
 		name = "Canal Brigade"
 		location = 1155
 		division_template = "Colonial Garrison"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.15
-
-	}
-	division= {	
-		name = "The Cavalry Brigade (Egypt)"
-		location = 4076
-		division_template = "Cavalry Brigade"
-		start_experience_factor = 0.1
-		start_equipment_factor = 1.0
 
 	}
 	#Gibraltar
@@ -629,8 +613,8 @@ units = {
 	### MEDITERRANIAN FLEET ###			
 	navy = {				
 		name = "Mediterranean Fleet"
-		base = 4076
-		location = 4076 # Alexandria
+		base = 1155
+		location = 1155 # Suez
 		ship = { name = "HMS Glorious" definition = carrier equipment = { carrier_1 = { amount = 1 owner = ENG } } 
 			air_wings = {
 				cv_fighter_equipment_0 =  { owner = "ENG" amount = 6 } #historical 9
@@ -691,8 +675,8 @@ units = {
 	}				
 	navy = {				
 		name = "1st Submarine Flotilla"			
-		base = 4076 
-		location = 4076 # Alexandria
+		base = 1155
+		location = 1155 # Suez
 		# Submarine Division 11
 		ship = { name = "HMS Sealion" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ENG version_name = "S Class" } } }		
 		ship = { name = "HMS Shark" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ENG version_name = "S Class" } } }		

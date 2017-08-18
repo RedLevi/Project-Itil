@@ -49,7 +49,7 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Haim Weizmann"
+	name = "Chaim Weizmann"
 	desc = ""
 	picture = "Weizmann.dds"
 	ideology = social_reformism

@@ -42,7 +42,8 @@ set_technology = {
 }
 
 add_ideas = {
-Overconfident_general_staff
+    adenauer_pm
+    overconfident_general_staff	
 }
 
 create_faction = imperial_mutual_assistance_pact
@@ -89,7 +90,7 @@ set_politics = {
 	ruling_party = conservatism
 	last_election = "1933.3.5"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 
 }
 

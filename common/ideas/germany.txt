@@ -2,7 +2,7 @@ ideas = {
 
     country = {
 	
-        Overconfident_general_staff = {
+        overconfident_general_staff = {
 	
 			allowed = {
 				original_tag = GER
@@ -15,7 +15,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = generic_victors_of_ww1
+			picture = overconfident_general_staff
 			
 			research_bonus = {
 				land_doctrine = -0.66
@@ -24,6 +24,27 @@ ideas = {
 				conscription = -0.003
 			}
 		}
+		
+        adenauer_pm = {
+	
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = adenauer_pm
+			
+			modifier = {
+				political_power_factor = 0.1
+                training_time_factor = 0.1
+			}
+		}		
 		
 		
 		

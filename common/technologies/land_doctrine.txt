@@ -1326,7 +1326,7 @@ technologies = {
 			
 			modifier = {
 				factor = 0.33
-				has_idea = Overconfident_general_staff
+				has_idea = overconfident_general_staff
 			}
 		}
 		

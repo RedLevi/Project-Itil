@@ -1010,6 +1010,14 @@ spriteTypes = {
 		name = "GFX_idea_opel"
 		texturefile = "gfx/interface/ideas/idea_opel.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_adenauer_pm"
+		texturefile = "gfx/interface/ideas/idea_adenauer_pm.dds"
+	}	
+	SpriteType = {
+		name = "GFX_idea_overconfident_general_staff"
+		texturefile = "gfx/interface/ideas/idea_overconfident_general_staff.dds"
+	}		
 
 	### USA IDEAS
 	spriteType = {

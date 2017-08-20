@@ -1,0 +1,474 @@
+focus_tree = {
+	id = german_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = GER_reichskanzler
+		icon = ?
+		x = 1
+		y = 0
+		cost = 10
+		
+        available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = GER_remanage_internal_affairs
+		icon = ?
+		x = 1
+		y = 1
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = GER_reichskanzler }			
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}	
+	
+	focus = {
+		id = GER_increase_military_spending
+		icon = ?
+		x = 2
+		y = 2
+		cost = 10
+		
+        available_if_capitulated = no
+		prerequisite = { focus = GER_remanage_internal_affairs }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}		
+	
+	focus = {
+		id = GER_industrial_superpower
+		icon = ?
+		x = 0
+		y = 2
+		cost = 10
+		
+        available_if_capitulated = no
+		prerequisite = { focus = GER_remanage_internal_affairs }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = GER_industrial_superpower_2
+		icon = ?
+		x = 0
+		y = 3
+		cost = 10
+		
+        available_if_capitulated = no
+		prerequisite = { focus = GER_industrial_superpower }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}	
+
+	focus = {
+		id = GER_autobahn_prussia
+		icon = ?
+		x = 2
+		y = 3
+		cost = 10
+		
+        available_if_capitulated = no
+		prerequisite = { focus = GER_industrial_superpower }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}	
+	
+	focus = {
+		id = GER_autobahn_bavaria
+		icon = ?
+		x = 4
+		y = 3
+		cost = 10
+
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_industrial_superpower }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}	
+	
+	focus = {
+		id = GER_autobahn_rhine
+		icon = ?
+		x = 6
+		y = 3
+		cost = 10
+
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_industrial_superpower }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}		
+	
+	focus = {
+		id = GER_imperial_dominance
+		icon = ?
+		x = 10
+		y = 0
+		cost = 10
+
+        available_if_capitulated = no		
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = GER_germany_first
+		icon = ?
+		x = 9
+		y = 1
+		cost = 10
+
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_imperial_dominance }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}	
+	
+	focus = {
+		id = GER_seek_intervention
+		icon = ?
+		x = 11
+		y = 1
+		cost = 10
+		
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_imperial_dominance }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}	
+	focus = {
+		id = GER_improve_relations_east
+		icon = ?
+		x = 9
+		y = 2
+		cost = 10
+		
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_seek_intervention }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}	
+
+	focus = {
+		id = GER_improve_relations_west
+		icon = ?
+		x = 11
+		y = 2
+		cost = 10
+
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_seek_intervention }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = GER_improve_relations_lit
+		icon = ?
+		x = 8
+		y = 3
+		cost = 10
+
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_improve_relations_east }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}	
+	
+	focus = {
+		id = GER_improve_relations_est
+		icon = ?
+		x = 10
+		y = 3
+		cost = 10
+
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_improve_relations_east }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = GER_goodbye_poland
+		icon = ?
+		x = 12
+		y = 3
+		cost = 10
+
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_improve_relations_east }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = GER_russian_monarchist_influence
+		icon = ?
+		x = 14
+		y = 3
+		cost = 10
+
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_goodbye_poland }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}	
+
+	focus = {
+		id = GER_help_france
+		icon = ?
+		x = 11
+		y = 4
+		cost = 10
+
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_improve_relations_west }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}	
+	
+	focus = {
+		id = GER_british_sauerkraut_pie
+		icon = ?
+		x = 13
+		y = 4
+		cost = 10
+
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_improve_relations_west }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}	
+
+	focus = {
+		id = GER_reorginize_belgium
+		icon = ?
+		x = 15
+		y = 4
+		cost = 10
+
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_improve_relations_west }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}		
+	
+	focus = {
+		id = GER_irish_friends
+		icon = ?
+		x = 11
+		y = 5
+		cost = 10
+
+        available_if_capitulated = no	
+		prerequisite = { focus = GER_british_sauerkraut_pie }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	focus = {
+		id = GER_spanish_resistance
+		icon = ?
+		x = 13
+		y = 5
+		cost = 10
+
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_british_sauerkraut_pie }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}	
+	
+	focus = {
+		id = GER_portugese_revolution
+		icon = ?
+		x = 13
+		y = 6
+		cost = 10
+
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_spanish_resistance }
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}	
+
+	focus = {
+		id = GER_deutsches_heer
+		icon = ?
+		x = 20
+		y = 0
+		cost = 10
+
+		available_if_capitulated = no
+		completion_reward = {
+			army_experience = 10
+		}
+	}	
+	
+	focus = {
+		id = GER_improve_deutsches_heer
+		icon = ?
+		x = 18
+		y = 1
+		cost = 10
+
+        available_if_capitulated = no		
+        prerequisite = { focus = GER_deutsches_heer }
+		
+		completion_reward = {
+			army_experience = 10
+		}
+	}	
+	
+	focus = {
+		id = GER_motorized_millitary
+		icon = ?
+		x = 18
+		y = 2
+		cost = 10
+
+        available_if_capitulated = no		
+        prerequisite = { focus = GER_improve_deutsches_heer }
+		
+		completion_reward = {
+			army_experience = 10
+		}
+	}		
+	
+	focus = {
+		id = GER_mechanized_troops
+		icon = ?
+		x = 18
+		y = 3
+		cost = 10
+
+        available_if_capitulated = no		
+        prerequisite = { focus = GER_motorized_millitary }
+		
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = GER_panzereich
+		icon = ?
+		x = 18
+		y = 4
+		cost = 10
+
+        available_if_capitulated = no		
+        prerequisite = { focus = GER_mechanized_troops }
+		
+		completion_reward = {
+			army_experience = 10
+		}
+	}	
+	
+	focus = {
+		id = GER_improve_kaiserliche_marine
+		icon = ?
+		x = 21
+		y = 1
+		cost = 10
+
+        available_if_capitulated = no		
+        prerequisite = { focus = GER_deutsches_heer }
+		
+		completion_reward = {
+			navy_experience = 10
+		}
+	}	
+	
+	focus = {
+		id = GER_battleship_production
+		icon = ?
+		x = 20
+		y = 2
+		cost = 10
+
+        available_if_capitulated = no		
+        prerequisite = { focus = GER_improve_kaiserliche_marine }
+		
+		completion_reward = {
+			navy_experience = 10
+		}
+	}		
+
+	focus = {
+		id = GER_sub_production
+		icon = ?
+		x = 22
+		y = 2
+		cost = 10
+
+        available_if_capitulated = no		
+        prerequisite = { focus = GER_improve_kaiserliche_marine }
+		
+		completion_reward = {
+			navy_experience = 10
+		}
+	}
+}

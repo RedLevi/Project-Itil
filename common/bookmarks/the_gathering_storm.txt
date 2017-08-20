@@ -19,7 +19,8 @@ bookmarks = {
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = conservatism
 			ideas = {
-			Overconfident_general_staff
+			adenauer_pm
+			overconfident_general_staff
 			}
 			focuses = {
 			}

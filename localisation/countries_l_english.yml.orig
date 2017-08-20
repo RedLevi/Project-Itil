@@ -1824,6 +1824,7 @@ YUG_reactionarism:0 "Kingdom of Yugoslavia"
 YUG_reactionarism_ADJ:0 "Yugoslavian"
 YUG_reactionarism_DEF:0 "Yugoslavia"
 
+<<<<<<< HEAD
 SUD_conservatism:0 "Sudan"
 SUD_conservatism_ADJ:0 "Sudanese"
 SUD_conservatism_DEF:0 "Sudan"
@@ -1994,7 +1995,7 @@ BUR_socialism_DEF:0 "Burma"
 BUR_reactionarism:0 "Burma"
 BUR_reactionarism_ADJ:0 "Burmese"
 BUR_reactionarism_DEF:0 "Burma"
-
+=======
 EGY_conservatism:0 "Republic of Egypt"
 EGY_conservatism_ADJ:0 "Egyptian"
 EGY_conservatism_DEF:0 "Egypt"
@@ -2013,3 +2014,4 @@ EGY_socialism_DEF:0 "Egypt"
 EGY_reactionarism:0 "Kingdom of Egypt"
 EGY_reactionarism_ADJ:0 "Egyptian"
 EGY_reactionarism_DEF:0 "Egypt"
+>>>>>>> bc3ef707a09902e9c65b69476c7f633979b58816

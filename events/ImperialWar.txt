@@ -251,6 +251,10 @@ country_event = {#Egyptian response
 			
 		declare_war_on = { target = ENG type = annex_everything }
 		
+		add_state_core = 549
+		add_state_core = 551 
+		add_state_core = 762 	
+		
 		every_country = {
 		
 			limit = {
@@ -303,7 +307,7 @@ country_event = {#Indian response
 	option = {#anti uk 
 	
 		name = imperialwar.2.a 
-		ai_chance = { factor = 60 }
+		ai_chance = { factor = 90 }
 	
 			
 		declare_war_on = { target = ENG type = annex_everything }
@@ -324,14 +328,14 @@ country_event = {#Indian response
 		
 		add_political_power = 50
 		
-		ENG = { country_event = imperialwar.11 days = 7 }
+		ENG = { country_event = { id = imperialwar.11 days = 7 } }
 	
 	}
 	
 	option = {#loyalty 
 	
 		name = imperialwar.2.b 
-		ai_chance = { factor = 40 }
+		ai_chance = { factor = 10 }
 		
 		add_political_power = 50
 		

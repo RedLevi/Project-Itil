@@ -2386,7 +2386,7 @@ focus_tree = {
 
 		id = ENG_imperial_conference
 		icon = ? 
-		x = 43 
+		x = 44 
 		y = 0 
 		cost = 10 
 		
@@ -2425,6 +2425,7 @@ focus_tree = {
 		}
 		
 		prerequisite = { focus = ENG_imperial_conference }
+		mutually_exclusive = { focus = ENG_home_rule focus = ENG_decolonialization }
 		
 		completion_reward = {
 		
@@ -2697,5 +2698,93 @@ focus_tree = {
 	
 	}
 	
+	focus = {
+	
+		id = ENG_home_rule
+		icon = ? 
+		x = 44 
+		y = 1 
+		cost = 10 
+		
+		available = { has_war = no } 
+		
+		prerequisite = { focus = ENG_imperial_conference }
+		mutually_exclusive = { focus = ENG_federalization_focus focus = ENG_decolonialization }
+		
+		completion_reward = {
+			
+			add_political_power = 150 
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_home_africa
+		icon = ? 
+		x = 43 
+		y = 2 
+		cost = 10 
+		
+		available = { has_war = no } 
+		
+		prerequisite = { focus = ENG_home_rule }
+		
+		completion_reward = {
+			
+			country_event = { id = engdom.26 }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_home_asia
+		icon = ? 
+		x = 45 
+		y = 2 
+		cost = 10 
+		
+		available = { has_war = no } 
+		
+		prerequisite = { focus = ENG_home_rule }
+		
+		completion_reward = {
+			
+			country_event = { id = engdom.27 }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_home_india
+		icon = ? 
+		x = 44 
+		y = 3 
+		cost = 10 
+		
+		available = { 
+		
+			has_war = no
+			RAJ = { is_subject_of = ENG }
+
+			} 
+		
+		prerequisite = { focus = ENG_home_rule }
+		
+		completion_reward = {
+			
+			country_event = { id = engdom.28 }
+		
+		}
+	
+	}
+	
 }
+
+
 	

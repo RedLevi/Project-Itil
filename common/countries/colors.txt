@@ -603,3 +603,43 @@ ANH = {
 	color = rgb { 255 255 51 }
 	color_ui = rgb { 255 255 51 }
 }
+
+SUD = {
+	color = rgb { 0 153 0 }
+	color_ui = rgb { 0 153 0 }
+}
+
+SOM = {
+	color = rgb { 102 255 255 }
+	color_ui = rgb { 102 255 255 }
+}
+
+NIG = {
+	color = rgb { 0 153 0 }
+	color_ui = rgb { 0 153 0 }
+}
+
+GHA = {
+	color = rgb { 130 11 35 }
+	color_ui = rgb { 130 11 35 }
+}
+
+SIE = {
+	color = rgb { 0 200 211 }
+	color_ui = rgb { 0 200 211 }
+}
+
+HNK = {
+	color = rgb { 247 59 59 }
+	color_ui = rgb { 247 59 59 }
+}
+
+GAM = {
+	color = rgb { 50 250 0 }
+	color_ui = rgb { 50 250 0 }
+}
+
+BUR = {
+	color = rgb { 11 228 55 }
+	color_ui = rgb { 11 228 55 }
+}

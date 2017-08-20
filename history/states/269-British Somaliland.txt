@@ -8,6 +8,7 @@ state=
 	
 	history= {
 		owner = ENG
+		add_core_of = SOM
 		buildings = {
 			infrastructure = 3
 			12759 = {

@@ -52,10 +52,6 @@ if = {
 		has_dlc = "Together for Victory"
 	}
 	set_autonomy = {
-		target = MAL
-		autonomous_state = autonomy_integrated_puppet
-	}
-	set_autonomy = {
 		target = EGY
 		autonomous_state = autonomy_integrated_puppet
 	}
@@ -90,7 +86,6 @@ if = {
 		freedom_level = 0.2
 	}
 	else = {
-		puppet = MAL
 		puppet = RAJ
 		puppet = CAN
 		puppet = SAF

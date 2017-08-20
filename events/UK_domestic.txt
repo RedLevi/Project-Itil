@@ -583,7 +583,7 @@ country_event = {#AST federal
 
 country_event = {#AST annexation offer 
 
-	id = engdom.17 
+	id = engdom.18 
 	title = engdom.6.t 
 	desc = engdom.6.d 
 	
@@ -626,9 +626,9 @@ country_event = {#AST annexation offer
 
 country_event = {#The AST kneel 
 
-	id = engdom.18 
-	title = engdom.18.t 
-	desc = engdom.18.d 
+	id = engdom.19 
+	title = engdom.19.t 
+	desc = engdom.19.d 
 	
 	is_triggered_only = yes 
 	
@@ -737,7 +737,7 @@ country_event = {#The NZL kneel
 
 }
 
-country_event = {#Indian question FOCUS 
+country_event = {#RAJ federal 
 
 	id = engdom.23 
 	title = engdom.23.t 
@@ -745,69 +745,76 @@ country_event = {#Indian question FOCUS
 	
 	is_triggered_only = yes 
 	
-	option = {#full 
+	option = {#Harsh
 	
-		name = engdom.23.a 
-		ai_chance = { factor = 10 }
+		name = engdom.5.a 
+		ai_chance = { factor = 60 }
 		
-		add_popularity = -200 
+		RAJ = { country_event = { id = engdom.24 days = 3 } }
 		
-		RAJ = { country_event = { engdom.24 days = 2 } }
-		
-	
-	}
-	
-	option = {#limited 
-	
-		name = engdom.23.b 
-		ai_chance = { factor = 30 }
-		
-		add_political_power = -100 
-		
-		RAJ = { country_event = engdom.? days = 2 }
+		add_political_power = 25
 	
 	}
+	
+		###MAYBE ANOTHER OPTION
 	
 	option = {#leave them 
 	
-		name = engdom.23.c 
-		ai_chance = { factor = 60 }
+		name = engdom.5.c 
+		ai_chance = { factor = 40 }
 		
-		add_political_power = -50 
+		add_political_power = -50
+
+		reverse_add_opinion_modifier = { target = RAJ modifier = spared_federal }
 	
 	}
 
 }
 
-country_event = {#Full RAJ integration 
+country_event = {#RAJ annexation offer 
 
 	id = engdom.24 
-	title = engdom.24.t
-	desc = engdom.24.d 
+	title = engdom.6.t 
+	desc = engdom.6.d 
 	
-	is_triggered_only = yes
+	is_triggered_only = yes 
 	
-	option = {#accept 
+	option = {#comply 
 	
-		name = engdom.24.a 
-		ai_chance = { factor = 100 }
-		ENG = { change_tag_from = RAJ }
+		trigger = { NOT = { has_war_with = ENG } }
+		
+		name = engdom.6.a 
+		ai_chance = { factor = 10 }
+		
 		ENG = { country_event = { id = engdom.25 } }
-
+	
 	}
 	
-	option = {#resist 
-
-		name = engdom.24.b 
-		ai_chance = { factor = 0 }
+	option = {#revolt 
+	
+		trigger = { NOT = { has_war_with = ENG } }
+		name = engdom.6.b
+		ai_chance = { factor = 90 }
 		
 		imperial_war_effect = yes 
-
+	
 	}
+	
+	option = {#invalid 
+	
+		trigger = { 
+		
+			has_war_with = ENG
+		
+		}
+		
+		name = engdom.6.c 
+	
+	}	
 
 }
 
-country_event = {#Full Indian integration 
+country_event = {#The RAJ kneel 
 
 	id = engdom.25 
 	title = engdom.25.t 
@@ -817,32 +824,11 @@ country_event = {#Full Indian integration
 	
 	option = {
 	
-		name = engdom.25.a 
-		
+		name = engdom.7.a 
 		annex_country = { target = RAJ transfer_troops = yes }
-		
-		hidden_effect = { country_event = { id = engdom.26 days = 35 } }
+		add_political_power = 40  
 	
 	}
 
 }
 
-country_event = {#British civil war 
-
-	id = engdom.26 
-	title = engdom.26.t 
-	desc = engdom.26.d 
-	
-	is_triggered_only = yes 
-	
-	option = {
-	
-		name = engdom.26.a 
-		
-		add_political_power = -150 
-		
-			start_civil_war = { ideology = national_integralism size = 0.6 }
-	
-	}
-
-}

@@ -8,11 +8,11 @@ state={
 
 	history={
 		owner = ENG
+		add_core_of = EGY
 		buildings = {
 			infrastructure = 0
 		}
 
-		add_core_of = EGY
 
 	}
 

@@ -18,7 +18,7 @@ country_event = {#war trigger
 		
 			limit = {
 			
-				IRE = { NOT = { has_war_with = ENG } }
+				IRE = { NOT = { has_war_with = ENG is_in_faction = yes } }
 			
 			}
 			
@@ -30,7 +30,7 @@ country_event = {#war trigger
 		
 			limit = {
 			
-				CAN = { NOT = { has_war_with = ENG } }
+				CAN = { NOT = { has_war_with = ENG is_in_faction = yes } }
 			
 			}
 			
@@ -43,7 +43,7 @@ country_event = {#war trigger
 		
 			limit = {
 			
-				EGY = { NOT = { has_war_with = ENG } }
+				EGY = { NOT = { has_war_with = ENG is_in_faction = yes } }
 			
 			}
 			
@@ -55,7 +55,7 @@ country_event = {#war trigger
 		
 			limit = {
 			
-				RAJ = { NOT = { has_war_with = ENG } }
+				RAJ = { NOT = { has_war_with = ENG is_in_faction = yes } }
 			
 			}
 			
@@ -67,7 +67,7 @@ country_event = {#war trigger
 		
 			limit = {
 			
-				ZIM = { NOT = { has_war_with = ENG } }
+				ZIM = { NOT = { has_war_with = ENG is_in_faction = yes } }
 			
 			}
 			
@@ -79,7 +79,7 @@ country_event = {#war trigger
 		
 			limit = {
 			
-				AST = { NOT = { has_war_with = ENG } }
+				AST = { NOT = { has_war_with = ENG is_in_faction = yes } }
 			
 			}
 			
@@ -91,7 +91,7 @@ country_event = {#war trigger
 		
 			limit = {
 			
-				NZL = { NOT = { has_war_with = ENG } }
+				NZL = { NOT = { has_war_with = ENG is_in_faction = yes } }
 			
 			}
 			
@@ -103,7 +103,7 @@ country_event = {#war trigger
 		
 			limit = {
 			
-				SAF = { NOT = { has_war_with = ENG } }
+				SAF = { NOT = { has_war_with = ENG is_in_faction = yes } }
 			
 			}
 			
@@ -111,7 +111,7 @@ country_event = {#war trigger
 		
 		}
 		
-		country_event = { id = imperialwar.11 }
+		country_event = { id = imperialwar.10 }
 		
 		set_global_flag = imperial_war_flag
 		
@@ -324,7 +324,7 @@ country_event = {#Indian response
 		
 		add_political_power = 50
 		
-		ENG = { country_event = imperialwar.11 }
+		ENG = { country_event = imperialwar.11 days = 7 }
 	
 	}
 	
@@ -595,6 +595,92 @@ news_event = {#The Imperial War News
 	option = {
 	
 		name = imperialwar.10.a 
+	
+	}
+
+}
+
+country_event = {#Indian loyalists 
+
+	id = imperialwar.11 
+	title = imperialwar.11.t 
+	desc = imperialwar.11.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = imperialwar.11.a 
+		
+		if = {
+		
+			limit = { RAJ = { controls_state = 444 } }
+			
+			transfer_state = 444
+		
+		}
+		
+		if = {
+		
+			limit = { RAJ = { controls_state = 445 } }
+			
+			transfer_state = 445
+		
+		}
+		
+		if = {
+		
+			limit = { RAJ = { controls_state = 442 } }
+			
+			transfer_state = 442
+		
+		}
+		
+		if = {
+		
+			limit = { RAJ = { controls_state = 441 } }
+			
+			transfer_state = 441
+		
+		}
+		
+		if = {
+		
+			limit = { RAJ = { controls_state = 440 } }
+			
+			transfer_state = 440
+		
+		}
+		
+		if = {
+		
+			limit = { RAJ = { controls_state = 443 } }
+			
+			transfer_state = 443
+		
+		}
+		
+		if = {
+		
+			limit = { RAJ = { controls_state = 433 } }
+			
+			transfer_state = 433
+		
+		}
+		
+		if = {
+		
+			limit = { RAJ = { controls_state = 439 } }
+			
+			transfer_state = 439
+		
+		}
+		
+		load_oob = RAJ_loyalist
+		
+		add_political_power = 50 
+		
+		RAJ = { country_event = imperialwar.12 }
 	
 	}
 

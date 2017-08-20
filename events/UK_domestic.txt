@@ -186,15 +186,7 @@ country_event = {#IRE federal
 	
 	}
 	
-	option = {#soft 
-	
-		name = engdom.5.b 
-		ai_chance = { factor = 30 }
-		
-		IRE = { country_event = { id = engdom.? days = 3 } }
-		
-		add_political_power = -15 
-	}
+		###MAYBE ANOTHER OPTION
 	
 	option = {#leave them 
 	
@@ -230,38 +222,11 @@ country_event = {#Ireland annexation offer
 	
 	option = {#revolt 
 	
+		trigger = { NOT = { has_war_with = ENG } }
 		name = engdom.6.b
 		ai_chance = { factor = 50 }
 		
-		ENG = { 
-		
-			end_puppet = IRE
-			end_puppet = CAN
-			end_puppet = ZIM 
-			end_puppet = SAF 
-			end_puppet = RAJ 
-			end_puppet = EGY 
-			end_puppet = AST 
-			end_puppet = NZL 
-			
-			remove_from_faction = CAN
-			remove_from_faction = ZIM 
-			remove_from_faction = SAF 
-			remove_from_faction = RAJ 
-			remove_from_faction = EGY 
-			remove_from_faction = AST 
-			remove_from_faction = NZL
-			remove_from_faction = IRE
-			
-			}
-		
-		declare_war_on = { target = ENG type = annex_everything }
-		
-		create_faction = anti_imperial_bloc
-		
-		ENG = { country_event = { id = imperialwar.1 } }
-
-		set_country_flag = imperial_war_starter
+		imperial_war_effect = yes 
 	
 	}
 	
@@ -292,6 +257,591 @@ country_event = {#The irish kneel
 		name = engdom.7.a 
 		annex_country = { target = IRE transfer_troops = yes }
 		add_political_power = 40  
+	
+	}
+
+}
+
+country_event = {#CAN federal 
+
+	id = engdom.8 
+	title = engdom.8.t 
+	desc = engdom.8.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#Harsh
+	
+		name = engdom.5.a 
+		ai_chance = { factor = 90 }
+		
+		CAN = { country_event = { id = engdom.9 days = 3 } }
+		
+		add_political_power = 25
+	
+	}
+	
+		###MAYBE ANOTHER OPTION
+	
+	option = {#leave them 
+	
+		name = engdom.5.c 
+		ai_chance = { factor = 10 }
+		
+		add_political_power = -150
+
+		reverse_add_opinion_modifier = { target = CAN modifier = spared_federal }
+	
+	}
+
+}
+
+country_event = {#Canada annexation offer 
+
+	id = engdom.9 
+	title = engdom.6.t 
+	desc = engdom.6.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#comply 
+	
+		trigger = { NOT = { has_war_with = ENG } }
+		
+		name = engdom.6.a 
+		ai_chance = { factor = 10 }
+		
+		ENG = { country_event = { id = engdom.10 } }
+	
+	}
+	
+	option = {#revolt 
+	
+		trigger = { NOT = { has_war_with = ENG } }
+		name = engdom.6.b
+		ai_chance = { factor = 90 }
+		
+		imperial_war_effect = yes 
+	
+	}
+	
+	option = {#invalid 
+	
+		trigger = { 
+		
+			has_war_with = ENG
+		
+		}
+		
+		name = engdom.6.c 
+	
+	}	
+
+}
+
+country_event = {#The Canadians kneel 
+
+	id = engdom.10 
+	title = engdom.10.t 
+	desc = engdom.10.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engdom.7.a 
+		annex_country = { target = CAN transfer_troops = yes }
+		add_political_power = 40  
+	
+	}
+
+}
+
+country_event = {#SAF federal 
+
+	id = engdom.11 
+	title = engdom.11.t 
+	desc = engdom.11.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#Harsh
+	
+		name = engdom.5.a 
+		ai_chance = { factor = 95 }
+		
+		SAF = { country_event = { id = engdom.12 days = 3 } }
+		
+		add_political_power = 25
+	
+	}
+	
+		###MAYBE ANOTHER OPTION
+	
+	option = {#leave them 
+	
+		name = engdom.5.c 
+		ai_chance = { factor = 5 }
+		
+		add_political_power = -150
+
+		reverse_add_opinion_modifier = { target = SAF modifier = spared_federal }
+	
+	}
+
+}
+
+country_event = {#SAF annexation offer 
+
+	id = engdom.12 
+	title = engdom.6.t 
+	desc = engdom.6.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#comply 
+	
+		trigger = { NOT = { has_war_with = ENG } }
+		
+		name = engdom.6.a 
+		ai_chance = { factor = 10 }
+		
+		ENG = { country_event = { id = engdom.13 } }
+	
+	}
+	
+	option = {#revolt 
+	
+		trigger = { NOT = { has_war_with = ENG } }
+		name = engdom.6.b
+		ai_chance = { factor = 90 }
+		
+		imperial_war_effect = yes 
+	
+	}
+	
+	option = {#invalid 
+	
+		trigger = { 
+		
+			has_war_with = ENG
+		
+		}
+		
+		name = engdom.6.c 
+	
+	}	
+
+}
+
+country_event = {#The SAF kneel 
+
+	id = engdom.13 
+	title = engdom.13.t 
+	desc = engdom.13.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engdom.7.a 
+		annex_country = { target = SAF transfer_troops = yes }
+		add_political_power = 40  
+	
+	}
+
+}
+
+country_event = {#ZIM federal 
+
+	id = engdom.14 
+	title = engdom.14.t 
+	desc = engdom.14.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#Harsh
+	
+		name = engdom.5.a 
+		ai_chance = { factor = 100 }
+		
+		ZIM = { country_event = { id = engdom.15 days = 3 } }
+		
+		add_political_power = 25
+	
+	}
+	
+		###MAYBE ANOTHER OPTION
+	
+	option = {#leave them 
+	
+		name = engdom.5.c 
+		ai_chance = { factor = 0 }
+		
+		add_political_power = -150
+
+		reverse_add_opinion_modifier = { target = ZIM modifier = spared_federal }
+	
+	}
+
+}
+
+country_event = {#ZIM annexation offer 
+
+	id = engdom.15 
+	title = engdom.6.t 
+	desc = engdom.6.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#comply 
+	
+		trigger = { NOT = { has_war_with = ENG } }
+		
+		name = engdom.6.a 
+		ai_chance = { factor = 95 }
+		
+		ENG = { country_event = { id = engdom.16 } }
+	
+	}
+	
+	option = {#revolt 
+	
+		trigger = { NOT = { has_war_with = ENG } }
+		name = engdom.6.b
+		ai_chance = { factor = 5 }
+		
+		imperial_war_effect = yes 
+	
+	}
+	
+	option = {#invalid 
+	
+		trigger = { 
+		
+			has_war_with = ENG
+		
+		}
+		
+		name = engdom.6.c 
+	
+	}	
+
+}
+
+country_event = {#The ZIM kneel 
+
+	id = engdom.16 
+	title = engdom.16.t 
+	desc = engdom.16.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engdom.7.a 
+		annex_country = { target = ZIM transfer_troops = yes }
+		add_political_power = 40  
+	
+	}
+
+}
+
+country_event = {#AST federal 
+
+	id = engdom.17 
+	title = engdom.17.t 
+	desc = engdom.17.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#Harsh
+	
+		name = engdom.5.a 
+		ai_chance = { factor = 100 }
+		
+		AST = { country_event = { id = engdom.18 days = 3 } }
+		
+		add_political_power = 25
+	
+	}
+	
+		###MAYBE ANOTHER OPTION
+	
+	option = {#leave them 
+	
+		name = engdom.5.c 
+		ai_chance = { factor = 0 }
+		
+		add_political_power = -150
+
+		reverse_add_opinion_modifier = { target = AST modifier = spared_federal }
+	
+	}
+
+}
+
+country_event = {#AST annexation offer 
+
+	id = engdom.17 
+	title = engdom.6.t 
+	desc = engdom.6.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#comply 
+	
+		trigger = { NOT = { has_war_with = ENG } }
+		
+		name = engdom.6.a 
+		ai_chance = { factor = 95 }
+		
+		ENG = { country_event = { id = engdom.18 } }
+	
+	}
+	
+	option = {#revolt 
+	
+		trigger = { NOT = { has_war_with = ENG } }
+		name = engdom.6.b
+		ai_chance = { factor = 5 }
+		
+		imperial_war_effect = yes 
+	
+	}
+	
+	option = {#invalid 
+	
+		trigger = { 
+		
+			has_war_with = ENG
+		
+		}
+		
+		name = engdom.6.c 
+	
+	}	
+
+}
+
+country_event = {#The AST kneel 
+
+	id = engdom.18 
+	title = engdom.18.t 
+	desc = engdom.18.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engdom.7.a 
+		annex_country = { target = AST transfer_troops = yes }
+		add_political_power = 40  
+	
+	}
+
+}
+
+country_event = {#NZL federal 
+
+	id = engdom.20 
+	title = engdom.20.t 
+	desc = engdom.20.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#Harsh
+	
+		name = engdom.5.a 
+		ai_chance = { factor = 100 }
+		
+		NZL = { country_event = { id = engdom.20 days = 3 } }
+		
+		add_political_power = 25
+	
+	}
+	
+		###MAYBE ANOTHER OPTION
+	
+	option = {#leave them 
+	
+		name = engdom.5.c 
+		ai_chance = { factor = 0 }
+		
+		add_political_power = -150
+
+		reverse_add_opinion_modifier = { target = NZL modifier = spared_federal }
+	
+	}
+
+}
+
+country_event = {#NZL annexation offer 
+
+	id = engdom.21 
+	title = engdom.6.t 
+	desc = engdom.6.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#comply 
+	
+		trigger = { NOT = { has_war_with = ENG } }
+		
+		name = engdom.6.a 
+		ai_chance = { factor = 95 }
+		
+		ENG = { country_event = { id = engdom.22 } }
+	
+	}
+	
+	option = {#revolt 
+	
+		trigger = { NOT = { has_war_with = ENG } }
+		name = engdom.6.b
+		ai_chance = { factor = 5 }
+		
+		imperial_war_effect = yes 
+	
+	}
+	
+	option = {#invalid 
+	
+		trigger = { 
+		
+			has_war_with = ENG
+		
+		}
+		
+		name = engdom.6.c 
+	
+	}	
+
+}
+
+country_event = {#The NZL kneel 
+
+	id = engdom.22 
+	title = engdom.22.t 
+	desc = engdom.22.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engdom.7.a 
+		annex_country = { target = NZL transfer_troops = yes }
+		add_political_power = 40  
+	
+	}
+
+}
+
+country_event = {#Indian question FOCUS 
+
+	id = engdom.23 
+	title = engdom.23.t 
+	desc = engdom.23.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#full 
+	
+		name = engdom.23.a 
+		ai_chance = { factor = 10 }
+		
+		add_popularity = -200 
+		
+		RAJ = { country_event = { engdom.24 days = 2 } }
+		
+	
+	}
+	
+	option = {#limited 
+	
+		name = engdom.23.b 
+		ai_chance = { factor = 30 }
+		
+		add_political_power = -100 
+		
+		RAJ = { country_event = engdom.? days = 2 }
+	
+	}
+	
+	option = {#leave them 
+	
+		name = engdom.23.c 
+		ai_chance = { factor = 60 }
+		
+		add_political_power = -50 
+	
+	}
+
+}
+
+country_event = {#Full RAJ integration 
+
+	id = engdom.24 
+	title = engdom.24.t
+	desc = engdom.24.d 
+	
+	is_triggered_only = yes
+	
+	option = {#accept 
+	
+		name = engdom.24.a 
+		ai_chance = { factor = 100 }
+		ENG = { change_tag_from = RAJ }
+		ENG = { country_event = { id = engdom.25 } }
+
+	}
+	
+	option = {#resist 
+
+		name = engdom.24.b 
+		ai_chance = { factor = 0 }
+		
+		imperial_war_effect = yes 
+
+	}
+
+}
+
+country_event = {#Full Indian integration 
+
+	id = engdom.25 
+	title = engdom.25.t 
+	desc = engdom.25.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engdom.25.a 
+		
+		annex_country = { target = RAJ transfer_troops = yes }
+		
+		hidden_effect = { country_event = { id = engdom.26 days = 35 } }
+	
+	}
+
+}
+
+country_event = {#British civil war 
+
+	id = engdom.26 
+	title = engdom.26.t 
+	desc = engdom.26.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engdom.26.a 
+		
+		add_political_power = -150 
+		
+			start_civil_war = { ideology = national_integralism size = 0.6 }
 	
 	}
 

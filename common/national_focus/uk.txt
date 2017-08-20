@@ -2442,7 +2442,7 @@ focus_tree = {
 	
 		id = ENG_fed_IRE
 		icon = ? 
-		x = 35 
+		x = 37 
 		y = 2 
 		cost = 3
 		
@@ -2470,6 +2470,228 @@ focus_tree = {
 		completion_reward = {
 		
 			country_event = { id = engdom.5 }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_fed_CAN
+		icon = ? 
+		x = 35 
+		y = 2 
+		cost = 5
+		
+		available = {
+		
+			CAN = {
+			
+				exists = yes 
+				is_subject_of = ENG
+			
+			}
+			
+			NOT = {
+			
+				has_global_flag = imperial_war_flag
+			
+			}
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_federalization_focus }
+		
+		completion_reward = {
+		
+			country_event = { id = engdom.8 }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_fed_SAF
+		icon = ? 
+		x = 36 
+		y = 3 
+		cost = 5
+		
+		available = {
+		
+			SAF = {
+			
+				exists = yes 
+				is_subject_of = ENG
+			
+			}
+			
+			NOT = {
+			
+				has_global_flag = imperial_war_flag
+			
+			}
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_federalization_focus }
+		
+		completion_reward = {
+		
+			country_event = { id = engdom.11 }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_fed_ZIM
+		icon = ? 
+		x = 38 
+		y = 3 
+		cost = 5
+		
+		available = {
+		
+			SAF = {
+			
+				exists = yes 
+				is_subject_of = ENG
+			
+			}
+			
+			NOT = {
+			
+				has_global_flag = imperial_war_flag
+			
+			}
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_federalization_focus }
+		
+		completion_reward = {
+		
+			country_event = { id = engdom.14 }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_fed_AST
+		icon = ? 
+		x = 39
+		y = 2 
+		cost = 7
+		
+		available = {
+		
+			AST = {
+			
+				exists = yes 
+				is_subject_of = ENG
+			
+			}
+			
+			NOT = {
+			
+				has_global_flag = imperial_war_flag
+			
+			}
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_federalization_focus }
+		
+		completion_reward = {
+		
+			country_event = { id = engdom.17 }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_fed_NZL
+		icon = ? 
+		x = 41 
+		y = 2 
+		cost = 3
+		
+		available = {
+		
+			NZL = {
+			
+				exists = yes 
+				is_subject_of = ENG
+			
+			}
+			
+			NOT = {
+			
+				has_global_flag = imperial_war_flag
+			
+			}
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_federalization_focus }
+		
+		completion_reward = {
+		
+			country_event = { id = engdom.20 }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = ENG_fed_RAJ
+		icon = ? 
+		x = 40 
+		y = 3 
+		cost = 10
+		
+		available = {
+		
+			RAJ = {
+			
+				exists = yes 
+				is_subject_of = ENG
+			
+			}
+			
+			NOT = {
+			
+				has_global_flag = imperial_war_flag
+			
+			}
+		
+		}
+		
+		cancel_if_invalid = yes 
+		
+		prerequisite = { focus = ENG_federalization_focus }
+		
+		completion_reward = {
+		
+			country_event = { id = engdom.23 }
 		
 		}
 	

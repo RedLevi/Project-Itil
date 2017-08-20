@@ -1,0 +1,83 @@
+﻿division_template = {
+	name = "Indian Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+
+units = {
+	#India Command
+	
+	#Northern Command
+	
+	division= {	
+		name = "Pashawar Army"
+		location = 12717
+		division_template = "Indian Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "Kohat Army"
+		location = 4998
+		division_template = "Indian Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "Rawalpindi Army"
+		location = 12005
+		division_template = "Indian Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "Lahore Army"
+		location = 10843
+		division_template = "Indian Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "Waziristan Army"
+		location = 1978
+		division_template = "Indian Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	
+	#Eastern Command
+	division= {	
+		name = "Meerut Army"
+		location = 11955
+		division_template = "Indian Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+}
+
+air_wings = {
+	439 = { 
+		fighter_equipment_1 = {
+			owner = "RAJ" 
+			amount = 50
+		}
+	}
+}
+

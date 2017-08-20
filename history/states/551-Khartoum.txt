@@ -8,6 +8,7 @@ state={
 
 	history={
 		owner = ENG
+		add_core_of = EGY
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

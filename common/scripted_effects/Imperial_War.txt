@@ -1,0 +1,34 @@
+
+imperial_war_effect = {
+
+	ENG = { 
+		
+			end_puppet = IRE
+			end_puppet = CAN
+			end_puppet = ZIM 
+			end_puppet = SAF 
+			end_puppet = RAJ 
+			end_puppet = EGY 
+			end_puppet = AST 
+			end_puppet = NZL 
+			
+			remove_from_faction = CAN
+			remove_from_faction = ZIM 
+			remove_from_faction = SAF 
+			remove_from_faction = RAJ 
+			remove_from_faction = EGY 
+			remove_from_faction = AST 
+			remove_from_faction = NZL
+			remove_from_faction = IRE
+			
+			}
+		
+		declare_war_on = { target = ENG type = annex_everything }
+		
+		create_faction = anti_imperial_bloc
+		
+		ENG = { country_event = { id = imperialwar.1 } }
+
+		set_country_flag = imperial_war_starter
+
+}

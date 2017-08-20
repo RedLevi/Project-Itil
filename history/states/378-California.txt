@@ -34,16 +34,16 @@ state={
 		}
 		add_core_of = USA
 		victory_points = {
-			9814 30
+			9814 15
 		}
 		victory_points = {
-			1562 15 
+			1562 1 
 		}
 		victory_points = {
 			9671 25
 		}
 		victory_points = {
-			9713 1 
+			9713 30 
 		}
 		1939.1.1 = {
 			buildings = {

@@ -1,0 +1,349 @@
+﻿division_template = {
+	name = "Infantry Division"  	# Standard formation for frontline divisions
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # US Hvy Field Arty consisted of 2 Bns, 155mm howitzers
+		engineer = { x = 0 y = 1 }   # US Eng Rgt consisted of 2 Bns
+	}
+}
+division_template = {
+	name = "Cavalry Division"  		# 1st Cavalry Division only
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # US Cav Recon consisted of 52 ACs, 13 L Arm
+		engineer = { x = 0 y = 1 }   # US Eng Bn
+	}
+}
+division_template = {
+	name = "Garrison Brigade"  		# used for island defense (older equipment, lower experience)
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+	priority = 0
+}
+division_template = {
+	name = "Mountain Brigade"
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+	    mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+}
+
+units = {
+	division = {			
+		name = "Washington Guard"
+		location = 3957
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+
+	}
+	division = {			
+		name = "Philadelphia Garrison"
+		location = 6845
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "New York Garrison"
+		location = 3878
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}
+	division = {			
+		name = "Nashville Garrison"
+		location = 12501
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}
+	division = {			
+		name = "1. Infantry Division"
+		location = 11654
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "2. Cavalry Division"
+		location = 11654
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}		
+	division = {			
+		name = "1. Mountain Brigade"
+		location = 12791
+		division_template = "Mountain Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "2. Mountain Brigade"
+		location = 1827
+		division_template = "Mountain Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}
+	division = {			
+		name = "1. Cavalry Division"
+		location = 1827
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "2. Infantry Division"
+		location = 6710
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}
+	division = {			
+		name = "3. Infantry Division"
+		location = 6710
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "4. Infantry Division"
+		location = 1836
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "Chicago Garrison"
+		location = 9450
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "3. Cavalry Division"
+		location = 6710
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}
+	division = {			
+		name = "1. Texas Garrison"
+		location = 10337
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}	
+	division = {			
+		name = "2. Texas Garrison"
+		location = 3960
+		division_template = "Garrison Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+	}		
+	
+	navy = {
+		name = "Washington Fleet"
+		base = 3957
+		location = 3957  # Washington
+		ship = { name = "ASS Nevada" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "Pennsylvania Class" } } }				
+		ship = { name = "ASS Arizona" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "Pennsylvania Class" } } }				
+		ship = { name = "ASS Pennsylvania" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "Pennsylvania Class" } } }							
+		ship = { name = "ASS Washington" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME version_name = "Farragut Class" } } }
+		ship = { name = "ASS Philadelphia" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME version_name = "Farragut Class" } } }
+		ship = { name = "ASS MacDonough" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME version_name = "Farragut Class" } } }
+		ship = { name = "ASS Bangor" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME version_name = "Farragut Class" } } }	
+		ship = { name = "ASS Northampton" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AME } } }				
+		ship = { name = "ASS Chester" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AME } } }				
+		ship = { name = "ASS Baltimore" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AME } } }	
+		ship = { name = "ASS Detroit" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AME } } }				
+		ship = { name = "ASS Houston" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Chicago" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS Richmond" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AME } } }				
+		ship = { name = "ASS Trenton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AME } } }				
+		ship = { name = "ASS Boston" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = AME } } }	
+	}
+	
+	navy = {
+		name = "Submarine Fleet"
+		base = 3878
+		location = 3878  # New York
+		ship = { name = "ASS S-1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-5" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-6" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-7" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-8" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-9" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-10" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }					
+	}
+	navy = {
+		name = "Destroyers Fleet"
+		base = 3878
+		location = 3878  # New York
+		ship = { name = "ASS Barker" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Parrott" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Bulmer" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Stewart" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }	
+		ship = { name = "ASS John" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Ferry" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Jackson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Davis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }
+	}
+	navy = {
+		name = "Miami Fleet"
+		base = 1843
+		location = 1843  # Miami
+		ship = { name = "ASS Oklahoma" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "Pennsylvania Class" } } }				
+		ship = { name = "ASS Tennessee" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "New Mexico Class" } } }				
+		ship = { name = "ASS California" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "New Mexico Class" } } }				
+		ship = { name = "ASS Colorado" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "Colorado Class" } } }				
+		ship = { name = "ASS West Virginia" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "Colorado Class" } } }				
+		ship = { name = "ASS Maryland" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "Colorado Class" } } }		
+		ship = { name = "ASS Johnson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Lee" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Fox" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Grant" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }	
+		ship = { name = "ASS John" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Adams" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }							
+		ship = { name = "ASS S-11" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-12" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-13" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-14" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-15" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-16" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-17" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS S-18" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-19" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-20" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-21" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-22" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-23" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-24" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }			
+		ship = { name = "ASS S-25" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-26" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-27" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-28" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-29" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }		
+	}	
+	navy = {
+		name = "Houston Fleet"
+		base = 10337
+		location = 10337  # Houston
+		ship = { name = "ASS Borie" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Breckinridge" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Barney" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Blakeley" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
+		ship = { name = "ASS Biddle" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-30" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-31" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-32" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
+		ship = { name = "ASS S-33" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }			
+		ship = { name = "ASS S-34" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }		
+	}
+}
+
+air_wings = {
+	### I. Michigan ###
+	393 = { 	
+		fighter_equipment_0 =  {
+			owner = "AME" 
+			amount = 60
+		}
+		tac_bomber_equipment_0 = {
+			owner = "AME" 
+			amount = 40
+		}		
+	}
+
+	### II. New York ###
+	358 = { 		
+		fighter_equipment_0 =  {
+			owner = "AME" 
+			amount = 40
+		}		
+		tac_bomber_equipment_0 = {
+			owner = "AME" 
+			amount = 40
+		}
+		CAS_equipment_1 =  {
+			owner = "AME" 
+			amount = 40
+		}			
+	}
+
+	### III. Texas ###
+	375 = {	
+		fighter_equipment_0 =  {
+			owner = "AME" 
+			amount = 20
+		}	
+		tac_bomber_equipment_0 =  {
+			owner = "AME" 
+			amount = 20
+		}	
+	}
+	
+	### IV. Illinois ###
+	395 = {	
+		fighter_equipment_0 =  {
+			owner = "AME" 
+			amount = 20
+		}	
+	}
+	
+	### V. Florida ###
+	366 = {	
+		fighter_equipment_0 =  {
+			owner = "AME" 
+			amount = 40
+		}	
+		tac_bomber_equipment_0 =  {
+			owner = "AME" 
+			amount = 20
+		}	
+	}
+	
+	### VI. Louisiana ###
+	371 = {	
+		fighter_equipment_0 =  {
+			owner = "AME" 
+			amount = 20
+		}
+	}	
+}
+	

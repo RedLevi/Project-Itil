@@ -4,7 +4,7 @@ state={
 	name="STATE_454" #Palestine
 	manpower = 2335400
 	
-	state_category = rural
+	state_category = large_city
 
 	history={
 		owner = ISR
@@ -25,7 +25,6 @@ state={
 		victory_points = {
 			4206 1 
 		}
-		add_core_of = PAL
 		add_core_of = ISR
 	}
 

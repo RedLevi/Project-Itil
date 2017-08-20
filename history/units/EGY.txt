@@ -1,0 +1,48 @@
+﻿division_template = {
+	name = "Jund el-Mashaa"	# Infantry Division	
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Jund el-Farsan"  # Cavalry Division
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+	division = {
+		name = "1. Jund el-Mashaa"  			
+		location = 7011
+		division_template = "Jund el-Mashaa"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1. Jund el-Farsan"		
+		location = 7011
+		division_template = "Jund el-Farsan"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "2. Jund el-Mashaa"
+		location = 4076
+		division_template = "Jund el-Mashaa"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+}

@@ -131,17 +131,6 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Adolf Hitler"
-	desc = "POLITICS_ADOLF_HITLER_DESC"
-	picture = "Portrait_Germany_Adolf_Hitler.dds"
-	expire = "1965.1.1"
-	ideology = integralism
-	traits = {
-		dictator
-	}
-}
-
 #create_country_leader = {
 #	name = "Konrad Adenauer"
 #	desc = "POLITICS_KONRAD_ADENAUER_DESC"
@@ -159,23 +148,53 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
-		stalins_puppet
+		#stalins_puppet
 		exiled
 	}
 }
 
-#create_country_leader = {
-#	name = "Otto Wels"
-#	desc = "POLITICS_OTTO_WELS_DESC"
-#	picture = "Portrait_Germany_Adolf_Hitler.dds"
-#	expire = "1939.1.16"
-#	ideology = socialism
-#	traits = {
-#		exiled
-#		union_man
-#	}
-#}
-#
+create_country_leader = {
+	name = "Otto Wels"
+	desc = "POLITICS_OTTO_WELS_DESC"
+	picture = "Portrait_Germany_Adolf_Hitler.dds"
+	expire = "1939.1.16"
+	ideology = social_reformism
+	traits = {
+		exiled
+		union_man
+	}
+}
+
+create_country_leader = {
+	name = "Hjalmar Schacht"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = market_liberalism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Walther von Lüttwitz"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = autocracy
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Gregor Strasser"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = strasserism
+	traits = {
+	}
+}
+
 #create_country_leader = {
 #	name = "Ernst Thälmann"
 #	desc = "POLITICS_ERNST_THALMANN_DESC"

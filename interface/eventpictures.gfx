@@ -1805,6 +1805,11 @@ spriteTypes = {
 		name = "GFX_thorez"
 		texturefile = "gfx/event_pictures/thorez.dds"
 	}	
+
+	spriteType = {
+		name = "GFX_german_flag"
+		texturefile = "gfx/event_pictures/german_flag.dds"
+	}	
 	
 	
 	#### END DoD EVENTS ####

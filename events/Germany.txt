@@ -17,3 +17,281 @@ country_event = {
 		name = germany.1.a
 	}
 }
+
+country_event = {
+
+	id = germany.2 
+	title = germany.2.t 
+	desc = germany.2.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.2.a
+		 add_political_power = 50
+		 hidden_effect = {
+		 complete_national_focus = GER_purge_opposition
+		 }
+	}	
+}
+
+country_event = {
+
+	id = germany.3 
+	title = germany.3.t 
+	desc = germany.3.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.3.a
+	}	
+}
+
+country_event = {
+
+	id = germany.4 
+	title = germany.4.t 
+	desc = germany.4.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.4.a
+		army_experience = 50
+		add_relation_modifier = { target = GER modifier = european_diplomacy }
+		create_unit = { division = "name = 1. Vol. Infanterie-Division division_template = Infanterie-Division starting_experience_factor = 1.0" }
+		create_unit = { division = "name = 2. Vol. Infanterie-Division division_template = Infanterie-Division starting_experience_factor = 1.0" }
+		create_unit = { division = "name = 3. Vol. Infanterie-Division division_template = Infanterie-Division starting_experience_factor = 1.0" }
+	}	
+	option = {
+		name = germany.4.b
+	}	
+}
+
+country_event = {
+
+	id = germany.5 
+	title = germany.5.t 
+	desc = germany.5.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.5.a
+		GER = { add_to_faction = UKR }
+	}	
+	option = {
+		name = germany.5.b	
+		diplomatic_relation = { country = GER relation = non_aggression_pact }
+	}	
+}
+
+country_event = {
+
+	id = germany.6 
+	title = germany.6.t 
+	desc = germany.6.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.6.a
+		reverse_add_opinion_modifier = { target = GER modifier = ENG_EUR_theater }
+		diplomatic_relation = { country = GER relation = non_aggression_pact }
+	}	
+	option = {
+		name = germany.6.b
+	}	
+}
+
+country_event = {
+
+	id = germany.7
+	title = germany.7.t 
+	desc = germany.7.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.7.a
+	}	
+	option = {
+		name = germany.7.b
+	}	
+	option = {
+		name = germany.7.c
+	}	
+}
+
+country_event = {
+
+	id = germany.8
+	title = germany.8.t 
+	desc = germany.8.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.8.a
+		hidden_effect = {		
+		complete_national_focus = GER_arabian_gulf
+        }		
+	}	
+	option = {
+		name = germany.8.b
+		hidden_effect = {
+		set_global_flag = saudi_disagree	
+		}
+	}
+}
+
+country_event = {
+
+	id = germany.9
+	title = germany.9.t 
+	desc = germany.9.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.9.a	
+	}
+}
+
+country_event = {
+
+	id = germany.10
+	title = germany.10.t 
+	desc = germany.10.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.10.a	
+	}
+	option = {
+		name = germany.10.b	
+	}	
+}
+
+country_event = {
+
+	id = germany.11
+	title = germany.11.t 
+	desc = germany.11.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.11.a	
+		GER = { add_to_faction = HOL }
+	}
+	option = {
+		name = germany.11.b	
+	}
+}
+
+country_event = {
+
+	id = germany.12
+	title = germany.12.t 
+	desc = germany.12.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.12.a
+		 release = SOV
+		 SOV = {
+		 set_politics = { ruling_party = reactionarism elections_allowed = no } 
+		 set_political_party = { ideology = reactionarism popularity = 0.5 } 
+         create_country_leader = { 
+		 name = "Nicholas II Romanov" 
+		 desc = "" 
+		 picture = "Portrait_Nicholas_II.dds" 
+		 expire = "1965.1.1" 
+		 ideology = absolutism
+         traits = { }
+		 }
+		 }
+	}
+	option = {
+		name = germany.12.b
+	}
+}
+
+country_event = {
+
+	id = germany.13
+	title = germany.13.t 
+	desc = germany.13.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.13.a
+		 release = ITA
+		 ITA = {
+		 set_politics = { ruling_party = reactionarism elections_allowed = no } 
+		 set_political_party = { ideology = reactionarism popularity = 0.5 } 
+         create_country_leader = { 
+		 name = "Vittorio Emanuele II of Savoy"
+		 desc = "" 
+		 picture = ""
+		 expire = "1965.1.1" 
+		 ideology = absolutism
+         traits = { }
+		 }
+		 }	
+	}
+	option = {
+		name = germany.13.b
+	}
+}
+
+country_event = {
+
+	id = germany.14
+	title = germany.14.t 
+	desc = germany.14.d
+	
+    fire_only_once = yes	
+	
+	trigger = {
+	tag = GER
+	FRA = { has_civil_war = yes }
+	}
+	
+	mean_time_to_happen = { days = 15 }
+	
+	option = {
+		name = germany.14.a
+		add_manpower = -50000
+		send_equipment = { target = FRA type = infantry_equipment amount = 500 }
+		every_country = { limit = { has_civil_war = yes has_offensive_war_with = FRA } country_event = germany.15 }
+	}
+	option = {
+		name = germany.14.b
+	}
+}
+
+country_event = {
+
+	id = germany.15
+	title = germany.15.t 
+	desc = germany.15.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.15.a
+		GER = { reverse_add_opinion_modifier = { target = THIS modifier = ENG_EUR_theater } }
+		create_unit = { division = "name = 1. Vol. Kavallerie-Brigade division_template = Kavallerie-Brigade starting_experience_factor = 1.0" }
+		create_unit = { division = "name = 2. Vol. Kavallerie-Brigade division_template = Kavallerie-Brigade starting_experience_factor = 1.0" }
+		create_unit = { division = "name = 1. Vol. Infanterie-Division division_template = Infanterie-Division starting_experience_factor = 1.0" }
+		create_unit = { division = "name = 2. Vol. Infanterie-Division division_template = Infanterie-Division starting_experience_factor = 1.0" }
+		create_unit = { division = "name = 3. Vol. Infanterie-Division division_template = Infanterie-Division starting_experience_factor = 1.0" }
+	}
+}
+

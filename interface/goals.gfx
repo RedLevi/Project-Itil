@@ -37,6 +37,26 @@ spriteTypes = {
 	name = "GFX_reactionarism_path_focus"
 	texturefile = "gfx/interface/goals/reactionarism_path_focus.dds"			
 	}
+	SpriteType = {
+	name = "GFX_ukraine"
+	texturefile = "gfx/interface/goals/ukraine.dds"
+	}
+	SpriteType = {
+	name = "GFX_bulgaria"
+	texturefile = "gfx/interface/goals/bulgaria.dds"
+	}
+	SpriteType = {
+	name = "GFX_romania"
+	texturefile = "gfx/interface/goals/romania.dds"
+	}	
+	SpriteType = {
+	name = "GFX_reichkanzler"
+	texturefile = "gfx/interface/goals/reichkanzler.dds"
+	}	
+	SpriteType = {
+	name = "GFX_new_germany"
+	texturefile = "gfx/interface/goals/new_germany.dds"
+	}		
 
 
 	#### Generic continuous goal icons

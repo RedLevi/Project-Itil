@@ -14,7 +14,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_reichskanzler
-		icon = ?
+		icon = GFX_reichkanzler
 		x = 3
 		y = 0
 		cost = 10
@@ -79,7 +79,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_rule_by_army
-		icon = ?
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 5
 		y = 2
 		cost = 10
@@ -110,7 +110,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_a_new_germany
-		icon = ?
+		icon = GFX_new_germany
 		x = 5
 		y = 4
 		cost = 1
@@ -125,7 +125,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_increase_military_spending
-		icon = ?
+		icon = GFX_goal_generic_small_arms
 		x = 2
 		y = 2
 		cost = 10
@@ -140,7 +140,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_industrial_superpower
-		icon = ?
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 2
 		cost = 10
@@ -304,7 +304,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_industrial_superpower_2
-		icon = ?
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 3
 		cost = 10
@@ -408,7 +408,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_autobahn_prussia
-		icon = ?
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 2
 		y = 3
 		cost = 10
@@ -450,7 +450,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_autobahn_bavaria
-		icon = ?
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 2
 		y = 4
 		cost = 10
@@ -485,7 +485,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_autobahn_rhine
-		icon = ?
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 2
 		y = 5
 		cost = 10
@@ -520,7 +520,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_brandenburg_plan
-		icon = ?
+		icon = GFX_focus_research
 		x = 0
 		y = 4
 		cost = 5
@@ -540,7 +540,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_avoiding_brain_drain
-		icon = ?
+		icon = GFX_goal_generic_secret_weapon
 		x = 0
 		y = 5
 		cost = 10
@@ -555,7 +555,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_imperial_dominance
-		icon = ?
+		icon = GFX_goal_generic_demand_territory
 		x = 13
 		y = 0
 		cost = 10
@@ -677,6 +677,7 @@ focus_tree = {
 		prerequisite = { focus = GER_far_east }
 		
 		completion_reward = {
+		    add_manpower = -30000
 			CHI = { country_event = { days = 0 id = germany.4 } }
 		}
 	}	
@@ -728,34 +729,66 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_polish_rebels
-		icon = ?
-		x = 9
+		id = GER_romanian_help
+		icon = GFX_romania
+		x = 10
 		y = 4
 		cost = 10
 
         available_if_capitulated = no		
 		prerequisite = { focus = GER_improve_relations_east }
+		mutually_exclusive = { focus = GER_bulgarian_help }
 		
 		completion_reward = {
-			POL = { add_popularity = { ideology = reactionarism popularity = 0.1 } }
 		}
 	}
 	
 	focus = {
-		id = GER_russian_monarchist_influence
-		icon = ?
+		id = GER_bulgarian_help
+		icon = GFX_bulgaria
+		x = 8
+		y = 4
+		cost = 10
+
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_improve_relations_east }
+		mutually_exclusive = { focus = GER_romanian_help }
+		
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = GER_ukrainian_defence
+		icon = GFX_ukraine
 		x = 9
 		y = 5
 		cost = 10
 
-        available_if_capitulated = no		
-		prerequisite = { focus = GER_polish_rebels }
+        available_if_capitulated = no	
+		prerequisite = { focus = GER_bulgarian_help focus = GER_romanian_help }
 		
 		completion_reward = {
-			RUS = { add_popularity = { ideology = reactionarism popularity = 0.1 } }
+		send_equipment = { target = UKR type = infantry_equipment amount = 750 }
+		send_equipment = { target = UKR type = support_equipment amount = 200 }
+		reverse_add_opinion_modifier = { target = UKR modifier = ENG_EUR_theater }
 		}
 	}	
+	
+	focus = {
+		id = GER_ukrainian_pact
+		icon = ?
+		x = 9
+		y = 6
+		cost = 10
+
+        available_if_capitulated = no	
+		prerequisite = { focus = GER_ukrainian_defence }
+		
+		completion_reward = {
+		UKR = { country_event = { days = 0 id = germany.5 } }
+		}
+	}		
 
 	focus = {
 		id = GER_british_sauerkraut_pie
@@ -768,7 +801,7 @@ focus_tree = {
 		prerequisite = { focus = GER_improve_relations_west }
 		
 		completion_reward = {
-			country_event = { days = 0 id = germany.5 }
+			ENG = { country_event = { days = 0 id = germany.6 } }
 		}
 	}	
 	
@@ -783,7 +816,7 @@ focus_tree = {
 		prerequisite = { focus = GER_improve_relations_west }
 		
 		completion_reward = {
-			country_event = { days = 0 id = germany.6 }
+			country_event = { days = 0 id = germany.7 }
 		}
 	}	
 
@@ -798,7 +831,7 @@ focus_tree = {
 		prerequisite = { focus = GER_middle_east_dip }
 		
 		completion_reward = {
-			SAU = { country_event = { days = 0 id = germany.7 } }
+			SAU = { country_event = { days = 0 id = germany.8 } }
 		}
 	}
 
@@ -811,8 +844,7 @@ focus_tree = {
 
         available_if_capitulated = no		
 		prerequisite = { focus = GER_saudi_scheme }
-		
-		bypass = { has_completed_focus = GER_saudi_scheme }
+		available = { NOT = { has_global_flag = saudi_disagree } }
 		
 		completion_reward = {
 		   add_to_faction = SAU
@@ -830,7 +862,7 @@ focus_tree = {
 		prerequisite = { focus = GER_british_sauerkraut_pie }
 		
 		completion_reward = {
-			country_event = { days = 0 id = germany.8 }
+			SPR = { country_event = { days = 0 id = germany.9 } }
 		}
 	}	
 		
@@ -860,13 +892,13 @@ focus_tree = {
 		prerequisite = { focus = GER_spanish_resistance }
 		
 		completion_reward = {
-			POR = { country_event = { days = 0 id = germany.9 } }
+			POR = { country_event = { days = 0 id = germany.10 } }
 		}
 	}	
 
 	focus = {
 		id = GER_deutsches_heer
-		icon = ?
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 22
 		y = 0
 		cost = 10
@@ -881,7 +913,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_improve_deutsches_heer
-		icon = ?
+		icon = GFX_goal_generic_small_arms
 		x = 20
 		y = 1
 		cost = 10
@@ -897,7 +929,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_motorized_millitary
-		icon = ?
+		icon = GFX_goal_generic_army_artillery
 		x = 20
 		y = 2
 		cost = 10
@@ -912,7 +944,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_mechanized_troops
-		icon = ?
+		icon = GFX_goal_generic_build_tank
 		x = 20
 		y = 3
 		cost = 10
@@ -927,7 +959,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_panzereich
-		icon = ?
+		icon = GFX_goal_generic_army_tanks
 		x = 20
 		y = 4
 		cost = 10
@@ -942,7 +974,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_improve_kaiserliche_marine
-		icon = ?
+		icon = GFX_goal_generic_build_navy
 		x = 24
 		y = 1
 		cost = 10
@@ -958,7 +990,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_battleship_production
-		icon = ?
+		icon = GFX_goal_generic_navy_battleship
 		x = 22
 		y = 2
 		cost = 10
@@ -984,7 +1016,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_sub_production
-		icon = ?
+		icon = GFX_goal_generic_navy_submarine
 		x = 24
 		y = 2
 		cost = 10
@@ -1004,7 +1036,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_seebataillon
-		icon = ?
+		icon = GFX_goal_generic_special_forces
 		x = 26
 		y = 2
 		cost = 10
@@ -1022,7 +1054,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_light_cruiser_production
-		icon = ?
+		icon = GFX_goal_generic_navy_cruiser
 		x = 22
 		y = 3
 		cost = 10
@@ -1041,7 +1073,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_heavy_cruiser_production
-		icon = ?
+		icon = GFX_goal_generic_navy_cruiser
 		x = 24
 		y = 3
 		cost = 10
@@ -1060,7 +1092,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_destroyer_fleet
-		icon = ?
+		icon = GFX_goal_generic_wolf_pack
 		x = 23
 		y = 4
 		cost = 10
@@ -1080,7 +1112,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_luftstreitkräfte
-		icon = ?
+		icon = GFX_goal_generic_build_airforce
 		x = 29
 		y = 0
 		cost = 10
@@ -1099,7 +1131,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_fighter_production
-		icon = ?
+		icon = GFX_goal_generic_air_fighter
 		x = 27
 		y = 1
 		cost = 10
@@ -1124,7 +1156,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_bomber_production
-		icon = ?
+		icon = GFX_goal_generic_air_bomber
 		x = 29
 		y = 1
 		cost = 10
@@ -1146,7 +1178,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_airborne
-		icon = ?
+		icon = GFX_goal_generic_special_forces
 		x = 31
 		y = 1
 		cost = 10
@@ -1166,7 +1198,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_air_doctrine
-		icon = ?
+		icon = GFX_goal_generic_air_doctrine
 		x = 28
 		y = 2
 		cost = 10
@@ -1185,7 +1217,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_rocket_plan
-		icon = ?
+		icon = GFX_goal_generic_secret_weapon
 		x = 28
 		y = 3
 		cost = 10
@@ -1205,7 +1237,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_millitary_campaign
-		icon = ?
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 20
 		y = 6
 		cost = 10
@@ -1231,7 +1263,7 @@ focus_tree = {
 		prerequisite = { focus = GER_millitary_campaign }
 		
 		completion_reward = {
-			HOL = { country_event = { days = 0 id = germany.10 } }
+			HOL = { country_event = { days = 0 id = germany.11 } }
 		}
 	}	
 	
@@ -1382,6 +1414,7 @@ focus_tree = {
 
         available_if_capitulated = no
 		prerequisite = { focus = GER_lessons_of_france }
+		bypass = { GER = { has_war_with = SOV } }
 		
 		completion_reward = {
 			declare_war_on = { target = SOV type = annex_everything }
@@ -1390,7 +1423,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_krupp_factories
-		icon = ?
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 20
 		y = 8
 		cost = 10
@@ -1669,7 +1702,7 @@ focus_tree = {
 		icon = ?
 		x = 14
 		y = 9
-		cost = 10
+		cost = 0
 
         available_if_capitulated = no
 		prerequisite = { focus = GER_attack_soviets }
@@ -1678,7 +1711,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			country_event = { days = 0 id = germany.11 }
+			country_event = { days = 0 id = germany.12 }
 		}
 	}	
 	
@@ -1707,6 +1740,7 @@ focus_tree = {
 
         available_if_capitulated = no
 		prerequisite = { focus = GER_attack_soviets }
+		bypass = { GER = { has_war_with = ITA } }
 		
 		completion_reward = {
 			declare_war_on = { target = ITA type = annex_everything }
@@ -1718,7 +1752,7 @@ focus_tree = {
 		icon = ?
 		x = 18
 		y = 10
-		cost = 10
+		cost = 0
 
         available_if_capitulated = no
 		prerequisite = { focus = GER_attack_italians }
@@ -1727,8 +1761,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-		 country_event = { days = 0 id = germany.12 }
+		 country_event = { days = 0 id = germany.13 }
 		}
-	}		
-	
+	}	
+
 }

@@ -206,7 +206,8 @@ country_event = {#Canadian response
 			
 		}
 		
-	
+		add_state_core = 332
+		add_state_core = 331
 		
 		add_political_power = 50
 	
@@ -253,7 +254,9 @@ country_event = {#Egyptian response
 		
 		add_state_core = 549
 		add_state_core = 551 
-		add_state_core = 762 	
+		add_state_core = 762 
+		add_state_core = 756 
+		add_state_core = 453 
 		
 		every_country = {
 		
@@ -328,6 +331,10 @@ country_event = {#Indian response
 		
 		add_political_power = 50
 		
+		add_state_core = 422
+		
+		set_cosmetic_tag = IND_INC
+		
 		ENG = { country_event = { id = imperialwar.11 days = 7 } }
 	
 	}
@@ -383,7 +390,7 @@ country_event = {#Rhodesia response
 			
 		}
 		
-	
+		add_state_core = 545
 		
 		add_political_power = 50
 		
@@ -558,7 +565,7 @@ country_event = {#South African response
 		}
 		
 	
-		
+		add_state_core = 542
 		
 		add_political_power = 50
 		
@@ -593,6 +600,8 @@ news_event = {#The Imperial War News
 	id = imperialwar.10 
 	title = imperialwar.10.t 
 	desc = imperialwar.10.d 
+	
+	major = yes
 	
 	is_triggered_only = yes 
 	
@@ -687,5 +696,758 @@ country_event = {#Indian loyalists
 		RAJ = { country_event = imperialwar.12 }
 	
 	}
+
+}
+
+country_event = {#Imperial war, UK win
+
+	id = imperialwar.12 
+	title = imperialwar.12.t 
+	desc = imperialwar.12.d 
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	
+		has_global_flag = imperial_war_flag
+		
+		NOT = {
+		
+			has_war_with = IRE
+			has_war_with = CAN 
+			has_war_with = EGY 
+			has_war_with = SAF 
+			has_war_with = ZIM 
+			has_war_with = RAJ 
+			has_war_with = AST
+			has_war_with = NZL 
+		
+		}
+
+				113 = { is_friendly = yes }
+				276 = { is_friendly = yes }
+				275 = { is_friendly = yes }
+				761 = { is_friendly = yes }
+				439 = { is_friendly = yes }
+				285 = { is_friendly = yes }
+				284 = { is_friendly = yes }
+	}
+	
+	mean_time_to_happen = { days = 30 }
+	
+	option = {
+	
+		name = imperialwar.12.a 
+		
+		if = {
+		
+			limit = {
+			
+				IRE = { is_subject_of = ENG }
+			
+			}
+			
+			annex_country = { target = IRE transfer_troops = yes }
+		
+		}
+		
+		if = {
+		
+			limit = {
+			
+				CAN = { is_subject_of = ENG }
+			
+			}
+			
+			annex_country = { target = CAN transfer_troops = yes }
+		
+		}
+		
+		if = {
+		
+			limit = {
+			
+				SAF = { is_subject_of = ENG }
+			
+			}
+			
+			annex_country = { target = SAF transfer_troops = yes }
+		
+		}
+		
+		if = {
+		
+			limit = {
+			
+				RAJ = { is_subject_of = ENG }
+			
+			}
+			
+			annex_country = { target = RAJ transfer_troops = yes }
+		
+		}
+		
+		if = {
+		
+			limit = {
+			
+				ZIM = { is_subject_of = ENG }
+			
+			}
+			
+			annex_country = { target = ZIM transfer_troops = yes }
+		
+		}
+		
+		if = {
+		
+			limit = {
+			
+				AST = { is_subject_of = ENG }
+			
+			}
+			
+			annex_country = { target = AST transfer_troops = yes }
+		
+		}
+		
+		if = {
+		
+			limit = {
+			
+				NZL = { is_subject_of = ENG }
+			
+			}
+			
+			annex_country = { target = NZL transfer_troops = yes }
+		
+		}
+		
+		clr_global_flag = imperial_war_flag
+		
+		set_global_flag = imperial_war_over
+		
+		add_named_threat = { threat = 5 name = ENG_won_imperial_war }
+		
+	
+	}
+
+}
+
+country_event = {#Imperial War rebels win 
+
+	id = imperialwar.13 
+	title = imperialwar.13.t 
+	desc = imperialwar.13.d 
+	
+	fire_only_once = no 
+	
+	trigger = {
+	
+		has_country_flag = imperial_war_starter
+		has_global_flag = imperial_war_flag
+		
+		has_war_with = ENG 
+		
+		OR = {
+		
+			AND = {
+			
+				if = {
+				
+					limit = {
+					
+						is_in_faction_with = IRE 
+					
+					}
+					
+					113 = { is_friendly = yes }
+					135 = { is_friendly = yes }
+				
+				}
+				
+				if = {
+				
+					limit = {
+					
+						is_in_faction_with = CAN 
+					
+					}
+					
+					276 = { is_friendly = yes }
+					468 = { is_friendly = yes }
+				
+				}
+				
+				if = {
+				
+					limit = {
+					
+						is_in_faction_with = SAF 
+					
+					}
+					
+					275 = { is_friendly = yes }
+					681 = { is_friendly = yes }
+				
+				}
+				
+				if = {
+				
+					limit = {
+					
+						is_in_faction_with = RAJ 
+					
+					}
+					
+					439 = { is_friendly = yes }
+					429 = { is_friendly = yes }
+				
+				}
+				
+				if = {
+				
+					limit = {
+					
+						is_in_faction_with = AST 
+					
+					}
+					
+					285 = { is_friendly = yes }
+					521 = { is_friendly = yes }
+				
+				}
+				
+				if = {
+				
+					limit = {
+					
+						is_in_faction_with = NZL 
+					
+					}
+					
+					284 = { is_friendly = yes }
+					723 = { is_friendly = yes }
+				
+				}
+				
+			}
+			
+			126 = { is_friendly = yes }
+			
+		
+		}
+	
+	}
+	
+	
+		mean_time_to_happen = {
+		
+			days = 200 
+			
+			modifier = {
+			factor = 0.1
+			126 = { is_friendly = yes }
+		}
+			
+		}
+	
+	option = {
+	
+		name = imperialwar.13.a 
+		ai_chance = { factor = 100 }
+		
+		add_political_power = 150 
+		
+		ENG = { country_event = { id = imperialwar.14 days = 1 } }
+	
+	}
+	
+	option = {
+	
+		name = imperialwar.13.b 
+		ai_chance = { factor = 0 }
+		
+		add_political_power = -200 
+	
+	}
+
+}
+
+country_event = {#peace offer for ENG
+	
+	id = imperialwar.14 
+	title = imperialwar.14.t 
+	desc = imperialwar.14.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#surrender
+	
+		name = imperialwar.14.a 
+		ai_chance = {
+		
+			factor = 80 
+			
+			modifier = {
+			
+				factor = 20
+				
+			126 = { is_friendly = yes }
+			
+			}
+		
+		}
+		
+		white_peace = IRE
+		white_peace = CAN 
+		white_peace = SAF
+		white_peace = EGY
+		white_peace = ZIM 
+		white_peace = AST
+		white_peace = RAJ 
+		white_peace = NZL 
+
+		end_puppet = IRE
+		end_puppet = CAN 
+		end_puppet = SAF
+		end_puppet = EGY
+		end_puppet = ZIM 
+		end_puppet = AST
+		end_puppet = RAJ 
+		end_puppet = NZL 
+		
+		remove_from_faction = IRE
+		remove_from_faction = CAN 
+		remove_from_faction = SAF
+		remove_from_faction = EGY
+		remove_from_faction = ZIM 
+		remove_from_faction = AST
+		remove_from_faction = RAJ 
+		remove_from_faction = NZL 
+		
+		random_country = {
+		
+			limit = {
+				
+				has_country_flag = imperial_war_starter
+			
+			}
+			
+		dismantle_faction = yes 
+		
+		}
+		
+		every_state = {
+		
+			limit = {
+			
+				is_controlled_by = ENG 
+				is_core_of = IRE 
+			
+			}
+			
+			IRE = { transfer_state = PREV }
+		
+		}
+		
+		every_state = {
+		
+			limit = {
+			
+				is_controlled_by = ENG 
+				is_core_of = CAN 
+			
+			}
+			
+			CAN = { transfer_state = PREV }
+		
+		}
+		
+		every_state = {
+		
+			limit = {
+			
+				is_controlled_by = ENG 
+				is_core_of = ZIM 
+			
+			}
+			
+			ZIM = { transfer_state = PREV }
+		
+		}
+		
+		every_state = {
+		
+			limit = {
+			
+				is_controlled_by = ENG 
+				is_core_of = SAF 
+			
+			}
+			
+			SAF = { transfer_state = PREV }
+		
+		}
+		
+		every_state = {
+		
+			limit = {
+			
+				is_controlled_by = ENG 
+				is_core_of = RAJ 
+			
+			}
+			
+			RAJ = { transfer_state = PREV }
+		
+		}
+		
+		every_state = {
+		
+			limit = {
+			
+				is_controlled_by = ENG 
+				is_core_of = EGY 
+			
+			}
+			
+			EGY = { transfer_state = PREV }
+		
+		}
+		
+		every_state = {
+		
+			limit = {
+			
+				is_controlled_by = ENG 
+				is_core_of = AST 
+			
+			}
+			
+			AST = { transfer_state = PREV }
+		
+		}
+		
+		every_state = {
+		
+			limit = {
+			
+				is_controlled_by = ENG 
+				is_core_of = NZL 
+			
+			}
+			
+			NZL = { transfer_state = PREV }
+		
+		}
+		
+		add_political_power = -100 
+		
+		clr_global_flag = imperial_war_flag
+		set_global_flag = imperial_war_over
+		
+		hidden_effect = { country_event = { id = engdom.30 days = 25 } }
+		
+		drop_cosmetic_tag  = yes 
+	
+	}
+	
+	option = {#fight on 
+	
+		name = imperialwar.14.b 
+		ai_chance = {
+		
+			factor = 20 
+			
+			modifier = {
+			
+				factor = -20
+				
+			126 = { is_friendly = yes }
+			
+			}
+		
+		}
+		
+		add_political_power = -200 
+	
+	}
+
+}
+
+####foreign intervention#####
+
+country_event = {#Demand southern Persia 
+
+	id = imperialwar.15 
+	title = imperialwar.15.t 
+	desc = imperialwar.15.d 
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	
+		tag = PER 
+		is_in_faction_with = SOV 
+		
+		has_global_flag = imperial_war_flag 
+		ENG = { has_war_with = RAJ }
+		ENG = { 
+
+			controls_state = 413 
+			controls_state = 412 
+
+		}
+	
+	}
+	
+	mean_time_to_happen = { days = 35 }
+	
+	option = {#ultimatum 
+	
+		name = imperialwar.15.a 
+		ai_chance = { factor = 70 }
+		
+		add_political_power = 20 
+		
+		ENG = { country_event = { id = imperialwar.16 days = 1 } }
+		
+		add_named_threat = { threat = 3.5 name = iran_demand  }
+		reverse_add_opinion_modifier = { target = ENG modifier = iran_demand }
+	
+	}
+	
+	option = {#nothing 
+	
+		name = imperialwar.15.b 
+		ai_chance = { factor = 30 }
+		
+		add_political_power = -15 
+	
+	}
+
+}
+
+country_event = {#British side
+
+	id = imperialwar.16 
+	title = imperialwar.16.t 
+	desc = imperialwar.16.d 
+	
+	is_triggered_only = yes 
+	
+	option ={#Agree 
+	
+		name = imperialwar.16.a 
+		ai_chance = { 
+
+			factor = 50 
+			
+			modifier = { 
+
+				factor = 40 
+				
+				SOV = { controls_state = 584 }
+
+			}
+
+		}
+		
+		add_political_power = -50 
+		
+		every_state = { 
+		
+			limit = {
+			
+				is_controlled_by = ENG 
+				is_core_of = PER
+			
+			}
+			
+			PER = { transfer_state = PREV }
+		
+		}
+		
+		PER = { country_event = { id = imperialwar.17 } }
+	
+	}
+	
+	option = {#refuse 
+	
+		name = imperialwar.16.b 
+		ai_chance = { 
+
+			factor = 50 
+			
+			modifier = { 
+
+				factor = -40 
+				
+				SOV = { controls_state = 584 }
+				
+			}
+			
+		}
+		
+		add_political_power = 30 
+		
+		SOV = { country_event = { id = imperialwar.18 days = 1 } }
+	
+	}
+
+}
+
+country_event = {#Britain concedes
+
+	id = imperialwar.17 
+	title = imperialwar.17.t 
+	desc = imperialwar.17.d 
+	
+	is_triggered_only = yes 
+	 
+	option = {
+	
+		name = imperialwar.17.a 
+		
+		add_political_power = 75 
+	
+	}
+
+}
+
+country_event = {#Britain declines ultimatum - SOV 
+
+	id = imperialwar.18
+	title = imperialwar.18.t 
+	desc = imperialwar.18.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#war 
+	
+		name = imperialwar.18.a 
+		ai_chance = {
+		
+			factor = 50 
+			
+			modifier = { 
+
+				factor = 45 
+				
+				SOV = { controls_state = 584 }
+
+			}
+		
+		}
+		
+		declare_war_on = { target = ENG type = annex_everything }
+		
+		PER = { country_event = { id = imperialwar.19 } }
+		ENG = { country_event = { id = imperialwar.20 } }
+	
+	}
+	
+	option = {#back down 
+	
+		name = imperialwar.18.b 
+		ai_chance = {
+		
+			factor = 50 
+			
+			modifier = { 
+
+				factor = -45 
+				
+				SOV = { controls_state = 584 }
+
+			}
+		
+		}
+		
+		add_political_power = -50 
+		
+		PER = { country_event = { id = imperialwar.21} }
+		ENG = { country_event = { id = imperialwar.22 } }
+		add_named_threat = { threat = -3 name = backdown_threat }
+	
+	}
+
+}
+
+country_event = {#Soviets help 
+
+	id = imperialwar.19 
+	title = imperialwar.19.t 
+	desc = imperialwar.19.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = imperialwar.19.a 
+		add_political_power = 20
+	
+	}
+
+}
+
+country_event = {#Soviets attack 
+
+	id = imperialwar.20 
+	title = imperialwar.20.t 
+	desc = imperialwar.20.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = imperialwar.20.a 
+		add_political_power = -10
+	
+	}
+
+}
+
+country_event = {#Soviets betray 
+
+	id = imperialwar.21 
+	title = imperialwar.21.t 
+	desc = imperialwar.21.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = imperialwar.21.a 
+		add_political_power = -30
+		
+		reverse_add_opinion_modifier = { target = SOV modifier = DIP_no_support }
+	
+	}
+
+}
+
+country_event = {#Soviets back down 
+
+	id = imperialwar.22 
+	title = imperialwar.22.t 
+	desc = imperialwar.22.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = imperialwar.22.a 
+		add_political_power = 50
+		
+	
+	}
+
+}
+
+country_event = {#Soviets win 
+
+	
 
 }

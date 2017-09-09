@@ -133,6 +133,8 @@ news_event = { #Federalization
 	title = engdom.4.t 
 	desc = engdom.4.d 
 	
+	major = yes
+	
 	is_triggered_only = yes 
 	
 	option = {
@@ -832,3 +834,587 @@ country_event = {#The RAJ kneel
 
 }
 
+country_event = {#Home Rule Africa
+
+	id = engdom.26
+	title = engdom.26.t 
+	desc = engdom.26.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engdom.26.a 
+		
+		add_political_power = 100 
+		
+		every_state = {
+		
+			limit = {  
+			
+				is_controlled_by = ENG 
+				is_core_of = SOM
+			
+			}
+			
+			SOM = {
+			
+				transfer_state = PREV
+			
+			}
+		
+		}
+		
+		set_autonomy = {
+				target = SOM
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+			}
+	
+	
+	
+	every_state = {
+		
+			limit = {  
+			
+				is_controlled_by = ENG 
+				is_core_of = SUD
+			
+			}
+			
+			SUD = {
+			
+				transfer_state = PREV
+			
+			}
+		
+		}
+		
+		set_autonomy = {
+				target = SUD
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+			}
+			
+		every_state = {
+		
+			limit = {  
+			
+				is_controlled_by = ENG 
+				is_core_of = KEN
+			
+			}
+			
+			KEN = {
+			
+				transfer_state = PREV
+			
+			}
+		
+		}
+		
+		set_autonomy = {
+				target = KEN
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+		}
+		
+		every_state = {
+		
+			limit = {  
+			
+				is_controlled_by = ENG 
+				is_core_of = NIG
+			
+			}
+			
+			NIG = {
+			
+				transfer_state = PREV
+			
+			}
+		
+		}
+		
+		set_autonomy = {
+				target = NIG
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+		}
+		
+		every_state = {
+		
+			limit = {  
+			
+				is_controlled_by = ENG 
+				is_core_of = GHA
+			
+			}
+			
+			GHA = {
+			
+				transfer_state = PREV
+			
+			}
+		
+		}
+		
+		set_autonomy = {
+				target = GHA
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+		}
+		
+		every_state = {
+		
+			limit = {  
+			
+				is_controlled_by = ENG 
+				is_core_of = SIE
+			
+			}
+			
+			SIE = {
+			
+				transfer_state = PREV
+			
+			}
+		
+		}
+		
+		set_autonomy = {
+				target = SIE
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+		}
+		
+		every_state = {
+		
+			limit = {  
+			
+				is_controlled_by = ENG 
+				is_core_of = GAM
+			
+			}
+			
+			GAM = {
+			
+				transfer_state = PREV
+			
+			}
+		
+		}
+		
+		set_autonomy = {
+				target = GAM
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+		}
+		
+		every_state = {
+		
+			limit = {  
+			
+				is_controlled_by = ENG 
+				is_core_of = BOT
+			
+			}
+			
+			BOT = {
+			
+				transfer_state = PREV
+			
+			}
+		
+		}
+		
+		set_autonomy = {
+				target = BOT
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+		}
+		
+		ZIM = { add_state_core = 545 }
+		
+		every_state = {
+		
+			limit = {  
+			
+				is_controlled_by = ENG 
+				is_core_of = ZIM
+			
+			}
+			
+			ZIM = {
+			
+				transfer_state = PREV
+			
+			}
+		
+		}
+		
+		set_autonomy = {
+				target = ZIM
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+		}
+	
+	}
+
+}
+
+country_event = {#Home Rule Asia
+
+	id = engdom.27
+	title = engdom.27.t 
+	desc = engdom.27.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engdom.26.a 
+		
+		add_political_power = 100 
+		
+		every_state = {
+		
+			limit = {  
+			
+				is_controlled_by = ENG 
+				is_core_of = MAL
+			
+			}
+			
+			MAL = {
+			
+				transfer_state = PREV
+			
+			}
+		
+		}
+		
+		set_autonomy = {
+				target = MAL
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+			}
+	
+	
+	
+	every_state = {
+		
+			limit = {  
+			
+				is_controlled_by = ENG 
+				is_core_of = HNK
+			
+			}
+			
+			HNK = {
+			
+				transfer_state = PREV
+			
+			}
+		
+		}
+		
+		set_autonomy = {
+				target = HNK
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+			}
+	
+	}
+
+}
+
+country_event = {#Home Rule Asia
+
+	id = engdom.28
+	title = engdom.28.t 
+	desc = engdom.28.d 
+	
+	is_triggered_only = yes 
+	
+	option = {
+	
+		name = engdom.26.a 
+		
+		add_political_power = 100 
+		
+		every_state = {
+		
+			limit = {  
+			
+				is_controlled_by = RAJ 
+				is_core_of = PAK
+			
+			}
+			
+			PAK = {
+			
+				transfer_state = PREV
+			
+			}
+		
+		}
+		
+		set_autonomy = {
+				target = PAK
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+			}
+	
+	
+	
+	every_state = {
+		
+			limit = {  
+			
+				is_controlled_by = PAK 
+				is_core_of = BUR
+			
+			}
+			
+			BUR = {
+			
+				transfer_state = PREV
+			
+			}
+		
+		}
+		
+		set_autonomy = {
+				target = BUR
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+			}
+			
+		set_autonomy = {
+				target = RAJ
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+		}
+	
+	}
+
+}
+
+country_event = {#Anti-war protest 
+
+	id = engdom.29 
+	title = engdom.29.t 
+	desc = engdom.29.d 
+	
+	fire_only_once = yes 
+	
+	trigger = {
+	
+		tag = ENG 
+		
+		has_war = yes 
+		
+		has_global_flag = imperial_war_flag 
+	
+	}
+	
+	mean_time_to_happen = { days = 70 }
+	
+	option = {
+	
+		name = engdom.29.a 
+		
+		add_political_power = -50 
+	
+	}
+
+}
+
+country_event = {#Massive socialist event 
+
+	id = engdom.30
+	title = engdom.30.t 
+	desc = engdom.30.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#possibly add some branches here 
+	
+		name = engdom.30.a 
+		
+		add_political_power = -75 
+		
+		hidden_effect = { country_event = { id = engdom.31 days = 20 } }
+	
+	}
+
+}
+
+country_event = {#British civil war 
+
+	id = engdom.31 
+	title = engdom.31.t 
+	desc = engdom.31.d 
+	
+	is_triggered_only = yes 
+	
+	option = {#loyal
+	
+		trigger = { is_ai = no }
+		
+		name = engdom.31.a 
+		
+		start_civil_war = {
+		
+				ideology = communism
+				size = 0.5
+				capital = 132
+				states = { 132 128 120 136 133 121 131 130 132 122 }
+				
+			}
+			
+			random_other_country = {
+			
+				limit = {
+					original_tag = ENG
+					has_government = communism
+				}
+				
+				set_equipment_fraction = 0.5 
+				set_national_unity = 0.9
+				
+				add_popularity = {
+				
+					ideology = communism
+					popularity = 0.35
+					
+				}
+				
+				add_popularity = {
+				
+					ideology = socialism
+					popularity = 0.1
+					
+				}
+				
+			}
+			
+			set_global_flag = british_civil_war 
+			
+			country_event = { id = engdom.32 }
+	}
+	
+	option = {#commie
+	
+		trigger = { is_ai = no }
+		
+		name = engdom.31.b
+		
+		start_civil_war = {
+			
+				ruling_party = communism
+				ideology = conservatism
+				size = 0.5
+				capital = 126
+				states = { 129 125 126 338 123 127 }
+				
+			}
+			
+			random_other_country = {
+			
+				limit = {
+					original_tag = ENG
+					has_government = conservatism
+				}
+				
+				set_equipment_fraction = 0.5 
+				set_national_unity = 0.9
+				
+				add_popularity = {
+				
+					ideology = conservatism
+					popularity = 0.35
+					
+				}
+				
+				add_popularity = {
+				
+					ideology = reactionarism
+					popularity = 0.1
+					
+				}
+				
+			}
+			
+			set_global_flag = british_civil_war 
+			
+			country_event = { id = engdom.32 }
+	}
+	
+	option = {#ai 
+	
+		trigger = { is_ai = yes }
+	
+		name = engdom.31.c 
+		
+		start_civil_war = {
+		
+				ideology = communism
+				size = 0.5
+				capital = 132
+				states = { 132 128 120 136 133 121 131 130 122 }
+				
+			}
+			
+			random_other_country = {
+			
+				limit = {
+					original_tag = ENG
+					has_government = communism
+				}
+				
+				set_equipment_fraction = 0.5 
+				set_national_unity = 0.9
+				
+				add_popularity = {
+				
+					ideology = communism
+					popularity = 0.35
+					
+				}
+				
+				add_popularity = {
+				
+					ideology = socialism
+					popularity = 0.1
+					
+				}
+				
+			}
+			
+			set_global_flag = british_civil_war 
+			
+			country_event = { id = engdom.32 }
+	
+	}
+
+}
+
+news_event = {#british civil war news
+
+	id = engdom.32 
+	title = engdom.32.t 
+	desc = engdom.32.d 
+	
+	is_triggered_only = yes 
+	
+	major = yes 
+	
+	option = {
+	
+		name = engdom.32.a
+	
+	}
+
+}

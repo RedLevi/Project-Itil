@@ -81,7 +81,7 @@ units = {
 		location = 9814
 		division_template = "National Guard Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 
 	}
 	division = {			
@@ -89,77 +89,77 @@ units = {
 		location = 9814
 		division_template = "National Guard Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "San Francisco Garrison"
 		location = 9671
 		division_template = "Garrison Brigade"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}
 	division = {			
 		name = "Phoenix Garrison"
 		location = 853
 		division_template = "Garrison Brigade"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}
 	division = {			
 		name = "1. Infantry Division"
 		location = 11763
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "1. Mountain Brigade"
 		location = 10645
 		division_template = "Mountain Brigade"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "2. Mountain Brigade"
 		location = 4865
 		division_template = "Mountain Brigade"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "1. Cavalry Division"
 		location = 4865
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "2. Infantry Division"
 		location = 5044
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}
 	division = {			
 		name = "3. Infantry Division"
 		location = 5044
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "4. Infantry Division"
 		location = 1562
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "2. Cavalry Division"
 		location = 1562
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}
 	
 	navy = {

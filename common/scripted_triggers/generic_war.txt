@@ -1,0 +1,27 @@
+is_friendly = {
+
+	OR = {
+	
+		is_controlled_by = ROOT
+		
+		any_country = {
+		
+			is_in_faction_with = ROOT
+			controls_state = PREV
+			
+		}
+		
+		
+		
+		any_country = {
+		
+			is_subject_of = ROOT 
+			controls_state =  PREV
+			
+		
+		}
+		
+	
+	}
+
+}

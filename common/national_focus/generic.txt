@@ -1641,6 +1641,28 @@ focus_tree = {
 		y = 1 
 		cost = 10 
 		
+		ai_will_do = {
+		
+			factor = 1 
+			
+			modifier = {
+			
+					has_government = communism 
+					
+					factor = 2
+				
+			}
+			
+			modifier = {
+			
+					has_government = socialism 
+					
+					factor = 1
+				
+			}
+		
+		}
+		
 		prerequisite = { focus = political_effort }
 		
 		mutually_exclusive = { focus = liberty_path_focus focus = order_path_focus }
@@ -1661,7 +1683,29 @@ focus_tree = {
 		icon = GFX_socialist_path_focus 
 		x = 24 
 		y = 2 
-		cost = 10 
+		cost = 10
+
+			ai_will_do = {
+		
+			factor = 1 
+			
+			modifier = {
+			
+					has_government = communism 
+					
+					factor = 1
+				
+			}
+			
+			modifier = {
+			
+					has_government = socialism 
+					
+					factor = 3
+				
+			}
+		
+		}
 		
 		prerequisite = { focus = equality_path_focus }
 		mutually_exclusive = { focus = communist_path_focus }
@@ -1768,6 +1812,29 @@ focus_tree = {
 		x = 19 
 		y = 2 
 		cost = 10
+		
+		ai_will_do = {
+		
+			factor = 1 
+			
+			modifier = {
+			
+					has_government = communism 
+					
+					factor = 3
+				
+			}
+			
+			modifier = {
+			
+					has_government = socialism 
+					
+					factor = 1
+				
+			}
+		
+		}
+		
 		
 		prerequisite = { focus = equality_path_focus }
 		mutually_exclusive = { focus = socialist_path_focus }
@@ -2111,6 +2178,28 @@ focus_tree = {
 		y = 1 
 		cost = 10 
 		
+		ai_will_do = {
+		
+			factor = 1 
+			
+			modifier = {
+			
+					has_government = liberalism 
+					
+					factor = 1
+				
+			}
+			
+			modifier = {
+			
+					has_government = conservatism 
+					
+					factor = 1
+				
+			}
+		
+		}
+		
 		prerequisite = { focus = political_effort }
 		mutually_exclusive = { focus = equality_path_focus focus = order_path_focus }
 		
@@ -2131,6 +2220,28 @@ focus_tree = {
 		x = 26 
 		y = 2 
 		cost = 10 
+		
+		ai_will_do = {
+		
+			factor = 1 
+			
+			modifier = {
+			
+					has_government = liberalism 
+					
+					factor = 2
+				
+			}
+			
+			modifier = {
+			
+					has_government = conservatism 
+					
+					factor = 1
+				
+			}
+		
+		}
 		
 		prerequisite = { focus = liberty_path_focus }
 		mutually_exclusive = { focus = conservatism_path_focus }
@@ -2195,6 +2306,28 @@ focus_tree = {
 		x = 28 
 		y = 2 
 		cost = 10 
+		
+		ai_will_do = {
+		
+			factor = 1 
+			
+			modifier = {
+			
+					has_government = liberalism 
+					
+					factor = 1
+				
+			}
+			
+			modifier = {
+			
+					has_government = conservatism 
+					
+					factor = 2
+				
+			}
+		
+		}
 		
 		prerequisite = { focus = liberty_path_focus }
 		mutually_exclusive = { focus = liberalism_path_focus }
@@ -2409,6 +2542,28 @@ focus_tree = {
 		y = 1 
 		cost = 10 
 		
+		ai_will_do = {
+		
+			factor = 1 
+			
+			modifier = {
+			
+					has_government = reactionarism 
+					
+					factor = 1
+				
+			}
+			
+			modifier = {
+			
+					has_government = national_integralism 
+					
+					factor = 2
+				
+			}
+		
+		}
+		
 		prerequisite = { focus = political_effort }
 		mutually_exclusive = { focus = equality_path_focus focus = liberty_path_focus }
 		
@@ -2429,6 +2584,28 @@ focus_tree = {
 		x = 32 
 		y = 2 
 		cost = 10 
+		
+		ai_will_do = {
+		
+			factor = 1 
+			
+			modifier = {
+			
+					has_government = reactionarism 
+					
+					factor = 2
+				
+			}
+			
+			modifier = {
+			
+					has_government = national_integralism 
+					
+					factor = 1
+				
+			}
+		
+		}
 		
 		prerequisite = { focus = order_path_focus }
 		mutually_exclusive = { focus = integralism_path_focus }
@@ -2581,6 +2758,28 @@ focus_tree = {
 		x = 38 
 		y = 2 
 		cost = 10 
+		
+		ai_will_do = {
+		
+			factor = 1 
+			
+			modifier = {
+			
+					has_government = reactionarism 
+					
+					factor = 1
+				
+			}
+			
+			modifier = {
+			
+					has_government = national_integralism 
+					
+					factor = 2
+				
+			}
+		
+		}
 		
 		prerequisite = { focus = order_path_focus }
 		mutually_exclusive = { focus = reactionarism_path_focus }

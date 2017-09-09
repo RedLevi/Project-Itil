@@ -16,6 +16,7 @@ opinion_modifiers = {
 	pacifism_opinion = { value = 50 }
 	world_domination_opinion = { value = -75 }
 	DIP_refuse_offer = { value = -10 }
+	DIP_no_support = { value = -25 }
 #####ENG####
 ENG_EUR_theater = { value = 25 }
 ENG_dip_support = { value = 50 }
@@ -31,5 +32,8 @@ ENG_asia_theater = { value = 25 }
 ENG_dip_inf = { value = 35 }
 ENG_chinese_direction = { value = -25 }
 spared_federal = { value = 75 }
+####Imperial War####
+iran_demand = { value = -30 }
+
 
 }

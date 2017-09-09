@@ -65,7 +65,7 @@ units = {
 		location = 3957
 		division_template = "Garrison Brigade"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 
 	}
 	division = {			
@@ -73,105 +73,105 @@ units = {
 		location = 6845
 		division_template = "Garrison Brigade"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "New York Garrison"
 		location = 3878
 		division_template = "Garrison Brigade"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}
 	division = {			
 		name = "Nashville Garrison"
 		location = 12501
 		division_template = "Garrison Brigade"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}
 	division = {			
 		name = "1. Infantry Division"
 		location = 11654
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "2. Cavalry Division"
 		location = 11654
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}		
 	division = {			
 		name = "1. Mountain Brigade"
 		location = 12791
 		division_template = "Mountain Brigade"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "2. Mountain Brigade"
 		location = 1827
 		division_template = "Mountain Brigade"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}
 	division = {			
 		name = "1. Cavalry Division"
 		location = 1827
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "2. Infantry Division"
 		location = 6710
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}
 	division = {			
 		name = "3. Infantry Division"
 		location = 6710
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "4. Infantry Division"
 		location = 1836
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "Chicago Garrison"
 		location = 9450
 		division_template = "Infantry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "3. Cavalry Division"
 		location = 6710
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}
 	division = {			
 		name = "1. Texas Garrison"
 		location = 10337
 		division_template = "Garrison Brigade"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}	
 	division = {			
 		name = "2. Texas Garrison"
 		location = 3960
 		division_template = "Garrison Brigade"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.15
+		start_equipment_factor = 1.0
 	}		
 	
 	navy = {

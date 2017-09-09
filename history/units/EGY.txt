@@ -32,11 +32,16 @@ units = {
 		start_experience_factor = 0.3
 	}
 	division = {
+		name = "2. Jund el-Mashaa"  			
+		location = 7011
+		division_template = "Jund el-Mashaa"
+		start_experience_factor = 0.3
+	}
+	division = {
 		name = "1. Jund el-Farsan"		
 		location = 7011
 		division_template = "Jund el-Farsan"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_experience_factor = 0.3
 	}
 	division = {
 		name = "2. Jund el-Mashaa"

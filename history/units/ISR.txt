@@ -28,7 +28,7 @@ units = {
 		location = 1086
 		division_template = "Ugdat Raglim"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.8
+		start_equipment_factor = 1.0
 
 	}
 	division = {
@@ -36,7 +36,7 @@ units = {
 		location = 4206
 		division_template = "Ugdat Raglim"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.8
+		start_equipment_factor = 1.0
 
 	}
 	division = {
@@ -44,7 +44,7 @@ units = {
 		location = 1086
 		division_template = "Ugdat Raglim Elit"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.8
+		start_equipment_factor = 1.0
 
 	}
 	division = {
@@ -52,43 +52,26 @@ units = {
 		location = 4206
 		division_template = "Ugdat Raglim Elit"
 		start_experience_factor = 0.2
-		start_equipment_factor = 0.8
+		start_equipment_factor = 1.0
 	}
-	division = {
-		name = "Ugdat Raglim Elit 3"
-		location = 4206
-		division_template = "Ugdat Raglim Elit"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.8
-	}
-	division = {
-		name = "Ugdat Raglim Elit 4"
-		location = 4206
-		division_template = "Ugdat Raglim Elit"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.8
-	}
+	
 	navy = {
 		name = "Tzi Mashkhatot"
 		base = 4206
 		location = 4206  # Tel Aviv
-		ship = { name = "Arieh" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISR } } }
-		ship = { name = "Liviatan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISR } } }
-		ship = { name = "Karish" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISR } } }
-		ship = { name = "Namer" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISR } } }
-		ship = { name = "Ait" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISR } } }
-		ship = { name = "Baz" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISR } } }	
+		ship = { name = "Ashdod" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISR } } }
+		ship = { name = "Eilat" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISR } } }
+		ship = { name = "Haifa" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISR } } }
+		ship = { name = "Nahariya" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ISR } } }
 	}
 	navy = {
 		name = "Tzi Tzolelot"
 		base = 4206
 		location = 4206  # Tel Aviv
-		ship = { name = "SS-1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ISR } } }
-		ship = { name = "SS-2" definition = destroyer equipment = { submarine_1 = { amount = 1 owner = ISR } } }
-		ship = { name = "SS-3" definition = destroyer equipment = { submarine_1 = { amount = 1 owner = ISR } } }
-		ship = { name = "SS-4" definition = destroyer equipment = { submarine_1 = { amount = 1 owner = ISR } } }
-		ship = { name = "SS-5" definition = destroyer equipment = { submarine_1 = { amount = 1 owner = ISR } } }
-		ship = { name = "SS-6" definition = destroyer equipment = { submarine_1 = { amount = 1 owner = ISR } } }	
+		ship = { name = "Dolphin" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ISR } } }
+		ship = { name = "Liviatan" definition = destroyer equipment = { submarine_1 = { amount = 1 owner = ISR } } }
+		ship = { name = "Dakar" definition = destroyer equipment = { submarine_1 = { amount = 1 owner = ISR } } }
+	
 	}	   	
 }
 
@@ -96,7 +79,7 @@ air_wings = {
 	454 = { 	
 		fighter_equipment_0 =  {
 			owner = "ISR" 
-			amount = 20
+			amount = 40
 		}
 	}
 }	

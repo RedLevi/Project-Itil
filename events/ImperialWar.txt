@@ -1446,8 +1446,284 @@ country_event = {#Soviets back down
 
 }
 
-country_event = {#Soviets win 
+country_event = {#Soviets win, british choice
 
+	id = imperialwar.23
+	title = imperialwar.23.t 
+	desc = imperialwar.23.d 
+	trigger = {
+		tag = ENG 
+		has_global_flag = imperial_war_flag 
+		has_war_with = SOV 
+		has_war_with = PER 
+		SOV = {
+			410 = { is_friendly = yes }
+			440 = { is_friendly = yes } 
+			266 = { is_friendly = yes }
+		}
+	}
 	
+	mean_time_to_happen = { days = 15 }
+	
+	option = {#surrender
+		name = imperialwar.23.a 
+		ai_chance = { factor = 50 }
+		SOV = { country_event = { id = imperialwar.24 days = 1 } }
+	}
+	
+	option = {#don't 
+		name = imperialwar.23.b 
+		ai_chance = { factor = 50 }
+		add_political_power = -30 
+	}
 
+}
+
+country_event = {#Soviets win, Soviet choice
+
+	id = imperialwar.24
+	title = imperialwar.24.t 
+	desc = imperialwar.24.d 
+	is_triggered_only = yes
+	
+	option = {#agree
+		name = imperialwar.24.a 
+		ai_chance = { factor = 50 }
+		ENG = { country_event = { id = imperialwar.25 } }
+		add_political_power = 50 
+	}
+	
+	option = {#don't 
+		name = imperialwar.24.b 
+		ai_chance = { factor = 50 }
+		add_political_power = -10 
+		ENG = { country_event = imperialwar.26 }
+	}
+
+}
+
+country_event = {#Peace with Soviets
+
+	id = imperialwar.25
+	title = imperialwar.25.t 
+	desc = imperialwar.25.d 
+	is_triggered_only = yes
+	
+	option = {#agree
+		name = imperialwar.24.a 
+		PER = { country_event = { id = imperialwar.27 } }
+		add_political_power = -30 
+		every_country = {
+			limit = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV 
+				is_subject_of = SOV
+			}
+			}
+			
+			ENG = { white_peace = PREV }
+		}
+		PER = {
+			transfer_state = 413 
+			transfer_state = 412 
+			transfer_state = 410 
+		}
+		
+	}
+
+}
+
+country_event = {#No peace
+
+	id = imperialwar.26
+	title = imperialwar.26.t 
+	desc = imperialwar.26.d 
+	is_triggered_only = yes
+	
+	option = {
+		name = imperialwar.26.a 
+		add_political_power = -50 	
+	}
+
+}
+
+country_event = {#Persia wins
+
+	id = imperialwar.27
+	title = imperialwar.27.t 
+	desc = imperialwar.27.d 
+	is_triggered_only = yes
+	
+	option = {
+		name = imperialwar.27.a 
+		add_political_power = 150 	
+	}
+
+}
+
+country_event = {#British win, soviet choice
+
+	id = imperialwar.28
+	title = imperialwar.28.t 
+	desc = imperialwar.28.d 
+	trigger = {
+		tag = SOV 
+		has_global_flag = imperial_war_flag 
+		has_war_with = ENG 
+		is_in_faction_with = PER
+		ENG = {
+			266 = { is_friendly = yes }
+			}
+	}	
+	
+	mean_time_to_happen = { days = 10 }
+	
+	option = {#surrender
+		name = imperialwar.28.a 
+		ai_chance = { factor = 30 }
+		ENG = { country_event = { id = imperialwar.29 days = 1 } }
+	}
+	
+	option = {#don't 
+		name = imperialwar.28.b 
+		ai_chance = { factor = 70 }
+		add_political_power = -10
+	}
+
+}
+
+country_event = {#British win, British choice
+
+	id = imperialwar.29
+	title = imperialwar.29.t 
+	desc = imperialwar.29.d 
+	is_triggered_only = yes
+	
+	option = {#agree
+		name = imperialwar.29.a 
+		ai_chance = { factor = 50 }
+		SOV = { country_event = { id = imperialwar.230 } }
+		add_political_power = 50 
+	}
+	
+	option = {#don't 
+		name = imperialwar.25.b 
+		ai_chance = { factor = 50 }
+		SOV = { country_event = imperialwar.31 }
+	}
+
+}
+
+country_event = {#Peace with British
+
+	id = imperialwar.30
+	title = imperialwar.30.t 
+	desc = imperialwar.30.d 
+	is_triggered_only = yes
+	
+	option = {#agree
+		name = imperialwar.30.a 
+		PER = { country_event = { id = imperialwar.32 } }
+		add_political_power = -30 
+		every_country = {
+		limit = {
+			OR = {
+				tag = ENG
+				is_in_faction_with = ENG 
+				is_subject_of = ENG
+			}
+			}
+			SOV = { white_peace = PREV }
+			PER = { white_peace = PREV }
+		}	
+	}
+
+}
+
+country_event = {#No peace
+
+	id = imperialwar.31
+	title = imperialwar.31.t 
+	desc = imperialwar.31.d 
+	is_triggered_only = yes
+	
+	option = {
+		name = imperialwar.31.a 
+		add_political_power = -20 	
+	}
+
+}
+
+country_event = {#Persia lose
+
+	id = imperialwar.32
+	title = imperialwar.32.t 
+	desc = imperialwar.32.d 
+	is_triggered_only = yes
+	
+	option = {
+		name = imperialwar.32.a 
+		add_political_power = -100 	
+	}
+
+}
+
+country_event = {#The British aren't watching - AME 
+	id = imperialwar.33 
+	title = imperialwar.33.t 
+	desc = imperialwar.33.d 
+	trigger = {
+		tag = AME 
+		has_global_flag = imperial_war_flag 
+		has_war = no 
+		CAN = { has_war_with = ENG }
+	}
+	mean_time_to_happen = { days = 50 }
+	option = {#Invade USA 
+		trigger = { USA = { exists = yes } }
+		name = imperialwar.33.a 
+		ai_chance = { factor = 50 }
+		add_political_power = 40 
+		declare_war_on = { target = USA type = annex_everything }
+	}
+	option = {#invade Canada
+		name = imperialwar.33.b 
+		ai_chance = { factor = 40 }
+		add_political_power = 40 
+		declare_war_on = { target = CAN type = annex_everything }
+		ENG = { country_event = { id = imperialwar.34 days = 2 } }
+	}
+	option = {#invade both
+		trigger = { USA = { exists = yes } }
+		name = imperialwar.33.c 
+		ai_chance = { factor = 5 }
+		add_political_power = 80 
+		declare_war_on = { target = CAN type = annex_everything }
+		declare_war_on = { target = USA type = annex_everything }
+		ENG = { country_event = { id = imperialwar.34 days = 2 } }
+	}
+	option = {#invade neither
+		name = imperialwar.33.e 
+		ai_chance = { factor = 5 }
+		add_political_power = -30 
+		add_named_threat = { name = AME_no_expansion threat = -3 }
+	}
+}
+
+country_event = {#America invades Canada
+	id = imperialwar.34
+	title = imperialwar.34.t 
+	desc = imperialwar.34.d 
+	is_triggered_only = yes 
+	option = {#attack them 
+		name = imperialwar.34.a 
+		ai_chance = { factor = 30 }
+		declare_war_on = { target = AME type = annex_everything }
+	}
+	option = {#later 
+		name = imperialwar.34.b 
+		ai_chance = { factor = 70 }
+		add_political_power = -40 
+	}
 }

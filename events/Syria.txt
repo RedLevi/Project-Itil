@@ -1,0 +1,194 @@
+###koach###
+
+add_namespace = syria
+
+country_event = {#Hajj of 1939 
+	id = syria.1
+	title = syria.1.t 
+	desc = syria.1.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = SYR
+		date > 1939.1.19 
+		NOT = { has_war_with = SAU }
+	}
+	option = {#Jerusalem
+		trigger = { ISR = { is_subject_of = SYR } }
+		name = syria.1.a 
+		ai_chance = { factor = 50 }
+		reverse_add_opinion_modifier = { target = ISR modifier = jerusalem_visit }
+		hidden_effect = { country_event = { id = syria.3 days = 7 } }
+		ISR = { country_event = { id = syria.2 days = 1 } }
+	}
+	option = {#Mecca 
+		trigger = { SAU = { exists = yes } }
+		name = syria.1.b 
+		ai_chance = { factor = 40 }
+		add_political_power = 40 
+		hidden_effect = { country_event = { id = syria.10 days = 7 } }
+	}
+	option = {#damascus 
+		name = syria.1.c 
+		ai_chance = { factor = 10 }
+		add_political_power = 70 
+		hidden_effect = { country_event = { id = syria.? days = 7 } }
+		country_event = { id = syria.? days = 1 }
+		
+	}
+		
+}
+
+country_event = {#visit for ISR 
+	id = syria.2
+	title = syria.2.t 
+	desc = syria.2.d 
+	is_triggered_only = yes 
+	
+	option = {
+		name = syria.2.a 
+		reverse_add_opinion_modifier = { target = SYR modifier = jerusalem_visit }
+		add_political_power = 50 
+	}
+}
+
+country_event = {#Assasination in Jerusalem 
+	id = syria.3
+	title = syria.3.t 
+	desc = syria.3.d 
+	is_triggered_only = yes 
+	option = {#dies 
+		name = syria.3.a 
+		ai_chance = { factor = 60	 }
+		add_political_power = -100 
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Ghazi I al-Hashimi"
+			desc = ""
+			picture = "gfx/leaders/SYR/Ghazi_I.dds"
+			ideology = autocracy
+			traits = {
+				#
+			}
+		}
+		
+		hidden_effect = { country_event = { syria.5 days = 2 } }
+		country_event = { id = syria.4 }
+		add_named_threat = { name = faisal_dead threat = 1 }
+	}
+	
+	option = {#survives 
+		name = syria.3.b
+		ai_chance = { factor = 40 }
+		ISR = { country_event = { id = syria.7 } }
+		 country_event = { id = syria.8 days = 3 }
+	}
+}
+
+news_event = {#faisal killed in Jerusalem
+	id = syria.4 
+	title = syria.4.t
+	desc = syria.4.d 
+	is_triggered_only = yes 
+	major = yes 
+	
+	option = {
+		trigger = { 
+			NOT = {
+				tag = ISR 
+				tag = SYR
+			}
+		}
+		name = syria.4.a 
+	}
+	option = {
+		trigger = {
+			OR = {
+				tag = SYR
+				tag = ISR
+			}
+		}
+		name = syria.4.b
+	}
+}
+
+country_event = {#Coronation of Ghazi
+	id = syria.5 
+	title = syria.5.t 
+	desc = syria.5.d 
+	is_triggered_only = yes 
+	
+	option = {#war 
+		name = syria.5.a 
+		ai_chance = { factor = 95 }
+		add_political_power = 30 
+		end_puppet = ISR 
+		declare_war_on = { target = ISR type = annex_everything }
+	}
+	option = {#turn the cheek
+		name = syria.5.b 
+		ai_chance = { factor = 5 }
+		add_political_power = -50 
+		reverse_add_opinion_modifier = { target = ISR modifier = SYR_forgive_ISR }
+		ISR = { country_event = { id = syria.6 } }
+		#potential bad stuff
+	}
+}
+
+country_event = {#Ghazi forgives
+	id = syria.6
+	title = syria.6.t 
+	desc = syria.6.d 
+	is_triggered_only = yes 
+	option = {
+		name = syria.6.a 
+	}
+}
+
+country_event = {#Faisal shot - ISR 
+	id = syria.7 
+	title = syria.7.t 
+	desc = syria.7.d 
+	is_triggered_only = yes 
+	option = {
+		name = syria.7.a 
+		add_political_power = -10 
+	}
+}
+
+country_event = {#Faisal recovers
+	id = syria.8 
+	title = syria.8.t 
+	desc = syria.8.d 
+	is_triggered_only = yes 
+	option = {
+		name = syria.8.a 
+		reverse_add_opinion_modifier = { target = ISR modifier = SYR_forgive_ISR }
+		add_political_power = 50 
+		ISR = { country_event = { id = syria.9 } }
+	}
+}
+
+country_event = {#A dinner with faisal
+	id = syria.9 
+	title = syria.9.t 
+	desc = syria.9.d 
+	is_triggered_only = yes 
+	option = {
+		name = syria.9.a 
+		add_political_power = 20 
+		reverse_add_opinion_modifier = { target = SYR modifier = SYR_forgive_ISR }
+	}
+}
+
+country_event = {#Assasination in SAU 
+	id = syria.10 
+	title = syria.10.t 
+	desc = syria.10.d 
+	is_triggered_only = yes 
+	option = {#lives 
+		name = syria.10.a 
+		ai_chance = { factor = 10 }
+		SAU = { country_event = { id = syria.11 } }
+		hidden_effect
+	}
+}

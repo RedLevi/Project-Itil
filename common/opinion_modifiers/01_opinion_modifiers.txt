@@ -34,6 +34,9 @@ ENG_chinese_direction = { value = -25 }
 spared_federal = { value = 75 }
 ####Imperial War####
 iran_demand = { value = -30 }
+###Syria###
+jerusalem_visit = { value = 40 }
+SYR_forgive_ISR = { value = 30 }
 
 
 }

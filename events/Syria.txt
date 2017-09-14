@@ -25,14 +25,14 @@ country_event = {#Hajj of 1939
 		name = syria.1.b 
 		ai_chance = { factor = 40 }
 		add_political_power = 40 
-		hidden_effect = { country_event = { id = syria.10 days = 7 } }
+		hidden_effect = { SAU = { country_event = { id = syria.10 days = 1 } } }
 	}
 	option = {#damascus 
 		name = syria.1.c 
 		ai_chance = { factor = 10 }
 		add_political_power = 70 
-		hidden_effect = { country_event = { id = syria.? days = 7 } }
-		country_event = { id = syria.? days = 1 }
+		hidden_effect = { country_event = { id = syria.19 days = 7 } }
+		country_event = { id = syria.18 days = 1 }
 		
 	}
 		
@@ -58,7 +58,7 @@ country_event = {#Assasination in Jerusalem
 	is_triggered_only = yes 
 	option = {#dies 
 		name = syria.3.a 
-		ai_chance = { factor = 60	 }
+		ai_chance = { factor = 60 }
 		add_political_power = -100 
 		kill_country_leader = yes
 		create_country_leader = {
@@ -180,15 +180,164 @@ country_event = {#A dinner with faisal
 	}
 }
 
-country_event = {#Assasination in SAU 
+country_event = {#Faisal comes to visit
 	id = syria.10 
 	title = syria.10.t 
 	desc = syria.10.d 
 	is_triggered_only = yes 
-	option = {#lives 
+	option = {#kill him 
 		name = syria.10.a 
+		ai_chance = { factor = 90 }
+		hidden_effect = { SYR = { country_event = { id = syria.12 days = 6 } } }
+		custom_effect_tooltip = kill_faisal
+	}
+	option = {#don't kill 
+		name = syria.10.b 
 		ai_chance = { factor = 10 }
-		SAU = { country_event = { id = syria.11 } }
-		hidden_effect
+		hidden_effect = { SYR = { country_event = { id = syria.11 days = 6 } } }
+		custom_effect_tooltip = dont_kill_faisal
+	}
+}
+
+country_event = {#Faisal completes Hajj 
+	id = syria.11
+	title = syria.11.t 
+	desc = syria.11.d 
+	is_triggered_only = yes 
+	option = {
+		name = syria.11.a 
+		add_political_power = 85 
+	}
+}
+
+country_event = {#Faisal shot in Mecca 
+	id = syria.12 
+	title = syria.12.t 
+	desc = syria.12.d 
+	is_triggered_only = yes 
+	option = {#dies 
+		name = syria.12.a 
+		ai_chance = { factor = 90 }
+		add_political_power = -100 
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Ghazi I al-Hashimi"
+			desc = ""
+			picture = "gfx/leaders/SYR/Ghazi_I.dds"
+			ideology = autocracy
+			traits = {
+				#
+			}
+		}
+		
+		hidden_effect = { country_event = { id = syria.14 days = 2 } }
+		country_event = { id = syria.13 }
+		add_named_threat = { name = faisal_dead threat = 1 }
+	}
+	option = {#survives
+		name = syria.12.b 
+		ai_chance = { factor = 10 }
+		country_event = { id = syria.15 days = 3 }
+	}
+}
+
+news_event = {#faisal shot in mecca 
+	id = syria.13 
+	title = syria.13.t 
+	desc = syria.13.d 
+	is_triggered_only = yes 
+	option = {
+		trigger = {
+			NOT = {
+				tag = SAU 
+				tag = SYR 
+			}
+		}
+		name = syria.13.a 
+	}
+	option = {
+		trigger = {
+			OR = {
+				tag = SAU 
+				tag = SYR 
+			}
+		}
+		name = syria.13.b 
+	}
+}
+
+country_event = {#coronation of ghazi mecca 
+	id = syria.14 
+	title = syria.14.t 
+	desc = syria.14.d 
+	is_triggered_only = yes 
+	option = {#war
+		name = syria.14.a 
+		ai_chance = { factor = 100 }
+		declare_war_on = { target = SAU type = annex_everything }
+	}
+	option = {#dont 
+		name = syria.14.b 
+		ai_chance = { factor = 0 }
+		add_political_power = -100
+	}
+}
+
+country_event = {#Faisal survives in Mecca
+	id = syria.15 
+	title = syria.15.t 
+	desc = syria.15.d 
+	is_triggered_only = yes 
+	option = {#war 
+		name = syria.15.a 
+		ai_chance = { factor = 95 }
+		declare_war_on = { target = SAU type = annex_everything }
+		SAU = { country_event = { id = syria.16 } }
+	}
+	option = {#peace 
+		name = syria.15.b 
+		ai_chance = { factor = 5 }
+		add_political_power = -70 
+		SAU = { country_event = { id = syria.17 } }
+	}
+}
+
+country_event = {#Faisal survives war 
+	id = syria.16
+	title = syria.16.t 
+	desc = syria.16.d 
+	is_triggered_only = yes 
+	option = {
+		name = syria.16.a
+	}
+}
+
+country_event = {#Faisal survives peace 
+	id = syria.17
+	title = syria.17.t 
+	desc = syria.17.d 
+	is_triggered_only = yes 
+	option = {
+		name = syria.17.a
+	}
+}
+
+country_event = {#Preperation for a feast
+	id = syria.18 
+	title = syria.18.t 
+	desc = syria.18.d 
+	is_triggered_only = yes 
+	option = {
+		name = syria.18.a 
+	}
+}
+country_event = {#Celebration in damascus 
+	id = syria.19 
+	title = syria.19.t 
+	desc = syria.19.d 
+	is_triggered_only = yes 
+	option = {
+		name = syria.19.a 
+		add_political_power = 65 
 	}
 }

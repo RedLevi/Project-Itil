@@ -71,7 +71,7 @@ country_event = {#Assasination in Jerusalem
 			}
 		}
 		
-		hidden_effect = { country_event = { syria.5 days = 2 } }
+		hidden_effect = { country_event = { id = syria.5 days = 2 } }
 		country_event = { id = syria.4 }
 		add_named_threat = { name = faisal_dead threat = 1 }
 	}
@@ -80,7 +80,7 @@ country_event = {#Assasination in Jerusalem
 		name = syria.3.b
 		ai_chance = { factor = 40 }
 		ISR = { country_event = { id = syria.7 } }
-		 country_event = { id = syria.8 days = 3 }
+		hidden_effect = { country_event = { id = syria.8 days = 3 } }
 	}
 }
 

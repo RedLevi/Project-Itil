@@ -37,6 +37,8 @@ iran_demand = { value = -30 }
 ###Syria###
 jerusalem_visit = { value = 40 }
 SYR_forgive_ISR = { value = 30 }
+SYR_sent_support = { value = 35 }
+SYR_no_sent_support = { value = -30 }
 
 
 }

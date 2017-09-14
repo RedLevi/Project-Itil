@@ -2,6 +2,7 @@
 
 add_namespace = syria
 
+###hajj of 1939 chain###
 country_event = {#Hajj of 1939 
 	id = syria.1
 	title = syria.1.t 
@@ -274,6 +275,7 @@ country_event = {#coronation of ghazi mecca
 	option = {#war
 		name = syria.14.a 
 		ai_chance = { factor = 100 }
+		set_global_flag = SAU_SYR_war
 		declare_war_on = { target = SAU type = annex_everything }
 	}
 	option = {#dont 
@@ -292,6 +294,7 @@ country_event = {#Faisal survives in Mecca
 		name = syria.15.a 
 		ai_chance = { factor = 95 }
 		declare_war_on = { target = SAU type = annex_everything }
+		set_global_flag = SAU_SYR_war
 		SAU = { country_event = { id = syria.16 } }
 	}
 	option = {#peace 
@@ -331,6 +334,7 @@ country_event = {#Preperation for a feast
 		name = syria.18.a 
 	}
 }
+
 country_event = {#Celebration in damascus 
 	id = syria.19 
 	title = syria.19.t 
@@ -339,5 +343,167 @@ country_event = {#Celebration in damascus
 	option = {
 		name = syria.19.a 
 		add_political_power = 65 
+	}
+}
+
+country_event = {#Syrians at the gates
+	id = syria.20 
+	title = syria.20.t 
+	desc = syria.20.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = SAU 
+		GER = { exists = yes }
+		has_global_flag = SAU_SYR_war
+		has_war_with = SYR
+		NOT = {
+			is_in_faction_with = GER 
+			has_war_with = GER
+		}
+	}
+	mean_time_to_happen = { days = 40 }
+	option = {#ask germany 
+		name = syria.20.a 
+		ai_chance = { factor = 90 }
+		add_political_power = -15 
+		GER = { country_event = { id = syria.21 days = 1 } }
+	}
+	option = {#don't 
+		name = syria.20.b 
+		ai_chance = { factor = 10 }
+		add_political_power = 20
+	}
+}
+
+country_event = {#Saudis call for help 
+	id = syria.21 
+	title = syria.21.t 
+	desc = syria.21.d 
+	is_triggered_only = yes 
+	option = {#join 
+		name = syria.21.a 
+		ai_chance = {
+			factor = 20 
+			modifier = {
+				factor = 30 
+				GER = { has_completed_focus = GER_middle_east_dip }
+			}
+		}
+		add_political_power = -30 
+		add_to_war = { targeted_alliance = SAU enemy = SYR }
+		SAU = { country_event = { id = syria.22 } }
+		SYR = { country_event = { id = syria.23 } }
+	}
+	
+	option = {#send support 
+		name = syria.21.b 
+		ai_chance = {
+			factor = 30 
+			modifier = {
+				factor = 10 
+				GER = { has_completed_focus = GER_middle_east_dip }
+			}
+		}
+		reverse_add_opinion_modifier = { target = SAU modifier = SYR_sent_support }
+		send_equipment = { target = SAU type = infantry_equipment amount = 1000 }
+		send_equipment = { target = SAU type = artillery_equipment amount = 200 }
+		add_manpower = -15000
+		SAU = { country_event = { id = syria.26 days = 5 } }
+	}
+	option = {#send nothing
+		name = syria.21.c 
+		ai_chance = {
+			factor = 50 
+			modifier = {
+				factor = -40 
+				GER = { has_completed_focus = GER_middle_east_dip }
+			}
+		}
+		reverse_add_opinion_modifier = { target = SAU modifier = SYR_no_sent_support }
+		add_political_power = 20 
+		SAU = { country_event = { id = syria.27 } }
+	}
+}
+
+country_event = {#Germans join the war 
+	id = syria.22 
+	title = syria.22.t 
+	desc = syria.22.d 
+	is_triggered_only = yes 
+	option = {
+		name = syria.21.a 
+		add_political_power = 40 
+	}
+}
+
+country_event = {#Germans join against us
+	id = syria.23 
+	title = syria.23.t 
+	desc = syria.23.d 
+	is_triggered_only = yes 
+	option = {#call britain 
+		name = syria.23.a 
+		ai_chance = { factor = 100 }
+		ENG = { country_event = { id = syria.24 days = 1 } }
+	}
+	option = {#face them alone 
+		name = syria.23.b 
+		ai_chance = { factor = 0 }
+		add_political_power = 50 
+	}
+}
+
+country_event = {#Germany attacks Syria 
+	id = syria.24 
+	title = syria.24.t 
+	desc = syria.24.d 
+	is_triggered_only = yes 
+	option = {#join the war 
+		name = syria.24.a 
+		ai_chance = { factor = 90 }
+		add_to_war = { targeted_alliance = SYR enemy = SAU }
+		SAU = { country_event = { id = syria.25 } }
+		GER = { country_event = { id = syria.25 } }
+	}
+	option = {#Leave them 
+		name = syria.24.b 
+		ai_chance = { factor = 10 }
+		add_political_power = 10 
+		reverse_add_opinion_modifier = { target = SYR modifier = SYR_no_sent_support } 
+	}
+}
+
+country_event = {#Britain joins the war 
+	id = syria.25 
+	title = syria.25.t 
+	desc = syria.25.d 
+	is_triggered_only = yes 
+	option = {
+		name = syria.25.a 
+	}
+}
+
+country_event = {#German volunteers 
+	id = syria.26 
+	title = syria.26.t 
+	desc = syria.26.d 
+	is_triggered_only = yes 
+	option = {
+		name = syria.26.a 
+		add_political_power = 30 
+		add_manpower = 15000 
+		load_oob = GER_SAU_vol
+
+	}
+}
+
+country_event = {#Germany refuses 
+	id = syria.27 
+	title = syria.27.t 
+	desc = syria.27.d 
+	is_triggered_only = yes 
+	option = {
+		name = syria.27.a 
+		add_political_power = -20 
 	}
 }

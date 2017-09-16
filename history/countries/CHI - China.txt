@@ -32,15 +32,15 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 2
+			popularity = 9
 		}
 		
 		socialism = {
-			popularity = 5
+			popularity = 1
 		}
 		
 		reactionarism = {
-			popularity = 63
+			popularity = 60
 		}
 		
 	}
@@ -55,7 +55,7 @@ set_politics = {
 create_country_leader = {
 	name = "Chiang Kai-Shek"
 	
-	picture = "gfx/leaders/CHI/Portrait_China_Chiang_Kai_Shek.dds"
+	picture = "gfx/leaders/CHI/Chiang_kai_shek.dds"
 	expire = "1960.1.1"
 	ideology = autocracy
 	traits = {

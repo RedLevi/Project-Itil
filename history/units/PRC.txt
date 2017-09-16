@@ -1,0 +1,171 @@
+﻿division_template = {
+	name = "Juntuán"
+									
+	regiments = {
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Sanjiao Jun"	
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	priority = 0
+}
+
+division_template = {
+	name = "Qibing Jun"		# Represents two-division cavalry corps
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+units = {
+	##### Eighth Route Army (CO: Mao Zedong, Zhu De) #####
+	division = {
+		name = "115 Bubing Shi"
+		location = 7191
+		division_template = "Juntuán"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "120 Bubing Shi"
+		location = 7101
+		division_template = "Juntuán"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "123 Bubing Shi"
+		location = 9939
+		division_template = "Juntuán"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "110 Bubing Shi"
+		location = 1047
+		division_template = "Juntuán"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "12 Bubing Shi"
+		location = 1628
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "13 Bubing Shi"
+		location = 9974
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "17 Bubing Shi"
+		location = 9974
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "124 Bubing Shi"
+		location = 7097
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "132 Bubing Shi"
+		location = 7097
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "112 Bubing Shi"
+		location = 1628
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "3 Bubing Shi"
+		location = 10404
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "1 Qibing Jun"
+		location = 1087
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "2 Qibing Jun"
+		location = 1087
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	navy = {				
+		name = "People's Revolutionary Navy"
+		base = 1047
+		location = 1047 
+		ship = { name = "Destroyer 1" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = PRC } } }	
+		ship = { name = "Destroyer 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = PRC } } }	
+		ship = { name = "Destroyer 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = PRC } } }	
+		ship = { name = "Destroyer 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = PRC } } }	
+		ship = { name = "Destroyer 5" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = PRC } } }	
+	}
+}
+
+air_wings = {
+	592 = {
+		fighter_equipment_0 = {
+			owner = "PRC" 
+			amount = 32
+		}
+	}
+	599 = {
+		fighter_equipment_0 = {
+			owner = "PRC" 
+			amount = 15
+		}
+	}
+}
+
+##### STARTING PRODUCTION #####

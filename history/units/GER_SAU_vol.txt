@@ -21,9 +21,10 @@ units = {
 	division = {
 		name = "German Volunteers "
 		location = 12883
-		division_template = "German Volunteers"		
+		division_template = "German Volunteers"	
+		start_experience_factor = 0.4		
 		start_equipment_factor = 1.0 
-		start_expirience_factor = 0.4
+		
 
 	}
 	division = {
@@ -31,7 +32,7 @@ units = {
 		location = 12883
 		division_template = "German Volunteers"		
 		start_equipment_factor = 1.0 
-		start_expirience_factor = 0.4
+		start_experience_factor = 0.4
 
 	}
 }

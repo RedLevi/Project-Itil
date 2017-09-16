@@ -1,12 +1,19 @@
 ﻿capital = 592
 
-oob = "PRC_1936"
+oob = "PRC"
 
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
 	mass_assault = 1
+	gw_artillery = 1 
+	early_destroyer = 1 
+	early_fighter = 1 
+	early_bomber = 1 
+	
 }
+
+set_convoys = 23
 
 set_politics = {
 
@@ -16,7 +23,7 @@ set_politics = {
 		}
 
 		national_integralism = {
-			popularity = 10
+			popularity = 1
 		}
 
 		liberalism = {
@@ -24,7 +31,7 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 62
+			popularity = 71
 		}
 		
 		socialism = {
@@ -47,13 +54,12 @@ set_politics = {
 add_opinion_modifier = { target = CHI modifier = hostile_status }
 
 create_country_leader = {
-	name = "Mao Zedong"
+	name = "Wang Jingwei"
 	desc = "POLITICS_MAO_ZEDONG_DESC"
-	picture = "gfx/leaders/CHI/Portrait_China_Mao_Zedong.dds"
+	picture = "gfx/leaders/PRC/Wang_Jingwei.dds"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
-		cornered_fox
 	}
 }
 

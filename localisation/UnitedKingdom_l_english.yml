@@ -28,7 +28,16 @@ ENG_organize_landlords:0 "Organize The Landlords"
 ENG_organize_landlords_desc:0 "Agriculture in the UK is inefficiently organised, divided between rich estates and tenant farmers. If we were to modernise the industry, compensate the landlords and divide the land between wealthy farmers, we could create lots of new jobs and investment opportunities."
 ENG_measured_investments:0 "Measured Investments"
 ENG_measured_investments_desc:0 "Despite our disapproval of reckless Keynesian policy, we still need some basic investments in the economy to keep faith between us and the people. Investing in a range of small businesses and financial institutions like banks should be good enough to restore our economy's prosperity."
-
+ENG_european_theater:0 "European Diplomacy"
+ENG_european_theater_desc:0 "No matter what fortifications we build and alliances we forge across the world, without European security the Empire will fall. We must secure Europe for British interests at all costs!"
+ENG_support_norway:0 "Influence Norway"
+ENG_support_norway_desc:0 "Norway is a key trade partner already. With increasing uncertainty it seems as if they would be the perfect anchor onto northern Europe for British influence."
+ENG_ally_norway:0 "Alliance With Norway?"
+ENG_ally_norway_desc:0 "With them now openly aligning with our interests, we should take it a step further, and ally with the Norwegians to gain further control on European affairs."
+ENG_new_balkan_order:0 "New Balkan Order"
+ENG_new_balkan_order_desc:0 "The Serbs have been recklessly attacking nations and countries in their obsessive pursuits of glory. It's time we dealt with them by working with their local rivals by forming a new Balkan Order."
+ENG_support_hungary:0 "Influence Hungary"
+ENG_support_hungary_desc:0 "The biggest threat to Serbian dominance would the Hungarians. They're large and powerful, with plenty of room for British backing. It's time we negotiated with the Magyars."
 
 ####events####
 engfor.1.t:0 "Britain offers alliance"

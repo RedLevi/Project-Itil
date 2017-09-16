@@ -408,7 +408,7 @@ country_event = {#Saudis call for help
 		send_equipment = { target = SAU type = infantry_equipment amount = 1000 }
 		send_equipment = { target = SAU type = artillery_equipment amount = 200 }
 		add_manpower = -15000
-		SAU = { country_event = { id = syria.26 days = 5 } }
+		SAU = { country_event = { id = syria.26 days = 2 } }
 	}
 	option = {#send nothing
 		name = syria.21.c 

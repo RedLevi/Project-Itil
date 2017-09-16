@@ -1,0 +1,153 @@
+﻿####koach####
+add_namespace = redc 
+
+#Shanghai uprising#
+
+country_event = {#Shanghai backround 	
+	id = redc.1 
+	title = redc.1.t 
+	desc = redc.1.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = CHI 
+		NOT = { has_war_with = PRC }
+		date > 1936.1.15
+		controls_state = 750 
+	}
+	option = {
+		name = redc.1.a 
+		add_political_power = -15 
+	}
+}
+
+country_event = {#May day  
+	id = redc.2 
+	title = redc.2.t 
+	desc = redc.2.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = CHI 
+		NOT = { has_war_with = PRC }
+		date > 1936.4.29 
+		controls_state = 750
+	}
+	option = {#do nothing
+		name = redc.2.a 
+		ai_chance = { factor = 50 }
+		add_political_power = -20 
+		add_popularity = { ideology = communism popularity = 0.05 }
+	}
+	option = {#crack down
+		name = redc.2.b
+		ai_chance = { factor = 50 }
+		country_event = { id = redc.3 days = 1 }
+	}
+}
+
+country_event = {#crackdown result
+	id = redc.3 
+	title = redc.3.t 
+	desc = redc.3.d 
+	is_triggered_only = yes 
+	option = {
+		name = redc.3.a 
+		add_political_power = -30 
+		add_popularity = { ideology = communism popularity = 0.075 }
+	}
+}
+
+country_event = {#double ten day 
+	id = redc.4 
+	title = redc.4.t 
+	desc = redc.4.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = CHI
+		NOT = { has_war_with = PRC }
+		date > 1936.10.10 
+		controls_state = 750
+	}
+	option = {#stop them 
+		name = redc.4.a 
+		ai_chance = { factor = 70 }
+		add_political_power = -35 
+		PRC = { country_event = { id = redc.6 hours = 6 } }
+	}
+	option = {#let him go 
+		name = redc.4.b 
+		ai_chance = { factor = 30 }
+		add_political_power = -50
+		add_popularity = { ideology = communism popularity = -0.05 }
+		PRC = { transfer_state = 750 }
+		PRC = { country_event = { id = redc.5 } }
+	}
+}
+
+country_event = {#Shanghai joins
+	id = redc.5 
+	title = redc.5.t 
+	desc = redc.5.d 
+	is_triggered_only = yes 
+	option = {
+		load_OOB = SHANGHAI_PRF
+		add_political_power = 25
+	}
+}
+
+country_event = {#Violence in Shanghai 
+	id = redc.6 
+	title = redc.6.t 
+	desc = redc.6.d 
+	is_triggered_only = yes 
+	option = {#war 
+		name = redc.6.a 
+		ai_chance = { factor = 60 }
+		declare_war_on = { target = CHI type = annex_everything }
+		CHI = { country_event = { id = redc.7 } }
+		transfer_state = 750 
+		load_OOB = SHANGHAI_PRF
+	}
+	option = {#Wait 
+		name = redc.6.b
+		ai_chance = { factor = 40 }
+		add_political_power = -40 
+		hidden_effect = { CHI = { country_event = { id = redc.8 days = 3 } } }
+	}
+}
+
+country_event = {#PRF declares war 
+	id = redc.7 
+	title = redc.7.t 
+	desc = redc.7.d 
+	is_triggered_only = yes 
+	option = {
+		name = redc.7.a 
+	}
+}
+
+country_event = {#Commies crushed 
+	id = redc.8 
+	title = redc.8.t 
+	desc = redc.8.d 
+	is_triggered_only = yes 
+	option = {
+		name = redc.8.a 
+		add_political_power = 35 
+		add_popularity = { ideology = communism popularity = -0.15 }
+		set_country_flag = CHI_shanghai_massacare
+		hidden_effect = { PRC = { country_event = { id = redc.9 } } }
+		add_manpower = -10500
+	}
+}
+
+country_event = {#Shanghai massacare 
+	id = redc.9 
+	title = redc.9.t 
+	desc = redc.9.d 
+	is_triggered_only = yes 
+	option = {
+		name = redc.9.a 
+		set_country_flag = PRF_shanghai_massacare
+		add_political_power = -5 
+	}
+}

@@ -43,8 +43,8 @@ country_event = {
 	option = {
 		name = france.2.a 
 		add_political_power = -50
-		hidden_effect = { 
-		set_global_flag = fra_com_troub
+		hidden_effect = {
+		set_global_flag = fra_com_troub	
 		}
 	}
 }
@@ -66,13 +66,67 @@ country_event = {
 	mean_time_to_happen = { days = 15 }
 	
 	option = {
-		name = france.3.a 
-		start_civil_war = { ideology = reactionarism size = 0.5 }
+		name = france.3.a
+		hidden_effect = {
+		set_political_party = { ideology = communism popularity = 0.5 }
+		NFA = { add_state_core = 21 }
+		NFA = { add_state_core = 22 }
+		NFA = { add_state_core = 31 }
+		NFA = { add_state_core = 32 }
+		NFA = { add_state_core = 29 }
+		NFA = { add_state_core = 735 }
+		IFA = { add_state_core = 19 }
+		}
+		release = NFA
+		release = IFA		
 		hidden_effect = {
 	    clr_global_flag = fra_com_troub
 		set_global_flag = fra_civil_war
+		NFA = { add_state_core = 14 }
+		NFA = { add_state_core = 15 }
+		NFA = { add_state_core = 16 }
+		NFA = { add_state_core = 17 }
+		NFA = { add_state_core = 18 }
+		NFA = { add_state_core = 19 }
+		NFA = { add_state_core = 20 }
+		NFA = { add_state_core = 21 }
+		NFA = { add_state_core = 22 }
+		NFA = { add_state_core = 23 }
+		NFA = { add_state_core = 24 }
+		NFA = { add_state_core = 25 }
+		NFA = { add_state_core = 26 }
+		NFA = { add_state_core = 27 }
+		NFA = { add_state_core = 29 }
+		NFA = { add_state_core = 30 }
+		NFA = { add_state_core = 31 }
+		NFA = { add_state_core = 32 }
+		NFA = { add_state_core = 33 }
+		NFA = { add_state_core = 735 }
+		IFA = { add_state_core = 14 }
+		IFA = { add_state_core = 15 }
+		IFA = { add_state_core = 16 }
+		IFA = { add_state_core = 17 }
+		IFA = { add_state_core = 18 }
+		IFA = { add_state_core = 19 }
+		IFA = { add_state_core = 20 }
+		IFA = { add_state_core = 21 }
+		IFA = { add_state_core = 22 }
+		IFA = { add_state_core = 23 }
+		IFA = { add_state_core = 24 }
+		IFA = { add_state_core = 25 }
+		IFA = { add_state_core = 26 }
+		IFA = { add_state_core = 27 }
+		IFA = { add_state_core = 29 }
+		IFA = { add_state_core = 30 }
+		IFA = { add_state_core = 31 }
+		IFA = { add_state_core = 32 }
+		IFA = { add_state_core = 33 }
+		IFA = { add_state_core = 735 }
+		set_equipment_fraction = 0.5
 		news_event = news.2
-        every_enemy_country = { limit = { has_civil_war = yes } country_event = { days = 1 id = france.4 } }
+        NFA = { country_event = { days = 1 id = france.4 } }
+		IFA = { country_event = { days = 1 id = france.5 } }
+		FRA = { country_event = { days = 3 id = france.8 } }
 		}
 	}
 }
@@ -86,9 +140,493 @@ country_event = {
     is_triggered_only = yes
 	
 	option = {
-		name = france.4.a 
+		name = france.4.a
+		load_oob = NFA_civil_war
+		declare_war_on = { target = FRA type = annex_everything }		
+	}
+}
+
+country_event = {
+
+	id = france.5
+	title = france.5.t 
+	desc = france.5.d 
+
+    is_triggered_only = yes
+	
+	option = {
+		name = france.5.a
+		load_oob = IFA_civil_war
+		declare_war_on = { target = FRA type = annex_everything } 
+	}
+}
+
+country_event = {
+
+	id = france.6
+	title = france.6.t 
+	desc = france.6.d 
+
+    fire_only_once = yes	
+	
+	trigger = {
+	tag = FRA
+	has_government = communism
+	has_global_flag = fra_civil_war
+	}
+	mean_time_to_happen = { days = 15 }
+	
+	option = {
+		name = france.6.a
 		hidden_effect = {
-		set_cosmetic_tag = FRA_AUT
+		RFA = { add_state_core = 25 }		
+		RFA = { add_state_core = 26 }		
+		RFA = { add_state_core = 33 }
+		}
+		release = RFA
+		hidden_effect = {
+		RFA = { add_state_core = 14 }
+		RFA = { add_state_core = 15 }
+		RFA = { add_state_core = 16 }
+		RFA = { add_state_core = 17 }
+		RFA = { add_state_core = 18 }
+		RFA = { add_state_core = 19 }
+		RFA = { add_state_core = 20 }
+		RFA = { add_state_core = 21 }
+		RFA = { add_state_core = 22 }
+		RFA = { add_state_core = 23 }
+		RFA = { add_state_core = 24 }
+		RFA = { add_state_core = 25 }
+		RFA = { add_state_core = 26 }
+		RFA = { add_state_core = 27 }
+		RFA = { add_state_core = 29 }
+		RFA = { add_state_core = 30 }
+		RFA = { add_state_core = 31 }
+		RFA = { add_state_core = 32 }
+		RFA = { add_state_core = 33 }
+		RFA = { add_state_core = 735 }
+		RFA = { country_event = { days = 1 id = france.7 } }
 		}
 	}
 }
+
+country_event = {
+
+	id = france.7
+	title = france.7.t 
+	desc = france.7.d 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = france.7.a
+		load_oob = RFA_civil_war
+		declare_war_on = { target = FRA type = annex_everything }
+		declare_war_on = { target = SYA type = annex_everything }
+		declare_war_on = { target = SFA type = annex_everything }		
+	}
+}
+
+country_event = {
+
+	id = france.8
+	title = france.8.t 
+	desc = france.8.d 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = france.8.a
+		hidden_effect = {
+		SYA = { add_state_core = 14 }
+		SYA = { add_state_core = 15 }		
+		SFA = { add_state_core = 17 }
+		SFA = { add_state_core = 18 }	
+		}
+		release = SYA
+		release = SFA
+		hidden_effect = {
+		SYA = { add_state_core = 14 }
+		SYA = { add_state_core = 15 }
+		SYA = { add_state_core = 16 }
+		SYA = { add_state_core = 17 }
+		SYA = { add_state_core = 18 }
+		SYA = { add_state_core = 19 }
+		SYA = { add_state_core = 20 }
+		SYA = { add_state_core = 21 }
+		SYA = { add_state_core = 22 }
+		SYA = { add_state_core = 23 }
+		SYA = { add_state_core = 24 }
+		SYA = { add_state_core = 25 }
+		SYA = { add_state_core = 26 }
+		SYA = { add_state_core = 27 }
+		SYA = { add_state_core = 29 }
+		SYA = { add_state_core = 30 }
+		SYA = { add_state_core = 31 }
+		SYA = { add_state_core = 32 }
+		SYA = { add_state_core = 33 }
+		SYA = { add_state_core = 735 }
+		SFA = { add_state_core = 14 }
+		SFA = { add_state_core = 15 }
+		SFA = { add_state_core = 16 }
+		SFA = { add_state_core = 17 }
+		SFA = { add_state_core = 18 }
+		SFA = { add_state_core = 19 }
+		SFA = { add_state_core = 20 }
+		SFA = { add_state_core = 21 }
+		SFA = { add_state_core = 22 }
+		SFA = { add_state_core = 23 }
+		SFA = { add_state_core = 24 }
+		SFA = { add_state_core = 25 }
+		SFA = { add_state_core = 26 }
+		SFA = { add_state_core = 27 }
+		SFA = { add_state_core = 29 }
+		SFA = { add_state_core = 30 }
+		SFA = { add_state_core = 31 }
+		SFA = { add_state_core = 32 }
+		SFA = { add_state_core = 33 }
+		SFA = { add_state_core = 735 }		
+        SYA = { country_event = { days = 1 id = france.9 } }
+        SFA = { country_event = { days = 1 id = france.10 } }	
+		}	
+		give_military_access = SYA
+		give_military_access = SFA
+	}
+}
+
+country_event = {
+
+	id = france.9
+	title = france.9.t 
+	desc = france.9.d 
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = france.9.a
+		load_oob = SYA_civil_war
+		give_military_access = FRA
+		give_military_access = SFA
+		declare_war_on = { target = NFA type = annex_everything }
+		declare_war_on = { target = IFA type = annex_everything }		
+	}
+}
+
+country_event = {
+
+	id = france.10
+	title = france.10.t 
+	desc = france.10.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = france.10.a
+		load_oob = SFA_civil_war
+		give_military_access = FRA
+		give_military_access = SYA
+		declare_war_on = { target = NFA type = annex_everything }
+		declare_war_on = { target = IFA type = annex_everything }		
+	}
+}
+
+country_event = {
+
+	id = france.11
+	title = france.11.t 
+	desc = france.11.d
+	
+    fire_only_once = yes	
+	
+	trigger = {
+	tag = AME
+	has_global_flag = fra_civil_war
+	country_exists = IFA
+	}
+	mean_time_to_happen = { days = 10 }
+	
+	option = {
+		name = france.11.a
+		hidden_effect = {
+		set_global_flag = AME_fra_cw
+		}
+		reverse_add_opinion_modifier = { target = IFA modifier = ENG_EUR_theater }
+		send_equipment = { target = IFA type = infantry_equipment amount = 500 }
+		send_equipment = { target = IFA type = support_equipment amount = 200 }
+		add_manpower = -10000
+		IFA = { country_event = { days = 10 id = france.12 } }
+	}
+	option = {
+		name = france.11.b
+	}	
+}
+
+country_event = {
+
+	id = france.12
+	title = france.12.t 
+	desc = france.12.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = france.12.a		
+		reverse_add_opinion_modifier = { target = AME modifier = ENG_EUR_theater }
+	}
+}
+
+country_event = {
+
+	id = france.13
+	title = france.13.t 
+	desc = france.13.d
+	
+    fire_only_once = yes	
+	
+	trigger = {
+	tag = ENG
+	has_global_flag = fra_civil_war
+	country_exists = RFA
+	}
+	mean_time_to_happen = { days = 10 }
+	
+	option = {
+		name = france.13.a
+		hidden_effect = {
+		set_global_flag = ENG_fra_cw
+		}
+		set_rule = { can_send_volunteers = yes }
+		reverse_add_opinion_modifier = { target = RFA modifier = ENG_EUR_theater }
+		send_equipment = { target = RFA type = infantry_equipment amount = 250 }
+		RFA = { country_event = { days = 3 id = france.14 } }
+	}
+	option = {
+		name = france.13.b
+	}	
+}
+
+country_event = {
+
+	id = france.14
+	title = france.14.t 
+	desc = france.14.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = france.14.a		
+		reverse_add_opinion_modifier = { target = ENG modifier = ENG_EUR_theater }
+	}
+}
+
+country_event = {
+
+	id = france.15
+	title = france.15.t 
+	desc = france.15.d
+	
+    fire_only_once = yes	
+	
+	trigger = {
+	tag = SOV
+	has_global_flag = fra_civil_war
+	country_exists = FRA
+	}
+	mean_time_to_happen = { days = 5 }
+	
+	option = {
+		name = france.15.a
+		hidden_effect = {
+		set_global_flag = SOV_fra_cw
+		}
+		reverse_add_opinion_modifier = { target = FRA modifier = ENG_EUR_theater }
+		send_equipment = { target = FRA type = infantry_equipment amount = 750 }
+		send_equipment = { target = FRA type = support_equipment amount = 250 }
+		add_manpower = -10000
+		FRA = { country_event = { days = 5 id = france.16 } }
+	}
+	option = {
+		name = france.15.b
+	}	
+}
+
+country_event = {
+
+	id = france.16
+	title = france.16.t 
+	desc = france.16.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = france.16.a		
+		reverse_add_opinion_modifier = { target = SOV modifier = ENG_EUR_theater }
+	}
+}
+
+country_event = {
+
+	id = france.17
+	title = france.17.t 
+	desc = france.17.d
+	
+    fire_only_once = yes	
+	
+	trigger = {
+	tag = FRA
+	has_global_flag = fra_civil_war
+	has_war = no 
+	}
+	mean_time_to_happen = { days = 5 }
+	
+	option = {
+		name = france.17.a
+		add_political_power = 250
+        army_experience = 50
+		annex_country = { target = SFA } 
+		annex_country = { target = SYA }
+		hidden_effect = {
+        every_owned_state = { remove_core_of = NFA }
+		every_owned_state = { remove_core_of = IFA }
+		every_owned_state = { remove_core_of = RFA }
+		every_owned_state = { remove_core_of = SFA }
+		every_owned_state = { remove_core_of = SYA }
+		clr_global_flag = fra_civil_war
+		if = { limit = { has_global_flag = GER_fra_cw } GER = { country_event = { id = france.18 } } }
+		if = { limit = { has_global_flag = AME_fra_cw } AME = { country_event = { id = france.19 } } }
+		if = { limit = { has_global_flag = ENG_fra_cw } ENG = { country_event = { id = france.20 } } }
+		if = { limit = { has_global_flag = SOV_fra_cw } SOV = { country_event = { id = france.21 } } }		
+		}
+	}
+}
+
+country_event = {
+
+	id = france.18
+	title = france.18.t 
+	desc = france.18.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = france.18.a
+        army_experience = 25
+		add_manpower = 5000
+		hidden_effect = {
+		clr_global_flag = GER_fra_cw
+		}
+	}
+}
+
+country_event = {
+
+	id = france.19
+	title = france.19.t 
+	desc = france.19.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = france.19.a
+        army_experience = 25
+		add_manpower = 10000
+		hidden_effect = {
+		clr_global_flag = AME_fra_cw
+		}
+	}
+}
+
+country_event = {
+
+	id = france.20
+	title = france.20.t 
+	desc = france.20.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = france.20.a
+        army_experience = 25
+		add_manpower = 5000
+		hidden_effect = {
+		clr_global_flag = ENG_fra_cw
+		}
+	}
+}
+
+country_event = {
+
+	id = france.21
+	title = france.21.t 
+	desc = france.21.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = france.21.a
+		add_political_power = 50
+        army_experience = 50
+		hidden_effect = {
+		clr_global_flag = SOV_fra_cw
+		}
+	}
+}
+
+country_event = {
+
+	id = france.22
+	title = france.22.t 
+	desc = france.22.d 
+	picture = GFX_thorez
+	
+    fire_only_once = yes	
+	
+	trigger = {
+	date > 1937.1.1	
+	tag = FRA
+	has_government = communism
+	has_war = no
+	}
+
+	mean_time_to_happen = { days = 30 }
+	
+	option = {
+		name = france.22.a
+		SOV = { country_event = { id = france.23 } }
+	}
+	option = {
+		name = france.22.b
+	}	
+}
+
+country_event = {
+
+	id = france.23
+	title = france.23.t 
+	desc = france.23.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = france.23.a
+		add_to_faction = FRA
+		FRA = { country_event = { days = 3 id = france.24 } }
+	}
+	option = {
+		name = france.23.b
+	}
+}
+
+country_event = {
+
+	id = france.24
+	title = france.24.t 
+	desc = france.24.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = france.24.a
+	}
+}
+

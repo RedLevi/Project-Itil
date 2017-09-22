@@ -643,3 +643,28 @@ BUR = {
 	color = rgb { 11 228 55 }
 	color_ui = rgb { 11 228 55 }
 }
+
+NFA = {
+	color = rgb { 0 0 128 }
+	color_ui = rgb { 74 147 255 }
+}
+
+IFA = {
+	color = rgb { 20 25 35 }
+	color_ui = rgb { 74 147 255 }
+}
+
+SFA = {
+	color = rgb { 230 80 20 }
+	color_ui = rgb { 74 147 255 }
+}
+
+SYA = {
+	color = rgb { 255 0 0 }
+	color_ui = rgb { 74 147 255 }
+}
+
+RFA = {
+	color = rgb { 200 200 50 }
+	color_ui = rgb { 74 147 255 }
+}

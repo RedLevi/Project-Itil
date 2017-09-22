@@ -60,9 +60,6 @@ country_event = {
 		name = germany.4.a
 		army_experience = 50
 		add_relation_modifier = { target = GER modifier = european_diplomacy }
-		create_unit = { division = "name = 1. Vol. Infanterie-Division division_template = Infanterie-Division starting_experience_factor = 1.0" }
-		create_unit = { division = "name = 2. Vol. Infanterie-Division division_template = Infanterie-Division starting_experience_factor = 1.0" }
-		create_unit = { division = "name = 3. Vol. Infanterie-Division division_template = Infanterie-Division starting_experience_factor = 1.0" }
 	}	
 	option = {
 		name = germany.4.b
@@ -243,7 +240,7 @@ country_event = {
 		 ideology = absolutism
          traits = { }
 		 }
-		 }	
+		 }
 	}
 	option = {
 		name = germany.13.b
@@ -260,16 +257,21 @@ country_event = {
 	
 	trigger = {
 	tag = GER
-	FRA = { has_civil_war = yes }
+	NFA = { has_offensive_war_with = FRA }
 	}
 	
 	mean_time_to_happen = { days = 15 }
 	
 	option = {
 		name = germany.14.a
-		add_manpower = -50000
-		send_equipment = { target = FRA type = infantry_equipment amount = 500 }
-		every_country = { limit = { has_civil_war = yes has_offensive_war_with = FRA } country_event = germany.15 }
+		hidden_effect = {
+		set_global_flag = GER_fra_cw
+		}
+		set_rule = { can_send_volunteers = yes }
+		reverse_add_opinion_modifier = { target = NFA modifier = ENG_EUR_theater }
+		add_manpower = -10000
+		send_equipment = { target = NFA type = infantry_equipment amount = 500 }
+		NFA = { country_event = germany.15 }
 	}
 	option = {
 		name = germany.14.b
@@ -286,12 +288,7 @@ country_event = {
 	
 	option = {
 		name = germany.15.a
-		GER = { reverse_add_opinion_modifier = { target = THIS modifier = ENG_EUR_theater } }
-		create_unit = { division = "name = 1. Vol. Kavallerie-Brigade division_template = Kavallerie-Brigade starting_experience_factor = 1.0" }
-		create_unit = { division = "name = 2. Vol. Kavallerie-Brigade division_template = Kavallerie-Brigade starting_experience_factor = 1.0" }
-		create_unit = { division = "name = 1. Vol. Infanterie-Division division_template = Infanterie-Division starting_experience_factor = 1.0" }
-		create_unit = { division = "name = 2. Vol. Infanterie-Division division_template = Infanterie-Division starting_experience_factor = 1.0" }
-		create_unit = { division = "name = 3. Vol. Infanterie-Division division_template = Infanterie-Division starting_experience_factor = 1.0" }
+		reverse_add_opinion_modifier = { target = GER modifier = ENG_EUR_theater }
 	}
 }
 

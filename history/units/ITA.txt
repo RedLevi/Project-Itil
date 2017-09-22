@@ -123,20 +123,6 @@ units = {
 		start_experience_factor = 0.3
 	}
 
-	# I Corpo d'Armata #
-	division= {	
-		name = "1a Divisione di Fanteria 'Superga'"
-		location = 6780
-		division_template = "Divisione di Fanteria"		# "Semi-Mountain" (less trained & equipped than Alpina)
-		start_experience_factor = 0.3
-	}
-	division= {	
-		name = "2a Divisione Alpina 'Tridentina'"
-		location = 6780
-		division_template = "Divisione Alpina"
-		start_experience_factor = 0.3
-	}
-
 	# IV Corpo d'Armata #
 	division= {	
 		name = "2a Divisione di Fanteria 'Sforzesca'"
@@ -154,14 +140,6 @@ units = {
 	### Gruppo d'Armata Est ###
 	## 2a Armata ##
 	# V Corpo d'Armata #
-	division= {	
-		name = "9a Divisione di Fanteria 'Pasubio'"
-		location = 11735
-		division_template = "Divisione di Fanteria"	
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
-
-	}
 
 	# VI Corpo d'Armata #
 	division= {	
@@ -177,16 +155,6 @@ units = {
 		location = 628
 		division_template = "Divisione Alpina"
 		start_experience_factor = 0.3
-	}
-
-	# Subordinate to Army
-	division= {	
-		name = "2° Raggruppamento Celere"
-		location = 6626
-		division_template = "Raggruppamento Celere"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.7
-
 	}
 
 	## 6a Armata ##
@@ -230,32 +198,6 @@ units = {
 	}
 
 	## Armata Italiana del Pavia ##
-	# I Corpo d'Armata dell'A.O.I. #
-	division= {	
-		name = "26a Divisione di Fanteria 'Assietta'"
-		location = 6780
-		division_template = "Divisione di Fanteria"	
-		start_experience_factor = 0.3
-	}
-	division= {	
-		name = "30a Divisione di Fanteria 'Sabauda'"
-		location = 6780
-		division_template = "Divisione di Fanteria"	
-		start_experience_factor = 0.2
-	}
-	division= {	
-		name = "5a Divisione Alpina 'Pusteria'"
-		location = 6780
-		division_template = "Divisione Alpina"
-		start_experience_factor = 0.3
-	}
-	division= {	
-		name = "4a Divisione CC.NN. '3 Gennaio'"
-		location = 6780
-		division_template = "Divisione di Fanteria"		# CCNN militia, lower training and equipment
-		start_experience_factor = 0.2
-
-	}
 
 	# III Corpo d'Armata dell'A.O.I. #
 	division= {	

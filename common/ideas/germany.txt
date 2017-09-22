@@ -44,13 +44,30 @@ ideas = {
 				political_power_factor = 0.1
                 training_time_factor = 0.1
 			}
+		}	
+
+        election_campaign = {
+	
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			available = {		
+				date < 1937.1.1
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conservatism_drift = 0.05
+			}
 		}		
-		
-		
-		
-		
-		
-}
+    }
 
 	political_advisor = {
 		todt = {

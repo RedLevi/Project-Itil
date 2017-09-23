@@ -1,5 +1,5 @@
 ﻿###################################
-#  Romanian Events - By HappyNTH  #
+#  Austrian Events - By HappyNTH  #
 ###################################
 
-add_namespace = rom
+add_namespace = aus

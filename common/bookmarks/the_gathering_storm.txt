@@ -73,6 +73,19 @@ bookmarks = {
 
 
 		# minors from DLC ####
+		"YUG" = {
+			minor = yes
+			history = "YUG_GATHERING_STORM_DESC"
+			ideology = reactionism
+			ideas = {
+
+			}
+			focuses = {
+			
+			}
+		}
+
+
 		"CHI"={
 			minor = yes
 			history = "POL_GATHERING_STORM_DESC"

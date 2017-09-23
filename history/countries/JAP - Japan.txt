@@ -152,16 +152,15 @@ if = {
 	}
 
 create_country_leader = {
-	name = "Hirohito"
+	name = "Wakatsuki Reijirō"
 	desc = "POLITICS_Hirohito_DESC"
-	picture = "Portrait_Japan_Hirohito.dds"
+	picture = "Wakatsuki_Reijiro.dds"
 	expire = "1989.1.1"
-	ideology = autocracy
+	ideology = social_liberalism
 	traits = {
 		warrior_code
 	}
 }
-
 create_corps_commander = {
 	name = "Tomoyuki Yamashita"
 		picture = "Portrait_Japan_Tomoyuki_Yamashita.dds"

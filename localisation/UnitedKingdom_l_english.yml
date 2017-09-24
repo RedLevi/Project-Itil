@@ -1,5 +1,6 @@
 ﻿l_english: 
 ####focuses####
+#Economy#
 ENG_economic_reforms:0 "A New Chancellor Of The Exchequer"
 ENG_economic_reforms_desc:0 "Britain has managed to solve its political crisis and now, under a unified government it can implement sweeping economic reforms to the state to bring itself back to prominence whether based on the age old theory of Austerity, or with the help of John Maynard Keynes."
 ENG_bastion_democracy:0 "Bastion of Democracy"
@@ -28,6 +29,7 @@ ENG_organize_landlords:0 "Organize The Landlords"
 ENG_organize_landlords_desc:0 "Agriculture in the UK is inefficiently organised, divided between rich estates and tenant farmers. If we were to modernise the industry, compensate the landlords and divide the land between wealthy farmers, we could create lots of new jobs and investment opportunities."
 ENG_measured_investments:0 "Measured Investments"
 ENG_measured_investments_desc:0 "Despite our disapproval of reckless Keynesian policy, we still need some basic investments in the economy to keep faith between us and the people. Investing in a range of small businesses and financial institutions like banks should be good enough to restore our economy's prosperity."
+#Europe Politics#
 ENG_european_theater:0 "European Diplomacy"
 ENG_european_theater_desc:0 "No matter what fortifications we build and alliances we forge across the world, without European security the Empire will fall. We must secure Europe for British interests at all costs!"
 ENG_support_norway:0 "Influence Norway"
@@ -36,8 +38,32 @@ ENG_ally_norway:0 "Alliance With Norway?"
 ENG_ally_norway_desc:0 "With them now openly aligning with our interests, we should take it a step further, and ally with the Norwegians to gain further control on European affairs."
 ENG_new_balkan_order:0 "New Balkan Order"
 ENG_new_balkan_order_desc:0 "The Serbs have been recklessly attacking nations and countries in their obsessive pursuits of glory. It's time we dealt with them by working with their local rivals by forming a new Balkan Order."
+ENG_demand_ALB:0 "Demand Albania"
+ENG_demand_ALB_desc:0 "The Albanians have too long been opressed by the Greeks. They deserve to have an independent homeland. We shall provide them with that"
+ENG_support_GRE:0 "Support Greece"
+ENG_support_GRE_desc:0 "To dismantle the Serbian hegemony, we need as much allies as possible, and Greece will be an important asset."
 ENG_support_hungary:0 "Influence Hungary"
 ENG_support_hungary_desc:0 "The biggest threat to Serbian dominance would the Hungarians. They're large and powerful, with plenty of room for British backing. It's time we negotiated with the Magyars."
+ENG_support_yugoslavia:0 "Support Yugoslavia"
+ENG_support_yugoslavia_desc:0 "The Greeks and the Hungarians have been stirring up trouble in the Balkans again. It is time to turn to Yugoslavia and Romania to prevent these troublemakers from starting a new World War."
+ENG_fund_yugoslavia:0 "Fund Yugoslavia"
+ENG_fund_yugoslavia_desc:0 "To pacify the Greeks and Hungarians, we need to send preventive measures to Yugoslavia."
+ENG_fund_romania:0 "Fund Romania"
+ENG_fund_romania_desc:0 "The long-time rival of the Hungarians, Romania, needs our support. With them we can finally crush the decaying Hungarian imperialists."
+ENG_fortify_mediterranean:0 "Fortify the Mediterranean"
+ENG_fortify_mediterranean_desc:0 "Our bases in the Mediterranean are of great stragetic importance. We need to solidify their position."
+#Navy#
+ENG_thalassocratic_ambitions:0 "Thalassocratic Ambitions"
+ENG_thalassocratic_ambitions_desc:0 "For centuries, those who ruled the seas ruled the world. With a strong navy we will be an unstopable presence."
+ENG_naval_doctrine:0 "Naval Doctrine"
+ENG_naval_doctrine_desc:0 "The first step to becoming the king of the seas is to establish our naval doctrine. Shall we use the proven steel behemoths that are the battleships, or will we use the experimental carriers?"
+ENG_carrier_focus:0 "Carrier Focus"
+ENG_carrier_focus_desc:0 "Battleships are a dying concept. With the succesful inception of carriers in the pacific coast, a new queen of the seas has emerged."
+ENG_battleship_focus:0 "Battleship Focus"
+ENG_battleship_focus_desc:0 "The Battleship is without a doubt the queen of the seas. It is a proven concept, and will surely dictate naval power in the 20th century."
+
+
+
 
 ####events####
 engfor.1.t:0 "Britain offers alliance"

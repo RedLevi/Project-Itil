@@ -1,0 +1,23 @@
+﻿l_english:
+####events####
+balkan.1.t:0 "The Reconquest of Hungary"
+balkan.1.d:0 "Many years have passed since the loss of our rightful imperial territory during the bloody civil war. Now is the time to put the Hungarians back in their place and reclaim Hungary for ourselves! Our troops are ready, our factories are pouring out guns and muntions, the people are behind our cause and the Hungarians are not expecting an attack. However, one question remains - shall we seek support from our German allies - at the risk the demand we back down or even favour Hungary, or shall we declare here and now?"
+balkan.1.a:0 "Declare War Immediately!"
+balkan.1.b:0 "Secretly ask the Germans for their help"
+balkan.1.c:0 "Back down"
+balkan.2.t:0 "Austria declares war!"
+balkan.2.d:0 "Austria once again threatens our independence with their armed forces. Their amries have swiftly mobalised on our borders, and skirmishes have already broken out between our forces and theirs. We must defend out homeland to the last!"
+balkan.2.a:0 "To Arms!"
+
+####ideas####
+AUS_Reconquest_War:0 "Austrian Reconquest of Hungary"
+AUS_Reconquest_War_desc:0 "We have decided to embroil ourselves in war with Hungary once again. We will reconquer the rightful lands of the Austrian Empire!"
+HUN_defend_homeland:0 "Defend the Homeland!"
+HUN_defend_homeland_desc:0 "Our territorial borders have been violated by a hostile force. We must take up arms to defend our independence from all who threaten it. To the last!"
+
+####opinion####
+
+
+####tooltip####
+AUS_reconquest_inform_majors:0 "The world will be informed of our actions, and Germany, Britain, Romania and Yugoslavia may react to our actions"
+

@@ -1,7 +1,0 @@
-﻿###################################
-#   Temporary Baltic War Chains   #
-# Until other chains are finished #
-#           By: HappyNTH          #
-###################################
-
-add_namespace = baltic

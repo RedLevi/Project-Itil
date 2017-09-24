@@ -1,5 +1,33 @@
 ideas = {
 
+	country = {
+
+		AUS_Reconquest_War = {
+
+			allowed = {
+				original_tag = AUS
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = reconquest
+
+			modifier = {
+				ai_call_ally_desire_factor = -100
+				conscription_factor = 0.1
+				offence = 0.05
+				enemy_partisan_effect = -0.2
+			}
+
+		}
+
+	}
+
 	political_advisor = {
 
 		AUS_arthur_seyss-inquart = {

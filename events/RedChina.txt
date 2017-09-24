@@ -151,3 +151,139 @@ country_event = {#Shanghai massacare
 		add_political_power = -5 
 	}
 }
+
+###Chiang assasination###
+
+country_event = {#Plot beginning 
+	id = redc.10 
+	title = redc.10.t 
+	desc = redc.10.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = PRC 
+		NOT = { has_war_with = CHI }
+		CHI = { exists = yes }
+		has_country_flag = PRF_shanghai_massacare 
+	}
+	option = {#kill chiang 
+		name = redc.10.a 
+		ai_chance = { factor = 40 }
+		hidden_effect = {
+			random_list = {
+				10 = { CHI = { country_event = { id = redc.11 days = 4  } } }
+				90 = { CHI = { country_event = { id = redc.14 days = 4 } } }
+			}
+		}
+		custom_effect_tooltip = kill_chiang
+	}
+	option = {#don't 
+		name = redc.10.b 
+		ai_chance = { factor = 60 }
+		custom_effect_tooltip = dont_kill_chiang
+	}
+}
+
+country_event = {#Chiang dies 
+	id = redc.11 
+	title = redc.11.t 
+	desc =redc.11.d 
+	is_triggered_only = yes 
+	option = {
+		name = redc.11.a 
+		kill_country_leader = yes	
+		hidden_effect = { PRC = { country_event = { id = redc.12 days = 1 } } }
+		start_civil_war = {
+		
+				ideology = conservative
+				size = 0.5
+				
+			}
+			
+			random_other_country = {
+			
+				limit = {
+					original_tag = CHI
+					has_government = reactionary
+				}
+				
+				set_equipment_fraction = 0.5 
+				set_national_unity = 0.9
+				
+				add_popularity = {
+				
+					ideology = reactionary
+					popularity = 0.35
+					
+				}
+				
+				
+			}
+	}
+}
+
+country_event = {#Civil war in the north 
+	id = redc.12 
+	title = redc.12.t 
+	desc = redc.12.d 
+	is_triggered_only = yes 
+	option = {#war 
+		name = redc.12.a 
+		ai_chance = { factor = 85 }
+		declare_war_on = { target = CHI type = annex_everything }
+		CHI = { country_event = redc.13 }
+	}
+	option = {#don't 
+		name = redc.12.b 
+		ai_chance = { factor = 15 }
+		add_political_power = -10 
+	}
+}
+
+country_event = {#more war 
+	id = redc.13 
+	title = redc.13.t 
+	desc = redc.13.d 
+	is_triggered_only = yes 
+	option = {
+		name = redc.13.a 
+	}
+}
+
+country_event = {#assasin caught 
+	id = redc.14 
+	title = redc.14.t 
+	desc = redc.14.d 
+	is_triggered_only = yes 
+	option = {#war 
+		name =redc.14.a 
+		ai_chance = { factor = 95 }
+		declare_war_on = { target = PRC type = annex_everything }
+		PRC = { country_event = { id = redc.15 } }
+	}
+	option = {#don't 
+		name = redc.14.b 
+		ai_chance = { factor = 5 }
+		add_political_power = -10 
+		hidden_effect = { PRC = { country_event = { id = redc.16 } } }
+	}
+}
+
+country_event = {#War with NRF 
+	id = redc.15 
+	title = redc.15.t 
+	desc = redc.15.d 
+	is_triggered_only = yes 
+	option = {
+		name = redc.15.a
+	}
+}
+
+country_event = {#no War with NRF 
+	id = redc.16 
+	title = redc.16.t 
+	desc = redc.16.d 
+	is_triggered_only = yes 
+	option = {
+		name = redc.16.a
+	}
+}

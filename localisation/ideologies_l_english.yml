@@ -1,12 +1,17 @@
 ﻿l_english: 
 ###Ideologies###
 conservatism:0 "Conservatism"
+conservatism_desc:0 "Conservative"
 liberalism:0 "Liberalism"
-communism:0 "Socialism"
+Liberalism_desc:0 "Liberal"
+communism:0 "Revolutionary Socialism"
+communism_desc:0 "Revolutionary Socialist"
 national_integralism:0 "National Integralism"
-socialism:0 "Social Democracy"
+national_integralism_desc:0 "National Integralist"
+socialism:0 "Reformist Socialism"
+socialism_desc:0 "Reformist Socialist"
 reactionarism: "Reactionary"
-
+reactionarism_desc:0 "Reactionary"
 
 ###Subideologies###
 authoritarian_conservatism:0 "Authoritarian Conservatism"

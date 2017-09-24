@@ -1,0 +1,130 @@
+﻿division_template = {
+	name = "Sanjiao Jun"	
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Qibing Jun"		# Represents two-division cavalry corps
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st Zhili Infantry"
+		location = 9843
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "2nd Zhili Infantry"
+		location = 9843
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "3rd Zhili Infantry"
+		location = 9843
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "4th Zhili Infantry"
+		location = 4058
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "5th Zhili Infantry"
+		location = 1069
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "6th Zhili Infantry"
+		location = 1124
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "7th Zhili Infantry"
+		location = 3830
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "8th Zhili Infantry"
+		location = 6852
+		division_template = "Sanjiao Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "1st Zhili Cavelry"
+		location = 6837
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "2nd Zhili Cavelry"
+		location = 3934
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "3rd Zhili Cavelry"
+		location = 10043
+		division_template = "Qibing Jun"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	navy = {				
+		name = "Zhili Fleet"
+		base = 10068
+		location = 10068 
+		ship = { name = "Destroyer 1" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ZHI } } }	
+		ship = { name = "Destroyer 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ZHI } } }	
+		ship = { name = "Destroyer 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ZHI } } }	
+	}
+}
+
+air_wings = {
+	608 = {
+		fighter_equipment_0 = {
+			owner = "ZHI" 
+			amount = 40
+		}
+	}

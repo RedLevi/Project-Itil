@@ -13,6 +13,8 @@ state={
 		owner = ZHI
 		add_core_of = ZHI
 		buildings = {
+			industrial_complex = 1 
+			arms_factory = 1 
 			infrastructure = 4
 		}
 

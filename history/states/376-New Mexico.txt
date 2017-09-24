@@ -11,8 +11,7 @@ state={
 		owner = AME
 		add_core_of = AME
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 1
+			infrastructure = 3
 
 		}
 		add_core_of = USA

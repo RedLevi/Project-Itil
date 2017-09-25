@@ -1,6 +1,6 @@
 ﻿capital = 615
 
-oob = "SHX_1936"
+oob = "SHX"
 
 # Starting tech
 set_technology = {
@@ -45,10 +45,17 @@ set_politics = {
 create_country_leader = {
 	name = "Yan Xishan"
 	desc = "POLITICS_YAN XISHAN_DESC"
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_warlord2.dds"
+	picture = "gfx/leaders/SHX/Yan_Xishan.dds"
 	expire = "1965.1.1"
 	ideology = autocracy
 	traits = {
 		#
 	}
+}
+
+create_field_marshal = {
+	name = "Yan Xishan"
+	portrait_path = "gfx/leaders/SHX/Yan_Xishan.dds"
+	traits = { defensive_doctrine }
+	skill = 4
 }

@@ -1,6 +1,6 @@
 ﻿capital = 604
 
-oob = "XSM_1936"
+oob = "XSM"
 
 # Starting tech
 set_technology = {
@@ -45,10 +45,17 @@ set_politics = {
 create_country_leader = {
 	name = "Ma Bufang"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
+	picture = "gfx/leaders/XSM/Ma_Bufang.dds"
 	expire = "1965.1.1"
 	ideology = autocracy
 	traits = {
 		#
 	}
+}
+
+create_field_marshal = {
+	name = "Ma Bufang"
+	portrait_path = "gfx/leaders/XSM/Ma_Bufang.dds"
+	traits = { }
+	skill = 2
 }

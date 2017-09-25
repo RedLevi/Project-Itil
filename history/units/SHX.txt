@@ -1,0 +1,47 @@
+﻿division_template = {
+	name = "Juntuán"				# Represents local militia groups (generally poorly-equipped )
+
+	regiments = {
+		infantry = { x = 0 y = 0 }	# Note: Chinese divisions were brigade-sized compared other nations' armies
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+}
+
+### OOB ###
+units = {
+	### Provincial Forces ###
+	division = {
+		name = "Suiyuan Jingbei"
+		location = 4174
+		division_template = "Juntuán"		# Provincial militia unit (poor equipment and training)
+
+	}
+	division = {
+		name = "Chahar Jingbei"
+		location = 7048
+		division_template = "Juntuán"		# Provincial militia unit (poor equipment and training)
+
+	}
+	division = {
+		name = "1 Shanxi Army"
+		location = 11752
+		division_template = "Juntuán"		# Provincial militia unit (poor equipment and training)
+
+	}
+	division = {
+		name = "2 Shanxi Army"
+		location = 3427
+		division_template = "Juntuán"		# Provincial militia unit (poor equipment and training)
+
+	}
+	division = {
+		name = "3 Shanxi Army"
+		location = 12880
+		division_template = "Juntuán"		# Provincial militia unit (poor equipment and training)
+
+	}
+}
+

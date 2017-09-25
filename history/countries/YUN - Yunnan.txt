@@ -43,10 +43,17 @@ set_politics = {
 create_country_leader = {
 	name = "Long Yun"
 	desc = "POLITICS_LONG_YUN_DESC"
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_warlord1.dds"
+	picture = "gfx/leaders/YUN/Long Yun.dds"
 	expire = "1965.1.1"
 	ideology = autocracy
 	traits = {
 		#
 	}
+}
+
+create_field_marshal = {
+	name = "Long Yun"
+	portrait_path = "gfx/leaders/YUN/Long Yun.dds"
+	traits = { }
+	skill = 2
 }

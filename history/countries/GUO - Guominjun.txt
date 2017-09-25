@@ -1,6 +1,6 @@
 ﻿capital = 622
 
-oob = "GUO_OOB"
+oob = "GUO"
 
 # Starting tech
 set_technology = {
@@ -43,4 +43,18 @@ set_politics = {
 	elections_allowed = no
 }
 
-
+create_country_leader = {
+	name = "Feng Yuxiang"
+	
+	picture = "gfx/leaders/GUO/Feng_Yuxiang.dds"
+	expire = "1960.1.1"
+	ideology = marxism
+	traits = {
+	}
+}
+create_field_marshal = {
+	name = "Feng Yuxiang"
+	portrait_path = "gfx/leaders/GUO/Feng_Yuxiang.dds"
+	traits = { }
+	skill = 3
+}

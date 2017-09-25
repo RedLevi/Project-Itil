@@ -55,8 +55,8 @@ create_country_leader = {
 	}
 }
 create_field_marshal = {
-	name = "Cao Kun"
-	portrait_path = "gfx/leaders/ZHI/Cao_Kun.dds"
+	name = "Wu Peifu"
+	portrait_path = "gfx/leaders/ZHI/Wu_Peifu.dds"
 	traits = { }
-	skill = 3
+	skill = 4
 }

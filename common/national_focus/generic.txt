@@ -1649,7 +1649,7 @@ focus_tree = {
 			
 					has_government = communism 
 					
-					factor = 2
+					factor = 4
 				
 			}
 			
@@ -1657,7 +1657,7 @@ focus_tree = {
 			
 					has_government = socialism 
 					
-					factor = 1
+					factor = 2
 				
 			}
 		
@@ -1821,7 +1821,7 @@ focus_tree = {
 			
 					has_government = communism 
 					
-					factor = 3
+					factor = 5
 				
 			}
 			

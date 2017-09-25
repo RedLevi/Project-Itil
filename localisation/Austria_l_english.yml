@@ -1,0 +1,27 @@
+﻿l_english:
+####events####
+aus.1.t:0 "The Reconquest of Hungary"
+aus.1.d:0 "Many years have passed since the loss of our rightful imperial territory during the bloody civil war. Now is the time to put the Hungarians back in their place and reclaim Hungary for ourselves! Our troops are ready, our factories are pouring out guns and muntions, the people are behind our cause and the Hungarians are not expecting an attack. However, one question remains - shall we seek support from our German allies - at the risk the demand we back down or even favour Hungary, or shall we declare here and now?"
+aus.1.a:0 "Declare War Immediately!"
+aus.1.b:0 "Secretly ask the Germans for their help"
+aus.1.c:0 "Back down"
+aus.2.t:0 "Austria declares war!"
+aus.2.d:0 "Austria once again threatens our independence with their armed forces. Their amries have swiftly mobalised on our borders, and skirmishes have already broken out between our forces and theirs. We must defend out homeland to the last!"
+aus.2.a:0 "To Arms!"
+aus.3.t:0 "Austria takes Inititive!"
+aus.3.d:0 "The remnants of the shattered empire Austro-Hungarian Empire, Austria, has taken up arms today to reconquer their lost imperial territory of Hungary. Austria has long been a faithful ally of Germany, and so there is widepspread support of the war, both from the public and from key members of the Imperial Governmnet. The restoration of the Austro-Hungarian Empire would ensure a powerful ally for Germany once more, especially in the growingly dark times upon us. With Hungary restored to Imperial authority, the way to total reconquest may lay open for us to exploit hand in hand with our ally. \nHowever, questions have been raised as to the Austrian ability to reconquer Hungary on their own. Shall we provide them with some arms and men, or can they handle themselves. Or, more drastically, shall we demand they end this conflict and consolodate what little they have left before thinking of taking back what may not be theirs?"
+aus.3.a:0 "Send Austria some Men and Guns"
+aus.3.b:0 "They can handle themselves!"
+aus.3.c:0 "Maybe we should wait this out..."
+aus.3.d:0 "Demand Austria reconsider!"
+
+####ideas####
+AUS_Reconquest_War:0 "Austrian Reconquest of Hungary"
+AUS_Reconquest_War_desc:0 "We have decided to embroil ourselves in war with Hungary once again. We will reconquer the rightful lands of the Austrian Empire!"
+
+####opinion####
+
+
+####tooltip####
+AUS_reconquest_inform_majors:0 "The world will be informed of our actions, and Germany, Britain, Romania and Yugoslavia may react to our actions"
+

@@ -3,3 +3,215 @@
 ###################################
 
 add_namespace = aus
+
+## Austrian Reconquest of Hungary ##
+## Event will properly be implemented into a focus tree and not just left to trigger whenever soon! ##
+
+country_event = { # Austria's initiation event
+	id = aus.1
+	title = aus.1.t
+	desc = aus.1.d
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 200
+		modifier = {
+			factor = 0.5
+			threat < 0.5
+		}
+	}
+	trigger = {
+		tag = AUS
+		date > 1939.1.1
+		threat < 0.2
+		NOT = {
+			OR = {
+				has_war_with = HUN
+				is_in_faction_with = HUN
+				NOT = {
+					OR = {
+						is_subject_of = HUN
+						HUN = { is_subject_of = AUS }
+					}
+				}
+			}
+		}
+		country_exists = HUN
+	}
+
+	option = { # We are strong enough alone. It is time.
+		name = aus.1.a
+		ai_chance = { factor = 10 }
+		declare_war_on = { target = HUN type = annex_everything }
+		HUN = { country_event = { id = aus.2 days = 1 } }
+		custom_effect_tooltip = AUS_reconquest_inform_majors
+		hidden_effect = {
+			if = {
+				limit = {
+					GER = {
+						AND = {
+							NOT = { is_subject = yes }
+							# uhh... foolproofing TBD?
+						}
+					}
+				}
+			}
+			GER = { country_event = { days = 1 id = aus.3 } } # Austria takes initiative!
+			ENG = { country_event = { days = 1 id = aus.4 } } # Austria declares reconquest!
+			if = {
+				limit = {
+					YUG = {
+						NOT = {
+							AND = {
+								owns_state = 45
+								owns_state = 82
+							}
+						}
+					}
+				}
+				YUG = { country_event = { days = 28 id = aus.5 } } # Austria invades Hungary!
+			}
+			if = {
+				limit = {
+					ROM = {
+						NOT = {
+							AND = {
+								owns_state = 76
+								owns_state = 83
+							}
+						}
+					}
+				}
+				ROM = { country_event = { days = 28 id = aus.6 } } # Hungary is at war!
+			}
+			news_event = aus.6 # Austria declares war on Hungary
+		}
+		add_ideas = AUS_Reconquest_War
+	}
+
+	option = { # Request help from Germany in the war
+		trigger = {
+			country_exists = GER
+			OR = {
+				is_in_faction_with = GER
+				is_subject_of = GER
+			}
+			NOT = { GER = {
+				OR = {
+					is_in_faction_with = HUN
+					HUN = { is_subject_of = GER }
+				}
+			} }
+		}
+		name = aus.1.b
+		ai_chance = { factor = 60 }
+		GER = { country_event = { days = 1 id = aus.7 } } # Austria proposed reconquest
+	}
+
+	option = { # Eh we're fine actually guys our empire is dead whatever
+		name = aus.1.c
+		ai_chance = { factor = 30 }
+		add_national_unity = -0.05
+	}
+}
+
+country_event = { # The Austrians have declared war!
+	id = aus.2
+	title = aus.2.t
+	desc = aus.2.d
+	is_triggered_only = yes
+
+	option = { # We will defend our homeland!
+		name = aus.2.a
+		add_political_power = 50
+		add_ideas = HUN_Defend_Homeland
+	}
+}
+
+country_event = { # Austria takes Inititive! (Germany)
+	id = aus.3
+	title = aus.3.t
+	desc = aust.3.d
+	is_triggered_only = yes
+
+	option = { # Send Austria our Support
+		trigger = {
+			GER = { has_idea = overconfident_general_staff }
+		}
+		ai_chance = { factor = 50 }
+		name = aus.3.a
+		send_equipment = { target = AUS type = infantry_equipment amount = 2000 }
+		AUS = { add_manpower = 10000 } 
+		#AUS = { add_opinion_modifier = { target = GER modifier = AUS_reconquest_support } }
+		#add_opinion_modifier = { target = AUS modifier = AUS_reconquest_support }
+	}
+
+	option = { # Send Austria our Support (intentionally the same name)
+		trigger = {
+			NOT = { GER = { has_idea = overconfident_general_staff } }
+		}
+		ai_chance = { factor = 70 }
+		name = aus.3.a
+		send_equipment = { target = AUS type = infantry_equipment amount = 4000 }
+		AUS = { add_manpower = 20000 } 
+		#AUS = { add_opinion_modifier = { target = GER modifier = AUS_reconquest_support } }
+		#add_opinion_modifier = { target = AUS modifier = AUS_reconquest_support }
+	}
+
+	option = { # They can handle themselves!
+	trigger = {
+			GER = { has_idea = overconfident_general_staff }
+		}
+		ai_chance = { factor = 40 }
+		name = aus.3.b
+	}
+
+	option = { # We shall remain impartial
+		trigger = {
+			NOT = { GER = { has_idea = overconfident_general_staff } }
+		}
+		ai_chance = { factor = 20 }
+		name = aus.3.c
+		#AUS = { add_opinion_modifier = { target = GER modifier = AUS_GER_to_table } }
+		#add_opinion_modifier = { target = AUS modifier = AUS_GER_to_table }
+	}
+
+	option = { # Demand Austria come to the table!
+		name = austria.3.e
+		ai_chance = { factor = 10 }
+		AUS = { country_event = { id = aus.8 days = 2 } }
+		add_national_unity = -0.05
+	}
+}
+
+country_event = { # Austrian Reconquest of Hungary (UK)
+	id = aus.4
+	title = aus.4.t
+	desc = aust.4.d
+	is_triggered_only = yes
+
+	option = {
+		
+	}
+}
+
+country_event = { # Austria invades Hungary! (Yugoslavia)
+	id = aus.5
+	title = aus.5.t
+	desc = aust.5.d
+	is_triggered_only = yes
+
+	option = {
+		
+	}
+}
+
+country_event = { # Hungary is at War! (Romania)
+	id = aus.6
+	title = aus.6.t
+	desc = aust.6.d
+	is_triggered_only = yes
+
+	option = {
+		
+	}
+}

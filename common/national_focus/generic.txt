@@ -2454,7 +2454,7 @@ focus_tree = {
 		prerequisite = { focus = the_constitution_focus }
 
 		mutually_exclusive = { focus = freedom_crusader_focus }
-		x = 26
+		x = 25
 		y = 6
 		cost = 10
 
@@ -2487,7 +2487,7 @@ focus_tree = {
 	
 		id = freedom_crusader_focus
 		icon = GFX_
-		x = 28
+		x = 29
 		y = 6
 		cost = 10 
 		

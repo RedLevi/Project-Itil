@@ -2,7 +2,7 @@
 state={
 	id=378
 	name="STATE_378"
-	manpower = 5677248
+	manpower = 8677248
 	
 	state_category = metropolis
 	
@@ -15,8 +15,8 @@ state={
 		owner = USA
 		buildings = {
 			infrastructure = 6
-			arms_factory = 4
-			industrial_complex = 8
+			arms_factory = 5
+			industrial_complex = 10
 			dockyard = 4
 			air_base = 10
 			1562 = {

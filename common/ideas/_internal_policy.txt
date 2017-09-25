@@ -12,7 +12,6 @@ ideas = {
 				
 					has_government = national_integralism
 					has_government = reactionarism
-					has_country_flag = traditionalist_society
 				
 				}
 				
@@ -20,24 +19,13 @@ ideas = {
 				
 					has_government = liberalism
 					has_government = socialism
+					has_government = conservatism
 					
 					AND = {
 					
 						has_government = communism 
 						
 						has_country_flag = socialist_democracy
-					
-					}
-					
-					AND = {
-					
-						has_government = conservatism 
-						
-						NOT = {
-						
-							has_country_flag = traditionalist_society
-						
-						}
 					
 					}
 				
@@ -56,51 +44,6 @@ ideas = {
 			picture = generic_volunteer_expedition_bonus
 		}
 		
-		traditionalist_society_law = {
-			cost = 250
-			removal_cost = -1
-			
-			available = {
-			
-				NOT = {
-				
-					has_government = socialism
-					has_government = communism
-				
-				}
-				
-				OR = {
-				
-					has_government = conservatism
-					has_government = reactionarism 
-					
-					
-					AND = {
-					
-						OR = {
-						
-							has_government = national_integralism 
-							has_government = liberalism
-						
-						}
-						
-						has_country_flag = traditionalist_society
-					
-					}
-				
-				}
-			
-			}
-			
-			modifier = { 
-			
-				enemy_partisan_effect = 0.15
-				consumer_goods_factor = -0.3
-
-						 }
-			picture = generic_volunteer_expedition_bonus
-			
-		}
 		
 		limited_freedom_law = {
 			cost = 250
@@ -112,7 +55,6 @@ ideas = {
 				
 					has_government = national_integralism
 					has_government = reactionarism
-					has_country_flag = traditionalist_society
 					
 					AND = {
 					
@@ -133,33 +75,10 @@ ideas = {
 				consumer_goods_factor = 0.075
 
 				}
-				
+			default = yes	
 			picture = generic_volunteer_expedition_bonus
 		}
 		
-		emergency_powers_law = {
-			cost = 250
-			removal_cost = -1
-			
-			available = {
-			
-				has_country_flag = national_crisis
-			
-			}
-			
-			modifier = { 
-			
-				enemy_partisan_effect = -0.35 
-				drift_defence_factor = 0.35
-				unity_factor = -0.1
-
-
-				}
-				
-			picture = generic_volunteer_expedition_bonus
-			
-			default = yes 
-		}
 		
 		authoritarian_state_law = {
 			cost = 250
@@ -179,13 +98,6 @@ ideas = {
 					
 					}
 					
-					AND = {
-					
-						has_government = conservatism
-						
-						has_country_flag = rightist_dictatorship
-					
-					}
 				
 				}
 			
@@ -199,6 +111,7 @@ ideas = {
 				consumer_goods_factor = 0.1 
 				
 				}
+			default = yes	
 			picture = generic_volunteer_expedition_bonus
 		}
 		
@@ -233,6 +146,8 @@ ideas = {
 				unity_factor = 0.1 
 				
 				}
+				
+			default = yes
 			picture = generic_volunteer_expedition_bonus
 		}
 	

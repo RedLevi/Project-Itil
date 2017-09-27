@@ -1,0 +1,23 @@
+﻿l_english:
+####events####
+ame.1.t: "Arranging a border incident?"
+ame.1.d:0 "Some senior ranking generals have approached us with a most intriuging suggestion - engineering a border incident with the federal troops along the demilitarized zone and blame it on our enemies! If we manage to provoke the Federal armies into retaliation we could finally liberate the pacific states!"
+ame.1.a:0 "Brilliant suggestion! Get to it!"
+ame.1.b:0 "We are not ready for war yet"
+ame.2.t:0 "Tensions at the border"
+ame.2.d:0 "A border skirmish turned into a full-scale battle yesterday when troops loyal to the Americanist regieme have opened fire on a guard station outside the demilitarized zone. The American regieme is already blaming us for the incident. Failing to adress this transgression would be seen as a weakness of our regieme. Should we retaliate?"
+ame.2.a:0 "This will not stand! To war!"
+ame.2.b:0 "We must turn the other cheek..."
+ame.3.t:0 "War in America"
+ame.3.d:0 "Tensions along the American demilitarized border have finally erupted today when a border skirmish broke the fragile ceasefire between the two regiems. Both sides are blaming each other for the incident, and are mobilizing for total war. Will the Federal government be able to hold back against the Americanist armies?"
+ame.3.a:0 "War never changes"
+ame.4.t:0 "Federalists go to war!"
+ame.4.d:0 "The Federalists have fallen to our trap and have launched their counter attack against our forces on the border! This effectively means the ceasefire between us is broken and we can finally retake the western states!"
+ame.4.a:0 "Just as planned!"
+ame.5.t:0 "The Federalists cower!"
+ame.5.d:0 "The border operation went as planned but the Federalist cowards in Sacremento did not react to our attacks! This act of cowardice is yet another indication of the weakness of their decedant regieme!"
+ame.5.a:0 "Hah! Cowards!"
+####tooltips####
+border_incident:0 "Border incident"
+american_retaliation:0 "Retaliation"
+america_no_response:0 "Maintained peace"

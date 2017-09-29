@@ -10,6 +10,7 @@ country_event = {#arrange a border incident?
 		tag = AME 
 		has_war = no 
 		USA = { exists = yes }
+		NOT = { has_country_flag = AME_ford }
 		date > 1937.6.1 
 		has_army_manpower = { size > 5000 }
 	}
@@ -48,7 +49,7 @@ country_event = {#border skirmish
 		ai_chance = { factor = 50 }
 		add_manpower = -750 
 		add_named_threat = { threat = -1 name = america_no_response }
-		add_political_power = -40 
+		add_national_unity = -0.02 
 		hidden_effect = { AME = { country_event = { id = ame.5 } } }
 	}
 }
@@ -81,6 +82,132 @@ country_event = {#USA doesnt go to war
 	is_triggered_only = yes 
 	option = {
 		name = ame.5.a 
-		add_political_power = 25
+		add_national_unity = 0.01
+	}
+}
+
+###internal politics 1936### 
+country_event = {#introduction 
+	id = ame.6 
+	title = ame.6.t 
+	desc = ame.6.d 
+	fire_only_once = yes 
+	trigger = { 
+		tag = AME 
+		date > 1936.1.5
+	}
+	option = {
+		name = ame.6.a 
+		add_national_unity = -0.01
+		hidden_effect = { country_event = { id = ame.7 days = 25 } }
+	}
+}
+
+country_event = {#American military faction
+	id = ame.7 
+	title = ame.7.t 
+	desc = ame.7.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.7.a 
+		add_national_unity = -0.01
+		hidden_effect = { country_event = { id = ame.8 days = 15 } }
+	}
+}
+
+country_event = {#American Industrial Committee
+	id = ame.8 
+	title = ame.8.t 
+	desc = ame.8.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.8.a 
+		add_national_unity = -0.01
+		hidden_effect = { country_event = { id = ame.9 days = 15 } }
+	}
+}
+
+country_event = {#KKK
+	id = ame.9 
+	title = ame.9.t 
+	desc = ame.9.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.9.a 
+		add_national_unity = -0.01
+		hidden_effect = { country_event = { id = ame.10 days = 15 } }
+	}
+}
+
+country_event = {#American Party
+	id = ame.10
+	title = ame.10.t 
+	desc = ame.10.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.10.a 
+		add_national_unity = -0.01
+		hidden_effect = { country_event = { id = ame.11 days = 80 } }
+	}
+}
+
+country_event = {#constitutional convention 
+	id = ame.11 
+	title = ame.11.t 
+	desc = ame.11.d 
+	is_triggered_only = yes 
+	option = {#american party 
+		name = ame.11.a 
+		ai_chance = { factor = 25 }
+		add_national_unity = 0.05 
+		set_country_flag = AME_americanist
+	}
+	option = {#KKK 
+		name = ame.11.b 
+		ai_chance = { factor = 25 }
+		add_national_unity = 0.035
+		set_country_flag = AME_KKK
+		create_country_leader = {
+			name = "Hiram Wesley Evans"
+			desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
+			picture = "Hiram_Evans.dds"
+			expire = "1965.1.1"
+			ideology = integralism
+			traits = {
+				
+			}
+		}
+	}
+	option = {#Ford 
+		name = ame.11.c 
+		ai_chance = { factor = 25 }
+		add_national_unity = -0.01 
+		set_country_flag = AME_ford
+		create_country_leader = {
+			name = "Henry Ford"
+			desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
+			picture = "Henry_Ford.dds"
+			expire = "1965.1.1"
+			ideology = integralism
+			traits = {
+				
+			}
+		}
+	}
+	option = {#Ford 
+		name = ame.11.d 
+		ai_chance = { factor = 25 }
+		add_national_unity = -0.04 
+		set_country_flag = AME_military
+		create_country_leader = {
+			name = "George Van Horn Moseley"
+			desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
+			picture = "George_Moseley.dds"
+			expire = "1965.1.1"
+			ideology = integralism
+			traits = {
+				
+			}
+		}
 	}
 }

@@ -986,5 +986,15 @@ spriteTypes = {
 		name = "GFX_focus_generic_commonwealth_build_infantry"
 		texturefile = "gfx/interface/goals/focus_generic_commonwealth_build_infantry.dds"
 	}
-
+	### UK Focus Icons
+	SpriteType = { 
+		name = "focus_support_yug"
+		texturefile = "gfx/interface/goals/focus_support_yug.dds"
+	}
+	
+	SpriteType = { 
+		name = "naval_ambitions"
+		texturefile = "gfx/interface/goals/naval_ambitions.dds"
+	}
+	
 }

@@ -621,7 +621,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_bastion_democracy
-		icon = ? 
+		icon = GFX_goal_support_democracy
 		x = 21
 		y = 0 
 		cost = 10 
@@ -643,7 +643,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_european_theater
-		icon = ? 
+		icon = GFX_focus_generic_diplomatic_treaty
 		x = 12
 		y = 1 
 		cost = 10 
@@ -739,7 +739,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_new_balkan_order
-		icon = ? 
+		icon = GFX_goal_generic_military_deal
 		x = 11
 		y = 2 
 		cost = 10 
@@ -768,7 +768,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_demand_ALB
-		icon = ? 
+		icon = GFX_goal_generic_major_war
 		x = 10
 		y = 3
 		cost = 10 
@@ -806,7 +806,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_support_GRE
-		icon = ? 
+		icon = GFX_goal_generic_improve_relations
 		x = 12
 		y = 3
 		cost = 10 
@@ -839,7 +839,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_support_hungary
-		icon = ? 
+		icon = GFX_focus_secret_rearmament
 		x = 11
 		y = 4
 		cost = 10 
@@ -869,7 +869,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_support_yugoslavia
-		icon = ? 
+		icon = focus_support_yug
 		x = 15
 		y = 2 
 		cost = 10 
@@ -898,7 +898,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_fund_yugoslavia
-		icon = ? 
+		icon = GFX_focus_generic_concessions
 		x = 14
 		y = 3 
 		cost = 10 
@@ -925,7 +925,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_fund_romania
-		icon = ? 
+		icon = GFX_focus_rom_preserve_romania
 		x = 16
 		y = 3 
 		cost = 10 
@@ -952,7 +952,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_fortify_mediterranean 
-		icon = ?
+		icon = GFX_focus_generic_coastal_fort
 		x = 17 
 		y = 2 
 		cost = 10 
@@ -1705,7 +1705,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_thalassocratic_ambitions
-		icon = ? 
+		icon = naval_ambitions 
 		x = 14
 		y = 5 
 		cost = 10 
@@ -1870,7 +1870,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_naval_doctrine
-		icon = ? 
+		icon = GFX_goal_generic_navy_doctrines_tactics 
 		x = 16
 		y = 6 
 		cost = 10 
@@ -1896,7 +1896,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_battleship_focus
-		icon = ? 
+		icon = GFX_goal_generic_navy_battleship 
 		x = 15
 		y = 7 
 		cost = 10 
@@ -1923,7 +1923,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_destroyer_focus
-		icon = ? 
+		icon = GFX_goal_generic_navy_cruiser 
 		x = 15
 		y = 8 
 		cost = 10 
@@ -1949,7 +1949,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_carrier_focus
-		icon = ? 
+		icon = GFX_goal_generic_navy_carrier 
 		x = 17
 		y = 7 
 		cost = 10 
@@ -1976,7 +1976,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_submarine_focus
-		icon = ? 
+		icon = GFX_goal_generic_navy_submarine 
 		x = 17
 		y = 8 
 		cost = 10 

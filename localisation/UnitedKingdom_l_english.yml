@@ -61,6 +61,9 @@ ENG_carrier_focus:0 "Carrier Focus"
 ENG_carrier_focus_desc:0 "Battleships are a dying concept. With the succesful inception of carriers in the pacific coast, a new queen of the seas has emerged."
 ENG_battleship_focus:0 "Battleship Focus"
 ENG_battleship_focus_desc:0 "The Battleship is without a doubt the queen of the seas. It is a proven concept, and will surely dictate naval power in the 20th century."
+ENG_destroyer_focus:0 "Support ships"
+ENG_destroyer_focus_desc:0 "We cannot have a ship consisting just of Battleships. For our capital ships to use their full potential, we need to support them with a capable screen of destroyers and light cruisers."
+ENG_submarine_focus:0 "Underwater Fleet"
 
 
 

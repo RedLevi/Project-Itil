@@ -17,6 +17,7 @@ state={
 		buildings = {
 			infrastructure = 4
 		}
+		add_claim_by = AME
 		add_core_of = USA
 	}
 

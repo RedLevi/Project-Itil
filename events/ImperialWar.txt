@@ -1678,6 +1678,7 @@ country_event = {#The British aren't watching - AME
 		has_global_flag = imperial_war_flag 
 		has_war = no 
 		CAN = { has_war_with = ENG }
+		NOT = { has_country_flag = AME_ford }
 	}
 	mean_time_to_happen = { days = 50 }
 	option = {#Invade USA 
@@ -1689,13 +1690,19 @@ country_event = {#The British aren't watching - AME
 	}
 	option = {#invade Canada
 		name = imperialwar.33.b 
+		trigger = { 
+			NOT = { has_country_flag = AME_KKK }
+		}
 		ai_chance = { factor = 40 }
 		add_political_power = 40 
 		declare_war_on = { target = CAN type = annex_everything }
 		ENG = { country_event = { id = imperialwar.34 days = 2 } }
 	}
 	option = {#invade both
-		trigger = { USA = { exists = yes } }
+		trigger = { 
+			USA = { exists = yes } 
+			NOT = { has_country_flag = AME_KKK }
+			}
 		name = imperialwar.33.c 
 		ai_chance = { factor = 5 }
 		add_political_power = 80 

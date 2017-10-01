@@ -38,7 +38,7 @@ country_event = {#border skirmish
 	option = {#war 
 		name = ame.2.a 
 		ai_chance = { factor = 50 }
-		add_named_thread = { threat = 3 name = american_retaliation }
+		add_named_threat = { threat = 3 name = american_retaliation }
 		add_manpower = -700
 		country_event = { id = ame.3 }
 		hidden_effect = { AME = { country_event = { id = ame.4 } } }
@@ -161,6 +161,16 @@ country_event = {#constitutional convention
 		ai_chance = { factor = 25 }
 		add_national_unity = 0.05 
 		set_country_flag = AME_americanist
+		create_country_leader = {
+			name = "William Dudley Pelley"
+			desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
+			picture = "Pelley.dds"
+			expire = "1965.1.1"
+			ideology = integralism
+			traits = {
+				
+			}
+		}
 	}
 	option = {#KKK 
 		name = ame.11.b 
@@ -195,7 +205,7 @@ country_event = {#constitutional convention
 		}
 	}
 	option = {#Ford 
-		name = ame.11.d 
+		name = ame.11.e 
 		ai_chance = { factor = 25 }
 		add_national_unity = -0.04 
 		set_country_flag = AME_military
@@ -209,5 +219,94 @@ country_event = {#constitutional convention
 				
 			}
 		}
+	}
+}
+
+####peace treaty with the federalists####
+country_event = {#peace summit?
+	id = ame.12 
+	title = ame.12.t 
+	desc = ame.12.d 
+	fire_only_once = yes 
+	trigger = { 
+		tag = AME 
+		has_opinion_modifier = hostile_status
+		has_country_flag = AME_ford
+		date > 1936.11.3
+		NOT = { has_war_with = USA }
+		USA = { 
+			exists = yes 
+			has_government = conservatism
+		}
+	}
+	mean_time_to_happen = { days = 90 }
+	option = {#send the peace 
+		name = ame.12.a 
+		ai_chance = { factor = 85 }
+		USA = { country_event = { id = ame.13 days = 3 } }
+	}
+	option = {#don't
+		name = ame.12.b 
+		ai_chance = { factor = 15 }
+		add_national_unity = 0.005
+	}
+}
+
+country_event = {#Peace with the Integralists?
+	id = ame.13 
+	title = ame.13.t 
+	desc = ame.13.d 
+	is_triggered_only = yes 
+	option = {#yes 
+		name = ame.13.a 
+		ai_chance = { factor = 60 }
+		add_named_threat = { name = american_peace_treaty threat = -4 }
+		AME = { remove_relation_modifier = hostile_status }
+		add_national_unity = -0.05
+		add_ideas = USA_peace_idea
+		AME = { country_event = { id = ame.14 } }
+		every_state = {
+			limit = {
+				is_controlled_by = AME 
+				is_core_of = USA
+			}
+			remove_core_of = USA
+		}
+	}
+	option = {#decline 
+		name = ame.13.b 
+		ai_chance = { factor = 40 }
+		add_national_unity = 0.025
+		AME = { country_event = { id = ame.15 } }
+		add_named_threat = { name = USA_refused_peace threat = 1 }
+	}
+}
+
+country_event = {#peace with the federalists 
+	id = ame.14 
+	title = ame.14.t 
+	desc = ame.14.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.14.a 
+		add_national_unity = -0.03 
+		add_ideas = AME_peace_idea
+		every_state = {
+			limit = {
+				is_controlled_by = USA 
+				is_claimed_by = AME
+			}
+			remove_claim_by = AME
+		}
+	}
+}
+
+country_event = {#No peace with the federalists 
+	id = ame.15 
+	title = ame.15.t 
+	desc = ame.15.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.15.a 
 	}
 }

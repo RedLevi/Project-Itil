@@ -1,0 +1,10 @@
+﻿l_english:
+####events####
+usa.1.t:0 "Presedential elections of 1936"
+usa.1.d:0 "For the first time since the civil war and despite calls to suspend the elections the American people once again set out to celebrate democracy. The unprecedented circumstances have forced the electoral committee to pass reforms to the voting system, particularly the abolishment of the electoral college and the implementation of a more direct electoral system. There are three main candidates this year, the Democratic candidate,the incumbent FDR, who supports an aggressive position against the usurpers to the east, and the continuation of his New Deal reforms. The Republican candidate Hiram Johnson, former governer of California, who supports a more isolationist foreign policy and more liberal economic reforms. The third candidate is 'Upton Sinclair of the United Socialist Party of America' who managed to gain a big support base among the urban population and immigrant communities of the coastel states with his promises of transforming America into a 'Workers' state'. Fierce campaigning have taken place all year and it is clear this election will determine the future of American history."
+usa.1.a:0 "Franklin D. Roosevelt of the Democratic Party"
+usa.1.b:0 "Hiram W. Johnson of the Republican Party"
+usa.1.c:0 "Upton Sinclair Jr. of the USPA"
+####ideas####
+USA_peace_idea:0 "Trade with the east"
+USA_peace_idea_desc:0 "Trade agreements with our former rivals in the east allow us to faster rebuild the country's economy."

@@ -14,6 +14,7 @@ state={
 
 		}
 		add_core_of = USA
+		add_claim_by = AME
 		victory_points = {
 			4865 1 
 		}

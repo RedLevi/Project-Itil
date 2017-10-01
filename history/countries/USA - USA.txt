@@ -41,7 +41,6 @@ set_technology = {
 set_convoys = 400
 set_national_unity = 0.6
 
-add_opinion_modifier = { target = AME modifier = hostile_status }
 
 set_politics = {
 

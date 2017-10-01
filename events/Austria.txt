@@ -56,7 +56,7 @@ country_event = { # Austria's initiation event
 				}
 			}
 			GER = { country_event = { days = 1 id = aus.3 } } # Austria takes initiative!
-			ENG = { country_event = { days = 1 id = aus.4 } } # Austria declares reconquest!
+			ENG = { country_event = { days = 7 id = aus.4 } } # Austria declares reconquest!
 			if = {
 				limit = {
 					YUG = {
@@ -68,7 +68,7 @@ country_event = { # Austria's initiation event
 						}
 					}
 				}
-				YUG = { country_event = { days = 28 id = aus.5 } } # Austria invades Hungary!
+				YUG = { country_event = { days = 14 id = aus.5 } } # Austria invades Hungary!
 			}
 			if = {
 				limit = {
@@ -81,7 +81,7 @@ country_event = { # Austria's initiation event
 						}
 					}
 				}
-				ROM = { country_event = { days = 28 id = aus.6 } } # Hungary is at war!
+				ROM = { country_event = { days = 14 id = aus.6 } } # Hungary is at war!
 			}
 			news_event = aus.6 # Austria declares war on Hungary
 		}
@@ -143,6 +143,9 @@ country_event = { # Austria takes Inititive! (Germany)
 		AUS = { add_manpower = 10000 } 
 		#AUS = { add_opinion_modifier = { target = GER modifier = AUS_reconquest_support } }
 		#add_opinion_modifier = { target = AUS modifier = AUS_reconquest_support }
+		hidden_effect = {
+			set_global_flag = GER_support_AUS
+		}
 	}
 
 	option = { # Send Austria our Support (intentionally the same name)
@@ -155,6 +158,9 @@ country_event = { # Austria takes Inititive! (Germany)
 		AUS = { add_manpower = 20000 } 
 		#AUS = { add_opinion_modifier = { target = GER modifier = AUS_reconquest_support } }
 		#add_opinion_modifier = { target = AUS modifier = AUS_reconquest_support }
+		hidden_effect = {
+			set_global_flag = GER_support_AUS
+		}
 	}
 
 	option = { # They can handle themselves!
@@ -163,6 +169,9 @@ country_event = { # Austria takes Inititive! (Germany)
 		}
 		ai_chance = { factor = 40 }
 		name = aus.3.b
+		hidden_effect = {
+			set_global_flag = GER_impartial_AUS
+		}
 	}
 
 	option = { # We shall remain impartial
@@ -173,6 +182,10 @@ country_event = { # Austria takes Inititive! (Germany)
 		name = aus.3.c
 		#AUS = { add_opinion_modifier = { target = GER modifier = AUS_GER_to_table } }
 		#add_opinion_modifier = { target = AUS modifier = AUS_GER_to_table }
+		hidden_effect = {
+			set_global_flag = GER_impartial_AUS
+		}
+
 	}
 
 	option = { # Demand Austria come to the table!
@@ -180,17 +193,73 @@ country_event = { # Austria takes Inititive! (Germany)
 		ai_chance = { factor = 10 }
 		AUS = { country_event = { id = aus.8 days = 2 } }
 		add_national_unity = -0.05
+		hidden_effect = {
+			set_global_flag = GER_AUS_back_down
+		}
 	}
 }
 
 country_event = { # Austrian Reconquest of Hungary (UK)
 	id = aus.4
 	title = aus.4.t
-	desc = aust.4.d
+	desc = {
+		text = aus.4.d_support
+		trigger = {
+			has_global_flag = GER_support_AUS
+		}
+	}
+	desc = {
+		text = aus.4.d_impartial
+		trigger = {
+			has_global_flag = GER_impartial_AUS
+		}
+	}
+	desc = {
+		text = aus.4.d_ultimatum
+		trigger = {
+			has_global_flag = GER_AUS_back_down
+		}
+	}
+	desc = = {
+		text = aus.4.d
+		trigger = {
+			NOT = {
+				OR = {
+					has_global_flag = GER_support_AUS
+					has_global_flag = GER_impartial_AUS
+					has_global_flag = GER_AUS_back_down
+				}
+			}
+		}
+	}
 	is_triggered_only = yes
 
-	option = {
-		
+	option = { # We must issue an ultimatum to Austria to cease this conflict!
+		ai_chance = { factor = 10 }
+		name = aus.4.a
+		#AUS = { country_event = { id = aus.? days = 2 } }
+	}
+
+	option = { # Send Hungary some men and supplies
+		ai_chance = {
+			factor = 70
+			modifier = {
+				factor = 2
+				has_global_flag = GER_support_AUS
+			}
+		}
+		name = aus.4.b
+		send_equipment = { target = HUN type = infantry_equipment amount = 4000 }
+		HUN = { add_manpower = 20000 } 
+		#HUN = { add_opinion_modifier = { target = ENG modifier = HUN_defence_support } }
+		#add_opinion_modifier = { target = HUN modifier = HUN_defence_support }
+	}
+
+	option = { # This is not our problem
+		ai_chance = { factor = 20 }
+		name = aus.4.c
+		#HUN = { add_opinion_modifier = { target = ENG modifier = HUN_no_support } }
+		#add_opinion_modifier = { target = HUN modifier = HUN_no_support }
 	}
 }
 
@@ -200,8 +269,16 @@ country_event = { # Austria invades Hungary! (Yugoslavia)
 	desc = aust.5.d
 	is_triggered_only = yes
 
-	option = {
+	option = { # Send an ultimatum to Austria
 		
+	}
+
+	option = { # Send an ultimatum to Hungary
+
+	}
+
+	option = { # We can not risk war right now
+
 	}
 }
 

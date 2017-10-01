@@ -177,6 +177,37 @@ units = {
 		ship = { name = "USS Richmond" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }				
 		ship = { name = "USS Trenton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }				
 		ship = { name = "USS Concord" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }	
+		ship = { name = "USS Oklahoma" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "Pennsylvania ClUSS" } } }				
+		ship = { name = "USS Tennessee" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "New Mexico ClUSS" } } }				
+		ship = { name = "USS California" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "New Mexico ClUSS" } } }				
+		ship = { name = "USS Colorado" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "Colorado ClUSS" } } }				
+		ship = { name = "USS West Virginia" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "Colorado ClUSS" } } }				
+		ship = { name = "USS Maryland" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "Colorado ClUSS" } } }		
+		ship = { name = "USS Johnson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Lee" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Fox" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Grant" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }	
+		ship = { name = "USS John" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Adams" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }							
+		ship = { name = "USS S-11" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-12" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-13" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-14" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-15" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-16" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-17" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS S-18" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-19" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-20" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-21" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-22" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-23" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-24" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }			
+		ship = { name = "USS S-25" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-26" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-27" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-28" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-29" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }	
 	}
 	
 	navy = {
@@ -196,7 +227,18 @@ units = {
 		ship = { name = "USS Barker" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
 		ship = { name = "USS Parrott" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
 		ship = { name = "USS Bulmer" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
-		ship = { name = "USS Stewart" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Stewart" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }	
+		ship = { name = "USS Borie" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Breckinridge" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Barney" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Blakeley" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
+		ship = { name = "USS Biddle" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-30" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-31" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-32" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+		ship = { name = "USS S-33" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }			
+		ship = { name = "USS S-34" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }		
+	}
 	}
 
 	

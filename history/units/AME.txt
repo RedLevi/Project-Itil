@@ -224,58 +224,7 @@ units = {
 		ship = { name = "ANV Jackson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
 		ship = { name = "ANV Davis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }
 	}
-	navy = {
-		name = "Miami Fleet"
-		base = 1843
-		location = 1843  # Miami
-		ship = { name = "ANV Oklahoma" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "Pennsylvania ClANV" } } }				
-		ship = { name = "ANV Tennessee" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "New Mexico ClANV" } } }				
-		ship = { name = "ANV California" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "New Mexico ClANV" } } }				
-		ship = { name = "ANV Colorado" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "Colorado ClANV" } } }				
-		ship = { name = "ANV West Virginia" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "Colorado ClANV" } } }				
-		ship = { name = "ANV Maryland" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "Colorado ClANV" } } }		
-		ship = { name = "ANV Johnson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
-		ship = { name = "ANV Lee" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
-		ship = { name = "ANV Fox" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
-		ship = { name = "ANV Grant" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }	
-		ship = { name = "ANV John" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
-		ship = { name = "ANV Adams" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }							
-		ship = { name = "ANV S-11" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-12" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-13" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-14" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-15" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-16" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-17" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }		
-		ship = { name = "ANV S-18" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-19" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-20" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-21" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-22" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-23" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-24" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }			
-		ship = { name = "ANV S-25" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-26" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-27" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-28" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-29" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }		
-	}	
-	navy = {
-		name = "Houston Fleet"
-		base = 10337
-		location = 10337  # Houston
-		ship = { name = "ANV Borie" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
-		ship = { name = "ANV Breckinridge" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
-		ship = { name = "ANV Barney" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
-		ship = { name = "ANV Blakeley" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }		
-		ship = { name = "ANV Biddle" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-30" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-31" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-32" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }
-		ship = { name = "ANV S-33" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }			
-		ship = { name = "ANV S-34" definition = submarine equipment = { submarine_1 = { amount = 1 owner = AME } } }		
-	}
-}
+
 
 air_wings = {
 	### I. Michigan ###

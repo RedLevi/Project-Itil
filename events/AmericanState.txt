@@ -171,6 +171,7 @@ country_event = {#constitutional convention
 				
 			}
 		}
+		country_event = { id = ame.16 days = 3 }
 	}
 	option = {#KKK 
 		name = ame.11.b 
@@ -187,6 +188,7 @@ country_event = {#constitutional convention
 				
 			}
 		}
+		country_event = { id = ame.17 days = 3 }
 	}
 	option = {#Ford 
 		name = ame.11.c 
@@ -203,6 +205,7 @@ country_event = {#constitutional convention
 				
 			}
 		}
+		country_event = { id = ame.19 days = 3 }
 	}
 	option = {#Ford 
 		name = ame.11.e 
@@ -219,6 +222,7 @@ country_event = {#constitutional convention
 				
 			}
 		}
+		country_event = { id = ame.18 days = 3 }
 	}
 }
 
@@ -261,7 +265,6 @@ country_event = {#Peace with the Integralists?
 		name = ame.13.a 
 		ai_chance = { factor = 60 }
 		add_named_threat = { name = american_peace_treaty threat = -4 }
-		AME = { remove_relation_modifier = hostile_status }
 		add_national_unity = -0.05
 		add_ideas = USA_peace_idea
 		AME = { country_event = { id = ame.14 } }
@@ -273,8 +276,8 @@ country_event = {#Peace with the Integralists?
 			remove_core_of = USA
 		}
 	}
-	option = {#decline 
-		name = ame.13.b 
+	option = {#no 
+		name = ame.13.b
 		ai_chance = { factor = 40 }
 		add_national_unity = 0.025
 		AME = { country_event = { id = ame.15 } }
@@ -308,5 +311,51 @@ country_event = {#No peace with the federalists
 	is_triggered_only = yes 
 	option = {
 		name = ame.15.a 
+	}
+}
+
+####American constitution events###
+
+country_event = {#Americanist constitution 
+	id = ame.16 
+	title = ame.16.t 
+	desc = ame.16.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.16.a 
+		add_ideas = AME_americanist_rule
+	}
+}
+
+country_event = {#KKK constitution 
+	id = ame.17 
+	title = ame.17.t 
+	desc = ame.17.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.17.a 
+		add_ideas = AME_KKK_rule
+	}
+}
+
+country_event = {#Military constitution 
+	id = ame.18 
+	title = ame.18.t 
+	desc = ame.18.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.18.a 
+		add_ideas = AME_military_rule
+	}
+}
+
+country_event = {#Fordist constitution 
+	id = ame.19 
+	title = ame.19.t 
+	desc = ame.19.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.19.a 
+		add_ideas = AME_fordist_rule
 	}
 }

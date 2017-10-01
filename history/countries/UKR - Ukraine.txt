@@ -41,27 +41,27 @@ set_politics = {
 
 	parties = {
 	    conservatism = {
-			popularity = 5
+			popularity = 63
 		}
 
 		national_integralism = {
-			popularity = 10
+			popularity = 0
 		}
 
 		liberalism = {
-			popularity = 5
+			popularity = 7
 		}
 		
 		communism = {
-			popularity = 42
+			popularity = 10
 		}
 		
 		socialism = {
-			popularity = 5
+			popularity = 0
 		}
 		
 		reactionarism = {
-			popularity = 33
+			popularity = 20
 		}
 		
 	}
@@ -70,7 +70,7 @@ set_politics = {
 create_country_leader = {
 	name = "Kost Levytsky"
 	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	picture = "gfx/leaders/UKR/kost_levytsky.dds"
 	expire = "1953.3.1"
 	ideology = democratic_conservatism
 	traits = {

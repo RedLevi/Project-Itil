@@ -21,7 +21,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_economic_reforms
-		icon = ? 
+		icon = GFX_goal_generic_intelligence_exchange 
 		x = 3 
 		y = 0 
 		cost = 10 
@@ -52,7 +52,7 @@ focus_tree = {
 		focus = {
 		
 			id = ENG_austerity_focus
-			icon = ? 
+			icon = GFX_goal_generic_neutrality_focus 
 			x = 1 
 			y = 1 
 			cost = 10 
@@ -79,7 +79,7 @@ focus_tree = {
 		focus = {
 		
 			id = ENG_inflation_control
-			icon = ? 
+			icon = GFX_goal_generic_consumer_goods
 			x = 0 
 			y = 2 
 			cost = 10 
@@ -105,7 +105,7 @@ focus_tree = {
 		focus = {
 		
 			id = ENG_measured_investments
-			icon = ? 
+			icon = GFX_goal_generic_construction2
 			x = 0 
 			y = 3 
 			cost = 10 
@@ -166,7 +166,7 @@ focus_tree = {
 		focus = {
 		
 			id = ENG_agricultural_expansion
-			icon = ? 
+			icon = GFX_goal_generic_construct_civilian
 			x = 2 
 			y = 2 
 			cost = 10 
@@ -192,7 +192,7 @@ focus_tree = {
 		focus = {
 		
 			id = ENG_organize_landlords
-			icon = ? 
+			icon = GFX_goal_generic_national_unity			
 			x = 2 
 			y = 3 
 			cost = 10 
@@ -218,7 +218,7 @@ focus_tree = {
 		focus = {
 		
 			id = ENG_war_economy
-			icon = ? 
+			icon = GFX_goal_generic_build_tank 
 			x = 1 
 			y = 4 
 			cost = 10 
@@ -265,7 +265,7 @@ focus_tree = {
 		focus = {
 		
 			id = ENG_keynesian_revolution
-			icon = ? 
+			icon = GFX_goal_generic_production 
 			x = 5 
 			y = 1 
 			cost = 10 
@@ -292,7 +292,7 @@ focus_tree = {
 		focus = {
 		
 			id = ENG_rail_revolution
-			icon = ? 
+			icon = GFX_goal_generic_construct_infrastructure 
 			x = 4 
 			y = 2 
 			cost = 10 
@@ -319,7 +319,7 @@ focus_tree = {
 		focus = {
 		
 			id = ENG_southern_rail
-			icon = ? 
+			icon = GFX_goal_generic_construct_infrastructure 
 			x = 4 
 			y = 3 
 			cost = 10 
@@ -385,7 +385,7 @@ focus_tree = {
 		focus = {
 		
 			id = ENG_northern_rail
-			icon = ? 
+			icon = GFX_goal_generic_construct_infrastructure 
 			x = 4 
 			y = 4 
 			cost = 10 
@@ -451,7 +451,7 @@ focus_tree = {
 		focus = {
 		
 			id = ENG_state_housing
-			icon = ? 
+			icon = GFX_goal_generic_construct_civilian 
 			x = 6 
 			y = 2 
 			cost = 10 
@@ -507,7 +507,7 @@ focus_tree = {
 		focus = {
 		
 			id = ENG_expand_industry
-			icon = ? 
+			icon = GFX_goal_generic_construct_mil_factory 
 			x = 6 
 			y = 3 
 			cost = 10 
@@ -563,7 +563,7 @@ focus_tree = {
 		focus = {
 		
 			id = ENG_royal_factories
-			icon = ? 
+			icon = GFX_goal_generic_construct_military 
 			x = 6 
 			y = 4 
 			cost = 10 
@@ -1727,7 +1727,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_northern_port
-		icon = ? 
+		icon = GFX_goal_generic_occupy_states_coastal 
 		x = 12
 		y = 6 
 		cost = 10 
@@ -1774,7 +1774,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_liverpool_docks
-		icon = ? 
+		icon = GFX_goal_generic_build_navy 
 		x = 11
 		y = 7 
 		cost = 10 
@@ -1809,7 +1809,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_newcastle_docks
-		icon = ? 
+		icon = GFX_goal_generic_construct_naval_dockyard 
 		x = 12
 		y = 8 
 		cost = 10 
@@ -1844,7 +1844,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_merchant_fleet
-		icon = ? 
+		icon = GFX_goal_continuous_naval_production 
 		x = 13
 		y = 7 
 		cost = 10 

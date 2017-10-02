@@ -431,3 +431,152 @@ country_event = {#USA agrees
 		add_to_war = { targeted_alliance = USA enemy = AME }
 	}
 }
+
+####politics in 1936####
+
+country_event = {#Californian Nationalists 
+	id = usa.17
+	title = usa.17.t
+	desc = usa.17.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = USA 
+		date > 1936.2.10 
+	}
+	option = {
+		name = usa.17.a 
+		add_national_unity = -0.02 
+	}
+}
+
+country_event = {#The TUUL
+	id = usa.18
+	title = usa.18.t
+	desc = usa.18.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = USA 
+		date > 1936.4.30 
+	}
+	option = {
+		name = usa.18.a 
+		add_national_unity = -0.02 
+	}
+}
+
+####Hiram Johnson events####
+
+country_event = {
+	id = usa.19 
+	title = usa.19.t 
+	desc = usa.19.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = USA 
+		has_government = conservatism
+		has_country_flag = USA_Hiram
+	}
+	mean_time_to_happen = { days = 30 }
+	
+	option = {#new deal 
+		name = usa.19.a 
+		ai_chance = { factor = 50 }
+		add_national_unity = -0.015 
+		swap_ideas = { remove_idea = USA_great_depression add_idea = new_deal_start }
+		hidden_effect = { country_event = { id = usa.3 days = 180 } }
+	}
+	option = {#invisible hand 
+		name = usa.19.b 
+		ai_chance = { factor = 50 }
+		add_national_unity = 0.03 
+		hidden_effect = { country_event = { id = 20 days = 720 } }
+	}
+}
+
+country_event = {
+	id = usa.20
+	title = usa.20.t 
+	desc = usa.20.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.20.a 
+		swap_ideas = { remove_idea = USA_great_depression add_idea = USA_recovery_start }
+		hidden_effect = { country_event = { id = 21 days = 720 } }
+	}
+}
+
+country_event = {
+	id = usa.21
+	title = usa.21.t 
+	desc = usa.21.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.21.a 
+		swap_ideas = { remove_idea = USA_recovery_start add_idea = USA_recovery_finish }
+	}
+}
+
+country_event = {#nationalists appeal isolationists 
+	id = usa.22 
+	title = usa.22.t 
+	desc = usa.22.d 
+	fire_only_once = yes 
+	trigger = {
+		
+		tag = USA 
+		has_government = conservatism 
+		has_country_flag = USA_Hiram
+		date > 1937.2.1 
+	
+	}
+	
+	mean_time_to_happen = { days = 55 }
+	
+	option = {
+		name = usa.22.a 
+		add_national_unity = -0.01 
+		hidden_effect = { country_event = { id = 23 days = 60 } }
+	}
+}
+
+country_event = {#Nationalist demonstration 
+	id = usa.23 
+	title = usa.23.t 
+	desc = usa.23.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.23.a 
+	}
+}
+
+country_event = {#California reborn? 
+	id = usa.24
+	title = usa.24.t 
+	desc = usa.24.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = USA 
+		has_country_flag = USA_Hiram 
+		date > 1938.7.13 
+	}
+	option = {#transform 
+		name = usa.24.a 
+		ai_chance = { factor = 50 }
+		set_cosmetic_tag = USA_CAL
+		add_national_unity = 0.1 
+		every_state = {
+		
+			limit = {
+				is_controlled_by = AME 
+				is_core_of = USA
+			}
+			
+			remove_core_of = USA 
+		}
+	}
+	option = {#Don't 
+		name = usa.24.b 
+		ai_chance = { factor = 50 }
+		add_national_unity = -0.05 
+	}
+}

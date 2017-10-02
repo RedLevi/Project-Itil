@@ -150,6 +150,54 @@ ideas = {
 			}
 		
 		}
+		
+		USA_recovery_start = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = 0.075 
+			}
+		
+		}
+	}
+	
+	USA_recovery_finish = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				industrial_capacity_factory = 0.15
+			}
+		
+		}
 	}
 	
 	political_advisor = {

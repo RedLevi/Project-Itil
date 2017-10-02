@@ -26,7 +26,7 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = 0.5
 				conversion_cost_mil_to_civ_factor = 0.5
 				industrial_capacity_factory = -0.15 
-                production_factory_max_efficiency_factor = -0.1
+               	production_factory_max_efficiency_factor = -0.1
 			}
 			
 			default = yes
@@ -62,33 +62,6 @@ ideas = {
 			
 		}
 		
-		socialized_economy_law = {
-		
-			available = {
-			
-				OR = {
-				
-					has_government = socialism
-					has_government = liberalism
-					
-				}
-			
-			}
-			
-			cost = 200 
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_factor = 0.2  
-				production_speed_industrial_complex_factor = 0.3
-				production_speed_arms_factory_factor = -0.2
-				industrial_capacity_factory = -0.1 
-				political_power_gain = 0.05 
-			}
-			
-			default = yes
-			
-		}
 		
 		collectivized_economy_law = {
 			
@@ -111,7 +84,7 @@ ideas = {
 			
 				consumer_goods_factor = 0.1 
 				industrial_capacity_factory = -0.1 
-				political_power_gain = 0.1
+				unity_factor = 0.1
 				
 			}
 			
@@ -143,7 +116,7 @@ ideas = {
 				conversion_cost_mil_to_civ_factor = -0.5
 				production_factory_max_efficiency_factor = 0.1 
 				industrial_capacity_factory = 0.2 
-				political_power_gain = -0.05 
+				unity_factor = -0.05 
 				
 			}
 			

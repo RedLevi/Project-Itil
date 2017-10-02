@@ -37,7 +37,7 @@ ideas = {
 			
 				enemy_partisan_effect = 0.5
 				drift_defence_factor = -0.25
-				consumer_goods_factor = -0.25 
+				consumer_goods_factor = -0.025 
 			
 			}
 			default = yes

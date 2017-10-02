@@ -36,6 +36,7 @@ country_event = {#Presidential elections of 1936
 			
 			}
 		}
+		add_national_unity = 0.01 
 		set_country_flag = USA_FDR 
 	}
 	option = {#Republican - Hiram 
@@ -64,6 +65,7 @@ country_event = {#Presidential elections of 1936
 			
 			}
 		}
+		add_national_unity = 0.03 
 		set_country_flag = USA_Hiram 
 	}
 	option = {#Socialist - Sinclair 
@@ -98,6 +100,334 @@ country_event = {#Presidential elections of 1936
 			
 			}
 		}
+		add_national_unity = -0.05 
 		set_country_flag = USA_sinclair 
+	}
+}
+####Events for FDR
+country_event = {#Start the new deal 
+	id = usa.2 
+	title = usa.2.t 
+	desc = usa.2.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = USA 
+		has_government = liberalism 
+		has_country_flag = USA_FDR
+		has_war = no 
+	}
+	
+	mean_time_to_happen = { days = 45 }
+	
+	option = {
+		name = usa.2.a 
+		swap_ideas = { remove_idea = USA_great_depression add_idea = new_deal_start }
+		hidden_effect = { country_event = { id = usa.3 days = 180 } }
+	}
+}
+
+country_event = {#New factories 
+	id = usa.3 
+	title = usa.3.t 
+	desc = usa.3.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.3.a 
+		378 = {
+			add_extra_state_shared_building_slots = 3 
+			add_building_construction = {
+				type = industrial_complex
+				level = 2 
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1 
+				instant_build = yes 
+			}
+		}
+		386 = { 
+			add_extra_state_shared_building_slots = 1 
+			add_building_construction = {
+				type = industrial_complex
+				level = 1 
+				instant_build = yes 
+			}
+		}
+		hidden_effect = { country_event = { id = usa.4 days = 185 } }
+	}
+}
+
+country_event = {#one year after 
+	id = usa.4 
+	title = usa.4.t 
+	desc = usa.4.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.4.a 
+		swap_ideas = { remove_idea = new_deal_start add_idea = new_deal_one }
+		hidden_effect = { country_event = { id = usa.5 days = 180 } }
+	}
+}
+
+country_event = {#new roads 
+	id = usa.5 
+	title = usa.5.t 
+	desc = usa.5.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.5.a 
+		387 = {
+			add_building_construction = {
+				type = infrastructure 
+				level = 2 
+				instant_build = yes 
+			}
+		}
+		379 = {
+			add_building_construction = {
+				type = infrastructure 
+				level = 2 
+				instant_build = yes 
+			}
+		}
+		380 = {
+			add_building_construction = {
+				type = infrastructure 
+				level = 2 
+				instant_build = yes 
+			}
+		}
+		377 = {
+			add_building_construction = {
+				type = infrastructure 
+				level = 2 
+				instant_build = yes 
+			}
+		}
+	}
+	hidden_effect = { country_event = { id = usa.6 days = 185 } }
+}
+
+country_event = {#Recovery 
+	id = usa.6 
+	title = usa.6.t 
+	desc = usa.6.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.6.a 
+		swap_ideas = { remove_idea = new_deal_one add_idea = new_deal_two }
+		hidden_effect = { country_event = { id = usa.7 days = 180 } }
+	}
+}
+
+country_event = {#more factories 
+	id = usa.7
+	title = usa.7.t 
+	desc = usa.7.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.7.a 
+		385 = {
+			add_extra_state_shared_building_slots = 2 
+			add_building_construction = {
+				type = industrial_complex 
+				level = 2 
+				instant_build = yes 
+			}
+		}
+		379 = {
+			add_extra_state_shared_building_slots = 3 
+			add_building_construction = {
+				type = industrial_complex 
+				level = 2 
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = arms_factory 
+				level = 1 
+				instant_build = yes 
+			}
+		}
+		378 = {
+			add_extra_state_shared_building_slots = 3 
+			add_building_construction = {
+				type = industrial_complex 
+				level = 1 
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = arms_factory 
+				level = 2 
+				instant_build = yes 
+			}
+		}
+		hidden_effect = { country_event = { id = usa.8 days = 185 } }
+	}
+}
+
+country_event = {#new deal final 
+	id = usa.8 
+	title = usa.8.t 
+	desc = usa.8.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.8.a 
+		swap_ideas = { remove_idea = new_deal_two add_idea = new_deal_three }
+	}
+}
+
+country_event = {#war with the AME 
+	id = usa.9 
+	title = usa.9.t 
+	desc = usa.9.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = USA 
+		has_country_flag = USA_FDR
+		has_idea = new_deal_three
+		has_war = no
+		AME = { exists = yes }
+	}
+	
+	mean_time_to_happen = { days = 50 }
+	
+	option = {#war 
+		name = usa.9.a 
+		ai_chance = { factor = 30 }
+		add_national_unity = 0.05 
+		declare_war_on = { target = AME type = annex_everything }
+		AME = { country_event = { id = usa.10 } }
+		country_event = { id = usa.11 }
+	}
+	option = {#ask UK 
+		name = usa.9.b 
+		ai_chance = { factor = 60 }
+		trigger = { ENG = { exists = yes } }
+		ENG = { country_event = { id = usa.12 days = 2 } }
+	}
+	option = {#don't 
+		name = usa.9.c 
+		ai_chance = { factor = 10 }
+		add_national_unity = -0.05 
+	}
+}
+
+country_event = {#USA attacks 
+	id = usa.10 
+	title = usa.10.t 
+	desc = usa.10.d 
+	is_triggered_only = yes 
+	option = { 
+		name = usa.10.a 
+	}
+}
+
+news_event = {#USA attacks 
+	id = usa.11 
+	title = usa.11.t 
+	desc = usa.11.d 
+	is_triggered_only = yes
+	major = yes 
+	option = { 
+		name = usa.10.a 
+	}
+}
+
+country_event = {#USA asks for help 
+	id = usa.12 
+	title = usa.12.t 
+	desc = usa.12.d 
+	is_triggered_only = yes 
+	option = {#agree 
+		name = usa.12.a 
+		ai_chance = { factor = 20 }
+		USA = { country_event = { id = usa.13 } }
+	}
+	option = {#ask for alaska 
+		name = usa.12.b 
+		ai_chance = { factor = 60 }
+		trigger = {
+			471 = { is_friendly = yes }
+			USA = { controls_state = 463 }
+		}
+		USA = { country_event = { id = usa.14 } }
+	}
+	option = {#refuse 
+		name = usa.12.c 
+		ai_chance = { factor = 20 }
+		USA = { country_event = { id = usa.15 } }
+	}
+}
+
+country_event = {#UK agrees without Alaska 
+	id = usa.13 
+	title = usa.13.t 
+	desc = usa.13.d 
+	is_triggered_only = yes 
+	option = {
+		ENG = { add_to_faction = USA }
+		declare_war_on = { target = AME type = annex_everything }
+		AME = { country_event = { id = usa.10 } }
+		country_event = { id = usa.11 }
+	}
+}
+
+country_event = {#britain demands Alaska 
+	id = usa.14 
+	title = usa.14.t 
+	desc = usa.14.d 
+	is_triggered_only = yes 
+	option = {#agree 
+		name = usa.14.a 
+		ai_chance = { factor = 50 }
+		every_country = {
+			limit = {	
+				controls_state = 471
+			}
+			transfer_state = 463 
+
+		}
+		add_national_unity = -0.03 
+		ENG = { add_to_faction = USA }
+		declare_war_on = { target = AME type = annex_everything }
+		AME = { country_event = { id = usa.10 } }
+		country_event = { id = usa.11 }
+		ENG = { country_event = { id = usa.16 } }
+	}
+	option = {#refuse 
+		name = usa.14.b 
+		ai_chance = { factor = 50 }
+		country_event = { id = usa.15 }
+	}
+}
+
+country_event = {#Britain refuses help!
+	id = usa.15 
+	title = usa.15.t 
+	desc = usa.15.d 
+	is_triggered_only = yes 
+	option = {#war
+		name = usa.15.a
+		ai_chance = { factor = 50 }
+		declare_war_on = { target = AME type = annex_everything }
+		add_national_unity = 0.05 
+		AME = { country_event = { id = usa.10 } }
+		country_event = { id = usa.11 }
+	}
+	option = {#no war 
+		name = usa.15.b 
+		ai_chance = { factor = 50 }
+	}
+}
+
+country_event = {#USA agrees 
+	id = usa.16 
+	title = usa.16.t 
+	desc = usa.16.d 
+	is_triggered_only = yes
+	option = { 
+		name = usa.16.a 
+		add_to_war = { targeted_alliance = USA enemy = AME }
 	}
 }

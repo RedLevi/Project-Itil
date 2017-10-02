@@ -1,7 +1,32 @@
 ideas = {
 
 	country = {
-	
+		
+		USA_great_depression = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				consumer_goods_factor = 0.15 
+				industrial_capacity_factory = -0.1
+			
+			}
+		
+		}
+		
 		USA_peace_idea = {
 		
 			available = {
@@ -24,6 +49,104 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				production_speed_buildings_factor = 0.1
 			
+			}
+		
+		}
+		
+		new_deal_start = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = -0.1
+			
+			}
+		}
+		
+		new_deal_one = {
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = -0.05
+			
+			}
+		}
+		
+		new_deal_two = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				production_speed_buildings_factor = 0.20
+			
+			}
+			
+		}
+		
+		new_deal_three = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				production_speed_buildings_factor = 0.25
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
 			}
 		
 		}

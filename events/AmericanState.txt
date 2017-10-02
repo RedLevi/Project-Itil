@@ -11,7 +11,7 @@ country_event = {#arrange a border incident?
 		has_war = no 
 		USA = { exists = yes }
 		NOT = { has_country_flag = AME_ford }
-		date > 1937.6.1 
+		date > 1939.6.1 
 		has_army_manpower = { size > 5000 }
 	}
 	

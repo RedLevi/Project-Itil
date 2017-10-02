@@ -41,6 +41,11 @@ set_technology = {
 set_convoys = 400
 set_national_unity = 0.6
 
+add_ideas = {
+	open_society_law
+	free_market_law
+	USA_great_depression
+}
 
 set_politics = {
 

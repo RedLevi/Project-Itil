@@ -1002,4 +1002,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/CAN_federalize.dds"
 	}
 	
+	SpriteType = { 
+		name = "IRE_federalize"
+		texturefile = "gfx/interface/goals/IRE_federalize.dds"
+	}
+	
+	SpriteType = { 
+		name = "SAF_federalize"
+		texturefile = "gfx/interface/goals/SAF_federalize.dds"
+	}
+	
 }

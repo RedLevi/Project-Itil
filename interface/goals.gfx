@@ -997,4 +997,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/naval_ambitions.dds"
 	}
 	
+	SpriteType = { 
+		name = "CAN_federalize"
+		texturefile = "gfx/interface/goals/CAN_federalize.dds"
+	}
+	
 }

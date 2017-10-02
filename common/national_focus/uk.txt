@@ -2002,7 +2002,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_military_reforms
-		icon = ? 
+		icon = GFX_focus_generic_commonwealth_build_infantry
 		x = 21
 		y = 5 
 		cost = 10 
@@ -2027,7 +2027,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_fire_support
-		icon = ? 
+		icon = GFX_goal_generic_army_artillery 
 		x = 19
 		y = 6 
 		cost = 10 
@@ -2056,7 +2056,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_artilery_focus
-		icon = ? 
+		icon = GFX_goal_generic_army_artillery2 
 		x = 19
 		y = 7 
 		cost = 10 
@@ -2084,7 +2084,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_grand_battle
-		icon = ? 
+		icon = GFX_goal_generic_army_doctrines 
 		x = 21
 		y = 6 
 		cost = 10 
@@ -2113,7 +2113,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_support_tech_focus
-		icon = ? 
+		icon = GFX_focus_generic_cryptologic_bomb 
 		x = 21
 		y = 7 
 		cost = 10 
@@ -2141,7 +2141,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_mobile_warfare
-		icon = ? 
+		icon = GFX_goal_generic_army_motorized 
 		x = 23
 		y = 6 
 		cost = 10 
@@ -2170,7 +2170,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_motorized_focus
-		icon = ? 
+		icon = GFX_goal_generic_army_tanks 
 		x = 23
 		y = 7 
 		cost = 10 
@@ -2222,7 +2222,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_royal_air_force
-		icon = ? 
+		icon = GFX_focus_generic_military_mission 
 		x = 27
 		y = 5 
 		cost = 10 
@@ -2248,7 +2248,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_air_doctrines
-		icon = ? 
+		icon = GFX_goal_generic_build_airforce 
 		x = 27
 		y = 6 
 		cost = 10 
@@ -2275,7 +2275,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_fighter_focus
-		icon = ? 
+		icon = GFX_goal_generic_air_fighter 
 		x = 27
 		y = 7 
 		cost = 10 
@@ -2302,7 +2302,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_bomber_focus
-		icon = ? 
+		icon = GFX_goal_generic_air_bomber 
 		x = 26
 		y = 8 
 		cost = 10 
@@ -2330,7 +2330,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_coast_command
-		icon = ? 
+		icon = GFX_goal_generic_air_naval_bomber 
 		x = 28
 		y = 8 
 		cost = 10 
@@ -2358,7 +2358,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_radar_focus
-		icon = ? 
+		icon = GFX_goal_generic_radar 
 		x = 27
 		y = 9 
 		cost = 10 
@@ -2385,7 +2385,7 @@ focus_tree = {
 	focus = {
 
 		id = ENG_imperial_conference
-		icon = ? 
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties 
 		x = 44 
 		y = 0 
 		cost = 10 
@@ -2479,7 +2479,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_fed_CAN
-		icon = ? 
+		icon = CAN_federalize 
 		x = 35 
 		y = 2 
 		cost = 5
@@ -2590,7 +2590,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_fed_AST
-		icon = ? 
+		icon = GFX_focus_AST_never_gallipoli 
 		x = 39
 		y = 2 
 		cost = 7

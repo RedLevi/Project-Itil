@@ -174,9 +174,8 @@ ideas = {
 			}
 		
 		}
-	}
-	
-	USA_recovery_finish = {
+		
+		USA_recovery_finish = {
 		
 			available = {
 			
@@ -198,6 +197,60 @@ ideas = {
 			}
 		
 		}
+		
+		USA_two_year_plan = {
+		
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				industrial_capacity_factory = 0.1
+				production_speed_arms_factory_factor = 0.3 
+				production_speed_industrial_complex_factor = -0.1 
+				consumer_goods_factor = 0.1 
+				conversion_cost_civ_to_mil_factor= -0.25
+				conversion_cost_mil_to_civ_factor = 0.25
+			}
+			
+		}
+		
+		USA_market_socialism = { 
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+
+				consumer_goods_factor = -0.025 
+				local_resources_factor = 0.075 
+			}
+		
+		}
+		
 	}
 	
 	political_advisor = {

@@ -102,6 +102,7 @@ country_event = {#Presidential elections of 1936
 		}
 		add_national_unity = -0.05 
 		set_country_flag = USA_sinclair 
+		add_ideas = mixed_economy_law
 	}
 }
 ####Events for FDR
@@ -205,8 +206,9 @@ country_event = {#new roads
 				instant_build = yes 
 			}
 		}
+		hidden_effect = { country_event = { id = usa.6 days = 185 } }
 	}
-	hidden_effect = { country_event = { id = usa.6 days = 185 } }
+	
 }
 
 country_event = {#Recovery 
@@ -578,5 +580,251 @@ country_event = {#California reborn?
 		name = usa.24.b 
 		ai_chance = { factor = 50 }
 		add_national_unity = -0.05 
+	}
+}
+####events for Sinclair####
+country_event = {#Anti-socialist protests 
+	id = usa.25 
+	title = usa.25.t 
+	desc = usa.25.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = USA 
+		has_government = socialism 
+		has_country_flag = USA_sinclair
+	}
+	mean_time_to_happen = { days = 30 }
+	option = {
+		name = usa.25.a 
+		add_national_unity = -0.03
+	}
+}
+
+country_event = {#economic direction 
+	id = usa.26 
+	title = usa.26.t 
+	desc = usa.26.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = USA 
+		has_government = socialism 
+		has_country_flag = USA_sinclair
+	}
+	mean_time_to_happen = { days = 45 }
+	option = {#nationalize and industrialize 
+		name = usa.26.a 
+		ai_chance = { factor = 50 }
+		swap_ideas = { remove_idea = mixed_economy_law add_idea = nationalized_economy_law }
+		add_ideas = USA_two_year_plan
+		hidden_effect = { country_event = { id = usa.27 days = 120 } }
+		hidden_effect = { country_event = { id = usa.30 days = 730 } }
+	}
+	option = {#collectivize
+		name = usa.26.b 
+		ai_chance = { factor = 50 }
+		swap_ideas = { remove_idea = mixed_economy_law add_idea = collectivized_economy_law }
+		add_ideas = USA_market_socialism
+		hidden_effect = { country_event = { id = usa.31 days = 150 } }
+		hidden_effect = { country_event = { id = usa.33 days = 900 } }
+	}
+}
+
+country_event = {#new factories 
+	id = usa.27
+	title = usa.27.t 
+	desc = usa.27.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.27.a 
+		378 = {
+			add_extra_state_shared_building_slots = 3 
+			add_building_construction = {
+				type = arms_factory 
+				level = 3 
+				instant_build = yes 
+			}
+		}
+		385 = {
+			add_extra_state_shared_building_slots = 2 
+			add_building_construction = {
+				type = arms_factory 
+				level = 1 
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = industrial_complex 
+				level = 1 
+				instant_build = yes 
+			}
+		}
+		hidden_effect = { country_event = { id = usa.28 days = 170 } }
+	}
+	
+	
+}
+
+country_event = {#new factories 
+	id = usa.28
+	title = usa.27.t 
+	desc = usa.27.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.27.a 
+		386 = {
+			add_extra_state_shared_building_slots = 2 
+			add_building_construction = {
+				type = arms_factory 
+				level = 2 
+				instant_build = yes 
+			}
+		}
+		377 = {
+			add_extra_state_shared_building_slots = 2 
+			add_building_construction = {
+				type = arms_factory 
+				level = 1 
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = industrial_complex 
+				level = 1 
+				instant_build = yes 
+			}
+		}
+		387 = {
+			add_extra_state_shared_building_slots = 1 
+			add_building_construction = {
+				type = arms_factory 
+				level = 1 
+				instant_build = yes 
+			}
+		}
+		hidden_effect = { country_event = { id = usa.29 days = 200 } }
+	}
+	
+	
+}
+
+country_event = {#new factories 
+	id = usa.29
+	title = usa.27.t 
+	desc = usa.27.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.27.a 
+		378 = {
+			add_extra_state_shared_building_slots = 5 
+			add_building_construction = {
+				type = arms_factory 
+				level = 3 
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = industrial_complex 
+				level = 2 
+				instant_build = yes 
+			}
+		}
+	}
+	
+}
+
+country_event = {#end of two year plan 
+	id = usa.30 
+	title = usa.30.t 
+	desc = usa.30.d 
+	is_triggered_only = yes 
+	option = {#continue the policy 
+		name = usa.30.a
+		ai_chance = { factor = 65 }
+		remove_ideas = USA_great_depression
+		add_national_unity = -0.05 
+	}
+	option = {#stop it 
+		name = usa.30.b 
+		ai_chance = { factor = 35 }
+		remove_ideas = USA_great_depression
+		remove_ideas = USA_two_year_plan
+		add_national_unity = 0.03 
+	}
+}
+
+country_event = {#Civilian growth 
+	id = usa.31 
+	title = usa.31.t 
+	desc = usa.31.d 
+	is_triggered_only = yes 
+	option = {
+		378 = {
+			add_extra_state_shared_building_slots = 3 
+			add_building_construction = {
+				type = industrial_complex 
+				level = 3 
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = infrastructure 
+				level = 2 
+				instant_build = yes 
+			}
+		}
+		
+		hidden_effect = { country_event = { id = usa.32 days = 400 } }
+	}
+}
+
+country_event = {#additional growth 
+	id = usa.32
+	title = usa.32.t 
+	desc = usa.32.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.32.a 
+		378 = {
+			add_extra_state_shared_building_slots = 2 
+			add_building_construction = {
+				type = industrial_complex 
+				level = 2 
+				instant_build = yes 
+			}
+		}
+		385 = {
+			add_extra_state_shared_building_slots = 1 
+			add_building_construction = {
+				type = industrial_complex 
+				level = 1 
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = infrastructure 
+				level = 2 
+				instant_build = yes 
+			}
+		}
+		386 = {
+			add_extra_state_shared_building_slots = 2 
+			add_building_construction = {
+				type = industrial_complex 
+				level = 2 
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = infrastructure 
+				level = 2 
+				instant_build = yes 
+			}
+		}
+	}
+}
+
+country_event = {#economic recovery 
+	id = usa.33 
+	title = usa.33.t 
+	desc = usa.33.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.33.a 
+		remove_ideas = USA_great_depression
+		add_national_unity = 0.05 
 	}
 }

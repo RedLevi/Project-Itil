@@ -37,14 +37,8 @@ ideologies = {
 			can_guarantee_other_ideologies = yes
 		}
 		
-		war_impact_on_world_tension = -1.0
-		faction_impact_on_world_tension = -0.1
 		
 		modifiers = {
-			generate_wargoal_tension = 0.70
-			join_faction_tension = 0.70
-			lend_lease_tension = 0.50
-			guarantee_tension = 0.25
 			take_states_cost_factor = 0.25
 			annex_cost_factor = 0.5
 		}
@@ -94,14 +88,8 @@ ideologies = {
 			can_guarantee_other_ideologies = yes
 		}
 		
-		war_impact_on_world_tension = -1.0
-		faction_impact_on_world_tension = -0.1
 		
 		modifiers = {
-			generate_wargoal_tension = 1.00
-			join_faction_tension = 0.70
-			lend_lease_tension = 0.50
-			guarantee_tension = 0.25
 			take_states_cost_factor = 0.25
 			annex_cost_factor = 1.0
 		}
@@ -168,10 +156,6 @@ ideologies = {
 		
 		modifiers = {
 			puppet_cost_factor = -0.3
-			generate_wargoal_tension = 1.00
-			join_faction_tension = 0.70
-			lend_lease_tension = 0.50
-			guarantee_tension = 0.25
 			take_states_cost_factor = 0.25
 			annex_cost_factor = 1.0
 		}
@@ -353,12 +337,7 @@ ideologies = {
 			can_guarantee_other_ideologies = yes
 		}
 		
-		war_impact_on_world_tension = -0.5
-		faction_impact_on_world_tension = 0.5
-		
 		modifiers = {
-		
-		generate_wargoal_tension = 0.15
 		}
 		
 		faction_modifiers = {

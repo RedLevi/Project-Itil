@@ -2,7 +2,7 @@ state={
 	id=463
 	name="STATE_463"
 	resources={
-		oil=60
+		oil=5
 	}
 	history={
 		owner = USA

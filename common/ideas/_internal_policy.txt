@@ -20,14 +20,7 @@ ideas = {
 					has_government = liberalism
 					has_government = socialism
 					has_government = conservatism
-					
-					AND = {
-					
-						has_government = communism 
-						
-						has_country_flag = socialist_democracy
-					
-					}
+					has_government = communism
 				
 				}
 			
@@ -89,14 +82,7 @@ ideas = {
 				
 					has_government = national_integralism 
 					has_government = reactionarism 
-					
-					AND = {
-					
-						has_government = communism
-						
-						has_country_flag = socialist_dictatorship
-					
-					}
+					has_government = communism
 					
 				
 				}
@@ -123,14 +109,7 @@ ideas = {
 				OR = {
 				
 					has_government = national_integralism 
-					
-					AND = {
-					
-						has_government = communism
-						
-						has_country_flag = socialist_dictatorship
-					
-					}
+					has_government = communism
 					
 				
 				}

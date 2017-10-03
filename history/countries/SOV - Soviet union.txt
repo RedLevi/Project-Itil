@@ -40,6 +40,11 @@ set_technology = {
 set_convoys = 50
 set_national_unity = 0.55
 
+add_ideas = {
+	limited_freedom_law
+	nationalized_economy_law
+}
+
 create_faction = "second_international"
 add_to_faction = SOV
 add_to_faction = POL

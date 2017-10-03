@@ -16,7 +16,10 @@ set_technology = {
 set_research_slots = 3
 
 set_convoys = 10
-
+add_ideas = {
+	nationalized_economy_law
+	limited_freedom_law
+}
 set_politics = {
 
 	parties = {

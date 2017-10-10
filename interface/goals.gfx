@@ -56,7 +56,11 @@ spriteTypes = {
 	SpriteType = {
 	name = "GFX_new_germany"
 	texturefile = "gfx/interface/goals/new_germany.dds"
-	}		
+	}	
+	SpriteType = {
+	name = "GFX_scandza"
+	texturefile = "gfx/interface/goals/scandinavia.dds"
+	}	
 
 
 	#### Generic continuous goal icons

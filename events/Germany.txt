@@ -292,3 +292,20 @@ country_event = {
 	}
 }
 
+country_event = {
+
+	id = germany.16 
+	title = germany.16.t 
+	desc = germany.16.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.16.a
+		reverse_add_opinion_modifier = { target = GER modifier = ENG_EUR_theater }
+		diplomatic_relation = { country = GER relation = non_aggression_pact }
+	}	
+	option = {
+		name = germany.16.b
+	}	
+}

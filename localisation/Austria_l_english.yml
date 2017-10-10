@@ -24,6 +24,9 @@ aus.4.b:0 "Send Hungary some men and supplies"
 aus.4.c:0 "This is not our problem"
 aus.5.t:0 "Austria invades Hungary!"
 aus.5.d:0 "About two weeks ago we began reciving unverified reports of a conflict on the Austro-Hungarian border. The fighting came to a fore and war was declared later that day by Austria. They claim to be merely reclaiming terriory held by a rebellious, illegal state. The reaction from Germany and the United Kingdom is still mixed and unclear, but our analysists anticipate German support for Austria in the form of arms and weapons, and similar British support for Hungary. \n This leaves us with an interesting oppertunity. Both belligerants in the war hold land we consider our own - Slovenia, part of Austria, and the southern part of Hungary. We could choose to issue an ultimatum to one of the belligerants for the land rightfully ours - chances are they will accept over risking a war on two fronts."
+aus.5.a:0 "Send an Ultimatum to Austria"
+aus.5.b:0 "Send an Ultimatum to Hungary"
+aus.5.c:0 "We can't risk war right now."
 
 ####ideas####
 AUS_Reconquest_War:0 "Austrian Reconquest of Hungary"

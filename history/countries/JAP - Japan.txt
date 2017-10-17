@@ -152,9 +152,9 @@ if = {
 	}
 
 create_country_leader = {
-	name = "Wakatsuki Reijirō"
+	name = "Osachi Hamaguchi"
 	desc = "POLITICS_Hirohito_DESC"
-	picture = "Wakatsuki_Reijiro.dds"
+	picture = "Osachi_Hamaguchi.dds"
 	expire = "1989.1.1"
 	ideology = social_liberalism
 	traits = {

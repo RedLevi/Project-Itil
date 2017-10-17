@@ -1,0 +1,90 @@
+﻿####koach####
+add_namespace = jfor 
+####Hawaii refferendum chain####
+country_event = {#arrange refferendum in hawaii 
+	id = jfor.1 
+	title = jfor.1.t 
+	desc = jfor.1.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		HAW = {
+			exists = yes 
+			OR = {
+				is_subject = no 
+				is_subject_of = JAP 
+			}
+			NOT = { has_war_with = USA }
+		}
+	}
+	mean_time_to_happen = { days = 30 }
+	
+	option = {#push for refferendum 
+		name = jfor.1.a 
+		ai_chance = { factor = 90 }
+		HAW = { country_event = { id = jfor.2 days = 1 } }
+		hidden_effect = { country_event = { id = jfor.3 days = 7 } }
+	}
+	option = {#nah 
+		name = jfor.2.b 
+		ai_chance = { factor = 10 }
+	}
+}
+
+country_event = {#Japanese pressure for refferendum
+	id = jfor.2 
+	title = jfor.2.t 
+	desc = jfor.2.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.2.a 
+		add_national_unity = -0.01 
+	}
+}
+
+country_event = {#annexation refferendum 
+	id = jfor.3 
+	title = jfor.3.t 
+	desc = jfor.3.d 
+	is_triggered_only = yes 
+	option = {#annex 
+		name = jfor.3.a 
+		ai_chance = { factor = 65 }
+		JAP = { country_event = { id = jfor.4 } }
+	}
+	option = {#fail 
+		name = jfor.3.b 
+		ai_chance = { factor = 35 }
+		add_national_unity = 0.05 
+		JAP = { country_event = { id = jfor.5 } }
+	}
+}
+
+country_event = {#annexation of hawaii
+	id = jfor.4 
+	title = jfor.4.t 
+	desc = jfor.4.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.4.a 
+		annex_country = { target = HAW transfer_troops = yes }
+		add_state_core = 629 
+		add_named_threat = { threat = 2 name = JAP_annex_hawaii }
+	}
+}
+
+country_event = {#No annexation 
+	id = jfor.5 
+	title = jfor.5.t 
+	desc = jfor.5.d 
+	is_triggered_only = yes 
+	option = {#ok 
+		name = jfor.5.a 
+		ai_chance = { factor = 75 }
+	}
+	option = {#war 
+		name = jfor.5.b 
+		ai_chance = { factor = 25 }
+		declare_war_on = { target = HAW type = annex_everything }
+	}
+}

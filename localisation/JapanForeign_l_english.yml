@@ -1,0 +1,22 @@
+﻿l_english:
+####events####
+jfor.1.t:0 "Annexation refferendum for Hawaii?"
+jfor.1.d:0 "The leaders of the massive Japanese community of Hawaii have contacted us with a request to pressure the Hawaiian government for an annexation refferendum into the Japanese Empire. The newly independent island nation is both diplomatically and econmically isolated and currently stands defenseless. The Islands are in a very strategic position in the pacific ocean and the already present Japanese population would make annexation relatively easy. Should we go ahead with this refferendum?"
+jfor.1.a:0 "Ask the Hawaiians to hold it next week"
+jfor.1.b:0 "We don't need them"
+jfor.2.t:0 "The Japanese demand a refferendum"
+jfor.2.d:0 "Ever since our independence the Japanese community have been campaigning for a formal annexation into the Japanese empire. Their campaign have finally bore fruit as we have recived a formal request from the Japanese government to hold an annexation refferendum next week."
+jfor.2.a:0 "We cannot refuse them..."
+jfor.3.t:0 "The refferendum"
+jfor.3.d:0 "Today the citizens of Hawaii will decide the fate of our nation in a refferendum on the question of annexation into the Japanese empire. The large Japanese community has campaigned hard for the benefits of the annexation and the result is expected to be positive. What will the people of Hawaii choose?"
+jfor.3.a:0 "Hawaii will be annexed into the Japanese Empire"
+jfor.3.b:0 "Hawaii will remain independent"
+jfor.4.t:0 "Annexation of Hawaii"
+jfor.4.d:0 "The results of the Hawaiian refferendum came positive and the Island nation's government is integrated into our own. Hawaii will become a new prefectural unit and development and colonization projects are being set up."
+jfor.4.a:0 "Nippon Banzai!"
+jfor.5.t:0 "No annexation"
+jfor.5.d:0 "The results of the Hawaiian refferendum came negative despite our early predictions. We can leave the issue now despite calls from the Japanese community in Hawaii for action."
+jfor.5.a:0 "Oh well"
+jfor.5.b:0 "Dispute the results and declare war!"
+####tooltip####
+JAP_annex_hawaii: "Annexation of Hawaii"

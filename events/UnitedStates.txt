@@ -1260,3 +1260,40 @@ country_event = {#Japan seizes our bases!
 		add_national_unity = -0.01 
 	}
 }
+
+country_event = {#war with AME? 
+	id = usa.51 
+	title = usa.51.t 
+	desc = usa.51.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = USA 
+		has_government = communism 
+		is_subject = no 
+		has_war = no
+		AME = { exists = yes }
+		date > 1939.1.1
+	}
+	mean_time_to_happen = { days = 35 }
+	option = {#war 
+		name = usa.51.a 
+		ai_chance = { factor = 60 }
+		declare_war_on = { target = AME type = annex_everything }
+		country_event = { id = usa.11 }
+		AME = { country_event = usa.52 }
+	}
+	option = {#no 
+		name = usa.51.b 
+		ai_chance = { factor = 40 }
+	}
+}
+
+country_event = {#Commies attack 
+	id = usa.52 
+	title = usa.52.t 
+	desc = usa.52.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.52.a
+	}
+}

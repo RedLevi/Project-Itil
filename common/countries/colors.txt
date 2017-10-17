@@ -668,3 +668,7 @@ RFA = {
 	color = rgb { 200 200 50 }
 	color_ui = rgb { 74 147 255 }
 }
+HAW = {
+	color = rgb { 0 102 51 }
+	color_ui = rgb { 0 102 51 }
+}

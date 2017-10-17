@@ -49,14 +49,6 @@ ideas = {
 					has_government = national_integralism
 					has_government = reactionarism
 					
-					AND = {
-					
-						has_government = communism
-						
-						has_country_flag = socialist_dictatorship 
-					
-					}
-					
 				}
 			
 			}
@@ -122,7 +114,6 @@ ideas = {
 				enemy_partisan_effect = -0.7
 				drift_defence_factor = 0.7 
 				consumer_goods_factor = 0.2 
-				unity_factor = 0.1 
 				
 				}
 				

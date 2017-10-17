@@ -828,3 +828,435 @@ country_event = {#economic recovery
 		add_national_unity = 0.05 
 	}
 }
+
+country_event = {#Issue on democracy 
+	id = usa.34 
+	title = usa.34.t 
+	desc = usa.34.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = USA 
+		has_country_flag = USA_sinclair 
+	}
+	mean_time_to_happen = { days = 70 }
+	option = {#free society 
+		name = usa.34.a 
+		ai_chance = { factor = 25 }
+		add_ideas = open_society_law 
+		add_national_unity = 0.02 
+	}
+	option = {#limited freedom 
+		name = usa.34.b 
+		ai_chance = { factor = 25 }
+		add_ideas = limited_freedom_law
+	} 
+	option = {#authoritarian 
+		name = usa.34.c 
+		ai_chance = { factor = 25 }
+		add_ideas = authoritarian_state_law
+		add_national_unity = -0.02 
+	}
+	option = {#totalitarian 
+		name = usa.34.e 
+		ai_chance = { factor = 25 }
+		add_ideas = totalitarian_state_law
+		add_national_unity = -0.05 
+	}
+}
+
+country_event = {#transform to communism
+	id = usa.35 
+	title = usa.35.t 
+	desc = usa.35.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = USA 
+		has_country_flag = USA_sinclair
+		has_government = communism
+		date > 1938.1.1 
+	}
+	option = {#do it 
+		name = usa.35.a 
+		ai_chance = { factor = 100 }
+		set_politics = { 
+		
+			ruling_party = communism 
+			elections_allowed = no 
+			
+		}
+		
+		add_popularity = { 
+			
+				ideology = communism  
+				popularity = 0.15 
+				
+		}
+		create_country_leader = {
+			name = "Upton Sinclair Jr."
+			desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+			picture = "Sinclair.dds"
+			expire = "1968.8.6"
+			ideology = marxism
+			traits = {
+			
+			}
+		}
+		if = {
+			limit = {
+				CAN = {
+					exists = yes 
+					NOT = { has_war_with = ENG }
+					controls_state = 471
+				}
+			}
+			hidden_effect = { CAN = { country_event = { id = usa.36 days = 7 } } }
+		}
+	}
+}
+
+country_event = {#take over alaska 
+	id = usa.36
+	title = usa.36.t 
+	desc = usa.36.d 
+	is_triggered_only = yes 
+	option = {#do it 
+		name = usa.36.a 
+		ai_chance = { factor = 80 }
+		transfer_state = 463 
+		add_named_threat = { threat = 2 name = canada_alaska_take }
+		USA = { country_event = { id = usa.37 } }
+	}
+	option = {#don't 
+		name = usa.36.b 
+		ai_chance = { factor = 20 }
+	}
+}
+
+country_event = {#Alaska annexed 
+	id = usa.37 
+	title = usa.37.t 
+	desc = usa.37.d 
+	is_triggered_only = yes 
+	option = {#war 
+		name = usa.37.a 
+		ai_chance = { factor = 40 }
+		declare_war_on = { target = CAN type = annex_everything }
+		add_national_unity = 0.01 
+	}
+	option = {#nothing 
+		name = usa.37.b 
+		ai_chance = { factor = 60 }
+		add_national_unity = -0.03 
+	}
+}
+
+country_event = {#Hawaiian succesion 
+	id = usa.38
+	title = usa.38.t 
+	desc = usa.38.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = USA 
+		has_government = communism 
+		has_country_flag = USA_sinclair
+		controls_state = 629 
+		is_subject = no 
+	}
+	mean_time_to_happen = { days = 30 }
+	option = {#war 
+		name = usa.38.a 
+		ai_chance = { factor =  30 }
+		HAW = { 
+			transfer_state = 629 
+		}
+		
+		hidden_effect = {
+			HAW = {
+				add_state_core = 629
+				add_ideas = extensive_conscription 
+				set_politics = { 
+		
+				ruling_party = liberalism 
+				elections_allowed = no 
+			
+				}
+				
+				add_popularity = { 
+					
+						ideology = liberalism  
+						popularity = 0.5 
+						
+				}
+				create_country_leader = {
+					name = "Joseph Boyd Poindexter"
+					desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+					picture = "Poindexter.dds"
+					expire = "1968.8.6"
+					ideology = social_liberalism
+					traits = {
+					
+					}
+				}
+				
+				load_oob = HAW 
+			}
+		}
+			declare_war_on = { target = HAW type = annex_everything }
+			JAP = { country_event = { id = usa.39 days = 1 } }
+			add_national_unity = 0.01 
+	}
+	option = {#do nothing 
+		name = usa.38.b 
+		ai_chance = { factor = 70 }
+		HAW = { 
+			transfer_state = 629 
+		}
+		hidden_effect = {
+			HAW = {
+				add_state_core = 629
+				set_politics = { 
+		
+				ruling_party = liberalism 
+				elections_allowed = no 
+			
+				}
+				
+				add_popularity = { 
+					
+						ideology = liberalism  
+						popularity = 0.5 
+						
+				}
+				create_country_leader = {
+					name = "Joseph Boyd Poindexter"
+					desc = "POLITICS_FRANKLIN_DELANO_ROOSEVELT_DESC"
+					picture = "Poindexter.dds"
+					expire = "1968.8.6"
+					ideology = social_liberalism
+					traits = {
+					
+					}
+				}
+				
+				load_oob = HAW 
+			}
+		}
+		
+		add_national_unity = -0.01 
+		hidden_effect = { JAP = { country_event = { id = usa.49 days = 10 } } }
+	}
+}
+
+country_event = {#Hawaii-America war 
+	id = usa.39 
+	title = usa.39.t 
+	desc = usa.39.d 
+	is_triggered_only = yes 
+	option = {#protect hawaii 
+		name = usa.39.a 
+		ai_chance = { factor = 85 }
+		add_to_war = { targeted_alliance = HAW enemy = USA }
+		puppet = HAW 
+		USA = { country_event = { id = usa.40 } }
+	}
+	option = {#dont 
+		name = usa.39.b 
+		ai_chance = { factor = 15 }
+		add_national_unity = -0.01 
+	}
+}
+
+country_event = {#Japan intervenes 
+	id = usa.40
+	title = usa.40.t 
+	desc = usa.40.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.40.a 
+	}
+}
+
+country_event = {#Peace - USA wins 
+	id = usa.41 
+	title = usa.41.t 
+	desc = usa.41.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		NOT = { has_war_with = SOV }
+		has_war_with = USA 
+		HAW = { is_subject_of = JAP }
+		USA = { 
+			controls_state = 629 
+		}
+	}
+	mean_time_to_happen = { days = 150 }
+	option = {#sue for peace 
+		name = usa.41.a 
+		ai_chance = { factor = 70 }
+		USA = { country_event = { id = usa.42 days = 1 } }
+	}
+	option = {#dont 
+		name = usa.41.b 
+		ai_chance = { factor = 30 }
+		add_national_unity = -0.01 
+	}
+}
+
+country_event = {#peace with Japan? 
+	id = usa.42 
+	title = usa.42.t 
+	desc = usa.42.d 
+	is_triggered_only = yes 
+	option = {#Peace 
+		name = usa.42.a 
+		ai_chance = { factor = 95 }
+		add_national_unity = 0.02 
+		JAP = { country_event = { id = usa.43 } }
+		transfer_state = 629 
+		white_peace = HAW
+		white_peace = JAP
+	}
+	option = {#decline 
+		name = usa.42.b 
+		ai_chance = { factor = 5 }
+		add_national_unity = -0.01 
+		JAP = { country_event = { id = usa.44 } }
+	}
+}
+
+country_event = {#America agrees 
+	id = usa.43 
+	title = usa.43.t 
+	desc = usa.43.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.43.a 
+		white_peace = USA 
+	}
+}
+country_event = {#America declines 
+	id = usa.44 
+	title = usa.44.t 
+	desc = usa.44.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.44.a 
+	}
+}
+
+
+country_event = {#Peace - JAP wins 
+	id = usa.45
+	title = usa.45.t 
+	desc = usa.45.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = USA 
+		NOT = { is_in_faction_with = SOV }
+		has_war_with = JAP 
+		has_war_with = HAW
+		629 = { is_friendly = no }
+		632 = { is_friendly = no }
+		631 = { is_friendly = no }	
+	}
+	mean_time_to_happen = { days = 45 }
+	option = {#sue for peace 
+		name = usa.45.a 
+		ai_chance = { factor = 90 }
+		JAP = { country_event = { id = usa.46 days = 1 } }
+	}
+	option = {#dont 
+		name = usa.45.b 
+		ai_chance = { factor = 10 }
+		add_national_unity = -0.01 
+	}
+}
+
+country_event = {#peace with America? 
+	id = usa.46 
+	title = usa.46.t 
+	desc = usa.46.d 
+	is_triggered_only = yes 
+	option = {#Peace 
+		name = usa.46.a 
+		ai_chance = { factor = 100 }
+		add_national_unity = 0.05 
+		USA = { country_event = { id = usa.47 } }
+		transfer_state = 632 
+		transfer_state = 631 
+		transfer_state = 630 
+		transfer_state = 638 
+		transfer_state = 642 
+		transfer_state = 726 
+		transfer_state = 727 
+		transfer_state = 650 
+		white_peace = USA
+		HAW = { white_peace = USA }
+	}
+	option = {#decline 
+		name = usa.46.b 
+		ai_chance = { factor = 5 }
+		add_national_unity = -0.01 
+		USA = { country_event = { id = usa.48 } }
+	}
+}
+
+country_event = {#Japan agrees 
+	id = usa.47 
+	title = usa.47.t 
+	desc = usa.47.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.47.a 
+		white_peace = JAP 
+		white_peace = HAW
+	}
+}
+country_event = {#America declines 
+	id = usa.48 
+	title = usa.48.t 
+	desc = usa.48.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.48.a 
+	}
+}
+
+country_event = {#seize american islands? 
+	id = usa.49 
+	title = usa.49.t 
+	desc = usa.49.d 
+	is_triggered_only = yes 
+	option = {#seize 
+		name = usa.49.a 
+		ai_chance = { factor = 95 }
+		transfer_state = 632 
+		transfer_state = 631 
+		transfer_state = 630 
+		transfer_state = 638 
+		transfer_state = 642 
+		transfer_state = 726 
+		transfer_state = 727 
+		transfer_state = 650 
+		add_national_unity = 0.02 
+		add_named_threat = { threat = 4 name = JAP_take_pacific }
+		USA = { country_event = { id = usa.50 } }
+		reverse_add_opinion_modifier = { target = USA modifier = JAP_USA_pacific_takeover }
+	}
+	option = {#nah 
+		name = usa.50 
+		ai_chance = { factor = 5 }
+	}
+}
+
+country_event = {#Japan seizes our bases! 
+	id = usa.50 
+	title = usa.50.t 
+	desc = usa.50.d 
+	is_triggered_only = yes 
+	option = {
+		name = usa.50.a 
+		add_national_unity = -0.01 
+	}
+}

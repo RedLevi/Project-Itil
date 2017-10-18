@@ -90,7 +90,8 @@ ENG_bomber_focus:0 "Bomber Focus"
 ENG_bomber_focus_desc:0 "Bombers are the way of the future. With smaller tactical bombers and larger strategic bombers, both of which can be adapted for many situations are essential in future combat."
 ENG_coast_command:0 "Naval and CAS Focus"
 ENG_coast_command_desc:0 "Bombers are way too heavy to be practically useful. Lighter close air support planes are far more versatile and can support with far greater precision. Naval Bombers can be used to destroy enemy ships without even a naval presence in the area."
-ENG_radar_focus:0 "RADAR, which stands for Radio Detection And Ranging can be used for a variey of purposes. The one we are interested in is spotting the enemy long before they spot us."
+ENG_radar_focus:0 "RADAR"
+ENG_radar_focus_desc:0 "RADAR, which stands for Radio Detection And Ranging can be used for a variey of purposes. The one we are interested in is spotting the enemy long before they spot us."
 
 
 

@@ -47,6 +47,7 @@ set_technology = {
 
 	
 set_convoys = 400
+set_national_unity = 0.5
 
 set_politics = {
 
@@ -64,15 +65,15 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 7
+			popularity = 9
 		}
 		
 		socialism = {
-			popularity = 10
+			popularity = 17
 		}
 		
 		reactionarism = {
-			popularity = 12
+			popularity = 3
 		}
 		
 	}

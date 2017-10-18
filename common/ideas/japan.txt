@@ -1,5 +1,392 @@
 ideas = {
+	
+	country = {
+	
+		JAP_universal_suffrage_idea = {
+		
+			available = {
+			
+				NOT = {
+					
+					has_government = reactionarism
+					has_government = national_integralism
+				
+				}
 
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+					
+					has_government = reactionarism
+					has_government = national_integralism
+				
+				}
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				research_time_factor = -0.015
+				unity_factor = 0.035
+			
+			}
+		
+		}
+		
+		JAP_direct_voting_idea = {
+		
+			available = {
+			
+				NOT = {
+					
+					has_government = reactionarism
+					has_government = national_integralism
+				
+				}
+
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+					
+					has_government = reactionarism
+					has_government = national_integralism
+				
+				}
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				political_power_gain = 0.25 
+				unity_factor = 0.035 
+			
+			}
+		
+		}
+		
+		JAP_federalization_idea = {
+		
+			available = {
+			
+				NOT = {
+					
+					has_government = reactionarism
+					has_government = national_integralism
+				
+				}
+
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+					
+					has_government = reactionarism
+					has_government = national_integralism
+				
+				}
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				non_core_manpower = 0.02 
+				global_building_slots_factor = 0.15
+			
+			}
+		
+		}
+		
+		JAP_zaibatsu_politics_idea = {
+		
+			available = {
+			
+				NOT = {
+					
+					has_government = reactionarism
+					has_government = national_integralism
+				
+				}
+
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+					
+					has_government = reactionarism
+					has_government = national_integralism
+				
+				}
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				consumer_goods_factor = -0.02
+			
+			}
+		
+		}
+		
+		JAP_national_army_idea = {
+		
+			available = {
+			
+				NOT = {
+					
+					has_government = reactionarism
+					has_government = national_integralism
+				
+				}
+
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+					
+					has_government = reactionarism
+					has_government = national_integralism
+				
+				}
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				max_planning = 0.15 
+				planning_speed = 0.2 
+			
+			}
+		
+		}
+		
+		JAP_peace_preservation_idea = {
+		
+			available = {
+			
+				NOT = {
+					
+					has_government = communism
+					has_government = socialism
+				
+				}
+
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+					
+					has_government = communism
+					has_government = socialism
+				
+				}
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				drift_defence_factor = 0.1 
+				foreign_subversive_activites = -0.2 
+				enemy_partisan_effect = -0.2 
+			
+			}
+		
+		}
+		
+		JAP_traditional_values_idea = {
+		
+			available = {
+			
+				NOT = {
+					
+					has_government = communism
+					has_government = socialism
+				
+				}
+
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+					
+					has_government = communism
+					has_government = socialism
+				
+				}
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				political_power_gain = 0.15 
+				consumer_goods_factor = -0.5 
+			
+			}
+		
+		}
+		
+		JAP_zaibatsu_office_idea = {
+		
+			available = {
+			
+				NOT = {
+					
+					has_government = communism
+					has_government = socialism
+				
+				}
+
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+					
+					has_government = communism
+					has_government = socialism
+				
+				}
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				production_speed_buildings_factor = 0.2 
+				local_resources_factor = 0.05
+			
+			}
+		
+		}
+		
+		JAP_democratic_army_idea = {
+		
+			available = {
+			
+				NOT = {
+					
+					has_government = national_integralism
+					has_government = reactionarism
+				
+				}
+
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+					
+					has_government = national_integralism
+					has_government = reactionarism
+				
+				}
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				army_morale_factor = 0.1 
+			
+			}
+		
+		}
+		
+		JAP_labor_reforms_idea = {
+		
+			available = {
+			
+				NOT = {
+					
+					has_government = national_integralism
+					has_government = reactionarism
+				
+				}
+
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+					
+					has_government = national_integralism
+					has_government = reactionarism
+				
+				}
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				unity_factor = 0.25
+			
+			}
+		
+		}
+		
+		JAP_regulate_zaibatsu_idea = {
+		
+			available = {
+			
+				NOT = {
+					
+					has_government = national_integralism
+					has_government = reactionarism
+				
+				}
+
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+					
+					has_government = national_integralism
+					has_government = reactionarism
+				
+				}
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				consumer_goods_factor = -0.06
+				industrial_capacity_factory = -0.05
+			
+			}
+		
+		}
+	
+	}
+	
 	political_advisor = {	
 		sanzo_nosaka = {
 			

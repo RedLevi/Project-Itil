@@ -2330,7 +2330,7 @@ focus_tree = {
 	focus = {
 	
 		id = ENG_coast_command
-		icon = GFX_goal_generic_air_naval_bomber 
+		icon = GFX_goal_generic_CAS 
 		x = 28
 		y = 8 
 		cost = 10 

@@ -1,0 +1,212 @@
+﻿####koach####
+add_namespace = jdom
+####Japanese politics 1936####
+country_event = {#The show democracy
+	id = jdom.1 
+	title = jdom.1.t 
+	desc = jdom.1.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+	}
+	option = {
+		name = jdom.1.a 
+	}
+}
+
+country_event = {#Left wing coalition 
+	id = jdom.2 
+	title = jdom.2.t 
+	desc = jdom.2.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		date > 1936.4.3 
+	}
+	option = {
+		name = jdom.2.a 
+		add_national_unity = -0.01 
+	}
+}
+
+country_event = {#Japanese elections of 1936
+	id = jdom.3 
+	title = jdom.3.t 
+	desc = jdom.3.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		date > 1936.8.5
+	}
+	option = {#liberals 
+		name = jdom.3.a 
+		ai_chance = { factor = 50 }
+		set_politics = { 
+		
+			ruling_party = liberalism 
+			elections_allowed = no 
+			
+		}
+		
+		add_popularity = { 
+			
+				ideology = liberalism  
+				popularity = 0.2 
+				
+		}
+		create_country_leader = {
+			name = "Osachi Hamaguchi"
+			desc = "doesntmatter"
+			picture = "Osachi_Hamaguchi.dds"
+			expire = "1939.1.1"
+			ideology = market_liberalism
+			traits = {
+			
+			}
+		}
+		
+		add_national_unity = 0.02 
+	}
+	option = {#conservatives 
+		name = jdom.3.b 
+		ai_chance = { factor = 30 }
+		set_politics = { 
+		
+			ruling_party = conservatism 
+			elections_allowed = no 
+			
+		}
+		
+		add_popularity = { 
+			
+				ideology = conservatism  
+				popularity = 0.2 
+				
+		}
+		create_country_leader = {
+			name = "Inukai Tsuyoshi"
+			desc = "doesntmatter"
+			picture = "Inukai.dds"
+			expire = "1939.1.1"
+			ideology = democratic_conservatism
+			traits = {
+			
+			}
+		}
+		
+		add_national_unity = 0.02 
+	}
+	option = {#socialists 
+		name = jdom.3.c 
+		ai_chance = { factor = 20 }
+		set_politics = { 
+		
+			ruling_party = socialism 
+			elections_allowed = no 
+			
+		}
+		
+		add_popularity = { 
+			
+				ideology = socialism  
+				popularity = 0.2 
+				
+		}
+		add_popularity = { 
+			
+				ideology = communism  
+				popularity = 0.1 
+				
+		}
+		create_country_leader = {
+			name = "Abe Isoo"
+			desc = "doesntmatter"
+			picture = "Isoo.dds"
+			expire = "1949.2.10"
+			ideology = democratic_socialism
+			traits = {
+			
+			}
+		}
+		
+		add_national_unity = 0.02 
+	}
+}
+####some flavor political events####
+
+country_event = {#left wing coalition falls apart NOT SOC 
+	id = jdom.4
+	title = jdom.4.t 
+	desc = jdom.4.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		date > 1936.8.6
+		NOT = { 
+			has_government = socialism 
+			has_government = communism
+		}
+	}
+	mean_time_to_happen = { days = 50 }
+	option = {
+		name = jdom.4.a 
+	}
+}
+
+country_event = {#left wing coalition falls apart SOC 
+	id = jdom.5
+	title = jdom.5.t 
+	desc = jdom.5.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		has_completed_focus = JAP_peoples_empire
+		has_government = socialism
+		
+	}
+	mean_time_to_happen = { days = 35 }
+	option = {
+		name = jdom.5.a 
+		add_national_unity = -0.02 
+	}
+}
+
+country_event = {#Women suffrage 
+	id = jdom.6 
+	title = jdom.6.t 
+	desc = jdom.6.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		NOT = { 
+			has_government = national_integralism 
+			has_government = reactionarism 
+			has_completed_focus = JAP_universal_suffrage
+		}
+		date > 1937.1.1 
+	}
+	mean_time_to_happen = { days = 100 }
+	
+	option = {
+		name = jdom.6.a 
+		add_national_unity = -0.01 
+	}
+}
+
+country_event = {#Kokuhonsha rally 
+	id = jdom.7
+	title = jdom.7.t 
+	desc = jdom.7.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		date > 1937.6.1 
+		NOT = { has_government = communism }
+	}
+	mean_time_to_happen = { days = 50 }
+	
+	option = {
+		name = jdom.7.a 
+		add_national_unity = -0.01 
+	}
+}

@@ -1,0 +1,444 @@
+focus_tree = {
+	id = JAP_focus
+	
+	country = {
+ 
+		factor = 0 
+		
+		modifier = {
+		
+			add = 10
+			tag = JAP
+			
+		}
+		
+	}
+	
+	default = yes
+	reset_on_civilwar = no
+	
+
+
+####political tree####
+
+	focus = {
+		
+		id = JAP_constitutional_reforms
+		icon = ? 
+		x = 6 
+		y = 0 
+		cost = 3 
+			
+		available = {
+			
+			date > 1936.8.6
+			
+		}
+		
+		ai_will_do = { factor = 10 } 
+			
+		available_if_capitulated = no 
+			
+		completion_reward = {
+			
+			add_political_power = 150
+			
+		}
+		
+	}
+
+	##liberal path## 
+
+	focus = {
+
+		id = JAP_liberal_army
+		icon = ? 
+		x = 6 
+		y = 1 
+		cost = 10 
+			
+		available = {
+			
+			has_war = no 
+			has_government = liberalism
+			
+		}
+		
+		prerequisite = { focus = JAP_constitutional_reforms }
+		mutually_exclusive = { focus = JAP_national_army focus = JAP_democratic_army }
+		completion_reward = {
+			
+			add_national_unity = 0.05 
+			
+		}
+
+	}
+
+	focus = {
+
+		id = JAP_universal_suffrage
+		icon = ? 
+		x = 5 
+		y = 2 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+			
+		}
+		prerequisite = { focus = JAP_liberal_army focus = JAP_democratic_army }
+		completion_reward = {
+			
+			add_ideas = JAP_universal_suffrage_idea
+			
+		}
+		
+	}
+
+	focus = {
+
+		id = JAP_direct_voting
+		icon = ? 
+		x = 5 
+		y = 3 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+			
+		}
+		prerequisite = { focus = JAP_universal_suffrage }
+		completion_reward = {
+			
+			add_ideas = JAP_direct_voting_idea
+			
+		}
+		
+	}
+
+	focus = {
+
+		id = JAP_federalization
+		icon = ? 
+		x = 7 
+		y = 2 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+			
+		}
+		prerequisite = { focus = JAP_liberal_army }
+		completion_reward = {
+			
+			add_ideas = JAP_federalization_idea
+			
+		}
+		
+	}
+
+	focus = {
+
+		id = JAP_zaibatsu_politics 
+		icon = ? 
+		x = 7 
+		y = 3 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+			
+		}
+		prerequisite = { focus = JAP_federalization }
+		completion_reward = {
+			
+			add_ideas = JAP_zaibatsu_politics_idea
+			
+		}
+		
+	}
+
+	focus = {
+
+		id = JAP_parliamentary_democracy
+		icon = ? 
+		x = 6 
+		y = 4 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+			
+		}
+		prerequisite = { focus = JAP_zaibatsu_politics focus = JAP_direct_voting }
+		
+		completion_reward = {
+			
+			add_political_power = 200 
+			add_national_unity = 0.05
+			
+		}
+		
+	}
+####conservative_path#### 
+
+	focus = {
+
+		id = JAP_national_army
+		icon = ? 
+		x = 10 
+		y = 1 
+		cost = 10 
+			
+		available = {
+			
+			has_war = no 
+			has_government = conservatism
+			
+		}
+		prerequisite = { focus = JAP_constitutional_reforms }
+		mutually_exclusive = { focus = JAP_liberal_army focus = JAP_democratic_army }
+		completion_reward = {
+			
+			add_ideas = JAP_national_army_idea
+			
+		}
+		
+	}
+	
+	focus = {
+
+		id = JAP_bureaucracy_expansion
+		icon = ? 
+		x = 9 
+		y = 2 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+				
+		}
+		prerequisite = { focus = JAP_national_army }
+		completion_reward = {
+			
+			add_national_unity = 0.04 
+			
+		}
+		
+	}
+	
+	focus = {
+
+		id = JAP_peace_preservation
+		icon = ? 
+		x = 9 
+		y = 3 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+				
+		}
+		prerequisite = { focus = JAP_bureaucracy_expansion }
+		completion_reward = {
+			
+			add_ideas = JAP_peace_preservation_idea
+			
+		}
+		
+	}
+	
+	focus = {
+
+		id = JAP_traditional_values
+		icon = ? 
+		x = 11 
+		y = 2 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+				
+		}
+		prerequisite = { focus = JAP_national_army }
+		completion_reward = {
+			
+			add_ideas = JAP_traditional_values_idea
+			
+		}
+		
+	}
+	
+	focus = {
+
+		id = JAP_zaibatsu_office
+		icon = ? 
+		x = 11 
+		y = 3 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+				
+		}
+		prerequisite = { focus = JAP_traditional_values }
+		completion_reward = {
+			
+			add_ideas = JAP_zaibatsu_office_idea
+			
+		}
+		
+	}
+	
+	focus = {
+
+		id = JAP_centralize_state
+		icon = ? 
+		x = 10 
+		y = 4 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+				
+		}
+		prerequisite = { focus = JAP_zaibatsu_office focus = JAP_peace_preservation }
+		completion_reward = {
+			
+			add_political_power = 300 
+			add_national_unity = 0.025
+			
+		}
+		
+	}
+	
+####socialist path####
+	
+	focus = {
+
+		id = JAP_democratic_army
+		icon = ? 
+		x = 2 
+		y = 1 
+		cost = 10 
+			
+		available = {
+			
+			has_war = no 
+			has_government = socialism 
+				
+		}
+		prerequisite = { focus = JAP_constitutional_reforms }
+		mutually_exclusive = { focus = JAP_national_army focus = JAP_liberal_army }
+		completion_reward = {
+			
+			add_ideas = JAP_democratic_army_idea
+			
+		}
+		
+	}
+	
+	focus = {
+
+		id = JAP_labor_reforms
+		icon = ? 
+		x = 2 
+		y = 2 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+				
+		}
+		prerequisite = { focus = JAP_democratic_army }
+		completion_reward = {
+			
+			add_ideas = JAP_labor_reforms_idea
+			
+		}
+		
+	}
+	
+	focus = {
+
+		id = JAP_regulate_zaibatsu
+		icon = ? 
+		x = 2 
+		y = 3 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+				
+		}
+		prerequisite = { focus = JAP_labor_reforms }
+		completion_reward = {
+			
+			add_ideas = JAP_regulate_zaibatsu_idea
+			
+		}
+		
+	}
+	
+	focus = {
+
+		id = JAP_peoples_empire
+		icon = ? 
+		x = 1 
+		y = 4 
+		cost = 10 
+			
+		available = {
+			
+			has_country_flag = JAP_reformist_victory
+				
+		}
+		prerequisite = { focus = JAP_regulate_zaibatsu }
+		mutually_exclusive = { focus = JAP_peoples_revolution }
+		
+		completion_reward = {
+			
+			add_political_power = 100 
+			add_national_unity = 0.1 
+			
+		}
+		
+	}
+	
+	focus = {
+
+		id = JAP_peoples_revolution
+		icon = ? 
+		x = 3 
+		y = 4 
+		cost = 10 
+			
+		available = {
+			
+			has_country_flag = JAP_revolutionary_victory
+				
+		}
+		prerequisite = { focus = JAP_regulate_zaibatsu }
+		mutually_exclusive = { focus = JAP_peoples_empire }
+		
+		completion_reward = {
+			
+			country_event = { id = jdom.? }
+			
+		}
+		
+	}
+
+}

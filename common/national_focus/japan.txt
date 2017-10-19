@@ -396,7 +396,7 @@ focus_tree = {
 
 		id = JAP_peoples_empire
 		icon = ? 
-		x = 1 
+		x = 3 
 		y = 4 
 		cost = 10 
 			
@@ -421,7 +421,7 @@ focus_tree = {
 
 		id = JAP_peoples_revolution
 		icon = ? 
-		x = 3 
+		x = 1 
 		y = 4 
 		cost = 10 
 			
@@ -441,4 +441,827 @@ focus_tree = {
 		
 	}
 
+####economic reforms####	
+
+focus = {
+
+		id = JAP_economic_focus
+		icon = ? 
+		x = 18 
+		y = 0 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+				
+		}
+		
+		completion_reward = {
+			
+			add_tech_bonus = {
+			
+				bonus = 0.5
+				uses = 2
+				category = industry
+				
+			}
+			
+		}
+		
+	}
+
+focus = {
+
+		id = JAP_zaibatsu_economy
+		icon = ? 
+		x = 22 
+		y = 1 
+		cost = 10 
+			
+		available = {
+			
+			NOT = {
+			
+				has_government = socialism
+				has_government = communism
+			
+			}
+			
+			OR = {
+			
+				has_completed_focus = JAP_zaibatsu_office
+				has_completed_focus = JAP_zaibatsu_politics
+			
+			}
+				
+		}
+		
+		prerequisite = { focus = JAP_economic_focus }
+		mutually_exclusive = { focus = JAP_peoples_economy }
+		
+		completion_reward = {
+			
+			add_ideas = JAP_zaibatsu_economy_idea
+			
+		}
+		
+	}
+	
+	focus = {
+
+		id = JAP_zaibatsu_factories_1 
+		icon = ? 
+		x = 24 
+		y = 2 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+				
+		}
+		
+		prerequisite = { focus = JAP_zaibatsu_economy }
+		
+		completion_reward = {
+			
+			528 = {
+			
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			
+			}
+			
+			526 = {
+			
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction = {
+				
+					type = arms_factory 
+					level = 1 
+					instant_build = yes
+				
+				}
+			
+			}
+				
+		}
+		
+	}
+	
+	focus = {
+
+		id = JAP_zaibatsu_factories_2 
+		icon = ? 
+		x = 23 
+		y = 3 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+				
+		}
+		
+		prerequisite = { focus = JAP_zaibatsu_factories_1 }
+		
+		completion_reward = {
+			
+			529 = {
+			
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+			
+			531 = {
+			
+				add_extra_state_shared_building_slots = 3 
+				add_building_construction = {
+				
+					type = arms_factory 
+					level = 2 
+					instant_build = yes
+				
+				}
+				
+				add_building_construction = {
+					
+					type = dockyard 
+					level = 1 
+					instant_build = yes
+				
+				}
+			
+			}
+			
+			530 = {
+			
+				add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+				
+					type = arms_factory 
+					level = 1 
+					instant_build = yes
+				
+				}
+				
+				add_building_construction = {
+					
+					type = industrial_complex 
+					level = 1 
+					instant_build = yes
+				
+				}
+			
+			}
+				
+		}
+		
+	}
+	
+	focus = {
+
+		id = JAP_zaibatsu_factories_3 
+		icon = ? 
+		x = 25 
+		y = 3 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+				
+		}
+		
+		prerequisite = { focus = JAP_zaibatsu_factories_1 }
+		
+		completion_reward = {
+			
+			282 = {
+			
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				
+			}
+			
+			532 = {
+			
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+				
+					type = dockyard 
+					level = 2 
+					instant_build = yes
+				
+				}
+				
+				add_building_construction = {
+				
+					type = arms_factory 
+					level = 1 
+					instant_build = yes
+				
+				}
+			
+			}
+			
+				
+		}
+		
+	}
+	
+	focus = {
+
+		id = JAP_zaibatsu_factories_4 
+		icon = ? 
+		x = 24 
+		y = 4 
+		cost = 10 
+			
+		available = {
+			
+			always = yes 
+				
+		}
+		
+		prerequisite = { focus = JAP_zaibatsu_factories_2 focus = JAP_zaibatsu_factories_3 }
+		
+		completion_reward = {
+			
+			553 = {
+			
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+			
+			536 = {
+			
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				
+					type = arms_factory 
+					level = 2 
+					instant_build = yes
+				
+				}
+				
+			}
+				
+		}
+		
+	}
+	
+	focus = {
+	
+		id = JAP_siberian_oil
+		icon = ? 
+		x = 21 
+		y = 3 
+		cost = 10 
+		
+		available = { 
+		
+			controls_state = 637 
+			controls_state = 655 
+		
+		}
+		
+		prerequisite = { focus = JAP_siberian_metal }
+		
+		completion_reward = {
+		
+			add_resource = { type = oil  amount = 10 state = 744 } 
+			add_resource = { type = oil amount = 5 state = 637 }
+			add_resource = { type = oil amount = 12 state = 655 }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = JAP_siberian_metal
+		icon = ? 
+		x = 21 
+		y = 2 
+		cost = 10 
+		
+		available = { 
+		
+			controls_state = 409 
+			controls_state = 408 
+		
+		}
+		
+		prerequisite = { focus = JAP_zaibatsu_economy }
+		
+		completion_reward = {
+		
+			add_resource = { type = tungsten  amount = 12 state = 409 } 
+			add_resource = { type = chromium amount = 8 state = 562 }
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = JAP_rail_west
+		icon = ? 
+		x = 18 
+		y = 2 
+		cost = 10 
+		
+		available = { 
+		
+			controls_state = 528 
+			controls_state = 529
+			controls_state = 531 
+		
+		}
+		
+		prerequisite = { focus = JAP_zaibatsu_economy focus = JAP_confiscate_industry }
+		
+		completion_reward = {
+		
+			528 = {
+			
+				add_building_construction = {
+					type = infrastructure
+					level = 2 
+					instant_build = yes 
+				}
+			
+			}
+			
+			529 = {
+			
+				add_building_construction = {
+					type = infrastructure
+					level = 2 
+					instant_build = yes 
+				}
+			
+			}
+			
+			531 = {
+				
+				add_building_construction = {
+					type = infrastructure
+					level = 2 
+					instant_build = yes 
+				}
+			
+			}
+		
+		}
+	
+	}
+	
+	focus = {
+	
+		id = JAP_rail_east
+		icon = ? 
+		x = 18 
+		y = 3 
+		cost = 10 
+		
+		available = { 
+		
+			controls_state = 532 
+			controls_state = 282
+			controls_state = 533 
+		
+		}
+		
+		prerequisite = { focus = JAP_rail_west }
+		
+		completion_reward = {
+		
+			532 = {
+			
+				add_building_construction = {
+					type = infrastructure
+					level = 2 
+					instant_build = yes 
+				}
+			
+			}
+			
+			282 = {
+			
+				add_building_construction = {
+					type = infrastructure
+					level = 2 
+					instant_build = yes 
+				}
+			
+			}
+			
+			533 = {
+				
+				add_building_construction = {
+					type = infrastructure
+					level = 2 
+					instant_build = yes 
+				}
+			
+			}
+		
+		}
+	
+	}
+	
+	focus = { 
+	
+	id = JAP_rail_manchuria
+		icon = ? 
+		x = 18 
+		y = 4 
+		cost = 10 
+		
+		available = { 
+		
+			controls_state = 408 
+			controls_state = 409
+			controls_state = 560
+			controls_state = 657
+		
+		}
+		
+		prerequisite = { focus = JAP_rail_east }
+		
+		completion_reward = {
+		
+			408 = { 
+
+				add_building_construction = {
+					type = infrastructure
+					level = 2 
+					instant_build = yes 
+				}
+				
+			}
+			
+			409 = { 
+
+				add_building_construction = {
+					type = infrastructure
+					level = 2 
+					instant_build = yes 
+				}
+				
+			}
+			
+			560 = { 
+
+				add_building_construction = {
+					type = infrastructure
+					level = 2 
+					instant_build = yes 
+				}
+				
+			}
+			
+			657 = { 
+
+				add_building_construction = {
+					type = infrastructure
+					level = 2 
+					instant_build = yes 
+				}
+				
+			}
+		
+		}
+	
+	}
+	
+	focus = {
+		
+		id = JAP_extra_research
+		icon = ? 
+		x = 18 
+		y = 5
+		cost = 10 
+		
+		available = { always = yes }
+		
+		prerequisite = { focus = JAP_zaibatsu_factories_4 focus = JAP_socialist_planning }
+		
+		completion_reward = {
+		
+			add_research_slot = 1 
+		
+		}
+	
+	}
+	
+	focus = {
+		
+		id = JAP_confiscate_industry
+		icon = ? 
+		x = 14 
+		y = 1
+		cost = 10 
+		
+		available = { 
+		
+			has_completed_focus = JAP_regulate_zaibatsu
+			
+			OR = {
+			
+				has_government = communism
+				has_government = socialism
+			
+			}
+		
+		}
+		
+		prerequisite = { focus = JAP_economic_focus }
+		
+		completion_reward = {
+		
+			add_ideas = JAP_confiscate_industry_idea
+		
+		}
+	
+	}
+	
+	focus = {
+		
+		id = JAP_agrarian_reform 
+		icon = ? 
+		x = 15 
+		y = 2
+		cost = 10 
+		
+		available = { 
+		
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = JAP_confiscate_industry }
+		
+		completion_reward = {
+		
+			add_ideas = JAP_agrarian_reform_idea
+		
+		}
+	
+	}
+	
+	focus = {
+		
+		id = JAP_end_tenancy
+		icon = ? 
+		x = 15 
+		y = 3
+		cost = 10 
+		
+		available = { 
+		
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = JAP_agrarian_reform }
+		
+		completion_reward = {
+		
+			533 = {
+				
+				add_extra_state_shared_building_slots = 3 
+				add_building_construction = {
+					type = industrial_complex 
+					level = 3
+					instant_build = yes
+				}
+			
+			}
+			282 = {
+				
+				add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes	
+				}
+			
+			}
+			532 = {
+				
+				add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes
+				}
+			
+			}
+		
+		}
+	
+	}
+	
+	focus = {
+		
+		id = JAP_expand_civilian
+		icon = ? 
+		x = 15 
+		y = 4
+		cost = 10 
+		
+		available = { 
+		
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = JAP_confiscate_industry }
+		
+		completion_reward = {
+		
+			532 = {
+				
+				add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes
+				}
+			
+			}
+			529 = {
+				
+				add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes
+				}
+			
+			}
+			528 = {
+				
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction = {
+					type = industrial_complex 
+					level = 1
+					instant_build = yes
+				}
+			
+			}
+		
+		}
+	
+	}
+	
+	focus = {
+		
+		id = JAP_socialist_heavy
+		icon = ? 
+		x = 13 
+		y = 2
+		cost = 10 
+		
+		available = { 
+		
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = JAP_confiscate_industry }
+		
+		completion_reward = {
+		
+			531 = {
+				
+				add_extra_state_shared_building_slots = 3 
+				add_building_construction = {
+					type = arms_factory 
+					level = 3
+					instant_build = yes
+				}
+			
+			}
+			282 = {
+				
+				add_extra_state_shared_building_slots = 3 
+				add_building_construction = {
+					type = arms_factory 
+					level = 3
+					instant_build = yes
+				}
+			
+			}
+			528 = {
+				
+				add_extra_state_shared_building_slots = 3 
+				add_building_construction = {
+					type = arms_factory 
+					level = 3
+					instant_build = yes
+				}
+			
+			}
+		
+		}
+	
+	}
+	
+	focus = {
+		
+		id = JAP_socialist_docks
+		icon = ? 
+		x = 13 
+		y = 3
+		cost = 10 
+		
+		available = { 
+		
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = JAP_socialist_heavy }
+		
+		completion_reward = {
+		
+			531 = {
+				
+				add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+					type = dockyard 
+					level = 2
+					instant_build = yes
+				}
+			
+			}
+			282 = {
+				
+				add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+					type = dockyard 
+					level = 2
+					instant_build = yes
+				}
+			
+			}
+			
+		}
+	
+	}
+	
+	focus = {
+		
+		id = JAP_socialist_planning
+		icon = ? 
+		x = 13 
+		y = 4
+		cost = 10 
+		
+		available = { 
+		
+			always = yes 
+		
+		}
+		
+		prerequisite = { focus = JAP_socialist_docks }
+		
+		completion_reward = {
+		
+			add_ideas = JAP_socialist_planning_idea
+			
+		}
+	
+	}
+
 }
+
+

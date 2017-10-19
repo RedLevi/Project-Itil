@@ -210,3 +210,30 @@ country_event = {#Kokuhonsha rally
 		add_national_unity = -0.01 
 	}
 }
+
+####Left wing coalition events####
+
+country_event = {#Labor crisis in Osaka 
+	id = jdom.8
+	title = jdom.8.t 
+	desc = jdom.8.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		has_completed_focus = JAP_labor_reforms
+		has_government = socialism
+	}
+	mean_time_to_happen = { days = 50 }
+	option = {#support the moderates
+		name = jdom.8.a 
+		ai_chance = { factor = 70 }
+		set_country_flag = JAP_reformist_victory
+		add_national_unity = 0.025
+	}
+	option = {#support the radicals 
+		name = jdom.8.b 
+		ai_chance = { factor = 30 }
+		set_country_flag = JAP_revolutionary_victory
+		add_ideas = JAP_militant_labor
+	}
+}

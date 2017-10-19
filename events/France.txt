@@ -18,7 +18,7 @@ country_event = {
 	
 	option = {
 		name = france.1.a 
-		 add_political_power = 50
+		 add_national_unity = 0.025
 		 set_politics = { ruling_party = communism elections_allowed = no }
 		 hidden_effect = {
 		 news_event = news.1
@@ -42,7 +42,7 @@ country_event = {
 	
 	option = {
 		name = france.2.a 
-		add_political_power = -50
+		add_national_unity = -0.025
 		hidden_effect = {
 		set_global_flag = fra_com_troub	
 		}
@@ -481,7 +481,7 @@ country_event = {
 	
 	option = {
 		name = france.17.a
-		add_political_power = 250
+		add_national_unity = 0.125
         army_experience = 50
 		annex_country = { target = SFA } 
 		annex_country = { target = SYA }
@@ -564,7 +564,7 @@ country_event = {
 	
 	option = {
 		name = france.21.a
-		add_political_power = 50
+		add_national_unity = 0.025
         army_experience = 50
 		hidden_effect = {
 		clr_global_flag = SOV_fra_cw

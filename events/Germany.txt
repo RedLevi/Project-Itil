@@ -28,7 +28,7 @@ country_event = {
 	
 	option = {
 		name = germany.2.a
-		 add_political_power = 50
+		 add_national_unity = 0.025
 		 hidden_effect = {
 		 complete_national_focus = GER_purge_opposition
 		 }

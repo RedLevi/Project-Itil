@@ -122,7 +122,7 @@ country_event = { # The Austrians have declared war!
 
 	option = { # We will defend our homeland!
 		name = aus.2.a
-		add_political_power = 50
+		add_national_unity = 0.025
 		add_ideas = HUN_Defend_Homeland
 	}
 }

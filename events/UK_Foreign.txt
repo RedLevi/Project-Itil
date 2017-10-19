@@ -44,7 +44,7 @@ country_event = {
 		
 		ENG = { country_event = { id = engfor.2 days = 1 } }
 		
-		add_political_power = -10
+		add_national_unity = -0.01
 	
 	}
 	
@@ -81,7 +81,7 @@ country_event = {
 		
 		ENG = { country_event = { id = engfor.3 days = 1 } }
 		
-		add_political_power = 15
+		add_national_unity = 0.01
 		
 		reverse_add_opinion_modifier = { target = ENG modifier = DIP_refuse_offer }
 	
@@ -121,7 +121,7 @@ country_event = {#norway refused
 	
 		name = engfor.3.a 
 		
-		add_political_power = -20
+		add_national_unity = -0.01
 	
 	}
 
@@ -140,7 +140,7 @@ country_event = {#UK demands albania
 		name = engfor.4.a 
 		ai_chance = { factor = 50 }
 		
-		add_political_power = -70
+		add_national_unity = -0.035
 		
 		ENG = { country_event = { id = engfor.5 days = 1 } }
 		
@@ -153,7 +153,7 @@ country_event = {#UK demands albania
 		name = engfor.4.b 
 		ai_chance = { factor = 50 }
 		
-		add_political_power = 45
+		add_national_unity = 0.025
 		
 		ENG = { country_event = { id = engfor.6 days = 1 } }
 		
@@ -177,7 +177,7 @@ country_event = {#the greeks agree
 	
 		name = engfor.5.a 
 		
-		add_political_power = 30 
+		add_national_unity = 0.015 
 		
 		every_state = {
 		
@@ -215,7 +215,7 @@ country_event = {#greece refuses
 	
 		name = engfor.6.a 
 		
-		add_political_power = -35
+		add_national_unity = -0.015
 	
 	}
 
@@ -258,7 +258,7 @@ country_event = {#British funding (SYR, ISR)
 		
 		}
 		
-		add_political_power = 10 
+		add_national_unity = 0.01 
 	
 	}
 
@@ -278,7 +278,7 @@ country_event = {#Siam-UK alliance
 		name = engfor.8.a 
 		ai_chance = { factor = 50 }
 		
-		add_political_power = -10 
+		add_national_unity = -0.01 
 		
 		ENG = { country_event = { id = engfor.9 days = 1 } }
 	
@@ -291,7 +291,7 @@ country_event = {#Siam-UK alliance
 		
 		ENG = { country_event = { id = engfor.10 days = 1 } }
 		
-		add_political_power = 15
+		add_national_unity = 0.01
 		
 		reverse_add_opinion_modifier = { target = ENG modifier = DIP_refuse_offer }
 	
@@ -330,7 +330,7 @@ country_event = {#siam refuses
 	
 		name = engfor.10.a 
 		
-		add_political_power = -15 
+		add_national_unity = -0.01 
 	
 	}
 
@@ -350,7 +350,7 @@ country_event = {#PHL-UK alliance
 		name = engfor.11.a 
 		ai_chance = { factor = 50 }
 		
-		add_political_power = -10 
+		add_national_unity = -0.01 
 		
 		ENG = { country_event = { id = engfor.12 days = 1 } }
 	
@@ -363,7 +363,7 @@ country_event = {#PHL-UK alliance
 		
 		ENG = { country_event = { id = engfor.13 days = 1 } }
 		
-		add_political_power = 15
+		add_national_unity = 0.01
 		
 		reverse_add_opinion_modifier = { target = ENG modifier = DIP_refuse_offer }
 	
@@ -402,7 +402,7 @@ country_event = {#PHL refuses
 	
 		name = engfor.13.a 
 		
-		add_political_power = -15 
+		add_national_unity = -0.01 
 	
 	}
 
@@ -420,7 +420,7 @@ country_event = {#aid from UK China
 	
 		name = engfor.14.a 
 		
-		add_political_power = 15
+		add_national_unity = 0.01
 	
 	}
 

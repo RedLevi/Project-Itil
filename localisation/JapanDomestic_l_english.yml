@@ -71,6 +71,17 @@ jdom.21.a:0 "Workers of the world unite!"
 jdom.22.t:0 "The International refuses!"
 jdom.22.d:0 "The Second International have refused to give us military aid in our struggle against the Reactionaries! We stand alone!"
 jdom.22.a:0 "But what of Internationalism?"
+jdom.23.t:0 "Japanese Civil War"
+jdom.23.d:0 "This morning radicalized workers affiliated with the Labour-Farmer Party have stormed the Japanese Diet and declared the new 'Workers Republic of Japan'. In response to this a group of right wing politicians and army officers have declared a military campaign against the new state and the country is now effectively in a civil war. Only time will tell what this means for the rest of the world..."
+jdom.23.a:0 "Interesting"
+jdom.24.t:0 "The Showa Constitution"
+jdom.24.d:0 "As a culmination of a series of electoral, political and constitutional reforms a new legal document commonly referred to as 'The Showa Constitution' have been signed into law by members of the Diet today. The new constitution, which effectively replaces the previous Meiji constitution, officially reorganizes the Japanese government into a federal multi-party parliamentary democracy with a directly, proportionally and universally elected Diet with 4 year terms, and a cabinet assembeled from coalition members. The Emperor remains as a symbolic head of state with ceremonial powers and a duty to unite the Japanese people in love of the freedoms of the homeland."
+jdom.24.a:0 "Nippon Banzai!"
+jdom.25.t:0 "The Showa Constitution"
+jdom.25.d:0 "As a culmination of a series of electoral, political and constitutional reforms a new legal document commonly referred to as 'The Showa Constitution' have been signed into law by members of the Diet today. The new constitution, which effectively replaces the previous Meiji constitution reorganizes the Japanese government into a unitary centralized two-party democracy with an indirect semi-proportional elecotral system with universal male suffrage over the age of 20. The Diet is elected every 4 years, and the largest party appoints the cabinet. The appointed prime minister governs the country in the name of the emperor and is required by the constitution to protect and uphold the ancient Japanese culture."
+jdom.26.t:0 "The Showa Constitution"
+jdom.26.d:0 "As a culmination of a series of electoral, political and constitutional reforms a new legal document commonly referred to as 'The Showa Constitution' have been signed into law by members of the Diet today. The new constitution, which effectively replaces the previous Meiji constitution reorganizes the Japanese government into a localized multi-party parliamentary democracy with a directly, proportionally and universally elected Diet with 4 year terms, and a cabinet directly elected from coalition members. The Emperor system have been abolished as a political institution but the imperial house remains a cultural and religious state funded institution. The constitution gurantees a continued pursuit of social justice and protection of human and labor rights."
+
 
 ####focuses####
 JAP_constitutional_reforms:0 "Constitutional Convention"

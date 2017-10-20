@@ -324,7 +324,7 @@ country_event = {#Japanese civil war
 					}
 				}
 				
-				set_equipment_fraction = 0.35
+				country_event = { id = jdom.23 }
 		
 			}
 			
@@ -534,5 +534,49 @@ country_event = {#the soviets refuse
 	option = {
 		name = jdom.22.a 
 		reverse_add_opinion_modifier = { target = SOV modifier = JAP_SOV_refusal }
+	}
+}
+
+news_event = {#japanese civil war
+	id = jdom.23 
+	title = jdom.23.t 
+	desc = jdom.23.d 
+	is_triggered_only = yes 
+	major = yes 
+	option = {
+		name = jdom.23.a 
+	}
+}
+
+###more events here 
+
+####constitution events####
+country_event = {#liberal constitution
+	id = jdom.24 
+	title = jdom.24.t 
+	desc = jdom.24.d 
+	is_triggered_only = yes 
+	option = {
+		name = jdom.24
+	}
+}
+
+country_event = {#conservative constitution
+	id = jdom.25 
+	title = jdom.25.t 
+	desc = jdom.25.d 
+	is_triggered_only = yes 
+	option = {
+		name = jdom.24
+	}
+}
+
+country_event = {#socialist constitution
+	id = jdom.26 
+	title = jdom.26.t 
+	desc = jdom.26.d 
+	is_triggered_only = yes 
+	option = {
+		name = jdom.24
 	}
 }

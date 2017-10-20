@@ -546,6 +546,57 @@ ideas = {
 			}
 		
 		}
+		
+		JAP_economic_cooperation_idea =	{
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				industrial_capacity_factory = 0.02
+				unity_factor = 0.025
+			
+			}
+		
+		}
+		
+		JAP_peoples_revolution_idea = {
+	
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				industrial_capacity_factory = -0.1
+				unity_factor = -0.1
+			
+			}
+		
+		}
 	
 	}
 	

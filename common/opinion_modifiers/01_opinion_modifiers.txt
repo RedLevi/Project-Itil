@@ -41,5 +41,7 @@ SYR_sent_support = { value = 35 }
 SYR_no_sent_support = { value = -30 }
 ###USA###
 JAP_USA_pacific_takeover = { value = -70 }
+###JAP###
+JAP_SOV_refusal = { value = -50 }
 
 }

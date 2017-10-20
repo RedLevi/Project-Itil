@@ -262,7 +262,7 @@ country_event = {#assasin caught
 	}
 	option = {#don't 
 		name = redc.14.b 
-		ai_chance = { factor = 0.01 
+		ai_chance = { factor = 5 }
 		hidden_effect = { PRC = { country_event = { id = redc.16 } } }
 	}
 }

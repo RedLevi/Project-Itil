@@ -435,7 +435,7 @@ focus_tree = {
 		
 		completion_reward = {
 			
-			country_event = { id = jdom.? }
+			country_event = { id = jdom.9 }
 			
 		}
 		
@@ -498,7 +498,7 @@ focus = {
 		}
 		
 		prerequisite = { focus = JAP_economic_focus }
-		mutually_exclusive = { focus = JAP_peoples_economy }
+		mutually_exclusive = { focus = JAP_confiscate_industry }
 		
 		completion_reward = {
 			
@@ -1003,6 +1003,7 @@ focus = {
 		}
 		
 		prerequisite = { focus = JAP_economic_focus }
+		mutually_exclusive = { focus = JAP_zaibatsu_economy }
 		
 		completion_reward = {
 		

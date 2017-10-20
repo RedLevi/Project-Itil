@@ -16,7 +16,7 @@ set_politics = {
 		}
 
 		national_integralism = {
-			popularity = 0
+			popularity = 12
 		}
 
 		liberalism = {
@@ -24,7 +24,7 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 0
+			popularity = 10
 		}
 		
 		socialism = {
@@ -32,7 +32,7 @@ set_politics = {
 		}
 		
 		reactionarism = {
-			popularity = 62
+			popularity = 40
 		}
 		
 	}
@@ -42,6 +42,17 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
+create_country_leader = {
+			name = "Yosuke Matsuoka"
+			desc = "doesntmatter"
+			picture = "Matsuoka.dds"
+			expire = "1949.1.1"
+			ideology = autocracy
+			traits = {
+			
+			}
+		}
 
 create_corps_commander = {
 	name = "Zhang Haipeng"

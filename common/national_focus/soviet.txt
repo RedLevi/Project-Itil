@@ -1,0 +1,208 @@
+focus_tree = {
+	id = austria_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+
+	default = no
+	
+	focus = {
+		id = soviet_industry_1
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 4
+		y = 0
+		cost = 10
+		bypass = {
+			AND = {
+				all_owned_state = {			
+					free_building_slots = {
+						building = arms_factory
+						size < 3
+						include_locked = yes
+					}
+				}
+				all_owned_state = {			
+					free_building_slots = {
+						building = industrial_complex
+						size < 3
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 3
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = soviet_industry_2
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = soviet_industry_1 }
+		x = 4
+		y = 1
+		cost = 10
+		bypass = {
+			AND = {
+				all_owned_state = {			
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+		
+		complete_tooltip = {
+		
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size < 2
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}			
+	}
+	
+	focus = {
+		id = societ_civil_1
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = soviet_industry_2 }
+		x = 2
+		y = 2
+		cost = 10
+		bypass = {
+			all_owned_state = {
+				free_building_slots = {
+					building = industrial_complex
+					size < 2
+					include_locked = yes
+				}
+			}
+		}
+		
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		
+		
+	}
+	
+	

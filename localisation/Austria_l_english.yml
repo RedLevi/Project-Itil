@@ -37,4 +37,6 @@ AUS_Reconquest_War_desc:0 "We have decided to embroil ourselves in war with Hung
 
 ####tooltip####
 AUS_reconquest_inform_majors:0 "The world will be informed of our actions, and Germany, Britain, Romania and Yugoslavia may react to our actions"
-
+AUS_refuses:0 "Germany may decided to get involved on Hungary's side against us!"
+AUS_agree:0 "We will sign white peace with Hungary"
+GER_sanction_AUS:0 "We will economically sanction them until sign peace on their silly war. This may hurt our economy slightly in the short-term as well."

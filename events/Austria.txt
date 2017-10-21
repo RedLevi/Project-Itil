@@ -432,8 +432,8 @@ country_event = { # German mission to Hungary
 		}
 		custom_event_tooltip = GER_support_will_arrive
 		hidden_effect = {
-			GER = send_equipment = { target = HUN type = infantry_equipment amount = 2000 }
-			GER = send_equipment = { target = HUN type = artillery amount = 500 }
+			GER = {send_equipment = { target = HUN type = infantry_equipment amount = 2000 }}
+			GER = {send_equipment = { target = HUN type = artillery amount = 500 }}
 			# load_oob = GER_support_to_HUN
 		}
 
@@ -451,8 +451,8 @@ country_event = { # German mission to Hungary
 		# very similar to bonuses Austria should get at gamestart
 		custom_event_tooltip = GER_support_will_arrive
 		hidden_effect = {
-			GER = send_equipment = { target = HUN type = infantry_equipment amount = 2000 }
-			GER = send_equipment = { target = HUN type = artillery amount = 500 }
+			GER = {send_equipment = { target = HUN type = infantry_equipment amount = 2000 }}
+			GER = {send_equipment = { target = HUN type = artillery amount = 500 }}
 			add_manpower = 10000
 			GER = { add_manpower = -10000 }
 			# load_oob = GER_support_to_HUN

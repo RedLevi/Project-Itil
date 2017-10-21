@@ -1,0 +1,158 @@
+﻿#IFA gets 5 inf 1 cav
+##### Division Templates #####
+division_template = {
+	name = "Division d'Infanterie"		
+	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. Coloniale, 
+	#	Div. d'Inf. Nord-Africaine, Div. d'Inf. de Forteresse
+	# Difference is their equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+	}
+}
+division_template = {
+	name = "Division d'Infanterie Motorisée"	# Division d'Infanterie Motorisée
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 26 ACs + motorcycles
+		artillery = { x = 0 y = 1 }  # Heavy Arty Regiment had 1x 155mm, 1x 105mm battalions
+	}
+}
+division_template = {
+	name = "Division d'Infanterie Alpine"	# Division d'Infanterie Alpine
+	# Note: trimmed to 3x Rgts w/ arty bn added, 1939
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	# Regular mountain infantry (Infanterie Alpine)
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 2 y = 1 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 2 y = 2 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 3 y = 0 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 3 y = 1 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 3 y = 2 }	# Chasseurs Alpins (HOI3 elites)
+	}
+}
+division_template = {
+	name = "Division de Cavalerie" 	# Division de Cavalerie
+	# Note: Transformed to DLC, DLM divisions, 1936-39 
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 64 ACs/scout cars
+	}
+}
+division_template = {
+	name = "Division Légère Mécanique" 		# Division Légère Mécanique
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }		# Bn. of Hotchkiss, then Souma (Med.) tanks
+		light_armor = { x = 0 y = 1 }		# Bn. of Hotchkiss tanks
+		motorized = { x = 1 y = 0 }			# Brigade of 2x Rgts., 2 Bns. each (later 1 Rgt. of 3x Bns.)
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 42 ACs + motorcycles
+	}
+}
+division_template = {
+	name = "Brigade de Chars de Combat" 	# Brigade de Chars de Combat, independent armor brigades of 2x Rgts., 2 Bns. each
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Brigade Coloniale"			# Represents: 2xRgt colonial forces and , usually with old equipment
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	
+	division= {	
+		name = "1ème Division d'Infanterie"
+		location = 3594
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2ème Division d'Infanterie"
+		location = 9631
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3ème Division d'Infanterie"
+		location = 769
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "4ème Division d'Infanterie"
+		location = 755
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "5ème Division d'Infanterie"
+		location = 11720
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "6ème Division d'Infanterie"
+		location = 11596
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1ème Division de Cavalerie"
+		location = 11718
+		division_template = "Division de Cavalerie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+
+}

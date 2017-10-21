@@ -227,7 +227,7 @@ country_event = { # Germany Demands Peace!
 	}
 }
 
-country_event = {
+country_event = { # Austria Responds
 	id = aus.8
 	title = aus.8.t
 	desc = aus.8.d
@@ -266,7 +266,7 @@ country_event = {
 	}
 
 	option = { # Sanction Austria and enter alliance discussions with Hungary
-		name = aus.8.d
+		name = aus.8.e
 		ai_chance = { factor = 35 }
 		remove_from_faction = AUS
 		custom_effect_tooltip = GER_sanction_AUS
@@ -296,6 +296,7 @@ news_event = { # Germany takes measures against Austria!
 		}
 	}
 	is_triggered_only = yes
+	major = yes
 
 	option = { # It was the right move
 		trigger = {
@@ -363,6 +364,8 @@ country_event = { # Germany has sanctioned us!
 		hidden_effect = {
 			white_peace = HUN
 			clr_global_flag = AUS_sanctioned
+			clr_global_flag = AUS_removed
+			GER = { add_to_faction = AUS }
 		}
 	}
 
@@ -374,8 +377,91 @@ country_event = { # Germany has sanctioned us!
 		add_national_unity = -0.1
 		hidden_effect = {
 			GER = { add_ideas = GER_sanctioned_AUS }
+			GER = { country_event = { id = aus.11 days = 92 } }
 		}
 	}
+}
+
+country_event = { # Our economy recovers from the Austrian Sanctions
+	id = aus.11
+	title = aus.11.t
+	desc = aus.11.d
+	is_triggered_only = yes
+	trigger = {
+		has_idea = GER_sanctioned_AUS
+	}
+
+	option = { # Good
+		name = aus.11.a
+		remove_ideas = GER_sanctioned_AUS
+		add_political_power = 20
+	}
+}
+
+country_event = { # German mission to Hungary
+	id = aus.12
+	title = aus.12.t
+	desc = aus.12.d
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_global_flag = AUS_sanctioned
+			has_global_flag = AUS_removed
+		}
+	}
+
+	option = { # Accept entirely
+		GER = { add_to_faction = HUN }
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			add_ideas = war_alone
+		}
+		# add_ideas = GER_HUN_economy 
+		# very similar to bonuses Austria should get at gamestart
+		AUS = {
+			every_owned_state = {
+				add_claim_by = HUN
+			}
+		}
+		BOH = {
+			every_owned_state = {
+				add_claim_by = HUN
+			}
+		}
+		custom_event_tooltip = GER_support_will_arrive
+		hidden_effect = {
+			GER = send_equipment = { target = HUN type = infantry_equipment amount = 2000 }
+			GER = send_equipment = { target = HUN type = artillery amount = 500 }
+			# load_oob = GER_support_to_HUN
+		}
+
+	}
+
+	option = { # We will take help but not land
+		GER = { add_to_faction = HUN }
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			add_ideas = war_alone
+		}
+		# add_ideas = GER_HUN_economy 
+		# very similar to bonuses Austria should get at gamestart
+		custom_event_tooltip = GER_support_will_arrive
+		hidden_effect = {
+			GER = send_equipment = { target = HUN type = infantry_equipment amount = 2000 }
+			GER = send_equipment = { target = HUN type = artillery amount = 500 }
+			add_manpower = 10000
+			GER = { add_manpower = -10000 }
+			# load_oob = GER_support_to_HUN
+		}
+	}
+
+	#option = { # The Germans will never lord over us
+	#	GER = {  }
+	#}
 }
 
 ## UK Decisions on Austrian Invasion ##

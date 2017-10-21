@@ -58,12 +58,14 @@ country_event = {#Japanese elections of 1936
 			name = "Osachi Hamaguchi"
 			desc = "doesntmatter"
 			picture = "Osachi_Hamaguchi.dds"
-			expire = "1939.1.1"
+			expire = "1940.1.1"
 			ideology = market_liberalism
 			traits = {
 			
 			}
 		}
+		
+		hidden_effect = { country_event = { id = jdom.27 days = 1460 } }
 		
 		add_national_unity = 0.02 
 	}
@@ -87,12 +89,14 @@ country_event = {#Japanese elections of 1936
 			name = "Inukai Tsuyoshi"
 			desc = "doesntmatter"
 			picture = "Inukai.dds"
-			expire = "1939.1.1"
+			expire = "1949.1.1"
 			ideology = democratic_conservatism
 			traits = {
 			
 			}
 		}
+		
+		hidden_effect = { country_event = { id = jdom.28 days = 1460 } }
 		
 		add_national_unity = 0.02 
 	}
@@ -160,7 +164,7 @@ country_event = {#left wing coalition falls apart SOC
 	fire_only_once = yes 
 	trigger = {
 		tag = JAP 
-		has_completed_focus = JAP_peoples_empire
+		date > 1939.11.25
 		has_government = socialism
 		
 	}
@@ -168,6 +172,7 @@ country_event = {#left wing coalition falls apart SOC
 	option = {
 		name = jdom.5.a 
 		add_national_unity = -0.02 
+		hidden_effect = { country_event = { id = jdom.32 days = 30 } }
 	}
 }
 
@@ -492,7 +497,7 @@ country_event = {#Japan calls for aid
 	option = {#join 
 		name = jdom.20.a 
 		ai_chance = { factor = 90 }
-		JAP { dismantle_faction = yes }
+		JAP = { dismantle_faction = yes }
 		add_to_faction = JAP 
 		every_country = {
 			
@@ -557,7 +562,7 @@ country_event = {#liberal constitution
 	desc = jdom.24.d 
 	is_triggered_only = yes 
 	option = {
-		name = jdom.24
+		name = jdom.24.a
 	}
 }
 
@@ -567,7 +572,7 @@ country_event = {#conservative constitution
 	desc = jdom.25.d 
 	is_triggered_only = yes 
 	option = {
-		name = jdom.24
+		name = jdom.24.a
 	}
 }
 
@@ -577,6 +582,275 @@ country_event = {#socialist constitution
 	desc = jdom.26.d 
 	is_triggered_only = yes 
 	option = {
-		name = jdom.24
+		name = jdom.24.a
 	}
 }
+
+####elections and stuff####
+
+country_event = {#Japanese elections of 1940 lib 
+	id = jdom.27 
+	title = jdom.27.t 
+	desc = jdom.27.d 
+	is_triggered_only = yes 
+	option = {#liberals 
+		name = jdom.3.a 
+		ai_chance = { factor = 60 }
+		set_politics = { 
+		
+			ruling_party = liberalism 
+			elections_allowed = no 
+			
+		}
+		
+		add_popularity = { 
+			
+				ideology = liberalism  
+				popularity = 0.2 
+				
+		}
+		create_country_leader = {
+			name = "Wakatsuki Reijiro"
+			desc = "doesntmatter"
+			picture = "Wakatsuki_Reijiro.dds"
+			expire = "1949.1.1"
+			ideology = market_liberalism
+			traits = {
+			
+			}
+		}
+		
+		hidden_effect = { country_event = { id = jdom.? days = 1460 } }
+		
+		add_national_unity = 0.04 
+	}
+	option = {#conservatives 
+		name = jdom.3.b 
+		ai_chance = { factor = 30 }
+		set_politics = { 
+		
+			ruling_party = conservatism 
+			elections_allowed = no 
+			
+		}
+		
+		add_popularity = { 
+			
+				ideology = conservatism  
+				popularity = 0.2 
+				
+		}
+		create_country_leader = {
+			name = "Ichirō Hatoyama"
+			desc = "doesntmatter"
+			picture = "Hatoyama.dds"
+			expire = "1949.1.1"
+			ideology = democratic_conservatism
+			traits = {
+			
+			}
+		}
+		
+		hidden_effect = { country_event = { id = jdom.? days = 1460 } }
+		
+	}
+	option = {#socialists 
+		name = jdom.27.c 
+		ai_chance = { factor = 10 }
+		set_politics = { 
+		
+			ruling_party = socialism 
+			elections_allowed = no 
+			
+		}
+		
+		add_popularity = { 
+			
+				ideology = socialism  
+				popularity = 0.2 
+				
+		}
+		create_country_leader = {
+			name = "Suzuki Bunji"
+			desc = "doesntmatter"
+			picture = "Bunji.dds"
+			expire = "1949.2.10"
+			ideology = democratic_socialism
+			traits = {
+			
+			}
+		}
+		
+		add_national_unity = 0.02 
+	}
+}
+
+country_event = {#Japanese elections of 1940 con
+	id = jdom.28 
+	title = jdom.28.t 
+	desc = jdom.28.d 
+	is_triggered_only = yes 
+	option = {#conservatives  
+		name = jdom.28.a 
+		ai_chance = { factor = 60 }
+		set_politics = { 
+		
+			ruling_party = conservatism 
+			elections_allowed = no 
+			
+		}
+		
+		add_popularity = { 
+			
+				ideology = conservatism  
+				popularity = 0.2 
+				
+		}
+		create_country_leader = {
+			name = "Ichirō Hatoyama"
+			desc = "doesntmatter"
+			picture = "Hatoyama.dds"
+			expire = "1949.1.1"
+			ideology = democratic_conservatism
+			traits = {
+			
+			}
+		}
+		
+		hidden_effect = { country_event = { id = jdom.? days = 1460 } }
+		
+		add_national_unity = 0.03 
+	}
+	option = {#liberals 
+		name = jdom.28.b 
+		ai_chance = { factor = 40 }
+		set_politics = { 
+		
+			ruling_party = liberalism 
+			elections_allowed = no 
+			
+		}
+		
+		add_popularity = { 
+			
+				ideology = liberalism  
+				popularity = 0.2 
+				
+		}
+		create_country_leader = {
+			name = "Wakatsuki Reijiro"
+			desc = "doesntmatter"
+			picture = "Wakatsuki_Reijiro.dds"
+			expire = "1949.1.1"
+			ideology = market_liberalism
+			traits = {
+			
+			}
+		}
+		
+		hidden_effect = { country_event = { id = jdom.? days = 1460 } }
+		
+	}
+}
+
+country_event = {#Hamaguchi retires liberal
+	id = jdom.29 
+	title = jdom.29.t 
+	desc = jdom.29.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		date > 1939.2.10
+		has_government = liberalism
+	}
+	option = {
+		name = jdom.29.a 
+		create_country_leader = {
+			name = "Kijuro Shidehara"
+			desc = "doesntmatter"
+			picture = "Shidehara.dds"
+			expire = "1949.1.1"
+			ideology = market_liberalism
+			traits = {
+			
+			}
+		}
+		
+		add_national_unity = -0.01
+	}
+}
+
+country_event = {#Hamaguchi retires not liberal
+	id = jdom.30 
+	title = jdom.30.t 
+	desc = jdom.30.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		date > 1939.2.10
+		NOT = {
+			has_government = liberalism
+		}
+	}
+	option = {
+		name = jdom.29.a 
+	}
+}
+
+country_event = {#Inukai dies conservative
+	id = jdom.31 
+	title = jdom.31.t 
+	desc = jdom.31.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		date > 1940.2.3
+		has_government = conservatism
+	}
+	option = {
+		name = jdom.31.a 
+		create_country_leader = {
+			name = "Tsuneo Kanemitsu"
+			desc = "doesntmatter"
+			picture = "Tsueno.dds"
+			expire = "1949.1.1"
+			ideology = democratic_conservatism
+			traits = {
+			}
+		}
+		
+		add_national_unity = -0.01
+	}
+}
+ country_event = {#socialist elections 1939 
+	id = jdom.32 
+	title = jdom.32.t 
+	desc = jdom.32.d 
+	is_triggered_only = yes 
+	option = {
+		name = jdom.32.a 
+		add_national_unity = -0.01 
+		
+		add_popularity = { 
+			
+				ideology = socialism  
+				popularity = 0.07 
+				
+		}
+		add_popularity = { 
+			
+				ideology = communism  
+				popularity = 0.05 
+				
+		}
+		create_country_leader = {
+			name = "Toyohiko Kagawa"
+			desc = "doesntmatter"
+			picture = "Kagawa.dds"
+			expire = "1949.1.1"
+			ideology = marxism
+			traits = {
+			}
+		}
+	}
+ }

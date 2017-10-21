@@ -146,6 +146,8 @@ JAP_socialist_heavy:0 "State Industries"
 JAP_socialist_docks:0 "New Dockyards"
 JAP_socialist_planning:0 "Bureau Of Economic Planning"
 
+
+
 ####ideas####
 JAP_universal_suffrage_idea:0 "Universal Suffrage"
 JAP_universal_suffrage_idea_desc:0 "All Japanese citizens over the age of 20 are allowed to participate in politics"
@@ -170,6 +172,7 @@ JAP_peoples_revolution_idea:0 "Socialist uprisings!"
 ####tooltips####
 JAP_reformist_victory:0 "Shakai Minshuto dominates the coalition"
 JAP_revolutionary_victory:0 "Rodonominto dominates the coalition"
+
 ####factions####
 japanese_rebels:0 "Anti-Socialist Alliance"
 ####opinion####

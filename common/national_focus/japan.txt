@@ -1265,7 +1265,238 @@ focus = {
 		}
 	
 	}
+	
+####foreign tree####
 
+	focus = {
+		
+		id = JAP_expansionism_focus
+		icon = ? 
+		x = 35 
+		y = 0
+		cost = 5 
+		
+		available = { 
+		
+			OR = {
+				has_completed_focus = JAP_peoples_empire
+				has_completed_focus = JAP_peoples_revolution
+				has_completed_focus = JAP_parliamentary_democracy
+				has_completed_focus = JAP_centralize_state
+				}
+		
+		}
+		
+		completion_reward = {
+			add_named_threat = { threat = 5 name = JAP_expansionism }
+		}
+	
+	}
+	
+	focus = {
+		
+		id = JAP_western_approach
+		icon = ? 
+		x = 31 
+		y = 1
+		cost = 5 
+		
+		available = { 
+		
+			SOV = { exists = yes }
+			NOT = {
+				has_government = communism
+				has_government = socialism 
+			}
+		
+		}
+		
+		prerequisite = { focus = JAP_expansionism_focus }
+		
+		completion_reward = {
+			add_opinion_modifier = { target = SOV modifier = JAP_expansionism_bad }
+			add_opinion_modifier = { target = PRC modifier = JAP_expansionism_bad }
+			add_opinion_modifier = { target = GUO modifier = JAP_expansionism_bad }
+			add_opinion_modifier = { target = RUS modifier = JAP_expansionism_good }
+			add_opinion_modifier = { target = MAN modifier = JAP_expansionism_good }
+		}
+	
+	}
+	
+	focus = {
+		
+		id = JAP_pressure_anhui
+		icon = ? 
+		x = 27 
+		y = 2
+		cost = 10 
+		
+		available = { 
+		
+			ANH = { exists = yes }
+			NOT = {
+				has_war_with = ANH 
+				has_war_with = ZHI
+			}
+		
+		}
+		
+		prerequisite = { focus = JAP_western_approach }
+		
+		completion_reward = {
+			add_named_threat = { threat = 1 name = JAP_pressured_anhui }
+			ANH = { country_event = { id = jfor.6 } }
+		}
+	
+	}
+	
+	focus = {
+		
+		id = JAP_support_mongolia
+		icon = ? 
+		x = 29 
+		y = 2
+		cost = 10 
+		
+		available = { 
+		
+			MON = { 
+				exists = yes 
+				has_civil_war = no 
+				NOT = { has_government = communism }
+				}
+			NOT = {
+				has_war_with = MON 
+			}
+		
+		}
+		
+		prerequisite = { focus = JAP_western_approach }
+		
+		completion_reward = {
+			MON = { country_event = { id = jfor.10 } }
+			send_equipment = { target = MON type = infantry_equipment amount = 2500 }	
+			send_equipment = { target = MON type = artillery_equipment amount = 200 }	
+			add_opinion_modifier = { target = MON modifier = JAP_MON_support }
+		}
+	
+	}
+	
+	focus = {
+		
+		id = JAP_ally_mongolia
+		icon = ? 
+		x = 29 
+		y = 3
+		cost = 7 
+		
+		available = { 
+		
+			MON = { 
+				exists = yes 
+				NOT = { has_government = communism }
+				}
+			NOT = {
+				has_war_with = MON 
+			}
+		
+		}
+		
+		bypass = { is_in_faction_with = MON }
+		
+		prerequisite = { focus = JAP_support_mongolia }
+		
+		completion_reward = {
+			if = {
+				
+				limit = { is_in_faction_with = MON }
+				
+				else = { MON = { country_event = { id = jfor.11 } } }
+			
+			}
+		}
+	}
+	
+	focus = {
+		
+		id = JAP_ZHI_ultimatum
+		icon = ? 
+		x = 31 
+		y = 2
+		cost = 10 
+		
+		available = { 
+		
+			ZHI = { 
+				exists = yes 
+				NOT = { has_government = communism }
+				}
+			NOT = {
+				has_war_with = ZHI 
+			}
+			MAN = { is_subject_of = JAP }
+		
+		}
+		
+		prerequisite = { focus = JAP_western_approach }
+		
+		completion_reward = {
+			ZHI = { country_event = { id = jfor.16 } }
+			add_named_threat = { threat = 5 name = JAP_ZHI_threat }
+			MAN = { add_state_claim = 610 add_state_claim = 609 }
+		}
+	}
+	
+	focus = {
+		
+		id = JAP_influence_shanxi
+		icon = ? 
+		x = 33 
+		y = 2
+		cost = 10 
+		
+		available = { 
+		
+			SHX = { 
+				exists = yes 
+				NOT = { has_government = communism }
+				}
+			NOT = {
+				has_war_with = SHX 
+			}
+		
+		}
+		
+		prerequisite = { focus = JAP_western_approach }
+		
+		completion_reward = {
+			SHX = { country_event = { id = jfor.14 } }
+			add_opinion_modifier = { target = SHX modifier = JAP_supported_SHX }
+		}
+	}
+	
+	focus = {
+		
+		id = JAP_war_soviet
+		icon = ? 
+		x = 33 
+		y = 3
+		cost = 10 
+		
+		available = { 
+		
+			SOV = { exists = yes }
+			has_war = no
+		
+		}
+		
+		prerequisite = { focus = JAP_influence_shanxi }
+		
+		completion_reward = {
+			declare_war_on = { target = SOV type = annex_everything }
+		}
+	}
+	
 }
 
 

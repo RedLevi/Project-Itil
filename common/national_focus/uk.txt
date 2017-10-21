@@ -658,9 +658,9 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = SPR modifier = ENG_EUR_theater }
-			reverse_add_opinion_modifier = { target = POR modifier = ENG_EUR_theater }
-			reverse_add_opinion_modifier = { target = IRE modifier = ENG_EUR_theater } 
+			add_opinion_modifier = { target = SPR modifier = ENG_EUR_theater }
+			add_opinion_modifier = { target = POR modifier = ENG_EUR_theater }
+			add_opinion_modifier = { target = IRE modifier = ENG_EUR_theater } 
 		
 		}
 	
@@ -684,7 +684,7 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = NOR modifier = ENG_dip_support }
+			add_opinion_modifier = { target = NOR modifier = ENG_dip_support }
 			give_guarantee = NOR
 		
 		}
@@ -755,9 +755,9 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = HUN modifier = ENG_dip_support }
-			reverse_add_opinion_modifier = { target = ROM modifier = ENG_dip_scorne }
-			reverse_add_opinion_modifier = { target = YUG modifier = ENG_dip_scorne }
+			add_opinion_modifier = { target = HUN modifier = ENG_dip_support }
+			add_opinion_modifier = { target = ROM modifier = ENG_dip_scorne }
+			add_opinion_modifier = { target = YUG modifier = ENG_dip_scorne }
 			
 			set_global_flag = ENG_new_balkan_flag
 		
@@ -794,7 +794,7 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = GRE modifier = ENG_ALB_demand }
+			add_opinion_modifier = { target = GRE modifier = ENG_ALB_demand }
 			
 			GRE = { country_event = { id = engfor.4 } }
 			add_named_threat = 	{ threat = 1 name = albania_demand }
@@ -824,7 +824,7 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = GRE modifier = ENG_support_GRE_amb }
+			add_opinion_modifier = { target = GRE modifier = ENG_support_GRE_amb }
 			
 			give_guarantee = GRE
 			
@@ -856,7 +856,7 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = HUN modifier = ENG_support_HUN }
+			add_opinion_modifier = { target = HUN modifier = ENG_support_HUN }
 			
 				send_equipment = { target = HUN type = infantry_equipment amount = 750 }
 				send_equipment = { target = HUN type = support_equipment amount = 200 }
@@ -885,9 +885,9 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = HUN modifier = ENG_dip_scorne }
-			reverse_add_opinion_modifier = { target = ROM modifier = ENG_dip_support }
-			reverse_add_opinion_modifier = { target = YUG modifier = ENG_dip_support }
+			add_opinion_modifier = { target = HUN modifier = ENG_dip_scorne }
+			add_opinion_modifier = { target = ROM modifier = ENG_dip_support }
+			add_opinion_modifier = { target = YUG modifier = ENG_dip_support }
 			
 			set_global_flag = ENG_supports_YUG
 		
@@ -913,7 +913,7 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = YUG modifier = ENG_dip_fund }
+			add_opinion_modifier = { target = YUG modifier = ENG_dip_fund }
 			
 			send_equipment = { target = YUG type = infantry_equipment amount = 750 }
 			send_equipment = { target = YUG type = support_equipment amount = 200 }
@@ -940,7 +940,7 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = ROM modifier = ENG_dip_fund }
+			add_opinion_modifier = { target = ROM modifier = ENG_dip_fund }
 			
 			send_equipment = { target = ROM type = infantry_equipment amount = 750 }
 			send_equipment = { target = ROM type = support_equipment amount = 200 }
@@ -1039,10 +1039,10 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = SYR modifier = ENG_middle_theater }
-			reverse_add_opinion_modifier = { target = ISR modifier = ENG_middle_theater }
-			reverse_add_opinion_modifier = { target = OMA modifier = ENG_middle_theater }
-			reverse_add_opinion_modifier = { target = YEM modifier = ENG_middle_theater }
+			add_opinion_modifier = { target = SYR modifier = ENG_middle_theater }
+			add_opinion_modifier = { target = ISR modifier = ENG_middle_theater }
+			add_opinion_modifier = { target = OMA modifier = ENG_middle_theater }
+			add_opinion_modifier = { target = YEM modifier = ENG_middle_theater }
 		
 		}
 	
@@ -1160,8 +1160,8 @@ focus_tree = {
 			give_guarantee = SYR 
 			give_guarantee = ISR 
 			
-			reverse_add_opinion_modifier = { target = SYR modifier = ENG_dip_support }
-			reverse_add_opinion_modifier = { target = ISR modifier = ENG_dip_support }
+			add_opinion_modifier = { target = SYR modifier = ENG_dip_support }
+			add_opinion_modifier = { target = ISR modifier = ENG_dip_support }
 		}
 
 	}
@@ -1201,8 +1201,8 @@ focus_tree = {
 			
 			add_equipment_to_stockpile = { type = support_equipment amount = -150 }
 			
-			reverse_add_opinion_modifier = { target = SYR modifier = ENG_dip_fund }
-			reverse_add_opinion_modifier = { target = ISR modifier = ENG_dip_fund }
+			add_opinion_modifier = { target = SYR modifier = ENG_dip_fund }
+			add_opinion_modifier = { target = ISR modifier = ENG_dip_fund }
 		}
 
 	}
@@ -1232,7 +1232,7 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = SYR modifier = ENG_support_GRE_amb }
+			add_opinion_modifier = { target = SYR modifier = ENG_support_GRE_amb }
 			
 			
 			set_global_flag = ENG_support_SYR_flag
@@ -1364,10 +1364,10 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = SIA modifier = ENG_asia_theater }
-			reverse_add_opinion_modifier = { target = PHL modifier = ENG_asia_theater }
-			reverse_add_opinion_modifier = { target = AST modifier = ENG_asia_theater }
-			reverse_add_opinion_modifier = { target = NZL modifier = ENG_asia_theater }
+			add_opinion_modifier = { target = SIA modifier = ENG_asia_theater }
+			add_opinion_modifier = { target = PHL modifier = ENG_asia_theater }
+			add_opinion_modifier = { target = AST modifier = ENG_asia_theater }
+			add_opinion_modifier = { target = NZL modifier = ENG_asia_theater }
 		
 		}
 	
@@ -1466,7 +1466,7 @@ focus_tree = {
 		
 			give_guarantee = SIA 
 			
-			reverse_add_opinion_modifier = { target = SIA modifier = ENG_dip_inf }
+			add_opinion_modifier = { target = SIA modifier = ENG_dip_inf }
 		
 		}
 	
@@ -1542,7 +1542,7 @@ focus_tree = {
 		
 			give_guarantee = PHL 
 			
-			reverse_add_opinion_modifier = { target = PHL modifier = ENG_dip_inf }
+			add_opinion_modifier = { target = PHL modifier = ENG_dip_inf }
 		
 		}
 	
@@ -1609,9 +1609,9 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = SOV modifier = ENG_chinese_direction }
-			reverse_add_opinion_modifier = { target = JAP modifier = ENG_chinese_direction }
-			reverse_add_opinion_modifier = { target = PRC modifier = ENG_chinese_direction }
+			add_opinion_modifier = { target = SOV modifier = ENG_chinese_direction }
+			add_opinion_modifier = { target = JAP modifier = ENG_chinese_direction }
+			add_opinion_modifier = { target = PRC modifier = ENG_chinese_direction }
 		
 		}
 	
@@ -1643,8 +1643,8 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = ZHI modifier = ENG_dip_support }
-			reverse_add_opinion_modifier = { target = CHI modifier = ENG_dip_scorne }
+			add_opinion_modifier = { target = ZHI modifier = ENG_dip_support }
+			add_opinion_modifier = { target = CHI modifier = ENG_dip_scorne }
 			
 			send_equipment = { target = ZHI type = infantry_equipment amount = 1500 }
 			send_equipment = { target = ZHI type = motorized_equipment amount = 500 }
@@ -1684,8 +1684,8 @@ focus_tree = {
 		
 		completion_reward = {
 		
-			reverse_add_opinion_modifier = { target = CHI modifier = ENG_dip_support }
-			reverse_add_opinion_modifier = { target = ZHI modifier = ENG_dip_scorne }
+			add_opinion_modifier = { target = CHI modifier = ENG_dip_support }
+			add_opinion_modifier = { target = ZHI modifier = ENG_dip_scorne }
 			
 			send_equipment = { target = CHI type = infantry_equipment amount = 1500 }
 			send_equipment = { target = CHI type = motorized_equipment amount = 500 }

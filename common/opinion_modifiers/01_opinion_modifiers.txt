@@ -43,5 +43,11 @@ SYR_no_sent_support = { value = -30 }
 JAP_USA_pacific_takeover = { value = -70 }
 ###JAP###
 JAP_SOV_refusal = { value = -50 }
+JAP_expansionism_bad = { value = -60 }
+JAP_expansionism_good = { value = 30 }
+JAP_MON_support = { value = 50 }
+MON_refused_JAP = { value = -25 }
+JAP_supported_SHX = { value = 30 }
+refused_chinese_call = { value = -100 }
 
 }

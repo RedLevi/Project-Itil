@@ -1,5 +1,42 @@
 ideas = {
+		
+	country = {
+		
+		JAP_support_SHX = {
+		
+			available = {
+			
+				NOT = {
+					
+					has_government = socialism
+					has_government = communism
+				
+				}
 
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+					
+					has_government = socialism
+					has_government = communism
+				
+				}	
+			
+			}
+			
+			removal_cost = -1 
+			
+			research_bonus = {
+				land_doctrine = 0.15
+				industry = 0.15
+			}
+		
+		}
+		
+	}
+	
 	political_advisor = {
 
 		SHX_wang_zuanxu = {

@@ -1,4 +1,41 @@
 ideas = {
+	
+	country = {
+		
+		JAP_support_MON_idea = {
+		
+			available = {
+			
+				NOT = {
+					
+					has_government = communism
+					has_government = socialism
+				
+				}
+
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+					
+					has_government = communism
+					has_government = socialism
+				
+				}
+			
+			}
+			
+			removal_cost = -1 
+			
+			research_bonus = {
+				land_doctrine = 0.15
+				industry = 0.15
+			}
+		
+		}
+	
+	}
 
 	political_advisor = {
 

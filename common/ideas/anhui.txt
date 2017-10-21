@@ -1,0 +1,30 @@
+ideas = {
+
+	country = {
+	
+		ANH_japanese_advisors = {
+		
+			available = {
+			
+				is_subject_of = JAP
+
+			}
+			
+			allowed_civil_war = {
+			
+				is_subject_of = JAP
+			
+			}
+			
+			removal_cost = -1 
+			
+				research_bonus = {
+				land_doctrine = 0.15
+				industry = 0.15
+			}
+			
+		}
+	
+	}
+
+}

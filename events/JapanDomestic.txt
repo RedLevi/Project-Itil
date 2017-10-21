@@ -430,7 +430,16 @@ country_event = {#civil war for Russia
 			RUS = { declare_war_on = { target = PREV type = annex_everything } }
 			country_event = { id = jdom.18 }
 		}
-		 
+		 add_state_claim = 637 
+		 add_state_claim = 744 
+		 add_state_claim = 562 
+		 add_state_claim = 560 
+		 add_state_claim = 657 
+		 add_state_claim = 409 
+		 add_state_claim = 408 
+		 add_state_claim = 655 
+		 add_state_claim = 537 
+		 add_state_claim = 555 
 		JAP = { country_event = { id = jdom.19 } }
 	}
 }

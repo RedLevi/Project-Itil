@@ -124,6 +124,7 @@ country_event = { #CIVIL WAR#
 			SYA = { transfer_state = 32 }
 			SYA = { transfer_state = 21 }
 			SPF = { change_tag_from = FRA }
+			SPF = { load_oob = SPF }
 			
 			}
 			hidden_effect = {

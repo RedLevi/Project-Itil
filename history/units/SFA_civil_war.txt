@@ -1,1 +1,196 @@
-﻿
+﻿##### Division Templates #####
+division_template = {
+	name = "Division d'Infanterie"		
+	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. Coloniale, 
+	#	Div. d'Inf. Nord-Africaine, Div. d'Inf. de Forteresse
+	# Difference is their equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 2x 155mm battalions
+	}
+}
+division_template = {
+	name = "Division d'Infanterie Motorisée"	# Division d'Infanterie Motorisée
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 26 ACs + motorcycles
+		artillery = { x = 0 y = 1 }  # Heavy Arty Regiment had 1x 155mm, 1x 105mm battalions
+	}
+}
+division_template = {
+	name = "Division d'Infanterie Alpine"	# Division d'Infanterie Alpine
+	# Note: trimmed to 3x Rgts w/ arty bn added, 1939
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	# Regular mountain infantry (Infanterie Alpine)
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 2 y = 1 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 2 y = 2 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 3 y = 0 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 3 y = 1 }	# Chasseurs Alpins (HOI3 elites)
+		mountaineers = { x = 3 y = 2 }	# Chasseurs Alpins (HOI3 elites)
+	}
+}
+division_template = {
+	name = "Division de Cavalerie" 	# Division de Cavalerie
+	# Note: Transformed to DLC, DLM divisions, 1936-39 
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 64 ACs/scout cars
+	}
+}
+division_template = {
+	name = "Division Légère Mécanique" 		# Division Légère Mécanique
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }		# Bn. of Hotchkiss, then Souma (Med.) tanks
+		light_armor = { x = 0 y = 1 }		# Bn. of Hotchkiss tanks
+		motorized = { x = 1 y = 0 }			# Brigade of 2x Rgts., 2 Bns. each (later 1 Rgt. of 3x Bns.)
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 42 ACs + motorcycles
+	}
+}
+division_template = {
+	name = "Brigade de Chars de Combat" 	# Brigade de Chars de Combat, independent armor brigades of 2x Rgts., 2 Bns. each
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Brigade Coloniale"			# Represents: 2xRgt colonial forces and , usually with old equipment
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+#####OOB###########
+division= {	
+		name = "2ème Division d'Infanterie"
+		location = 9737
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# Ie Corps d'Armée (Région Militaire in 1936) -- Lille
+	division= {	
+		name = "7ème Division d'Infanterie"
+		location = 6762
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "2ème Division d'Infanterie"
+		location = 752
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# Ie Corps d'Armée (Région Militaire in 1936) -- Lille
+	division= {	
+		name = "7ème Division d'Infanterie"
+		location = 11702
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	units = {
+    division= {	
+		name = "42ème Division d'Infanterie"
+		location = 11565
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.5
+	}
+
+#####NAVY######
+navy = {				
+		name = "Flottille de Haute Mers"			
+		base = 9737 
+		location = 9737  #Bordeaux			
+		ship = { name = "Lorraine" definition = battleship equipment = { battleship_1 = { amount = 1 owner = FRA version_name = "Bretagne Class" } } }			
+		ship = { name = "Bretagne" definition = battleship equipment = { battleship_1 = { amount = 1 owner = FRA version_name = "Bretagne Class" } } }			
+		ship = { name = "Provence" definition = battleship equipment = { battleship_1 = { amount = 1 owner = FRA version_name = "Bretagne Class" } } }			
+		ship = { name = "Pluton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = FRA } } }
+	}				
+	navy = {				
+		name = "Force d'Attaque Légère"			
+		base = 9737 
+		location = 9737 # Marseille
+		ship = { name = "La Galissonnière" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = FRA } } }	# La Galissonnière variant
+		ship = { name = "Émile Bertin" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = FRA } } }
+		# 1e Division des Contre-Torpilleurs
+		ship = { name = "Lion" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
+		ship = { name = "Vauban" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
+		ship = { name = "Bison" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
+		# 3e Division des Contre-Torpilleurs
+		ship = { name = "Guépard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
+		ship = { name = "Valmy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
+		ship = { name = "Verdun" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
+		# 6e Division des Contre-Torpilleurs
+		ship = { name = "Aigle" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Aigle & Vauquelin Class" } } }
+		ship = { name = "Milan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Aigle & Vauquelin Class" } } }
+		ship = { name = "Épervier" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Aigle & Vauquelin Class" } } }
+	}
+	
+####AIRFORCE#######
+air_wings = {
+	# Z.d'Op. Aériennes Est -- Reims
+	19 = {
+		# Groupement de Chasse 22
+		fighter_equipment_0 = {
+			owner = "FRA" 
+			amount = 96
+		}
+	}

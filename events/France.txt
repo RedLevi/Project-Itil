@@ -1,14 +1,15 @@
 ﻿add_namespace = france
 
-country_event = {
+country_event = { #INTRO EVENT#
     id = france.1
 	title = france.1.t
-	desc = france 1.d
+	desc = france.1.d
 	
 	fire_only_once = yes
 	
 	trigger = {
 	date > 1936.1.1
+	date < 1936.1.3
 	tag = FRA
 	}
 	
@@ -18,11 +19,12 @@ country_event = {
 		}
 	}
 	
-country_event = {
+country_event = { #RIGHT WING INTRO#
     id = france.2
 	title = france.2.t
     desc = france.2.d
 	
+	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
@@ -31,21 +33,107 @@ country_event = {
 	    }
     }
 	
-country_event = {
+country_event = { #LEFT WING INTRO#
     id = france.3
 	title = france.3.t
     desc = france.3.d
 	
+	fire_only_once = yes
 	is_triggered_only = yes
 	
 	option = {
 	    name = france.3.a
 		}
     }
+	
+country_event = { #1936 ELECTION#
+    id = france.4
+	title = france.4.t
+	desc = france.4.d
+	
+    fire_only_once = yes
+	fire_only_once = yes
+ 
+	trigger = {
+	    date > 1936.4.25
+		tag = FRA
+		}
+		
+	option = {
+        name = france.4.a
+		set_politics = { ruling_party = communism elections_allowed = no }
+		add_popularity = { ideology = communism popularity = 0.15 }
+		add_popularity = { ideology = socialism popularity = 0.15 } 
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		    country_event = { id = france.5 days = 15 }
+			}
+		}
+	
+	option = {
+	    name = france.4.b
+		set_politics = { ruling_party = conservatism elections_allowed = no }
+		add_popularity = { ideology = conservatism popularity = 0.15 }
+		add_popularity = { ideology = national_integralism popularity = 0.15 }
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		    country_event = { id = france.5 days = 15 }
+			}
+	}
+}
+	
 
 
-
-
+country_event = { #CIVIL WAR#
+    id = france.5
+	title = france.5.t 
+	desc = france.5.d 
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	    id = france.5.a 
+		hidden_effect = {
+			SPF = { transfer_state = 460 }
+			SPF = { transfer_state = 459 }
+			SPF = { transfer_state = 513 }
+			SPF = { transfer_state = 514 }
+			SPF = { transfer_state = 515 }
+			SPF = { transfer_state = 557 }
+			SPF = { transfer_state = 556 }
+			SPF = { transfer_state = 272 }
+			SPF = { transfer_state = 24 }
+			SPF = { transfer_state = 16 }
+			SPF = { transfer_state = 29 }
+			SPF = { transfer_state = 20 }
+		    NFA = { transfer_state = 14 }
+			NFA = { transfer_state = 30 }
+			NFA = { transfer_state = 15 }
+			RFA = { transfer_state = 18 }
+			RFA = { transfer_state = 17 }
+			RFA = { transfer_state = 27 }
+			IFA = { transfer_state = 25 }
+			IFA = { transfer_state = 23 }
+			IFA = { transfer_state = 26 }
+			IFA = { transfer_state = 33 }
+			SFA = { transfer_state = 19 }
+			SFA = { transfer_state = 31 }
+			SFA = { transfer_state = 22 }
+			SYA = { transfer_state = 735 }
+			SYA = { transfer_state = 32 }
+			SYA = { transfer_state = 21 }
+			SPF = { change_tag_from = FRA }
+			
+			}
+			hidden_effect = {
+			set_equipment_fraction = 0.3
+			set_global_flag = france_civil_war
+			}
+		}
+	}
+	
+	
 
 
 			

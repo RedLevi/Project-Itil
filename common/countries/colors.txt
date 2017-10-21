@@ -650,7 +650,7 @@ NFA = {
 }
 
 IFA = {
-	color = rgb { 20 25 35 }
+	color = rgb { 150 100 0 }
 	color_ui = rgb { 74 147 255 }
 }
 
@@ -671,4 +671,9 @@ RFA = {
 HAW = {
 	color = rgb { 0 102 51 }
 	color_ui = rgb { 0 102 51 }
+}
+
+SPF = { 
+    color = rgb { 150 0 0 }
+	color_ui = { 150 0 0 }
 }

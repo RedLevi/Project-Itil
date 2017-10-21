@@ -1,4 +1,4 @@
-####Levi's HOI4 event tutorial!####
+####Koach's HOI4 event tutorial!####
 
 #####Table of contents: 
 #GENERAL INFO =  8 - 21   
@@ -25,7 +25,7 @@ existing line of code without affecting the reading of the engine by having a # 
 Before writing any event in your event file you must add a 'namespace'. This is the prefix for your event IDs, and is necessary to make your event file work.
 in order to set up a namespace you need to add the following code at the top of your file: add_namespace = your namespace here
 your namespace should be a short word made of lowercase letters that has something to do with the topic of your file. For the sake of this tutorial we will
-use the namespace 'levi', so at the top of our file we will write add_namespace = levi
+use the namespace 'koach', so at the top of our file we will write add_namespace = koach
 														  #Country Events#
 There are two kinds of events in HOI4, country events and news events. Both types have generally the same structure and work very similarly, so from now
 on all examples will be made with country events, as they are the most common type of event that you will make. We will come back to news events later.
@@ -40,28 +40,28 @@ Every event must have three "stages" that must be present for it to function pro
 			everything in your event needs to go between these brackets. Every bracket in your file must also have a closing later on in its event.
 			Inside of your country_event brackets you must have an event ID. This is the 'serial number' of this particular event and should be made of 
 			the file's namespace and a number, written like this: 
-							id = levi.1 
-			it is recommended you serialize your events in a rising order of numbers, meaning levi.1, levi.2, levi.3 etc. 
+							id = koach.1 
+			it is recommended you serialize your events in a rising order of numbers, meaning koach.1, koach.2, koach.3 etc. 
 			
 			the second part of your frame is the event title. The event title is the code 'string' that the game translates into text while using the localization
 			file ( see "localization" ). The code for the event title should look like this: 
-							title = levi.1.t 
+							title = koach.1.t 
 			Please note multiple events can use the same title string, so it is possible to have something like this: 
 			
-							id = levi.2 
-							title = levi.1.t
+							id = koach.2 
+							title = koach.1.t
 			This means you can have two seprate events that appear with the same title in game! 
 			The third and last part of the frame is the description. The description works identicaly to the title only here it is the string for the ecent description 
 			text. It should look like this: 
-							desc = levi.1.d 
+							desc = koach.1.d 
 			So the frame of your event should look like this: 
 							country_event = {
-							id = levi.1
-							title = levi.1.t 
-							desc = levi.1.d 
+							id = koach.1
+							title = koach.1.t 
+							desc = koach.1.d 
 							}
 										
-					#Levi tip: It is a good idea to write the name of your event in a comment in the first line of the frame, so that you would know which 
+					#koach tip: It is a good idea to write the name of your event in a comment in the first line of the frame, so that you would know which 
 					event is what when reviwing~!#
 					
 		The trigger is is the part of your event which determines when or under what conditions will your event fire ingame. It usually comes directly after desc.
@@ -82,7 +82,7 @@ Every event must have three "stages" that must be present for it to function pro
 							}
 		a full list of conditions can be found here: http://www.hoi4wiki.com/Conditions
 		
-		#Levi tip: You can also use a condition trigger in an option ( see options ), which means the option you use it on will only be available if you meet the 
+		#koach tip: You can also use a condition trigger in an option ( see options ), which means the option you use it on will only be available if you meet the 
 		conditions specified in the trigger~!#
 		
 		A MTTH value works by giving each day in the MTTH a rising chance of the event to fire, with the value in the MTTH having a 50% chance of firing, meaning 
@@ -98,9 +98,9 @@ Every event must have three "stages" that must be present for it to function pro
 		The option should be contained inside an option bracket written like this: 
 		option = { ... }
 		the first thing that should be inside an option bracket is a name. This functions like title and description do, and is written like this:
-		name = levi.1.a
-		following options should have names like levi.1.b, levi.1.c etc.
-		please note that the name for the fourth option must be levi.1.e, since levi.1.d is used by the desc in the frame.
+		name = koach.1.a
+		following options should have names like koach.1.b, koach.1.c etc.
+		please note that the name for the fourth option must be koach.1.e, since koach.1.d is used by the desc in the frame.
 		
 		If you include multiple options in an event you might want to add an ai_chance command after the name. The higher the value of an ai_chance is, the more likely
 		is the ai to choose that option. This can be used to program more likely scenarios in your event chains. It is recommended you make the total sum of your 
@@ -117,7 +117,7 @@ Every event must have three "stages" that must be present for it to function pro
 		a complete option should like like this: 
 		
 		option = { 
-		name = levi.1.a 
+		name = koach.1.a 
 		ai_chance = { factor = 55 }
 		set_country_flag = tutorial_flag
 									}
@@ -125,23 +125,23 @@ Every event must have three "stages" that must be present for it to function pro
 		And those are the basics of event making. In the next example we'll see how a complete event should look like: 
 		
 		country_event = { #tutorial event 
-			id = levi.1 
-			title = levi.1.t 
-			desc = levi.1.d
+			id = koach.1 
+			title = koach.1.t 
+			desc = koach.1.d
 			trigger = {
 				tag = GER 
 				date > 1936.1.1 
 			}
 			mean_time_to_happen = { days = 10 }
 			option = {
-				name = levi.1.a 
+				name = koach.1.a 
 				ai_chance = { factor = 100 }
 				set_country_flag = tutorial_flag
 			}
 			option = {  
-				name = levi.1.b 
+				name = koach.1.b 
 				ai_chance = { factor = 0 }
-				country_event = { id = levi.2 days = 5 } #this will fire the next event in 5 days of ingame time
+				country_event = { id = koach.2 days = 5 } #this will fire the next event in 5 days of ingame time
 			}
 		}
 And that's a full event! Using these basics alone you can make some very complicated events, which we'll learn how to complicate even more in 
@@ -151,8 +151,8 @@ the next chapter, where we'll learn booleans! ;}
 localization is the process of turning code strings in the files into text segments ingame. in order to localize a string you need to create a localization file.
 Localization files are .YML files inside the localization folder of the mod, and their title should be constructed in this format: 				
 			00_file_name_l_language.yml
-in our case,the language is English, and our file name is "levi" so the localization file should be called: 
-			00_levi_l_english.yml 
+in our case,the language is English, and our file name is "koach" so the localization file should be called: 
+			00_koach_l_english.yml 
 the first thing that needs to be written in the localization file is a language definer matching the language in your file name, written like this:
 			l_yourlanguage: 
 so in our case it should be: 
@@ -162,10 +162,10 @@ our_string:0
 after the zero, you write the text you want inside  qoutation marks ("")
 our_string:0 "Our text!"
 so in our case, it would be: 
-levi.1.t:0 "Levi's event guide"
-levi.1.d:0 "Levi have provided us with this nice and easy to follow guide on creating events! How cool is that?"
-levi.1.a:0 "Very cool"
-levi.1.b:0 "Its alright, I guess..."
-		#Levi tip: It is recommended you organize your localization file in categories using comments. for example, all event text would be under####events 
+koach.1.t:0 "koach's event guide"
+koach.1.d:0 "koach have provided us with this nice and easy to follow guide on creating events! How cool is that?"
+koach.1.a:0 "Very cool"
+koach.1.b:0 "Its alright, I guess..."
+		#koach tip: It is recommended you organize your localization file in categories using comments. for example, all event text would be under####events 
 		while all focus localization would be under ####focuses#####
 

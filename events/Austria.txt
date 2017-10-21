@@ -127,6 +127,8 @@ country_event = { # The Austrians have declared war!
 	}
 }
 
+## German Decisions due to Invasion ##
+
 country_event = { # Austria takes Inititive! (Germany)
 	id = aus.3
 	title = aus.3.t
@@ -189,15 +191,280 @@ country_event = { # Austria takes Inititive! (Germany)
 	}
 
 	option = { # Demand Austria come to the table!
-		name = austria.3.e
+		name = aus.3.e
 		ai_chance = { factor = 10 }
-		AUS = { country_event = { id = aus.8 days = 2 } }
+		AUS = { country_event = { id = aus.7 days = 2 } }
 		add_national_unity = -0.05
 		hidden_effect = {
 			set_global_flag = GER_AUS_back_down
 		}
 	}
 }
+# I kinda screwed up the numbering system at the start but roll with it
+country_event = { # Germany Demands Peace!
+	id = aus.7
+	title = aus.7.t
+	desc = aus.7.d
+	is_triggered_only = yes
+
+	option = { # We fight on, with or without the Germans!
+		ai_chance = { factor = 10 }
+		name = aus.7.a
+		custom_effect_tooltip = AUS_refuses
+		# decrease war support for the Austrians here, Happy!
+		hidden_effect = {
+			GER = { country_event = { id = aus.8 days = 1 } }
+		}
+	}
+
+	option = { # With heavy hearts, we must obey
+		ai_chance = { factor = 90 }
+		name = aus.7.b
+		custom_effect_tooltip = AUS_agree
+		hidden_effect = {
+			white_peace = HUN
+		}
+	}
+}
+
+country_event = { # Austria Responds
+	id = aus.8
+	title = aus.8.t
+	desc = aus.8.d
+	is_triggered_only = yes
+
+	option = { # They have called our bluff. We can't intervene.
+		name = aus.8.a
+		ai_chance = { factor = 5 }
+		add_political_power = -50
+		#add_nation_unity = -0.05
+	}
+
+	option = { # Only go as far as removing them from the defence pact
+		trigger = {
+			AUS = { is_in_faction_with = GER }
+		}
+		name = aus.8.b
+		ai_chance = { factor = 50 }
+		remove_from_faction = AUS
+		hidden_effect = {
+			news_event = aus.9
+		}
+	}
+
+	option = { # Remove Austria from the alliance and economically sanction them
+		name = aus.8.c
+		ai_chance = { factor = 10 }
+		remove_from_faction = AUS
+		custom_effect_tooltip = GER_sanction_AUS
+		hidden_effect = {
+			AUS = { country_event = { id = aus.10 days = 2 } }
+			add_opinion_modifier = { target = AUS modifier = embargo }
+			news_event = aus.9
+			set_global_flag = AUS_sanctioned
+		}
+	}
+
+	option = { # Sanction Austria and enter alliance discussions with Hungary
+		name = aus.8.e
+		ai_chance = { factor = 35 }
+		remove_from_faction = AUS
+		custom_effect_tooltip = GER_sanction_AUS
+		hidden_effect = {
+			AUS = { country_event = { id = aus.10 days = 2 } }
+			add_opinion_modifier = { target = AUS modifier = embargo }
+			HUN = { country_event = { id = aus.11 days = 4 } }
+			news_event = aus.9
+			set_global_flag = AUS_sanctioned
+		}
+	}
+}
+
+news_event = { # Germany takes measures against Austria!
+	id = aus.9
+	title = aus.9.t
+	desc = {
+		text = aus.9.d_removed
+		trigger = {
+			NOT = { has_global_flag = AUS_sanctioned }
+		}
+	}
+	desc = {
+		text = aus.9.d_sanctioned
+		trigger = {
+			has_global_flag = AUS_sanctioned
+		}
+	}
+	is_triggered_only = yes
+	major = yes
+
+	option = { # It was the right move
+		trigger = {
+			tag = GER
+		}
+		name = aus.9.a
+	}
+
+	option = { # They tear themselves apart
+		trigger = {
+			tag = ENG
+		}
+		name = aus.9.b
+	}
+
+	option = { # We must weigh our response
+		trigger = {
+			tag = AUS
+		}
+		name = aus.9.c
+	}
+
+	option = { # Germany may be our friend once again
+		trigger = {
+			tag = HUN
+		}
+		name = aus.9.e
+		# add Hungarian war support here
+	}
+
+	option = { # Looks like Austria may be on the menu...
+		trigger = {
+			tag = YUG
+		}
+		name = aus.9.f
+	}
+
+	option = { # The Balkans was a powerkeg enough without German intervention
+		trigger = {
+			NOT = {
+				OR = {
+				 tag = GER
+				 tag = ENG
+				 tag = AUS
+				 tag = HUN
+				 tag = YUG
+				}
+			}
+		}
+		name = aus.9.g
+	}
+
+}
+
+country_event = { # Germany has sanctioned us!
+	id = aus.10
+	title = aus.10.t
+	desc = aus.10.d
+	is_triggered_only = yes
+
+	option = { # This is too much, and we must give in
+		ai_chance = { factor = 60 }
+		name = aus.10.a
+		custom_effect_tooltip = AUS_agree
+		hidden_effect = {
+			white_peace = HUN
+			clr_global_flag = AUS_sanctioned
+			clr_global_flag = AUS_removed
+			GER = { add_to_faction = AUS }
+		}
+	}
+
+	option = { # We have made our choice, and we shall take our stand
+		ai_chance = { factor = 40 }
+		name = aus.10.b
+		add_ideas = AUS_sanctioned_by_GER
+		add_political_power = -50
+		add_national_unity = -0.1
+		hidden_effect = {
+			GER = { add_ideas = GER_sanctioned_AUS }
+			GER = { country_event = { id = aus.11 days = 92 } }
+		}
+	}
+}
+
+country_event = { # Our economy recovers from the Austrian Sanctions
+	id = aus.11
+	title = aus.11.t
+	desc = aus.11.d
+	is_triggered_only = yes
+	trigger = {
+		has_idea = GER_sanctioned_AUS
+	}
+
+	option = { # Good
+		name = aus.11.a
+		remove_ideas = GER_sanctioned_AUS
+		add_political_power = 20
+	}
+}
+
+country_event = { # German mission to Hungary
+	id = aus.12
+	title = aus.12.t
+	desc = aus.12.d
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_global_flag = AUS_sanctioned
+			has_global_flag = AUS_removed
+		}
+	}
+
+	option = { # Accept entirely
+		GER = { add_to_faction = HUN }
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			add_ideas = war_alone
+		}
+		# add_ideas = GER_HUN_economy 
+		# very similar to bonuses Austria should get at gamestart
+		AUS = {
+			every_owned_state = {
+				add_claim_by = HUN
+			}
+		}
+		BOH = {
+			every_owned_state = {
+				add_claim_by = HUN
+			}
+		}
+		custom_event_tooltip = GER_support_will_arrive
+		hidden_effect = {
+			GER = send_equipment = { target = HUN type = infantry_equipment amount = 2000 }
+			GER = send_equipment = { target = HUN type = artillery amount = 500 }
+			# load_oob = GER_support_to_HUN
+		}
+
+	}
+
+	option = { # We will take help but not land
+		GER = { add_to_faction = HUN }
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			add_ideas = war_alone
+		}
+		# add_ideas = GER_HUN_economy 
+		# very similar to bonuses Austria should get at gamestart
+		custom_event_tooltip = GER_support_will_arrive
+		hidden_effect = {
+			GER = send_equipment = { target = HUN type = infantry_equipment amount = 2000 }
+			GER = send_equipment = { target = HUN type = artillery amount = 500 }
+			add_manpower = 10000
+			GER = { add_manpower = -10000 }
+			# load_oob = GER_support_to_HUN
+		}
+	}
+
+	#option = { # The Germans will never lord over us
+	#	GER = {  }
+	#}
+}
+
+## UK Decisions on Austrian Invasion ##
 
 country_event = { # Austrian Reconquest of Hungary (UK)
 	id = aus.4
@@ -220,7 +487,7 @@ country_event = { # Austrian Reconquest of Hungary (UK)
 			has_global_flag = GER_AUS_back_down
 		}
 	}
-	desc = = {
+	desc = {
 		text = aus.4.d
 		trigger = {
 			NOT = {
@@ -263,6 +530,8 @@ country_event = { # Austrian Reconquest of Hungary (UK)
 	}
 }
 
+## Yugoslav Decisions on Austrian Invasion ##
+
 country_event = { # Austria invades Hungary! (Yugoslavia)
 	id = aus.5
 	title = aus.5.t
@@ -281,6 +550,8 @@ country_event = { # Austria invades Hungary! (Yugoslavia)
 
 	}
 }
+
+## Romanian Decisions on Austrian Invasion ##
 
 country_event = { # Hungary is at War! (Romania)
 	id = aus.6

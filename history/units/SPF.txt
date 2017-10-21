@@ -193,8 +193,41 @@ division= {
 		start_equipment_factor = 0.5
 
 	}
+	
+####NAVYY##########################
+navy = {				
+		name = "2ème Escadron Sous-Marins" 			
+		base = 575 
+		location = 575 # Dunkerque			
+		# 4e Division des Sous-Marins
+		ship = { name = "Le Centaure" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SPF version_name = "Redoutable Class" } } }
+		ship = { name = "Argo" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SPF version_name = "Redoutable Class" } } }
+		ship = { name = "Pascal" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SPF version_name = "Redoutable Class" } } }
+		ship = { name = "Henri Poincaré" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SPF version_name = "Redoutable Class" } } }
+		# 12e Division des Sous-Marins
+		ship = { name = "Orion" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SPF version_name = "630 Series" } } }
+		ship = { name = "Ondine" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SPF version_name = "630 Series" } } }
+		ship = { name = "Méduse" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SPF version_name = "630 Series" } } }
+		ship = { name = "Amphitrite" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SPF version_name = "630 Series" } } }
+		ship = { name = "Oréade" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SPF version_name = "630 Series" } } }
+		ship = { name = "La Psyché" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SPF version_name = "630 Series" } } }
+		# 14e Division des Sous-Marins
+		ship = { name = "Diane" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SPF version_name = "630 Series" } } }
+		ship = { name = "Ariane" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SPF } } }				
+		ship = { name = "Eurydice" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA } } }				
+		ship = { name = "Danaé" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA } } }				
+	}	
 
-
+#############AIRFORCE############
+air_wings = {
+	# Z.d'Op. Aériennes Est -- Reims
+	16 = {
+		# Groupement de Chasse 9
+		fighter_equipment_0 = {
+			owner = "SPF" 
+			amount = 96
+		}
+	}
 
 
 

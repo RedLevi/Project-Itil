@@ -28,7 +28,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_remanage_internal_affairs
-		icon = ?
+		icon = GFX_goal_generic_demand_territory
 		x = 1
 		y = 1
 		cost = 10
@@ -43,7 +43,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_election_campaign
-		icon = ?
+		icon = GFX_elections
 		x = 3
 		y = 1
 		cost = 10
@@ -63,7 +63,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_stabilize_the_nation
-		icon = ?
+		icon = GFX_stability
 		x = 5
 		y = 1
 		cost = 10
@@ -94,7 +94,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_purge_opposition
-		icon = ?
+		icon = GFX_purge_opposition
 		x = 5
 		y = 3
 		cost = 10
@@ -555,8 +555,8 @@ focus_tree = {
 	
 	focus = {
 		id = GER_imperial_dominance
-		icon = GFX_goal_generic_demand_territory
-		x = 13
+		icon = GFX_goal_generic_military_deal
+		x = 18
 		y = 0
 		cost = 10
 
@@ -569,8 +569,8 @@ focus_tree = {
 		
 	focus = {
 		id = GER_improve_relations_east
-		icon = ?
-		x = 9
+		icon = GFX_goal_generic_improve_relations
+		x = 11
 		y = 1
 		cost = 10
 		
@@ -585,8 +585,8 @@ focus_tree = {
 	
 	focus = {
 		id = GER_middle_east_dip
-		icon = ?
-		x = 12
+		icon = GFX_middle_east
+		x = 16
 		y = 1
 		cost = 10
 
@@ -600,8 +600,8 @@ focus_tree = {
 
 	focus = {
 		id = GER_improve_relations_west
-		icon = ?
-		x = 15
+		icon = GFX_goal_generic_improve_relations
+		x = 19
 		y = 1
 		cost = 10
 
@@ -620,8 +620,8 @@ focus_tree = {
 
 	focus = {
 		id = GER_far_east
-		icon = ?
-		x = 18
+		icon = GFX_far_east
+		x = 22
 		y = 1
 		cost = 10
 
@@ -638,7 +638,7 @@ focus_tree = {
 	focus = {
 		id = GER_scandinavia
 		icon = GFX_scandza
-		x = 20
+		x = 24
 		y = 1
 		cost = 10
 
@@ -653,8 +653,8 @@ focus_tree = {
 
 	focus = {
 		id = GER_norwegian_ties
-		icon = ?
-		x = 20
+		icon = GFX_norwegian_ties
+		x = 24
 		y = 2
 		cost = 10
 
@@ -668,8 +668,8 @@ focus_tree = {
 	
 	focus = {
 		id = GER_swedish_steel
-		icon = ?
-		x = 20
+		icon = GFX_swedish_steel
+		x = 24
 		y = 3
 		cost = 10
 
@@ -682,9 +682,24 @@ focus_tree = {
 	}	
 	
 	focus = {
+		id = GER_finnish_friends
+		icon = GFX_finnish_friends
+		x = 24
+		y = 4
+		cost = 10
+
+        available_if_capitulated = no	
+		prerequisite = { focus = GER_swedish_steel }
+		
+		completion_reward = {
+			reverse_add_opinion_modifier = { target = FIN modifier = ENG_EUR_theater }
+		}
+	}	
+	
+	focus = {
 		id = GER_chinese_aid
-		icon = ?
-		x = 18
+		icon = GFX_chinese_aid
+		x = 22
 		y = 2
 		cost = 10
 
@@ -699,8 +714,8 @@ focus_tree = {
 	
 	focus = {
 		id = GER_japanese_support
-		icon = ?
-		x = 18
+		icon = GFX_focus_generic_japanese_imperial_glory
+		x = 22
 		y = 3
 		cost = 10
 
@@ -715,7 +730,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_improve_relations_lit
-		icon = ?
+		icon = GFX_lithuania
 		x = 8
 		y = 2
 		cost = 10
@@ -730,7 +745,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_improve_relations_est
-		icon = ?
+		icon = GFX_estonia
 		x = 10
 		y = 2
 		cost = 10
@@ -746,8 +761,8 @@ focus_tree = {
 	focus = {
 		id = GER_romanian_help
 		icon = GFX_romania
-		x = 10
-		y = 3
+		x = 12
+		y = 2
 		cost = 10
 
         available_if_capitulated = no		
@@ -761,8 +776,8 @@ focus_tree = {
 	focus = {
 		id = GER_bulgarian_help
 		icon = GFX_bulgaria
-		x = 8
-		y = 3
+		x = 14
+		y = 2
 		cost = 10
 
         available_if_capitulated = no		
@@ -776,8 +791,8 @@ focus_tree = {
 	focus = {
 		id = GER_ukrainian_defence
 		icon = GFX_ukraine
-		x = 9
-		y = 4
+		x = 13
+		y = 3
 		cost = 10
 
         available_if_capitulated = no	
@@ -792,9 +807,9 @@ focus_tree = {
 	
 	focus = {
 		id = GER_ukrainian_pact
-		icon = ?
-		x = 9
-		y = 5
+		icon = GFX_ukraine
+		x = 13
+		y = 4
 		cost = 10
 
         available_if_capitulated = no	
@@ -807,8 +822,8 @@ focus_tree = {
 	
 	focus = {
 		id = GER_reorganize_belgium
-		icon = ?
-		x = 16
+		icon = GFX_reorganize_belgium
+		x = 20
 		y = 2
 		cost = 10
 
@@ -822,8 +837,8 @@ focus_tree = {
 
 	focus = {
 		id = GER_saudi_scheme
-		icon = ?
-		x = 12
+		icon = GFX_saudi_scheme
+		x = 16
 		y = 2	
 		cost = 10
 
@@ -833,27 +848,12 @@ focus_tree = {
 		completion_reward = {
 			SAU = { country_event = { days = 0 id = germany.8 } }
 		}
-	}
-	
-	focus = {
-		id = GER_irish_friends
-		icon = ?
-		x = 14
-		y = 2
-		cost = 10
-
-        available_if_capitulated = no	
-		prerequisite = { focus = GER_improve_relations_west }
-		
-		completion_reward = {
-			reverse_add_opinion_modifier = { target = IRE modifier = ENG_EUR_theater }
-		}
 	}	
 
 	focus = {
 		id = GER_arabian_gulf
-		icon = ?
-		x = 12
+		icon = GFX_goal_generic_amphibious_assault
+		x = 16
 		y = 3	
 		cost = 10
 
@@ -868,13 +868,13 @@ focus_tree = {
 	
 	focus = {
 		id = GER_spanish_resistance
-		icon = ?
-		x = 14
-		y = 3
+		icon = GFX_spanish_resistance
+		x = 18
+		y = 2
 		cost = 10
 
         available_if_capitulated = no		
-		prerequisite = { focus = GER_irish_friends }
+		prerequisite = { focus = GER_improve_relations_west }
 		
 		completion_reward = {
 			SPR = { country_event = { days = 0 id = germany.9 } }
@@ -883,9 +883,9 @@ focus_tree = {
 
 	focus = {
 		id = GER_portugese_revolution
-		icon = ?
-		x = 14
-		y = 4
+		icon = GFX_portugese_revolution
+		x = 18
+		y = 3
 		cost = 10
 
         available_if_capitulated = no		
@@ -899,7 +899,7 @@ focus_tree = {
 	focus = {
 		id = GER_deutsches_heer
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 24
+		x = 28
 		y = 0
 		cost = 10
 
@@ -914,7 +914,7 @@ focus_tree = {
 	focus = {
 		id = GER_improve_deutsches_heer
 		icon = GFX_goal_generic_small_arms
-		x = 22
+		x = 26
 		y = 1
 		cost = 10
 
@@ -930,7 +930,7 @@ focus_tree = {
 	focus = {
 		id = GER_motorized_millitary
 		icon = GFX_goal_generic_army_artillery
-		x = 22
+		x = 26
 		y = 2
 		cost = 10
 
@@ -945,7 +945,7 @@ focus_tree = {
 	focus = {
 		id = GER_mechanized_troops
 		icon = GFX_goal_generic_build_tank
-		x = 22
+		x = 26
 		y = 3
 		cost = 10
 
@@ -960,7 +960,7 @@ focus_tree = {
 	focus = {
 		id = GER_panzereich
 		icon = GFX_goal_generic_army_tanks
-		x = 22
+		x = 26
 		y = 4
 		cost = 10
 
@@ -975,7 +975,7 @@ focus_tree = {
 	focus = {
 		id = GER_improve_kaiserliche_marine
 		icon = GFX_goal_generic_build_navy
-		x = 26
+		x = 30
 		y = 1
 		cost = 10
 
@@ -991,7 +991,7 @@ focus_tree = {
 	focus = {
 		id = GER_battleship_production
 		icon = GFX_goal_generic_navy_battleship
-		x = 24
+		x = 28
 		y = 2
 		cost = 10
 
@@ -1017,7 +1017,7 @@ focus_tree = {
 	focus = {
 		id = GER_sub_production
 		icon = GFX_goal_generic_navy_submarine
-		x = 26
+		x = 30
 		y = 2
 		cost = 10
 
@@ -1037,7 +1037,7 @@ focus_tree = {
 	focus = {
 		id = GER_seebataillon
 		icon = GFX_goal_generic_special_forces
-		x = 28
+		x = 32
 		y = 2
 		cost = 10
 
@@ -1055,7 +1055,7 @@ focus_tree = {
 	focus = {
 		id = GER_light_cruiser_production
 		icon = GFX_goal_generic_navy_cruiser
-		x = 24
+		x = 28
 		y = 3
 		cost = 10
 
@@ -1074,7 +1074,7 @@ focus_tree = {
 	focus = {
 		id = GER_heavy_cruiser_production
 		icon = GFX_goal_generic_navy_cruiser
-		x = 26
+		x = 30
 		y = 3
 		cost = 10
 
@@ -1093,7 +1093,7 @@ focus_tree = {
 	focus = {
 		id = GER_destroyer_fleet
 		icon = GFX_goal_generic_wolf_pack
-		x = 25
+		x = 29
 		y = 4
 		cost = 10
 
@@ -1113,7 +1113,7 @@ focus_tree = {
 	focus = {
 		id = GER_luftstreitkrafte
 		icon = GFX_goal_generic_build_airforce
-		x = 31
+		x = 35
 		y = 0
 		cost = 10
 
@@ -1132,7 +1132,7 @@ focus_tree = {
 	focus = {
 		id = GER_fighter_production
 		icon = GFX_goal_generic_air_fighter
-		x = 29
+		x = 33
 		y = 1
 		cost = 10
 
@@ -1157,7 +1157,7 @@ focus_tree = {
 	focus = {
 		id = GER_bomber_production
 		icon = GFX_goal_generic_air_bomber
-		x = 31
+		x = 35
 		y = 1
 		cost = 10
 
@@ -1179,7 +1179,7 @@ focus_tree = {
 	focus = {
 		id = GER_airborne
 		icon = GFX_goal_generic_special_forces
-		x = 33
+		x = 37
 		y = 1
 		cost = 10
 
@@ -1199,7 +1199,7 @@ focus_tree = {
 	focus = {
 		id = GER_air_doctrine
 		icon = GFX_goal_generic_air_doctrine
-		x = 30
+		x = 34
 		y = 2
 		cost = 10
 
@@ -1218,7 +1218,7 @@ focus_tree = {
 	focus = {
 		id = GER_rocket_plan
 		icon = GFX_goal_generic_secret_weapon
-		x = 30
+		x = 34
 		y = 3
 		cost = 10
 
@@ -1254,7 +1254,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_bring_the_dutch
-		icon = ?
+		icon = GFX_goal_generic_alliance
 		x = 17
 		y = 7
 		cost = 10
@@ -1269,7 +1269,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_lessons_of_france
-		icon = ?
+		icon = GFX_focus_generic_little_entente
 		x = 19
 		y = 7
 		cost = 10
@@ -1288,7 +1288,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_millitary_factories
-		icon = ?
+		icon = GFX_goal_generic_production2
 		x = 22
 		y = 7
 		cost = 10
@@ -1392,7 +1392,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_prussian_discipline
-		icon = ?
+		icon = GFX_focus_generic_strike_at_democracy1
 		x = 24
 		y = 7
 		cost = 10
@@ -1407,7 +1407,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_attack_soviets
-		icon = ?
+		icon = GFX_focus_generic_strike_at_democracy2
 		x = 19
 		y = 8
 		cost = 10
@@ -1648,7 +1648,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_polish_forts
-		icon = ?
+		icon = GFX_goal_generic_fortify_city
 		x = 24
 		y = 8
 		cost = 10
@@ -1666,7 +1666,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_train_austrian_troops
-		icon = ?
+		icon = GFX_goal_rhineland
 		x = 26
 		y = 8
 		cost = 10
@@ -1684,7 +1684,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_hungarian_cooperation
-		icon = ?
+		icon = GFX_goal_anschluss
 		x = 28
 		y = 8
 		cost = 10
@@ -1702,7 +1702,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_old_order_in_russia
-		icon = ?
+		icon = GFX_goal_generic_political_pressure
 		x = 16
 		y = 9
 		cost = 0
@@ -1720,7 +1720,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_war_propoganda
-		icon = ?
+		icon = GFX_goal_generic_propaganda
 		x = 18
 		y = 9
 		cost = 10
@@ -1736,7 +1736,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_attack_italians
-		icon = ?
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 20
 		y = 9
 		cost = 10
@@ -1752,7 +1752,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_old_order_in_italy
-		icon = ?
+		icon = GFX_goal_generic_political_pressure
 		x = 20
 		y = 10
 		cost = 0

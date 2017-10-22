@@ -1479,8 +1479,8 @@ focus = {
 		
 		id = JAP_war_soviet
 		icon = ? 
-		x = 33 
-		y = 3
+		x = 30 
+		y = 4
 		cost = 10 
 		
 		available = { 
@@ -1490,7 +1490,7 @@ focus = {
 		
 		}
 		
-		prerequisite = { focus = JAP }
+		prerequisite = { focus = JAP_western_approach }
 		
 		completion_reward = {
 			declare_war_on = { target = SOV type = annex_everything }
@@ -1502,7 +1502,7 @@ focus = {
 		id = JAP_southern_approach
 		icon = ? 
 		x = 38 
-		y = 2
+		y = 1
 		cost = 10 
 		
 		available = { 
@@ -1519,6 +1519,31 @@ focus = {
 			add_opinion_modifier = { target = HOL modifier = JAP_expansionism_bad }
 			add_opinion_modifier = { target = PHL modifier = JAP_expansionism_good }
 			add_opinion_modifier = { target = SIA modifier = JAP_expansionism_good } 
+		}
+	}
+	
+	focus = {
+		
+		id = JAP_ally_siam
+		icon = ? 
+		x = 35 
+		y = 2
+		cost = 10 
+		
+		available = { 
+		
+			SIA = { 
+				exists = yes 
+				NOT = { has_war_with = JAP }
+				is_in_faction = no 
+			}
+		
+		}
+		
+		prerequisite = { focus = JAP_southern_approach }
+		
+		completion_reward = {
+			SIA = { country_event = { id = jfor.57 } }
 		}
 	}
 	

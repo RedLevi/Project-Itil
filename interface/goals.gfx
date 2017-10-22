@@ -37,6 +37,9 @@ spriteTypes = {
 	name = "GFX_reactionarism_path_focus"
 	texturefile = "gfx/interface/goals/reactionarism_path_focus.dds"			
 	}
+	
+	### German Imperial things ###
+	
 	SpriteType = {
 	name = "GFX_ukraine"
 	texturefile = "gfx/interface/goals/ukraine.dds"
@@ -61,8 +64,67 @@ spriteTypes = {
 	name = "GFX_scandza"
 	texturefile = "gfx/interface/goals/scandinavia.dds"
 	}	
-
-
+	SpriteType = {
+	name = "GFX_swedish_steel"
+	texturefile = "gfx/interface/goals/swedish_steel.dds"
+	}	
+	SpriteType = {
+	name = "GFX_norwegian_ties"
+	texturefile = "gfx/interface/goals/norwegian_ties.dds"
+	}
+	SpriteType = {
+	name = "GFX_middle_east"
+	texturefile = "gfx/interface/goals/middle_east.dds"
+	}	
+	SpriteType = {
+	name = "GFX_stability"
+	texturefile = "gfx/interface/goals/stability.dds"
+	}	
+	SpriteType = {
+	name = "GFX_purge_opposition"
+	texturefile = "gfx/interface/goals/purge_opposition.dds"
+	}	
+	SpriteType = {
+	name = "GFX_elections"
+	texturefile = "gfx/interface/goals/elections.dds"
+	}	
+	SpriteType = {
+	name = "GFX_spanish_resistance"
+	texturefile = "gfx/interface/goals/spanish_resistance.dds"
+	}	
+	SpriteType = {
+	name = "GFX_portugese_revolution"
+	texturefile = "gfx/interface/goals/portugese_revolution.dds"
+	}	
+	SpriteType = {
+	name = "GFX_far_east"
+	texturefile = "gfx/interface/goals/far_east.dds"
+	}	
+	SpriteType = {
+	name = "GFX_finnish_friends"
+	texturefile = "gfx/interface/goals/finnish_friends.dds"
+	}
+	SpriteType = {
+	name = "GFX_reorganize_belgium"
+	texturefile = "gfx/interface/goals/reorganize_belgium.dds"
+	}	
+	SpriteType = {
+	name = "GFX_chinese_aid"
+	texturefile = "gfx/interface/goals/chinese_aid.dds"
+	}	
+	SpriteType = {
+	name = "GFX_saudi_scheme"
+	texturefile = "gfx/interface/goals/saudi_scheme.dds"
+	}	
+	SpriteType = {
+	name = "GFX_lithuania"
+	texturefile = "gfx/interface/goals/lithuania.dds"
+	}	
+	SpriteType = {
+	name = "GFX_estonia"
+	texturefile = "gfx/interface/goals/estonia.dds"
+	}		
+	
 	#### Generic continuous goal icons
 
 	SpriteType = {

@@ -152,41 +152,43 @@ country_event = { #ALLIANCE#
 	SPF = { add_to_faction = SYA }
 	SPF = { add_to_faction = SFA }
 	
-	
-	hidden_effect = { 
-	IFA = {
-        every_owned_state {
-        add_core_of = IFA
+	 
+	hidden_effect = {
+    every_country = {
+        limit = {
+            OR = {
+                tag = SPF 
+                tag = SYA
+                tag = SFA 
+                tag = NFA 
+                tag = NFA 
+                tag = RFA 
+            }
         }
+        add_state_claim = 14
+        add_state_claim = 30
+        add_state_claim = 15
+        add_state_claim = 16
+        add_state_claim = 29
+        add_state_claim = 24
+        add_state_claim = 33
+        add_state_claim = 25
+        add_state_claim = 19
+        add_state_claim = 31
+        add_state_claim = 22
+        add_state_claim = 23
+        add_state_claim = 18
+        add_state_claim = 21
+        add_state_claim = 735
+        add_state_claim = 32
+        add_state_claim = 20
+		add_state_claim = 17
+        add_state_claim = 18
+        add_state_claim = 27
     }
-	RFA = {
-        every_owned_state {
-        add_core_of = RFA
-        }
-    }
-	SFA = {
-        every_owned_state {
-        add_core_of = SFA
-        }
-    }
-	SYA = {
-        every_owned_state {
-        add_core_of = SYA
-        }
-    }
-	NFA = {
-        every_owned_state {
-        add_core_of = NFA
-        }
-    }
-	SPF = {
-        every_owned_state {
-        add_core_of = SPF
-        }
-    }
+}
 	NFA = { country_event = { id = france.7 hours = 1 } }
 	}
-}
 }	
 	
 country_event = { #WAR DECLARATION#

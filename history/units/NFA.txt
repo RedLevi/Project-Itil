@@ -188,6 +188,66 @@ units = {
 		division_template = "Division de Cavalerie" 	# Frontline, best equipment
 		start_experience_factor = 0.3
 	}
+		division= {	
+		name = "5ème Division d'Infanterie"
+		location = 485
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "6ème Division d'Infanterie"
+		location = 9495
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1ème Division de Cavalerie"
+		location = 3549
+		division_template = "Division de Cavalerie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2ème Division de Cavalerie"
+		location = 9478
+		division_template = "Division de Cavalerie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3ème Division de Cavalerie"
+		location = 11465
+		division_template = "Division de Cavalerie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1ème Brigade de Chars de Combat"
+		location = 3509
+		division_template = "Division de Cavalerie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1ème Division d'Infanterie"
+		location = 11463
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2ème Division d'Infanterie"
+		location = 3534
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3ème Division d'Infanterie"
+		location = 3549
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "4ème Division d'Infanterie"
+		location = 3552 
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
 	navy = {				
 		name = "1ère Région Navale"			
 		base = 575

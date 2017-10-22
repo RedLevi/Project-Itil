@@ -172,5 +172,65 @@ units = {
 		division_template = "Division de Cavalerie" 	# Frontline, best equipment
 		start_experience_factor = 0.3
 	}
+	division= {	
+		name = "1ème Division d'Infanterie"
+		location = 3594
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2ème Division d'Infanterie"
+		location = 9631
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3ème Division d'Infanterie"
+		location = 769
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1ème Division d'Infanterie"
+		location = 3594
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "2ème Division d'Infanterie"
+		location = 9631
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "3ème Division d'Infanterie"
+		location = 769
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "4ème Division d'Infanterie"
+		location = 755
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "5ème Division d'Infanterie"
+		location = 11720
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "6ème Division d'Infanterie"
+		location = 11596
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "1ème Division de Cavalerie"
+		location = 11718
+		division_template = "Division de Cavalerie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
 
 }

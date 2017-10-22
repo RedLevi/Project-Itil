@@ -165,28 +165,28 @@ country_event = { #ALLIANCE#
                 tag = RFA 
             }
         }
-        add_state_claim = 14
-        add_state_claim = 30
-        add_state_claim = 15
-        add_state_claim = 16
-        add_state_claim = 29
-        add_state_claim = 24
-        add_state_claim = 33
-        add_state_claim = 25
-        add_state_claim = 19
-        add_state_claim = 31
-        add_state_claim = 22
-        add_state_claim = 23
-        add_state_claim = 18
-        add_state_claim = 21
-        add_state_claim = 735
-        add_state_claim = 32
-        add_state_claim = 20
-		add_state_claim = 17
-        add_state_claim = 18
-        add_state_claim = 27
+        add_state_core = 14
+        add_state_core = 30
+        add_state_core = 15
+        add_state_core = 16
+        add_state_core = 29
+        add_state_core = 24
+        add_state_core = 33
+        add_state_core = 25
+        add_state_core = 19
+        add_state_core = 31
+        add_state_core = 22
+        add_state_core = 23
+        add_state_core = 18
+        add_state_core = 21
+        add_state_core = 735
+        add_state_core = 32
+        add_state_core = 20
+		add_state_core = 17
+        add_state_core = 18
+        add_state_core = 27
 		SPF = { 
-		add_state_core = 29
+		add_state_core = 26
 		add_state_core = 16
 		add_state_core = 24
 		add_state_core = 20
@@ -195,6 +195,7 @@ country_event = { #ALLIANCE#
 		add_state_core = 15
 		add_state_core = 30
 		add_state_core = 14
+		add_state_core = 29
 		}
 		RFA = { 
 		add_state_core = 18
@@ -205,7 +206,6 @@ country_event = { #ALLIANCE#
 		add_state_core = 33
 		add_state_core = 23
 		add_state_core = 25
-		add_state_core = 26
 		}
 		SFA = { 
 		add_state_core = 19
@@ -233,7 +233,24 @@ country_event = { #NFA DECLARES WAR#
 	
 	option = {
 	id = france.7.a
-	
+	NFA = {
+    add_ideas = service_by_requirement 
+    }
+	SFA = {
+    add_ideas = service_by_requirement 
+    }
+	SPF = {
+    add_ideas = service_by_requirement 
+    }
+	SYA = {
+    add_ideas = service_by_requirement 
+    }
+	RFA = {
+    add_ideas = service_by_requirement 
+    }
+	IFA = {
+    add_ideas = service_by_requirement 
+    }
 	NFA = { declare_war_on = { target = SPF type = annex_everything } }
     }
 	

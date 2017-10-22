@@ -164,4 +164,54 @@ units = {
 		start_equipment_factor = 0.5
 
 	}
+	division= {	
+		name = "42ème Division d'Infanterie"
+		location = 11732
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "11ème Division d'Infanterie"
+		location = 3506
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}	
+	division= {	
+		name = "3ème Div. d'Infanterie Motorisée"
+		location = 9609
+		division_template = "Division d'Infanterie Motorisée" 	# All motorized are frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	
+		name = "4ème Division de Cavalerie"
+		location = 3646
+		division_template = "Division de Cavalerie" 	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "4ème Division de Cavalerie"
+		location = 9472
+		division_template = "Division de Cavalerie" 	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "2ème Division d'Infanterie"
+		location = 680
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "7ème Division d'Infanterie"
+		location = 680
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
 }

@@ -193,6 +193,88 @@ division= {
 		start_equipment_factor = 0.5
 
 	}
+	division= {	
+		name = "42ème Division d'Infanterie"
+		location = 6585
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.5
+	}
+	division= {	
+		name = "11ème Division d'Infanterie"
+		location = 6547
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.5
+	}	
+division= {	
+		name = "2ème Division d'Infanterie"
+		location = 6949
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# Ie Corps d'Armée (Région Militaire in 1936) -- Lille
+	division= {	
+		name = "7ème Division d'Infanterie"
+		location = 6518
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "2ème Division d'Infanterie"
+		location = 3770
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+
+	}
+
+	# Ie Corps d'Armée (Région Militaire in 1936) -- Lille
+	division= {	
+		name = "7ème Division d'Infanterie"
+		location = 9492
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+
+	}
+	division= {	
+		name = "2ème Division d'Infanterie"
+		location = 9523
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# Ie Corps d'Armée (Région Militaire in 1936) -- Lille
+	division= {	
+		name = "7ème Division d'Infanterie"
+		location = 9523
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	
+	
+division= {	
+		name = "3ème Division de Cavalerie"
+		location = 6613
+		division_template = "Division de Cavalerie" 	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+division= {	
+		name = "4ème Division de Cavalerie"
+		location = 11549
+		division_template = "Division de Cavalerie" 	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
 	
 ####NAVYY##########################
 navy = {				

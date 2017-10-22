@@ -267,7 +267,7 @@ country_event = {#Japanese ultimatum
 		if = { limit = { SHX = { exists = yes has_war = no NOT = { is_subject_of = JAP } } } SHX = { country_event = { id = jfor.22 days = 3 } } }
 		if = { limit = { PRC = { exists = yes has_war = no NOT = { is_subject_of = JAP } } } PRC = { country_event = { id = jfor.25 days = 5 } } }
 		if = { limit = { XSM = { exists = yes has_war = no NOT = { is_subject_of = JAP } } } XSM = { country_event = { id = jfor.26 days = 4 } } }
-		if = { limit = { YUN = { exists = yes has_war = no NOT = { is_subject_of = JAP } } } YUN = { country_event = { id = jfor.27 days = 6 } } }
+		if = { limit = { YUN = { exists = yes has_war = no NOT = { is_subject_of = JAP } } } YUN = { country_event = { id = jfor.27 days = 7 } } }
 		if = { limit = { SIC = { exists = yes has_war = no NOT = { is_subject_of = JAP } } } SIC = { country_event = { id = jfor.28 days = 5 } } }
 		if = { limit = { GUO = { exists = yes has_war = no NOT = { is_subject_of = JAP } } } GUO = { country_event = { id = jfor.29 days = 3 } } }
 	}
@@ -446,15 +446,18 @@ country_event = {#YUN united front
 	desc = jfor.18.d 
 	is_triggered_only = yes 
 	option = {#join 
+		trigger = {
+			SIC = { is_in_faction_with = ZHI }
+		}
 		name = jfor.18.a 
-		ai_chance = { factor = 60 }
+		ai_chance = { factor = 70 }
 		ZHI = { add_to_faction = YUN }
 		declare_war_on = { target = JAP type = annex_everything }
 		ZHI = { country_event = { id = jfor.19 } }
 	}
 	option = {#refuse
 		name = jfor.18.b 
-		ai_chance = { factor = 40 }
+		ai_chance = { factor = 30 }
 		add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
@@ -512,9 +515,9 @@ country_event = {#Fate of Liaoning
 	fire_only_once = yes 
 	trigger = {
 		tag = JAP 
-		NOT = { has_war_with = ZHI }
-		610 = { is_friendly = yes }
-		609 = { is_friendly = yes }
+		ZHI = { exists = no }
+		610 = { is_controlled_by = JAP }
+		609 = { is_controlled_by = JAP }
 	}
 	
 	mean_time_to_happen = { days = 5 }
@@ -600,10 +603,10 @@ country_event = {#Fate of Hebei
 	fire_only_once = yes 
 	trigger = {
 		tag = JAP 
-		NOT = { has_war_with = ZHI }
-		608 = { is_friendly = yes }
-		614 = { is_friendly = yes }
-		749 = { is_friendly = yes }
+		ZHI = { exists = no }
+		608 = { is_controlled_by = JAP }
+		614 = { is_controlled_by = JAP }
+		749 = { is_controlled_by = JAP }
 	}
 	
 	mean_time_to_happen = { days = 10 }
@@ -678,9 +681,809 @@ country_event = {#cores in hebei
 	desc = jfor.35.d 
 	is_triggered_only = yes 
 	option = {
+		name = jfor.35.a 
 		add_state_core = 608 
 		add_state_core = 614 
 		add_state_core = 749 
+		add_national_unity = 0.01 
+	}
+}
+
+country_event = {#Fate of central china
+	id = jfor.36 
+	title = jfor.36.t 
+	desc = jfor.36.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		CHI = { exists = no }
+		607 = { is_controlled_by = JAP }
+		598 = { is_controlled_by = JAP }
+		606 = { is_controlled_by = JAP }
+		613 = { is_controlled_by = JAP }
+		750 = { is_controlled_by = JAP }
+		620 = { is_controlled_by = JAP }
+	}
+	
+	mean_time_to_happen = { days = 15 }
+	
+	option = {#give it to Manchuria
+		trigger = {
+			MAN = { 
+				is_in_faction_with = JAP 
+				controls_state = 749
+			}
+		}
+		name = jfor.30.a 
+		ai_chance = { factor = 20 }
+		MAN = {
+			transfer_state = 607  
+			transfer_state = 598
+			transfer_state = 606 
+			transfer_state = 613 
+			transfer_state = 750 
+			transfer_state = 620 
+			country_event = { id = jfor.37 }
+		}
+	}
+	option = {
+		trigger = {
+			is_in_faction_with = SHX 
+
+		}
+		name = jfor.30.b 
+		ai_chance = { factor = 40 }
+		SHX = {
+			transfer_state = 607  
+			transfer_state = 598
+			transfer_state = 606 
+			transfer_state = 613 
+			transfer_state = 750 
+			transfer_state = 620 
+			country_event = { id = jfor.37 }
+		}
+	}
+	option = {
+		trigger = {
+			is_in_faction_with = ANH 
+			ANH = { controls_state = 749 }
+		}
+		name = jfor.30.c 
+		ai_chance = { factor = 40 }
+		ANH = {
+			transfer_state = 607  
+			transfer_state = 598
+			transfer_state = 606 
+			transfer_state = 613 
+			transfer_state = 750 
+			transfer_state = 620 
+			country_event = { id = jfor.37 }
+		}
+	}
+	option = {
+		name = jfor.30.e 
+		ai_chance = { factor = 0 }
+		add_national_unity = -0.05 
+			add_state_claim = 607  
+			add_state_claim = 598
+			add_state_claim = 606 
+			add_state_claim = 613 
+			add_state_claim = 750 
+			add_state_claim = 620 
+			
+	}
+}
+
+country_event = {#japan hands over central china 
+	id = jfor.37 
+	title = jfor.37.t 
+	desc = jfor.37.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.34.a 
+		country_event = { id = jfor.38 days = 96 }
+	}
+}
+
+country_event = {#cores in hebei 
+	id = jfor.38 
+	title = jfor.38.t 
+	desc = jfor.38.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.38.a 
+		add_state_core = 607  
+		add_state_core = 598
+		add_state_core = 606 
+		add_state_core = 613 
+		add_state_core = 750 
+		add_state_core = 620 
+		add_national_unity = 0.01 
+	}
+}
+
+
+country_event = {#Fate of southern
+	id = jfor.39 
+	title = jfor.39.t 
+	desc = jfor.39.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		PRC = { exists no }
+		596 = { is_controlled_by = JAP }
+		592 = { is_controlled_by = JAP }
+	}
+	
+	mean_time_to_happen = { days = 30 }
+	
+	option = {#give it to Manchuria
+		trigger = {
+			MAN = { 
+				is_in_faction_with = JAP 
+				controls_state = 606
+			}
+		}
+		name = jfor.30.a 
+		ai_chance = { factor = 20 }
+		every_state = {
+				limit = {
+					is_core_of = PRC 
+					is_controlled_by = JAP 
+				}
+				MAN = { transfer_state = PREV }
+			}
+		MAN = {
+			country_event = { id = jfor.40 }
+		}
+	}
+	option = {
+		trigger = {
+			is_in_faction_with = SHX 
+			SHX = { controls_state = 606 }
+		}
+		name = jfor.30.b 
+		ai_chance = { factor = 40 }
+		every_state = {
+				limit = {
+					is_core_of = PRC 
+					is_controlled_by = JAP 
+				}
+				SHX = { transfer_state = PREV }
+			}
+		SHX = {
+			country_event = { id = jfor.40 }
+		}
+	}
+	option = {
+		trigger = {
+			is_in_faction_with = ANH 
+			ANH = { controls_state = 749 }
+		}
+		name = jfor.30.c 
+		ai_chance = { factor = 40 }
+		every_state = {
+				limit = {
+					is_core_of = PRC 
+					is_controlled_by = JAP 
+				}
+				ANH = { transfer_state = PREV }
+			}
+		ANH = {
+			country_event = { id = jfor.40 }
+		}
+	}
+	option = {
+		name = jfor.30.e 
+		ai_chance = { factor = 0 }
+		add_national_unity = -0.05 
+			every_state = {
+				limit = {
+					is_core_of = PRC 
+					is_controlled_by = JAP 
+				}
+				ROOT = { add_state_claim = PREV }
+			}
+			
+			add_national_unity = -0.05 
+	}
+}
+
+country_event = {#japan hands over southern
+	id = jfor.40 
+	title = jfor.40.t 
+	desc = jfor.40.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.34.a 
+		country_event = { id = jfor.41 days = 96 }
+	}
+}
+
+country_event = {#cores in hebei 
+	id = jfor.41 
+	title = jfor.41.t 
+	desc = jfor.41.d 
+	is_triggered_only = yes 
+	option = {	
+		name = jfor.41.a 
+		every_state = {
+				limit = {
+					is_core_of = PRC 
+					is_controlled_by = ROOT 
+				}
+				ROOT = { add_state_core = PREV }
+			}
+		add_national_unity = 0.01 
+	}
+}
+
+country_event = {#Fate of shanxi
+	id = jfor.42 
+	title = jfor.42.t 
+	desc = jfor.42.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		SHX = { exists no }
+		615 = { is_controlled_by = JAP }
+	}
+	
+	mean_time_to_happen = { days = 30 }
+	
+	option = {#give it to Manchuria
+		trigger = {
+			MAN = { 
+				is_in_faction_with = JAP 
+				controls_state = 610
+			}
+		}
+		name = jfor.30.a 
+		ai_chance = { factor = 50 }
+		every_state = {
+				limit = {
+					is_core_of = SHX 
+					is_controlled_by = JAP 
+				}
+				MAN = { transfer_state = PREV }
+			}
+		MAN = {
+			country_event = { id = jfor.43 }
+		}
+	}
+	option = {
+		trigger = {
+			SHX = { exists = yes }
+			is_in_faction_with = SHX 
+			SHX = { controls_state = 606 }
+		}
+		name = jfor.30.b 
+		ai_chance = { factor = 0 }
+		every_state = {
+				limit = {
+					is_core_of = SHX 
+					is_controlled_by = JAP 
+				}
+				SHX = { transfer_state = PREV }
+			}
+		SHX = {
+			country_event = { id = jfor.43 }
+		}
+	}
+	option = {
+		trigger = {
+			is_in_faction_with = ANH 
+			ANH = { controls_state = 614 }
+		}
+		name = jfor.30.c 
+		ai_chance = { factor = 50 }
+		every_state = {
+				limit = {
+					is_core_of = SHX 
+					is_controlled_by = JAP 
+				}
+				ANH = { transfer_state = PREV }
+			}
+		ANH = {
+			country_event = { id = jfor.43 }
+		}
+	}
+	option = {
+		name = jfor.30.e 
+		ai_chance = { factor = 0 }
+		add_national_unity = -0.05 
+			every_state = {
+				limit = {
+					is_core_of = SHX 
+					is_controlled_by = JAP 
+				}
+				ROOT = { add_state_claim = PREV }
+			}
+			
+			add_national_unity = -0.05 
+	}
+}
+
+country_event = {#japan hands over shanxi
+	id = jfor.43 
+	title = jfor.43.t 
+	desc = jfor.43.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.34.a 
+		country_event = { id = jfor.44 days = 96 }
+	}
+}
+
+country_event = {#cores in hebei 
+	id = jfor.44 
+	title = jfor.44.t 
+	desc = jfor.44.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.44.a 
+		every_state = {
+				limit = {
+					is_core_of = SHX 
+					is_controlled_by = ROOT 
+				}
+				ROOT = { add_state_core = PREV }
+			}
+		add_national_unity = 0.01 
+	}
+}
+
+country_event = {#Fate of shaanxi
+	id = jfor.45 
+	title = jfor.45.t 
+	desc = jfor.45.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		GUO = { exists no }
+		622 = { is_controlled_by = JAP }
+	}
+	
+	mean_time_to_happen = { days = 20 }
+	
+	option = {#give it to Manchuria
+		trigger = {
+			MAN = { 
+				is_in_faction_with = JAP 
+				controls_state = 615
+			}
+		}
+		name = jfor.30.a 
+		ai_chance = { factor = 30 }
+		every_state = {
+				limit = {
+					is_core_of = GUO 
+					is_controlled_by = JAP 
+				}
+				MAN = { transfer_state = PREV }
+			}
+		MAN = {
+			country_event = { id = jfor.46 }
+		}
+	}
+	option = {
+		trigger = {
+			SHX = { exists = yes }
+			is_in_faction_with = SHX 
+			SHX = { controls_state = 615 }
+		}
+		name = jfor.30.b 
+		ai_chance = { factor = 40 }
+		every_state = {
+				limit = {
+					is_core_of = GUO 
+					is_controlled_by = JAP 
+				}
+				SHX = { transfer_state = PREV }
+			}
+		SHX = {
+			country_event = { id = jfor.46 }
+		}
+	}
+	option = {
+		trigger = {
+			is_in_faction_with = ANH 
+			ANH = { OR = { controls_state = 615  controls_state = 607 } }
+		}
+		name = jfor.30.c 
+		ai_chance = { factor = 30 }
+		every_state = {
+				limit = {
+					is_core_of = GUO 
+					is_controlled_by = JAP 
+				}
+				ANH = { transfer_state = PREV }
+			}
+		ANH = {
+			country_event = { id = jfor.46 }
+		}
+	}
+	option = {
+		name = jfor.30.e 
+		ai_chance = { factor = 0 }
+		add_national_unity = -0.05 
+			every_state = {
+				limit = {
+					is_core_of = GUO 
+					is_controlled_by = JAP 
+				}
+				ROOT = { add_state_claim = PREV }
+			}
+			
+			add_national_unity = -0.05 
+	}
+}
+
+country_event = {#japan hands over shaanxi
+	id = jfor.46 
+	title = jfor.46.t 
+	desc = jfor.46.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.34.a 
+		country_event = { id = jfor.47 days = 96 }
+	}
+}
+
+country_event = {#cores in shaanxi 
+	id = jfor.47 
+	title = jfor.47.t 
+	desc = jfor.47.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.47.a
+		every_state = {
+				limit = {
+					is_core_of = GUO 
+					is_controlled_by = ROOT 
+				}
+				ROOT = { add_state_core = PREV }
+			}
+		add_national_unity = 0.01 
+	}
+}
+
+country_event = {#Fate of qinghai
+	id = jfor.48 
+	title = jfor.48.t 
+	desc = jfor.48.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		XSM = { exists no }
+		604 = { is_controlled_by = JAP }
+	}
+	
+	mean_time_to_happen = { days = 35 }
+	
+	option = {#give it to Manchuria
+		trigger = {
+			MAN = { 
+				is_in_faction_with = JAP 
+				OR = { controls_state = 621 controls_state = 283 }
+			}
+		}
+		name = jfor.30.a 
+		ai_chance = { factor = 30 }
+		every_state = {
+				limit = {
+					is_core_of = XSM 
+					is_controlled_by = JAP 
+				}
+				MAN = { transfer_state = PREV }
+			}
+		MAN = {
+			country_event = { id = jfor.49 }
+		}
+	}
+	option = {
+		trigger = {
+			SHX = { exists = yes }
+			is_in_faction_with = SHX 
+			SHX = { controls_state = 621 }
+		}
+		name = jfor.30.b 
+		ai_chance = { factor = 40 }
+		every_state = {
+				limit = {
+					is_core_of = XSM 
+					is_controlled_by = JAP 
+				}
+				SHX = { transfer_state = PREV }
+			}
+		SHX = {
+			country_event = { id = jfor.49 }
+		}
+	}
+	option = {
+		trigger = {
+			is_in_faction_with = ANH 
+			ANH = { OR = { controls_state = 621 controls_state = 283 } }
+		}
+		name = jfor.30.c 
+		ai_chance = { factor = 30 }
+		every_state = {
+				limit = {
+					is_core_of = XSM 
+					is_controlled_by = JAP 
+				}
+				ANH = { transfer_state = PREV }
+			}
+		ANH = {
+			country_event = { id = jfor.49 }
+		}
+	}
+	option = {
+		name = jfor.30.e 
+		ai_chance = { factor = 0 }
+		add_national_unity = -0.05 
+			every_state = {
+				limit = {
+					is_core_of = XSM 
+					is_controlled_by = JAP 
+				}
+				ROOT = { add_state_claim = PREV }
+			}
+			
+			add_national_unity = -0.05 
+	}
+}
+
+country_event = {#japan hands over qinghai
+	id = jfor.49 
+	title = jfor.49.t 
+	desc = jfor.49.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.34.a 
+		country_event = { id = jfor.50 days = 96 }
+	}
+}
+
+country_event = {#cores in qinghai 
+	id = jfor.50 
+	title = jfor.50.t 
+	desc = jfor.50.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.47.a
+		every_state = {
+				limit = {
+					is_core_of = XSM 
+					is_controlled_by = ROOT 
+				}
+				ROOT = { add_state_core = PREV }
+			}
+		add_national_unity = 0.01 
+	}
+}
+
+
+country_event = {#Fate of sichuan
+	id = jfor.51 
+	title = jfor.51.t 
+	desc = jfor.51.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		SIC = { exists no }
+		605 = { is_controlled_by = JAP }
+	}
+	
+	mean_time_to_happen = { days = 35 }
+	
+	option = {#give it to Manchuria
+		trigger = {
+			MAN = { 
+				is_in_faction_with = JAP 
+			}
+		}
+		name = jfor.30.a 
+		ai_chance = { factor = 30 }
+		every_state = {
+				limit = {
+					is_core_of = SIC 
+					is_controlled_by = JAP 
+				}
+				MAN = { transfer_state = PREV }
+			}
+		MAN = {
+			country_event = { id = jfor.52 }
+		}
+	}
+	option = {
+		trigger = {
+			is_in_faction_with = SHX 
+			}
+		}
+		name = jfor.30.b 
+		ai_chance = { factor = 40 }
+		every_state = {
+				limit = {
+					is_core_of = SIC 
+					is_controlled_by = JAP 
+				}
+				SHX = { transfer_state = PREV }
+			}
+		SHX = {
+			country_event = { id = jfor.52 }
+		}
+	}
+	option = {
+		trigger = {
+			is_in_faction_with = ANH 
+		}
+		name = jfor.30.c 
+		ai_chance = { factor = 30 }
+		every_state = {
+				limit = {
+					is_core_of = SIC 
+					is_controlled_by = JAP 
+				}
+				ANH = { transfer_state = PREV }
+			}
+		ANH = {
+			country_event = { id = jfor.52 }
+		}
+	}
+	option = {
+		name = jfor.30.e 
+		ai_chance = { factor = 0 }
+		add_national_unity = -0.05 
+			every_state = {
+				limit = {
+					is_core_of = SIC 
+					is_controlled_by = JAP 
+				}
+				ROOT = { add_state_claim = PREV }
+			}
+			
+			add_national_unity = -0.05 
+	}
+}
+
+country_event = {#japan hands over qinghai
+	id = jfor.52 
+	title = jfor.52.t 
+	desc = jfor.52.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.34.a 
+		country_event = { id = jfor.53 days = 96 }
+	}
+}
+
+country_event = {#cores in qinghai 
+	id = jfor.53 
+	title = jfor.53.t 
+	desc = jfor.53.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.47.a
+		every_state = {
+				limit = {
+					is_core_of = SIC 
+					is_controlled_by = ROOT 
+				}
+				ROOT = { add_state_core = PREV }
+			}
+		add_national_unity = 0.01 
+	}
+}
+
+country_event = {#Fate of Yunnan
+	id = jfor.54 
+	title = jfor.54.t 
+	desc = jfor.54.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		YUN = { exists no }
+		325 = { is_controlled_by = JAP }
+	}
+	
+	mean_time_to_happen = { days = 40 }
+	
+	option = {#give it to Manchuria
+		trigger = {
+			MAN = { 
+				is_in_faction_with = JAP 
+			}
+		}
+		name = jfor.30.a 
+		ai_chance = { factor = 30 }
+		every_state = {
+				limit = {
+					is_core_of = YUN 
+					is_controlled_by = JAP 
+				}
+				MAN = { transfer_state = PREV }
+			}
+		MAN = {
+			country_event = { id = jfor.55 }
+		}
+	}
+	option = {
+		trigger = {
+			is_in_faction_with = SHX 
+			}
+		}
+		name = jfor.30.b 
+		ai_chance = { factor = 40 }
+		every_state = {
+				limit = {
+					is_core_of = YUN 
+					is_controlled_by = JAP 
+				}
+				SHX = { transfer_state = PREV }
+			}
+		SHX = {
+			country_event = { id = jfor.55 }
+		}
+	}
+	option = {
+		trigger = {
+			is_in_faction_with = ANH 
+		}
+		name = jfor.30.c 
+		ai_chance = { factor = 30 }
+		every_state = {
+				limit = {
+					is_core_of = YUN 
+					is_controlled_by = JAP 
+				}
+				ANH = { transfer_state = PREV }
+			}
+		ANH = {
+			country_event = { id = jfor.55 }
+		}
+	}
+	option = {
+		name = jfor.30.e 
+		ai_chance = { factor = 0 }
+		add_national_unity = -0.05 
+			every_state = {
+				limit = {
+					is_core_of = YUN 
+					is_controlled_by = JAP 
+				}
+				ROOT = { add_state_claim = PREV }
+			}
+			
+			add_national_unity = -0.05 
+	}
+}
+
+country_event = {#japan hands over qinghai
+	id = jfor.55 
+	title = jfor.55.t 
+	desc = jfor.55.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.34.a 
+		country_event = { id = jfor.56 days = 96 }
+	}
+}
+
+country_event = {#cores in qinghai 
+	id = jfor.56 
+	title = jfor.56.t 
+	desc = jfor.56.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.47.a
+		every_state = {
+				limit = {
+					is_core_of = YUN 
+					is_controlled_by = ROOT 
+				}
+				ROOT = { add_state_core = PREV }
+			}
 		add_national_unity = 0.01 
 	}
 }

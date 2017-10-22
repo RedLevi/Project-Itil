@@ -1,6 +1,6 @@
 ﻿capital = 605
 
-oob = "SIC_1936"
+oob = "SIC"
 
 # Starting tech
 set_technology = {
@@ -45,7 +45,7 @@ set_politics = {
 create_country_leader = {
 	name = "Liu Xiang"
 	desc = "POLITICS_YAN XISHAN_DESC"
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_warlord2.dds"
+	picture = "Liu_Xikang.dds"
 	expire = "1965.1.1"
 	ideology = autocracy
 	traits = {

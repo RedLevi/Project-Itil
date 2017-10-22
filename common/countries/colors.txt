@@ -665,7 +665,7 @@ SYA = {
 }
 
 RFA = {
-	color = rgb { 200 200 50 }
+	color = rgb { 284 112 255 }
 	color_ui = rgb { 74 147 255 }
 }
 HAW = {

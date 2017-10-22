@@ -48,15 +48,15 @@ set_politics = {
 
 	parties = {
 	    conservatism = {
-			popularity = 60
-		}
-
-		national_integralism = {
 			popularity = 0
 		}
 
+		national_integralism = {
+			popularity = 80
+		}
+
 		liberalism = {
-			popularity = 40
+			popularity = 0
 		}
 		
 		communism = {
@@ -68,13 +68,24 @@ set_politics = {
 		}
 		
 		reactionarism = {
-			popularity = 0
+			popularity = 20
 		}
 		
 	}
 	
-	ruling_party = conservatism
+	ruling_party = national_integralism
 	last_election = "1932.5.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Charles Maurras"
+	desc = ""
+	picture = "Charles_Maurras.dds"
+	expire = "1965.1.1"
+	ideology = integralism
+	traits = {
+		
+	}
 }

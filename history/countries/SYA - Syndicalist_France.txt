@@ -78,3 +78,14 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
+create_country_leader = {
+	name = "Pierre Monatte"
+	desc = ""
+	picture = "Pierre_Monatte.dds"
+	expire = "1965.1.1"
+	ideology = syndicalism
+	traits = {
+		
+	}
+}

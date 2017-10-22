@@ -1,0 +1,116 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Division Reactionaire"		
+	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. Coloniale, 
+	#	Div. d'Inf. Nord-Africaine, Div. d'Inf. de Forteresse
+	# Difference is their equipment
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Division Cavalerie Reactionaire" 	# Division de Cavalerie
+	# Note: Transformed to DLC, DLM divisions, 1936-39 
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon Group consisted of 64 ACs/scout cars
+	}
+}
+
+##### OOB #####
+units = {
+	division= {	
+		name = "42ème Division d'Infanterie"
+		location = 6975
+		division_template = "Division Reactionaire" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+
+	division= {	
+		name = "1ème Division d'Infanterie"
+		location = 6975
+		division_template = "Division Reactionaire" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# Région Militaire de Paris -- Paris
+	division= {	
+		name = "2ème Division d'Infanterie"
+		location = 11834
+		division_template = "Division Reactionaire" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "1ème Division de Cavalerie"
+		location = 11834
+		division_template = "Division Cavalerie Reactionaire" 	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "3ème Division d'Infanterie"
+		location = 778
+		division_template = "Division Reactionaire" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	
+		name = "4ème Division d'Infanterie"
+		location = 778
+		division_template = "Division Reactionaire" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+								
+##NAVYYYYY############
+navy = {				
+		name = "1ère Région Navale"			
+		base = 6449
+		location = 6449 # Cherbourg			
+		# 8e Division des Contre-Torpilleurs
+		ship = { name = "Le Terrible" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA } } }
+		ship = { name = "L'Audacieux" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = FRA } } }
+	}			
+	navy = {				
+		name = "4ème Escadron Sous-Marins"			
+		base = 3552 
+		location = 3552 # Brest			
+		# 2e Division des Sous-Marins
+		ship = { name = "Pasteur" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
+		ship = { name = "Achille" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
+		# 6e Division des Sous-Marins
+		ship = { name = "Persée" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
+		ship = { name = "Poncelet" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
+		ship = { name = "Ajax" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
+		ship = { name = "Archimède" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
+		# 8e Division des Sous-Marins
+		ship = { name = "Surcouf" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
+		ship = { name = "Phénix" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA version_name = "Redoutable Class" } } }
+	}				
+	navy = {				
+		name = "Sous-Marins Force du Nord"			
+		base = 6449
+		location = 6449 # Cherbourg			
+		# 16e Division des Sous-Marins
+		ship = { name = "Orphée" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA version_name = "630 Series" } } }
+		ship = { name = "Amazone" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA version_name = "630 Series" } } }
+		ship = { name = "La Sybille" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA version_name = "630 Series" } } }
+		ship = { name = "Antiope" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA version_name = "630 Series" } } }
+	}	
+	}
+}

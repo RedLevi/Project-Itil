@@ -78,3 +78,14 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
+create_country_leader = {
+	name = "Boris Souvarine"
+	desc = ""
+	picture = "Boris_Souvarine.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+	
+	}
+}

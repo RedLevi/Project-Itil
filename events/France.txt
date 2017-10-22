@@ -125,10 +125,12 @@ country_event = { #CIVIL WAR#
 			SYA = { transfer_state = 21 }
 			SPF = { change_tag_from = FRA }
 			SPF = { load_oob = SPF }
+			NFA = { load_oob = NFA }
+			SFA = { load_oob = SFA_civil_war }
+			SPF = { annex_country =  { target = FRA } }
 			
 			}
 			hidden_effect = {
-			set_equipment_fraction = 0.3
 			set_global_flag = france_civil_war
 			}
 		}

@@ -110,6 +110,7 @@ division_template = {
 }
 
 #####OOB###########
+units = {
 division= {	
 		name = "2ème Division d'Infanterie"
 		location = 9737
@@ -120,7 +121,7 @@ division= {
 	}
 
 	# Ie Corps d'Armée (Région Militaire in 1936) -- Lille
-	division= {	
+division= {	
 		name = "7ème Division d'Infanterie"
 		location = 6762
 		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
@@ -128,7 +129,7 @@ division= {
 		start_equipment_factor = 0.5
 
 	}
-	division= {	
+division= {	
 		name = "2ème Division d'Infanterie"
 		location = 752
 		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
@@ -138,7 +139,7 @@ division= {
 	}
 
 	# Ie Corps d'Armée (Région Militaire in 1936) -- Lille
-	division= {	
+division= {	
 		name = "7ème Division d'Infanterie"
 		location = 11702
 		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
@@ -146,42 +147,42 @@ division= {
 		start_equipment_factor = 0.5
 
 	}
-	units = {
-    division= {	
+
+division= {	
 		name = "42ème Division d'Infanterie"
 		location = 11565
 		division_template = "Division d'Infanterie" 	# Frontline, best equipment
 		start_experience_factor = 0.5
 	}
-
+}
 #####NAVY######
 navy = {				
 		name = "Flottille de Haute Mers"			
 		base = 9737 
 		location = 9737  #Bordeaux			
-		ship = { name = "Lorraine" definition = battleship equipment = { battleship_1 = { amount = 1 owner = FRA version_name = "Bretagne Class" } } }			
-		ship = { name = "Bretagne" definition = battleship equipment = { battleship_1 = { amount = 1 owner = FRA version_name = "Bretagne Class" } } }			
-		ship = { name = "Provence" definition = battleship equipment = { battleship_1 = { amount = 1 owner = FRA version_name = "Bretagne Class" } } }			
-		ship = { name = "Pluton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = FRA } } }
+		ship = { name = "Lorraine" definition = battleship equipment = { battleship_1 = { amount = 1 owner = SFA version_name = "Bretagne Class" } } }			
+		ship = { name = "Bretagne" definition = battleship equipment = { battleship_1 = { amount = 1 owner = SFA version_name = "Bretagne Class" } } }			
+		ship = { name = "Provence" definition = battleship equipment = { battleship_1 = { amount = 1 owner = SFA version_name = "Bretagne Class" } } }			
+		ship = { name = "Pluton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SFA } } }
 	}				
 	navy = {				
 		name = "Force d'Attaque Légère"			
 		base = 9737 
 		location = 9737 # Marseille
-		ship = { name = "La Galissonnière" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = FRA } } }	# La Galissonnière variant
-		ship = { name = "Émile Bertin" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = FRA } } }
+		ship = { name = "La Galissonnière" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = SFA } } }	# La Galissonnière variant
+		ship = { name = "Émile Bertin" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = SFA } } }
 		# 1e Division des Contre-Torpilleurs
-		ship = { name = "Lion" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
-		ship = { name = "Vauban" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
-		ship = { name = "Bison" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
+		ship = { name = "Lion" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SFA version_name = "Chacal Class" } } }
+		ship = { name = "Vauban" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SFA version_name = "Chacal Class" } } }
+		ship = { name = "Bison" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SFA version_name = "Chacal Class" } } }
 		# 3e Division des Contre-Torpilleurs
-		ship = { name = "Guépard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
-		ship = { name = "Valmy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
-		ship = { name = "Verdun" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
+		ship = { name = "Guépard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SFA version_name = "Chacal Class" } } }
+		ship = { name = "Valmy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SFA version_name = "Chacal Class" } } }
+		ship = { name = "Verdun" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SFA version_name = "Chacal Class" } } }
 		# 6e Division des Contre-Torpilleurs
-		ship = { name = "Aigle" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Aigle & Vauquelin Class" } } }
-		ship = { name = "Milan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Aigle & Vauquelin Class" } } }
-		ship = { name = "Épervier" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA version_name = "Aigle & Vauquelin Class" } } }
+		ship = { name = "Aigle" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SFA version_name = "Aigle & Vauquelin Class" } } }
+		ship = { name = "Milan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SFA version_name = "Aigle & Vauquelin Class" } } }
+		ship = { name = "Épervier" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SFA version_name = "Aigle & Vauquelin Class" } } }
 	}
 	
 ####AIRFORCE#######
@@ -190,7 +191,7 @@ air_wings = {
 	19 = {
 		# Groupement de Chasse 22
 		fighter_equipment_0 = {
-			owner = "FRA" 
+			owner = "SFA" 
 			amount = 96
 		}
 	}

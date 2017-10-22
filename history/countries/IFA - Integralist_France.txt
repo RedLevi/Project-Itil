@@ -80,9 +80,9 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Georges Valois"
+	name = "Hubert Lagardelle"
 	desc = ""
-	picture = "Valois.dds"
+	picture = "Hubert_Lagardelle.dds"
 	expire = "1965.1.1"
 	ideology = national_syndicalism
 	traits = {

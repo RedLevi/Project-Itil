@@ -1485,3 +1485,45 @@ country_event = {#cores in qinghai
 		add_national_unity = 0.01 
 	}
 }
+
+###siam chain###
+
+country_event = {#the Japanese offer alliance 
+	id = jfor.57 
+	title = jfor.57.t
+	desc = jfor.57.d 
+	is_triggered_only = yes 
+	option = {#agree 
+		name = jfor.57.a 
+		ai_chance = { factor = 80 }
+		JAP = { country_event = { id = jfor.58 } }
+	}
+	option = {#refuse 
+		name = jfor.57.b 
+		ai_chance = { factor = 20 }
+		JAP = { country_event = { id = jfor.59 } }
+		add_national_unity = 0.02 
+		add_opinion_modifier = { target = JAP modifier = MON_refused_JAP }
+	}
+}
+
+country_event = {#the siamese agree
+	id = jfor.58 
+	title = jfor.58.t
+	desc = jfor.58.d 
+	is_triggered_only = yes 
+	option = { 
+		name = jfor.58.a 
+		add_to_faction = SIA
+	}
+}
+
+country_event = {#the siamese refuse
+	id = jfor.59 
+	title = jfor.59.t
+	desc = jfor.59.d 
+	is_triggered_only = yes 
+	option = { 
+		name = jfor.59.a 
+	}
+}

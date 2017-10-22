@@ -197,6 +197,62 @@ division= {
 		division_template = "Division d'Infanterie" 	# Frontline, best equipment
 		start_experience_factor = 0.5
 	}
+	division= {	
+		name = "2ème Division d'Infanterie"
+		location = 752
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# Ie Corps d'Armée (Région Militaire in 1936) -- Lille
+division= {	
+		name = "7ème Division d'Infanterie"
+		location = 11702
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+division= {	
+		name = "42ème Division d'Infanterie"
+		location = 11565
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.5
+	}
+	division= {	
+		name = "42ème Division d'Infanterie"
+		location = 11565
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.5
+	}
+	division= {	
+		name = "2ème Division d'Infanterie"
+		location = 752
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# Ie Corps d'Armée (Région Militaire in 1936) -- Lille
+division= {	
+		name = "7ème Division d'Infanterie"
+		location = 11702
+		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+division= {	
+		name = "42ème Division d'Infanterie"
+		location = 11565
+		division_template = "Division d'Infanterie" 	# Frontline, best equipment
+		start_experience_factor = 0.5
+	}
 }
 #####NAVY######
 navy = {				

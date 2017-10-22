@@ -69,17 +69,6 @@ country_event = { #1936 ELECTION#
 		    country_event = { id = france.5 days = 15 }
 			}
 		}
-	
-	option = {
-	    name = france.4.b
-		set_politics = { ruling_party = conservatism elections_allowed = no }
-		add_popularity = { ideology = conservatism popularity = 0.15 }
-		add_popularity = { ideology = national_integralism popularity = 0.15 }
-		ai_chance = { factor = 50 }
-		hidden_effect = {
-		    country_event = { id = france.5 days = 15 }
-			}
-	}
 }
 	
 
@@ -127,14 +116,115 @@ country_event = { #CIVIL WAR#
 			SPF = { load_oob = SPF }
 			NFA = { load_oob = NFA }
 			SFA = { load_oob = SFA_civil_war }
+			SYA = { load_oob = SYA }
+			IFA = { load_oob = IFA }
+			RFA = { load_oob = RFA }
 			SPF = { annex_country =  { target = FRA } }
 			
 			}
 			hidden_effect = {
 			set_global_flag = france_civil_war
+			SYA = { country_event = { id = france.6 hours = 1 } }
+			SFA = { country_event = { id = france.6 hours = 1 } }
+			SPF = { country_event = { id = france.6 hours = 1 } }
+			NFA = { country_event = { id = france.6 hours = 1 } }
+			IFA = { country_event = { id = france.6 hours = 1 } }
+			RFA = { country_event = { id = france.6 hours = 1 } }
 			}
 		}
 	}
+	
+	
+country_event = { #ALLIANCE#
+    id = france.6
+	title = france.6.t
+	desc = france.6.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+	id = france.6.a
+	SPF = { create_faction = "the_popular_front" }
+	NFA = { create_faction = "the_national_front" }
+	NFA = { add_to_faction = IFA }
+	NFA = { add_to_faction = RFA }
+	SPF = { add_to_faction = SYA }
+	SPF = { add_to_faction = SFA }
+	
+	
+	hidden_effect = { 
+	IFA = {
+        every_owned_state {
+        add_core_of = IFA
+        }
+    }
+	RFA = {
+        every_owned_state {
+        add_core_of = RFA
+        }
+    }
+	SFA = {
+        every_owned_state {
+        add_core_of = SFA
+        }
+    }
+	SYA = {
+        every_owned_state {
+        add_core_of = SYA
+        }
+    }
+	NFA = {
+        every_owned_state {
+        add_core_of = NFA
+        }
+    }
+	SPF = {
+        every_owned_state {
+        add_core_of = SPF
+        }
+    }
+	NFA = { country_event = { id = france.7 hours = 1 } }
+	}
+}
+}	
+	
+country_event = { #WAR DECLARATION#
+    id = france.7
+	title = france.7.t
+	desc = france.7.d
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+	id = france.7.a
+	
+	NFA = { declare_war_on = { target = SPF type = annex_everything } }
+    }
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 

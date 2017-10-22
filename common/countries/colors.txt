@@ -665,7 +665,7 @@ SYA = {
 }
 
 RFA = {
-	color = rgb { 284 112 255 }
+	color = rgb { 25 170 255 }
 	color_ui = rgb { 74 147 255 }
 }
 HAW = {
@@ -675,5 +675,5 @@ HAW = {
 
 SPF = { 
     color = rgb { 150 0 0 }
-	color_ui = { 150 0 0 }
+	color_ui = rgb { 74 147 255 }
 }

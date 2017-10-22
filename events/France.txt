@@ -145,12 +145,12 @@ country_event = { #ALLIANCE#
 	
 	option = {
 	id = france.6.a
-	SPF = { create_faction = "the_popular_front" }
+	SFA = { create_faction = "the_popular_front" }
 	NFA = { create_faction = "the_national_front" }
 	NFA = { add_to_faction = IFA }
 	NFA = { add_to_faction = RFA }
-	SPF = { add_to_faction = SYA }
-	SPF = { add_to_faction = SFA }
+	SFA = { add_to_faction = SYA }
+	SFA = { add_to_faction = SPF }
 	
 	 
 	hidden_effect = {

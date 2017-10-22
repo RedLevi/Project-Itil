@@ -59,6 +59,9 @@ aus.12.d:0 "Yesterday, a mission from Germany arrived in the Budapest. Initially
 aus.12.a:0 "Accept entirely"
 aus.12.b:0 "We will take help but not land"
 aus.12.c:0 "The Germans will never lord over us"
+aus.13.t:0 "No Allies in the Balkans"
+aus.13.d:0 "Our mission to the Hungarians has yielded no results. They stubbornly refuse to be lorded over by us, citing that they do not wish to just be the puppet Austria once was. As such, we are left completely without allies in the Balkans, having left Austria and had no positive response from Hungary. \nUndoubtably a new crisies will arrise in the Balkan Powerkeg, but until that day the Yugoslavians will grow bold and the British will gain significant influence on our southern front."
+aus.13.a:0 "We may have played this wrong..."
 
 ####ideas####
 AUS_Reconquest_War:0 "Austrian Reconquest of Hungary"

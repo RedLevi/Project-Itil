@@ -1,5 +1,5 @@
 focus_tree = {
-	id = soviet_focus
+	id = SOV_focus
 	
 	country = {
 		factor = 0
@@ -13,7 +13,7 @@ focus_tree = {
 	default = no
 	
 	focus = {
-		id = soviet_industry_1
+		id = SOV_industry_1
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 4
 		y = 0
@@ -93,9 +93,9 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = soviet_industry_2
+		id = SOV_industry_2
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = soviet_industry_1 }
+		prerequisite = { focus = SOV_industry_1 }
 		x = 4
 		y = 1
 		cost = 10
@@ -170,10 +170,10 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = soviet_civil_1
+		id = SOV_civil_1
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = soviet_industry_2 }
-		x = 1
+		prerequisite = { focus = SOV_industry_2 }
+		x = 0
 		y = 2
 		cost = 10
 		bypass = {
@@ -238,10 +238,10 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = soviet_civil_2
+		id = SOV_civil_2
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = soviet_civil_1 }
-		x = 1
+		prerequisite = { focus = SOV_civil_1 }
+		x = 0
 		y = 3
 		cost = 10
 		bypass = {
@@ -306,9 +306,9 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = soviet_infastructur_1
+		id = SOV_infastructur_1
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = soviet_industry_2 }
+		prerequisite = { focus = SOV_industry_2 }
 		x = 4
 		y = 2
 		cost = 10
@@ -368,9 +368,9 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = soviet_infastructur_2
+		id = SOV_infastructur_2
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = soviet_infastructur_1 }
+		prerequisite = { focus = SOV_infastructur_1 }
 		x = 4
 		y = 3
 		cost = 10
@@ -440,11 +440,11 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = soviet_miltary_fact_1
+		id = SOV_miltary_fact_1
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = soviet_industry_2 }
-		prerequisite = { focus = soviet_consumers_1 }
-		x = 7
+		prerequisite = { focus = SOV_industry_2 }
+		prerequisite = { focus = SOV_consumers_1 }
+		x = 8
 		y = 2
 		cost = 10
 		bypass = {
@@ -505,14 +505,50 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			
+			custom_effect_tooltip = SOV_defeat_upgrade
+
+			hidden_effect = {
+				if = {
+					limit = {
+						has_ideas = japan_defeat_soviet
+					}
+					remove_ideas = japan_defeat_soviet
+					add_ideas = japan_defeat_soviet_2
+				}
+				
+				if = {
+					limit = {
+						has_ideas = japan_defeat_soviet_3
+					}
+					remove_ideas = japan_defeat_soviet_3
+					add_ideas = japan_defeat_soviet_4
+				}
+				
+				if = {
+					limit = {
+						has_ideas = japan_defeat_soviet_5
+					}
+					remove_ideas = japan_defeat_soviet_5
+					add_ideas = japan_defeat_soviet_6
+				}
+				
+				if = {
+					limit = {
+						has_ideas = japan_defeat_soviet_7
+					}
+					remove_ideas = japan_defeat_soviet_7
+					add_ideas = japan_defeat_soviet_8
+				}
+			}
 		}
 	}
 	
 	focus = {
-		id = soviet_miltary_fact_2
+		id = SOV_miltary_fact_2
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = soviet_miltary_fact_1 }
-		x = 7
+		prerequisite = { focus = SOV_miltary_fact_1 }
+		x = 8
 		y = 3
 		cost = 10
 		bypass = {
@@ -577,25 +613,14 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = soviet_oil
+		id = SOV_oil
 		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = soviet_civil_1 }
-		prerequisite = { focus = soviet_infastructur_1 }
+		prerequisite = { focus = SOV_civil_1 }
+		prerequisite = { focus = SOV_infastructur_1 }
 		x = 2.5
 		y = 3
 		cost = 10
-		bypass = {
-			if = {
-				limit = { has_tech = synth_oil_experiments } 
-			}
-			all_owned_state = {
-				free_building_slots = {
-					building = synthetic_refinery
-					size < 1
-					include_locked = yes
-				}
-			}
-		}
+		
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -717,24 +742,24 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = soviet_military_production
+		id = SOV_military_production
 		icon = GFX_goal_generic_production
-		prerequisite = { focus = soviet_miltary_fact_1 }
-		x = 5.5
+		prerequisite = { focus = SOV_miltary_fact_1 }
+		x = 6
 		y = 3
 		cost = 10
 		
 		completion_reward = {
-			industrial_capacity_factory = 0.1
+			add_ideas = communist_production
 		}
 	}
 	
 	focus = {
-		id = soviet_industry_3
+		id = SOV_industry_3
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = soviet_civil_2 }
-		prerequisite = { focus = soviet_infastructur_2 }
-		prerequisite = { focus = soviet_miltary_fact_2 }
+		prerequisite = { focus = SOV_civil_2 }
+		prerequisite = { focus = SOV_infastructur_2 }
+		prerequisite = { focus = SOV_miltary_fact_2 }
 		x = 4
 		y = 4
 		cost = 10
@@ -743,20 +768,20 @@ focus_tree = {
 				all_owned_state = {
 					free_building_slots = {
 						building = industrial_complex
-						size > 1
+						size < 1
 						include_locked = yes
 					}
 				}
 				all_owned_state = {
 					free_building_slots = {
 						building = infrastructure
-						size > 1
+						size < 1
 					}
 				}
 				all_owned_state = {
 					free_building_slots = {
 						building = arms_factory
-						size > 1
+						size < 1
 						include_locked = yes
 					}
 				}
@@ -832,9 +857,9 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = soviet_sience_1
+		id = SOV_sience_1
 		icon = GFX_focus_research
-		prerequisite = { focus = soviet_industry_3 }
+		prerequisite = { focus = SOV_industry_3 }
 		x = 4
 		y = 5
 		cost = 10
@@ -845,9 +870,9 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = soviet_nuke
+		id = SOV_nuke
 		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = soviet_industry_3 }
+		prerequisite = { focus = SOV_industry_3 }
 		x = 2
 		y = 5
 		cost = 10
@@ -865,30 +890,128 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = soviet_consumers_1
+		id = SOV_consumers_1
 		icon = GFX_goal_generic_consumer_goods
-		x = 6
+		x = 8
 		y = 0
 		cost = 10
 		
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_idea = undisturbed_isolation }
-					NOT = { has_idea = isolation }
-					NOT = { has_idea = civilian_economy }
-				}
-				add_political_power = 150
-			}
-			if = {
-				limit = {
-					OR = {
-						has_idea = isolation 
-						has_idea = undisturbed_isolation 
-						has_idea = civilian_economy
+			add_ideas = consume_of_workers
+		}
+		
+	}
+	
+	focus = {
+		id = SOV_consumers_2
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = SOV_civil_2 }
+		x = 0
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			custom_effect_tooltip = SOV_defeat_upgrade
+
+			hidden_effect = {
+				if = {
+					limit = {
+						has_ideas = japan_defeat_soviet
 					}
+					remove_ideas = japan_defeat_soviet
+					add_ideas = japan_defeat_soviet_3
 				}
-				add_ideas = early_mobilization
+				
+				if = {
+					limit = {
+						has_ideas = japan_defeat_soviet_2
+					}
+					remove_ideas = japan_defeat_soviet_2
+					add_ideas = japan_defeat_soviet_4
+				}
+				
+				if = {
+					limit = {
+						has_ideas = japan_defeat_soviet_5
+					}
+					remove_ideas = japan_defeat_soviet_5
+					add_ideas = japan_defeat_soviet_7
+				}
+				
+				if = {
+					limit = {
+						has_ideas = japan_defeat_soviet_6
+					}
+					remove_ideas = japan_defeat_soviet_6
+					add_ideas = japan_defeat_soviet_8
+				}
 			}
 		}
 	}
+	
+	focus = {
+		id = SOV_army_reform
+		icon = GFX_goal_generic_army_effort
+		x = 16
+		y = 0
+		cost = 10
+		
+		completion_reward = {
+			custom_effect_tooltip = SOV_defeat_upgrade
+
+			hidden_effect = {
+				if = {
+					limit = {
+						has_ideas = japan_defeat_soviet
+					}
+					remove_ideas = japan_defeat_soviet
+					add_ideas = japan_defeat_soviet_5
+				}
+				
+				if = {
+					limit = {
+						has_ideas = japan_defeat_soviet_2
+					}
+					remove_ideas = japan_defeat_soviet_2
+					add_ideas = japan_defeat_soviet_6
+				}
+				
+				if = {
+					limit = {
+						has_ideas = japan_defeat_soviet_3
+					}
+					remove_ideas = japan_defeat_soviet_3
+					add_ideas = japan_defeat_soviet_7
+				}
+				
+				if = {
+					limit = {
+						has_ideas = japan_defeat_soviet_4
+					}
+					remove_ideas = japan_defeat_soviet_4
+					add_ideas = japan_defeat_soviet_8
+				}
+			}
+		}
+		
+	}
+	
+	focus = {
+		id = SOV_modernize_infant
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_army_reform }
+		x = 16
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = small_arms_bonus
+				bonus = 0.5
+				uses = 3
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	

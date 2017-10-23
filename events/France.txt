@@ -82,7 +82,7 @@ country_event = { #CIVIL WAR#
 	is_triggered_only = yes
 	
 	option = {
-	    id = france.5.a 
+	    name = france.5.a 
 		hidden_effect = {
 			SPF = { transfer_state = 460 }
 			SPF = { transfer_state = 459 }
@@ -144,7 +144,7 @@ country_event = { #ALLIANCE#
 	fire_only_once = yes
 	
 	option = {
-	id = france.6.a
+	name = france.6.a
 	SFA = { create_faction = "the_popular_front" }
 	NFA = { create_faction = "the_national_front" }
 	NFA = { add_to_faction = IFA }
@@ -232,7 +232,7 @@ country_event = { #NFA DECLARES WAR#
 	fire_only_once = yes
 	
 	option = {
-	id = france.7.a
+	name = france.7.a
 	NFA = {
     add_ideas = service_by_requirement 
     }
@@ -253,39 +253,98 @@ country_event = { #NFA DECLARES WAR#
     }
 	NFA = { declare_war_on = { target = SPF type = annex_everything } }
     }
+}
 	
-country_event = { #END OF CIVIL WAR#
+country_event = { #NATIONALIST LOSS#
     id = france.8
 	title = france.8.t
-	desc = france.8.d
+	desc = france.8.d 
 	
 	fire_only_once = yes
 	
 	trigger = {
 	    tag = SPF
-		NOT = {
-		    country_exists = NFA
-			country_exists = IFA
-			country_exists = RFA
-			}
+		IFA = { exists = no }
+		NFA = { exists = no }
+		RFA = { exists = no }
 		}
-		
+	
 	mean_time_to_happen = { days = 10 }
-	option = { #BETRAYAL#
-	    id = france.8.a
-		dismantle_faction = yes 
-		SPF = { declare_war_on = SFA }
-		SPF = { declare_war_on = SYA }
-		add_political_power = -150 
+	option = { #PEACE WITH ALLIES#
+	    name = france.8.a
+		ai_chance = { factor = 50 }
+		SFA = { dismantle_faction = yes }
+		SPF = { annex_country = { target = SFA } }
+		SPF = { annex_country = { target = SYA } }
+		SPF = { country_event = { id = france.8 days = 5 } }
+		set_country_flag = spf_peace
 		}
-    option = { #PEACE#
-	    id = france.8.b
-	    SPF = { annex_country = SYA }
-		SPF = { annex_country = SFA }
+    option = { #BETRAYAL#
+	    name = france.8.b
+		ai_chance = { factor = 50 }
+		SFA = { dismantle_faction = yes }
+		SPF = { declare_war_on = { target = SFA type = annex_everything } }
+		SPF = { declare_war_on = { target = SYA type = annex_everything } }
+		set_country_flag = spf_betrayal
+		}
+	}
+
+country_event = { #Peaceful Annexation by SPF#
+    id = france.9
+	title = france.9.t
+	desc = france.9.d 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	    tag = SPF
+		SFA = { exists = no }
+		SYA = { exists = no }
+		SPF = { has_war = no }
+		has_country_flag = spf_peace
+		}
+	
+	option = { 
+	    name = france.9.a
+		FRA = { annex_country = SPF transfer_troops = yes }
 		FRA = { change_tag_from = SPF }
-		}
+		FRA = { 
+		    set_politics = { ruling_party = communism elections_allowed = no }
+		    set_political_party = { ideology = communism popularity = 0.5 }
+			set_political_party = { ideology = liberalism popularity = 0.25 }
+            set_political_party = { ideology = conservatism popularity = 0.25 }
+			}
+	}
 }
 	
+country_event = {#SPF victory 
+    id = france.10 
+    title = france.10.t 
+    desc = france.10.d 
+    fire_only_once = yes 
+    trigger = {
+        tag = SPF 
+        SFA = { exists = no }
+        SYA = { exists = no }
+        IFA = { exists = no }
+        NFA = { exists = no } 
+        RFA = { exists = no }
+    }
+    mean_time_to_happen = { days = 1 }
+    option = {
+        name = france.10.a 
+        FRA = { transfer_state = 16 }
+        FRA = { change_tag_from = SPF }
+        FRA = { annex_country = { target = SPF transfer_troops = yes } }
+        FRA = {
+                set_politics = { 
+                ruling_party = communism  
+                elections_allowed = no 
+            }
+            set_political_party = { ideology = communism popularity = 1.0 }
+        }
+    }
+}
 	
 	
 	

@@ -125,25 +125,25 @@ units = {
 		name = "1ème Division d'Infanterie"
 		location = 11463
 		division_template = "Division d'Infanterie" 	# Frontline, best equipment
-		start_experience_factor = 0.3
+		start_experience_factor = 0.7
 	}
 	division= {	
 		name = "2ème Division d'Infanterie"
 		location = 3534
 		division_template = "Division d'Infanterie" 	# Frontline, best equipment
-		start_experience_factor = 0.3
+		start_experience_factor = 0.7
 	}
 	division= {	
 		name = "3ème Division d'Infanterie"
 		location = 3549
 		division_template = "Division d'Infanterie" 	# Frontline, best equipment
-		start_experience_factor = 0.3
+		start_experience_factor = 0.7
 	}
 	division= {	
 		name = "4ème Division d'Infanterie"
 		location = 3552 
 		division_template = "Division d'Infanterie" 	# Frontline, best equipment
-		start_experience_factor = 0.3
+		start_experience_factor = 0.7
 	}
 	division= {	
 		name = "5ème Brigade de Chars de Combat"
@@ -156,13 +156,13 @@ units = {
 		name = "5ème Division d'Infanterie"
 		location = 485
 		division_template = "Division d'Infanterie" 	# Frontline, best equipment
-		start_experience_factor = 0.3
+		start_experience_factor = 0.7
 	}
 	division= {	
 		name = "6ème Division d'Infanterie"
 		location = 9495
 		division_template = "Division d'Infanterie" 	# Frontline, best equipment
-		start_experience_factor = 0.3
+		start_experience_factor = 1.0
 	}
 	division= {	
 		name = "1ème Division de Cavalerie"

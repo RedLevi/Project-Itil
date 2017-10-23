@@ -299,25 +299,31 @@ country_event = { #Peaceful Annexation by SPF#
 	trigger = {
 	    tag = SPF
 		SFA = { exists = no }
-		SYA = { exists = no }
-		SPF = { has_war = no }
-		has_country_flag = spf_peace
+        SYA = { exists = no }
+        IFA = { exists = no }
+        NFA = { exists = no } 
+        RFA = { exists = no }
+		has_country_flag = spf_betrayal
 		}
-	
-	option = { 
-	    name = france.9.a
-		FRA = { annex_country = SPF transfer_troops = yes }
+	mean_time_to_happen = { days = 1 }
+	option = {
+        name = france.9.a 
+        FRA = { transfer_state = 16 }
 		FRA = { change_tag_from = SPF }
-		FRA = { 
-		    set_politics = { ruling_party = communism elections_allowed = no }
-		    set_political_party = { ideology = communism popularity = 0.5 }
-			set_political_party = { ideology = liberalism popularity = 0.25 }
-            set_political_party = { ideology = conservatism popularity = 0.25 }
-			}
-	}
+        FRA = { annex_country = { target = SPF transfer_troops = yes } }
+        FRA = {
+                set_politics = { 
+                ruling_party = communism  
+                elections_allowed = no 
+            }
+            add_popularity = { ideology = communism popularity = 0.5 }
+			add_popularity = { ideology = conservatism popularity = 0.25 }
+			add_popularity = { ideology = liberalism popularity = 0.25 }
+        }
+    }
 }
 	
-country_event = {#SPF victory 
+country_event = { #SPF victory 
     id = france.10 
     title = france.10.t 
     desc = france.10.d 
@@ -334,39 +340,14 @@ country_event = {#SPF victory
     option = {
         name = france.10.a 
         FRA = { transfer_state = 16 }
-        FRA = { change_tag_from = SPF }
+		FRA = { change_tag_from = SPF }
         FRA = { annex_country = { target = SPF transfer_troops = yes } }
         FRA = {
                 set_politics = { 
                 ruling_party = communism  
                 elections_allowed = no 
             }
-            set_political_party = { ideology = communism popularity = 1.0 }
+            add_popularity = { ideology = communism popularity = 1.0 }
         }
     }
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-			

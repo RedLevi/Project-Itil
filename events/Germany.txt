@@ -59,7 +59,7 @@ country_event = {
 	option = {
 		name = germany.4.a
 		army_experience = 50
-		add_relation_modifier = { target = GER modifier = european_diplomacy }
+		add_relation_modifier = { target = GER modifier = ENG_EUR_theater }
 	}	
 	option = {
 		name = germany.4.b
@@ -307,5 +307,24 @@ country_event = {
 	}	
 	option = {
 		name = germany.16.b
+	}	
+}
+
+country_event = {
+
+	id = germany.17
+	title = germany.17.t 
+	desc = germany.17.d
+	
+    is_triggered_only = yes
+	
+	option = {
+		name = germany.17.a
+		GER = { give_military_access = JAP }
+		diplomatic_relation = { country = GER relation = non_aggression_pact }
+		reverse_add_opinion_modifier = { target = GER modifier = ENG_EUR_theater }
+	}	
+	option = {
+		name = germany.17.b
 	}	
 }

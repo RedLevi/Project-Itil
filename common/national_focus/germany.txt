@@ -549,7 +549,7 @@ focus_tree = {
 		prerequisite = { focus = GER_brandenburg_plan }
 
 		completion_reward = {
-			add_research_slot = 1
+			add_research_slot = 2
 		}
 	}	
 	
@@ -609,7 +609,6 @@ focus_tree = {
 		prerequisite = { focus = GER_imperial_dominance }
 		
 		completion_reward = {
-			reverse_add_opinion_modifier = { target = ENG modifier = ENG_EUR_theater }
 			reverse_add_opinion_modifier = { target = SWE modifier = ENG_EUR_theater }
 			reverse_add_opinion_modifier = { target = NOR modifier = ENG_EUR_theater }
 			reverse_add_opinion_modifier = { target = HOL modifier = ENG_EUR_theater }
@@ -629,7 +628,7 @@ focus_tree = {
 		prerequisite = { focus = GER_imperial_dominance }
 		
 		completion_reward = {
-			reverse_add_opinion_modifier = { target = CHI modifier = ENG_EUR_theater }
+			reverse_add_opinion_modifier = { target = YUN modifier = ENG_EUR_theater }
 			reverse_add_opinion_modifier = { target = JAP modifier = ENG_EUR_theater }
 			reverse_add_opinion_modifier = { target = RUS modifier = ENG_EUR_theater }			
 		}
@@ -708,7 +707,7 @@ focus_tree = {
 		
 		completion_reward = {
 		    add_manpower = -30000
-			CHI = { country_event = { days = 0 id = germany.4 } }
+			YUN = { country_event = { days = 0 id = germany.4 } }
 		}
 	}	
 	
@@ -723,7 +722,8 @@ focus_tree = {
 		prerequisite = { focus = GER_chinese_aid }
 		
 		completion_reward = {
-			give_military_access = JAP
+		    custom_effect_tooltip = japanese_pact
+			JAP = { country_event = { days = 0 id = germany.17 } }
 		}
 	}
 		
@@ -739,7 +739,7 @@ focus_tree = {
 		prerequisite = { focus = GER_improve_relations_east }
 		
 		completion_reward = {
-			reverse_add_opinion_modifier = { target = LIT modifier = ENG_EUR_theater }
+			reverse_add_opinion_modifier = { target = LIT modifier = GER_BAL_theater }
 		}
 	}	
 	
@@ -754,7 +754,7 @@ focus_tree = {
 		prerequisite = { focus = GER_improve_relations_east }
 		
 		completion_reward = {
-			reverse_add_opinion_modifier = { target = EST modifier = ENG_EUR_theater }
+			reverse_add_opinion_modifier = { target = EST modifier = GER_BAL_theater }
 		}
 	}
 
@@ -770,6 +770,9 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_bulgarian_help }
 		
 		completion_reward = {
+		send_equipment = { target = ROM type = infantry_equipment amount = 300 }
+		send_equipment = { target = ROM type = support_equipment amount = 150 }
+		reverse_add_opinion_modifier = { target = ROM modifier = GER_BAK_theater }		
 		}
 	}
 	
@@ -785,6 +788,9 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_romanian_help }
 		
 		completion_reward = {
+		send_equipment = { target = BUL type = infantry_equipment amount = 300 }
+		send_equipment = { target = BUL type = support_equipment amount = 150 }
+		reverse_add_opinion_modifier = { target = BUL modifier = GER_BAK_theater }		
 		}
 	}	
 	
@@ -801,7 +807,7 @@ focus_tree = {
 		completion_reward = {
 		send_equipment = { target = UKR type = infantry_equipment amount = 750 }
 		send_equipment = { target = UKR type = support_equipment amount = 200 }
-		reverse_add_opinion_modifier = { target = UKR modifier = ENG_EUR_theater }
+		reverse_add_opinion_modifier = { target = UKR modifier = GER_UKR_theater }
 		}
 	}	
 	
@@ -846,6 +852,7 @@ focus_tree = {
 		prerequisite = { focus = GER_middle_east_dip }
 		
 		completion_reward = {
+		    custom_effect_tooltip = saudi_scheme
 			SAU = { country_event = { days = 0 id = germany.8 } }
 		}
 	}	
@@ -924,6 +931,13 @@ focus_tree = {
 		completion_reward = {
 		    army_experience = 50
 			add_tech_bonus = { bonus = 0.5 uses = 2 category = land_doctrine } 
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}			
 		}
 	}	
 	
@@ -1248,7 +1262,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			army_experience = 10
+		    add_manpower = 10000 
+			army_experience = 25
 		}
 	}	
 	
@@ -1281,7 +1296,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			army_experience = 10
+			army_experience = 25
+		    add_political_power = 50
 		}
 	}	
 	
@@ -1401,7 +1417,8 @@ focus_tree = {
 		prerequisite = { focus = GER_millitary_campaign }
 		
 		completion_reward = {
-			army_experience = 10
+			add_manpower = 20000 
+			add_political_power = 50
 		}
 	}		
 	
@@ -1729,8 +1746,14 @@ focus_tree = {
 		prerequisite = { focus = GER_attack_soviets }
 		
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 25
+		reverse_add_opinion_modifier = { target = UKR modifier = GER_WAR_propoganda }
+	    reverse_add_opinion_modifier = { target = LIT modifier = GER_WAR_propoganda }
+		reverse_add_opinion_modifier = { target = EST modifier = GER_WAR_propoganda }
+		reverse_add_opinion_modifier = { target = FIN modifier = GER_WAR_propoganda }		
+	    reverse_add_opinion_modifier = { target = TUR modifier = GER_WAR_propoganda }
+		reverse_add_opinion_modifier = { target = AUS modifier = GER_WAR_propoganda }
+	    reverse_add_opinion_modifier = { target = ENG modifier = GER_WAR_propoganda }
+	    reverse_add_opinion_modifier = { target = AME modifier = GER_WAR_propoganda }	
 		}
 	}	
 

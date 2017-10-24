@@ -1725,7 +1725,7 @@ country_event = {#help from Germany?
 	option = {
 		name = jfor.67.a 
 		ai_chance = { factor = 70 }
-		GER = { country_event = { id = jfor.78 days = 1 } }
+		GER = { country_event = { id = jfor.68 days = 1 } }
 	}
 	option = {
 		name = jfor.67.b 
@@ -1734,7 +1734,7 @@ country_event = {#help from Germany?
 	}
 }
 
-country_event = {#help from Germany? 
+country_event = {#HELp the dutch?
 	id = jfor.68 
 	title = jfor.68.t 
 	desc = jfor.68.d
@@ -1895,7 +1895,7 @@ country_event = {#Victory yes GER
 			}
 			INS = { transfer_state = PREV }
 		}
-		if = { limit = { is_in_faction_with = SIA } SIA = { transfer_state = 760 transfer_state = 741 else = { transfer_state = 760 transfer_state = 741 } } }
+		if = { limit = { is_in_faction_with = SIA } SIA = { transfer_state = 760 transfer_state = 741 } else = { transfer_state = 760 transfer_state = 741 } }
 		transfer_state = 671 
 		transfer_state = 286 
 		transfer_state = 746 
@@ -1924,5 +1924,15 @@ country_event = {#Japan is victorious GER
 	}
 	option = {#do nothing 
 		name = jfor.75.a 
+	}
+}
+
+country_event = {#fate of indochina 
+	id = jfor.76 
+	title = jfor.76.t 
+	desc = jfor.76.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
 	}
 }

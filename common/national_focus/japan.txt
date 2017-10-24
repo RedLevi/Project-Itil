@@ -175,7 +175,8 @@ focus_tree = {
 			always = yes 
 			
 		}
-		prerequisite = { focus = JAP_zaibatsu_politics focus = JAP_direct_voting }
+		prerequisite = { focus = JAP_zaibatsu_politics }
+		prerequisite = { focus = JAP_direct_voting }
 		
 		completion_reward = {
 			
@@ -313,7 +314,8 @@ focus_tree = {
 			always = yes 
 				
 		}
-		prerequisite = { focus = JAP_zaibatsu_office focus = JAP_peace_preservation }
+		prerequisite = { focus = JAP_zaibatsu_office }
+		prerequisite = { focus = JAP_peace_preservation }
 		completion_reward = {
 			
 			add_political_power = 300 
@@ -408,6 +410,7 @@ focus_tree = {
 				
 		}
 		prerequisite = { focus = JAP_regulate_zaibatsu }
+		prerequisite = { focus = JAP_direct_voting }
 		mutually_exclusive = { focus = JAP_peoples_revolution }
 		
 		completion_reward = {
@@ -434,6 +437,7 @@ focus_tree = {
 				
 		}
 		prerequisite = { focus = JAP_regulate_zaibatsu }
+		prerequisite = { focus = JAP_direct_voting }
 		mutually_exclusive = { focus = JAP_peoples_empire }
 		
 		completion_reward = {
@@ -1272,7 +1276,7 @@ focus = {
 		
 		id = JAP_expansionism_focus
 		icon = ? 
-		x = 40 
+		x = 41 
 		y = 0
 		cost = 5 
 		
@@ -1299,7 +1303,7 @@ focus = {
 		icon = ? 
 		x = 30 
 		y = 1
-		cost = 5 
+		cost = 8 
 		
 		available = { 
 		
@@ -1329,7 +1333,7 @@ focus = {
 		icon = ? 
 		x = 27 
 		y = 2
-		cost = 10 
+		cost = 5 
 		
 		available = { 
 		
@@ -1481,7 +1485,7 @@ focus = {
 		icon = ? 
 		x = 30 
 		y = 4
-		cost = 10 
+		cost = 6 
 		
 		available = { 
 		
@@ -1501,9 +1505,9 @@ focus = {
 		
 		id = JAP_southern_approach
 		icon = ? 
-		x = 38 
+		x = 39 
 		y = 1
-		cost = 10 
+		cost = 8 
 		
 		available = { 
 		
@@ -1549,15 +1553,15 @@ focus = {
 	
 	focus = {
 		
-		id = JAP_ally_siam
+		id = JAP_protect_PHL
 		icon = ? 
-		x = 35 
-		y = 3
+		x = 37 
+		y = 2
 		cost = 10 
 		
 		available = { 
 		
-			SIA = { 
+			PHL = { 
 				exists = yes 
 				NOT = { has_war_with = JAP }
 				is_in_faction = no 
@@ -1568,7 +1572,34 @@ focus = {
 		prerequisite = { focus = JAP_southern_approach }
 		
 		completion_reward = {
-			SIA = { country_event = { id = jfor.57 } }
+			add_named_threat = { threat = 1 name = JAP_PHL_protect }
+			PHL = { country_event = { id = jfor.60 } }
+		}
+	}
+	
+	focus = {
+		
+		id = JAP_INS_support
+		icon = ? 
+		x = 39 
+		y = 2
+		cost = 10 
+		
+		available = { 
+		
+			HOL = { 
+				exists = yes 
+				NOT = { has_war_with = JAP }
+			}
+			INS = { exists = no }
+		
+		}
+		
+		
+		prerequisite = { focus = JAP_southern_approach }
+		
+		completion_reward = {
+			HOL = { country_event = { id = jfor.65 } }
 		}
 	}
 	

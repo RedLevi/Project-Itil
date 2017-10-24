@@ -1,0 +1,32 @@
+state={
+	id=764
+	name="STATE_764"
+	resources={
+		rubber=200.000
+		tungsten=100.000
+	}
+	provinces={
+		1291 4310 7329 7342 12144 
+	}
+	history={
+		owner = ENG
+		victory_points = {
+			7329 1 
+		}
+		buildings = {
+			infrastructure = 3
+
+			7329 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = MAL
+		add_claim_by = SIA 
+
+	}
+	manpower=230000
+	state_category=large_town
+	buildings_max_level_factor=1.000
+}

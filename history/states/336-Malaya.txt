@@ -1,0 +1,38 @@
+
+state={
+	id=336
+	name="STATE_336"
+	resources={
+		rubber=648.000
+		steel=32.000
+		tungsten=208.000
+	}
+
+	history={
+		owner = ENG
+		victory_points = {
+			12299 10 
+		}
+		victory_points = {
+			10297 1 
+		}
+		buildings = {
+			infrastructure = 3
+
+			10297 = {
+				naval_base = 5
+
+			}
+
+		}
+		add_core_of = MAL
+
+	}
+
+	provinces={
+		1348 1364 1376 1392 4355 4367 4384 4412 4424 7399 7427 10227 10297 10313 12199 12215 12255 12271 12299 
+	}
+	manpower=2000200
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

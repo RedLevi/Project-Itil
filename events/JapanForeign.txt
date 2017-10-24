@@ -1527,3 +1527,402 @@ country_event = {#the siamese refuse
 		name = jfor.59.a 
 	}
 }
+
+####philippines chain#####
+	
+country_event = {#Japan offers protection 
+	id = jfor.60 
+	title = jfor.60.t 
+	desc = jfor.60.d 
+	is_triggered_only = yes 
+	option = {#refuse 
+		name = jfor.60.a 
+		ai_chance = { factor = 65 }
+		add_national_unity = 0.02 
+		JAP = { country_event = { id = jfor.61 } }
+		add_opinion_modifier = { target = JAP modifier = MON_refused_JAP }
+	}
+	option = {#agree 
+		name = jfor.60.b 
+		ai_chance = { factor = 35 }
+		add_national_unity = -0.05 
+		JAP = { country_event = { id = jfor.62 } }
+	}
+}
+
+country_event = {#PHL refuses 
+	id = jfor.61 
+	title = jfor.61.t 
+	desc = jfor.61.d 
+	is_triggered_only = yes 
+	option = {#ok 
+		name = jfor.61.a 
+		ai_chance = { factor = 70 }
+	}
+	option = {#agree 
+		name = jfor.61.b 
+		trigger = { NOT = { has_government = liberalism } }
+		ai_chance = { factor = 30 }
+		declare_war_on = { target = PHL type = annex_everything }
+		PHL = { country_event = { id = jfor.63 } }
+	}
+}
+
+country_event = {#PHL agrees 
+	id = jfor.62 
+	title = jfor.62.t 
+	desc = jfor.62.d 
+	is_triggered_only = yes 
+	option = {#ok 
+		name = jfor.62.a 
+		puppet = PHL 
+		add_to_faction = PHL 
+		hidden_effect = { 
+			PHL = {
+				set_politics = { 
+				ruling_party = reactionarism 
+				elections_allowed = no 
+			}
+			create_country_leader = {
+				name = "Masaharu Homma"
+				desc = "doesntmatter"
+				picture = "Homma.dds"
+				expire = "1950.1.1"
+				ideology = autocracy
+				traits = {
+				
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {#the Japanese attack
+	id = jfor.63 
+	title = jfor.63.t
+	desc = jfor.63.d 
+	is_triggered_only = yes 
+	option = { 
+		name = jfor.63.a 
+	}
+}
+
+country_event = {#post war 
+	id = jfor.64 
+	title = jfor.64.t 
+	desc = jfor.64.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		controls_state = 327 
+		PHL = { exists = no }
+	}
+	mean_time_to_happen = { days = 10 }
+	option = {#release it 
+		name = jfor.64.a 
+		ai_chance = { factor = 70 }
+		every_state = {
+			limit = {
+				is_controlled_by = JAP 
+				is_core_of = PHL
+			}
+			PHL = { transfer_state = PREV } 
+		}
+		puppet = PHL 
+		add_to_faction = PHL 
+		hidden_effect = { 
+			PHL = {
+				set_politics = { 
+				ruling_party = reactionarism 
+				elections_allowed = no 
+			}
+			create_country_leader = {
+				name = "Masaharu Homma"
+				desc = "doesntmatter"
+				picture = "Homma.dds"
+				expire = "1950.1.1"
+				ideology = autocracy
+				traits = {
+				
+					}
+				}
+			}
+		}
+	}
+	option = {#occupy 
+		name = jfor.64.b 
+		trigger = {
+			NOT = { has_government = liberalism }
+		}
+		ai_chance = { factor = 30 }
+		add_national_unity = -0.035 
+		set_country_flag = JAP_colonize_PHL 
+	}
+}
+
+####Indonesian chain#####
+
+country_event = {#Indonesian uprising 
+	id = jfor.65
+	title = jfor.65.t 
+	desc = jfor.65.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.65.a 
+		INS = { transfer_state = 335 }
+		hidden_effect = { 
+			INS = {
+				set_politics = { 
+				ruling_party = socialism 
+				elections_allowed = no 
+			}
+			create_country_leader = {
+				name = "Sukarno"
+				desc = "doesntmatter"
+				picture = "Sukarno.dds"
+				expire = "1950.1.1"
+				ideology = democratic_socialism
+				traits = {
+				
+					}
+				}
+				load_oob = INS_revolt 
+			}
+		}
+		INS = { declare_war_on = { target = HOL type = annex_everything } }
+		JAP = { country_event = { id = jfor.66 } }
+	}
+}
+
+country_event = {#Revolt in Indonesia 
+	id = jfor.66 
+	title = jfor.66.t 
+	desc = jfor.66.d
+	is_triggered_only = yes 
+	option = {
+		name = jfor.66.a 
+		add_to_faction = INS 
+		declare_war_on = { target = HOL type = annex_everything }
+	}
+}
+
+country_event = {#help from Germany? 
+	id = jfor.67 
+	title = jfor.67.t 
+	desc = jfor.67.d
+	fire_only_once = yes 
+	trigger = {
+		tag = HOL 
+		has_war_with = JAP 
+		is_in_faction = no
+		JAP = {
+			NOT = { has_completed_focus = JAP_reconcile_GER_focus }
+		}
+		NOT = { has_war_with = GER }
+	}
+	mean_time_to_happen = { days = 10 }
+	option = {
+		name = jfor.67.a 
+		ai_chance = { factor = 70 }
+		GER = { country_event = { id = jfor.78 days = 1 } }
+	}
+	option = {
+		name = jfor.67.b 
+		ai_chance = { factor = 30 }
+		add_national_unity = 0.02 
+	}
+}
+
+country_event = {#help from Germany? 
+	id = jfor.68 
+	title = jfor.68.t 
+	desc = jfor.68.d
+	is_triggered_only = yes 
+	option = {
+		name = jfor.68.a 
+		ai_chance = { 
+			factor = 70 
+			modifier = { 
+
+				factor = -55 
+				
+				OR = {
+					has_war_with = SOV 
+					has_war_with = ENG
+				}
+
+			}
+		}
+		add_to_faction = HOL
+		declare_war_on = { target = JAP type = annex_everything }
+		HOL = { country_event = { id = jfor.69 } }
+		JAP = { country_event = { id = jfor.70 } }
+	}
+	option = {
+		name = jfor.68.b 
+		ai_chance = { 
+			factor = 30 
+			modifier = { 
+
+				factor = 55 
+				
+				OR = {
+					has_war_with = SOV 
+					has_war_with = ENG
+				}
+
+			}
+		}
+		add_opinion_modifier = { target = HOL modifier = MON_refused_JAP }
+		HOL = { country_event = { id = jfor.71 } }
+	}
+}
+
+country_event = {#the germans agree 
+	id = jfor.69 
+	title = jfor.69.t 
+	desc = jfor.69.d
+	is_triggered_only = yes 
+	option = {
+		name = jfor.69.a 
+	}
+}
+
+country_event = {#the germans intervene 
+	id = jfor.70 
+	title = jfor.70.t 
+	desc = jfor.70.d
+	is_triggered_only = yes 
+	option = {
+		name = jfor.70.a 
+	}
+}
+
+country_event = {#the germans refuse 
+	id = jfor.71 
+	title = jfor.71.t 
+	desc = jfor.71.d
+	is_triggered_only = yes 
+	option = {
+		name = jfor.71.a 
+	}
+}
+
+country_event = {#Victory no GER 
+	id = jfor.72 
+	title = jfor.72 
+	desc = jfor.72 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		has_war_with = HOL 
+		is_in_faction_with = INS 
+		NOT = { has_war_with = GER }
+		334 = { is_friendly = yes } 
+		672 = { is_friendly = yes } 
+		335 = { is_friendly = yes } 
+		673 = { is_friendly = yes }  
+		668 = { is_friendly = yes } 
+		669 = { is_friendly = yes } 
+	}
+	
+	mean_time_to_happen = { days = 30 }
+	
+	option = {#Peace with the dutch 
+		name = jfor.72.a 
+		ai_chance = { factor = 95 }
+		add_national_unity = 0.03 
+		HOL = { country_event = { id = jfor.73 } }
+		every_state = {
+			limit = {
+				is_core_of = INS 
+				is_friendly = yes 
+			}
+			INS = { transfer_state = PREV }
+		}
+	}
+	#there is actually no reason to keep the war going
+}
+
+country_event = {#Japan is victorious 
+	id = jfor.73 
+	title = jfor.73.t 
+	desc = jfor.73.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.73.a 
+		white_peace = JAP 
+		white_peace = INS 
+		add_national_unity = -0.1 
+	}
+}
+
+country_event = {#Victory yes GER 
+	id = jfor.74 
+	title = jfor.74 
+	desc = jfor.74 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		has_war_with = HOL 
+		is_in_faction_with = INS 
+		has_war_with = GER 
+		334 = { is_friendly = yes } 
+		672 = { is_friendly = yes } 
+		335 = { is_friendly = yes } 
+		673 = { is_friendly = yes }  
+		668 = { is_friendly = yes } 
+		669 = { is_friendly = yes } 
+		746 = { is_friendly = yes } 
+		286 = { is_friendly = yes } 
+		741 = { is_friendly = yes } 
+		670 = { is_friendly = yes } 
+		671 = { is_friendly = yes } 
+	}
+	
+	mean_time_to_happen = { days = 30 }
+	
+	option = {#Peace with the dutch 
+		name = jfor.72.a 
+		ai_chance = { factor = 95 }
+		add_national_unity = 0.05 
+		GER = { country_event = { id = jfor.75 } }
+		every_state = {
+			limit = {
+				is_core_of = INS 
+				is_friendly = yes 
+			}
+			INS = { transfer_state = PREV }
+		}
+		if = { limit = { is_in_faction_with = SIA } SIA = { transfer_state = 760 transfer_state = 741 else = { transfer_state = 760 transfer_state = 741 } } }
+		transfer_state = 671 
+		transfer_state = 286 
+		transfer_state = 746 
+		transfer_state = 737 
+		transfer_state = 634 
+		transfer_state = 734 
+		transfer_state = 635 
+		transfer_state = 726 
+		transfer_state = 641 
+	}
+	#there is actually no reason to keep the war going
+}
+
+country_event = {#Japan is victorious GER 
+	id = jfor.75 
+	title = jfor.75.t 
+	desc = jfor.75.d 
+	is_triggered_only = yes 
+	option = {#peace 
+		name = jfor.73.a 
+		ai_chance = { factor = 50 }
+		white_peace = JAP 
+		white_peace = INS 
+		HOL = { white_peace = INS white_peace = JAP }
+		add_national_unity = -0.1 
+	}
+	option = {#do nothing 
+		name = jfor.75.a 
+	}
+}

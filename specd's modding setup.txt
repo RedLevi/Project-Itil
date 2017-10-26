@@ -1,0 +1,59 @@
+#whelp. you're reading this now.
+
+#*sigh*
+
+#let's get it over with.
+
+#########################
+##sp3cd's modding setup##
+#########################
+
+#thought this would be useful for newcomers who don't have the fancy graphical tools and such.
+
+#by the way i'm assuming you have a good enough understanding of modding
+
+#¯\_(ツ)_/¯
+
+##table of contents i guess##
+#1 - 36 graphics
+#37 - 46 coding in general
+#47 - 55 focus trees
+
+###################
+#####graphics######
+
+#GIMP 2.8.x is probably the best program out there for flags and portraits.
+#though, i typically use krita, a different program for flags made from scratch. krita is better for drawing etc.
+#GIMP cannot make .dds files (which are required for portraits) but there's a plug-in for that.
+#link to GIMP 2.x: https://www.gimp.org/
+#link to krita: https://krita.org/en/
+#link to .dds file plug-in: http://www.mediafire.com/file/t1e1ca0ecmkpmag/gimp-dds-2.0.9-64bits.zip
+##plugin installation instructions##
+#once you've unzipped the .zip file, take the dds.exe file and copy-paste it to this directory
+#...\GIMP 2\lib\gimp\2.0\plug-ins
+#once dds.exe is in there, restart gimp or open it again
+#and you're ready to make portraits
+
+###################
+######coding#######
+
+#right now, im usuing a program known as atom.
+#atom is fast, effective, allows for multiple displays of .txt files at once, and is linked with github.
+#so i recommend atom: https://atom.io/
+#but if your computer is an actual vegatable then i'd recommend n++
+#notepad plus-plus is just a step up from windows notepad
+#link to n++: https://notepad-plus-plus.org/
+
+###################
+####focus trees####
+
+#yaaaay it's time
+#i use a fan-made software called FETM (focus tree and event manager)
+#you'll need to be a registered paradoxplaza user to get to the link
+#safe travels, my friend: https://forum.paradoxplaza.com/forum/index.php?threads/tool-focus-tree-and-event-manager-release-thread.975154/
+#although its still very unstable and half of the time its a steaming pile of garbage, it gets work done.
+
+###################
+
+#im gonna go take a nap.
+#bye.

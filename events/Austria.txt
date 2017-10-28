@@ -503,13 +503,13 @@ country_event = {
 	option = { # Approve and send support
 		name = aus.14.a
 		ai_chance = { factor = 90 }
-		AUS = { country_event = { id = aus.15 days = 2 }
+		AUS = { country_event = { id = aus.15 days = 2 } }
 	}
 	
 	option = { # No - they will not drag us into a world war again
 		name = aus.14.b
 		ai_chance = { factor = 10 }
-		AUS = { country_event = { id = aus.16 days = 2 }
+		AUS = { country_event = { id = aus.16 days = 2 } }
 	}
 }
 
@@ -533,7 +533,7 @@ country_event = { # The Germans dissaprove
 	id = aus.16
 	title = aus.16.t
 	desc = aus.16.d
-	is_triggered_only
+	is_triggered_only = yes
 	
 	option = { # To war, Germans be damned!
 		declare_war_on = { target = HUN type = annex_everything }
@@ -594,8 +594,8 @@ country_event = { # Austrian Reconquest of Hungary (UK)
 	option = { # Send and ultimatum to Austria and men to Hungary
 		ai_chance = { factor = 10 }
 		name = aus.4.a
-		HUN = {country_event = { id = aus.14 days = 7 } }
-		AUS = { country_event = { id = aus.15 days = 2 } }
+		HUN = {country_event = { id = aus.17 days = 7 } }
+		AUS = { country_event = { id = aus.18 days = 2 } }
 	}
 
 	option = { # Send Hungary some men and supplies
@@ -607,7 +607,7 @@ country_event = { # Austrian Reconquest of Hungary (UK)
 			}
 		}
 		name = aus.4.b
-		HUN = {country_event = { id = aus.14 days = 7 } }
+		HUN = {country_event = { id = aus.17 days = 7 } }
 		#HUN = { add_opinion_modifier = { target = ENG modifier = HUN_defence_support } }
 		#add_opinion_modifier = { target = HUN modifier = HUN_defence_support }
 	}
@@ -621,31 +621,32 @@ country_event = { # Austrian Reconquest of Hungary (UK)
 }
 
 country_event = { # Men and supplies from GBR
-	id = aus.14
-	title = aus.14.t
-	desc = aus.14.d
+	id = aus.17
+	title = aus.17.t
+	desc = aus.17.d
 	is_triggered_only = yes
 
 	option = { # Nice
+		name = aus.17.a
 		ENG = {send_equipment = { target = HUN type = infantry_equipment amount = 4000 }}
 		HUN = { add_manpower = 20000 } 
 	}
 }
 
 country_event = { # Britain demands we make peace!
-	id = aus.15
-	title = aus.15.t
-	desc = aus.15.d
+	id = aus.18
+	title = aus.18.t
+	desc = aus.18.d
 	is_triggered_only = yes
 
 	option = { # The British have no influence here
-		name = aus.15.a
+		name = aus.18.a
 		ai_chance = { factor = 19}
-		ENG = { country_event = { id = aus.16 days = 7 } }
+		ENG = { country_event = { id = aus.19 days = 7 } }
 	}
 
 	option = { # Ye sure we'll consolodate instead
-		name = aus.15.b
+		name = aus.18.b
 		ai_chance = { factor = 1}
 		custom_effect_tooltip = AUS_give_up
 		hidden_effect = {
@@ -655,12 +656,13 @@ country_event = { # Britain demands we make peace!
 }
 
 country_event = { # Austria says nope
-	id = aus.16
-	title = aus.16.t
-	desc = aus.16.d # Ha we expected this welp
+	id = aus.19
+	title = aus.19.t
+	desc = aus.19.d # Ha we expected this welp
 	is_triggered_only = yes
 	
 	option = { # We don't have enough influence there :(
+		name = aus.19.a
 		add_political_power = -20
 	}
 }
@@ -675,25 +677,25 @@ country_event = { # Austria invades Hungary! (Yugoslavia)
 
 	option = { # Send an ultimatum to Austria
 		name = aus.5.a
-		AUS = { country_event = { id = aus.17 days = 7 }
+		AUS = { country_event = { id = aus.20 days = 7 } }
 		ai_chance = { factor = 4 }
 	}
 
 	option = { # Send an ultimatum to Hungary
 		name = aus.5.b
-		HUN = { country_event = { id = aus days = 7 } }
+		# HUN = { country_event = { id = aus days = 7 } }
 		ai_chance = { factor = 5 }
 	}
 
 	option = { # We will war when we are ready
 		name = aus.5.c
 		ai_chance = { factor = 1 }
-		add_nation_unity = -0.05
+		add_national_unity = -0.05
 	}
 }
 
 country_event = {
-	id = aus.17
+	id = aus.20
 	title = aus.17.t
 	desc = aus.17.d
 	is_triggered_only = yes

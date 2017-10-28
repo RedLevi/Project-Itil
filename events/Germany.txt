@@ -57,11 +57,17 @@ country_event = {
     is_triggered_only = yes
 	
 	option = {
+		ai_chance = { 
+			factor = 90 
+		}	
 		name = germany.4.a
 		army_experience = 50
-		add_relation_modifier = { target = GER modifier = ENG_EUR_theater }
+		reverse_add_opinion_modifier = { target = GER modifier = ENG_EUR_theater }
 	}	
 	option = {
+		ai_chance = { 
+			factor = 10 
+		}		
 		name = germany.4.b
 	}	
 }
@@ -75,10 +81,16 @@ country_event = {
     is_triggered_only = yes
 	
 	option = {
+		ai_chance = { 
+			factor = 60 
+		}		
 		name = germany.5.a
 		GER = { add_to_faction = UKR }
 	}	
 	option = {
+		ai_chance = { 
+			factor = 40 
+		}		
 		name = germany.5.b	
 		diplomatic_relation = { country = GER relation = non_aggression_pact }
 	}	
@@ -93,11 +105,17 @@ country_event = {
     is_triggered_only = yes
 	
 	option = {
+		ai_chance = { 
+			factor = 80 
+		}		
 		name = germany.6.a
 		reverse_add_opinion_modifier = { target = GER modifier = ENG_EUR_theater }
 		diplomatic_relation = { country = GER relation = non_aggression_pact }
 	}	
 	option = {
+		ai_chance = { 
+			factor = 20 
+		}		
 		name = germany.6.b
 	}	
 }
@@ -111,12 +129,71 @@ country_event = {
     is_triggered_only = yes
 	
 	option = {
+	    ai_chance = { 
+		    factor = 33 
+	    }
 		name = germany.7.a
+		FLA = { 
+        release = BEL 		
+		change_tag_from = BEL 
+		}
+		BEL = { 		
+		annex_country = { target = WLL }
+		annex_country = { target = FLA }		
+        create_country_leader = {
+	        name = "Leopold III"
+	        desc = ""
+	        picture = "leopold_iii.dds"
+     	    expire = "1965.1.1"
+	        ideology = democratic_conservatism
+    	    traits = {
+    	    	#
+    	    }
+	    }
+        }
+		GER = { puppet = BEL } 
 	}	
 	option = {
+	    ai_chance = { 
+		    factor = 33 
+	    }	
 		name = germany.7.b
+		if = {
+	        limit = {
+	     	has_dlc = "Together for Victory"
+	        }
+		set_autonomy = { target = FLA autonomy_state = autonomy_puppet }
+		set_autonomy = { target = WLL autonomy_state = autonomy_puppet }
+        }		
+		FLA = { 
+        create_country_leader = {
+	        name = "Eitel Friedrich I"
+	        desc = ""
+	        picture = "eitel_friedrich.dds"
+     	    expire = "1965.1.1"
+	        ideology = democratic_conservatism
+    	    traits = {
+    	    	#
+    	    }
+	    }
+		}
+		WLL = { 
+        create_country_leader = {
+	        name = "Eitel Friedrich I"
+	        desc = ""
+	        picture = "eitel_friedrich.dds"
+     	    expire = "1965.1.1"
+	        ideology = democratic_conservatism
+    	    traits = {
+    	    	#
+    	    }
+	    }
+		}
 	}	
 	option = {
+	    ai_chance = { 
+		    factor = 33 
+	    }	
 		name = germany.7.c
 	}	
 }
@@ -130,12 +207,18 @@ country_event = {
     is_triggered_only = yes
 	
 	option = {
+	    ai_chance = { 
+		    factor = 70
+	    }	
 		name = germany.8.a
 		hidden_effect = {		
-		complete_national_focus = GER_arabian_gulf
+		GER = { complete_national_focus = GER_arabian_gulf }
         }		
 	}	
 	option = {
+	    ai_chance = { 
+		    factor = 30
+	    }	
 		name = germany.8.b
 		hidden_effect = {
 		set_global_flag = saudi_disagree	
@@ -153,6 +236,8 @@ country_event = {
 	
 	option = {
 		name = germany.9.a	
+		add_political_power = -50
+		add_manpower = -50000
 	}
 }
 
@@ -165,9 +250,16 @@ country_event = {
     is_triggered_only = yes
 	
 	option = {
+	    ai_chance = { 
+		    factor = 10
+	    }	
 		name = germany.10.a	
+		set_politics = { ruling_party = national_integralism elections_allowed = no } 
 	}
 	option = {
+	    ai_chance = { 
+		    factor = 90
+	    }	
 		name = germany.10.b	
 	}	
 }
@@ -181,10 +273,16 @@ country_event = {
     is_triggered_only = yes
 	
 	option = {
+	    ai_chance = { 
+		    factor = 80
+	    }	
 		name = germany.11.a	
 		GER = { add_to_faction = HOL }
 	}
 	option = {
+	    ai_chance = { 
+		    factor = 20
+	    }	
 		name = germany.11.b	
 	}
 }
@@ -198,6 +296,9 @@ country_event = {
     is_triggered_only = yes
 	
 	option = {
+	    ai_chance = { 
+		    factor = 100
+	    }	
 		name = germany.12.a
 		 release = SOV
 		 SOV = {
@@ -214,6 +315,9 @@ country_event = {
 		 }
 	}
 	option = {
+	    ai_chance = { 
+		    factor = 0
+	    }	
 		name = germany.12.b
 	}
 }
@@ -227,6 +331,9 @@ country_event = {
     is_triggered_only = yes
 	
 	option = {
+	    ai_chance = { 
+		    factor = 100
+	    }	
 		name = germany.13.a
 		 release = ITA
 		 ITA = {
@@ -243,6 +350,9 @@ country_event = {
 		 }
 	}
 	option = {
+	    ai_chance = { 
+		    factor = 0
+	    }	
 		name = germany.13.b
 	}
 }
@@ -263,6 +373,9 @@ country_event = {
 	mean_time_to_happen = { days = 15 }
 	
 	option = {
+	    ai_chance = { 
+		    factor = 80
+	    }	
 		name = germany.14.a
 		hidden_effect = {
 		set_global_flag = GER_fra_cw
@@ -274,6 +387,9 @@ country_event = {
 		NFA = { country_event = germany.15 }
 	}
 	option = {
+	    ai_chance = { 
+		    factor = 20
+	    }	
 		name = germany.14.b
 	}
 }
@@ -301,11 +417,17 @@ country_event = {
     is_triggered_only = yes
 	
 	option = {
+	    ai_chance = { 
+		    factor = 70
+	    }	
 		name = germany.16.a
 		reverse_add_opinion_modifier = { target = GER modifier = ENG_EUR_theater }
 		diplomatic_relation = { country = GER relation = non_aggression_pact }
 	}	
 	option = {
+	    ai_chance = { 
+		    factor = 30
+	    }	
 		name = germany.16.b
 	}	
 }
@@ -319,12 +441,18 @@ country_event = {
     is_triggered_only = yes
 	
 	option = {
+	    ai_chance = { 
+		    factor = 90
+	    }		
 		name = germany.17.a
 		GER = { give_military_access = JAP }
 		diplomatic_relation = { country = GER relation = non_aggression_pact }
 		reverse_add_opinion_modifier = { target = GER modifier = ENG_EUR_theater }
 	}	
 	option = {
+	    ai_chance = { 
+		    factor = 10
+	    }		
 		name = germany.17.b
 	}	
 }

@@ -225,7 +225,7 @@ units = {
 		ship = { name = "ANV Davis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME } } }
 	}
 
-
+}
 air_wings = {
 	### I. Michigan ###
 	393 = { 	

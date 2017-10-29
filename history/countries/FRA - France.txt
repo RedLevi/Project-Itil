@@ -102,9 +102,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Édouard Daladier"
+	name = "Louis Marin"
 	desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-	picture = "Daladier.dds"
+	picture = "Louis_Marin.dds"
 	expire = "1965.1.1"
 	ideology = social_liberalism
 	traits = {
@@ -113,9 +113,8 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Maurice Thorez"
-	desc = "POLITICS_MAURICE_THOREZ_DESC"
-	picture = "Portrait_France_Generic_3.dds"
+	name = "Boris Souvarine"
+	picture = "Boris_Souvarine.dds"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {

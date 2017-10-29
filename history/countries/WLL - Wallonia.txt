@@ -61,15 +61,26 @@ set_convoys = 80
 set_national_unity = 0.75
 
 create_country_leader = {
-	name = "Hubert Pierlot"
-	desc = "POLITICS_HUBERT_PIERLOT_DESC"
-	picture = "Portrait_Belgium_Hubert_Pierlot.dds"
+	name = "Under German Occupation"
+	desc = ""
+	picture = ""
 	expire = "1965.1.1"
-	ideology = democratic_conservatism
+	ideology = authoritarian_conservatism
 	traits = {
 		#
 	}
 }
+
+#create_country_leader = {
+#	name = "Hubert Pierlot"
+#	desc = "POLITICS_HUBERT_PIERLOT_DESC"
+#	picture = "Portrait_Belgium_Hubert_Pierlot.dds"
+#	expire = "1965.1.1"
+#	ideology = democratic_conservatism
+#	traits = {
+#		#
+#	}
+#}
 
 create_country_leader = {
 	name = "Joseph Jacquemotte"

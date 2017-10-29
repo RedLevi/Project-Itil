@@ -366,7 +366,7 @@ country_event = {#civil war event for Manchuria
 			
 			create_faction = japanese_rebels
 			add_to_faction = MAN
-			country_event = { { id = jdom.13 } }
+			country_event = { id = jdom.13 }
 		}
 		declare_war_on = { target = JAP type = annex_everything }
 		JAP = { country_event = { id = jdom.14 } }

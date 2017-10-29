@@ -1276,7 +1276,7 @@ focus = {
 		
 		id = JAP_expansionism_focus
 		icon = ? 
-		x = 41 
+		x = 34 
 		y = 0
 		cost = 5 
 		
@@ -1505,7 +1505,7 @@ focus = {
 		
 		id = JAP_southern_approach
 		icon = ? 
-		x = 39 
+		x = 37 
 		y = 1
 		cost = 8 
 		
@@ -1602,7 +1602,87 @@ focus = {
 			HOL = { country_event = { id = jfor.65 } }
 		}
 	}
-	
+	focus = {
+		
+		id = JAP_war_germany
+		icon = ? 
+		x = 38 
+		y = 3
+		cost = 10 
+		
+		available = { 
+		
+			GER = { 
+				exists = yes 
+				NOT = { has_war_with = JAP }
+				NOT = { is_in_faction_with = JAP }
+				controls_state = 286 
+				controls_state = 671 
+			}
+		
+		}
+		
+		
+		prerequisite = { focus = JAP_southern_approach }
+		
+		completion_reward = {
+				create_wargoal = { type = annex_everything target = GER }
+		}
+	}
+	focus = {
+		
+		id = JAP_war_england
+		icon = ? 
+		x = 36 
+		y = 3
+		cost = 10 
+		
+		available = { 
+		
+			ENG = { 
+				exists = yes 
+				NOT = { has_war_with = JAP }
+				NOT = { is_in_faction_with = JAP }
+				controls_state = 763 
+			}
+		
+		}
+		
+		mutually_exclusive = { focus = JAP_friend_england }
+		
+		prerequisite = { focus = JAP_southern_approach }
+		
+		completion_reward = {
+				create_wargoal = { type = annex_everything target = ENG }
+		}
+	}
+	focus = {
+		
+		id = JAP_friend_england
+		icon = ? 
+		x = 36 
+		y = 3
+		cost = 10 
+		
+		available = { 
+		
+			ENG = { 
+				exists = yes 
+				NOT = { has_war_with = JAP }
+				NOT = { is_in_faction_with = JAP }
+			}
+		
+		}
+		
+		mutually_exclusive = { focus = JAP_war_england }
+		
+		prerequisite = { focus = JAP_southern_approach }
+		
+		completion_reward = {
+				add_opinion_modifier = { target = ENG modifier = JAP_friendly_england }
+				ENG = { country_event = { id = jfor.77 } }
+		}
+	}
 }
 
 

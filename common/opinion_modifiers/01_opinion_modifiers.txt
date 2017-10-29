@@ -49,6 +49,7 @@ JAP_MON_support = { value = 50 }
 MON_refused_JAP = { value = -25 }
 JAP_supported_SHX = { value = 30 }
 refused_chinese_call = { value = -100 }
+JAP_friendly_england = { value = 60 }
 ###GER###
 GER_BAL_theater = { value = 75 }
 GER_BAK_theater = { value = 100 }

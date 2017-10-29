@@ -2223,6 +2223,7 @@ HAW_reactionarism:0 "Republic of Hawaii"
 HAW_reactionarism_ADJ:0 "Hawaiian"
 HAW_reactionarism_DEF:0  "Hawaii"
 
+<<<<<<< HEAD
 VIN_conservatism:0 "Empire of Vietnam"
 VIN_conservatism_ADJ:0 "Vietnamese"
 VIN_conservatism_DEF:0  "Vietnam"
@@ -2279,7 +2280,7 @@ LAO_socialism_DEF:0  "Laos"
 LAO_reactionarism:0 "Kingdom of Laos"
 LAO_reactionarism_ADJ:0 "Laotian"
 LAO_reactionarism_DEF:0  "Laos"
-
+=======
 BEL_conservatism:0 "Kingdom of Belgium"
 BEL_conservatism_ADJ:0 "Belgian"
 BEL_conservatism_DEF:0  "Belgium"
@@ -2298,3 +2299,4 @@ BEL_socialism_DEF:0  "Belgium"
 BEL_reactionarism:0 "Kingdom of Belgium"
 BEL_reactionarism_ADJ:0 "Belgian"
 BEL_reactionarism_DEF:0  "Belgium"
+>>>>>>> 589d288cb99ce229ce8e87ab93780fcf14fd4185

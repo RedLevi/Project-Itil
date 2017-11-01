@@ -5,14 +5,18 @@ ideas = {
 		very_low_popularity = {
 			available = { always = no }
 			removal_cost = -1
-			modifier = {}
+			modifier = {
+				unity_factor = -0.1
+			}
 			picture = generic_morale_bonus
 		}
 		
 		low_popularity = {
 			available = { always = no }
 			removal_cost = -1
-			modifier = {political_power_gain = 0.3}
+			modifier = {
+				unity_factor = -0.05
+			}
 			picture = generic_morale_bonus
 		}
 		
@@ -20,21 +24,26 @@ ideas = {
 			available = { always = no }
 			default = yes
 			removal_cost = -1
-			modifier = {political_power_gain = 0.6}
+			modifier = {
+			}
 			picture = generic_morale_bonus 
 		}
 		
 		high_popularity = {
 			available = { always = no }
 			removal_cost = -1
-			modifier = {political_power_gain = 0.8}
+			modifier = {
+				unity_factor = 0.05
+			}
 			picture = generic_morale_bonus
 		}
 		
 		very_high_popularity = {
 			available = { always = no }
 			removal_cost = -1
-			modifier = {political_power_gain = 1}
+			modifier = {
+				unity_factor = 0.1
+			}
 			picture = generic_morale_bonus
 		}
 	

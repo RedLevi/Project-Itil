@@ -16,7 +16,7 @@ country_event = {#loss of stability
 			
 				has_idea = very_high_stability
 				
-				has_political_power < 100
+				has_national_unity < 80
 			
 			}
 			
@@ -24,7 +24,7 @@ country_event = {#loss of stability
 			
 				has_idea = high_stability
 				
-				has_political_power < 0
+				has_political_power < 65
 			
 			}
 			
@@ -32,7 +32,7 @@ country_event = {#loss of stability
 			
 				has_idea = normal_stability
 				
-				has_political_power < -100
+				has_political_power < 50
 			
 			}
 			
@@ -40,7 +40,7 @@ country_event = {#loss of stability
 			
 				has_idea = low_stability
 				
-				has_political_power < -200
+				has_political_power < 30
 			
 			}
 		
@@ -49,7 +49,7 @@ country_event = {#loss of stability
 	
 	}
 	
-	mean_time_to_happen = { days = 70 }
+	mean_time_to_happen = { days = 10 }
 	
 	option = {
 	
@@ -77,7 +77,7 @@ country_event = {#gain of stability
 			
 				has_idea = very_low_stability
 				
-				has_political_power > 0
+				has_national_unity > 29
 			
 			}
 			
@@ -85,7 +85,7 @@ country_event = {#gain of stability
 			
 				has_idea = low_stability
 				
-				has_political_power > 100
+				has_national_unity > 49
 			
 			}
 			
@@ -93,7 +93,7 @@ country_event = {#gain of stability
 			
 				has_idea = normal_stability
 				
-				has_political_power > 200
+				has_national_unity > 64
 			
 			}
 			
@@ -101,7 +101,7 @@ country_event = {#gain of stability
 			
 				has_idea = high_stability
 				
-				has_political_power > 300
+				has_national_unity > 79
 			
 			}
 		
@@ -110,31 +110,19 @@ country_event = {#gain of stability
 	
 	}
 	
-	mean_time_to_happen = { days = 70 }
+	mean_time_to_happen = { days = 10 }
 	
 	option = {#take it 
 	
 		name = politics.2.a 
 		
-		ai_chance = { factor = 80 }
 		
 		stability_upgrade = yes 
 		
 		custom_effect_tooltip = stability_upgrade_tooltip
-		
-		add_political_power = -150 
 	
 	}
 	
-	option = {#don't take it
-	
-		name = politics.2.b 
-		
-		ai_chance = { factor = 20 }
-		
-		add_political_power = 50 
-	
-	}
 
 }
 

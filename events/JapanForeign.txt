@@ -2143,3 +2143,13 @@ country_event = {#Japanese agree
 		name = jfor.80.a 
 	}
 }
+
+country_event = {#Japanese refuse 
+	id = jfor.81 
+	title = jfor.81.t 
+	desc = jfor.81.d 
+	is_triggered_only = yes 
+	option = {
+		name = jfor.80.a 
+	}
+}

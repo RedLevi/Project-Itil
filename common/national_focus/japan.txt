@@ -63,7 +63,7 @@ focus_tree = {
 			has_government = liberalism
 			
 		}
-		
+		ai_will_do = { factor = 10 } 
 		prerequisite = { focus = JAP_constitutional_reforms }
 		mutually_exclusive = { focus = JAP_national_army focus = JAP_democratic_army }
 		completion_reward = {
@@ -81,7 +81,7 @@ focus_tree = {
 		x = 5 
 		y = 2 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			always = yes 
@@ -103,7 +103,7 @@ focus_tree = {
 		x = 5 
 		y = 3 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			always = yes 
@@ -125,7 +125,7 @@ focus_tree = {
 		x = 7 
 		y = 2 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			always = yes 
@@ -147,7 +147,7 @@ focus_tree = {
 		x = 7 
 		y = 3 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			always = yes 
@@ -169,7 +169,7 @@ focus_tree = {
 		x = 6 
 		y = 4 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			always = yes 
@@ -196,7 +196,7 @@ focus_tree = {
 		x = 10 
 		y = 1 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			has_war = no 
@@ -220,7 +220,7 @@ focus_tree = {
 		x = 9 
 		y = 2 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			always = yes 
@@ -242,7 +242,7 @@ focus_tree = {
 		x = 9 
 		y = 3 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			always = yes 
@@ -264,7 +264,7 @@ focus_tree = {
 		x = 11 
 		y = 2 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			always = yes 
@@ -286,7 +286,7 @@ focus_tree = {
 		x = 11 
 		y = 3 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			always = yes 
@@ -308,7 +308,7 @@ focus_tree = {
 		x = 10 
 		y = 4 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			always = yes 
@@ -335,7 +335,7 @@ focus_tree = {
 		x = 2 
 		y = 1 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			has_war = no 
@@ -359,7 +359,7 @@ focus_tree = {
 		x = 2 
 		y = 2 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			always = yes 
@@ -381,7 +381,7 @@ focus_tree = {
 		x = 2 
 		y = 3 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			always = yes 
@@ -403,7 +403,7 @@ focus_tree = {
 		x = 3 
 		y = 4 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			has_country_flag = JAP_reformist_victory
@@ -430,7 +430,7 @@ focus_tree = {
 		x = 1 
 		y = 4 
 		cost = 10 
-			
+		ai_will_do = { factor = 10 } 	
 		available = {
 			
 			has_country_flag = JAP_revolutionary_victory
@@ -1660,7 +1660,7 @@ focus = {
 		
 		id = JAP_friend_england
 		icon = ? 
-		x = 36 
+		x = 34 
 		y = 3
 		cost = 10 
 		
@@ -1681,6 +1681,422 @@ focus = {
 		completion_reward = {
 				add_opinion_modifier = { target = ENG modifier = JAP_friendly_england }
 				ENG = { country_event = { id = jfor.77 } }
+		}
+	}
+	
+####Military Reforms#####
+	focus = {
+		id = JAP_military_reforms_focus
+		icon = ? 
+		x = 20 
+		y = 7
+		cost = 10 
+		
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		
+		
+		completion_reward = {
+				army_experience = 25 
+				navy_experience = 25 
+				air_experience = 25 
+		}
+	}
+	focus = {
+		id = JAP_army_doctrine
+		icon = ? 
+		x = 20 
+		y = 8
+		cost = 10 
+		
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_military_reforms_focus }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = land_doctrine 
+			}
+		}
+	}
+	focus = {
+		id = JAP_army_marines
+		icon = ? 
+		x = 18 
+		y = 9
+		cost = 10 
+		mutually_exclusive = { focus = JAP_paratroopers }
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_army_doctrine }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = marine_tech 
+			}
+		}
+	}
+	focus = {
+		id = JAP_paratroopers
+		icon = ? 
+		x = 20 
+		y = 9
+		cost = 10 
+		mutually_exclusive = { focus = JAP_army_marines }
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_army_doctrine }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = para_tech 
+			}
+		}
+	}
+	focus = {
+		id = JAP_tanks
+		icon = ? 
+		x = 22 
+		y = 9
+		cost = 10 
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_army_doctrine }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = armor 
+			}
+		}
+	}
+	focus = {
+		id = JAP_support
+		icon = ? 
+		x = 19  
+		y = 10
+		cost = 10 
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_paratroopers focus = JAP_army_marines }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = support_tech 
+			}
+		}
+	}
+	
+	focus = {
+		id = JAP_navy_doctrine
+		icon = ? 
+		x = 14 
+		y = 8
+		cost = 10 
+		
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_military_reforms_focus }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = naval_doctrine 
+			}
+		}
+	}
+	focus = {
+		id = JAP_battleships
+		icon = ? 
+		x = 14 
+		y = 9
+		cost = 10 
+		
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_navy_doctrine	 }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = bb_tech 
+			}
+		}
+	}
+	focus = {
+		id = JAP_battleships_2
+		icon = ? 
+		x = 14 
+		y = 10
+		cost = 10 
+		mutually_exclusive = { focus = JAP_carriers }
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_battleships	 }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 1 
+				category = shbb_tech 
+			}
+		}
+	}
+	focus = {
+		id = JAP_destroyers
+		icon = ? 
+		x = 12 
+		y = 9
+		cost = 10 
+		
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_navy_doctrine	 }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = dd_tech 
+			}
+		}
+	}
+	focus = {
+		id = JAP_submarines
+		icon = ? 
+		x = 12 
+		y = 10
+		cost = 10 
+		
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_destroyers	 }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = ss_tech 
+			}
+		}
+	}
+	focus = {
+		id = JAP_carriers
+		icon = ? 
+		x = 16 
+		y = 9
+		cost = 10 
+		mutually_exclusive = { focus = JAP_battleships_2 }
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_battleships }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 1 
+				category = cv_tech 
+			}
+		}
+	}
+	focus = {
+		id = JAP_air_doctrine
+		icon = ? 
+		x = 27 
+		y = 8
+		cost = 10 
+		
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_military_reforms_focus }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = air_doctrine 
+			}
+		}
+	}
+	focus = {
+		id = JAP_fighters
+		icon = ? 
+		x = 29 
+		y = 9
+		cost = 10 
+		
+		available = { 
+		
+			NOT = { has_completed_focus = JAP_bombers }
+		
+		}
+		
+		prerequisite = { focus = JAP_air_doctrine }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+	focus = {
+		id = JAP_bombers
+		icon = ? 
+		x = 25 
+		y = 9
+		cost = 10 
+		
+		available = { 
+		
+			NOT = { has_completed_focus = JAP_fighters }
+		
+		}
+		
+		prerequisite = { focus = JAP_air_doctrine }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = tactical_bomber
+				category = cat_strategic_bomber
+				category = cas_bomber
+			}
+		}
+	}
+	focus = {
+		id = JAP_naval_bombers
+		icon = ? 
+		x = 27
+		y = 9
+		cost = 10 
+		
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_air_doctrine }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 1 
+				category = naval_bomber
+			}
+		}
+	}
+	focus = {
+		id = JAP_radar
+		icon = ? 
+		x = 27
+		y = 10
+		cost = 10 
+		
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_fighters focus = JAP_bombers }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = radar_tech
+			}
+		}
+	}
+	focus = {
+		id = JAP_jets
+		icon = ? 
+		x = 27
+		y = 11
+		cost = 10 
+		
+		available = { 
+		
+			always = yes
+		
+		}
+		
+		prerequisite = { focus = JAP_radar }
+		
+		completion_reward = {
+			add_tech_bonus = { 
+				bonus = 0.5 
+				uses = 2 
+				category = jet_technology
+			}
 		}
 	}
 }

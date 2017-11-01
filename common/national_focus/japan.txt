@@ -1939,7 +1939,7 @@ focus = {
 		id = JAP_carriers
 		icon = ? 
 		x = 16 
-		y = 9
+		y = 10
 		cost = 10 
 		mutually_exclusive = { focus = JAP_battleships_2 }
 		available = { 

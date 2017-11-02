@@ -56,11 +56,11 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Karlis Ulmanis"
+	name = "Pauls Kalniņš"
 	desc = "POLITICS_KARLIS_ULMANIS_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	picture = "Pauls.dds"
 	expire = "1965.1.1"
-	ideology = autocracy
+	ideology = marxism
 	traits = {
 		#
 	}

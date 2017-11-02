@@ -24,7 +24,7 @@ country_event = {#loss of stability
 			
 				has_idea = high_stability
 				
-				has_political_power < 65
+				has_national_unity < 65
 			
 			}
 			
@@ -32,7 +32,7 @@ country_event = {#loss of stability
 			
 				has_idea = normal_stability
 				
-				has_political_power < 50
+				has_national_unity < 50
 			
 			}
 			
@@ -40,7 +40,7 @@ country_event = {#loss of stability
 			
 				has_idea = low_stability
 				
-				has_political_power < 30
+				has_national_unity < 30
 			
 			}
 		

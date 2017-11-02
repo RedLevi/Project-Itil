@@ -363,6 +363,7 @@ country_event = {#SHX united front
 		ai_chance = { factor = 20 }
 		add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
+		set_country_flag = SHX_neutrality
 	}
 	option = {#help the Japanese 
 		trigger = {
@@ -2151,5 +2152,70 @@ country_event = {#Japanese refuse
 	is_triggered_only = yes 
 	option = {
 		name = jfor.80.a 
+	}
+}
+
+####additional Chinese war events#####
+country_event = {#Invite Shanxi to war? 
+	id = jfor.82 
+	title = jfor.82.t 
+	desc = jfor.82.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = JAP 
+		has_completed_focus = JAP_support_SHX
+		has_war_with = ZHI 
+		NOT = { has_war_with = SHX }
+		NOT = { has_government = communism }
+		SHX = { NOT = { has_country_flag = SHX_neutrality } }
+	}
+	mean_time_to_happen = { days = 30 }
+	option = {#invite 
+		name = jfor.82.a 
+		ai_chance = { factor = 90 }
+		SHX = { country_event = { id = jfor.83 } }
+	}
+	option = {#don't 
+		name = jfor.82.b 
+		ai_chance = { factor = 10 }
+	}
+}
+
+country_event = {#Japanese offer
+	id = jfor.83 
+	title = jfor.83.t 
+	desc = jfor.83.d 
+	is_triggered_only = yes 
+	option = {#AGREE 
+		name = jfor.83.a 
+		ai_chance = { factor = 50 }
+		JAP = { country_event = { id = jfor.84 days = 1 } }
+	}
+	option = {#don't 
+		name = jfor.83.b 
+		ai_chance = { factor = 50 }
+		JAP = { country_event = { id = jfor.85 days = 1 } }
+	}
+}
+
+country_event = {#Shanxi agrees 
+	id = jfor.84 
+	title = jfor.84.t 
+	desc = jfor.84.d 
+	is_triggered_only = yes 
+	option = {#AGREE 
+		name = jfor.84.a 
+		add_to_faction = SHX 
+		hidden_effect = { SHX = { declare_war_on = { target = ZHI type = annex_everything } } }
+	}
+}
+
+country_event = {#Shanxi refuses 
+	id = jfor.85 
+	title = jfor.85.t 
+	desc = jfor.85.d 
+	is_triggered_only = yes 
+	option = {#AGREE 
+		name = jfor.85.a 
 	}
 }

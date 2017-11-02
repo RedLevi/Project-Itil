@@ -26,7 +26,7 @@ set_politics = {
 
 	parties = {
 	    conservatism = {
-			popularity = 40
+			popularity = 30
 		}
 
 		national_integralism = {
@@ -38,7 +38,7 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 5
+			popularity = 15
 		}
 		
 		socialism = {
@@ -58,12 +58,12 @@ set_politics = {
 }
 
 set_convoys = 500
-set_national_unity = 0.75
+set_national_unity = 0.6
 
 create_country_leader = {
 	name = "Dirk Jan de Geer"
 	desc = "POLITICS_DIRK_JAN_DE_GEER_DESC"
-	picture = "Portrait_Netherlands_Dirk_Jan_de_Geer.dds"
+	picture = "Dirk.dds"
 	expire = "1965.1.1"
 	ideology = democratic_conservatism
 	traits = {

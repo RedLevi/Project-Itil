@@ -64,55 +64,11 @@ set_politics = {
 }
 
 create_country_leader = {
-	name = "Władysław Sikorski"
+	name = "Róża Luksemburg"
 	desc = "POLITICS_WLADYSLAW_SIKORSKI_DESC"
-	picture = "Portrait_Poland_Wladyslaw_Sikorski.dds"
-	expire = "1965.1.1"
-	ideology = autocracy
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Ignacy Mościcki"
-	desc = "POLITICS_IGNACY_MOSCICKI_DESC"
-	picture = "Portrait_Poland_Ignacy_Moscicki.dds"
-	expire = "1965.1.1"
-	ideology = autocracy
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Władysław Gomułka"
-	desc = "POLITICS_WLADYSLAW_GOMULKA_DESC"
-	picture = "Portrait_Poland_Wladyslaw_Gomulka.dds"
+	picture = "Rosa.dds"
 	expire = "1965.1.1"
 	ideology = marxism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Wincenty Witos"
-	desc = "POLITICS_WINCENTY_WITOS_DESC"
-	picture = "GFX_POL_wincenty_witos"
-	expire = "1965.1.1"
-	ideology = democratic_conservatism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Bolesław Piasecki"
-	desc = "POLITICS_BOLESLAW_PIASECKI_DESC"
-	picture = "GFX_POL_boleslaw_piasecki"
-	expire = "1965.1.1"
-	ideology = integralism
 	traits = {
 		#
 	}

@@ -539,6 +539,7 @@ country_event = { ###IFA DECISION###
 	option = { ###PEACE###
 	    name = france.16.b
 	    set_global_flag = ifa_accepts 
+		NFA = { annex_country = { target = IFA transfer_troops = yes } } 
 		ai_chance = { factor = 50 }
 		}
 	}
@@ -560,6 +561,7 @@ country_event = { ###RFA DECISION###
 	option = { ###PEACE##
 	    name = france.17.b 
 		set_global_flag = rfa_accepts
+		NFA = { annex_country = { target = RFA transfer_troops = yes } } 
         ai_chance = { factor = 40 }		
 		}
 	}
@@ -581,6 +583,7 @@ country_event = { ###SFA DECISION###
 	option = { ###PEACE###
 	    name = france.18.b
 	    set_global_flag = sfa_accepts 
+		SPF = { annex_country = { target = SFA transfer_troops = yes } } 
 		ai_chance = { factor = 50 }
 		}
 	}
@@ -602,6 +605,7 @@ country_event = { ###SYA DECISION###
 	option = { ###PEACE##
 	    name = france.19.b 
 		set_global_flag = sya_accepts
+		SPF = { annex_country = { target = SYA transfer_troops = yes } } 
         ai_chance = { factor = 70 }		
 		}
 	}

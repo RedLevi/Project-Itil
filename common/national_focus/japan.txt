@@ -24,7 +24,7 @@ focus_tree = {
 	focus = {
 		
 		id = JAP_constitutional_reforms
-		icon = ? 
+		icon = GFX_goal_support_democracy 
 		x = 6 
 		y = 0 
 		cost = 3 
@@ -52,7 +52,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_liberal_army
-		icon = ? 
+		icon = GFX_focus_generic_little_entente 
 		x = 6 
 		y = 1 
 		cost = 10 
@@ -77,7 +77,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_universal_suffrage
-		icon = ? 
+		icon = GFX_focus_generic_support_the_left_right 
 		x = 5 
 		y = 2 
 		cost = 10 
@@ -99,7 +99,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_direct_voting
-		icon = ? 
+		icon = GFX_focus_generic_self_management 
 		x = 5 
 		y = 3 
 		cost = 10 
@@ -121,7 +121,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_federalization
-		icon = ? 
+		icon = GFX_goal_generic_major_alliance 
 		x = 7 
 		y = 2 
 		cost = 10 
@@ -143,7 +143,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_zaibatsu_politics 
-		icon = ? 
+		icon = GFX_goal_generic_neutrality_focus 
 		x = 7 
 		y = 3 
 		cost = 10 
@@ -165,7 +165,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_parliamentary_democracy
-		icon = ? 
+		icon = GFX_goal_generic_national_unity 
 		x = 6 
 		y = 4 
 		cost = 10 
@@ -192,7 +192,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_national_army
-		icon = ? 
+		icon = GFX_focus_generic_military_mission 
 		x = 10 
 		y = 1 
 		cost = 10 
@@ -216,7 +216,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_bureaucracy_expansion
-		icon = ? 
+		icon = GFX_goal_generic_demand_territory 
 		x = 9 
 		y = 2 
 		cost = 10 
@@ -238,7 +238,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_peace_preservation
-		icon = ? 
+		icon = GFX_goal_generic_major_war 
 		x = 9 
 		y = 3 
 		cost = 10 
@@ -260,7 +260,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_traditional_values
-		icon = ? 
+		icon = GFX_focus_smiling_buddha 
 		x = 11 
 		y = 2 
 		cost = 10 
@@ -282,7 +282,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_zaibatsu_office
-		icon = ? 
+		icon = GFX_goal_generic_positive_trade_relations 
 		x = 11 
 		y = 3 
 		cost = 10 
@@ -304,7 +304,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_centralize_state
-		icon = ? 
+		icon = GFX_goal_generic_political_pressure 
 		x = 10 
 		y = 4 
 		cost = 10 
@@ -331,7 +331,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_democratic_army
-		icon = ? 
+		icon = GFX_equality_path_focus 
 		x = 2 
 		y = 1 
 		cost = 10 
@@ -355,7 +355,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_labor_reforms
-		icon = ? 
+		icon = GFX_goal_generic_soviet_construction 
 		x = 2 
 		y = 2 
 		cost = 10 
@@ -377,7 +377,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_regulate_zaibatsu
-		icon = ? 
+		icon = GFX_goal_generic_position_armies 
 		x = 2 
 		y = 3 
 		cost = 10 
@@ -399,7 +399,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_peoples_empire
-		icon = ? 
+		icon = GFX_goal_anschluss 
 		x = 3 
 		y = 4 
 		cost = 10 
@@ -426,7 +426,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_peoples_revolution
-		icon = ? 
+		icon = GFX_focus_YUG_pan_slavic_congress 
 		x = 1 
 		y = 4 
 		cost = 10 
@@ -453,7 +453,7 @@ focus_tree = {
 focus = {
 
 		id = JAP_economic_focus
-		icon = ? 
+		icon = GFX_goal_generic_production 
 		x = 18 
 		y = 0 
 		cost = 10 
@@ -481,7 +481,7 @@ focus = {
 focus = {
 
 		id = JAP_zaibatsu_economy
-		icon = ? 
+		icon = GFX_focus_generic_the_giant_wakes 
 		x = 22 
 		y = 1 
 		cost = 10 
@@ -518,7 +518,7 @@ focus = {
 	focus = {
 
 		id = JAP_zaibatsu_factories_1 
-		icon = ? 
+		icon = GFX_goal_generic_construct_mil_factory 
 		x = 24 
 		y = 2 
 		cost = 10 
@@ -569,7 +569,7 @@ focus = {
 	focus = {
 
 		id = JAP_zaibatsu_factories_2 
-		icon = ? 
+		icon = GFX_goal_generic_construction 
 		x = 23 
 		y = 3 
 		cost = 10 
@@ -644,7 +644,7 @@ focus = {
 	focus = {
 
 		id = JAP_zaibatsu_factories_3 
-		icon = ? 
+		icon = GFX_goal_generic_construction2 
 		x = 25 
 		y = 3 
 		cost = 10 
@@ -699,7 +699,7 @@ focus = {
 	focus = {
 
 		id = JAP_zaibatsu_factories_4 
-		icon = ? 
+		icon = GFX_goal_generic_construct_mil_factory 
 		x = 24 
 		y = 4 
 		cost = 10 
@@ -745,7 +745,7 @@ focus = {
 	focus = {
 	
 		id = JAP_siberian_oil
-		icon = ? 
+		icon = GFX_goal_generic_oil_refinery 
 		x = 21 
 		y = 3 
 		cost = 10 
@@ -772,7 +772,7 @@ focus = {
 	focus = {
 	
 		id = JAP_siberian_metal
-		icon = ? 
+		icon = GFX_goal_generic_construct_civilian 
 		x = 21 
 		y = 2 
 		cost = 10 
@@ -798,7 +798,7 @@ focus = {
 	focus = {
 	
 		id = JAP_rail_west
-		icon = ? 
+		icon = GFX_goal_generic_construct_infrastructure 
 		x = 18 
 		y = 2 
 		cost = 10 
@@ -852,7 +852,7 @@ focus = {
 	focus = {
 	
 		id = JAP_rail_east
-		icon = ? 
+		icon = GFX_goal_generic_construct_infrastructure 
 		x = 18 
 		y = 3 
 		cost = 10 
@@ -906,7 +906,7 @@ focus = {
 	focus = { 
 	
 	id = JAP_rail_manchuria
-		icon = ? 
+		icon = GFX_goal_generic_construct_infrastructure 
 		x = 18 
 		y = 4 
 		cost = 10 
@@ -971,7 +971,7 @@ focus = {
 	focus = {
 		
 		id = JAP_extra_research
-		icon = ? 
+		icon = GFX_focus_research 
 		x = 18 
 		y = 5
 		cost = 10 
@@ -991,7 +991,7 @@ focus = {
 	focus = {
 		
 		id = JAP_confiscate_industry
-		icon = ? 
+		icon = GFX_goal_generic_soviet_construction 
 		x = 14 
 		y = 1
 		cost = 10 
@@ -1023,7 +1023,7 @@ focus = {
 	focus = {
 		
 		id = JAP_agrarian_reform 
-		icon = ? 
+		icon = GFX_goal_generic_construct_civilian 
 		x = 15 
 		y = 2
 		cost = 10 
@@ -1047,7 +1047,7 @@ focus = {
 	focus = {
 		
 		id = JAP_end_tenancy
-		icon = ? 
+		icon = GFX_focus_generic_soviet_politics 
 		x = 15 
 		y = 3
 		cost = 10 
@@ -1100,7 +1100,7 @@ focus = {
 	focus = {
 		
 		id = JAP_expand_civilian
-		icon = ? 
+		icon = GFX_goal_generic_construct_civ_factory 
 		x = 15 
 		y = 4
 		cost = 10 
@@ -1153,7 +1153,7 @@ focus = {
 	focus = {
 		
 		id = JAP_socialist_heavy
-		icon = ? 
+		icon = GFX_goal_generic_construct_mil_factory 
 		x = 13 
 		y = 2
 		cost = 10 
@@ -1206,7 +1206,7 @@ focus = {
 	focus = {
 		
 		id = JAP_socialist_docks
-		icon = ? 
+		icon = GFX_goal_generic_construct_naval_dockyard 
 		x = 13 
 		y = 3
 		cost = 10 
@@ -1249,7 +1249,7 @@ focus = {
 	focus = {
 		
 		id = JAP_socialist_planning
-		icon = ? 
+		icon = GFX_goal_generic_position_armies 
 		x = 13 
 		y = 4
 		cost = 10 
@@ -1275,7 +1275,7 @@ focus = {
 	focus = {
 		
 		id = JAP_expansionism_focus
-		icon = ? 
+		icon = GFX_focus_generic_japanese_imperial_glory 
 		x = 34 
 		y = 0
 		cost = 5 
@@ -1300,7 +1300,7 @@ focus = {
 	focus = {
 		
 		id = JAP_western_approach
-		icon = ? 
+		icon = GFX_goal_anti_comintern_pact 
 		x = 30 
 		y = 1
 		cost = 8 
@@ -1330,7 +1330,7 @@ focus = {
 	focus = {
 		
 		id = JAP_pressure_anhui
-		icon = ? 
+		icon = GFX_goal_generic_political_pressure 
 		x = 27 
 		y = 2
 		cost = 5 
@@ -1357,7 +1357,7 @@ focus = {
 	focus = {
 		
 		id = JAP_support_mongolia
-		icon = ? 
+		icon = GFX_goal_generic_military_deal 
 		x = 29 
 		y = 2
 		cost = 10 
@@ -1389,7 +1389,7 @@ focus = {
 	focus = {
 		
 		id = JAP_ally_mongolia
-		icon = ? 
+		icon = GFX_goal_generic_major_alliance 
 		x = 29 
 		y = 3
 		cost = 7 
@@ -1424,7 +1424,7 @@ focus = {
 	focus = {
 		
 		id = JAP_ZHI_ultimatum
-		icon = ? 
+		icon = GFX_goal_generic_forceful_treaty 
 		x = 31 
 		y = 2
 		cost = 10 
@@ -1454,7 +1454,7 @@ focus = {
 	focus = {
 		
 		id = JAP_influence_shanxi
-		icon = ? 
+		icon = GFX_goal_generic_military_sphere 
 		x = 33 
 		y = 2
 		cost = 10 
@@ -1482,7 +1482,7 @@ focus = {
 	focus = {
 		
 		id = JAP_war_soviet
-		icon = ? 
+		icon = GFX_goal_generic_war_with_comintern 
 		x = 30 
 		y = 4
 		cost = 6 
@@ -1504,7 +1504,7 @@ focus = {
 	focus = {
 		
 		id = JAP_southern_approach
-		icon = ? 
+		icon = GFX_focus_generic_strike_at_democracy2 
 		x = 37 
 		y = 1
 		cost = 8 
@@ -1529,7 +1529,7 @@ focus = {
 	focus = {
 		
 		id = JAP_ally_siam
-		icon = ? 
+		icon = GFX_goal_generic_improve_relations 
 		x = 35 
 		y = 2
 		cost = 10 
@@ -1554,7 +1554,7 @@ focus = {
 	focus = {
 		
 		id = JAP_protect_PHL
-		icon = ? 
+		icon = GFX_goal_generic_dangerous_deal 
 		x = 37 
 		y = 2
 		cost = 10 
@@ -1580,7 +1580,7 @@ focus = {
 	focus = {
 		
 		id = JAP_INS_support
-		icon = ? 
+		icon = GFX_goal_generic_army_doctrines 
 		x = 39 
 		y = 2
 		cost = 10 
@@ -1605,7 +1605,7 @@ focus = {
 	focus = {
 		
 		id = JAP_war_germany
-		icon = ? 
+		icon = GFX_focus_generic_anti_fascist_diplomacy 
 		x = 38 
 		y = 3
 		cost = 10 
@@ -1632,7 +1632,7 @@ focus = {
 	focus = {
 		
 		id = JAP_war_england
-		icon = ? 
+		icon = GFX_focus_AST_never_gallipoli 
 		x = 36 
 		y = 3
 		cost = 10 
@@ -1659,7 +1659,7 @@ focus = {
 	focus = {
 		
 		id = JAP_friend_england
-		icon = ? 
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties 
 		x = 34 
 		y = 3
 		cost = 10 
@@ -1687,7 +1687,7 @@ focus = {
 ####Military Reforms#####
 	focus = {
 		id = JAP_military_reforms_focus
-		icon = ? 
+		icon = GFX_goal_generic_axis_build_infantry 
 		x = 20 
 		y = 7
 		cost = 10 
@@ -1708,7 +1708,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_army_doctrine
-		icon = ? 
+		icon = GFX_goal_generic_army_doctrines 
 		x = 20 
 		y = 8
 		cost = 10 
@@ -1731,7 +1731,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_army_marines
-		icon = ? 
+		icon = GFX_goal_generic_amphibious_assault 
 		x = 18 
 		y = 9
 		cost = 10 
@@ -1754,7 +1754,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_paratroopers
-		icon = ? 
+		icon = GFX_focus_generic_paratrooper 
 		x = 20 
 		y = 9
 		cost = 10 
@@ -1777,7 +1777,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_tanks
-		icon = ? 
+		icon = GFX_goal_generic_army_tanks 
 		x = 22 
 		y = 9
 		cost = 10 
@@ -1799,7 +1799,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_support
-		icon = ? 
+		icon = GFX_goal_generic_build_tank 
 		x = 19  
 		y = 10
 		cost = 10 
@@ -1822,7 +1822,7 @@ focus = {
 	
 	focus = {
 		id = JAP_navy_doctrine
-		icon = ? 
+		icon = GFX_goal_generic_navy_doctrines_tactics 
 		x = 14 
 		y = 8
 		cost = 10 
@@ -1845,7 +1845,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_battleships
-		icon = ? 
+		icon = GFX_goal_generic_navy_battleship 
 		x = 14 
 		y = 9
 		cost = 10 
@@ -1868,7 +1868,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_battleships_2
-		icon = ? 
+		icon = GFX_goal_generic_navy_battleship 
 		x = 14 
 		y = 10
 		cost = 10 
@@ -1891,7 +1891,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_destroyers
-		icon = ? 
+		icon = GFX_goal_generic_navy_cruiser 
 		x = 12 
 		y = 9
 		cost = 10 
@@ -1914,7 +1914,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_submarines
-		icon = ? 
+		icon = GFX_goal_generic_navy_submarine 
 		x = 12 
 		y = 10
 		cost = 10 
@@ -1937,7 +1937,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_carriers
-		icon = ? 
+		icon = GFX_goal_generic_navy_carrier 
 		x = 16 
 		y = 10
 		cost = 10 
@@ -1960,7 +1960,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_air_doctrine
-		icon = ? 
+		icon = GFX_goal_generic_air_doctrine 
 		x = 27 
 		y = 8
 		cost = 10 
@@ -1983,7 +1983,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_fighters
-		icon = ? 
+		icon = GFX_goal_generic_air_fighter2 
 		x = 29 
 		y = 9
 		cost = 10 
@@ -2007,7 +2007,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_bombers
-		icon = ? 
+		icon = GFX_goal_generic_air_bomber 
 		x = 25 
 		y = 9
 		cost = 10 
@@ -2032,7 +2032,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_naval_bombers
-		icon = ? 
+		icon = GFX_goal_generic_air_naval_bomber 
 		x = 27
 		y = 9
 		cost = 10 
@@ -2055,7 +2055,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_radar
-		icon = ? 
+		icon = GFX_goal_generic_radar 
 		x = 27
 		y = 10
 		cost = 10 
@@ -2078,7 +2078,7 @@ focus = {
 	}
 	focus = {
 		id = JAP_jets
-		icon = ? 
+		icon = GFX_focus_rocketry 
 		x = 27
 		y = 11
 		cost = 10 

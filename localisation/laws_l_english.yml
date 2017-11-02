@@ -1,6 +1,18 @@
 ﻿l_english:
 
+
 ####Internal Policy####
+political_idea_desc:0 "Ideas currently dominating the political landscape."
+military_idea_desc:0 "Ideas about how the countries army should work."
+economic_idea_desc:0 "Ideas to gear you country's economy for war."
+technology_idea_desc:0 "Ideas about to aid in technological advancements."
+ espionage_idea_desc:0 "Ideas about how our country engages in espionage."
+ country:0 "Country"
+ political:0 "Political"
+ military:0 "Military"
+ economic:0 "Economic"
+ technology:0 "Technology"
+ espionage:0 "Espionage"
 internal_policy:0 "Internal Policy"
 open_society_law:0 "Open Society"
 open_society_law_desc:0 "The state enshrines and promises the principles of group and individual freedoms and constantly strives to expand social rights."

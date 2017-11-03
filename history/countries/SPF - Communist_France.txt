@@ -89,3 +89,17 @@ create_country_leader = {
 	
 	}
 }
+
+create_field_marshal = {
+	name = "Georges Guingouin"
+	picture = "Georges_Guingouin.dds"
+	traits = { fast_planner }
+	skill = 1
+}
+
+create_corps_commander = {
+	name = "Pierre Brossolette"
+	picture = "Pierre_Brossolette.dds"
+	traits = { charismatic  }
+	skill = 2
+}

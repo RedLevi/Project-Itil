@@ -104,9 +104,16 @@ create_country_leader = {
 
 create_corps_commander = {
 	name = "Charles De Gaulle"
-	picture = "Portrait_France_Charles_De_Gaulle.dds"
+	picture = "Charles_de_gaulle.dds"
 	traits = {  panzer_leader }
 	skill = 3
+}
+
+create_field_marshal = {
+	name = "Philippe Pétain"
+	picture = "Marshal_petain.dds"
+	traits = { old_guard charismatic offensive_doctrine }
+	skill = 4
 }
 
 create_navy_leader = {

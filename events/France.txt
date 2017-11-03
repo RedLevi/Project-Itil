@@ -307,9 +307,9 @@ country_event = { #NFA DECLARES WAR#
 	IFA = {
     add_ideas = service_by_requirement 
     }
-	NFA = { declare_war_on = { target = SPF type = annex_everything } }
-	IFA = { declare_war_on = { target = SPF type = annex_everything } }
-	RFA = { declare_war_on = { target = SPF type = annex_everything } }
+	NFA = { declare_war_on = { target = SPF type = civil_war } }
+	IFA = { declare_war_on = { target = SPF type = civil_war } }
+	RFA = { declare_war_on = { target = SPF type = civil_war } }
     }
 }
 	
@@ -408,7 +408,7 @@ country_event = { #NATIONALIST VICTORY#
 	trigger = {
 	    tag = NFA 
 		SFA = { exists = no }
-		SPF = { exists = no }
+		#SPF = { exists = no }#
 		SYA = { exists = no }
 	    }
 	option = { #PEACEFULLY MERGE#
@@ -594,7 +594,7 @@ country_event = { ###SYA DECISION###
 	desc = france.19.d
 	fire_only_once = yes
 	is_triggered_only = yes
-	
+	 
 	option = { ###WAR###
 	    name = france.19.a
 	    SYA = { declare_war_on = { target = NFA type = annex_everything } }
@@ -724,7 +724,7 @@ country_event = { #IFA victory #
     }
 }
 
-country_event = { 
+country_event = { #NEWS event for NFA##
     id = france.24
 	title = france.24.t
 	desc = france.24.d
@@ -735,7 +735,7 @@ country_event = {
     }
 }
 
-country_event = { 
+country_event = { #news event for SPF#
     id = france.25
 	title = france.25.t
 	desc = france.25.d
@@ -745,5 +745,35 @@ country_event = {
 	    name = france.25.a
     }
 }
+
+country_event = { #Italian involvement#
+    id = france.26
+	title = france.26.t
+	desc = france.26.d
+	fire_only_once = yes
+	
+	trigger = { 
+	    tag = ITA
+	    NOT = {  
+		    SPF = { controls_state = 16 }
+			SPF = { controls_state = 24 }
+			SPF = { controls_state = 29 }
+			}
+		country_exists = SYA
+		}
+	
+    option = { #join the war#
+	name = france.26.a
+        ITA = { declare_war_on = { target = NFA type = annex_everything } }
+		NFA = { remove_from_faction = SYA }
+		ITA = { create_faction = synintern } 
+		ITA = { add_to_faction = SYA }
+        }
+    option = { #dont do anything#
+	name = france.26.b
+    }
+}
+     	
+			
     
 	

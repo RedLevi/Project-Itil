@@ -155,7 +155,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Aleksandr Vasilevsky"
 	id = 407
-		picture = "Aleksandr_Vasilevsky.dds"
+		picture = "Aleksander_Vasilevsky.dds"
 	traits = {  }
 	skill = 4
 
@@ -164,7 +164,7 @@ create_corps_commander = {
 
 create_field_marshal = {
 	name = "Boris Shaposhnikov"
-		picture = "Portrait_Soviet_Boris_Shaposhnikov.dds"
+		picture = "Boris_Shaposhnikov.dds"
 	traits = {  }
 	skill = 2
 
@@ -172,9 +172,19 @@ create_field_marshal = {
 create_field_marshal = {
 	name = "Mikhail Tukhachevsky"
 	id = 401
-		picture = "Portrait_Soviet_Mikhail_Tukhachevsky.dds"
+		picture = "Mikhail_Tukhachevsky.dds"
 	traits = { offensive_doctrine fast_planner inspirational_leader }
 	skill = 5
+
+
+}
+
+create_field_marshal = {
+	name = "Sergey Kamenev"
+	id = 401
+		picture = "Sergey_Kamenev.dds"
+	traits = { defensive_doctrine }
+	skill = 3
 
 
 }

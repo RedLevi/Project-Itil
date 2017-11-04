@@ -17,6 +17,8 @@ opinion_modifiers = {
 	world_domination_opinion = { value = -75 }
 	DIP_refuse_offer = { value = -10 }
 	DIP_no_support = { value = -25 }
+	No_Help = { value = -50 }
+	Sent_volunteers = { value = 100 }
 #####ENG####
 ENG_EUR_theater = { value = 25 }
 ENG_dip_support = { value = 50 }

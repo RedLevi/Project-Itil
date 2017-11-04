@@ -819,3 +819,58 @@ country_event = { #SOVIET DECISION
     add_opinion_modifier = { target = SPF modifier = No_Help }
     }
 }
+
+country_event = { #GERMAN SUPPORT
+    id = france.29
+    title = france.29.t
+    desc = france.29.d
+    fire_only_once = yes
+    #TRIGGERED BY EVENT#
+
+    option = { #NO TROOPS
+    name = france.29.a
+    }
+    option = { #SEND TROOPS BUT ALSACE
+    name = france.29.b
+    NFA = { country_event = { france.30 days = 5 } }
+    }
+}
+
+country_event = { #PETAINS DECISION
+    id = france.30
+    title = france.30
+    desc = france.30
+    is_triggered_only = yes
+
+    option = {
+    name = france.30.a
+    set_global_flag = petain_cooperation
+    NFA = { load_oob = GER_volunteers }
+    GER = { add_manpower = -55000 }
+    }
+
+}
+
+country_event = { #ITALIAN DEFENSE OF SYA
+    id = france.31
+    title = france.31.t
+    desc = france.31.d
+
+    trigger = {
+    tag = ITA
+    country_exists = SYA
+    SYA = { has_war_with = SPF }
+    }
+
+    option = { #YES
+    name = france.31.a
+    ITA = { create_faction = synintern }
+    ITA = { declare_war_on = { target = SPF type = annex everything } }
+    ITA = { add_to_faction = SYA}
+
+    }
+    option = { #NO
+    name = france.31.b
+    add_opinion_modifier = { target = SYA modifier = No_Help }
+    }
+}

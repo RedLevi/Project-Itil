@@ -9,7 +9,7 @@ set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_recon = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_engineers = 1
 	tech_military_police = 1
 	tech_mountaineers = 1
@@ -52,7 +52,7 @@ create_faction = "second_international"
 add_to_faction = SOV
 add_to_faction = POL
 add_to_faction = PER
-add_to_faction = LAT 
+add_to_faction = LAT
 set_politics = {
 
 	parties = {
@@ -67,21 +67,21 @@ set_politics = {
 		liberalism = {
 			popularity = 5
 		}
-		
+
 		communism = {
 			popularity = 70
 		}
-		
+
 		socialism = {
 			popularity = 15
 		}
-		
+
 		reactionarism = {
 			popularity = 5
 		}
-		
+
 	}
-	
+
 	ruling_party = communism
 	last_election = "1933.7.1"
 	election_frequency = 48
@@ -110,10 +110,10 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
-	
+
 	}
 }
-		
+
 create_country_leader = {
 	name = "Konstantin Rodzaevsky"
 	desc = "POLITICS_KONSTANTIN_RODZAEVSKY_DESC"
@@ -121,7 +121,7 @@ create_country_leader = {
 	expire = "1953.3.1"
 	ideology = integralism
 	traits = {
-		
+
 	}
 }
 
@@ -132,7 +132,7 @@ create_country_leader = {
 	expire = "1953.3.1"
 	ideology = democratic_socialism
 	traits = {
-		
+
 	}
 }
 
@@ -141,305 +141,54 @@ add_namespace = {
 	type = unit_leader
 }
 
-create_corps_commander = {
-	name = "Georgy Zhukov"
-	id = 410
-		picture = "Portrait_Soviet_Gregory_Zhukov.dds"
-	traits = { winter_specialist panzer_leader  }
-	skill = 5
 
-	
-}
 
 create_corps_commander = {
 	name = "Konstantin Rokossovsky"
 	id = 402
-		picture = "Portrait_Soviet_Konstantin_Rokossovsky.dds"
+	  picture = "Konstantin_Rokossovsky.dds"
 	traits = {  panzer_leader }
 	skill = 4
-	
+
 }
 
 create_corps_commander = {
 	name = "Aleksandr Vasilevsky"
 	id = 407
-		picture = "Portrait_Soviet_Aleksandr_Vasilevsky.dds"
-	traits = { panzer_leader  }
+		picture = "Aleksandr_Vasilevsky.dds"
+	traits = {  }
 	skill = 4
 
-	
-}
 
-create_corps_commander = {
-	name = "Boris Shaposhnikov"
-		picture = "Portrait_Soviet_Boris_Shaposhnikov.dds"
-	traits = {  }
-	skill = 3
-	
-}
-
-create_corps_commander = {
-	name = "Nikolai Vatutin"
-		picture = "Portrait_Soviet_Nikolai_Fyodorovich_Vatutin.dds"
-	traits = {  }
-	skill = 3
-	
-}
-
-create_corps_commander = {
-	name = "Ivan Konev"
-	id = 408
-		picture = "Portrait_Soviet_Ivan_Konev.dds"
-	traits = { panzer_leader  }
-	skill = 5
-
-
-	
-}
-
-create_corps_commander = {
-	name = "Semyon Timoshenko"
-	id = 404
-		picture = "Portrait_Soviet_Semyon_Timoshenko.dds"
-	traits = {  }
-	skill = 3
-
-
-	
 }
 
 create_field_marshal = {
-	name = "Kliment Voroshilov"
-	id = 405
-		picture = "Portrait_Soviet_Kliment_Voroshilov.dds"
-	traits = { old_guard  }
-	skill = 1
+	name = "Boris Shaposhnikov"
+		picture = "Portrait_Soviet_Boris_Shaposhnikov.dds"
+	traits = {  }
+	skill = 2
 
-
-	
 }
-
 create_field_marshal = {
 	name = "Mikhail Tukhachevsky"
 	id = 401
 		picture = "Portrait_Soviet_Mikhail_Tukhachevsky.dds"
-	traits = { offensive_doctrine }
-	skill = 4
+	traits = { offensive_doctrine fast_planner inspirational_leader }
+	skill = 5
 
-	
-}
 
-create_field_marshal = {
-	name = "Semyon Budyonny"
-		picture = "Portrait_Soviet_Semyon_Budyonny.dds"
-	traits = { old_guard }
-	skill = 1
-
-	
 }
 
 create_corps_commander = {
-	name = "Ivan Chernyakhovsky"
-		picture = "Portrait_Soviet_Ivan_Chernyakhovsky.dds"
-	traits = {  }
-	skill = 1 
+	name = "Mikhail Frunze"
+		picture = "Mikhail_Frunze.dds"
+	traits = { trickster engineer }
+	skill = 5
 
-	
+
 }
 
-create_corps_commander = {
-	name = "Issa Pliyev"
-		picture = "Portrait_Soviet_Issa_Pliyev.dds"
-	traits = {  }
-	skill = 1
 
-	
-}
-
-create_corps_commander = {
-	name = "Leonid Govorov"
-		picture = "Portrait_Soviet_Leonid_Govorov.dds"
-	traits = {   }
-	skill = 3
-	
-}
-
-create_field_marshal = {
-	name = "Grigory Kulik"
-		picture = "Portrait_Soviet_Grigory_Kulik.dds"
-	traits = { old_guard }
-	skill = 1	
-}
-
-create_corps_commander = {
-	name = "Kirill Meretskov"
-		picture = "Portrait_Soviet_Kirill_Meretskov.dds"
-	traits = {  }
-	skill = 3
-	
-
-	
-}
-
-create_corps_commander = {
-	name = "Filipp Golikov"
-		picture = "Portrait_Soviet_Filipp_Golikov.dds"
-	traits = {  }
-	skill = 3
-	
-}
-
-create_corps_commander = {
-	name = "Andrey Yeryomenko"
-		picture = "Portrait_Soviet_Andrey_Yeryomenko.dds"
-	traits = {  }
-	skill = 1 
-
-	
-}
-
-create_corps_commander = {
-	name = "Georgiy Zakharov"
-		picture = "Portrait_Soviet_Georgiy_Zakharov.dds"
-	traits = {  }
-	skill = 1 
-
-	
-}
-
-create_corps_commander = {
-	name = "Yakov Cherevichenko"
-		picture = "Portrait_Soviet_Yakov_Cherevichenko.dds"
-	traits = {  }
-	skill = 3
-	
-}
-
-create_corps_commander = {
-	name = "Max Reyter"
-		picture = "Portrait_Soviet_Max_Andreyevich.dds"
-	traits = {  }
-	skill = 1
-
-	
-}
-create_corps_commander = {
-	name = "Nikandr Chibisov"
-		picture = "Portrait_Soviet_Nikandr_Yevlampyevich_Chibisov.dds"
-	traits = { trickster }
-	skill = 3
-
-	
-}
-create_corps_commander = {
-	name = "Vasily Kuznetsov"
-		picture = "Portrait_Soviet_Vasily_Kuznetsov.dds"
-	traits = { commando }
-	skill = 3
-	
-}
-
-create_corps_commander = {
-	name = "Andrey Vlasov"
-		picture = "Portrait_Soviet_Andrey_Vlasov.dds"
-	traits = { winter_specialist }
-	id = 412
-	skill = 3
-	
-}
-
-create_corps_commander = {
-	name = "Ivan Fedyuninsky"
-		picture = "Portrait_Soviet_Ivan_Fedyuninsky.dds"
-	traits = {  }
-	skill = 1 
-	
-}
-
-create_corps_commander = {
-	name = "Maksim Purkayev"
-		picture = "Portrait_Soviet_Maksim_Purkayev.dds"
-	traits = {  }
-	skill = 3
-
-	
-}
-create_corps_commander = {
-	name = "Kuzma Galitsky"
-		picture = "Portrait_Soviet_Kuzma_Galitsky.dds"
-	traits = {  }
-	skill = 1 
-
-	
-}
-create_corps_commander = {
-	name = "Markian Popov"
-		picture = "Portrait_Soviet_Matkian_Popov.dds"
-	traits = { winter_specialist }
-	skill = 2
-
-	
-}
-
-create_corps_commander = {
-	name = "Nikolai Berzarin"
-		picture = "Portrait_Soviet_Nikolai_Berzarin.dds"
-	traits = {  }
-	skill = 3
-	
-}
-
-create_corps_commander = {
-	name = "Alexander Gorbatov"
-		picture = "Portrait_Soviet_Alexander_Gorbatov.dds"
-	traits = {  }
-	skill = 3
-	
-}
-
-create_corps_commander = {
-	name = "Kirill Moskalenko"
-		picture = "Portrait_Soviet_Kirill_Moskalenko.dds"
-	traits = {  }
-	skill = 3
-	
-}
-
-create_corps_commander = {
-	name = "Dmitry Lelyushenko"
-		picture = "Portrait_Soviet_Dmitri_Danilovich_Lelyushenko.dds"
-	traits = {  }
-	skill = 1 
-	
-}
-
-create_corps_commander = {
-	name = "Andrei Grechko"
-		picture = "Portrait_Soviet_Andrei_Antonovich_Grechko.dds"
-	traits = {  }
-	skill = 3
-
-
-	
-}
-
-create_corps_commander = {
-	name = "Rodion Malinovsky"
-		picture = "Portrait_Soviet_Rodion_Malinovsky.dds"
-	traits = {  }
-	skill = 1 
-
-	
-}
-
-create_corps_commander = {
-	name = "Vasily Chuikov"
-		picture = "Portrait_Soviet_Vasily_Chuikov.dds"
-	traits = {  }
-	skill = 1
-
-	
-}
 
 create_navy_leader = {
 	name = "Filipp Oktyabrskiy"

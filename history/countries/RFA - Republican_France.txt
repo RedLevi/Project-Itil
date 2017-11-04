@@ -58,21 +58,21 @@ set_politics = {
 		liberalism = {
 			popularity = 0
 		}
-		
+
 		communism = {
 			popularity = 0
 		}
-		
+
 		socialism = {
 			popularity = 0
 		}
-		
+
 		reactionarism = {
 			popularity = 20
 		}
-		
+
 	}
-	
+
 	ruling_party = national_integralism
 	last_election = "1932.5.1"
 	election_frequency = 48
@@ -86,6 +86,20 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = integralism
 	traits = {
-		
+
 	}
+}
+
+create_corps_commander = {
+	name = "Henri d'Astier de la Vigerie"
+	picture = "Henri_Vigerie.dds"
+	traits = {  trickster }
+	skill = 1
+}
+
+create_field_marshal = {
+	name = "Louis Franchet d'Espèrey"
+	picture = "Louis_Esperey.dds"
+	traits = { old_guard offensive_doctrine }
+	skill = 2
 }

@@ -15,7 +15,7 @@ focus_tree = {
 	focus = {
 		id = GER_reichskanzler
 		icon = GFX_reichkanzler
-		x = 3
+		x = 5
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -48,7 +48,7 @@ focus_tree = {
 	}	
 	
 	focus = {
-		id = GER_election_campaign
+		id = GER_liberalization
 		icon = GFX_elections
 		x = 3
 		y = 1
@@ -59,90 +59,104 @@ focus_tree = {
 		
 		available_if_capitulated = no
 		prerequisite = { focus = GER_reichskanzler }	
-        mutually_exclusive = { focus = GER_stabilize_the_nation }	
+        mutually_exclusive = { focus = GER_stabilize focus = GER_status_quo }	
 
         available = {
-		date < 1937.1.1
+			date > 1937.1.12
+			OR = {
+				has_government = liberalism 
+				has_government = socialism
+			}
 		}
 
 		completion_reward = {
-		    add_ideas = election_campaign
+		   add_national_unity = -0.05 
 		}
 	}
-
 	focus = {
-		id = GER_stabilize_the_nation
+		id = GER_socialist_free
+		icon = GFX_elections
+		x = 4
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = GER_liberalization }	
+
+        available = {
+
+			always = yes 
+		}
+
+		completion_reward = {
+		   add_ideas = GER_legal_commies
+		}
+	}
+	focus = {
+		id = GER_junkers_remove
+		icon = GFX_elections
+		x = 4
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = GER_liberalization }	
+
+        available = {
+			always = yes 
+		}
+
+		completion_reward = {
+		   add_ideas = GER_legal_commies
+		}
+	}
+	focus = {
+		id = GER_stabilize
 		icon = GFX_stability
-		x = 5
+		x = 9
 		y = 1
 		cost = 10
 		ai_will_do = {
-			factor = 2
+			factor = 5
 		}	
-		
+		available = {
+			date > 1937.1.12
+			has_government = conservatism  
+			has_country_flag = GER_con_zen_1937
+		}
 		available_if_capitulated = no
 		prerequisite = { focus = GER_reichskanzler }			
-		mutually_exclusive = { focus = GER_election_campaign }
+		mutually_exclusive = { focus = GER_liberalization focus = GER_status_quo }
 
 		completion_reward = {
-			add_popularity = { ideology = reactionarism popularity = 0.2 }
+			
 		}
 	}	
-	
+
 	focus = {
-		id = GER_rule_by_army
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 5
-		y = 2
+		id = GER_status_quo
+		icon = GFX_stability
+		x = 6
+		y = 1
 		cost = 10
 		ai_will_do = {
-			factor = 10
+			factor = 5
 		}	
-		
+		available = {
+			date > 1937.1.12
+			OR = {
+				has_government = liberalism
+				has_government = conservatism
+			}
+		}
 		available_if_capitulated = no
-		prerequisite = { focus = GER_stabilize_the_nation }			
+		prerequisite = { focus = GER_reichskanzler }			
+		mutually_exclusive = { focus = GER_liberalization focus = GER_stabilize }
 
 		completion_reward = {
-			country_event = { days = 0 id = germany.2 }
+			
 		}
-	}	
-	
-	focus = {
-		id = GER_purge_opposition
-		icon = GFX_purge_opposition
-		x = 5
-		y = 3
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}		
-		
-		available_if_capitulated = no
-		prerequisite = { focus = GER_rule_by_army }			
-
-		completion_reward = {
-			set_politics = { ruling_party = reactionarism elections_allowed = no }
-			remove_ideas = adenauer_pm
-		}
-	}	
-	
-	focus = {
-		id = GER_a_new_germany
-		icon = GFX_new_germany
-		x = 5
-		y = 4
-		cost = 1
-		ai_will_do = {
-			factor = 10
-		}		
-		
-		available_if_capitulated = no
-		prerequisite = { focus = GER_purge_opposition }			
-
-		completion_reward = {
-			country_event = { days = 0 id = germany.3 }
-		}
-	}	
+	}
 	
 	focus = {
 		id = GER_increase_military_spending
@@ -618,7 +632,7 @@ focus_tree = {
 	focus = {
 		id = GER_improve_relations_east
 		icon = GFX_goal_generic_improve_relations
-		x = 11
+		x = 12
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -809,8 +823,8 @@ focus_tree = {
 	focus = {
 		id = GER_improve_relations_lit
 		icon = GFX_lithuania
-		x = 8
-		y = 2
+		x = 11
+		y = 3
 		cost = 2
 		ai_will_do = {
 			factor = 2
@@ -1461,18 +1475,21 @@ focus_tree = {
 		y = 7
 		cost = 10
 		ai_will_do = {
-			factor = 5
+			factor = 8
 		}		
 
         available_if_capitulated = no
 		prerequisite = { focus = GER_millitary_campaign }
 		available = {
-		FRA = { has_civil_war = no }
+			has_global_flag = france_civil_war 
+			NFA = { 
+				exists = yes 
+				NOT = { has_war_with = GER }
+			}
 		}
 		
 		completion_reward = {
-			army_experience = 25
-		    add_political_power = 50
+			NFA = { country_event = france.30 }
 		}
 	}	
 	

@@ -50,7 +50,6 @@ add_ideas = {
 
 create_faction = "second_international"
 add_to_faction = SOV
-add_to_faction = POL
 add_to_faction = PER
 add_to_faction = LAT
 set_politics = {

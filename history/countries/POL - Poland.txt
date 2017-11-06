@@ -40,35 +40,35 @@ set_politics = {
 		}
 
 		liberalism = {
-			popularity = 15
+			popularity = 10
 		}
 		
 		communism = {
-			popularity = 40
+			popularity = 20
 		}
 		
 		socialism = {
-			popularity = 5
+			popularity = 25	
 		}
 		
 		reactionarism = {
-			popularity = 0
+			popularity = 5
 		}
 		
 	}
 	
-	ruling_party = communism
+	ruling_party = socialism
 	last_election = "1935.9.8"
 	election_frequency = 36
 	elections_allowed = no
 }
 
 create_country_leader = {
-	name = "Róża Luksemburg"
+	name = "Walery Sławek"
 	desc = "POLITICS_WLADYSLAW_SIKORSKI_DESC"
-	picture = "Rosa.dds"
+	picture = "Walery.dds"
 	expire = "1965.1.1"
-	ideology = marxism
+	ideology = democratic_socialism 
 	traits = {
 		#
 	}

@@ -943,7 +943,7 @@ NAI = {
 	GIVE_STATE_CONTROL_DIST_SCORE_MULT = 0.2,	-- Multiplier for the score gained from distance ( GIVE_STATE_CONTROL_MAX_SCORE_DIST - distance ) * this
 	IRRATIONALITY_LAMBDA = 200,					-- Lambda given to Poisson Random function determining if a leader should act a bit irrational 											
 												-- Value of 200 should give 0.3% chance of Stalin going for instance crazy and conquering all of America
-	GENERATE_WARGOAL_THREAT_BASELINE = 0.2,	-- The baseline for what the AI considers the world is getting dangerous and we want to generate wargoals	
+	GENERATE_WARGOAL_THREAT_BASELINE = 0.3,	-- The baseline for what the AI considers the world is getting dangerous and we want to generate wargoals	
 	RESERVE_TO_COMMITTED_BALANCE = 0.1,			-- How many reserves compared to number of committed divisions in a combat (1.0 = as many as reserves as committed)
 	DIPLOMACY_COMMUNIST_NOT_NEIGHBOUR = -10,	-- Communists want to stay consolidated with their influence
 	MAIN_ENEMY_FRONT_IMPORTANCE = 4.0,			-- How much extra focus the AI should put on who it considers to be its current main enemy.

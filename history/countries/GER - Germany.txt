@@ -121,13 +121,12 @@ if = {
 }
 
 create_country_leader = {
-	name = "Wilhelm II von Preußen"
+	name = "Konrad Adenauer"
 	desc = "POLITICS_WILHELM_DESC"
-	picture = "gfx/leaders/GER/Kaiser_Wilhelm_Von_Preusen.dds"
+	picture = "gfx/leaders/GER/Konrad.dds"
 	expire = "1965.1.1"
 	ideology = authoritarian_conservatism
 	traits = {
-		glorious_leader
 	}
 }
 

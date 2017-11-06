@@ -901,7 +901,7 @@ air_wings = {
 	}
 
 	### RAF Far East
-	336 = { 
+	763 = { 
 		### RAF Far East
 		nav_bomber_equipment_1 = {
 			owner = "ENG" 

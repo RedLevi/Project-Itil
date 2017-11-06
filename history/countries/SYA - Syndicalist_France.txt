@@ -58,21 +58,21 @@ set_politics = {
 		liberalism = {
 			popularity = 0
 		}
-		
+
 		communism = {
 			popularity = 100
 		}
-		
+
 		socialism = {
 			popularity = 0
 		}
-		
+
 		reactionarism = {
 			popularity = 0
 		}
-		
+
 	}
-	
+
 	ruling_party = communism
 	last_election = "1932.5.1"
 	election_frequency = 48
@@ -86,6 +86,16 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = syndicalism
 	traits = {
-		
+
 	}
+}
+
+create_field_marshal = {
+	name = "Pierre Monatte"
+	id = 401
+		picture = "Pierre_General.dds"
+	traits = { old_guard }
+	skill = 1
+
+
 }

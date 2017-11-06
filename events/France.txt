@@ -824,16 +824,8 @@ country_event = { #GERMAN SUPPORT
     id = france.29
     title = france.29.t
     desc = france.29.d
-    fire_only_once = yes
-    #TRIGGERED BY EVENT#
+#Nothing seems to be here#
 
-    option = { #NO TROOPS
-    name = france.29.a
-    }
-    option = { #SEND TROOPS BUT ALSACE
-    name = france.29.b
-    NFA = { country_event = { france.30 days = 5 } }
-    }
 }
 
 country_event = { #PETAINS DECISION

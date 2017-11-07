@@ -886,7 +886,8 @@ focus_tree = {
 		prerequisite = { focus = GER_imperial_dominance }
 		
 		completion_reward = {
-			reverse_add_opinion_modifier = { target = SAU modifier = ENG_EUR_theater }
+			reverse_add_opinion_modifier = { target = SAU modifier = GER_me_relations }
+			reverse_add_opinion_modifier = { target = TUR modifier = GER_me_relations }
 		}
 	}	
 
@@ -905,7 +906,7 @@ focus_tree = {
 		
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = SWE modifier = ENG_EUR_theater }
-			reverse_add_opinion_modifier = { target = NOR modifier = ENG_EUR_theater }
+			reverse_add_opinion_modifier = { target = FIN modifier = ENG_EUR_theater }
 			reverse_add_opinion_modifier = { target = HOL modifier = ENG_EUR_theater }
 			reverse_add_opinion_modifier = { target = DEN modifier = ENG_EUR_theater }
 			reverse_add_opinion_modifier = { target = SWI modifier = ENG_EUR_theater }
@@ -926,9 +927,9 @@ focus_tree = {
 		prerequisite = { focus = GER_imperial_dominance }
 		
 		completion_reward = {
-			reverse_add_opinion_modifier = { target = YUN modifier = ENG_EUR_theater }
-			reverse_add_opinion_modifier = { target = JAP modifier = ENG_EUR_theater }
-			reverse_add_opinion_modifier = { target = RUS modifier = ENG_EUR_theater }			
+			reverse_add_opinion_modifier = { target = YUN modifier = GER_asia_relations }	
+			reverse_add_opinion_modifier = { target = JAP modifier = GER_bad_diplomacy }
+			reverse_add_opinion_modifier = { target = ZHI modifier = GER_bad_diplomacy }
 		}
 	}
 	
@@ -946,44 +947,41 @@ focus_tree = {
 		prerequisite = { focus = GER_imperial_dominance }
 		
 		completion_reward = {
-		reverse_add_opinion_modifier = { target = NOR modifier = ENG_EUR_theater }
+		reverse_add_opinion_modifier = { target = DEN modifier = ENG_EUR_theater }
 		reverse_add_opinion_modifier = { target = SWE modifier = ENG_EUR_theater }
+		reverse_add_opinion_modifier = { target = FIN modifier = ENG_EUR_theater }
 		}
 	}
 
+
+	
 	focus = {
-		id = GER_norwegian_ties
-		icon = GFX_norwegian_ties
+		id = GER_swedish_steel
+		icon = GFX_swedish_steel
 		x = 24
 		y = 2
 		cost = 10
 		ai_will_do = {
 			factor = 2
 		}		
-
+		available = { 
+		
+			SWE = {
+				is_in_faction = no
+				exists = yes 
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+				
+			}
+			
+		}
         available_if_capitulated = no		
 		prerequisite = { focus = GER_scandinavia }
 		
 		completion_reward = {
-        NOR = { country_event = { days = 0 id = germany.6 } }
-		}
-	}	
-	
-	focus = {
-		id = GER_swedish_steel
-		icon = GFX_swedish_steel
-		x = 24
-		y = 3
-		cost = 10
-		ai_will_do = {
-			factor = 2
-		}		
-
-        available_if_capitulated = no		
-		prerequisite = { focus = GER_norwegian_ties }
-		
-		completion_reward = {
-		SWE = { country_event = { days = 0 id = germany.16 } }
+		SWE = { country_event = { id = germany.19 } }
 		}
 	}	
 	
@@ -991,17 +989,29 @@ focus_tree = {
 		id = GER_finnish_friends
 		icon = GFX_finnish_friends
 		x = 24
-		y = 4
+		y = 3
 		cost = 5
 		ai_will_do = {
 			factor = 2
 		}		
-
+		available = { 
+		
+			FIN = {
+				is_in_faction = no
+				exists = yes 
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+				
+			}
+			
+		}
         available_if_capitulated = no	
 		prerequisite = { focus = GER_swedish_steel }
 		
 		completion_reward = {
-			reverse_add_opinion_modifier = { target = FIN modifier = ENG_EUR_theater }
+			FIN = { country_event = { id = germany.19 } }
 		}
 	}	
 	
@@ -1014,18 +1024,31 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}		
-
+		available = { 
+		
+			YUN = {
+				is_in_faction = no
+				exists = yes 
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+				
+			}
+			
+		}
         available_if_capitulated = no
 		prerequisite = { focus = GER_far_east }
 		
 		completion_reward = {
-		    add_manpower = -30000
-			YUN = { country_event = { days = 0 id = germany.4 } }
+			send_equipment = { target = YUN type = infantry_equipment amount = 1500 }
+			send_equipment = { target = YUN type = support_equipment amount = 150 }
+			YUN = { country_event = { id = germany.4 } }
 		}
 	}	
 	
 	focus = {
-		id = GER_japanese_support
+		id = GER_ally_SIA 
 		icon = GFX_focus_generic_japanese_imperial_glory
 		x = 22
 		y = 3
@@ -1033,13 +1056,24 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}		
-
+		available = { 
+		
+			SIA = {
+				is_in_faction = no
+				exists = yes 
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+				
+			}
+			
+		}
         available_if_capitulated = no		
 		prerequisite = { focus = GER_chinese_aid }
 		
 		completion_reward = {
-		    custom_effect_tooltip = japanese_pact
-			JAP = { country_event = { days = 0 id = germany.17 } }
+			SIA = { country_event = { id = germany.21 } }
 		}
 	}
 		
@@ -1089,7 +1123,7 @@ focus_tree = {
 		available = { 
 		
 			LIT = {
-			
+				is_in_faction = no
 				exists = yes 
 				NOT = {
 					has_government = communism
@@ -1120,7 +1154,7 @@ focus_tree = {
 		available = { 
 		
 			EST = {
-			
+				
 				exists = yes 
 				NOT = {
 					has_government = communism
@@ -1150,7 +1184,7 @@ focus_tree = {
 		available = { 
 		
 			EST = {
-			
+				is_in_faction = no
 				exists = yes 
 				NOT = {
 					has_government = communism
@@ -1177,15 +1211,28 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}		
-
+		available = { 
+		
+			ROM = {
+			
+				exists = yes 
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+				
+			}
+			
+		}
         available_if_capitulated = no		
 		prerequisite = { focus = GER_improve_relations_east }
 		mutually_exclusive = { focus = GER_bulgarian_help }
 		
 		completion_reward = {
-		send_equipment = { target = ROM type = infantry_equipment amount = 300 }
+		send_equipment = { target = ROM type = infantry_equipment amount = 1000 }
 		send_equipment = { target = ROM type = support_equipment amount = 150 }
-		reverse_add_opinion_modifier = { target = ROM modifier = GER_BAK_theater }		
+		reverse_add_opinion_modifier = { target = ROM modifier = GER_BAK_theater }	
+		ROM = { country_event = { id = germany.21 } }		
 		}
 	}
 	
@@ -1232,14 +1279,27 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}		
-
+		available = { 
+		
+			UKR = {
+			
+				exists = yes 
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+				
+			}
+			
+		}
         available_if_capitulated = no	
 		prerequisite = { focus = GER_bulgarian_help focus = GER_romanian_help }
 		
 		completion_reward = {
-		send_equipment = { target = UKR type = infantry_equipment amount = 750 }
+		send_equipment = { target = UKR type = infantry_equipment amount = 2500 }
 		send_equipment = { target = UKR type = support_equipment amount = 200 }
 		reverse_add_opinion_modifier = { target = UKR modifier = GER_UKR_theater }
+		UKR = { country_event = { id = germany.21 } }
 		}
 	}	
 	
@@ -1248,18 +1308,90 @@ focus_tree = {
 		icon = GFX_ukraine
 		x = 13
 		y = 4
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 5
 		}		
 
         available_if_capitulated = no	
 		prerequisite = { focus = GER_ukrainian_defence }
+		available = { 
 		
+			UKR = {
+				is_in_faction = no
+				exists = yes 
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+				
+			}
+			
+		}
 		completion_reward = {
-		UKR = { country_event = { days = 0 id = germany.5 } }
+		UKR = { country_event = { id = germany.18 } }
 		}
 	}		
+	
+	focus = {
+		id = GER_romanian_pact
+		icon = GFX_romania
+		x = 12
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}		
+
+        available_if_capitulated = no	
+		prerequisite = { focus = GER_romanian_help }
+		available = { 
+		
+			ROM = {
+				is_in_faction = no
+				exists = yes 
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+				
+			}
+			
+		}
+		completion_reward = {
+		ROM = { country_event = { id = germany.18 } }
+		}
+	}
+	
+	focus = {
+		id = GER_bulgarian_pact
+		icon = GFX_romania
+		x = 14
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}		
+		
+        available_if_capitulated = no	
+		prerequisite = { focus = GER_bulgarian_help }
+		available = { 
+		
+			BUL = {
+				is_in_faction = no
+				exists = yes 
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+				
+			}
+			
+		}
+		completion_reward = {
+		BUL = { country_event = { id = germany.18 } }
+		}
+	}
 	
 	focus = {
 		id = GER_reorganize_belgium

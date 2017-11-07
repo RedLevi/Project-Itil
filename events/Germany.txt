@@ -180,7 +180,7 @@ country_event = {#federal elections of 1937
 	}
 }
 
-country_event = {
+country_event = {#Germany sends support
 
 	id = germany.4 
 	title = germany.4.t 
@@ -189,44 +189,19 @@ country_event = {
     is_triggered_only = yes
 	
 	option = {
-		ai_chance = { 
-			factor = 90 
-		}	
 		name = germany.4.a
-		army_experience = 50
-		reverse_add_opinion_modifier = { target = GER modifier = ENG_EUR_theater }
+		ai_chance = { factor = 60 }
+		add_ideas = YUN_GER_support
+		declare_war_on = { target = SIC type = annex_everything }
 	}	
 	option = {
-		ai_chance = { 
-			factor = 10 
-		}		
-		name = germany.4.b
-	}	
+		name = germany.4.a
+		ai_chance = { factor = 40 }
+		add_ideas = YUN_GER_support
+		add_national_unity = 0.03 
+	}
 }
 
-country_event = {
-
-	id = germany.5 
-	title = germany.5.t 
-	desc = germany.5.d
-	
-    is_triggered_only = yes
-	
-	option = {
-		ai_chance = { 
-			factor = 60 
-		}		
-		name = germany.5.a
-		GER = { add_to_faction = UKR }
-	}	
-	option = {
-		ai_chance = { 
-			factor = 40 
-		}		
-		name = germany.5.b	
-		diplomatic_relation = { country = GER relation = non_aggression_pact }
-	}	
-}
 
 country_event = {
 
@@ -540,29 +515,6 @@ country_event = {
 	}
 }
 
-country_event = {
-
-	id = germany.16 
-	title = germany.16.t 
-	desc = germany.16.d
-	
-    is_triggered_only = yes
-	
-	option = {
-	    ai_chance = { 
-		    factor = 70
-	    }	
-		name = germany.16.a
-		reverse_add_opinion_modifier = { target = GER modifier = ENG_EUR_theater }
-		diplomatic_relation = { country = GER relation = non_aggression_pact }
-	}	
-	option = {
-	    ai_chance = { 
-		    factor = 30
-	    }	
-		name = germany.16.b
-	}	
-}
 
 country_event = {
 
@@ -598,12 +550,12 @@ country_event = {#german offer
 	is_triggered_only = yes 
 	option = {#agree 
 		name = germany.18.a 
-		ai_chance = { factor = 70 }
+		ai_chance = { factor = 65 }
 		GER = { country_event = { id = germany.19 } }
 	}
 	option = {#refuse 
 		name = germany.18.b 
-		ai_chance = { factor = 30 }
+		ai_chance = { factor = 35 }
 		GER = { country_event = { id = germany.20 } }
 		add_national_unity = 0.05 
 		reverse_add_opinion_modifier = { target = GER modifier = refused_GER_alliance }
@@ -628,17 +580,20 @@ country_event = {#Country agrees
 	is_triggered_only = yes 
 	option = {
 		name = germany.20.a 
-		
+		add_named_threat = { name = GER_expansion_threat threat = 1 }
 	}
 }
 
-country_event = {#Germany sends support 
+country_event = {#Germany sends support
 	id = germany.21 
 	title = germany.21.t 
 	desc = germany.21.d 
 	is_triggered_only = yes 
 	option = {
 		name = germany.21.a 
-		
+		if = { limit = { tag = BUL } add_ideas = BUL_GER_support }
+		if = { limit = { tag = ROM } add_ideas = ROM_GER_support }
+		if = { limit = { tag = UKR } add_ideas = UKR_GER_support }
 	}
 }
+

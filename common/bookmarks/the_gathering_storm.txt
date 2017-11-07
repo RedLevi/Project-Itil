@@ -19,7 +19,7 @@ bookmarks = {
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = conservatism
 			ideas = {
-			adenauer_pm
+			kaiser_wilhelm_ii_original
 			overconfident_general_staff
 			}
 			focuses = {

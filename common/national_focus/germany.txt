@@ -59,7 +59,8 @@ focus_tree = {
 		
 		available_if_capitulated = no
 		prerequisite = { focus = GER_reichskanzler }	
-        mutually_exclusive = { focus = GER_stabilize focus = GER_status_quo }	
+        mutually_exclusive = { focus = GER_stabilize }
+		mutually_exclusive = { focus = GER_status_quo }
 
         available = {
 			date > 1937.1.12
@@ -67,10 +68,19 @@ focus_tree = {
 				has_government = liberalism 
 				has_government = socialism
 			}
+			OR = {
+				has_country_flag = GER_soc_1937
+			}
 		}
 
 		completion_reward = {
 		   add_national_unity = -0.05 
+		   add_popularity = { 
+			
+				ideology = liberalism  
+				popularity = 0.1
+				
+		}
 		}
 	}
 	focus = {
@@ -90,6 +100,18 @@ focus_tree = {
 
 		completion_reward = {
 		   add_ideas = GER_legal_commies
+		   add_popularity = { 
+			
+				ideology = socialism  
+				popularity = 0.075
+				
+			}
+			add_popularity = { 
+			
+				ideology = communism  
+				popularity = 0.05 
+				
+			}
 		}
 	}
 	focus = {
@@ -100,14 +122,44 @@ focus_tree = {
 		cost = 10
 		
 		available_if_capitulated = no
-		prerequisite = { focus = GER_liberalization }	
+		prerequisite = { focus = GER_socialist_free }	
 
         available = {
 			always = yes 
 		}
 
 		completion_reward = {
-		   add_ideas = GER_legal_commies
+		   add_ideas = GER_removed_junkers
+		   add_popularity = { 
+			
+				ideology = reactionarism  
+				popularity = -0.1
+				
+			}
+			add_popularity = { 
+			
+				ideology = conservatism  
+				popularity = -0.05
+				
+			}
+		}
+	}
+	focus = {
+		id = GER_puppet_monarch
+		icon = GFX_elections
+		x = 4
+		y = 4
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = GER_junkers_remove }	
+
+        available = {
+			always = yes 
+		}
+
+		completion_reward = {
+		   swap_ideas = { remove_idea = kaiser_wilhelm_ii_original add_idea = kaiser_wilhelm_ii_puppet }
 		}
 	}
 	focus = {
@@ -126,13 +178,114 @@ focus_tree = {
 		}
 		available_if_capitulated = no
 		prerequisite = { focus = GER_reichskanzler }			
-		mutually_exclusive = { focus = GER_liberalization focus = GER_status_quo }
+		mutually_exclusive = { focus = GER_liberalization  }
+		mutually_exclusive = { focus = GER_status_quo }
 
 		completion_reward = {
+			add_popularity = { 
 			
+				ideology = reactionarism  
+				popularity = 0.075 
+				
+			}
 		}
 	}	
 
+	focus = {
+		id = GER_restrict_left
+		icon = GFX_elections
+		x = 8
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = GER_stabilize }	
+
+        available = {
+
+			always = yes 
+		}
+
+		completion_reward = {
+		   add_ideas = GER_restrict_the_left
+		   	add_popularity = { 
+			
+				ideology = communism  
+				popularity = -0.15 
+				
+			}
+			add_popularity = { 
+			
+				ideology = socialism  
+				popularity = -0.1
+				
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_militirize_society
+		icon = GFX_elections
+		x = 8
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = GER_restrict_left }	
+
+        available = {
+
+			always = yes 
+		}
+
+		completion_reward = {
+		   add_ideas = GER_militirzed_society
+		}
+	}
+	
+	focus = {
+		id = GER_imperial_authority
+		icon = GFX_elections
+		x = 8
+		y = 4
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = GER_militirize_society }	
+
+        available = {
+
+			always = yes 
+		}
+
+		completion_reward = {
+		  swap_ideas = { remove_idea = kaiser_wilhelm_ii_original add_idea = kaiser_wilhelm_ii_power }
+		  set_politics = { 
+		
+			ruling_party = reactionarism   
+			elections_allowed = no 
+			
+		}
+		
+		add_popularity = { 
+			
+				ideology = reactionarism  
+				popularity = 0.1 
+				
+		}
+		create_country_leader = {
+			name = "Franz von Papen"
+			desc = "doesntmatter"
+			picture = "Papen.dds"
+			expire = "1960.1.1"
+			ideology = autocracy
+			traits = {
+			
+			}
+		}
+		}
+	}
+	
 	focus = {
 		id = GER_status_quo
 		icon = GFX_stability
@@ -148,16 +301,88 @@ focus_tree = {
 				has_government = liberalism
 				has_government = conservatism
 			}
+			OR = {
+				has_country_flag = GER_lib_zen_1937
+				has_country_flag = GER_lib_soc_1937
+			}
 		}
 		available_if_capitulated = no
 		prerequisite = { focus = GER_reichskanzler }			
-		mutually_exclusive = { focus = GER_liberalization focus = GER_stabilize }
+		mutually_exclusive = { focus = GER_liberalization }
+		mutually_exclusive = { focus = GER_stabilize }
 
 		completion_reward = {
+			add_popularity = { 
 			
+				ideology = conservatism  
+				popularity = 0.05
+				
+			}
+			add_popularity = { 
+			
+				ideology = liberalism  
+				popularity = 0.05
+				
+			}
 		}
 	}
-	
+	focus = {
+		id = GER_youth_brigades
+		icon = GFX_elections
+		x = 6
+		y = 2
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = GER_status_quo }	
+
+        available = {
+
+			always = yes 
+		}
+
+		completion_reward = {
+		   add_ideas = GER_youth_brigades_idea
+		}
+	}
+	focus = {
+		id = GER_materials_conservation
+		icon = GFX_elections
+		x = 6
+		y = 3
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = GER_youth_brigades }	
+
+        available = {
+
+			always = yes 
+		}
+
+		completion_reward = {
+		   add_ideas = GER_reusing_materials
+		}
+	}
+	focus = {
+		id = GER_colonial_reforms
+		icon = GFX_elections
+		x = 6
+		y = 4
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = GER_materials_conservation }	
+
+        available = {
+
+			always = yes 
+		}
+
+		completion_reward = {
+		   add_ideas = GER_colonial_changes
+		}
+	}
 	focus = {
 		id = GER_increase_military_spending
 		icon = GFX_goal_generic_small_arms
@@ -587,8 +812,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = nuclear_bonus
-				ahead_reduction = 0.5
-				uses = 2
+				ahead_reduction = 0.75
+				uses = 1
 				category = nuclear
 			}		
 		}
@@ -608,7 +833,7 @@ focus_tree = {
 		prerequisite = { focus = GER_brandenburg_plan }
 
 		completion_reward = {
-			add_research_slot = 2
+			add_research_slot = 1
 		}
 	}	
 	
@@ -643,8 +868,7 @@ focus_tree = {
 		prerequisite = { focus = GER_imperial_dominance }
 		
 		completion_reward = {
-			reverse_add_opinion_modifier = { target = UKR modifier = ENG_EUR_theater }
-			reverse_add_opinion_modifier = { target = TUR modifier = ENG_EUR_theater }
+			reverse_add_opinion_modifier = { target = SOV modifier = GER_bad_diplomacy }
 		}
 	}	
 	
@@ -825,10 +1049,24 @@ focus_tree = {
 		icon = GFX_lithuania
 		x = 11
 		y = 3
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}		
+		
+		available = { 
+		
+			LIT = {
+			
+				exists = yes 
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+				
+			}
+			
+		}
 
         available_if_capitulated = no		
 		prerequisite = { focus = GER_improve_relations_east }
@@ -839,15 +1077,59 @@ focus_tree = {
 	}	
 	
 	focus = {
-		id = GER_improve_relations_est
-		icon = GFX_estonia
-		x = 10
-		y = 2
-		cost = 2
+		id = GER_ally_lit
+		icon = GFX_lithuania
+		x = 11
+		y = 4
+		cost = 5
 		ai_will_do = {
 			factor = 2
 		}		
 
+		available = { 
+		
+			LIT = {
+			
+				exists = yes 
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+				
+			}
+			
+		}
+		
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_improve_relations_lit }
+		
+		completion_reward = {
+			LIT = { country_event =  { id = germany.18 } }
+		}
+	}
+	
+	focus = {
+		id = GER_improve_relations_est
+		icon = GFX_estonia
+		x = 10
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}		
+		available = { 
+		
+			EST = {
+			
+				exists = yes 
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+				
+			}
+			
+		}
         available_if_capitulated = no		
 		prerequisite = { focus = GER_improve_relations_east }
 		
@@ -856,6 +1138,36 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = GER_ally_est
+		icon = GFX_estonia
+		x = 10
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}		
+		available = { 
+		
+			EST = {
+			
+				exists = yes 
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+				
+			}
+			
+		}
+        available_if_capitulated = no		
+		prerequisite = { focus = GER_improve_relations_est }
+		
+		completion_reward = {
+			EST = { country_event =  { id = germany.18 } }
+		}
+	}
+	
 	focus = {
 		id = GER_romanian_help
 		icon = GFX_romania
@@ -886,15 +1198,28 @@ focus_tree = {
 		ai_will_do = {
 			factor = 2
 		}		
-
+		available = { 
+		
+			BUL = {
+			
+				exists = yes 
+				NOT = {
+					has_government = communism
+					has_war_with = GER
+				}
+				
+			}
+			
+		}
         available_if_capitulated = no		
 		prerequisite = { focus = GER_improve_relations_east }
 		mutually_exclusive = { focus = GER_romanian_help }
 		
 		completion_reward = {
-		send_equipment = { target = BUL type = infantry_equipment amount = 300 }
+		send_equipment = { target = BUL type = infantry_equipment amount = 1000 }
 		send_equipment = { target = BUL type = support_equipment amount = 150 }
-		reverse_add_opinion_modifier = { target = BUL modifier = GER_BAK_theater }		
+		reverse_add_opinion_modifier = { target = BUL modifier = GER_BAK_theater }	
+		BUL = { country_event = { id = germany.21 } }
 		}
 	}	
 	

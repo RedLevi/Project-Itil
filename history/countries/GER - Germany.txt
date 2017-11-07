@@ -42,7 +42,7 @@ set_technology = {
 }
 
 add_ideas = {
-    adenauer_pm
+    kaiser_wilhelm_ii_original
     overconfident_general_staff	
 }
 

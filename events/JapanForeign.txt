@@ -196,7 +196,7 @@ country_event = {#Japan offers alliance
 		ai_chance = { factor = 20 }
 		add_national_unity = 0.05 
 		JAP = { country_event = { id = jfor.13 } }
-		add_opinion_modifier = { target = JAP modifier = MON_refused_JAP }
+		reverse_add_opinion_modifier = { target = JAP modifier = MON_refused_JAP }
 	}
 }
 
@@ -299,7 +299,7 @@ country_event = {#ANH united front
 	option = {#refuse
 		name = jfor.18.b 
 		ai_chance = { factor = 60 }
-		add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
+		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
 	
@@ -340,7 +340,7 @@ country_event = {#CHI united front
 	option = {#refuse
 		name = jfor.18.b 
 		ai_chance = { factor = 25 }
-		add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
+		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
 	
@@ -361,7 +361,7 @@ country_event = {#SHX united front
 	option = {#refuse
 		name = jfor.18.b 
 		ai_chance = { factor = 20 }
-		add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
+		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 		set_country_flag = SHX_neutrality
 	}
@@ -414,7 +414,7 @@ country_event = {#PRC united front
 	option = {#refuse
 		name = jfor.18.b 
 		ai_chance = { factor = 50 }
-		add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
+		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
 	
@@ -435,7 +435,7 @@ country_event = {#XSM united front
 	option = {#refuse
 		name = jfor.18.b 
 		ai_chance = { factor = 25 }
-		add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
+		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
 	
@@ -459,7 +459,7 @@ country_event = {#YUN united front
 	option = {#refuse
 		name = jfor.18.b 
 		ai_chance = { factor = 30 }
-		add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
+		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
 	
@@ -480,7 +480,7 @@ country_event = {#SIC united front
 	option = {#refuse
 		name = jfor.18.b 
 		ai_chance = { factor = 15 }
-		add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
+		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
 	
@@ -501,7 +501,7 @@ country_event = {#GUO united front
 	option = {#refuse
 		name = jfor.18.b 
 		ai_chance = { factor = 50 }
-		add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
+		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
 	
@@ -1504,7 +1504,7 @@ country_event = {#the Japanese offer alliance
 		ai_chance = { factor = 20 }
 		JAP = { country_event = { id = jfor.59 } }
 		add_national_unity = 0.02 
-		add_opinion_modifier = { target = JAP modifier = MON_refused_JAP }
+		reverse_add_opinion_modifier = { target = JAP modifier = MON_refused_JAP }
 	}
 }
 
@@ -1541,7 +1541,7 @@ country_event = {#Japan offers protection
 		ai_chance = { factor = 65 }
 		add_national_unity = 0.02 
 		JAP = { country_event = { id = jfor.61 } }
-		add_opinion_modifier = { target = JAP modifier = MON_refused_JAP }
+		reverse_add_opinion_modifier = { target = JAP modifier = MON_refused_JAP }
 	}
 	option = {#agree 
 		name = jfor.60.b 
@@ -1772,7 +1772,7 @@ country_event = {#HELp the dutch?
 
 			}
 		}
-		add_opinion_modifier = { target = HOL modifier = MON_refused_JAP }
+		reverse_add_opinion_modifier = { target = HOL modifier = MON_refused_JAP }
 		HOL = { country_event = { id = jfor.71 } }
 	}
 }
@@ -2067,7 +2067,7 @@ country_event = {#Japan seeks reconciliation
 	is_triggered_only = yes 
 	option = {
 		name = jfor.77.a 
-		add_opinion_modifier = { target = JAP modifier = JAP_friendly_england }
+		reverse_add_opinion_modifier = { target = JAP modifier = JAP_friendly_england }
 	}
 }
 

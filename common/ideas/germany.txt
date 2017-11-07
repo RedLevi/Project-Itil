@@ -45,7 +45,7 @@ ideas = {
 			}
 		}
 		
-        adenauer_pm = {
+        kaiser_wilhelm_ii_original = {
 	
 			allowed = {
 				original_tag = GER
@@ -58,14 +58,55 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = adenauer_pm
+			
 			
 			modifier = {
-				political_power_factor = 0.1
+				political_power_gain = -0.35
 			}
 		}	
+		
+		 kaiser_wilhelm_ii_puppet = {
+	
+			allowed = {
+				original_tag = GER
+				always = no
+			}
 
-        election_campaign = {
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			
+			
+			modifier = {
+				unity_factor = 0.05 
+			}
+		}
+		
+		kaiser_wilhelm_ii_power = {
+		
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			
+			
+			modifier = {
+				political_power_gain = 0.5
+			}
+		
+		}
+
+        GER_removed_junkers = {
 	
 			allowed = {
 				original_tag = GER
@@ -77,16 +118,137 @@ ideas = {
 			}
 			
 			available = {		
-				date < 1937.1.1
+				always = yes 
 			}
 
 			removal_cost = -1
 			
 			modifier = {
-				conservatism_drift = 0.05
+				political_power_gain = 0.35 
+				supply_consumption_factor = -0.05 
 			}
 		}
 
+		GER_youth_brigades_idea = {
+		
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			available = {		
+				always = yes 
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01 
+				training_time_factor = -0.07
+			}
+		
+		}
+		
+		GER_reusing_materials = {
+		
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			available = {		
+				always = yes 
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.085 
+			}
+		
+		}
+		
+		GER_colonial_changes = {
+		
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			available = {		
+				always = yes 
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.25 
+				unity_factor = 0.015 
+			}
+		
+		}
+		
+		GER_restrict_the_left = {
+					
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			available = {		
+				always = yes 
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1  
+				unity_factor = -0.04
+				foreign_subversive_activites = -0.25 
+			}
+			
+		}
+		
+		GER_militirzed_society = {
+		
+			allowed = {
+				original_tag = GER
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			available = {		
+				always = yes 
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.05 
+				army_morale_factor = 0.2 
+			}
+		
+		}
+		
 		GER_sanctioned_AUS = {
 
 			allowed = {

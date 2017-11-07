@@ -588,3 +588,57 @@ country_event = {
 		name = germany.17.b
 	}	
 }
+
+####Generic chain for Germany's alliance offers####
+
+country_event = {#german offer
+	id = germany.18 
+	title = germany.18.t 
+	desc = germany.18.d 
+	is_triggered_only = yes 
+	option = {#agree 
+		name = germany.18.a 
+		ai_chance = { factor = 70 }
+		GER = { country_event = { id = germany.19 } }
+	}
+	option = {#refuse 
+		name = germany.18.b 
+		ai_chance = { factor = 30 }
+		GER = { country_event = { id = germany.20 } }
+		add_national_unity = 0.05 
+		reverse_add_opinion_modifier = { target = GER modifier = refused_GER_alliance }
+	}
+}
+
+country_event = {#Country agrees
+	id = germany.19 
+	title = germany.19.t 
+	desc = germany.19.d 
+	is_triggered_only = yes 
+	option = {
+		name = germany.19.a 
+		add_to_faction = FROM 
+	}
+}
+
+country_event = {#Country agrees
+	id = germany.20 
+	title = germany.20.t 
+	desc = germany.20.d 
+	is_triggered_only = yes 
+	option = {
+		name = germany.20.a 
+		
+	}
+}
+
+country_event = {#Germany sends support 
+	id = germany.21 
+	title = germany.21.t 
+	desc = germany.21.d 
+	is_triggered_only = yes 
+	option = {
+		name = germany.21.a 
+		
+	}
+}

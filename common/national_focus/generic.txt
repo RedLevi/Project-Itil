@@ -1837,7 +1837,7 @@ focus_tree = {
 											has_government = communism
 										}
 								}
-							add_opinion_modifier = {
+							reverse_add_opinion_modifier = {
 									target = ROOT
 									modifier = world_revolution_negative
 								}
@@ -1867,7 +1867,7 @@ focus_tree = {
 											has_government = socialism
 										}
 								}
-							add_opinion_modifier = {
+							reverse_add_opinion_modifier = {
 									target = ROOT
 									modifier = world_revolution_positive
 								}
@@ -2112,7 +2112,7 @@ focus_tree = {
 											has_government = national_integralism
 										}
 								}
-							add_opinion_modifier = {
+							reverse_add_opinion_modifier = {
 									target = ROOT
 									modifier = pacifism_opinion
 								}
@@ -2393,7 +2393,7 @@ focus_tree = {
 		y = 6
 			completion_reward = {
 					every_other_country = {
-							add_opinion_modifier = {
+							reverse_add_opinion_modifier = {
 									target = ROOT
 									modifier = world_domination_opinion
 								}

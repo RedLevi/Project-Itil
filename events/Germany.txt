@@ -202,135 +202,14 @@ country_event = {#Germany sends support
 	}
 }
 
-
-country_event = {
-
-	id = germany.6 
-	title = germany.6.t 
-	desc = germany.6.d
-	
-    is_triggered_only = yes
-	
-	option = {
-		ai_chance = { 
-			factor = 80 
-		}		
-		name = germany.6.a
-		reverse_add_opinion_modifier = { target = GER modifier = ENG_EUR_theater }
-		diplomatic_relation = { country = GER relation = non_aggression_pact }
-	}	
-	option = {
-		ai_chance = { 
-			factor = 20 
-		}		
-		name = germany.6.b
-	}	
-}
-
-country_event = {
-
-	id = germany.7
-	title = germany.7.t 
-	desc = germany.7.d
-	
-    is_triggered_only = yes
-	
-	option = {
-	    ai_chance = { 
-		    factor = 33 
-	    }
-		name = germany.7.a
-		FLA = { 
-        release = BEL 		
-		change_tag_from = BEL 
-		}
-		BEL = { 		
-		annex_country = { target = WLL }
-		annex_country = { target = FLA }		
-        create_country_leader = {
-	        name = "Leopold III"
-	        desc = ""
-	        picture = "leopold_iii.dds"
-     	    expire = "1965.1.1"
-	        ideology = democratic_conservatism
-    	    traits = {
-    	    	#
-    	    }
-	    }
-        }
-		GER = { puppet = BEL } 
-	}	
-	option = {
-	    ai_chance = { 
-		    factor = 33 
-	    }	
-		name = germany.7.b
-		if = {
-	        limit = {
-	     	has_dlc = "Together for Victory"
-	        }
-		set_autonomy = { target = FLA autonomy_state = autonomy_puppet }
-		set_autonomy = { target = WLL autonomy_state = autonomy_puppet }
-        }		
-		FLA = { 
-        create_country_leader = {
-	        name = "Eitel Friedrich I"
-	        desc = ""
-	        picture = "eitel_friedrich.dds"
-     	    expire = "1965.1.1"
-	        ideology = democratic_conservatism
-    	    traits = {
-    	    	#
-    	    }
-	    }
-		}
-		WLL = { 
-        create_country_leader = {
-	        name = "Eitel Friedrich I"
-	        desc = ""
-	        picture = "eitel_friedrich.dds"
-     	    expire = "1965.1.1"
-	        ideology = democratic_conservatism
-    	    traits = {
-    	    	#
-    	    }
-	    }
-		}
-	}	
-	option = {
-	    ai_chance = { 
-		    factor = 33 
-	    }	
-		name = germany.7.c
-	}	
-}
-
-country_event = {
+country_event = {#Germany sends support SAU 
 
 	id = germany.8
 	title = germany.8.t 
 	desc = germany.8.d
-	
     is_triggered_only = yes
+	add_ideas = SAU_GER_support
 	
-	option = {
-	    ai_chance = { 
-		    factor = 70
-	    }	
-		name = germany.8.a
-		hidden_effect = {		
-		GER = { complete_national_focus = GER_arabian_gulf }
-        }		
-	}	
-	option = {
-	    ai_chance = { 
-		    factor = 30
-	    }	
-		name = germany.8.b
-		hidden_effect = {
-		set_global_flag = saudi_disagree	
-		}
-	}
 }
 
 country_event = {
@@ -464,42 +343,7 @@ country_event = {
 	}
 }
 
-country_event = {
 
-	id = germany.14
-	title = germany.14.t 
-	desc = germany.14.d
-	
-    fire_only_once = yes	
-	
-	trigger = {
-	tag = GER
-	NFA = { has_offensive_war_with = FRA }
-	}
-	
-	mean_time_to_happen = { days = 15 }
-	
-	option = {
-	    ai_chance = { 
-		    factor = 80
-	    }	
-		name = germany.14.a
-		hidden_effect = {
-		set_global_flag = GER_fra_cw
-		}
-		set_rule = { can_send_volunteers = yes }
-		reverse_add_opinion_modifier = { target = NFA modifier = ENG_EUR_theater }
-		add_manpower = -10000
-		send_equipment = { target = NFA type = infantry_equipment amount = 500 }
-		NFA = { country_event = germany.15 }
-	}
-	option = {
-	    ai_chance = { 
-		    factor = 20
-	    }	
-		name = germany.14.b
-	}
-}
 
 country_event = {
 
@@ -515,31 +359,6 @@ country_event = {
 	}
 }
 
-
-country_event = {
-
-	id = germany.17
-	title = germany.17.t 
-	desc = germany.17.d
-	
-    is_triggered_only = yes
-	
-	option = {
-	    ai_chance = { 
-		    factor = 90
-	    }		
-		name = germany.17.a
-		GER = { give_military_access = JAP }
-		diplomatic_relation = { country = GER relation = non_aggression_pact }
-		reverse_add_opinion_modifier = { target = GER modifier = ENG_EUR_theater }
-	}	
-	option = {
-	    ai_chance = { 
-		    factor = 10
-	    }		
-		name = germany.17.b
-	}	
-}
 
 ####Generic chain for Germany's alliance offers####
 
@@ -580,7 +399,6 @@ country_event = {#Country agrees
 	is_triggered_only = yes 
 	option = {
 		name = germany.20.a 
-		add_named_threat = { name = GER_expansion_threat threat = 1 }
 	}
 }
 
@@ -591,9 +409,120 @@ country_event = {#Germany sends support
 	is_triggered_only = yes 
 	option = {
 		name = germany.21.a 
+		army_experience = 20 
 		if = { limit = { tag = BUL } add_ideas = BUL_GER_support }
 		if = { limit = { tag = ROM } add_ideas = ROM_GER_support }
 		if = { limit = { tag = UKR } add_ideas = UKR_GER_support }
 	}
 }
+
+####belgian event chain####
+
+country_event = {#death of Otto 
+	id = germany.22 
+	title = germany.22.t
+	desc = germany.22.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = WLL 
+		date > 1936.7.15 
+	}
+	option = {
+		name = germany.22.a 
+		add_national_unity = -0.075 
+		GER = { country_event = { id = germany.23 days = 3 } }
+		kill_country_leader = yes
+	}
+}
+
+country_event = {#assasination in wallonia 
+	id = germany.23 
+	title = germany.23.t 
+	desc = germany.23.d 
+	is_triggered_only = yes 
+	option = {#Continue occupation 
+		name = germany.23.a 
+		ai_chance = { factor = 60 }
+		WLL = { country_event = { id = germany.24 } }
+		add_named_threat = { name = GER_occupy_WLL threat = 2 }
+	}
+	option = {#Rexist 
+		name = germany.23.b 
+		ai_chance = { factor = 40 }
+		add_national_unity = -0.02 
+		WLL = { country_event = { id = germany.25 } }
+	}
+}
+
+country_event = {#New military governer 
+	id = germany.24 
+	title = germany.24.t
+	desc = germany.24.d 
+	is_triggered_only = yes 
+	option = {
+		name = germany.24.a 
+		add_national_unity = -0.05 
+		hidden_effect = {
+			set_politics = { 
+			
+				ruling_party = reactionarism				
+				elections_allowed = no 
+				
+			}
+			
+			add_popularity = { 
+				
+					ideology = national_integralism  
+					popularity = 0.15 
+					
+			}
+		}
+		create_country_leader = {
+			name = "Alexander von Falkenhausen"
+			desc = "doesntmatter"
+			picture = "Falkenhausen.dds"
+			expire = "1960.1.1"
+			ideology = autocracy
+			traits = {
+			
+			}
+		}
+	}
+}
+
+country_event = {#New wallonian government
+	id = germany.25 
+	title = germany.25.t
+	desc = germany.25.d 
+	is_triggered_only = yes 
+	option = {
+		name = germany.24.a 
+		add_national_unity = 0.1 
+		hidden_effect = {
+			set_politics = { 
+			
+				ruling_party = national_integralism				
+				elections_allowed = no 
+				
+			}
+		}
+		add_popularity = { 
+				
+					ideology = national_integralism  
+					popularity = 0.3 
+					
+			}
+		create_country_leader = {
+			name = "Léon Degrelle"
+			desc = "doesntmatter"
+			picture = "Degrelle.dds"
+			expire = "1960.1.1"
+			ideology = integralism
+			traits = {
+			
+			}
+		}
+	}
+}
+
 

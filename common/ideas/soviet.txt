@@ -1,220 +1,93 @@
 ideas = {
 	
     country = {
-		
-		japan_defeat_soviet = {
+	
+		SOV_anti_tank = {
 			
 			allowed = {
 				original_tag = SOV
 				always = no
 			}
 			
-			allowed_civil_war = {
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+	
+		SOV_tank_army = {
+		
+			allowed = {
+				original_tag = SOV
 				always = no
 			}
 			
-			removal cost = -1
-			
-			picture = soviet_defeat
-			
-			reseach_bonus = {
-				land_doctrine = -0.75
-			}
-			
+			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = -0.20
-				army_morale_factor = -0.05
-				planning_speed = -0.10
-				consumer_goods_factor = -0.05
+				
+			}
+		}
+	
+		SOV_plan = {
+		
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				
 			}
 		}
 		
-		japan_defeat_soviet_2 = {
-			
+		SOV_infantry_weapons = {
+		
 			allowed = {
 				original_tag = SOV
 				always = no
 			}
 			
-			allowed_civil_war = {
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+	
+		SOV_modern_army = {
+		
+			allowed = {
+				original_tag = SOV
 				always = no
 			}
 			
-			removal cost = -1
-			
-			picture = soviet_defeat
-			
-			reseach_bonus = {
-				land_doctrine = -0.75
-			}
-			
+			removal_cost = -1
 			
 			modifier = {
-				army_morale_factor = -0.05
-				planning_speed = -0.10
-				consumer_goods_factor = -0.05
+				
 			}
 		}
 		
-		japan_defeat_soviet_3 = {
-			
-			allowed = {
-				original_tag = SOV
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal cost = -1
-			
-			picture = soviet_defeat
-			
-			reseach_bonus = {
-				land_doctrine = -0.75
-			}
-			
-			
-			modifier = {
-				industrial_capacity_factory = -0.20
-				army_morale_factor = -0.05
-				planning_speed = -0.10
-			}
-		}
+		great_country = {
 		
-		japan_defeat_soviet_4 = {
-			
 			allowed = {
 				original_tag = SOV
 				always = no
 			}
 			
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal cost = -1
-			
-			picture = soviet_defeat
-			
-			reseach_bonus = {
-				land_doctrine = -0.75
-			}
-			
+			removal_cost = -1
 			
 			modifier = {
-				army_morale_factor = -0.05
-				planning_speed = -0.10
-			}
-		}
-		
-		japan_defeat_soviet_5 = {
-			
-			allowed = {
-				original_tag = SOV
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal cost = -1
-			
-			picture = soviet_defeat
-			
-			reseach_bonus = {
-				land_doctrine = -0.75
-			}
-			
-			
-			modifier = {
-				industrial_capacity_factory = -0.20
-				planning_speed = -0.10
-				consumer_goods_factor = -0.05
-			}
-		}
-		
-		japan_defeat_soviet_6 = {
-			
-			allowed = {
-				original_tag = SOV
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal cost = -1
-			
-			picture = soviet_defeat
-			
-			reseach_bonus = {
-				land_doctrine = -0.75
-			}
-			
-			
-			modifier = {
-				planning_speed = -0.10
-				consumer_goods_factor = -0.05
-			}
-		}
-		
-		japan_defeat_soviet_7 = {
-			
-			allowed = {
-				original_tag = SOV
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal cost = -1
-			
-			picture = soviet_defeat
-			
-			reseach_bonus = {
-				land_doctrine = -0.75
-			}
-			
-			
-			modifier = {
-				industrial_capacity_factory = -0.20
-				planning_speed = -0.10
-			}
-		}
-		
-		japan_defeat_soviet_8 = {
-			
-			allowed = {
-				original_tag = SOV
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = no
-			}
-			
-			removal cost = -1
-			
-			picture = soviet_defeat
-			
-			reseach_bonus = {
-				land_doctrine = -0.75
-			}
-			
-			
-			modifier = {
-				planning_speed = -0.10
+				
 			}
 		}
 		
 		communist_production = {
+		
 			allowed = {
 				original_tag = SOV
 				always = no
@@ -227,7 +100,8 @@ ideas = {
 			}
 		}
 		
-		consum_of_workers = {
+		consume_of_workers = {
+		
 			allowed = {
 				original_tag = SOV
 				always = no
@@ -236,11 +110,27 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		state_worker = {
+		
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_speed_buildings_factor = 0.10
 			}
 		}
 		
 		home_of_revolution = {
+		
 			removal_cost = -1
 			
 			allowed = {
@@ -260,6 +150,7 @@ ideas = {
 		}
 		
 		multiple_splitt_party = {
+		
 			removal_cost = -1
 			
 			allowed = {
@@ -271,8 +162,8 @@ ideas = {
 			picture = split_party
 			
 			modifier = {
-				political_power_factor = -0.20
-				unity_factor = -0.20
+				political_power_factor = -0.10
+				unity_factor = -0.05
 			}
 		}
 		

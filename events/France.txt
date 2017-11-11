@@ -338,8 +338,8 @@ country_event = { #NATIONALIST LOSS#
 	    name = france.8.b
 		ai_chance = { factor = 50 }
 		SFA = { dismantle_faction = yes }
-		SPF = { declare_war_on = { target = SFA type = annex_everything } }
-		SPF = { declare_war_on = { target = SYA type = annex_everything } }
+		SPF = { declare_war_on = { target = SFA type = civil_war } }
+		SPF = { declare_war_on = { target = SYA type = civil_war } }
 		}
 	}
 
@@ -421,8 +421,8 @@ country_event = { #NATIONALIST VICTORY#
 	option = { #BETRAYAL#
 	    name = france.11.b
 		NFA = { dismantle_faction = yes }
-		NFA = { declare_war_on = { target = RFA type = annex_everything } }
-		NFA = { declare_war_on = { target = IFA type = annex_everything } }
+		NFA = { declare_war_on = { target = RFA type = civil_war } }
+		NFA = { declare_war_on = { target = IFA type = civil_war } }
 		ai_chance = { factor = 50 }
     }
 }
@@ -531,8 +531,8 @@ country_event = { ###IFA DECISION###
 
 	option = { ###WAR###
 	    name = france.16.a
-        IFA = { declare_war_on = { target = NFA type = annex_everything } }
-	    IFA = { declare_war_on = { target = RFA type = annex_everything } }
+        IFA = { declare_war_on = { target = NFA type = civil_war } }
+	    IFA = { declare_war_on = { target = RFA type = civil_war } }
 		NFA = { country_event = { id = 24 hours = 1 } }
 		ai_chance = { factor = 50 }
 		}
@@ -553,8 +553,8 @@ country_event = { ###RFA DECISION###
 
 	option = { ###WAR###
 	    name = france.17.a
-	    RFA = { declare_war_on = { target = NFA type = annex_everything } }
-		RFA = { declare_war_on = { target = IFA type = annex_everything } }
+	    RFA = { declare_war_on = { target = NFA type = civil_war } }
+		RFA = { declare_war_on = { target = IFA type = civil_war } }
 		NFA = { country_event = { id = france.24 hours = 1 } }
 		ai_chance = { factor = 60 }
 		}
@@ -575,8 +575,8 @@ country_event = { ###SFA DECISION###
 
 	option = { ###WAR###
 	    name = france.18.a
-        SFA = { declare_war_on = { target = SPF type = annex_everything } }
-	    SFA = { declare_war_on = { target = SYA type = annex_everything } }
+        SFA = { declare_war_on = { target = SPF type = civil_war } }
+	    SFA = { declare_war_on = { target = SYA type = civil_war } }
 		SPF = { country_event = { id = france.25 hours = 1 } }
 		ai_chance = { factor = 50 }
 		}
@@ -597,8 +597,8 @@ country_event = { ###SYA DECISION###
 
 	option = { ###WAR###
 	    name = france.19.a
-	    SYA = { declare_war_on = { target = NFA type = annex_everything } }
-		SYA = { declare_war_on = { target = IFA type = annex_everything } }
+	    SYA = { declare_war_on = { target = NFA type = civil_war } }
+		SYA = { declare_war_on = { target = IFA type = civil_war } }
 		SPF = { country_event = { id = 25 hours = 1 } }
 		ai_chance = { factor = 30 }
 		}

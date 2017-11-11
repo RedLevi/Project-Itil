@@ -1,0 +1,751 @@
+focus_tree = {
+	id = prf_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PRC
+		}
+	}
+	default = no
+	focus = {
+		id = yellow_dragon
+		icon = GFX_focus_china_yellow_dragon
+		cost = 10
+		x = 13
+		y = 0
+	completion_reward = {
+		add_political_power = 120
+	}
+	}
+	focus = {
+		id = continue_modernisation
+		icon = GFX_goal_generic_construction
+		cost = 10
+		x = 20
+		y = 0
+
+	}
+	focus = {
+		id = chinas_liberation
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 23
+		y = 0
+
+	}
+	focus = {
+		id = proclaim_china
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10
+		x = 3
+		y = 0
+
+	}
+	focus = {
+		id = mobilisation_debates
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10
+		x = 40
+		y = 0
+
+	}
+	focus = {
+		id = oceangoing_navy
+		icon = GFX_goal_generic_build_navy
+		cost = 10
+		x = 44
+		y = 0
+
+	}
+	focus = {
+		id = aviators_of_china
+		icon = GFX_goal_generic_build_airforce
+		cost = 10
+		x = 49
+		y = 0
+
+	}
+	focus = {
+		id = the_mighty_dragon
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10
+		prerequisite = {
+			focus = proclaim_china
+		}
+		x = 3
+		y = 1
+
+	}
+	focus = {
+		id = eliminate_illegitimates
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		prerequisite = {
+			focus = the_mighty_dragon
+		}
+		x = 1
+		y = 2
+
+	}
+	focus = {
+		id = the_tibetian_question
+		icon = GFX_goal_generic_attack_allies
+		cost = 10
+		prerequisite = {
+			focus = eliminate_illegitimates
+		}
+		x = 1
+		y = 3
+
+	}
+	focus = {
+		id = celestial_conscriptions
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = the_mighty_dragon
+		}
+		x = 3
+		y = 2
+
+	}
+	focus = {
+		id = continuation_of_beauracracy
+		icon = GFX_goal_continuous_suppression
+		cost = 10
+		prerequisite = {
+			focus = celestial_conscriptions
+		}
+		x = 3
+		y = 3
+
+	}
+	focus = {
+		id = crush_the_mongols
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = the_mighty_dragon
+		}
+		x = 5
+		y = 2
+
+	}
+	focus = {
+		id = together_against_japan
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = crush_the_mongols
+		}
+		x = 5
+		y = 3
+
+	}
+	focus = {
+		id = chinese_socialism
+		icon = GFX_focus_generic_join_comintern
+		cost = 10
+		prerequisite = {
+			focus = yellow_dragon
+		}
+		x = 13
+		y = 1
+
+	}
+	focus = {
+		id = inwards_perfection
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		prerequisite = {
+			focus = chinese_socialism
+		}
+		mutually_exclusive = {
+			focus = outward_expansion
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = empire_unto_itself
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = inwards_perfection
+		}
+		mutually_exclusive = {
+			focus = empire_of_the_people
+		}
+		x = 8
+		y = 3
+
+	}
+	focus = {
+		id = empire_of_the_people
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = inwards_perfection
+		}
+		mutually_exclusive = {
+			focus = empire_unto_itself
+		}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = effecient_society
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = empire_of_the_people
+			focus = empire_unto_itself
+		}
+		x = 9
+		y = 4
+
+	}
+	focus = {
+		id = outward_expansion
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = chinese_socialism
+		}
+		mutually_exclusive = {
+			focus = inwards_perfection
+		}
+		x = 14
+		y = 2
+
+	}
+	focus = {
+		id = revolutionary_zongdu
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = outward_expansion
+			focus = inwards_perfection
+		}
+		x = 12
+		y = 3
+
+	}
+	focus = {
+		id = radical_ethos
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = revolutionary_zongdu
+		}
+		x = 12
+		y = 4
+
+	}
+	focus = {
+		id = the_five_armies
+		icon = GFX_goal_generic_military_sphere
+		cost = 10
+		prerequisite = {
+			focus = outward_expansion
+		}
+		x = 14
+		y = 3
+
+	}
+	focus = {
+		id = paramilitarism_china
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = the_five_armies
+		}
+		x = 14
+		y = 4
+
+	}
+	focus = {
+		id = japanese_policy
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		prerequisite = {
+			focus = chinese_socialism
+		}
+		x = 17
+		y = 2
+
+	}
+	focus = {
+		id = aggression_to_japan
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = japanese_policy
+		}
+		mutually_exclusive = {
+			focus = appeasement_to_japan
+		}
+		x = 16
+		y = 3
+
+	}
+	focus = {
+		id = demand_guangzhouhan
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10
+		prerequisite = {
+			focus = aggression_to_japan
+		}
+		x = 16
+		y = 4
+
+	}
+	focus = {
+		id = appeasement_to_japan
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = {
+			focus = japanese_policy
+		}
+		mutually_exclusive = {
+			focus = aggression_to_japan
+		}
+		x = 18
+		y = 3
+
+	}
+	focus = {
+		id = containment_policy
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = appeasement_to_japan
+		}
+		x = 18
+		y = 4
+
+	}
+	focus = {
+		id = infrastructure_build
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = continue_modernisation
+		}
+		x = 20
+		y = 1
+
+	}
+	focus = {
+		id = infrastructure_build_2
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = infrastructure_build
+		}
+		x = 20
+		y = 2
+
+	}
+	focus = {
+		id = revitalize_urban_centers
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = continue_modernisation
+		}
+		x = 22
+		y = 1
+
+	}
+	focus = {
+		id = canton_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = revitalize_urban_centers
+		}
+		prerequisite = {
+			focus = chinas_liberation
+		}
+		x = 23
+		y = 2
+
+	}
+	focus = {
+		id = govt_military_investment
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = canton_arsenal
+		}
+		x = 23
+		y = 3
+
+	}
+	focus = {
+		id = revival_front_war
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = chinas_liberation
+		}
+		x = 25
+		y = 1
+
+	}
+	focus = {
+		id = wartime_conscription
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		prerequisite = {
+			focus = chinas_liberation
+		}
+		x = 36
+		y = 1
+
+	}
+	focus = {
+		id = west_yunnan
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = revival_front_war
+		}
+		x = 28
+		y = 2
+
+	}
+	focus = {
+		id = west_chonqing
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = revival_front_war
+		}
+		x = 30
+		y = 2
+
+	}
+	focus = {
+		id = spoils_of_war
+		icon = GFX_focus_generic_concessions
+		cost = 10
+		prerequisite = {
+			focus = chinas_liberation
+		}
+		x = 32
+		y = 1
+
+	}
+	focus = {
+		id = logistical_improvement
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = chinas_liberation
+		}
+		x = 34
+		y = 1
+
+	}
+	focus = {
+		id = factories_to_frontlines
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = logistical_improvement
+		}
+		x = 34
+		y = 2
+
+	}
+	focus = {
+		id = liberation_is_now
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = revival_front_war
+		}
+		prerequisite = {
+			focus = wartime_conscription
+		}
+		prerequisite = {
+			focus = factories_to_frontlines
+		}
+		x = 25
+		y = 3
+
+	}
+	focus = {
+		id = guerilla_warfare
+		icon = GFX_goal_generic_military_sphere
+		cost = 10
+		prerequisite = {
+			focus = mobilisation_debates
+		}
+		mutually_exclusive = {
+			focus = standing_army
+		}
+		x = 39
+		y = 1
+
+	}
+	focus = {
+		id = standing_army
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = mobilisation_debates
+		}
+		mutually_exclusive = {
+			focus = guerilla_warfare
+		}
+		x = 41
+		y = 1
+
+	}
+	focus = {
+		id = modernisation_artillery
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10
+		prerequisite = {
+			focus = guerilla_warfare
+			focus = standing_army
+		}
+		x = 39
+		y = 2
+
+	}
+	focus = {
+		id = modernisation_mobile
+		icon = GFX_goal_generic_army_motorized
+		cost = 10
+		prerequisite = {
+			focus = modernisation_artillery
+		}
+		x = 38
+		y = 3
+
+	}
+	focus = {
+		id = moderisation_armour
+		icon = GFX_goal_generic_army_tanks
+		cost = 10
+		prerequisite = {
+			focus = modernisation_artillery
+		}
+		x = 40
+		y = 3
+
+	}
+	focus = {
+		id = professionisation_of_the_army
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		cost = 10
+		prerequisite = {
+			focus = standing_army
+		}
+		x = 41
+		y = 2
+
+	}
+	focus = {
+		id = a_necessary_force
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10
+		prerequisite = {
+			focus = oceangoing_navy
+		}
+		mutually_exclusive = {
+			focus = defy_history
+		}
+		x = 43
+		y = 1
+
+	}
+	focus = {
+		id = a_land_power
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = professionisation_of_the_army
+		}
+		prerequisite = {
+			focus = a_necessary_force
+		}
+		x = 42
+		y = 3
+
+	}
+	focus = {
+		id = defy_history
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10
+		prerequisite = {
+			focus = oceangoing_navy
+		}
+		mutually_exclusive = {
+			focus = a_necessary_force
+		}
+		x = 45
+		y = 1
+
+	}
+	focus = {
+		id = navy_battleship
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10
+		prerequisite = {
+			focus = defy_history
+		}
+		x = 45
+		y = 2
+
+	}
+	focus = {
+		id = navy_cruiser
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10
+		prerequisite = {
+			focus = navy_battleship
+		}
+		x = 44
+		y = 3
+
+	}
+	focus = {
+		id = bomber_investment
+		icon = GFX_goal_generic_air_bomber
+		cost = 10
+		prerequisite = {
+			focus = aviators_of_china
+		}
+		mutually_exclusive = {
+			focus = fighter_investment
+		}
+		x = 48
+		y = 1
+
+	}
+	focus = {
+		id = conventional_bombing
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10
+		prerequisite = {
+			focus = bomber_investment
+		}
+		x = 47
+		y = 2
+
+	}
+	focus = {
+		id = nations_first_aircraft_carrier
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10
+		prerequisite = {
+			focus = navy_battleship
+		}
+		prerequisite = {
+			focus = conventional_bombing
+		}
+		x = 46
+		y = 3
+
+	}
+	focus = {
+		id = heavy_bombers
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 10
+		prerequisite = {
+			focus = bomber_investment
+		}
+		x = 48
+		y = 3
+
+	}
+	focus = {
+		id = fighter_investment
+		icon = GFX_goal_generic_air_fighter
+		cost = 10
+		prerequisite = {
+			focus = aviators_of_china
+		}
+		mutually_exclusive = {
+			focus = bomber_investment
+		}
+		x = 50
+		y = 1
+
+	}
+	focus = {
+		id = heavy_fighters
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10
+		prerequisite = {
+			focus = fighter_investment
+		}
+		x = 49
+		y = 2
+
+	}
+	focus = {
+		id = autocratic_higher_ups
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = empire_unto_itself
+		}
+		x = 8
+		y = 5
+
+	}
+	focus = {
+		id = peoples_congress
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		prerequisite = {
+			focus = empire_of_the_people
+		}
+		x = 10
+		y = 5
+
+	}
+	focus = {
+		id = hawkish_foreign_policy
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		prerequisite = {
+			focus = paramilitarism_china
+		}
+		x = 14
+		y = 5
+
+	}
+	focus = {
+		id = defense_of_the_front
+		icon = GFX_goal_generic_defence
+		cost = 10
+		prerequisite = {
+			focus = containment_policy
+			focus = demand_guangzhouhan
+		}
+		x = 17
+		y = 5
+
+	}
+	focus = {
+		id = aviation_ethos
+		icon = GFX_goal_generic_air_production
+		cost = 10
+		prerequisite = {
+			focus = fighter_investment
+		}
+		x = 51
+		y = 2
+
+	}
+}

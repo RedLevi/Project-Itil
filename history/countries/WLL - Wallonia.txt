@@ -49,23 +49,23 @@ set_politics = {
 		
 	}
 	
-	ruling_party = conservatism
+	ruling_party = reactionarism
 	last_election = "1932.11.27"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 
 
 set_convoys = 80
-set_national_unity = 0.75
+set_national_unity = 0.30 
 
 create_country_leader = {
-	name = "Under German Occupation"
+	name = "Otto von Below"
 	desc = ""
-	picture = ""
+	picture = "Otto_Bellow.dds"
 	expire = "1965.1.1"
-	ideology = authoritarian_conservatism
+	ideology = autocracy
 	traits = {
 		#
 	}

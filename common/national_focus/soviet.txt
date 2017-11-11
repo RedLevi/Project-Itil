@@ -505,42 +505,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			
-			custom_effect_tooltip = SOV_defeat_upgrade
-
-			hidden_effect = {
-				if = {
-					limit = {
-						has_ideas = japan_defeat_soviet
-					}
-					remove_ideas = japan_defeat_soviet
-					add_ideas = japan_defeat_soviet_2
-				}
-				
-				if = {
-					limit = {
-						has_ideas = japan_defeat_soviet_3
-					}
-					remove_ideas = japan_defeat_soviet_3
-					add_ideas = japan_defeat_soviet_4
-				}
-				
-				if = {
-					limit = {
-						has_ideas = japan_defeat_soviet_5
-					}
-					remove_ideas = japan_defeat_soviet_5
-					add_ideas = japan_defeat_soviet_6
-				}
-				
-				if = {
-					limit = {
-						has_ideas = japan_defeat_soviet_7
-					}
-					remove_ideas = japan_defeat_soviet_7
-					add_ideas = japan_defeat_soviet_8
-				}
-			}
 		}
 	}
 	
@@ -628,7 +592,7 @@ focus_tree = {
 		
 		complete_tooltip = {
 			if = {
-				limit = { can_research = synth_oil_experiments = 1}
+				limit = { can_research = synth_oil_experiments = 1 }
 				set_technology = { synth_oil_experiments = 1 }	
 				else = {
 					add_tech_bonus = {
@@ -911,89 +875,21 @@ focus_tree = {
 		cost = 10
 		
 		completion_reward = {
-			custom_effect_tooltip = SOV_defeat_upgrade
-
-			hidden_effect = {
-				if = {
-					limit = {
-						has_ideas = japan_defeat_soviet
-					}
-					remove_ideas = japan_defeat_soviet
-					add_ideas = japan_defeat_soviet_3
-				}
-				
-				if = {
-					limit = {
-						has_ideas = japan_defeat_soviet_2
-					}
-					remove_ideas = japan_defeat_soviet_2
-					add_ideas = japan_defeat_soviet_4
-				}
-				
-				if = {
-					limit = {
-						has_ideas = japan_defeat_soviet_5
-					}
-					remove_ideas = japan_defeat_soviet_5
-					add_ideas = japan_defeat_soviet_7
-				}
-				
-				if = {
-					limit = {
-						has_ideas = japan_defeat_soviet_6
-					}
-					remove_ideas = japan_defeat_soviet_6
-					add_ideas = japan_defeat_soviet_8
-				}
-			}
+			add_ideas = state_worker
 		}
 	}
 	
 	focus = {
 		id = SOV_army_reform
-		icon = GFX_goal_generic_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 16
 		y = 0
 		cost = 10
 		
 		completion_reward = {
-			custom_effect_tooltip = SOV_defeat_upgrade
-
-			hidden_effect = {
-				if = {
-					limit = {
-						has_ideas = japan_defeat_soviet
-					}
-					remove_ideas = japan_defeat_soviet
-					add_ideas = japan_defeat_soviet_5
-				}
-				
-				if = {
-					limit = {
-						has_ideas = japan_defeat_soviet_2
-					}
-					remove_ideas = japan_defeat_soviet_2
-					add_ideas = japan_defeat_soviet_6
-				}
-				
-				if = {
-					limit = {
-						has_ideas = japan_defeat_soviet_3
-					}
-					remove_ideas = japan_defeat_soviet_3
-					add_ideas = japan_defeat_soviet_7
-				}
-				
-				if = {
-					limit = {
-						has_ideas = japan_defeat_soviet_4
-					}
-					remove_ideas = japan_defeat_soviet_4
-					add_ideas = japan_defeat_soviet_8
-				}
-			}
+			army_experience = 20
+			add_ideas = SOV_modern_army
 		}
-		
 	}
 	
 	focus = {
@@ -1005,6 +901,7 @@ focus_tree = {
 		cost = 10
 		
 		completion_reward = {
+			army_experience = 5
 			add_tech_bonus = {
 				name = small_arms_bonus
 				bonus = 0.5
@@ -1014,4 +911,305 @@ focus_tree = {
 		}
 	}
 	
+	focus = {
+		id = SOV_motorized_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_modernize_infant }
+		x = 14
+		y = 2
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.50
+				uses = 2
+				technology = motorised_equipment
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_artillery_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_modernize_infant }
+		x = 16
+		y = 2
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_light_armor
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_motorized_effort }
+		prerequisite = { focus = SOV_artillery_effort }
+		x = 14
+		y = 3
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				technology = basic_light_tank
+				technology = improved_light_tank
+				technology = advanced_light_tank
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_support
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_motorized_effort }
+		x = 12
+		y = 3
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 2
+				category = artillery_equipment
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_tanks
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_support }
+		prerequisite = { focus = SOV_light_armor }
+		x = 13
+		y = 4
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = tanks
+				bonus = 0.75
+				ahead_reduction = 1
+				category = armor
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_heavy_tanks
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_tanks }
+		x = 14
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = heavy_armor
+				bonus = 0.5
+				uses = 2
+				technology = basic_heavy_tank
+				technology = improved_heavy_tank
+				technology = advanced_heavy_tank
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_medium_tanks
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_motorized_effort }
+		prerequisite = { focus = SOV_light_armor }
+		x = 12
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = medium_armor
+				bonus = 0.5
+				uses = 2
+				technology = basic_medium_tank
+				technology = improved_medium_tank
+				technology = advanced_medium_tank
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_anti_tank_weapons
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_support }
+		x = 11
+		y = 4
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = anti_tank
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_anti_tank_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_anti_tank_weapons }
+		prerequisite = { focus = SOV_medium_tanks }
+		x = 11
+		y = 6
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = SOV_anti_tank
+		}
+	}
+	
+	focus = {
+		id = SOV_modern_tank
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_medium_tanks }
+		prerequisite = { focus = SOV_heavy_tanks }
+		x = 13
+		y = 6
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = new_tank
+				bonus = 0.75
+				technology = modern_tank
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_doktin_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_motorized_effort }
+		x = 16
+		y = 3
+		cost = 10
+		
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_mobil_war
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_doktin_effort }
+		mutually_exclusive = { focus = SOV_grand_plan }
+		mutually_exclusive = { focus = SOV_mass_assault }
+		x = 20
+		y = 4
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_tank_prod
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_mobil_war }
+		x = 20
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = SOV_tank_army
+		}
+	}
+	
+	focus = {
+		id = SOV_grand_plan
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_doktin_effort }
+		mutually_exclusive = { focus = SOV_mobil_war }
+		mutually_exclusive = { focus = SOV_mass_assault }
+		x = 18
+		y = 4
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = grand_plan
+				bonus = 0.5
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_planning
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_grand_plan }
+		x = 18
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = SOV_plan
+		}
+	}
+	
+	focus = {
+		id = SOV_mass_assault
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_doktin_effort }
+		mutually_exclusive = { focus = SOV_grand_plan }
+		mutually_exclusive = { focus = SOV_mobil_war }
+		x = 16
+		y = 4
+		cost = 10
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_mass_assault
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_infant_weapon
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SOV_mass_assault }
+		x = 16
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = SOV_infantry_weapons
+		}
+	}
 	

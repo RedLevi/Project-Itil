@@ -1,0 +1,25 @@
+ideas = {
+		
+		country = {
+	
+		UKR_GER_support = {
+		 
+			allowed = {
+				always = yes 
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			research_bonus = {
+				land_doctrine = 0.3
+				industry = 0.3 
+			}
+		
+		}
+		
+	}
+}

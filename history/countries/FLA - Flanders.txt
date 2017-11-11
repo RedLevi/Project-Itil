@@ -52,7 +52,7 @@ set_politics = {
 	ruling_party = conservatism
 	last_election = "1932.11.27"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no 
 }
 
 
@@ -61,9 +61,9 @@ set_convoys = 80
 set_national_unity = 0.75
 
 create_country_leader = {
-	name = "Under German Occupation"
+	name = "August Borms"
 	desc = ""
-	picture = ""
+	picture = "Borms.dds"
 	expire = "1965.1.1"
 	ideology = authoritarian_conservatism
 	traits = {

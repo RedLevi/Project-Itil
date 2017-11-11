@@ -4,6 +4,8 @@
 
 ## Important flags for the focus tree:
 # AUS_no_reconquest ---> Austria loses the posibility to war so will focus on themselves instead
+# AUS_disobeys ----> Austria has become disloyal from Germany, so parts of Germany's tree to aid Austria will be locked off
+# GER_supports_HUN ----> Germany switches support to Hungary from Austria
 
 add_namespace = aus
 
@@ -258,6 +260,8 @@ country_event = { # Austria Responds
 		remove_from_faction = AUS
 		hidden_effect = {
 			news_event = aus.9
+			set_global_flag = AUS_removed
+			set_global_flag = AUS_disloyal
 		}
 	}
 
@@ -271,6 +275,7 @@ country_event = { # Austria Responds
 			add_opinion_modifier = { target = AUS modifier = embargo }
 			news_event = aus.9
 			set_global_flag = AUS_sanctioned
+			set_global_flag = AUS_disloyal
 		}
 	}
 
@@ -285,6 +290,7 @@ country_event = { # Austria Responds
 			HUN = { country_event = { id = aus.11 days = 4 } }
 			news_event = aus.9
 			set_global_flag = AUS_sanctioned
+			set_global_flag = AUS_disloyal
 		}
 	}
 }
@@ -375,6 +381,7 @@ country_event = { # Germany has sanctioned us!
 			white_peace = HUN
 			clr_global_flag = AUS_sanctioned
 			clr_global_flag = AUS_removed
+			clr_global_flag = AUS_disloyal
 			set_global_flag = AUS_no_reconquest
 			GER = { add_to_faction = AUS }
 		}
@@ -446,6 +453,7 @@ country_event = { # German mission to Hungary
 		hidden_effect = {
 			GER = {send_equipment = { target = HUN type = infantry_equipment amount = 2000 }}
 			GER = {send_equipment = { target = HUN type = artillery amount = 500 }}
+			set_global_flag = GER_supports_HUN
 			# load_oob = GER_support_to_HUN
 		}
 
@@ -469,6 +477,7 @@ country_event = { # German mission to Hungary
 			GER = {send_equipment = { target = HUN type = artillery amount = 500 }}
 			add_manpower = 10000
 			GER = { add_manpower = -10000 }
+			set_global_flag = GER_supports_HUN
 			# load_oob = GER_support_to_HUN
 		}
 	}
@@ -678,7 +687,19 @@ country_event = { # Austria invades Hungary! (Yugoslavia)
 	option = { # Send an ultimatum to Austria
 		name = aus.5.a
 		AUS = { country_event = { id = aus.20 days = 7 } }
-		ai_chance = { factor = 4 }
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 10
+				modifier = {
+					OR = {
+						has_global_flag = AUS_sanctioned
+						has_global_flag = AUS_removed
+					}
+				}
+			}
+		}
+
 	}
 
 	option = { # Send an ultimatum to Hungary
@@ -709,10 +730,19 @@ country_event = {
 				AUS = { has_war_with = HUN }
 			}
 			modifier = {
-				factor = 0
+				factor = 0.25
 				OR = {
 					NOT = { has_war = yes }
 					AUS = { is_in_faction_with = GER }
+				}
+			}
+			modifier = {
+				factor = 10
+				modifier = {
+					OR = {
+						has_global_flag = AUS_sanctioned
+						has_global_flag = AUS_removed
+					}
 				}
 			}
 		}

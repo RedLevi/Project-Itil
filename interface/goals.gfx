@@ -1073,9 +1073,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/IRE_federalize.dds"
 	}
 	
-	SpriteType = { 
+	SpriteType = {
 		name = "SAF_federalize"
 		texturefile = "gfx/interface/goals/SAF_federalize.dds"
 	}
-	
+	SpriteType = {
+		name = "GFX_focus_china_yellow_dragon"
+		texturefile = "gfx/interface/goals/focus_china_yellow_dragon.dds"
+	}
 }

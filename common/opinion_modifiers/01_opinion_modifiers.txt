@@ -59,4 +59,6 @@ GER_UKR_theater = { value = 50 }
 GER_WAR_propoganda = { value = 50 }
 GER_bad_diplomacy = { value = -50 }
 refused_GER_alliance = { value = -45 }
+GER_me_relations = { value = 40 }
+GER_asia_relations = { value = 50 }
 }

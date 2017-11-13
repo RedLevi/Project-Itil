@@ -17,37 +17,26 @@ state={
 		buildings = {
 			infrastructure = 7
 			industrial_complex = 1
-			549 = {
-				bunker = 10
-
-			}
-			678 = {
-				bunker = 10
-
-			}
-			3629 = {
-				bunker = 10
-
-			}
-			6529 = {
-				bunker = 10
-
-			}
-			9503 = {
-				bunker = 10
-
-			}
-			9559 = {
-				bunker = 10
-
-			}
-			11502 = {
-				bunker = 10
-
-			}
 			anti_air_building = 5
 			air_base = 5
-
+			678 = {
+			
+			}
+			6529 = {
+				bunker = 2
+			}
+			1346 = {
+				bunker = 2
+			}
+			3629 = {
+				bunker = 2
+			}
+			11502 = {
+				bunker = 2
+			}
+			9559 = {
+				bunker = 2
+			}
 		}
 		add_core_of = FRA
 		add_core_of = GER 

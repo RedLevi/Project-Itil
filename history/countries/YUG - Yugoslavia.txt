@@ -26,7 +26,7 @@ set_politics = {
 
 	parties = {
 	    conservatism = {
-			popularity = 25
+			popularity = 57
 		}
 
 		national_integralism = {
@@ -34,7 +34,7 @@ set_politics = {
 		}
 
 		liberalism = {
-			popularity = 15
+			popularity = 23
 		}
 		
 		communism = {
@@ -46,12 +46,12 @@ set_politics = {
 		}
 		
 		reactionarism = {
-			popularity = 43
+			popularity = 3
 		}
 		
 	}
 	
-	ruling_party = reactionarism
+	ruling_party = conservatism
 	last_election = "1936.1.1"
 	election_frequency = 36
 	elections_allowed = yes
@@ -60,11 +60,11 @@ set_politics = {
 set_national_unity = 0.6
 
 create_country_leader = {
-	name = "Draza Mihailovic"
+	name = "Nikola Uzunović"
 	desc = ""
-	picture = "Portrait_Yugoslavia_Prince_Paul.dds"
+	picture = "gfx/leaders/YUG/Nikola_Uzunovic.dds"
 	expire = "1965.1.1"
-	ideology = authoritarian_conservatism
+	ideology = democratic_conservatism
 	traits = {
 		#
 	}

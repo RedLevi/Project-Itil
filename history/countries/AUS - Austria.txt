@@ -32,11 +32,11 @@ set_politics = {
 
 	parties = {
 	    conservatism = {
-			popularity = 25
+			popularity = 54
 		}
 
 		national_integralism = {
-			popularity = 10
+			popularity = 0
 		}
 
 		liberalism = {
@@ -44,19 +44,19 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 2
+			popularity = 0
 		}
 		
 		socialism = {
-			popularity = 5
+			popularity = 10
 		}
 		
 		reactionarism = {
-			popularity = 40
+			popularity = 21
 		}
 	}
 	
-	ruling_party = reactionarism
+	ruling_party = conservatism
 	last_election = "1930.11.9"
 	election_frequency = 48
 	elections_allowed = no
@@ -92,6 +92,17 @@ create_country_leader = {
 	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 	expire = "1965.1.1"
 	ideology = integralism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Otto Ender"
+	desc = ""
+	picture = "gfx/leaders/AUS/Otto_Ender.dds"
+	expire = "1965.1.1"
+	ideology = democratic_conservatism
 	traits = {
 		#
 	}

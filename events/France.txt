@@ -847,6 +847,7 @@ country_event = { #ITALIAN DEFENSE OF SYA
     id = france.31
     title = france.31.t
     desc = france.31.d
+    fire_only_once = yes
 
     trigger = {
     tag = ITA
@@ -859,10 +860,39 @@ country_event = { #ITALIAN DEFENSE OF SYA
     ITA = { create_faction = synintern }
     ITA = { declare_war_on = { target = SPF type = annex everything } }
     ITA = { add_to_faction = SYA}
-
+    ai_chance = { factor = 80 }
     }
     option = { #NO
     name = france.31.b
     add_opinion_modifier = { target = SYA modifier = No_Help }
     }
+}
+
+country_event = { #British support for SFA#
+  id = france.32
+  title = france.32.t
+  desc = france.32.d
+
+  fire_only_once = yes
+
+  trigger = {
+  tag = ENG
+  OR = {
+  SFA = { has_war_with = SPF }
+  SPF = { has_capitulated = yes }
+  }
+  }
+
+  option = {
+  name = france.32.a
+  hidden_effect = {
+  SFA = load_oob = ENG_volunteers
+  }
+    add_opinion_modifier = { target = SFA modifier = Sent_volunteers }
+  ENG = { add_manpower = -55000 }
+  }
+  option = {
+  name = france.32.b
+  }
+}
 }

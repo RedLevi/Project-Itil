@@ -49,3 +49,5 @@ SOV_tank_army:0 ""
 SOV_tank_army_desc:0 ""
 SOV_anti_tank:0 ""
 SOV_anti_tank_desc:0 ""
+###TECH?####
+super_heavy_tank:0 "T-7"

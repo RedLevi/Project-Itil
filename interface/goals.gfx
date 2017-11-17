@@ -1081,4 +1081,16 @@ spriteTypes = {
 		name = "GFX_focus_china_yellow_dragon"
 		texturefile = "gfx/interface/goals/focus_china_yellow_dragon.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_soviet_union"
+		texturefile = "gfx/interface/goals/Soviet_Union.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_soviet_union_question"
+		texturefile = "gfx/interface/goals/Soviet_Union_Question.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_soviet_Superheavy"
+		texturefile = "gfx/interface/goals/Soviet_Superheavy.dds"
+	}
 }

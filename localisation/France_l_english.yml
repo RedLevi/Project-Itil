@@ -17,11 +17,11 @@ france.5.t:0 "The National Front contests elections result!"
 france.5.d:0 "Following several days of unprecedented chaos across the country, the collective leadership of the national front have publicly contested the elections result and denounced our democratically elected government as a "Judeo-Soviet conspiracy". Right wing militants belonging to the Popular League  and  Action Française storming government buildings throughout the country. General Philippe Petain and his cronies have publicly announced their support of the rebels and their "fight against anarchism in France" taking much of the armed forces with them. The remaining loyalist troops have been split between officers loyal to the Socialist Party and the Republican Party, with militias and volunteers making up the bulk of the government's fighting force. Additionally the CGT-UAC union have declared a general strike in Provence and raised its own militias with the support of the Italian government, and have so far formally accepted the rule of the coalition. It appears as our worst fears have come to pass and we are now faced with a civil war."
 france.5.a:0 "Death to the rebel scum! Victory for the people!"
 france.5.b:0 "The motherland must be defended from Anarchism and conspirators!"
-france.8.t:0 "Victory for the People!"
-france.8.d:0 "After months of fighting, the homeland stands destroyed and blood of countless thousands shed. This has truly been a dark age for France, but a bright future is ahead now with the reactionaries and counter revolutionaries slain. Yet, there are still enemies to be taken care of. The initial conditions stated that once the rebels are destroyed, the republic will revert back to normal. But Souvarine and many elements within the socialist party argue that the CGT-UAC and the Republicans will be only a nuisance to the success of the new French republic, while the others argue that this will be solved by democratic and diplomatic means. Simply attacking these dissidents can give us much greater freedom to enact our policies, but at a high cost..."
-france.8.a:0 "Continues as planned"
-france.8.b:0 "Death to all Dissidents!
-france.9.t:0 "The Fourth French Republic"
+france.8.t:0 "The people victorious!"
+france.8.d:0 "After months of fighting and endless bloodshed the homeland stands devestated and the blood of countless thousands shed. This has truly been a dark age for France, but a bright future is ahead now with the reactionaries and counter revolutionaries defeated. However, there are still enemies to be taken care of from within our coalition, and while we fought together so far, there is no telling what the anarchists and liberals are plotting. The party leadership is currently engaged in heated secret discussions on how to proceed..."
+france.8.a:0 "Invite our allies to form a new republic"
+france.8.b:0 "We will crush these class traitors!"
+france.9.t:0 "The French Republic"
 france.9.d:0 "Both the CGT-UAC and the Republicans have accepted out proposition of peace. The bloodshed is finally over!"
 france.9.a:0 "Excellent"
 france.10.t:0 "Socialist Victory"
@@ -35,4 +35,6 @@ france.12.t:0 "France is whole once more!"
 france.12.d:0 "Dinu write some fucking text!"
 france.12.t:0 "France is whole once more!"
 france.12.a:0 "Excellent"
+
+
 

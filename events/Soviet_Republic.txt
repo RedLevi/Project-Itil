@@ -1,0 +1,80 @@
+add_namespace = soviet
+
+country_event = { #Introduction#
+   id = soviet.1
+   title = soviet.1.t
+   desc = soviet.1.d
+   fire_only_once = yes
+
+   trigger = {
+      date > 1936.1.1
+      tag = SOV
+   }
+
+   option = {
+      name = soviet.1.a
+   }
+
+}
+
+country_event = { #30th Congress#
+   id = soviet.2
+   title = soviet.2.t
+   desc = soviet.2.d
+   fire_only_once = yes
+
+   is_triggered_only = yes
+
+   option = {
+      name = soviet.2.a
+   }
+}
+
+country_event = { #30th Congress amendment#
+   id = soviet.3
+   title = soviet.3.t
+   desc = soviet.3.d
+   fire_only_once = yes
+
+   is_triggered_only = yes
+
+   option = { #Right Opposition#
+      name = soviet.3.a
+      set_country_flag = right_wing 
+   }
+
+   option = { #STAY WITH TROTSKY
+      name = soviet.3.b
+      set_country_flag = left_wing
+   }
+}
+
+country_event = { #Right Dissolution#
+   id = soviet.4
+   title = soviet.4.t
+   desc = soviet.4.d
+   fire_only_once = yes
+
+   is_triggered_only = yes
+
+   option = {
+   name = soviet.4.
+   }
+
+}
+
+country_event = { #31st Congress Trotsky
+  id = soviet.5
+  title = soviet.5.t
+  desc = soviet.5.d
+  fire_only_once = yes
+
+  is_triggered_only = yes
+
+  option = {
+  name = soviet.5.a
+  unlock_national_focus = Gosplan_Congress
+  unlock_national_focus = RKKA_Congress
+  }
+
+}

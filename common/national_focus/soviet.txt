@@ -1,3 +1,9 @@
+###########################################################
+#####Soviet Republic National Focus Tree###################
+#####Made By:       Markush             ###################
+###########################################################
+
+
 focus_tree = {
 	id = SOV_focus
 	country = {
@@ -8,12 +14,195 @@ focus_tree = {
 		}
 	}
 	default = no
+
+###########################################################
+######Internal Politics####################################
+###########################################################
+focus = {
+ 	id = 30th_Congress
+ 	icon = GFX_focus_lenin_soviet
+ 	cost = 2.00
+ 	x = 41
+ 	y = 0
+ 	completion_reward = {
+ 	add_political_power = 150
+ 	country_event = { id = soviet.2 days = 1 }
+    }
+ }
+
+focus = {
+	id = Amend_24th_Congress
+	icon = GFX_focus_renounce_the_treaty_of_trianon
+	cost = 2.00
+	prerequisite = {
+		focus = 30th_Congress
+	}
+	x = 41
+	y = 1
+	completion_reward = {
+	add_national_unity = -0.05
+	country_event = { id = soviet.3 days = 1 }
+	}
+
+}
+focus = {
+	id = Left_Wing
+	icon = GFX_focus_generic_join_comintern
+	cost = 1.00
+	prerequisite = {
+		focus = Amend_24th_Congress
+	}
+	mutually_exclusive = {
+		focus = Right_Wing
+	}
+	x = 38
+	y = 2
+	available = { always = no }
+	bypass = { has_country_flag = left_wing }
+	completion_reward = {
+	add_political_power = 100
+	}
+
+}
+focus = {
+	id = Army_Backs_Trotsky
+	icon = GFX_goal_generic_attack_allies
+	cost = 10.00
+	prerequisite = {
+	focus = Left_Wing
+	}
+	x = 37
+	y = 3
+	completion_reward = {
+	add_political_power = 50
+	}
+
+}
+focus = {
+	id = Amendment_Passed
+	icon = GFX_focus_generic_concessions
+	cost = 10.00
+	prerequisite = {
+		focus = Left_Wing
+	}
+	x = 39
+	y = 3
+	completion_reward = {
+	add_political_power = 50
+	}
+
+}
+focus = {
+	id = Right_Dissolution
+	icon = GFX_focus_SAF_colonialist_crusade
+	cost = 10.00
+	prerequisite = {
+		focus = Amendment_Passed
+	}
+	prerequisite = {
+		focus = Army_Backs_Trotsky
+	}
+	x = 38
+	y = 4
+	completion_reward = {
+	add_political_power = 100
+	country_event = { id = soviet.4  days = 1 }
+	}
+
+}
+focus = {
+	id = 31st_Congress_Trotsky
+	icon = GFX_focus_lenin_soviet
+	cost = 10.00
+	prerequisite = {
+		focus = Right_Dissolution
+	}
+	x = 38
+	y = 5
+	completion_reward = {
+	    country_event = { id = soviet.5 days = 2 }
+     }
+}
+
+focus = {
+	id = Right_Wing
+	icon = GFX_goal_generic_improve_relations
+	cost = 1.00
+	prerequisite = {
+		focus = Amend_24th_Congress
+	}
+	mutually_exclusive = {
+		focus = Left_Wing
+	}
+	x = 44
+	y = 2
+	available = { always = no }
+	bypass = { has_country_flag = right_wing }
+
+}
+
+focus = {
+	id = Centre_Opposition
+	icon = GFX_goal_generic_neutrality_focus
+	cost = 2.00
+	prerequisite = {
+		focus = Right_Wing
+	}
+	x = 43
+	y = 3
+
+	}
+
+focus = {
+	id = Refusal_for_Amendment
+	icon = GFX_goal_anti_comintern_pact
+	cost = 1.00
+	prerequisite = {
+		focus = Right_Wing
+	}
+	x = 45
+	y = 3
+
+}
+
+focus = {
+	id = Temporary_General_Secretary
+	icon = GFX_goal_tripartite_pact
+	cost = 2.00
+	prerequisite = {
+	    focus = Refusal_for_Amendment
+	}
+	prerequisite = {
+		focus = Centre_Opposition
+	}
+	x = 44
+	y = 4
+
+}
+
+focus = {
+	id = 31st_Congress
+	icon = GFX_focus_lenin_soviet
+	cost = 10.00
+	prerequisite = {
+		focus = Temporary_General_Secretary
+	}
+	x = 44
+	y = 5
+
+}
+#####################################################
+#####Economic Tree#################################
+#####################################################
+
 	focus = {
 		id = Gosplan_Congress
 		icon = GFX_goal_support_communism
-		cost = 10.00
+		cost = 5.00
 		x = 8
 		y = 0
+		available = { always = no }
+		bypass = { has_country_flag = congress_finished }
 		completion_reward = {
 		     add_political_power = 100
 		}
@@ -25,28 +214,24 @@ focus_tree = {
 		cost = 10.00
 		x = 29
 		y = 0
+		available = { always = no }
+		bypass = { has_country_flag = congress_finished }
 		completion_reward = {
 		army_experience = 30
 		}
 
 	}
-	focus = {
-		id = 30th_Congress
-		icon = GFX_communist_path_focus
-		cost = 2.00
-		x = 41
-		y = 0
-		completion_reward = {
-		add_political_power = 150
-		}
 
-	}
+
+
 	focus = {
 		id = Soviet_Question
 		icon = GFX_Soviet_Union_Question
 		cost = 10.00
 		x = 39
 		y = 7
+		available = { always = no }
+
 
 	}
 	focus = {
@@ -55,9 +240,9 @@ focus_tree = {
 		cost = 10.00
 		x = 66
 		y = 0
-		completion_reward = {
-
-		}
+		available = { always = no }
+		bypass = { has_country_flag = congress_finished }
+		completion_reward = { }
 
 	}
 	focus = {
@@ -716,78 +901,7 @@ focus_tree = {
 		y = 10
 
 	}
-	focus = {
-		id = Amend_24th_Congress
-		icon = GFX_focus_renounce_the_treaty_of_triannon
-		cost = 2.00
-		prerequisite = {
-			focus = 30th_Congress
-		}
-		x = 41
-		y = 1
 
-	}
-	focus = {
-		id = Left_Wing
-		icon = GFX_focus_generic_join_comintern
-		cost = 1.00
-		prerequisite = {
-			focus = Amend_24th_Congress
-		}
-		mutually_exclusive = {
-			focus = Right_Wing
-		}
-		x = 38
-		y = 2
-
-	}
-	focus = {
-		id = Army_Backs_Trotsky
-		icon = GFX_goal_generic_attack_allies
-		cost = 10.00
-		prerequisite = {
-			focus = Left_Wing
-		}
-		x = 37
-		y = 3
-
-	}
-	focus = {
-		id = Amendment_Passed
-		icon = GFX_focus_generic_concessions
-		cost = 10.00
-		prerequisite = {
-			focus = Left_Wing
-		}
-		x = 39
-		y = 3
-
-	}
-	focus = {
-		id = Right_Dissolution
-		icon = GFX_focus_SAF_colonialist_crusade
-		cost = 10.00
-		prerequisite = {
-			focus = Amendment_Passed
-		}
-		prerequisite = {
-			focus = Army_Backs_Trotsky
-		}
-		x = 38
-		y = 4
-
-	}
-	focus = {
-		id = 31st_Congress_Trotsky
-		icon = GFX_communist_path_focus
-		cost = 10.00
-		prerequisite = {
-			focus = Right_Dissolution
-		}
-		x = 38
-		y = 5
-
-	}
 	focus = {
 		id = Decentralize
 		icon = GFX_focus_generic_soviet_politics
@@ -838,67 +952,7 @@ focus_tree = {
 		y = 10
 
 	}
-	focus = {
-		id = Right_Wing
-		icon = GFX_goal_generic_improve_relations
-		cost = 1.00
-		prerequisite = {
-			focus = Amend_24th_Congress
-		}
-		mutually_exclusive = {
-			focus = Left_Wing
-		}
-		x = 44
-		y = 2
 
-	}
-	focus = {
-		id = Centre_Opposition
-		icon = GFX_goal_generic_neutrality_focus
-		cost = 2.00
-		prerequisite = {
-			focus = Right_Wing
-		}
-		x = 43
-		y = 3
-
-	}
-	focus = {
-		id = Refusal_for_Amendment
-		icon = GFX_goal_anti_comintern_pact
-		cost = 1.00
-		prerequisite = {
-			focus = Right_Wing
-		}
-		x = 45
-		y = 3
-
-	}
-	focus = {
-		id = Temporary_General_Secretary
-		icon = GFX_goal_tripartite_pact
-		cost = 2.00
-		prerequisite = {
-			focus = Refusal_for_Amendment
-		}
-		prerequisite = {
-			focus = Centre_Opposition
-		}
-		x = 44
-		y = 4
-
-	}
-	focus = {
-		id = 31st_Congress
-		icon = GFX_communist_path_focus
-		cost = 10.00
-		prerequisite = {
-			focus = Temporary_General_Secretary
-		}
-		x = 44
-		y = 5
-
-	}
 	focus = {
 		id = Dealing_With_Imperialists
 		icon = GFX_focus_AST_war_japan

@@ -73,7 +73,7 @@ units = {
 	}
 	division = {
 		name = "3. Infantry division"
-		location = 584
+		location = 12385
 		division_template = "Infantry"
 		start_experience_factor = 0.1
 		start_equipment_factor = 1.0

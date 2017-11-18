@@ -40,7 +40,7 @@ country_event = { #30th Congress amendment#
 
    option = { #Right Opposition#
       name = soviet.3.a
-      set_country_flag = right_wing 
+      set_country_flag = right_wing
    }
 
    option = { #STAY WITH TROTSKY
@@ -77,4 +77,25 @@ country_event = { #31st Congress Trotsky
   unlock_national_focus = RKKA_Congress
   }
 
+}
+
+country_event = { #TEST EVENT FOR USSR##NOT MEANT FOR INGAME USE##
+  id = soviet.1000
+  title = soviet.1000.t
+  desc = soviet.1000.d
+  is_triggered_only = yes
+
+  option = {
+  set_cosmetic_tag = USSR
+  create_country_leader = {
+  	name = "Sergey Kirov"
+  	desc = "POLITICS_LEON_TROTSKY_DESC"
+  	picture = "Sergey_Kirov.dds"
+  	expire = "1965.1.1"
+  	ideology = marxism
+  	traits = {
+  	glorious_leader
+  	}
+  }
+  }
 }

@@ -45,6 +45,9 @@ focus = {
 	}
 
 }
+########################################################
+#####Trotsky Path#######################################
+########################################################
 focus = {
 	id = Left_Wing
 	icon = GFX_focus_generic_join_comintern
@@ -58,7 +61,6 @@ focus = {
 	x = 38
 	y = 2
 	available = { always = no }
-	bypass = { has_country_flag = left_wing }
 	completion_reward = {
 	add_political_power = 100
 	}
@@ -67,7 +69,7 @@ focus = {
 focus = {
 	id = Army_Backs_Trotsky
 	icon = GFX_goal_generic_attack_allies
-	cost = 10.00
+	cost = 2.00
 	prerequisite = {
 	focus = Left_Wing
 	}
@@ -81,7 +83,7 @@ focus = {
 focus = {
 	id = Amendment_Passed
 	icon = GFX_focus_generic_concessions
-	cost = 10.00
+	cost = 3.00
 	prerequisite = {
 		focus = Left_Wing
 	}
@@ -95,7 +97,7 @@ focus = {
 focus = {
 	id = Right_Dissolution
 	icon = GFX_focus_SAF_colonialist_crusade
-	cost = 10.00
+	cost = 2.00
 	prerequisite = {
 		focus = Amendment_Passed
 	}
@@ -113,7 +115,7 @@ focus = {
 focus = {
 	id = 31st_Congress_Trotsky
 	icon = GFX_focus_lenin_soviet
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = Right_Dissolution
 	}
@@ -123,7 +125,9 @@ focus = {
 	    country_event = { id = soviet.5 days = 2 }
      }
 }
-
+####################################################
+########Right Path##################################
+####################################################
 focus = {
 	id = Right_Wing
 	icon = GFX_goal_generic_improve_relations
@@ -137,8 +141,9 @@ focus = {
 	x = 44
 	y = 2
 	available = { always = no }
-	bypass = { has_country_flag = right_wing }
-
+	completion_reward = {
+	   country_event = { id = soviet.6 days = 1 }
+	}
 }
 
 focus = {
@@ -150,8 +155,10 @@ focus = {
 	}
 	x = 43
 	y = 3
-
+	completion_reward = {
+	add_political_power = 50
 	}
+}
 
 focus = {
 	id = Refusal_for_Amendment
@@ -162,7 +169,9 @@ focus = {
 	}
 	x = 45
 	y = 3
-
+	completion_reward = {
+    add_political_power = 50
+  }
 }
 
 focus = {
@@ -177,52 +186,200 @@ focus = {
 	}
 	x = 44
 	y = 4
-
+	complete_tooltip = {
+	custom_effect_tooltip = Kirov_General_Secretary
+  }
+	completion_reward = {
+	retire_country_leader = yes
+	country_event = { id = soviet.7 days = 1 }
+	   create_country_leader = {
+  	   name = "Sergey Kirov"
+  	   desc = "POLITICS_LEON_TROTSKY_DESC"
+  	   picture = "Sergey_Kirov.dds"
+  	   expire = "1965.1.1"
+  	   ideology = marxism
+  	   traits = {
+  	      glorious_leader
+  	  }
+    }
+	}
 }
 
 focus = {
 	id = 31st_Congress
 	icon = GFX_focus_lenin_soviet
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = Temporary_General_Secretary
 	}
 	x = 44
 	y = 5
+	completion_reward = {
+	country_event = { id = soviet.8 days = 3 }
+	}
 
 }
-#####################################################
-#####Economic Tree#################################
-#####################################################
-
+###################################################################
+#####Economic Tree#################################################
+###################################################################
+###################################################################
+#####New Economic Policy###########################################
+###################################################################
 	focus = {
 		id = Gosplan_Congress
 		icon = GFX_goal_support_communism
 		cost = 5.00
 		x = 8
 		y = 0
-		available = { always = no }
-		bypass = { has_country_flag = congress_finished }
+		available = { has_country_flag = Gosplan_Congress }
 		completion_reward = {
 		     add_political_power = 100
 		}
 
 	}
-	focus = {
-		id = RKKA_Congress
-		icon = GFX_focus_generic_join_comintern
-		cost = 10.00
-		x = 29
-		y = 0
-		available = { always = no }
-		bypass = { has_country_flag = congress_finished }
-		completion_reward = {
-		army_experience = 30
-		}
 
+	focus = {
+ 		id = New_Economic_Policy
+ 		icon = GFX_focus_generic_soviet_politics
+ 		cost = 10.00
+ 		prerequisite = {
+ 			focus = Gosplan_Congress
+ 		}
+ 		mutually_exclusive = {
+ 			focus = Central_Planning
+ 		}
+ 		x = 6
+ 		y = 1
+ 		completion_reward = {
+ 		add_ideas = SOV_New_economic_policy_idea
+ 		}
+
+ 	}
+ 	focus = {
+ 		id = NEP_1
+ 		icon = GFX_goal_tripartite_pact
+ 		cost = 10.00
+ 		prerequisite = {
+ 			focus = New_Economic_Policy
+ 		}
+ 		x = 5
+ 		y = 2
+ 		completion_reward = {
+ 		add_ideas = SOV_nep_1_idea
+ 		}
+
+ 	}
+ 	focus = {
+ 		id = NEP_2
+ 		icon = GFX_goal_generic_consumer_goods
+ 		cost = 10.00
+ 		prerequisite = {
+ 			focus = NEP_1
+ 		}
+ 		x = 5
+ 		y = 3
+ 		completion_reward = {
+ 		add_ideas = SOV_nep_2_idea
+		add_national_unity = 0.05
+ 		}
+
+ 	}
+ 	focus = {
+ 		id = NEP_foreign_1
+ 		icon = GFX_focus_generic_the_giant_wakes
+ 		cost = 10.00
+ 		prerequisite = {
+ 			focus = New_Economic_Policy
+ 		}
+ 		x = 7
+ 		y = 2
+ 		completion_reward = {
+ 		add_ideas = SOV_foreign_nep_1_idea
+ 		}
+
+ 	}
+ 	focus = {
+ 		id = NEP_foreign_2
+ 		icon = GFX_goal_generic_trade
+ 		cost = 10.00
+ 		prerequisite = {
+ 			focus = NEP_foreign_1
+ 		}
+ 		x = 7
+ 		y = 3
+ 		completion_reward = {
+ 		add_ideas = SOV_foreign_nep_2_idea
+     }
+ 	}
+ 	focus = {
+ 		id = NEP_3
+ 		icon = GFX_goal_generic_positive_trade_relations
+ 		cost = 10.00
+ 		prerequisite = {
+ 			focus = NEP_foreign_2
+ 			focus = NEP_2
+ 		}
+ 		x = 6
+ 		y = 4
+ 		completion_reward = {
+ 		add_ideas = SOV_foreign_trade_nep_idea
+		every_other_country = {
+							limit = {
+									NOT = {
+											has_government = communism
+										}
+								}
+						add_opinion_modifier = Soviet_Improve_Relations
+ 		}
+ 	}
+}
+
+focus = {
+	id = NEP_5
+	icon = GFX_goal_generic_construct_mil_factory
+	cost = 10.00
+	prerequisite = {
+		focus = NEP_3
+	}
+	x = 6
+	y = 5
+	completion_reward = {
+	   add_ideas = SOV_Military_Buildup_idea
 	}
 
+}
 
+focus = {
+	id = NEP_finished
+	icon = GFX_goal_generic_national_unity
+	cost = 10.00
+	prerequisite = {
+		focus = NEP_5
+	}
+	x = 6
+	y = 6
+	completion_reward = {
+	   add_ideas = SOV_successful_nep_idea
+	}
+
+}
+##################################################################
+ 	focus = {
+ 		id = Central_Planning
+ 		icon = GFX_goal_generic_soviet_construction
+ 		cost = 10.00
+ 		prerequisite = {
+ 			focus = Gosplan_Congress
+ 		}
+ 		mutually_exclusive = {
+ 			focus = New_Economic_Policy
+ 		}
+ 		x = 10
+ 		y = 1
+ 		completion_reward = {
+ 		add_political_power = 50
+ 		}
+	}
 
 	focus = {
 		id = Soviet_Question
@@ -254,8 +411,8 @@ focus = {
 		}
 		x = 2
 		y = 1
-
 	}
+
 	focus = {
 		id = Siberian_Chrome
 		icon = GFX_goal_generic_construction2
@@ -268,7 +425,6 @@ focus = {
 		completion_reward = {
 		add_resource = { type = chrome amount = 10 state = 582 }
 		}
-
 	}
 	focus = {
 		id = Siberian_Steel
@@ -282,8 +438,7 @@ focus = {
 		completion_reward = {
    add_resource = { type = steel amount = 20 state = 653 }
 	}
-
-	}
+}
 	focus = {
 		id = Siberian_Oil
 		icon = GFX_goal_generic_oil_refinery
@@ -298,130 +453,19 @@ focus = {
 		}
 
 	}
-	focus = {
-		id = New_Economic_Policy
-		icon = GFX_focus_generic_soviet_politics
-		cost = 10.00
-		prerequisite = {
-			focus = Gosplan_Congress
-		}
-		mutually_exclusive = {
-			focus = Central_Planning
-		}
-		x = 6
-		y = 1
-		completion_reward = {
-		add_ideas = SOV_New_economic_policy_idea
-		}
 
+	focus = {
+		id = RKKA_Congress
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		x = 29
+		y = 0
+		available = { has_country_flag = RKKA_Congress }
+		completion_reward = {
+		army_experience = 30
+		}
 	}
-	focus = {
-		id = NEP_1
-		icon = GFX_goal_tripartite_pact
-		cost = 10.00
-		prerequisite = {
-			focus = New_Economic_Policy
-		}
-		x = 5
-		y = 2
-		completion_reward = {
-		add_ideas = SOV_nep_1_idea
-		}
 
-	}
-	focus = {
-		id = NEP_2
-		icon = GFX_goal_generic_consumer_goods
-		cost = 10.00
-		prerequisite = {
-			focus = NEP_1
-		}
-		x = 5
-		y = 3
-		completion_reward = {
-		add_ideas = SOV_nep_2_idea
-		}
-
-	}
-	focus = {
-		id = NEP_foreign_1
-		icon = GFX_focus_generic_the_giant_wakes
-		cost = 10.00
-		prerequisite = {
-			focus = New_Economic_Policy
-		}
-		x = 7
-		y = 2
-		completion_reward = {
-		add_ideas = SOV_foreign_nep_1_idea
-		}
-
-	}
-	focus = {
-		id = NEP_foreign_2
-		icon = GFX_goal_generic_trade
-		cost = 10.00
-		prerequisite = {
-			focus = NEP_foreign_1
-		}
-		x = 7
-		y = 3
-		completion_reward = {
-		add_ideas = SOV_foreign_nep_2_idea
-    }
-	}
-	focus = {
-		id = NEP_3
-		icon = GFX_goal_generic_positive_trade_relations
-		cost = 10.00
-		prerequisite = {
-			focus = NEP_foreign_2
-			focus = NEP_2
-		}
-		x = 6
-		y = 4
-		completion_reward = {
-		add_ideas = SOV_foreign_trade_nep_idea
-		}
-
-	}
-	focus = {
-		id = Central_Planning
-		icon = GFX_goal_generic_soviet_construction
-		cost = 10.00
-		prerequisite = {
-			focus = Gosplan_Congress
-		}
-		mutually_exclusive = {
-			focus = New_Economic_Policy
-		}
-		x = 10
-		y = 1
-		completion_reward = {
-		add_political_power = 50
-		}
-		focus = {
-			id = NEP_5
-			icon = GFX_goal_generic_construct_mil_factory
-			cost = 10.00
-			prerequisite = {
-				focus = NEP_3
-			}
-			x = 6
-			y = 5
-
-		}
-		focus = {
-			id = NEP_finished
-			icon = GFX_goal_generic_national_unity
-			cost = 10.00
-			prerequisite = {
-				focus = NEP_5
-			}
-			x = 6
-			y = 6
-
-		}
 
 	}
 	focus = {

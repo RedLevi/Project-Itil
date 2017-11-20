@@ -14,7 +14,7 @@ ideas = {
 
 					modifier = {
 					   production_speed_buildings_factor = 0.15
-						 consumer_goods_factor = 0.1
+						 consumer_goods_factor = 0.05
 					}
 			}
 
@@ -28,7 +28,7 @@ ideas = {
 				removal_cost = -1
 
 				modifier = {
-				   consumer_goods_factor = 0.5
+				   consumer_goods_factor = 0.03
 					 add_national_unity = 0.1
 				}
 		 }
@@ -45,7 +45,7 @@ ideas = {
 			 modifier = {
 					global_building_slots_factor = 0.15
 					production_speed_buildings_factor = 0.2
-					consumer_goods_factor = 0.5
+					consumer_goods_factor = 0.05
 			 }
 		}
 
@@ -74,8 +74,7 @@ ideas = {
 	removal_cost = -1
 
 	   modifier = {
-	      production_speed_arms_factor = 0.30
-
+	      production_speed_arms_factory_factor = 0.30
 	   }
 	}
 

@@ -46,6 +46,9 @@ country_event = { #30th Congress amendment#
    option = { #STAY WITH TROTSKY
       name = soviet.3.b
       unlock_national_focus = Left_Wing
+      hidden_effect = {
+         country_event = { id = soviet.11 hours = 4 }
+      }
    }
 }
 
@@ -183,6 +186,21 @@ country_event = {
       name = soviet.10.b
       set_country_flag = Gosplan_Congress
       set_country_flag = RKKA_Congress
+   }
+}
+
+news_event = {
+   id = soviet.11
+   title = soviet.11.t
+   desc = soviet.11.d
+   picture = kirov_dead
+
+   major = yes
+
+   is_triggered_only = yes
+
+   option = {
+   name = soviet.11.a
    }
 }
 

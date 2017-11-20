@@ -96,7 +96,7 @@ focus = {
 }
 focus = {
 	id = Right_Dissolution
-	icon = GFX_focus_SAF_colonialist_crusade
+	icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 	cost = 2.00
 	prerequisite = {
 		focus = Amendment_Passed
@@ -311,6 +311,7 @@ focus = {
  		add_ideas = SOV_foreign_nep_2_idea
      }
  	}
+
  	focus = {
  		id = NEP_3
  		icon = GFX_goal_generic_positive_trade_relations
@@ -323,18 +324,10 @@ focus = {
  		y = 4
  		completion_reward = {
  		add_ideas = SOV_foreign_trade_nep_idea
-		every_other_country = {
-							limit = {
-									NOT = {
-											has_government = communism
-										}
-								}
-						add_opinion_modifier = Soviet_Improve_Relations
- 		}
  	}
 }
 
-focus = {
+ focus = {
 	id = NEP_5
 	icon = GFX_goal_generic_construct_mil_factory
 	cost = 10.00
@@ -346,7 +339,6 @@ focus = {
 	completion_reward = {
 	   add_ideas = SOV_Military_Buildup_idea
 	}
-
 }
 
 focus = {
@@ -467,7 +459,6 @@ focus = {
 	}
 
 
-	}
 	focus = {
 		id = Soviet_Technology
 		icon = GFX_focus_generic_socialist_science
@@ -933,7 +924,7 @@ focus = {
 	}
 	focus = {
 		id = Soviet_Union
-		icon = GFX_Soviet_Union
+		icon = GFX_focus_soviet_union
 		cost = 10.00
 		prerequisite = {
 			focus = Integrate_Byelorussian_SSR
@@ -984,7 +975,7 @@ focus = {
 	}
 	focus = {
 		id = Revolutionary_Union
-		icon = GFX_Soviet_Union
+		icon = GFX_focus_soviet_union
 		cost = 10.00
 		prerequisite = {
 			focus = Release_Byelorussian_SSR
@@ -1615,7 +1606,7 @@ focus = {
 	}
 	focus = {
 		id = Crush_The_Reactionaries
-		icon = GFX_Soviet_Union
+		icon = GFX_focus_soviet_union
 		cost = 10.00
 		prerequisite = {
 			focus = Polish_Crisis

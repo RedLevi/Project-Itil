@@ -25,8 +25,8 @@ MOR_GER = {
 }
 
 CHN = {
-	color = {  }
-	color_ui = rgb {  }
+	color = { 138 22 22 }
+	color_ui = rgb { 255 179 96 }
 }
 
 USSR = {

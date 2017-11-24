@@ -8,16 +8,7 @@ focus_tree = {
 		}
 	}
 	default = no
-	focus = {
-		id = yellow_dragon
-		icon = GFX_focus_china_yellow_dragon
-		cost = 10
-		x = 13
-		y = 0
-	completion_reward = {
-		add_political_power = 120
-	}
-	}
+	
 	focus = {
 		id = continue_modernisation
 		icon = GFX_goal_generic_construction

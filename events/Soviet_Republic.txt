@@ -1,0 +1,226 @@
+add_namespace = soviet
+
+country_event = { #Introduction#
+   id = soviet.1
+   title = soviet.1.t
+   desc = soviet.1.d
+   fire_only_once = yes
+
+   trigger = {
+      date > 1936.1.1
+      tag = SOV
+   }
+
+   option = {
+      name = soviet.1.a
+   }
+
+}
+
+country_event = { #30th Congress#
+   id = soviet.2
+   title = soviet.2.t
+   desc = soviet.2.d
+   fire_only_once = yes
+
+   is_triggered_only = yes
+
+   option = {
+      name = soviet.2.a
+   }
+}
+
+country_event = { #30th Congress amendment#
+   id = soviet.3
+   title = soviet.3.t
+   desc = soviet.3.d
+   fire_only_once = yes
+
+   is_triggered_only = yes
+
+   option = { #Right Opposition#
+      name = soviet.3.a
+      unlock_national_focus = Right_Wing
+   }
+
+   option = { #STAY WITH TROTSKY
+      name = soviet.3.b
+      unlock_national_focus = Left_Wing
+      hidden_effect = {
+         country_event = { id = soviet.11 hours = 4 }
+      }
+   }
+}
+
+country_event = { #Right Dissolution#
+   id = soviet.4
+   title = soviet.4.t
+   desc = soviet.4.d
+   fire_only_once = yes
+
+   is_triggered_only = yes
+
+   option = {
+   name = soviet.4.
+   }
+}
+
+country_event = { #31st Congress Trotsky
+  id = soviet.5
+  title = soviet.5.t
+  desc = soviet.5.d
+  fire_only_once = yes
+
+  is_triggered_only = yes
+
+  option = {
+  name = soviet.5.a
+  set_country_flag = Gosplan_Congress
+  set_country_flag = RKKA_Congress
+  }
+}
+
+country_event = { #Right Wing#
+  id = soviet.6
+  title = soviet.6.a
+  desc = soviet.6.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+     name = soviet.6.a
+  }
+}
+
+country_event = { #Trotsky is Deposed
+  id = soviet.7
+  title = soviet.7.t
+  desc = soviet.7.d
+  is_triggered_only = yes
+  fire_only_once = yes
+
+  option = {
+     name = soviet.7.a
+  }
+}
+
+country_event = { #31st Congress trouble#
+  id = soviet.8
+  title = soviet.8.t
+  desc = soviet.8.d
+  fire_only_once = yes
+
+  is_triggered_only = yes
+
+  option = {
+     name = soviet.8.a
+     add_national_unity = -0.05
+     country_event = { id = soviet.9 days = 4 }
+  }
+}
+
+country_event = {
+   id = soviet.9
+   title = soviet.9.t
+   desc = soviet.9.d
+   fire_only_once = yes
+
+   is_triggered_only = yes
+
+   option = { #Kirov#
+     name = soviet.9.a
+     add_national_unity = -0.05
+     add_political_power = -300
+     add_ideas = Kirov_General_Secretary
+     set_country_flag = Gosplan_Congress
+     set_country_flag = RKKA_Congress
+   }
+  option = {
+     name = soviet.9.b
+     add_political_power = 100
+     add_ideas = Right_Opposition
+     hidden_effect = {
+        retire_country_leader = yes
+     }
+     create_country_leader = {
+     	name = "Alexei_Rykov"
+     	desc = "POLITICS_LEON_TROTSKY_DESC"
+     	picture = "Alexei_Rykov.dds"
+     	expire = "1965.1.1"
+     	ideology = marxism
+     	traits = {
+     	indomitable_perseverance
+     	}
+    }
+  }
+}
+
+country_event = {
+   id = soviet.10
+   title = soviet.10.t
+   desc = soviet.10.d
+   fire_only_once = yes
+
+   is_triggered_only = yes
+
+   option = {
+      name = soviet.10.a
+        create_country_leader = { #Pick Bukharin#
+      	   name = "Nikolai Bukharin"
+      	   desc = "POLITICS_LEON_TROTSKY_DESC"
+      	   picture = "Nikolai_Bukharin.dds"
+      	   expire = "1965.1.1"
+      	   ideology = marxism
+      	   traits = {
+      	      political_dancer
+      	   }
+        }
+         add_political_power = -100
+         set_country_flag = Gosplan_Congress
+         set_country_flag = RKKA_Congress
+         hidden_effect = {
+            retire_country_leader = yes
+         }
+   }
+   option = { #Stay with Rykov#
+      name = soviet.10.b
+      set_country_flag = Gosplan_Congress
+      set_country_flag = RKKA_Congress
+   }
+}
+
+news_event = {
+   id = soviet.11
+   title = soviet.11.t
+   desc = soviet.11.d
+   picture = kirov_dead
+
+   major = yes
+
+   is_triggered_only = yes
+
+   option = {
+   name = soviet.11.a
+   }
+}
+
+country_event = { #TEST EVENT FOR USSR##NOT MEANT FOR NON-TEST USE##
+  id = soviet.1000
+  title = soviet.1000.t
+  desc = soviet.1000.d
+  is_triggered_only = yes
+
+  option = {
+  set_cosmetic_tag = USSR
+  create_country_leader = {
+  	name = "Sergey Kirov"
+  	desc = "POLITICS_LEON_TROTSKY_DESC"
+  	picture = "Sergey_Kirov.dds"
+  	expire = "1965.1.1"
+  	ideology = marxism
+  	traits = {
+  	glorious_leader
+  	}
+  }
+  }
+}

@@ -1,170 +1,144 @@
 ideas = {
-	
+
     country = {
-	
-		SOV_anti_tank = {
-			
-			allowed = {
-				original_tag = SOV
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				
-			}
-		}
-	
-		SOV_tank_army = {
-		
-			allowed = {
-				original_tag = SOV
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				
-			}
-		}
-	
-		SOV_plan = {
-		
-			allowed = {
-				original_tag = SOV
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				
-			}
-		}
-		
-		SOV_infantry_weapons = {
-		
-			allowed = {
-				original_tag = SOV
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				
-			}
-		}
-	
-		SOV_modern_army = {
-		
-			allowed = {
-				original_tag = SOV
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				
-			}
-		}
-		
-		great_country = {
-		
-			allowed = {
-				original_tag = SOV
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				
-			}
-		}
-		
-		communist_production = {
-		
-			allowed = {
-				original_tag = SOV
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				industrial_capacity_factory = 0.10
-			}
-		}
-		
-		consume_of_workers = {
-		
-			allowed = {
-				original_tag = SOV
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_factor = -0.05
-			}
-		}
-		
-		state_worker = {
-		
-			allowed = {
-				original_tag = SOV
-				always = no
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_factor = -0.10
-				production_speed_buildings_factor = 0.10
-			}
-		}
-		
-		home_of_revolution = {
-		
-			removal_cost = -1
-			
-			allowed = {
-				always = no 
+
+
+	    SOV_New_economic_policy_idea = {
+
+					allowed = {
+					   original_tag = SOV
+						 always = no
+					}
+
+					removal_cost = -1
+
+					modifier = {
+					   production_speed_buildings_factor = 0.15
+						 consumer_goods_factor = 0.05
+					}
 			}
 
-			allowed_civil_war = {
-				has_government = communism
-			}
-			
-			modifier = {
-				drift_defence_factor = 0.5
-			}
-			rule = {
-				can_create_factions = yes
-			}
+		 SOV_nep_1_idea = {
+
+		    allowed = {
+				   original_tag = SOV
+					 always = no
+				}
+
+				removal_cost = -1
+
+				modifier = {
+				   consumer_goods_factor = 0.03
+					 add_national_unity = 0.1
+				}
+		 }
+
+		 SOV_nep_2_idea = {
+
+			 allowed = {
+					original_tag = SOV
+					always = no
+			 }
+
+			 removal_cost = -1
+
+			 modifier = {
+					global_building_slots_factor = 0.15
+					production_speed_buildings_factor = 0.2
+					consumer_goods_factor = 0.05
+			 }
 		}
-		
-		multiple_splitt_party = {
-		
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = SOV
-				has_government = communism
-				always =no
-			}
-			
-			picture = split_party
-			
-			modifier = {
-				political_power_factor = -0.10
-				unity_factor = -0.05
-			}
+
+		SOV_foreign_trade_nep_idea = {
+
+			 allowed = {
+					original_tag = SOV
+					always = no
+			 }
+
+			 removal_cost = -1
+
+			 modifier = {
+				trade_opinion_factor = 0.2
+				add_political_power = 150
+			 }
 		}
-		
+
+	SOV_Military_Buildup_idea = {
+
+	allowed = {
+		 original_tag = SOV
+		 always = no
 	}
+
+	removal_cost = -1
+
+	   modifier = {
+	      production_speed_arms_factory_factor = 0.30
+	   }
+	}
+
+	SOV_foreign_nep_1_idea = {
+
+		 allowed = {
+				original_tag = SOV
+				always = no
+		 }
+
+		 removal_cost = -1
+
+		 modifier = {
+			trade_opinion_factor = 0.2
+			production_speed_industrial_complex_factor = 0.2
+		 }
+	}
+
+	SOV_foreign_nep_2_idea = {
+
+		 allowed = {
+				original_tag = SOV
+				always = no
+		 }
+
+		 removal_cost = -1
+
+		 modifier = {
+			local_resources_factor = 0.1
+			industrial_capacity_factory = 0.1
+		 }
+	}
+
+	SOV_successful_nep_idea = {
+
+		 allowed = {
+				original_tag = SOV
+				always = no
+		 }
+
+		 removal_cost = -1
+
+		 modifier = {
+			unity_factor = 0.05
+			political_power_gain = 0.5
+		 }
+	}
+
+	SOV_OKB_idea = {
+	allowed = {
+		original_tag = SOV
+		always = no
+ }
+
+ removal_cost = -1
+
+ modifier = {
+	research_time_factor = -0.05
+ }
+}
+
+
+
+
+
+	}
+}

@@ -1809,6 +1809,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_german_flag"
 		texturefile = "gfx/event_pictures/german_flag.dds"
+	}
+
+    spriteType = {
+		name = "kirov_dead"
+		texturefile = "gfx/event_pictures/kirov_dead.dds"
 	}	
 	
 	

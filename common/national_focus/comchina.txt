@@ -38,9 +38,23 @@ focus_tree = {
 		id = proclaim_china
 		icon = GFX_goal_generic_war_with_comintern
 		cost = 10
+		available = {
+			AND = {
+				controls_state = 608
+				controls_state = 613
+			}
+			OR = {
+				controls_state = 592
+				controls_state = 605
+			}
+			date > 1938.1.1
+		}
 		x = 3
 		y = 0
-
+		completion_reward = {
+			
+			set_cosmetic_tag = CHN
+		}
 	}
 	focus = {
 		id = mobilisation_debates
@@ -48,7 +62,11 @@ focus_tree = {
 		cost = 10
 		x = 40
 		y = 0
-
+		
+	completion_reward = {
+		army_experience = 30
+	
+	}
 	}
 	focus = {
 		id = oceangoing_navy
@@ -56,7 +74,9 @@ focus_tree = {
 		cost = 10
 		x = 44
 		y = 0
-
+		completion_reward = {
+			navy_experience = 30
+		}
 	}
 	focus = {
 		id = aviators_of_china
@@ -64,7 +84,7 @@ focus_tree = {
 		cost = 10
 		x = 49
 		y = 0
-
+		air_experience = 30
 	}
 	focus = {
 		id = the_mighty_dragon

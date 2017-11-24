@@ -23,3 +23,7 @@ MOR_GER = {
     color = { 153 0 0 }
     color_ui = rgb { 255 179 96 }
 }
+
+CHN = {
+	color = 
+}

@@ -2645,6 +2645,31 @@ spriteTypes = {
 		name = "GFX_idea_GRE_fortification_focus"
 		texturefile = "gfx/interface/ideas/GRE_fortification_focus.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_Nikolai_Bukharin"
+		texturefile = "gfx/interface/ideas/Bukharin.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_Alexei_Rykov"
+		texturefile = "gfx/interface/ideas/Rykov.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Andrei_Bubnov"
+		texturefile = "gfx/interface/ideas/Bubnov.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Sergey_Kirov"
+		texturefile = "gfx/interface/ideas/Kirov.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_Grigory_Zinoviev"
+		texturefile = "gfx/interface/ideas/Zinoviev.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Mikhail_Tomsky"
+		texturefile = "gfx/interface/ideas/Tomsky.dds"
+	}
+	
 
 
 }

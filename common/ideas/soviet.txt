@@ -135,10 +135,109 @@ ideas = {
 	research_time_factor = -0.05
  }
 }
-
-
-
-
-
 	}
-}
+
+
+Head_of_Government = {
+
+    Alexei_Rykov = {
+
+
+        allowed = {
+           original_tag = SOV
+        }
+        available = {
+           NOT = {
+              has_completed_focus = Right_Dissolution
+           }
+          }
+        picture = GFX_idea_Alexei_Rykov
+
+
+       traits = { silent_workhorse }
+
+    }
+
+    Andrei_Bubnov = {
+
+       allowed = {
+          original_tag = SOV
+       }
+       available = {
+          NOT = {
+             has_completed_focus = Temporary_General_Secretary
+          }
+       }
+       picture = GFX_idea_Andrei_Bubnov
+
+       traits = { staunch_loyalist }
+    }
+
+    Nikolai_Bukharin = {
+
+      allowed = {
+         original_tag = SOV
+      }
+      available = {
+         NOT = {
+            has_country_flag = Bukharin_Dead
+         }
+        }
+      picture = GFX_idea_Nikolai_Bukharin
+
+      traits = { golden_boy }
+
+   }
+  }
+
+   Minister_Of_Internal = {
+
+   Mikhail_Tomsky = {
+
+     allowed = {
+        original_tag = SOV
+     }
+     available = {
+        NOT = {
+           has_country_flag = Tomsky_Dead
+        }
+     }
+     picture = GFX_idea_Mikhail_Tomsky
+
+     traits = { trade_unionist }
+   }
+
+   Sergey_Kirov = {
+
+   allowed = {
+      original_tag = SOV
+   }
+   available = {
+      NOT = {
+         has_country_flag = kirov_dead
+      }
+   }
+   picture = GFX_idea_Sergey_Kirov
+
+   traits = { popular_figurehead }
+
+   }
+
+   Grigory_Zinoviev = {
+
+   allowed = {
+      original_tag = SOV
+   }
+   available = {
+      NOT = {
+         has_country_flag = zinoviev_dead
+      }
+   }
+   picture = GFX_idea_Grigory_Zinoviev
+
+   traits = { communist_revolutionary }
+
+   }
+   }
+   
+  }

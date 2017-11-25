@@ -1,4 +1,4 @@
-﻿l_english: 
+﻿l_english:
 ####focus####
  30th_Congress:0 "XXXth Congress"
  30th_Congress_desc:0 "The 30th Congress's role is to discuss the possible amendment to the 24th Congress, along with other critical changes."
@@ -22,7 +22,7 @@
  soviet.2.t:0 "Congress of the SSDLP"
  soviet.2.a:0 "The Future is Uncertain"
  soviet.3.t:0 "The Amendment"
- soviet.3.d:0 "The 24th Congress was arguably the most important since Lenin's death. Major policies were changed, such as implementing the NEP, Army cutbacks, and diplomatic isolation. The soviet high leadership is spilt into two parts: the Left Majority, and the Right Opposition. The Bolsheviks under Trotsky wish to revoke these "revisionist policies" and the Right wants to oust Trotsky's "Reactionary Dictatorship". The Left is expected to get a majority, however Kirov and his Centre Opposition have announced they will consider supporting the Right."
+ soviet.3.d:0 "The 24th Congress was arguably the most important since Lenin's death. Major policies were changed, such as implementing the NEP, Army cutbacks, and diplomatic isolation. The soviet high leadership is spilt into two parts, the Left Majority, and the Right Opposition. The Bolsheviks under Trotsky wish to revoke these "revisionist policies" and the Right wants to oust Trotsky's "Reactionary Dictatorship". The Left is expected to get a majority, however Kirov and his Centre Opposition have announced they will consider supporting the Right."
  soviet.3.a:0 "Right Opposition gets the vote!"
  soviet.3.b:0 "Left Majority gets the vote!"
  soviet.4.t:0 "Dissolution of the Right"
@@ -34,3 +34,10 @@
  soviet.5.t:0 "31st Congress of the SSDLP"
  soviet.5.d:0 "The 31st congress of the party is a special congress that will discuss major possible economic and military changes. With the abolishment of the ill-implemented NEP, Trotsky announces he will kickstart the struggling Soviet industry with extremely rapid industrialization, and he will enact major army reforms empowering the major proponents of deep battle, Tukhachevsky and Frunze. However, remnants of the right fervently criticize Trotsky, seeing him as a raging lunatic whose policies will destroy the republic. In the shadows, the GPU is conducting secret trials of Bukharin, and other Right Opposition leaders."
  soviet.5.a:0 "The Future is Bright!"
+ ###Ideas###
+ Alexei_Rykov:0 "Alexei Rykov"
+ Andrei_Bubnov:0 "Andrei Bubnov"
+ Nikolai_Bukharin:0 "Nikolai Bukharin"
+ Sergey_Kirov:0 "Sergey Kirov"
+ Mikhail_Tomsky:0 "Mikhail Tomsky"
+ Grigory_Zinoviev:0 "Grigory Zinoviev"

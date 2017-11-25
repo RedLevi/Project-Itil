@@ -16,13 +16,13 @@ idea_categories = {
 	government = {
 	    slot = popularity
 	    slot = stability
-        slot = Head_of_Government
-		slot = Minister_Of_Foreign
-		slot = Minister_Of_Internal
-		slot = Minister_Of_Economy
+			slot = political_advisor
+			slot = political_advisor
+			slot = political_advisor
+			slot = political_advisor
 		cost = 150
 		removal_cost = 1
-
+  }
 	government = {
 	slot = Head_of_Government
   slot = Minister_Of_Foreign
@@ -34,7 +34,7 @@ idea_categories = {
 	removal_cost = -1
 	}
 
-	}
+
 	government = {
 		slot = mobilization_laws
 		slot = trade_laws

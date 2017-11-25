@@ -278,6 +278,15 @@
  exiled:0 "Exiled"
  exiled_desc:0 "Under threat of persecution they have spent much of the recent years of political turmoil abroad."
  indomitable_perseverance:1 "Indomitable Perseverance"
- 
+
  prince_of_peace:0 "Prince of Peace"
  glorious_leader:0 "Glorious Leader"
+ golden_boy:0 "Golden Boy"
+ golden_boy_desc:0 "Often regarded as the favourite of the party an the people, they are good figureheads, however they are poor at political intrigue."
+ staunch_loyalist:0 "Staunch Loyalist"
+ staunch_loyalist_desc:0 "Appointed by a higher-up as a loyal crony, he is a powerful politcal tool."
+ state_capitalist:0 "State Capitalist"
+ state_capitalist_desc:0 "A major proponet of state capitalism, he will make sure to see his policies go through."
+ trade_unionist:0 "Trade Unionist"
+ trade_unionist_desc:0 "Organizer and supporter of worker unions, he believes that worker rights are integral to any socialist society."
+ 

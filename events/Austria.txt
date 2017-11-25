@@ -687,15 +687,14 @@ country_event = { # Austria invades Hungary! (Yugoslavia)
 	option = { # Send an ultimatum to Austria
 		name = aus.5.a
 		AUS = { country_event = { id = aus.20 days = 7 } }
+		custom_effect_tooltip = YUG_AUS_war
 		ai_chance = {
-			factor = 4
+			factor = 3
 			modifier = {
 				factor = 10
-				modifier = {
-					OR = {
-						has_global_flag = AUS_sanctioned
-						has_global_flag = AUS_removed
-					}
+				OR = {
+					has_global_flag = AUS_sanctioned
+					has_global_flag = AUS_removed
 				}
 			}
 		}
@@ -704,7 +703,7 @@ country_event = { # Austria invades Hungary! (Yugoslavia)
 
 	option = { # Send an ultimatum to Hungary
 		name = aus.5.b
-		# HUN = { country_event = { id = aus days = 7 } }
+		# HUN = { country_event = { id = aus.23 days = 7 } }
 		ai_chance = { factor = 5 }
 	}
 
@@ -717,12 +716,12 @@ country_event = { # Austria invades Hungary! (Yugoslavia)
 
 country_event = {
 	id = aus.20
-	title = aus.17.t
-	desc = aus.17.d
+	title = aus.20.t
+	desc = aus.20.d
 	is_triggered_only = yes
 	
 	option = { # We better
-		name = aus.17.a
+		name = aus.20.a
 		ai_chance = {
 			factor = 4
 			modifier = {
@@ -738,7 +737,45 @@ country_event = {
 			}
 			modifier = {
 				factor = 10
-				modifier = {
+				OR = {
+					has_global_flag = AUS_sanctioned
+					has_global_flag = AUS_removed
+				}
+			}
+		}
+		YUG = {
+			transfer_state = 102
+			transfer_state = 736
+		}
+	}
+	
+	option = { # No way
+		name = aus.20.b
+		ai_chance = { factor = 6 }
+		YUG = { country_event = { id = aus.21 days = 2 } }
+	}
+}
+
+country_event = {
+	id = aus.21
+	title = aus.21.t
+	desc = aus.21.d
+	is_triggered_only = yes
+
+	option = { # To War!
+		name = aus.21.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				OR = {
+					has_global_flag = AUS_sanctioned
+					has_global_flag = AUS_removed	
+				}
+			}
+			modifier = {
+				factor = 0.05
+				NOT = {
 					OR = {
 						has_global_flag = AUS_sanctioned
 						has_global_flag = AUS_removed
@@ -746,11 +783,158 @@ country_event = {
 				}
 			}
 		}
+		add_political_power = 20
+		declare_war_on = { target = AUS type = annex_everything }
+		hidden_effect = {
+			news_event = { id = aus.22 days = 2 }
+		}
 	}
-	
-	option = { # No way
-		name = aus.17.b
-		ai_chance = { factor = 6 }
+
+	option = { # No we're too scared
+		name = aus.21.b
+		ai_chance = { factor = 1 }
+		add_national_unity = -0.1
+	}
+}
+
+news_event = {
+	id = aus.22
+	title = aus.22.t
+	desc = aus.22.d
+	is_triggered_only = yes
+
+	option = { # Oh noes
+		name = aus.22.a
+		trigger = {
+			tag = AUS
+		}
+	}
+
+	option = { # Woo!
+		name = aus.22.a
+		trigger = {
+			tag = YUG
+		}
+	}
+
+	option = { # Phew
+		name = aus.22.a
+		trigger = {
+			tag = HUN
+		}
+	}
+
+	option = { # Hmm...
+		name = aus.22.a
+		trigger = {
+			tag = GER
+		}
+	}
+
+	option = { # Powderkeg blows again
+		name = aus.22.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = AUS
+					tag = YUG
+					tag = HUN
+					tag = GER
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = aus.23
+	title = aus.23.t
+	desc = aus.23.d
+	is_triggered_only = yes
+
+	option = { # Maybe it's for the best
+		ai_chance = { factor = 4 }
+		YUG = {
+			transfer_state = 45
+			transfer_state = 82
+		}
+	}
+
+	option = { # No way 
+		ai_chance = { factor = 1 }
+		YUG = { country_event = { id = aus.24 days = 2 } }
+	}
+}
+
+country_event = {
+	id = aus.24
+	title = aus.24.t
+	desc = aus.24.d
+	is_triggered_only = yes
+
+	option = { 
+		name = aus.24.a
+		ai_chance = { factor = 9 }
+		add_political_power = 20
+		declare_war_on = { target = HUN type = annex_everything }
+		hidden_effect = {
+			news_event = { id = aus.25 days = 2 }
+		}
+	}
+
+	option = { # No we're too scared
+		name = aus.24.b
+		ai_chance = { factor = 1 }
+		add_national_unity = -0.1
+	}
+}
+
+news_event = {
+	id = aus.25
+	title = aus.25.t
+	desc = aus.25.d
+	is_triggered_only = yes
+
+	option = { # Oh noes
+		name = aus.22.a
+		trigger = {
+			tag = HUN
+		}
+	}
+
+	option = { # Woo!
+		name = aus.22.a
+		trigger = {
+			tag = YUG
+		}
+	}
+
+	option = { # Phew
+		name = aus.22.a
+		trigger = {
+			tag = AUS
+		}
+	}
+
+	option = { # Hmm...
+		name = aus.22.a
+		trigger = {
+			tag = GER
+		}
+	}
+
+	option = { # Powderkeg blows again
+		name = aus.22.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = AUS
+					tag = YUG
+					tag = HUN
+					tag = GER
+				}
+			}
+		}
 	}
 }
 
@@ -759,10 +943,119 @@ country_event = {
 country_event = { # Hungary is at War! (Romania)
 	id = aus.6
 	title = aus.6.t
-	desc = aust.6.d
+	desc = aus.6.d
 	is_triggered_only = yes
 
-	option = {
-		
+	option = { # Demand Northern Transylavnia & Crisana back!
+		name = aus.6.a
+		ai_chance = { factor = 9 }
+		add_political_power = 20
+		HUN = { country_event = { id = aus.26 days = 4 } }
+	}
+
+	option = { # rather not
+		name = aus.6.b
+		ai_chance = { factor = 1 }
+		add_political_power = -10
+	}
+}
+
+country_event = {
+	id = aus.26
+	title = aus.26.t
+	desc = aus.26.d
+	is_triggered_only = yes
+
+	option = { # Give it back
+		name = aus.26.t
+		ai_chance = { factor = 4 }
+		add_political_power = -10
+		ROM = {
+			transfer_state = 76
+			transfer_state = 83
+		}
+	}
+
+	option = { # nope
+		name = aus.26.d
+		ai_chance = { factor = 1 }
+		ROM = { country_event = { id = aus.27 days = 4 } }
+	}
+}
+
+country_event = {
+	id = aus.27
+	title = aus.27.t
+	desc = aus.27.d
+	is_triggered_only = yes
+
+	option = { 
+		name = aus.26.a
+		ai_chance = { factor = 9 }
+		add_political_power = 20
+		declare_war_on = { target = HUN type = annex_everything }
+		hidden_effect = {
+			news_event = { id = aus.28 days = 2 }
+		}
+	}
+
+	option = { # No we're too scared
+		name = aus.26.b
+		ai_chance = { factor = 1 }
+		add_national_unity = -0.1
+	}
+}
+
+news_event = {
+	id = aus.28
+	title = aus.28.t
+	desc = aus.28.d
+	is_triggered_only = yes
+
+	option = { # Oh noes
+		name = aus.22.a
+		trigger = {
+			tag = HUN
+		}
+	}
+
+	option = { # Woo!
+		name = aus.22.a
+		trigger = {
+			tag = ROM
+		}
+	}
+
+	option = { # Phew
+		name = aus.22.a
+		trigger = {
+			tag = YUG
+		}
+	}
+
+	option = { # Hmm...
+		name = aus.22.a
+		trigger = {
+			OR = {
+				tag = GER
+				tag = AUS
+			}
+			
+		}
+	}
+
+	option = { # Powderkeg blows again
+		name = aus.22.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = ROM
+					tag = YUG
+					tag = HUN
+					tag = GER
+					tag = AUS
+				}
+			}
+		}
 	}
 }

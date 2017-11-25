@@ -81,4 +81,5 @@ AUS_refuses:0 "Germany may decided to get involved on Hungary's side against us!
 AUS_agree:0 "We will sign white peace with Hungary"
 GER_sanction_AUS:0 "We will economically sanction them until sign peace on their silly war. This may hurt our economy slightly in the short-term as well."
 GER_support_will_arrive:0 "Germany rapid aid will arrive in the form of guns, artilley and manpower. Moreover, they will train some German divisions to join our army permanately."
+YUG_AUS_war:0 "If the Austrians decline, we will have a chance to revise our decision. However, if we decide to go to war and Austria is still supported by Germany, they will probably join in!"
 AUS_give_up:0 "We will permanately give up on our ambitions to reconquer the empire, instead choosing to focus on internal strength."

@@ -177,12 +177,12 @@ units = {
 		ship = { name = "USS Richmond" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }				
 		ship = { name = "USS Trenton" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }				
 		ship = { name = "USS Concord" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = USA } } }	
-		ship = { name = "USS Oklahoma" definition = battleship equipment = { battleship_0 = { amount = 1 owner = USA version_name = "Pennsylvania ClUSS" } } }				
-		ship = { name = "USS Tennessee" definition = battleship equipment = { battleship_0 = { amount = 1 owner = USA version_name = "New Mexico ClUSS" } } }				
-		ship = { name = "USS California" definition = battleship equipment = { battleship_0 = { amount = 1 owner = USA version_name = "New Mexico ClUSS" } } }				
-		ship = { name = "USS Colorado" definition = battleship equipment = { battleship_0 = { amount = 1 owner = USA version_name = "Colorado ClUSS" } } }				
-		ship = { name = "USS West Virginia" definition = battleship equipment = { battleship_0 = { amount = 1 owner = USA version_name = "Colorado ClUSS" } } }				
-		ship = { name = "USS Maryland" definition = battleship equipment = { battleship_0 = { amount = 1 owner = USA version_name = "Colorado ClUSS" } } }		
+		ship = { name = "USS Oklahoma" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "Pennsylvania Class" } } }				
+		ship = { name = "USS Tennessee" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "New Mexico Class" } } }				
+		ship = { name = "USS California" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "New Mexico Class" } } }				
+		ship = { name = "USS Colorado" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "Colorado Class" } } }				
+		ship = { name = "USS West Virginia" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "Colorado Class" } } }				
+		ship = { name = "USS Maryland" definition = battleship equipment = { battleship_1 = { amount = 1 owner = USA version_name = "Colorado Class" } } }		
 		ship = { name = "USS Johnson" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
 		ship = { name = "USS Lee" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		
 		ship = { name = "USS Fox" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }		

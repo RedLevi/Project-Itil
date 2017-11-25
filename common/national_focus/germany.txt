@@ -1419,8 +1419,8 @@ focus_tree = {
 		}
         available_if_capitulated = no		
 		prerequisite = { focus = GER_middle_east_dip }
-		send_equipment = { target = UKR type = infantry_equipment amount = 2500 }
-		send_equipment = { target = UKR type = support_equipment amount = 300 }
+		### ??? send_equipment = { target = UKR type = infantry_equipment amount = 2500 }
+		### ??? send_equipment = { target = UKR type = support_equipment amount = 300 }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = SAU modifier = GER_me_relations }
 			SAU = { country_event = { id = germany.8 } }
@@ -1516,7 +1516,7 @@ focus_tree = {
         prerequisite = { focus = GER_improve_deutsches_heer }
 		
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.5 uses = 1 technology = cat_mechanized_equipment }
+			add_tech_bonus = { bonus = 0.5 uses = 1 technology = motorized_equipment }
 		}
 	}
 

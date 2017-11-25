@@ -75,7 +75,9 @@ focus_tree = {
 		cost = 10
 		x = 49
 		y = 0
-		air_experience = 30
+		completion_reward = {		
+		   air_experience = 30
+		}
 	}
 	focus = {
 		id = the_mighty_dragon

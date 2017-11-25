@@ -207,8 +207,13 @@ country_event = {#Germany sends support SAU
 	id = germany.8
 	title = germany.8.t 
 	desc = germany.8.d
+	
     is_triggered_only = yes
+	
+    option = {
+	name = germany.8.a
 	add_ideas = SAU_GER_support
+	}
 	
 }
 

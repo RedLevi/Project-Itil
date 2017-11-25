@@ -212,7 +212,7 @@ ideologies = {
 		war_impact_on_world_tension = 0.75		#Commie less threatening
 		faction_impact_on_world_tension = 0.5
 		
-		ai_neutral = yes = yes # uses the commie AI behaviour
+		ai_neutral = yes # uses the commie AI behaviour
 		
 		rules = {
 			can_declare_war_on_same_ideology = yes

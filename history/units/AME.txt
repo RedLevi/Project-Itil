@@ -178,13 +178,13 @@ units = {
 		name = "Washington Fleet"
 		base = 3957
 		location = 3957  # Washington
-		ship = { name = "ANV Nevada" definition = battleship equipment = { battleship_0 = { amount = 1 owner = AME version_name = "Pennsylvania ClANV" } } }				
-		ship = { name = "ANV Arizona" definition = battleship equipment = { battleship_0 = { amount = 1 owner = AME version_name = "Pennsylvania ClANV" } } }				
-		ship = { name = "ANV Pennsylvania" definition = battleship equipment = { battleship_0 = { amount = 1 owner = AME version_name = "Pennsylvania ClANV" } } }							
-		ship = { name = "ANV Washington" definition = destroyer equipment = { destroyer_0 = { amount = 1 owner = AME version_name = "Farragut ClANV" } } }
-		ship = { name = "ANV Philadelphia" definition = destroyer equipment = { destroyer_0 = { amount = 1 owner = AME version_name = "Farragut ClANV" } } }
-		ship = { name = "ANV MacDonough" definition = destroyer equipment = { destroyer_0 = { amount = 1 owner = AME version_name = "Farragut ClANV" } } }
-		ship = { name = "ANV Bangor" definition = destroyer equipment = { destroyer_0 = { amount = 1 owner = AME version_name = "Farragut ClANV" } } }	
+		ship = { name = "ANV Nevada" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "Pennsylvania Class" } } }				
+		ship = { name = "ANV Arizona" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "Pennsylvania Class" } } }				
+		ship = { name = "ANV Pennsylvania" definition = battleship equipment = { battleship_1 = { amount = 1 owner = AME version_name = "Pennsylvania Class" } } }							
+		ship = { name = "ANV Washington" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME version_name = "Farragut Class" } } }
+		ship = { name = "ANV Philadelphia" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME version_name = "Farragut Class" } } }
+		ship = { name = "ANV MacDonough" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME version_name = "Farragut Class" } } }
+		ship = { name = "ANV Bangor" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = AME version_name = "Farragut Class" } } }	
 		ship = { name = "ANV Northampton" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AME } } }				
 		ship = { name = "ANV Chester" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AME } } }				
 		ship = { name = "ANV Baltimore" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = AME } } }	

@@ -7,7 +7,7 @@ state={
 		steel=4
 	}
 	
-	state_category = wasteland
+	state_category = rural
 
 	history={
 		owner = MOR

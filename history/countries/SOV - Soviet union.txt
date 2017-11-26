@@ -41,9 +41,9 @@ set_convoys = 50
 set_national_unity = 0.55
 
 add_ideas = {
-	multiple_splitt_party
-	home_of_revolution
-	great_country
+	#multiple_splitt_party
+	#home_of_revolution
+	#great_country
 	limited_freedom_law
 	nationalized_economy_law
 }
@@ -215,7 +215,7 @@ create_field_marshal = {
 create_corps_commander = {
 	name = "Mikhail Frunze"
 		picture = "Mikhail_Frunze.dds"
-	traits = { trickster engineer }
+	traits = { trickster } #engineer
 	skill = 5
 
 

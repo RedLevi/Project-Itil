@@ -820,13 +820,13 @@ country_event = { #SOVIET DECISION
     }
 }
 
-country_event = { #GERMAN SUPPORT
-    id = france.29
-    title = france.29.t
-    desc = france.29.d
+#country_event = { #GERMAN SUPPORT
+#    id = france.29
+#    title = france.29.t
+#    desc = france.29.d
 #Nothing seems to be here#
-
-}
+#
+#}
 
 country_event = { #PETAINS DECISION
     id = france.30
@@ -857,10 +857,10 @@ country_event = { #ITALIAN DEFENSE OF SYA
 
     option = { #YES
     name = france.31.a
+	ai_chance = { factor = 80 }	
     ITA = { create_faction = synintern }
-    ITA = { declare_war_on = { target = SPF type = annex everything } }
-    ITA = { add_to_faction = SYA}
-    ai_chance = { factor = 80 }
+    ITA = { declare_war_on = { target = SPF type = annex } }
+    ITA = { add_to_faction = SYA }
     }
     option = { #NO
     name = france.31.b
@@ -886,7 +886,7 @@ country_event = { #British support for SFA#
   option = {
   name = france.32.a
   hidden_effect = {
-  SFA = load_oob = ENG_volunteers
+  SFA = { load_oob = ENG_volunteers }
   }
     add_opinion_modifier = { target = SFA modifier = Sent_volunteers }
   ENG = { add_manpower = -55000 }
@@ -894,5 +894,4 @@ country_event = { #British support for SFA#
   option = {
   name = france.32.b
   }
-}
 }

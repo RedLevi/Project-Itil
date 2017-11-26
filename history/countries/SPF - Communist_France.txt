@@ -100,6 +100,6 @@ create_field_marshal = {
 create_corps_commander = {
 	name = "Pierre Brossolette"
 	picture = "Pierre_Brossolette.dds"
-	traits = { charismatic  }
+	traits = {  } #charismatic
 	skill = 2
 }

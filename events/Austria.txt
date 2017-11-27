@@ -38,6 +38,10 @@ country_event = { # Austria's initiation event
 						HUN = { is_subject_of = AUS }
 					}
 				}
+				has_war_with = ENG
+				has_war_with = SOV
+				has_war_with = YUG
+				has_war_with = FRA
 			}
 		}
 		country_exists = HUN
@@ -88,7 +92,6 @@ country_event = { # Austria's initiation event
 				}
 				ROM = { country_event = { days = 14 id = aus.6 } } # Hungary is at war!
 			}
-			news_event = aus.6 # Austria declares war on Hungary
 		}
 		add_ideas = AUS_Reconquest_War
 	}
@@ -657,6 +660,7 @@ country_event = { # Britain demands we make peace!
 	option = { # Ye sure we'll consolodate instead
 		name = aus.18.b
 		ai_chance = { factor = 1}
+		white_peace = HUN
 		custom_effect_tooltip = AUS_give_up
 		hidden_effect = {
 			set_global_flag = AUS_no_reconquest
@@ -802,6 +806,7 @@ news_event = {
 	title = aus.22.t
 	desc = aus.22.d
 	is_triggered_only = yes
+	major = yes
 
 	option = { # Oh noes
 		name = aus.22.a
@@ -811,28 +816,28 @@ news_event = {
 	}
 
 	option = { # Woo!
-		name = aus.22.a
+		name = aus.22.b
 		trigger = {
 			tag = YUG
 		}
 	}
 
 	option = { # Phew
-		name = aus.22.a
+		name = aus.22.c
 		trigger = {
 			tag = HUN
 		}
 	}
 
 	option = { # Hmm...
-		name = aus.22.a
+		name = aus.22.e
 		trigger = {
 			tag = GER
 		}
 	}
 
 	option = { # Powderkeg blows again
-		name = aus.22.a
+		name = aus.22.f
 		trigger = {
 			NOT = {
 				OR = {
@@ -894,6 +899,7 @@ news_event = {
 	title = aus.25.t
 	desc = aus.25.d
 	is_triggered_only = yes
+	major = yes
 
 	option = { # Oh noes
 		name = aus.22.a
@@ -1011,6 +1017,7 @@ news_event = {
 	title = aus.28.t
 	desc = aus.28.d
 	is_triggered_only = yes
+	major = yes
 
 	option = { # Oh noes
 		name = aus.22.a

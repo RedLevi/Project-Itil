@@ -255,7 +255,7 @@ leader_traits = {
 
 	popular_figurehead = {
 		sprite = 13
-		unity_factor = 0.15
+		unity_factor = 0.1
 
 		ai_will_do = {
 			factor = 1
@@ -325,8 +325,8 @@ leader_traits = {
   golden_boy = {
     random = yes
     sprite = 13
-    unity_factor = 0.1
-    political_power_factor = -0.5
+    unity_factor = 0.15
+    political_power_factor = -0.1
 
     ai_will_do = {
       factor = 1

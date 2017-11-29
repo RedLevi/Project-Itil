@@ -266,6 +266,7 @@ focus = {
  		y = 2
  		completion_reward = {
  		add_ideas = SOV_nep_1_idea
+		add_national_unity = 0.1
  		}
 
  	}
@@ -352,9 +353,12 @@ focus = {
 	y = 6
 	completion_reward = {
 	   add_ideas = SOV_successful_nep_idea
+		 add_national_unity =  0.05
 	}
 
 }
+##################################################################
+#####Economic Tree################################################
 ##################################################################
  	focus = {
  		id = Central_Planning
@@ -383,17 +387,7 @@ focus = {
 
 
 	}
-	focus = {
-		id = The_Revolution
-		icon = GFX_focus_soviet_union_question
-		cost = 10.00
-		x = 66
-		y = 0
-		available = { always = no }
-		bypass = { has_country_flag = congress_finished }
-		completion_reward = { }
 
-	}
 	focus = {
 		id = Resources_Exploitation
 		icon = GFX_goal_generic_production2
@@ -500,7 +494,7 @@ focus = {
 		completion_reward = {
 		   add_tech_bonus = {
 			    name = Tupolev_Petlyakov
-					bonus = 0.6
+					bonus = 0.4
 					uses = 3
 					category = tactical_bomber
 					category = cas_bomber
@@ -520,7 +514,7 @@ focus = {
 		completion_reward = {
 		   add_tech_bonus = {
 			    name = Mig_Yakovlev
-					bonus = 0.6
+					bonus = 0.4
 					uses = 3
 					technology = early_fighter
 					technology = fighter1
@@ -684,7 +678,7 @@ focus = {
 	}
 	focus = {
 		id = FYP_Complete
-		icon = GFX_focus_yug_pan_slavic_congress
+		icon = GFX_focus_YUG_pan_slavic_congress
 		cost = 10.00
 		bypass = {
 		has_completed_focus = FYP_civ_3
@@ -702,6 +696,348 @@ focus = {
 		add_national_unity = -0.15
 
 		}
+###############################################################################
+#######Foreign Policy##########################################################
+###############################################################################
+focus = {
+	id = The_Revolution
+	icon = GFX_focus_soviet_union_question
+	cost = 10.00
+	x = 66
+	y = 0
+	available = {
+    # has_country_flag =
+  }
+	bypass = { has_country_flag = congress_finished }
+	completion_reward = {
+	custom_effect_tooltip = world_revolution_tooltip
+	every_other_country = {
+			limit = {
+					NOT = {
+							has_government = communism
+						}
+				}
+			reverse_add_opinion_modifier = {
+					target = ROOT
+					modifier = world_revolution_negative
+				}
+		}
+	}
+
+}
+
+focus = {
+	id = Dealing_With_Nationalists
+	icon = GFX_focus_generic_join_comintern
+	cost = 10.00
+	prerequisite = {
+		focus = The_Revolution
+	}
+	x = 66
+	y = 2
+
+}
+focus = {
+	id = Look_To_South
+	icon = GFX_goal_generic_position_armies
+	cost = 10.00
+	prerequisite = {
+		focus = Dealing_With_Nationalists
+	}
+	x = 64
+	y = 3
+
+}
+focus = {
+	id = The_Mad_Pasha
+	icon = GFX_goal_generic_secret_weapon
+	cost = 10.00
+	prerequisite = {
+		focus = Look_To_South
+	}
+	x = 62
+	y = 5
+	completion_reward = {
+	   create_wargoal = { type = annex_everything target = KAZ }
+		 add_national_unity = 0.03
+	}
+
+}
+focus = {
+	id = Contact_Indian_Nationalists
+	icon = GFX_focus_RAJ_british_investors
+	cost = 10.00
+	prerequisite = {
+		focus = The_Mad_Pasha
+	}
+	x = 54
+	y = 7
+
+}
+focus = {
+	id = Georgian_Ultimatum
+	icon = GFX_goal_generic_forceful_treaty
+	cost = 10.00
+	prerequisite = {
+		focus = Look_To_South
+	}
+	x = 64
+	y = 5
+
+}
+focus = {
+	id = Demand_Armenia
+	icon = GFX_goal_generic_military_deal
+	cost = 10.00
+	prerequisite = {
+		focus = Georgian_Ultimatum
+	}
+	x = 63
+	y = 6
+
+}
+focus = {
+	id = Demand_Azerbaijan
+	icon = GFX_goal_generic_military_deal
+	cost = 10.00
+	prerequisite = {
+		focus = Georgian_Ultimatum
+	}
+	x = 65
+	y = 6
+
+}
+focus = {
+	id = Syrian_Socialists
+	icon = GFX_focus_generic_soviet_politics
+	cost = 10.00
+	prerequisite = {
+		focus = Demand_Armenia
+	}
+	prerequisite = {
+		focus = Demand_Azerbaijan
+	}
+	x = 57
+	y = 7
+
+}
+focus = {
+	id = Organize_Unions_Persia
+	icon = GFX_goal_generic_trade
+	cost = 10.00
+	prerequisite = {
+		focus = Demand_Azerbaijan
+	}
+	prerequisite = {
+		focus = Demand_Armenia
+	}
+	x = 60
+	y = 7
+
+}
+focus = {
+	id = Look_To_West
+	icon = GFX_goal_generic_position_armies
+	cost = 10.00
+	prerequisite = {
+		focus = Dealing_With_Nationalists
+	}
+	x = 68
+	y = 3
+
+}
+focus = {
+	id = Crush_The_Traitors
+	icon = GFX_goal_generic_political_pressure
+	cost = 10.00
+	prerequisite = {
+		focus = Look_To_West
+	}
+	x = 66
+	y = 5
+	completion_reward = {
+	   create_wargoal = { type = annex_everything target = UKR }
+		 add_national_unity = 0.05
+	}
+
+}
+focus = {
+	id = Demand_Bessarabia
+	icon = GFX_goal_generic_territory_or_war
+	cost = 10.00
+	prerequisite = {
+		focus = Crush_The_Traitors
+	}
+	x = 65
+	y = 8
+
+}
+focus = {
+	id = Demand_Lithuania
+	icon = GFX_goal_generic_more_territorial_claims
+	cost = 10.00
+	prerequisite = {
+		focus = Look_To_West
+	}
+	x = 68
+	y = 5
+
+}
+focus = {
+	id = Italian_Deal
+	icon = GFX_goal_generic_dangerous_deal
+	cost = 10.00
+	prerequisite = {
+		focus = Crush_The_Traitors
+	}
+	x = 68
+	y = 8
+
+}
+focus = {
+	id = German_Syndicalism
+	icon = GFX_focus_yug_pan_slavic_congress
+	cost = 10.00
+	prerequisite = {
+		focus = Italian_Deal
+	}
+	x = 68
+	y = 9
+
+}
+focus = {
+	id = Integrate_Latvia
+	icon = GFX_focus_cze_german_puppet
+	cost = 10.00
+	prerequisite = {
+		focus = Look_To_West
+	}
+	x = 70
+	y = 5
+
+}
+focus = {
+	id = Demand_Estonia
+	icon = GFX_goal_generic_more_territorial_claims
+	cost = 10.00
+	prerequisite = {
+		focus = Look_To_West
+	}
+	x = 72
+	y = 5
+
+}
+focus = {
+	id = Finnish_Question
+	icon = GFX_goal_generic_cavalry
+	cost = 10.00
+	prerequisite = {
+		focus = Demand_Estonia
+	}
+	prerequisite = {
+		focus = Integrate_Latvia
+	}
+	prerequisite = {
+		focus = Demand_Lithuania
+	}
+	x = 70
+	y = 6
+
+}
+
+focus = {
+	id = Dealing_With_Imperialists
+	icon = GFX_focus_AST_war_japan
+	cost = 10.00
+	prerequisite = {
+		focus = The_Revolution
+	}
+	x = 60
+	y = 2
+  completion_reward = {
+	add_political_power = 100
+	}
+
+
+}
+focus = {
+	id = Take_On_Japan
+	icon = GFX_focus_generic_japanese_imperial_glory
+	cost = 10.00
+	prerequisite = {
+		focus = Dealing_With_Imperialists
+	}
+	x = 60
+	y = 3
+	completion_reward = {
+	   add_opinion_modifier = { target = JAP modifier = Soviet_Revanchism }
+	}
+
+}
+focus = {
+	id = Bogd_Khanate
+	icon = GFX_focus_RAJ_lions_of_the_great_war
+	cost = 10.00
+	prerequisite = {
+		focus = Take_On_Japan
+	}
+	x = 53
+	y = 4
+	completion_reward = {
+	   country_event = { id = 12 days = 3 }
+	}
+
+}
+focus = {
+	id = Fund_Japanese_Dissidents
+	icon = GFX_goal_generic_war_with_comintern
+	cost = 10.00
+	prerequisite = {
+		focus = Take_On_Japan
+	}
+	x = 56
+	y = 4
+
+}
+focus = {
+	id = Aid_PRF
+	icon = GFX_focus_china_yellow_dragon
+	cost = 10.00
+	prerequisite = {
+		focus = Take_On_Japan
+	}
+	x = 59
+	y = 4
+
+}
+focus = {
+	id = Supply_Guominjun
+	icon = GFX_goal_generic_occupy_states_ongoing_war
+	cost = 10.00
+	prerequisite = {
+		focus = Aid_PRF
+	}
+	mutually_exclusive = {
+		focus = Denounce_Feng
+	}
+	x = 58
+	y = 5
+
+}
+focus = {
+	id = Denounce_Feng
+	icon = GFX_goal_demand_sudetenland
+	cost = 10.00
+	prerequisite = {
+		focus = Aid_PRF
+	}
+	mutually_exclusive = {
+		focus = Supply_Guominjun
+	}
+	x = 60
+	y = 5
+
+}
 
 	}
 	focus = {
@@ -985,300 +1321,6 @@ focus = {
 		}
 		x = 42
 		y = 10
-
-	}
-
-	focus = {
-		id = Dealing_With_Imperialists
-		icon = GFX_focus_AST_war_japan
-		cost = 10.00
-		prerequisite = {
-			focus = The_Revolution
-		}
-		x = 60
-		y = 2
-
-	}
-	focus = {
-		id = Take_On_Japan
-		icon = GFX_focus_generic_japanese_imperial_glory
-		cost = 10.00
-		prerequisite = {
-			focus = Dealing_With_Imperialists
-		}
-		x = 60
-		y = 3
-
-	}
-	focus = {
-		id = Bogd_Khanate
-		icon = GFX_focus_RAJ_lions_of_the_great_war
-		cost = 10.00
-		prerequisite = {
-			focus = Take_On_Japan
-		}
-		x = 53
-		y = 4
-
-	}
-	focus = {
-		id = Fund_Japanese_Dissidents
-		icon = GFX_goal_generic_war_with_comintern
-		cost = 10.00
-		prerequisite = {
-			focus = Take_On_Japan
-		}
-		x = 56
-		y = 4
-
-	}
-	focus = {
-		id = Aid_PRF
-		icon = GFX_focus_china_yellow_dragon
-		cost = 10.00
-		prerequisite = {
-			focus = Take_On_Japan
-		}
-		x = 59
-		y = 4
-
-	}
-	focus = {
-		id = Supply_Guominjun
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		cost = 10.00
-		prerequisite = {
-			focus = Aid_PRF
-		}
-		mutually_exclusive = {
-			focus = Denounce_Feng
-		}
-		x = 58
-		y = 5
-
-	}
-	focus = {
-		id = Denounce_Feng
-		icon = GFX_goal_demand_sudetenland
-		cost = 10.00
-		prerequisite = {
-			focus = Aid_PRF
-		}
-		mutually_exclusive = {
-			focus = Supply_Guominjun
-		}
-		x = 60
-		y = 5
-
-	}
-	focus = {
-		id = Dealing_With_Nationalists
-		icon = GFX_focus_generic_join_comintern
-		cost = 10.00
-		prerequisite = {
-			focus = The_Revolution
-		}
-		x = 66
-		y = 2
-
-	}
-	focus = {
-		id = Look_To_South
-		icon = GFX_goal_generic_position_armies
-		cost = 10.00
-		prerequisite = {
-			focus = Dealing_With_Nationalists
-		}
-		x = 64
-		y = 3
-
-	}
-	focus = {
-		id = The_Mad_Pasha
-		icon = GFX_goal_generic_secret_weapon
-		cost = 10.00
-		prerequisite = {
-			focus = Look_To_South
-		}
-		x = 62
-		y = 5
-
-	}
-	focus = {
-		id = Contact_Indian_Nationalists
-		icon = GFX_focus_RAJ_british_investors
-		cost = 10.00
-		prerequisite = {
-			focus = The_Mad_Pasha
-		}
-		x = 54
-		y = 7
-
-	}
-	focus = {
-		id = Georgian_Ultimatum
-		icon = GFX_goal_generic_forceful_treaty
-		cost = 10.00
-		prerequisite = {
-			focus = Look_To_South
-		}
-		x = 64
-		y = 5
-
-	}
-	focus = {
-		id = Demand_Armenia
-		icon = GFX_goal_generic_military_deal
-		cost = 10.00
-		prerequisite = {
-			focus = Georgian_Ultimatum
-		}
-		x = 63
-		y = 6
-
-	}
-	focus = {
-		id = Demand_Azerbaijan
-		icon = GFX_goal_generic_military_deal
-		cost = 10.00
-		prerequisite = {
-			focus = Georgian_Ultimatum
-		}
-		x = 65
-		y = 6
-
-	}
-	focus = {
-		id = Syrian_Socialists
-		icon = GFX_focus_generic_soviet_politics
-		cost = 10.00
-		prerequisite = {
-			focus = Demand_Armenia
-		}
-		prerequisite = {
-			focus = Demand_Azerbaijan
-		}
-		x = 57
-		y = 7
-
-	}
-	focus = {
-		id = Organize_Unions_Persia
-		icon = GFX_goal_generic_trade
-		cost = 10.00
-		prerequisite = {
-			focus = Demand_Azerbaijan
-		}
-		prerequisite = {
-			focus = Demand_Armenia
-		}
-		x = 60
-		y = 7
-
-	}
-	focus = {
-		id = Look_To_West
-		icon = GFX_goal_generic_position_armies
-		cost = 10.00
-		prerequisite = {
-			focus = Dealing_With_Nationalists
-		}
-		x = 68
-		y = 3
-
-	}
-	focus = {
-		id = Crush_The_Traitors
-		icon = GFX_goal_generic_political_pressure
-		cost = 10.00
-		prerequisite = {
-			focus = Look_To_West
-		}
-		x = 66
-		y = 5
-
-	}
-	focus = {
-		id = Demand_Bessarabia
-		icon = GFX_goal_generic_territory_or_war
-		cost = 10.00
-		prerequisite = {
-			focus = Crush_The_Traitors
-		}
-		x = 65
-		y = 8
-
-	}
-	focus = {
-		id = Demand_Lithuania
-		icon = GFX_goal_generic_more_territorial_claims
-		cost = 10.00
-		prerequisite = {
-			focus = Look_To_West
-		}
-		x = 68
-		y = 5
-
-	}
-	focus = {
-		id = Italian_Deal
-		icon = GFX_goal_generic_dangerous_deal
-		cost = 10.00
-		prerequisite = {
-			focus = Crush_The_Traitors
-		}
-		x = 68
-		y = 8
-
-	}
-	focus = {
-		id = German_Syndicalism
-		icon = GFX_focus_yug_pan_slavic_congress
-		cost = 10.00
-		prerequisite = {
-			focus = Italian_Deal
-		}
-		x = 68
-		y = 9
-
-	}
-	focus = {
-		id = Integrate_Latvia
-		icon = GFX_focus_cze_german_puppet
-		cost = 10.00
-		prerequisite = {
-			focus = Look_To_West
-		}
-		x = 70
-		y = 5
-
-	}
-	focus = {
-		id = Demand_Estonia
-		icon = GFX_goal_generic_more_territorial_claims
-		cost = 10.00
-		prerequisite = {
-			focus = Look_To_West
-		}
-		x = 72
-		y = 5
-
-	}
-	focus = {
-		id = Finnish_Question
-		icon = GFX_goal_generic_cavalry
-		cost = 10.00
-		prerequisite = {
-			focus = Demand_Estonia
-		}
-		prerequisite = {
-			focus = Integrate_Latvia
-		}
-		prerequisite = {
-			focus = Demand_Lithuania
-		}
-		x = 70
-		y = 6
 
 	}
 

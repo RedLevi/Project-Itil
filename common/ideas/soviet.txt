@@ -29,7 +29,6 @@ ideas = {
 
 				modifier = {
 				   consumer_goods_factor = 0.03
-					 unity_factor = 0.1
 				}
 		 }
 
@@ -60,7 +59,7 @@ ideas = {
 
 			 modifier = {
 				trade_opinion_factor = 0.2
-				#For modifier it's daily and it's called: political_power_gain = XXX ##add_political_power = 150 
+				#For modifier it's daily and it's called: political_power_gain = XXX ##add_political_power = 150
 			 }
 		}
 
@@ -118,7 +117,6 @@ ideas = {
 		 removal_cost = -1
 
 		 modifier = {
-			unity_factor = 0.05
 			political_power_gain = 0.5
 		 }
 	}
@@ -239,5 +237,5 @@ Head_of_Government = {
 
    }
    }
-   
+
   }

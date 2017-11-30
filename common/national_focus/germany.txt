@@ -1516,7 +1516,7 @@ focus_tree = {
         prerequisite = { focus = GER_improve_deutsches_heer }
 		
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.5 uses = 1 technology = motorized_equipment }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_mobile_warfare }
 		}
 	}
 

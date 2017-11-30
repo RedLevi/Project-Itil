@@ -5,3 +5,349 @@ music = {
 			factor = 1
 		}
 	}
+}
+music = {
+	song = "Rule Britannia! Royal Philharmonic Orchestra"
+	chance = {
+		modifier = {
+			factor = 2 #believe me it's worth it
+		}		
+	}
+}
+
+music = {
+	song = "La Victoire est a Nous"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = FRA
+		}		
+	}
+}
+
+music = {
+	song = "Anthem of Russian Empire"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = RUS
+		}		
+	}
+}
+
+music = {
+	song = "Preußens Gloria"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = GER
+		}		
+	}
+}
+
+music = {
+	song = "National Anthem of Prussia"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = GER
+		}		
+	}
+}
+
+music = {
+	song = "AM I 98 AMS Lützows wilde Jagd"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = GER
+		}		
+	}
+}
+
+music = {
+	song = "AM II 243 AMS Der Jäger aus Kurpfalz"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = GER
+		}		
+	}
+}
+
+music = {
+	song = "AM III 113 AMS Kreuzritter-Fanfare"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = GER
+		}		
+	}
+}
+
+music = {
+	song = "Preußischer Militärmarsch Grenadiermarsch 1791"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = GER
+		}		
+	}
+}
+
+music = {
+	song = "Der Alte Dessauer"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = GER
+		}		
+	}
+}
+
+music = {
+	song = "Hymne du Royaume de France"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = RFA
+		}	
+		modifier = {
+			factor = 2
+			tag = FRA
+            has_government = reactionarism		
+		}			
+	}
+}
+
+music = {
+	song = "Kaiser Franz Josef Rettungs-Jubel Marsch Johann Strauss II"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = AUS
+		}			
+	}
+}
+
+music = {
+	song = "Red Army is the Strongest Rare Version"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = SOV
+		}			
+	}
+}
+
+music = {
+	song = "The Sailors Hornpipe ORCHESTRAL College Hornpipe"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = ENG
+		}			
+	}
+}
+
+music = {
+	song = "The British Grenadiers fife and drum"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = ENG
+		}			
+	}
+}
+
+music = {
+	song = "AP Shenkin"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = ENG
+		}			
+	}
+}
+
+music = {
+	song = "Scotland the Brave Pipes & Drums"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = ENG
+		}			
+	}
+}
+
+music = {
+	song = "Tchaikovsky Overture 1812 (Full Choral)"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = RUS
+		}			
+		modifier = {
+			factor = 2
+			tag = SOV
+		}			
+	}
+}
+
+music = {
+	song = "Austria-Hungary's Anthem - Gott erhalte, Gott beschütze!"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = AUS
+		}			
+	}
+}
+
+music = {
+	song = "National Anthem of Kingdom of Italy"
+	chance = {
+		modifier = {
+			factor = 1		
+		}
+		modifier = {
+			factor = 2
+			tag = ITA
+			NOT = { has_government = communist }
+		}			
+	}
+}
+
+music = {
+	song = "Hamidiye Marşı"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = TUR
+		}		
+	}
+}
+
+
+music = {
+	song = "Giuseppe Donizetti - Mecidiye Marşı"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = TUR
+		}	
+	}
+}
+
+music = {
+	song = "Arbetlose Marsch - a yiddish song"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = ISR
+		}	
+	}
+}
+
+music = {
+	song = "In Ale Gasn - Revolutionary Yiddish Anthem"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = ISR
+		}			
+	}
+}
+
+music = {
+	song = "National Anthem of the Soviet Union"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			has_government = communist
+		}
+	}
+}
+
+music = {
+	song = "Anthem of the Armenian SSR"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			has_government = communist
+		}
+	}
+}
+

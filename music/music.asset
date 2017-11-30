@@ -6,134 +6,174 @@ music = {
 	volume = 0.65
 }
 
-# General Peace:
-music = {
-	name = "general_peace_1"
-	file = "general_peace_heartsofmen.ogg"
-	volume = 0.65
-}
-music = {
-	name = "general_peace_2"
-	file = "thewarends.ogg"
-	volume = 0.65
-}
-music = {
-	name = "general_peace_3"
-	file = "asongforthechildrenofww2.ogg"
-	volume = 0.65
-}
-
-# General war:
-music = {
-	name = "general_war_1"
-	file = "general_war_bringforththetanks.ogg"
-	volume = 0.65
-}
-music = {
-	name = "general_war_2"
-	file = "general_war_theattack.ogg"
-	volume = 0.65
-}
-
-
-# Allies Peace:
-music = {
-	name = "allies_peace_1"
-	file = "allies_peace_morningofdday.ogg"
-	volume = 0.65
-}
-music = {
-	name = "allies_peace_2"
-	file = "endofthetour.ogg"
-	volume = 0.65
-}
-
-
-# Allies War:
-music = {
-	name = "allies_war_1"
-	file = "wearesoldiers.ogg"
-	volume = 0.65
-}
-music = {
-	name = "allies_war_2"
-	file = "allies_war_theroyalairforce.ogg"
-	volume = 0.65
-}
-
-
-# Axis Peace:
-music = {
-	name = "axis_peace_1"
-	file = "axis_peace_krakow.ogg"
-	volume = 0.65
-}
-music = {
-	name = "axis_peace_2"
-	file = "luftwaffemarch_reprise.ogg"
-	volume = 0.65
-}
-
-
-# Axis War:
-music = {
-	name = "axis_war_1"
-	file = "axistheme.ogg"
-	volume = 0.65
-}
-music = {
-	name = "axis_war_2"
-	file = "heavywater.ogg"
-	volume = 0.65
-}
-music = {
-	name = "axis_war_3"
-	file = "operationbarbarossa.ogg"
-	volume = 0.65
-}
-music = {
-	name = "axis_war_4"
-	file = "war_axis_1_daysofthunder.ogg"
-	volume = 0.65
-}
-
-
-# Comintern Peace:
+### German Awesome Marches ###
 
 music = {
-	name = "comintern_peace_1"
-	file = "motherrussia.ogg"
+	name = "National Anthem of Prussia"
+	file = "NationalAnthemofPrussia.ogg"
 	volume = 0.65
 }
 
 music = {
-	name = "comintern_peace_2"
-	file = "theredarmy.ogg"
+	name = "AM I 98 AMS Lützows wilde Jagd"
+	file = "AMI98AMSLutzowswildeJagd.ogg"
 	volume = 0.65
 }
 
 music = {
-	name = "comintern_peace_3"
-	file = "sovietvictory.ogg"
-	volume = 0.65
-}
-
-# Comintern War:
-
-music = {
-	name = "comintern_war_1"
-	file = "themightofsovietunion.ogg"
+	name = "AM II 243 AMS Der Jäger aus Kurpfalz"
+	file = "AMII243AMSDerJagerausKurpfalz.ogg"
 	volume = 0.65
 }
 
 music = {
-	name = "comintern_war_2"
-	file = "cominterntheme.ogg"
+	name = "AM III 113 AMS Kreuzritter-Fanfare"
+	file = "AMIII113AMSKreuzritterFanfare.ogg"
 	volume = 0.65
 }
 
 music = {
-	name = "comintern_war_3"
-	file = "thegreatpatrioticwar.ogg"
+	name = "Der Alte Dessauer"
+	file = "DerAlteDessauer.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Preußischer Militärmarsch Grenadiermarsch 1791"
+	file = "PrussianGrenadiermarsch.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Preußens Gloria"
+	file = "PreussianGloria.ogg"
+	volume = 0.65
+}
+
+### Austrian Kaiser Marches ###
+
+music = {
+	name = "Austria-Hungary's Anthem - Gott erhalte, Gott beschütze!"
+	file = "AustriaHungarysAnthem.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Kaiser Franz Josef Rettungs-Jubel Marsch Johann Strauss II"
+	file = "KaiserFranzJosefIRettungsJubelMarsch.ogg"
+	volume = 0.65
+}
+
+### French Anthems ###
+
+music = {
+	name = "Hymne du Royaume de France"
+	file = "HymneduRoyaumedeFrance.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "La Victoire est a Nous"
+	file = "LaVictoireestaNous.ogg"
+	volume = 0.65
+}
+
+### Italian Anthem ###
+
+music = {
+	name = "National Anthem of Kingdom of Italy"
+	file = "NationalAnthemofKingdomofItaly.ogg"
+	volume = 0.65
+}
+
+### Soviet & Russian Anthem & Marches ###
+
+music = {
+	name = "National Anthem of the Soviet Union"
+	file = "NationalAnthemoftheSovietUnion.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Tchaikovsky Overture 1812 (Full Choral)"
+	file = "TchaikovskyOverture1812FullChoral.ogg"
+	volume = 1.00 #too low
+}
+
+music = {
+	name = "Anthem of Russian Empire"
+	file = "AnthemofRussianEmpire.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Anthem of the Armenian SSR"
+	file = "AnthemoftheArmenianSSR.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Red Army is the Strongest Rare Version"
+	file = "RedArmyistheStrongestRareVersion.ogg"
+	volume = 0.65
+}
+
+### Yiddish Songs ###
+
+music = {
+	name = "In Ale Gasn - Revolutionary Yiddish Anthem"
+	file = "InAleGasnRevolutionaryYiddishAnthem.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Arbetlose Marsch - a yiddish song"
+	file = "ArbetloseMarschayiddishsong.ogg"
+	volume = 0.65
+}
+
+### British Majestic Marches ###
+
+music = {
+	name = "Rule Britannia! Royal Philharmonic Orchestra"
+	file = "RuleBritanniaRoyalPhilharmonicOrchestra.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "The British Grenadiers fife and drum"
+	file = "TheBritishGrenadiersfifeanddrum.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "The Sailors Hornpipe ORCHESTRAL College Hornpipe"
+	file = "TheSailorsHornpipe.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Scotland the Brave Pipes & Drums"
+	file = "ScotlandtheBrave.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "AP Shenkin"
+	file = "APShenkin.ogg"
+	volume = 0.65
+}
+
+### Ottoman Marches ###
+
+music = {
+	name = "Giuseppe Donizetti - Mecidiye Marşı"
+	file = "GiuseppeDonizettiMecidiyeMarch.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Hamidiye Marşı"
+	file = "HamidiyeMarch.ogg"
 	volume = 0.65
 }

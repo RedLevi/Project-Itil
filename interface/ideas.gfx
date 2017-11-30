@@ -1017,7 +1017,15 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_overconfident_general_staff"
 		texturefile = "gfx/interface/ideas/idea_overconfident_general_staff.dds"
+	}	
+	SpriteType = {
+		name = "GFX_idea_kaiser_wilhelm_ii_original"
+		texturefile = "gfx/interface/ideas/idea_kaiser_wilhelm_ii.dds"
 	}		
+	SpriteType = {
+		name = "GFX_idea_kaiser_wilhelm_ii_puppet"
+		texturefile = "gfx/interface/ideas/idea_kaiser_wilhelm_ii.dds"
+	}	
 
 	### USA IDEAS
 	spriteType = {

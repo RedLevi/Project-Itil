@@ -102,6 +102,13 @@ aus.23.t:0 "An Ultimatum from Yugoslavia"
 aus.23.d:0 "Dark news from across the border arrives. Yugoslavian troops have minorly violated our borders in a number of strategic places whilst the bulk of our troops are on the Austrian front, and an ultimatum has arrived from the Yugoslavian embassy. They demand the transfer of our southern border states - Vojvodina and Banat - with immediate effect, or else they will declare war to recover 'their' territories. We must make a decision we hoped we should never face - shall we hand over our lands to the enemy to hope to beat another, or shall we fight a two-front war we have little chance of winning until the bitter end?"
 aus.23.a:0 "We must focus on one enemy and not on two"
 aus.23.b:0 "Until the bitter end, my friends."
+aus.24.t:0 "The Hungarians Refuse"
+aus.24.d:0 "The Hungarians, the fools that they are, have refused our ultimatium for their southern territories. They seem to, however, have aknowleged this will almost certainly be their demise, with the Commander in Chief commenting to his High Command 'until the bitter end, my friends'. We hoped to have avoided this needless bloodshed, but it seems that the Hungarians would rather die than submit to our righteous rule. In that, at lease, they have our respect. Maybe we will even build a memorial to their men who stood their ground when this is all over..."
+aus.24.a:0 "We will seize it by force"
+aus.24.b:0 "They seem to be too confident... Bakc down."
+aus.25.t:0 "Yugoslavian declare war on Hungary!"
+aus.25.d:0 "In the most recent development in the Danubian Crisis, the Kingdom of Yugoslavia has formally declared war on Hungary. Unverified reports began to be recieved two days ago of Yugoslavian troops violating the border in a number of strategic locations - mainly bridges and fortified areas - whilst the bulk of the Hungarian army is busy fighting Austria. Hungary is almost certainly expected to crumple under this new threat. Their decision to refuse is questionable, but respected in the military world. We shall watch and wait for developments."
+
 
 ####ideas####
 AUS_Reconquest_War:0 "Austrian Reconquest of Hungary"

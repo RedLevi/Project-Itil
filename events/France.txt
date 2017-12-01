@@ -466,6 +466,10 @@ country_event = { #NFA victory #
         IFA = { exists = no }
         SPF = { exists = no }
         RFA = { exists = no }
+        NOT = {
+           has_global_flag = ifa_accepts
+           has_global_flag = rfa_accepts
+        }
     }
     option = {
         name = france.13.a
@@ -533,7 +537,7 @@ country_event = { ###IFA DECISION###
 	    name = france.16.a
         IFA = { declare_war_on = { target = NFA type = civil_war } }
 	    IFA = { declare_war_on = { target = RFA type = civil_war } }
-		NFA = { country_event = { id = 24 hours = 1 } }
+		NFA = { country_event = { id = france.24 hours = 1 } }
 		ai_chance = { factor = 50 }
 		}
 	option = { ###PEACE###
@@ -541,6 +545,7 @@ country_event = { ###IFA DECISION###
 	    set_global_flag = ifa_accepts
 		NFA = { annex_country = { target = IFA transfer_troops = yes } }
 		ai_chance = { factor = 50 }
+    NFA = { country_event = { id = france.35 days = 1 } }
 		}
 	}
 
@@ -563,6 +568,8 @@ country_event = { ###RFA DECISION###
 		set_global_flag = rfa_accepts
 		NFA = { annex_country = { target = RFA transfer_troops = yes } }
         ai_chance = { factor = 40 }
+        NFA = { country_event = { id = france.35 days = 1 } }
+
 		}
 	}
 
@@ -585,6 +592,8 @@ country_event = { ###SFA DECISION###
 	    set_global_flag = sfa_accepts
 		SPF = { annex_country = { target = SFA transfer_troops = yes } }
 		ai_chance = { factor = 50 }
+    SPF = { country_event = { id = france.35 days = 1 } }
+
 		}
 	}
 
@@ -607,6 +616,8 @@ country_event = { ###SYA DECISION###
 		set_global_flag = sya_accepts
 		SPF = { annex_country = { target = SYA transfer_troops = yes } }
         ai_chance = { factor = 70 }
+        SPF = { country_event = { id = france.35 days = 1 } }
+
 		}
 	}
 
@@ -839,12 +850,36 @@ country_event = { #PETAINS DECISION
     desc = france.30
     is_triggered_only = yes
 
-    option = {
+    option = { #Submit to Germany#
     name = france.30.a
     set_global_flag = petain_cooperation
     NFA = { dismantle_faction = yes }
     GER = { add_to_faction = NFA }
+    GER = { declare_war_on = { target = SPF type = annex_everything } }
+    NFA = { declare_war_on = { target = RFA type = civil_war } }
+    ai_chance = { factor = 30 }
+    NFA = {
+       remove_state_core = 28
+     }
+    RFA = {
+    country_event = france.34
     }
+    SPF = {
+    country_event = france.34
+    }
+    SYA = {
+    country_event = france.34
+    }
+    SFA = {
+    country_event = france.34
+    }
+    GER = {
+       country_event = { id = germany.28 hours = 1 }
+    }
+  }
+  option = { #No germany#
+  ai_chance = { factor = 70 }
+  }
 
 }
 
@@ -899,4 +934,53 @@ country_event = { #British support for SFA#
   option = {
   name = france.32.b
   }
+}
+
+country_event = { #In case SPF retreats into africa
+   id = france.33
+   title = france.33.t
+   desc = france.33.d
+   fire_only_once = yes
+   hidden = yes
+
+   trigger = {
+      tag = NFA
+      SPF = {
+         NOT = {
+            controls_state = 16
+         }
+         has_war = no
+      }
+   }
+
+   immediate = {
+      name = france.33.a
+      NFA = { annex_country = { target = SPF transfer_troops = yes } }
+   }
+
+}
+
+country_event = { #NFA allied with Germany
+   id = france.34
+   title = france.34.t
+   desc = france.34.d
+   fire_only_once = yes
+   is_triggered_only = yes
+
+   option = {
+      name = soviet.34.a
+      add_opinion_modifier = { target = NFA modifier = NFA_traitors }
+   }
+
+}
+
+country_event = { #Some weird news event when a country accepts coalition#
+   id = france.35
+   title = france.35.t
+   desc = france.35.d
+   is_triggered_only = yes
+
+   option = {
+   name = france.35.a
+   }
 }

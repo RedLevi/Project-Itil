@@ -1912,7 +1912,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			NFA = { country_event = france.30 }
+			NFA = { country_event = germany.26 }
 		}
 	}
 

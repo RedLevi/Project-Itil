@@ -554,3 +554,42 @@ country_event = { #French Volunteers
 	    name = germany.26.b
 	 }
 }
+
+country_event = { #French Alliance
+   id = germany.27
+	 title = germany.27.t
+	 desc = germany.27.d
+	 fire_only_once = yes
+
+	 trigger = {
+	    NFA = {
+			   has_war = yes
+			}
+		  IFA = {
+				 has_capitulated = yes
+	 	  }
+			GER = {
+			   has_completed_focus = GER_lessons_of_france
+			}
+	 }
+   option = { #Support France#
+	    name = germany.27.a
+			NFA = {
+			   country_event = { id = france.30 days = 3 }
+			}
+   }
+	 option = { #D0nt support France#
+	 name = germany.37.b
+	 }
+}
+
+country_event = { #News Event for petain#
+   id = germany.28
+	 title = germany.28.t
+	 desc = germany.28.d
+	 is_triggered_only = yes
+
+	 option = {
+	 name = germany.28.a
+	 }
+}

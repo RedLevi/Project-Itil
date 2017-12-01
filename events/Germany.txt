@@ -2,64 +2,64 @@
 
 country_event = {#intro
 
-	id = germany.1 
-	title = germany.1.t 
+	id = germany.1
+	title = germany.1.t
 	desc = germany.1.d
 	picture = GFX_german_flag
-	
-    fire_only_once = yes	
-	
+
+    fire_only_once = yes
+
 	trigger = {
 	tag = GER
 	}
-	
+
 	option = {
 		name = germany.1.a
 	}
 }
 
-country_event = {#election campaign 
+country_event = {#election campaign
 
-	id = germany.2 
-	title = germany.2.t 
+	id = germany.2
+	title = germany.2.t
 	desc = germany.2.d
-	fire_only_once = yes 
+	fire_only_once = yes
 	trigger = {
-		tag = GER 
-		date > 1936.12.20 
+		tag = GER
+		date > 1936.12.20
 	}
-	
+
 	option = {
 		name = germany.2.a
-		 add_national_unity = -0.01 
-	}	
+		 add_national_unity = -0.01
+	}
 }
 
-country_event = {#federal elections of 1937 
+country_event = {#federal elections of 1937
 
-	id = germany.3 
-	title = germany.3.t 
+	id = germany.3
+	title = germany.3.t
 	desc = germany.3.d
-	fire_only_once = yes 
+	fire_only_once = yes
 	trigger = {
-		tag = GER 
-		date > 1937.1.12 
+		tag = GER
+		date > 1937.1.12
 	}
-	option = {#Zentrum-conservative 
+	option = {#Zentrum-conservative
 		name = germany.3.a
 		ai_chance = { factor = 20 }
-		set_politics = { 
-		
-			ruling_party = conservatism   
-			elections_allowed = no 
-			
+		set_politics = {
+
+			ruling_party = conservatism
+			elections_allowed = no
+
 		}
-		
-		add_popularity = { 
-			
-				ideology = conservatism  
-				popularity = 0.2 
-				
+
+		add_popularity = {
+
+				ideology = conservatism
+				popularity = 0.2
+
 		}
 		create_country_leader = {
 			name = "Franz von Papen"
@@ -68,34 +68,34 @@ country_event = {#federal elections of 1937
 			expire = "1960.1.1"
 			ideology = authoritarian_conservatism
 			traits = {
-			
+
 			}
 		}
-		
+
 		set_country_flag = GER_con_zen_1937
-		add_national_unity = 0.01 
-	}	
+		add_national_unity = 0.01
+	}
 	option = {#Zentrum-liberal
 		name = germany.3.b
 		ai_chance = { factor = 30 }
-		set_politics = { 
-		
-			ruling_party = conservatism   
-			elections_allowed = no 
-			
+		set_politics = {
+
+			ruling_party = conservatism
+			elections_allowed = no
+
 		}
-		
-		add_popularity = { 
-			
-				ideology = conservatism  
-				popularity = 0.1 
-				
+
+		add_popularity = {
+
+				ideology = conservatism
+				popularity = 0.1
+
 		}
-		add_popularity = { 
-			
-				ideology = liberalism  
-				popularity = 0.1 
-				
+		add_popularity = {
+
+				ideology = liberalism
+				popularity = 0.1
+
 		}
 		create_country_leader = {
 			name = "Konrad Adenauer"
@@ -104,28 +104,28 @@ country_event = {#federal elections of 1937
 			expire = "1960.1.1"
 			ideology = democratic_conservatism
 			traits = {
-			
+
 			}
 		}
-		
+
 		set_country_flag = GER_lib_zen_1937
-		add_national_unity = 0.03 
+		add_national_unity = 0.03
 	}
 	option = {#Social-liberal
 		name = germany.3.c
 		ai_chance = { factor = 40 }
-		set_politics = { 
-		
-			ruling_party = liberalism    
-			elections_allowed = no 
-			
+		set_politics = {
+
+			ruling_party = liberalism
+			elections_allowed = no
+
 		}
-		
-		add_popularity = { 
-			
-				ideology = liberalism  
-				popularity = 0.2 
-				
+
+		add_popularity = {
+
+				ideology = liberalism
+				popularity = 0.2
+
 		}
 
 		create_country_leader = {
@@ -135,34 +135,34 @@ country_event = {#federal elections of 1937
 			expire = "1960.1.1"
 			ideology = market_liberalism
 			traits = {
-			
+
 			}
 		}
-		
+
 		set_country_flag = GER_lib_soc_1937
-		add_national_unity = 0.05 
+		add_national_unity = 0.05
 	}
 	option = {#Social-liberal-socialist
 		name = germany.3.e
 		ai_chance = { factor = 10 }
-		set_politics = { 
-		
-			ruling_party = liberalism    
-			elections_allowed = no 
-			
+		set_politics = {
+
+			ruling_party = liberalism
+			elections_allowed = no
+
 		}
-		
-		add_popularity = { 
-			
-				ideology = liberalism  
+
+		add_popularity = {
+
+				ideology = liberalism
 				popularity = 0.1
-				
+
 		}
-		add_popularity = { 
-			
-				ideology = socialism  
+		add_popularity = {
+
+				ideology = socialism
 				popularity = 0.1
-				
+
 		}
 		create_country_leader = {
 			name = "Walther Rathenau"
@@ -171,62 +171,62 @@ country_event = {#federal elections of 1937
 			expire = "1960.1.1"
 			ideology = social_liberalism
 			traits = {
-			
+
 			}
 		}
-		
+
 		set_country_flag = GER_soc_1937
-		add_national_unity = -0.03 
+		add_national_unity = -0.03
 	}
 }
 
 country_event = {#Germany sends support
 
-	id = germany.4 
-	title = germany.4.t 
+	id = germany.4
+	title = germany.4.t
 	desc = germany.4.d
-	
+
     is_triggered_only = yes
-	
+
 	option = {
 		name = germany.4.a
 		ai_chance = { factor = 60 }
 		add_ideas = YUN_GER_support
 		declare_war_on = { target = SIC type = annex_everything }
-	}	
+	}
 	option = {
 		name = germany.4.a
 		ai_chance = { factor = 40 }
 		add_ideas = YUN_GER_support
-		add_national_unity = 0.03 
+		add_national_unity = 0.03
 	}
 }
 
-country_event = {#Germany sends support SAU 
+country_event = {#Germany sends support SAU
 
 	id = germany.8
-	title = germany.8.t 
+	title = germany.8.t
 	desc = germany.8.d
-	
+
     is_triggered_only = yes
-	
+
     option = {
 	name = germany.8.a
 	add_ideas = SAU_GER_support
 	}
-	
+
 }
 
 country_event = {
 
 	id = germany.9
-	title = germany.9.t 
+	title = germany.9.t
 	desc = germany.9.d
-	
+
     is_triggered_only = yes
-	
+
 	option = {
-		name = germany.9.a	
+		name = germany.9.a
 		add_political_power = -50
 		add_manpower = -50000
 	}
@@ -235,80 +235,80 @@ country_event = {
 country_event = {
 
 	id = germany.10
-	title = germany.10.t 
+	title = germany.10.t
 	desc = germany.10.d
-	
+
     is_triggered_only = yes
-	
+
 	option = {
-	    ai_chance = { 
+	    ai_chance = {
 		    factor = 10
-	    }	
-		name = germany.10.a	
-		set_politics = { ruling_party = national_integralism elections_allowed = no } 
+	    }
+		name = germany.10.a
+		set_politics = { ruling_party = national_integralism elections_allowed = no }
 	}
 	option = {
-	    ai_chance = { 
+	    ai_chance = {
 		    factor = 90
-	    }	
-		name = germany.10.b	
-	}	
+	    }
+		name = germany.10.b
+	}
 }
 
 country_event = {
 
 	id = germany.11
-	title = germany.11.t 
+	title = germany.11.t
 	desc = germany.11.d
-	
+
     is_triggered_only = yes
-	
+
 	option = {
-	    ai_chance = { 
+	    ai_chance = {
 		    factor = 80
-	    }	
-		name = germany.11.a	
+	    }
+		name = germany.11.a
 		GER = { add_to_faction = HOL }
 	}
 	option = {
-	    ai_chance = { 
+	    ai_chance = {
 		    factor = 20
-	    }	
-		name = germany.11.b	
+	    }
+		name = germany.11.b
 	}
 }
 
 country_event = {
 
 	id = germany.12
-	title = germany.12.t 
+	title = germany.12.t
 	desc = germany.12.d
-	
+
     is_triggered_only = yes
-	
+
 	option = {
-	    ai_chance = { 
+	    ai_chance = {
 		    factor = 100
-	    }	
+	    }
 		name = germany.12.a
 		 release = SOV
 		 SOV = {
-		 set_politics = { ruling_party = reactionarism elections_allowed = no } 
-		 set_political_party = { ideology = reactionarism popularity = 0.5 } 
-         create_country_leader = { 
-		 name = "Nicholas II Romanov" 
-		 desc = "" 
-		 picture = "Portrait_Nicholas_II.dds" 
-		 expire = "1965.1.1" 
+		 set_politics = { ruling_party = reactionarism elections_allowed = no }
+		 set_political_party = { ideology = reactionarism popularity = 0.5 }
+         create_country_leader = {
+		 name = "Nicholas II Romanov"
+		 desc = ""
+		 picture = "Portrait_Nicholas_II.dds"
+		 expire = "1965.1.1"
 		 ideology = absolutism
          traits = { }
 		 }
 		 }
 	}
 	option = {
-	    ai_chance = { 
+	    ai_chance = {
 		    factor = 0
-	    }	
+	    }
 		name = germany.12.b
 	}
 }
@@ -316,34 +316,34 @@ country_event = {
 country_event = {
 
 	id = germany.13
-	title = germany.13.t 
+	title = germany.13.t
 	desc = germany.13.d
-	
+
     is_triggered_only = yes
-	
+
 	option = {
-	    ai_chance = { 
+	    ai_chance = {
 		    factor = 100
-	    }	
+	    }
 		name = germany.13.a
 		 release = ITA
 		 ITA = {
-		 set_politics = { ruling_party = reactionarism elections_allowed = no } 
-		 set_political_party = { ideology = reactionarism popularity = 0.5 } 
-         create_country_leader = { 
+		 set_politics = { ruling_party = reactionarism elections_allowed = no }
+		 set_political_party = { ideology = reactionarism popularity = 0.5 }
+         create_country_leader = {
 		 name = "Vittorio Emanuele II of Savoy"
-		 desc = "" 
+		 desc = ""
 		 picture = ""
-		 expire = "1965.1.1" 
+		 expire = "1965.1.1"
 		 ideology = absolutism
          traits = { }
 		 }
 		 }
 	}
 	option = {
-	    ai_chance = { 
+	    ai_chance = {
 		    factor = 0
-	    }	
+	    }
 		name = germany.13.b
 	}
 }
@@ -353,11 +353,11 @@ country_event = {
 country_event = {
 
 	id = germany.15
-	title = germany.15.t 
+	title = germany.15.t
 	desc = germany.15.d
-	
+
     is_triggered_only = yes
-	
+
 	option = {
 		name = germany.15.a
 		reverse_add_opinion_modifier = { target = GER modifier = ENG_EUR_theater }
@@ -368,53 +368,53 @@ country_event = {
 ####Generic chain for Germany's alliance offers####
 
 country_event = {#german offer
-	id = germany.18 
-	title = germany.18.t 
-	desc = germany.18.d 
-	is_triggered_only = yes 
-	option = {#agree 
-		name = germany.18.a 
+	id = germany.18
+	title = germany.18.t
+	desc = germany.18.d
+	is_triggered_only = yes
+	option = {#agree
+		name = germany.18.a
 		ai_chance = { factor = 65 }
 		GER = { country_event = { id = germany.19 } }
 	}
-	option = {#refuse 
-		name = germany.18.b 
+	option = {#refuse
+		name = germany.18.b
 		ai_chance = { factor = 35 }
 		GER = { country_event = { id = germany.20 } }
-		add_national_unity = 0.05 
+		add_national_unity = 0.05
 		reverse_add_opinion_modifier = { target = GER modifier = refused_GER_alliance }
 	}
 }
 
 country_event = {#Country agrees
-	id = germany.19 
-	title = germany.19.t 
-	desc = germany.19.d 
-	is_triggered_only = yes 
+	id = germany.19
+	title = germany.19.t
+	desc = germany.19.d
+	is_triggered_only = yes
 	option = {
-		name = germany.19.a 
-		add_to_faction = FROM 
+		name = germany.19.a
+		add_to_faction = FROM
 	}
 }
 
 country_event = {#Country agrees
-	id = germany.20 
-	title = germany.20.t 
-	desc = germany.20.d 
-	is_triggered_only = yes 
+	id = germany.20
+	title = germany.20.t
+	desc = germany.20.d
+	is_triggered_only = yes
 	option = {
-		name = germany.20.a 
+		name = germany.20.a
 	}
 }
 
 country_event = {#Germany sends support
-	id = germany.21 
-	title = germany.21.t 
-	desc = germany.21.d 
-	is_triggered_only = yes 
+	id = germany.21
+	title = germany.21.t
+	desc = germany.21.d
+	is_triggered_only = yes
 	option = {
-		name = germany.21.a 
-		army_experience = 20 
+		name = germany.21.a
+		army_experience = 20
 		if = { limit = { tag = BUL } add_ideas = BUL_GER_support }
 		if = { limit = { tag = ROM } add_ideas = ROM_GER_support }
 		if = { limit = { tag = UKR } add_ideas = UKR_GER_support }
@@ -423,63 +423,63 @@ country_event = {#Germany sends support
 
 ####belgian event chain####
 
-country_event = {#death of Otto 
-	id = germany.22 
+country_event = {#death of Otto
+	id = germany.22
 	title = germany.22.t
-	desc = germany.22.d 
-	fire_only_once = yes 
+	desc = germany.22.d
+	fire_only_once = yes
 	trigger = {
-		tag = WLL 
-		date > 1936.7.15 
+		tag = WLL
+		date > 1936.7.15
 	}
 	option = {
-		name = germany.22.a 
-		add_national_unity = -0.075 
+		name = germany.22.a
+		add_national_unity = -0.075
 		GER = { country_event = { id = germany.23 days = 3 } }
 		kill_country_leader = yes
 	}
 }
 
-country_event = {#assasination in wallonia 
-	id = germany.23 
-	title = germany.23.t 
-	desc = germany.23.d 
-	is_triggered_only = yes 
-	option = {#Continue occupation 
-		name = germany.23.a 
+country_event = {#assasination in wallonia
+	id = germany.23
+	title = germany.23.t
+	desc = germany.23.d
+	is_triggered_only = yes
+	option = {#Continue occupation
+		name = germany.23.a
 		ai_chance = { factor = 60 }
 		WLL = { country_event = { id = germany.24 } }
 		add_named_threat = { name = GER_occupy_WLL threat = 2 }
 	}
-	option = {#Rexist 
-		name = germany.23.b 
+	option = {#Rexist
+		name = germany.23.b
 		ai_chance = { factor = 40 }
-		add_national_unity = -0.02 
+		add_national_unity = -0.02
 		WLL = { country_event = { id = germany.25 } }
 	}
 }
 
-country_event = {#New military governer 
-	id = germany.24 
+country_event = {#New military governer
+	id = germany.24
 	title = germany.24.t
-	desc = germany.24.d 
-	is_triggered_only = yes 
+	desc = germany.24.d
+	is_triggered_only = yes
 	option = {
-		name = germany.24.a 
-		add_national_unity = -0.05 
+		name = germany.24.a
+		add_national_unity = -0.05
 		hidden_effect = {
-			set_politics = { 
-			
-				ruling_party = reactionarism				
-				elections_allowed = no 
-				
+			set_politics = {
+
+				ruling_party = reactionarism
+				elections_allowed = no
+
 			}
-			
-			add_popularity = { 
-				
-					ideology = national_integralism  
-					popularity = 0.15 
-					
+
+			add_popularity = {
+
+					ideology = national_integralism
+					popularity = 0.15
+
 			}
 		}
 		create_country_leader = {
@@ -489,33 +489,33 @@ country_event = {#New military governer
 			expire = "1960.1.1"
 			ideology = autocracy
 			traits = {
-			
+
 			}
 		}
 	}
 }
 
 country_event = {#New wallonian government
-	id = germany.25 
+	id = germany.25
 	title = germany.25.t
-	desc = germany.25.d 
-	is_triggered_only = yes 
+	desc = germany.25.d
+	is_triggered_only = yes
 	option = {
-		name = germany.24.a 
-		add_national_unity = 0.1 
+		name = germany.24.a
+		add_national_unity = 0.1
 		hidden_effect = {
-			set_politics = { 
-			
-				ruling_party = national_integralism				
-				elections_allowed = no 
-				
+			set_politics = {
+
+				ruling_party = national_integralism
+				elections_allowed = no
+
 			}
 		}
-		add_popularity = { 
-				
-					ideology = national_integralism  
-					popularity = 0.3 
-					
+		add_popularity = {
+
+					ideology = national_integralism
+					popularity = 0.3
+
 			}
 		create_country_leader = {
 			name = "Léon Degrelle"
@@ -524,10 +524,33 @@ country_event = {#New wallonian government
 			expire = "1960.1.1"
 			ideology = integralism
 			traits = {
-			
+
 			}
 		}
 	}
 }
 
+country_event = { #French Volunteers
+   id = germany.26
+	 title = germany.26.t
+	 desc = germany.26.d
+	 fire_only_once = yes
 
+	 trigger = {
+	    tag = GER
+			country_exists = NFA
+			NFA = { has_war_with = SPF }
+	 }
+
+	 option = { #Send volunteers to NFA
+      name = germany.26.a
+			NFA = { load_oob = GER_volunteers }
+	    GER = { add_manpower = -55000 }
+			add_opinion_modifier = { target = NFA modifier = Sent_volunteers }
+			ai_chance = { factor = 100 }
+	 }
+
+	 option = { #No volunteers
+	    name = germany.26.b
+	 }
+}

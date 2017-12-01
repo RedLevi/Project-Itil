@@ -17,9 +17,9 @@ state={
 				naval_base = 3
 			}
 		}
-		add_core_of = ITA
-	}
-
+		add_core_of = ITA 
+	        add_core_of = FRA
+        } 
 	provinces={
 		3838 9851 11804 
 	}

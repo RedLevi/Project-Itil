@@ -6,7 +6,7 @@ state={
 	state_category = rural
 
 	history={
-		owner = FRA
+		owner = GER
 		buildings = {
 			infrastructure = 4
 			air_base = 1
@@ -17,10 +17,10 @@ state={
 				naval_base = 1
 			}
 		}
-		add_core_of = FRA
+		add_core_of = GER
 	}
-	
+
 	provinces={
-		177 9377 13084 
+		177 9377 13084
 	}
 }

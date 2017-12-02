@@ -282,6 +282,28 @@ country_event = { #Mongolia Partition#
    }
 }
 
+country_event = { #Soviet Foreign policy#
+   id = soviet.14
+   title = soviet.14.t
+   desc = soviet.14.d
+   fire_only_once = yes
+
+   trigger = {
+      tag = SOV
+      OR = {
+         NOT = {
+            has_country_flag = Trotsky_Out
+         }
+         has_country_flag = Kirov_Revolution
+      }
+      OR = {
+         has_completed_focus = 31st_Congress_Trotsky
+         has_completed_focus = 31st_Congress
+      }
+
+   }
+}
+
 country_event = { #TEST EVENT FOR USSR##NOT MEANT FOR NON-TEST USE##
   id = soviet.1000
   title = soviet.1000.t
@@ -290,15 +312,15 @@ country_event = { #TEST EVENT FOR USSR##NOT MEANT FOR NON-TEST USE##
 
   option = {
   set_cosmetic_tag = USSR
-  create_country_leader = {
-  	name = "Sergey Kirov"
-  	desc = "POLITICS_LEON_TROTSKY_DESC"
-  	picture = "Sergey_Kirov.dds"
-  	expire = "1965.1.1"
-  	ideology = marxism
-  	traits = {
-  	glorious_leader
-  	}
-  }
+     create_country_leader = {
+  	   name = "Sergey Kirov"
+  	   desc = "POLITICS_LEON_TROTSKY_DESC"
+  	   picture = "Sergey_Kirov.dds"
+  	   expire = "1965.1.1"
+  	   ideology = marxism
+  	   traits = {
+  	      glorious_leader
+  	   }
+     }
   }
 }

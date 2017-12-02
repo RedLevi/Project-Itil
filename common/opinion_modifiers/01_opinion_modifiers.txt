@@ -63,4 +63,5 @@ GER_me_relations = { value = 40 }
 GER_asia_relations = { value = 50 }
 ###France###
 NFA_traitors = { value = -150 }
+GER_enemies = { value = -150 }
 }

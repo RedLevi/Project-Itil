@@ -237,9 +237,10 @@ country_event = { #ALLIANCE#
         add_state_core = 735
         add_state_core = 32
         add_state_core = 20
-		add_state_core = 17
+		    add_state_core = 17
         add_state_core = 18
         add_state_core = 27
+     }
 		SPF = {
 		add_state_core = 26
 		add_state_core = 16
@@ -272,7 +273,7 @@ country_event = { #ALLIANCE#
 		add_state_core = 21
 		add_state_core = 32
 		}
-    }
+
 	}
 	NFA = { country_event = { id = france.7 hours = 1 } }
 	}
@@ -384,6 +385,10 @@ country_event = { #SPF victory
         IFA = { exists = no }
         NFA = { exists = no }
         RFA = { exists = no }
+        NOT = {
+           has_global_flag = sya_accepts
+           has_global_flag = sfa_accepts
+        }
     }
     option = {
         name = france.10.a
@@ -856,28 +861,29 @@ country_event = { #PETAINS DECISION
     NFA = { dismantle_faction = yes }
     GER = { add_to_faction = NFA }
     GER = { declare_war_on = { target = SPF type = annex_everything } }
-    NFA = { declare_war_on = { target = RFA type = civil_war } }
+    GER = { declare_war_on = { target = RFA type = annex_everything } }
     ai_chance = { factor = 30 }
     NFA = {
        remove_state_core = 28
      }
     RFA = {
-    country_event = france.34
+       country_event = france.34
     }
     SPF = {
-    country_event = france.34
+       country_event = france.34
     }
     SYA = {
-    country_event = france.34
+       country_event = france.34
     }
     SFA = {
-    country_event = france.34
+       country_event = france.34
     }
     GER = {
        country_event = { id = germany.28 hours = 1 }
     }
   }
   option = { #No germany#
+  name = france.30.b
   ai_chance = { factor = 70 }
   }
 
@@ -970,6 +976,7 @@ country_event = { #NFA allied with Germany
    option = {
       name = soviet.34.a
       add_opinion_modifier = { target = NFA modifier = NFA_traitors }
+      add_opinion_modifier = { target = GER modifier = GER_enemies }
    }
 
 }

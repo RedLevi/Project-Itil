@@ -192,6 +192,7 @@ focus = {
 	completion_reward = {
 	retire_country_leader = yes
 	country_event = { id = soviet.7 days = 1 }
+	set_country_flag = Trotsky_Out
 	   create_country_leader = {
   	   name = "Sergey Kirov"
   	   desc = "POLITICS_LEON_TROTSKY_DESC"
@@ -707,7 +708,7 @@ focus = {
 	x = 66
 	y = 0
 	available = {
-    # has_country_flag =
+     has_country_flag = Soviet_Revolution
   }
 	bypass = { has_country_flag = congress_finished }
 	completion_reward = {
@@ -1040,7 +1041,7 @@ focus = {
 
 }
 
-	}
+	
 	focus = {
 		id = Dismiss_oldguard
 		icon = GFX_focus_generic_military_mission

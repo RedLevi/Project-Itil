@@ -704,7 +704,7 @@ focus = {
 focus = {
 	id = The_Revolution
 	icon = GFX_focus_soviet_union_question
-	cost = 10.00
+	cost = 1.00
 	x = 66
 	y = 0
 	available = {
@@ -731,36 +731,42 @@ focus = {
 focus = {
 	id = Dealing_With_Nationalists
 	icon = GFX_focus_generic_join_comintern
-	cost = 10.00
+	cost = 2.00
 	prerequisite = {
 		focus = The_Revolution
 	}
 	x = 66
 	y = 2
+	completion_reward = {
+	   add_political_power = 50
+	}
 
 }
 focus = {
 	id = Look_To_South
 	icon = GFX_goal_generic_position_armies
-	cost = 10.00
+	cost = 2.00
 	prerequisite = {
 		focus = Dealing_With_Nationalists
 	}
 	x = 64
 	y = 3
+	completion_reward = {
+	   add_political_power = 50
+	}
 
 }
 focus = {
 	id = The_Mad_Pasha
 	icon = GFX_goal_generic_secret_weapon
-	cost = 10.00
+	cost = 3.00
 	prerequisite = {
 		focus = Look_To_South
 	}
 	x = 62
 	y = 5
 	completion_reward = {
-	   create_wargoal = { type = annex_everything target = KAZ }
+	   create_wargoal = { type = annex_everything target = TUK }
 		 add_national_unity = 0.03
 	}
 
@@ -768,29 +774,35 @@ focus = {
 focus = {
 	id = Contact_Indian_Nationalists
 	icon = GFX_focus_RAJ_british_investors
-	cost = 10.00
+	cost = 2.00
 	prerequisite = {
 		focus = The_Mad_Pasha
 	}
 	x = 54
 	y = 7
+	completion_reward = {
+	   #RAJ = { country event }
+	}
 
 }
 focus = {
 	id = Georgian_Ultimatum
 	icon = GFX_goal_generic_forceful_treaty
-	cost = 10.00
+	cost = 2.00
 	prerequisite = {
 		focus = Look_To_South
 	}
 	x = 64
 	y = 5
+	completion_reward = {
+	   SOV = { country_event = { id = soviet.15 days = 4 } }
+	}
 
 }
 focus = {
 	id = Demand_Armenia
 	icon = GFX_goal_generic_military_deal
-	cost = 10.00
+	cost = 2.00
 	prerequisite = {
 		focus = Georgian_Ultimatum
 	}
@@ -801,7 +813,7 @@ focus = {
 focus = {
 	id = Demand_Azerbaijan
 	icon = GFX_goal_generic_military_deal
-	cost = 10.00
+	cost = 2.00
 	prerequisite = {
 		focus = Georgian_Ultimatum
 	}
@@ -812,7 +824,7 @@ focus = {
 focus = {
 	id = Syrian_Socialists
 	icon = GFX_focus_generic_soviet_politics
-	cost = 10.00
+	cost = 3.00
 	prerequisite = {
 		focus = Demand_Armenia
 	}
@@ -826,7 +838,7 @@ focus = {
 focus = {
 	id = Organize_Unions_Persia
 	icon = GFX_goal_generic_trade
-	cost = 10.00
+	cost = 3.00
 	prerequisite = {
 		focus = Demand_Azerbaijan
 	}
@@ -840,7 +852,7 @@ focus = {
 focus = {
 	id = Look_To_West
 	icon = GFX_goal_generic_position_armies
-	cost = 10.00
+	cost = 2.00
 	prerequisite = {
 		focus = Dealing_With_Nationalists
 	}
@@ -851,7 +863,7 @@ focus = {
 focus = {
 	id = Crush_The_Traitors
 	icon = GFX_goal_generic_political_pressure
-	cost = 10.00
+	cost = 4.00
 	prerequisite = {
 		focus = Look_To_West
 	}
@@ -866,7 +878,7 @@ focus = {
 focus = {
 	id = Demand_Bessarabia
 	icon = GFX_goal_generic_territory_or_war
-	cost = 10.00
+	cost = 3.00
 	prerequisite = {
 		focus = Crush_The_Traitors
 	}
@@ -877,7 +889,7 @@ focus = {
 focus = {
 	id = Demand_Lithuania
 	icon = GFX_goal_generic_more_territorial_claims
-	cost = 10.00
+	cost = 2.00
 	prerequisite = {
 		focus = Look_To_West
 	}
@@ -888,7 +900,7 @@ focus = {
 focus = {
 	id = Italian_Deal
 	icon = GFX_goal_generic_dangerous_deal
-	cost = 10.00
+	cost = 3.00
 	prerequisite = {
 		focus = Crush_The_Traitors
 	}
@@ -899,7 +911,7 @@ focus = {
 focus = {
 	id = German_Syndicalism
 	icon = GFX_focus_yug_pan_slavic_congress
-	cost = 10.00
+	cost = 3.00
 	prerequisite = {
 		focus = Italian_Deal
 	}
@@ -910,7 +922,7 @@ focus = {
 focus = {
 	id = Integrate_Latvia
 	icon = GFX_focus_cze_german_puppet
-	cost = 10.00
+	cost = 2.00
 	prerequisite = {
 		focus = Look_To_West
 	}
@@ -921,7 +933,7 @@ focus = {
 focus = {
 	id = Demand_Estonia
 	icon = GFX_goal_generic_more_territorial_claims
-	cost = 10.00
+	cost = 2.00
 	prerequisite = {
 		focus = Look_To_West
 	}
@@ -932,7 +944,7 @@ focus = {
 focus = {
 	id = Finnish_Question
 	icon = GFX_goal_generic_cavalry
-	cost = 10.00
+	cost = 4.00
 	prerequisite = {
 		focus = Demand_Estonia
 	}
@@ -950,7 +962,7 @@ focus = {
 focus = {
 	id = Dealing_With_Imperialists
 	icon = GFX_focus_AST_war_japan
-	cost = 10.00
+	cost = 4.00
 	prerequisite = {
 		focus = The_Revolution
 	}
@@ -965,7 +977,7 @@ focus = {
 focus = {
 	id = Take_On_Japan
 	icon = GFX_focus_generic_japanese_imperial_glory
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = Dealing_With_Imperialists
 	}
@@ -1041,7 +1053,7 @@ focus = {
 
 }
 
-	
+
 	focus = {
 		id = Dismiss_oldguard
 		icon = GFX_focus_generic_military_mission

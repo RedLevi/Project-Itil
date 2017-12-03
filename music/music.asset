@@ -33,6 +33,24 @@ music = {
 }
 
 music = {
+	name = "AM II 45a AMS Sedan-Marsch"
+	file = "AMII45aAMSSedanMarsch.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "AM II 173 AMS Helenenmarsch"
+	file = "AMII173AMSHelenenmarsch.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "AM II 239 AMS Marsch der freiwilligen Jäger"
+	file = "AMII239AMSMarschderfreiwilligenJager.ogg"
+	volume = 0.65
+}
+
+music = {
 	name = "Der Alte Dessauer"
 	file = "DerAlteDessauer.ogg"
 	volume = 0.65
@@ -61,6 +79,18 @@ music = {
 music = {
 	name = "Kaiser Franz Josef Rettungs-Jubel Marsch Johann Strauss II"
 	file = "KaiserFranzJosefIRettungsJubelMarsch.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Radetzkymarsch"
+	file = "Radetzkymarsch.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Unter dem Doppeladler (Under the Double Eagle)"
+	file = "UnterdemDoppeladlerUndertheDoubleEagle.ogg"
 	volume = 0.65
 }
 
@@ -175,5 +205,41 @@ music = {
 music = {
 	name = "Hamidiye Marşı"
 	file = "HamidiyeMarch.ogg"
+	volume = 0.65
+}
+
+### Israeli Songs ###
+
+music = {
+	name = "The Full Hatikva Tunisian Jewish Version"
+	file = "TheFullHatikvaTunisianJewishVersion.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Hayalim Almonim Lehi Anthem"
+	file = "HayalimAlmonimLehiAnthem.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Shaul Meisles Tehazekna"
+	file = "ShaulMeislesTehazekna.ogg"
+	volume = 0.65
+}
+
+### American Songs ###
+
+music = {
+	name = "Streets of Cairo or the Poor Little Country Maid"
+	file = "StreetsofCairoorthePoorLittleCountryMaid.ogg"
+	volume = 0.65
+}
+
+### Japanese Marches ###
+
+music = {
+	name = "Roei no Uta Japanese Millitary Song"
+	file = "RoeinoUta.ogg"
 	volume = 0.65
 }

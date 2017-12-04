@@ -719,7 +719,7 @@ focus = {
 							has_government = communism
 						}
 				}
-			reverse_add_opinion_modifier = {
+			add_opinion_modifier = {
 					target = ROOT
 					modifier = world_revolution_negative
 				}
@@ -895,6 +895,9 @@ focus = {
 	}
 	x = 68
 	y = 5
+	completion_reward = {
+	   LIT = { country_event = { id = soviet.19 days = 3 } }
+	}
 
 }
 focus = {
@@ -928,6 +931,11 @@ focus = {
 	}
 	x = 70
 	y = 5
+	completion_reward = {
+	   LAT = {
+		    country_event = { id = soviet.17 days = 3 }
+		 }
+	}
 
 }
 focus = {
@@ -939,6 +947,11 @@ focus = {
 	}
 	x = 72
 	y = 5
+	completion_reward = {
+	   EST = {
+		    country_event = { id = soviet.18 days = 3 }
+		 }
+	}
 
 }
 focus = {
@@ -956,6 +969,9 @@ focus = {
 	}
 	x = 70
 	y = 6
+	completion_reward = {
+	   country_event = { id = soviet.20 days = 1 }
+	}
 
 }
 
@@ -998,7 +1014,7 @@ focus = {
 	x = 53
 	y = 4
 	completion_reward = {
-	   country_event = { id = 12 days = 3 }
+	   country_event = { id = soviet.12 days = 3 }
 	}
 
 }
@@ -1011,6 +1027,16 @@ focus = {
 	}
 	x = 56
 	y = 4
+	bypass = {
+	   JAP = {
+		    has_government = communism
+		 }
+	}
+	completion_reward = {
+		    JAP = {
+					 country_event = jdom.33
+				}
+	}
 
 }
 focus = {
@@ -1022,6 +1048,12 @@ focus = {
 	}
 	x = 59
 	y = 4
+	completion_reward = {
+	   PRC = {
+		    load_oob = SOV_vol_PRF
+		 }
+		 add_opinion_modifier = { target = PRC modifier = Sent_volunteers }
+	}
 
 }
 focus = {
@@ -1036,6 +1068,12 @@ focus = {
 	}
 	x = 58
 	y = 5
+	completion_reward = {
+	   GUO = {
+		    load_oob = SOV_vol_PRF
+		 }
+		 add_opinion_modifier = { target = GUO modifier = Sent_volunteers }
+	}
 
 }
 focus = {
@@ -1050,6 +1088,9 @@ focus = {
 	}
 	x = 60
 	y = 5
+	completion_reward = {
+	   add_opinion_modifier = { target = GUP modifier = Soviet_Denounce }
+	}
 
 }
 

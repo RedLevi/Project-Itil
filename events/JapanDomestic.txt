@@ -2,57 +2,57 @@
 add_namespace = jdom
 ####Japanese politics 1936####
 country_event = {#The show democracy
-	id = jdom.1 
-	title = jdom.1.t 
-	desc = jdom.1.d 
-	fire_only_once = yes 
+	id = jdom.1
+	title = jdom.1.t
+	desc = jdom.1.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 	}
 	option = {
-		name = jdom.1.a 
+		name = jdom.1.a
 	}
 }
 
-country_event = {#Left wing coalition 
-	id = jdom.2 
-	title = jdom.2.t 
-	desc = jdom.2.d 
-	fire_only_once = yes 
+country_event = {#Left wing coalition
+	id = jdom.2
+	title = jdom.2.t
+	desc = jdom.2.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
-		date > 1936.4.3 
+		tag = JAP
+		date > 1936.4.3
 	}
 	option = {
-		name = jdom.2.a 
-		add_national_unity = -0.01 
+		name = jdom.2.a
+		add_national_unity = -0.01
 	}
 }
 
 country_event = {#Japanese elections of 1936
-	id = jdom.3 
-	title = jdom.3.t 
-	desc = jdom.3.d 
-	fire_only_once = yes 
+	id = jdom.3
+	title = jdom.3.t
+	desc = jdom.3.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		date > 1936.8.5
 	}
-	option = {#liberals 
-		name = jdom.3.a 
+	option = {#liberals
+		name = jdom.3.a
 		ai_chance = { factor = 50 }
-		set_politics = { 
-		
-			ruling_party = liberalism 
-			elections_allowed = no 
-			
+		set_politics = {
+
+			ruling_party = liberalism
+			elections_allowed = no
+
 		}
-		
-		add_popularity = { 
-			
-				ideology = liberalism  
-				popularity = 0.2 
-				
+
+		add_popularity = {
+
+				ideology = liberalism
+				popularity = 0.2
+
 		}
 		create_country_leader = {
 			name = "Osachi Hamaguchi"
@@ -61,29 +61,29 @@ country_event = {#Japanese elections of 1936
 			expire = "1940.1.1"
 			ideology = market_liberalism
 			traits = {
-			
+
 			}
 		}
-		
+
 		hidden_effect = { country_event = { id = jdom.27 days = 1460 } }
-		
-		add_national_unity = 0.02 
+
+		add_national_unity = 0.02
 	}
-	option = {#conservatives 
-		name = jdom.3.b 
+	option = {#conservatives
+		name = jdom.3.b
 		ai_chance = { factor = 30 }
-		set_politics = { 
-		
-			ruling_party = conservatism 
-			elections_allowed = no 
-			
+		set_politics = {
+
+			ruling_party = conservatism
+			elections_allowed = no
+
 		}
-		
-		add_popularity = { 
-			
-				ideology = conservatism  
-				popularity = 0.2 
-				
+
+		add_popularity = {
+
+				ideology = conservatism
+				popularity = 0.2
+
 		}
 		create_country_leader = {
 			name = "Inukai Tsuyoshi"
@@ -92,35 +92,35 @@ country_event = {#Japanese elections of 1936
 			expire = "1949.1.1"
 			ideology = democratic_conservatism
 			traits = {
-			
+
 			}
 		}
-		
+
 		hidden_effect = { country_event = { id = jdom.28 days = 1460 } }
-		
-		add_national_unity = 0.02 
+
+		add_national_unity = 0.02
 	}
-	option = {#socialists 
-		name = jdom.3.c 
+	option = {#socialists
+		name = jdom.3.c
 		ai_chance = { factor = 20 }
-		set_politics = { 
-		
-			ruling_party = socialism 
-			elections_allowed = no 
-			
+		set_politics = {
+
+			ruling_party = socialism
+			elections_allowed = no
+
 		}
-		
-		add_popularity = { 
-			
-				ideology = socialism  
-				popularity = 0.2 
-				
+
+		add_popularity = {
+
+				ideology = socialism
+				popularity = 0.2
+
 		}
-		add_popularity = { 
-			
-				ideology = communism  
-				popularity = 0.1 
-				
+		add_popularity = {
+
+				ideology = communism
+				popularity = 0.1
+
 		}
 		create_country_leader = {
 			name = "Abe Isoo"
@@ -129,158 +129,158 @@ country_event = {#Japanese elections of 1936
 			expire = "1949.2.10"
 			ideology = democratic_socialism
 			traits = {
-			
+
 			}
 		}
-		
-		add_national_unity = 0.02 
+
+		add_national_unity = 0.02
 	}
 }
 ####some flavor political events####
 
-country_event = {#left wing coalition falls apart NOT SOC 
+country_event = {#left wing coalition falls apart NOT SOC
 	id = jdom.4
-	title = jdom.4.t 
-	desc = jdom.4.d 
-	fire_only_once = yes 
+	title = jdom.4.t
+	desc = jdom.4.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		date > 1936.8.6
-		NOT = { 
-			has_government = socialism 
+		NOT = {
+			has_government = socialism
 			has_government = communism
 		}
 	}
 	mean_time_to_happen = { days = 50 }
 	option = {
-		name = jdom.4.a 
+		name = jdom.4.a
 	}
 }
 
-country_event = {#left wing coalition falls apart SOC 
+country_event = {#left wing coalition falls apart SOC
 	id = jdom.5
-	title = jdom.5.t 
-	desc = jdom.5.d 
-	fire_only_once = yes 
+	title = jdom.5.t
+	desc = jdom.5.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		date > 1939.11.25
 		has_government = socialism
-		
+
 	}
 	mean_time_to_happen = { days = 35 }
 	option = {
-		name = jdom.5.a 
-		add_national_unity = -0.02 
+		name = jdom.5.a
+		add_national_unity = -0.02
 		hidden_effect = { country_event = { id = jdom.32 days = 30 } }
 	}
 }
 
-country_event = {#Women suffrage 
-	id = jdom.6 
-	title = jdom.6.t 
-	desc = jdom.6.d 
-	fire_only_once = yes 
+country_event = {#Women suffrage
+	id = jdom.6
+	title = jdom.6.t
+	desc = jdom.6.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
-		NOT = { 
-			has_government = national_integralism 
-			has_government = reactionarism 
+		tag = JAP
+		NOT = {
+			has_government = national_integralism
+			has_government = reactionarism
 			has_completed_focus = JAP_universal_suffrage
 		}
-		date > 1937.1.1 
+		date > 1937.1.1
 	}
 	mean_time_to_happen = { days = 100 }
-	
+
 	option = {
-		name = jdom.6.a 
-		add_national_unity = -0.01 
+		name = jdom.6.a
+		add_national_unity = -0.01
 	}
 }
 
-country_event = {#Kokuhonsha rally 
+country_event = {#Kokuhonsha rally
 	id = jdom.7
-	title = jdom.7.t 
-	desc = jdom.7.d 
-	fire_only_once = yes 
+	title = jdom.7.t
+	desc = jdom.7.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
-		date > 1937.6.1 
+		tag = JAP
+		date > 1937.6.1
 		NOT = { has_government = communism }
 	}
 	mean_time_to_happen = { days = 50 }
-	
+
 	option = {
-		name = jdom.7.a 
-		add_national_unity = -0.01 
+		name = jdom.7.a
+		add_national_unity = -0.01
 	}
 }
 
 ####Left wing coalition events####
 
-country_event = {#Labor crisis in Osaka 
+country_event = {#Labor crisis in Osaka
 	id = jdom.8
-	title = jdom.8.t 
-	desc = jdom.8.d 
-	fire_only_once = yes 
+	title = jdom.8.t
+	desc = jdom.8.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		has_completed_focus = JAP_labor_reforms
 		has_government = socialism
 	}
 	mean_time_to_happen = { days = 50 }
 	option = {#support the moderates
-		name = jdom.8.a 
+		name = jdom.8.a
 		ai_chance = { factor = 70 }
 		set_country_flag = JAP_reformist_victory
 		add_ideas = JAP_economic_cooperation_idea
 	}
-	option = {#support the radicals 
-		name = jdom.8.b 
+	option = {#support the radicals
+		name = jdom.8.b
 		ai_chance = { factor = 30 }
 		set_country_flag = JAP_revolutionary_victory
 		add_ideas = JAP_militant_labor
 	}
 }
 
-country_event = {#The People's Revolution 
+country_event = {#The People's Revolution
 	id = jdom.9
 	title = jdom.9.t
-	desc =jdom.9.d 
-	is_triggered_only = yes 
+	desc =jdom.9.d
+	is_triggered_only = yes
 	option = {
-		name = jdom.9.a 
+		name = jdom.9.a
 		swap_ideas = { remove_idea = JAP_militant_labor add_idea = JAP_peoples_revolution_idea }
 		hidden_effect = {
-			
+
 			country_event = { id = jdom.10 days = 3 }
 			country_event = { id = jdom.11 days = 20 }
-		
+
 		}
 	}
 }
 
-country_event = {#Kokuhonsha runs to Manchuria 
-	id = jdom.10 
-	title = jdom.10.t 
-	desc = jdom.10.d 
-	is_triggered_only = yes 
+country_event = {#Kokuhonsha runs to Manchuria
+	id = jdom.10
+	title = jdom.10.t
+	desc = jdom.10.d
+	is_triggered_only = yes
 	option = {
-		name = jdom.10.a 
+		name = jdom.10.a
 		add_national_unity = -0.03
 	}
 }
 
-country_event = {#Japanese civil war 
+country_event = {#Japanese civil war
 	id = jdom.11
-	title = jdom.11.t 
-	desc = jdom.11.d 
-	is_triggered_only = yes 
+	title = jdom.11.t
+	desc = jdom.11.d
+	is_triggered_only = yes
 	option = {
-		name = jdom.11.a 
-		remove_ideas = JAP_peoples_revolution_idea 
-		add_national_unity = 0.1 
-		
+		name = jdom.11.a
+		remove_ideas = JAP_peoples_revolution_idea
+		add_national_unity = 0.1
+
 		start_civil_war = {
 				ruling_party = communism
 				ideology = reactionarism
@@ -288,14 +288,14 @@ country_event = {#Japanese civil war
 				capital = 408
 				states = { 408 409 657 560 562 744 637 555 537 655 }
 			}
-			
+
 			add_popularity = {
-				
-				ideology = communism  
-				popularity = 0.3 
-			
+
+				ideology = communism
+				popularity = 0.3
+
 			}
-			
+
 		create_country_leader = {
 			name = "Motojiro Sugiyama"
 			desc = "doesntmatter"
@@ -303,21 +303,21 @@ country_event = {#Japanese civil war
 			expire = "1964.10.11"
 			ideology = marxism
 			traits = {
-			
+
 			}
 		}
-		
-		hidden_effect = { 
-		
+
+		hidden_effect = {
+
 			every_country = {
-			
+
 				limit = {
-				
-					original_tag = JAP 
+
+					original_tag = JAP
 					has_government = reactionarism
-				
+
 				}
-				
+
 				create_country_leader = {
 				name = "Hiranuma Kiichiro"
 				desc = "doesntmatter"
@@ -325,45 +325,45 @@ country_event = {#Japanese civil war
 				expire = "1964.10.11"
 				ideology = autocracy
 				traits = {
-				
+
 					}
 				}
-				
+
 				country_event = { id = jdom.23 }
-		
+
 			}
-			
-			end_puppet = RUS 
-			remove_from_faction = RUS 
-		
+
+			end_puppet = RUS
+			remove_from_faction = RUS
+
 		}
-		
+
 		MAN = { country_event = { id = jdom.12 days = 1 } }
 		RUS = { country_event = { id = jdom.15 days = 3  } }
 	}
 }
 
-country_event = {#civil war event for Manchuria 
-	id = jdom.12 
-	title = jdom.12.t 
-	desc = jdom.12.d 
-	is_triggered_only = yes 
-	
+country_event = {#civil war event for Manchuria
+	id = jdom.12
+	title = jdom.12.t
+	desc = jdom.12.d
+	is_triggered_only = yes
+
 	option = {
-		name = jdom.12.a 
-		JAP = { 
-			remove_from_faction = MAN 
+		name = jdom.12.a
+		JAP = {
+			remove_from_faction = MAN
 			end_puppet = MAN
 		}
 		every_country = {
-			
+
 			limit = {
-				
-				original_tag = JAP 
+
+				original_tag = JAP
 				has_government = reactionarism
-				
+
 			}
-			
+
 			create_faction = japanese_rebels
 			add_to_faction = MAN
 			country_event = { id = jdom.13 }
@@ -373,223 +373,223 @@ country_event = {#civil war event for Manchuria
 	}
 }
 
-country_event = {#Manchuria joins 
-	id = jdom.13 
-	title = jdom.13.t 
-	desc = jdom.13.d 
-	is_triggered_only = yes 
+country_event = {#Manchuria joins
+	id = jdom.13
+	title = jdom.13.t
+	desc = jdom.13.d
+	is_triggered_only = yes
 	option = {
-		name = jdom.13.a 
+		name = jdom.13.a
 	}
 }
 
-country_event = {#Manchuria joins 
+country_event = {#Manchuria joins
 	id = jdom.14
-	title = jdom.14.t 
-	desc = jdom.14.d 
-	is_triggered_only = yes 
+	title = jdom.14.t
+	desc = jdom.14.d
+	is_triggered_only = yes
 	option = {
-		name = jdom.14.a 
+		name = jdom.14.a
 	}
 }
 
-country_event = {#civil war for Russia 
-	id = jdom.15 
-	title = jdom.15.t 
-	desc = jdom.15.d 
-	is_triggered_only = yes 
-	option = {#help them 
-		name = jdom.15.a 
+country_event = {#civil war for Russia
+	id = jdom.15
+	title = jdom.15.t
+	desc = jdom.15.d
+	is_triggered_only = yes
+	option = {#help them
+		name = jdom.15.a
 		ai_chance = { factor = 80 }
-		
+
 		every_country = {
 			limit = {
-				original_tag = JAP 
+				original_tag = JAP
 				has_government = reactionarism
 			}
-			add_to_faction = RUS 
+			add_to_faction = RUS
 		}
-		
+
 		declare_war_on = { target = JAP type = annex_everything }
-		
+
 		JAP = { country_event = { id = jdom.17 } }
 	}
-	option = {#attack the rebels 
-		name = jdom.15.b 
+	option = {#attack the rebels
+		name = jdom.15.b
 		ai_chance = { factor = 20 }
-		declare_war_on = { target = JAP type = annex_everything  } 
+		declare_war_on = { target = JAP type = annex_everything  }
 		every_country = {
-			
+
 			limit = {
-				
-				original_tag = JAP 
+
+				original_tag = JAP
 				has_government = reactionarism
-				
+
 			}
-			
+
 			RUS = { declare_war_on = { target = PREV type = annex_everything } }
 			country_event = { id = jdom.18 }
 		}
-		 add_state_claim = 637 
-		 add_state_claim = 744 
-		 add_state_claim = 562 
-		 add_state_claim = 560 
-		 add_state_claim = 657 
-		 add_state_claim = 409 
-		 add_state_claim = 408 
-		 add_state_claim = 655 
-		 add_state_claim = 537 
-		 add_state_claim = 555 
+		 add_state_claim = 637
+		 add_state_claim = 744
+		 add_state_claim = 562
+		 add_state_claim = 560
+		 add_state_claim = 657
+		 add_state_claim = 409
+		 add_state_claim = 408
+		 add_state_claim = 655
+		 add_state_claim = 537
+		 add_state_claim = 555
 		JAP = { country_event = { id = jdom.19 } }
 	}
 }
 
-country_event = {#russia joins us 
-	id = jdom.16 
-	title = jdom.16.t 
-	desc = jdom.16.d 
-	is_triggered_only = yes 
+country_event = {#russia joins us
+	id = jdom.16
+	title = jdom.16.t
+	desc = jdom.16.d
+	is_triggered_only = yes
 	option = {
-		name = jdom.16.a 
+		name = jdom.16.a
 	}
 }
 
-country_event = {#russia joins rebels  
-	id = jdom.17 
-	title = jdom.17.t 
-	desc = jdom.17.d 
-	is_triggered_only = yes 
-	option = {#call soviets 
-		name = jdom.17.a 
+country_event = {#russia joins rebels
+	id = jdom.17
+	title = jdom.17.t
+	desc = jdom.17.d
+	is_triggered_only = yes
+	option = {#call soviets
+		name = jdom.17.a
 		ai_chance = { factor = 90 }
 		SOV = { country_event = { id = jdom.20 days = 2 } }
 	}
-	option = {#no need 
-		name = jdom.17.b 
+	option = {#no need
+		name = jdom.17.b
 		ai_chance = { factor = 10 }
 		add_national_unity = 0.03
 	}
 }
 
-country_event = {#russia attacks us 
-	id = jdom.18 
-	title = jdom.18.t 
-	desc = jdom.18.d 
-	is_triggered_only = yes 
+country_event = {#russia attacks us
+	id = jdom.18
+	title = jdom.18.t
+	desc = jdom.18.d
+	is_triggered_only = yes
 	option = {
-		name = jdom.18.a 
+		name = jdom.18.a
 	}
 }
 
-country_event = {#russia attacks rebels  
-	id = jdom.19 
-	title = jdom.19.t 
-	desc = jdom.19.d 
-	is_triggered_only = yes 
-	option = {#call soviets 
-		name = jdom.17.a 
+country_event = {#russia attacks rebels
+	id = jdom.19
+	title = jdom.19.t
+	desc = jdom.19.d
+	is_triggered_only = yes
+	option = {#call soviets
+		name = jdom.17.a
 		ai_chance = { factor = 70 }
 		SOV = { country_event = { id = jdom.20 days = 2 } }
 	}
-	option = {#no need 
-		name = jdom.17.b 
+	option = {#no need
+		name = jdom.17.b
 		ai_chance = { factor = 30 }
 		add_national_unity = 0.03
 	}
 }
 
-country_event = {#Japan calls for aid 
-	id = jdom.20 
-	title = jdom.20.t 
-	desc = jdom.20.d 
-	is_triggered_only = yes 
-	option = {#join 
-		name = jdom.20.a 
+country_event = {#Japan calls for aid
+	id = jdom.20
+	title = jdom.20.t
+	desc = jdom.20.d
+	is_triggered_only = yes
+	option = {#join
+		name = jdom.20.a
 		ai_chance = { factor = 90 }
 		JAP = { dismantle_faction = yes }
-		add_to_faction = JAP 
+		add_to_faction = JAP
 		every_country = {
-			
+
 			limit = {
-				
-				original_tag = JAP 
+
+				original_tag = JAP
 				has_government = reactionarism
-				
+
 			}
-			
+
 			SOV = { declare_war_on = { target = PREV type = annex_everything } }
 		}
 		declare_war_on = { target = RUS type = annex_everything }
 		JAP = { country_event = { id = jdom.21 } }
 	}
 	option = {
-		name = jdom.20.b 
+		name = jdom.20.b
 		ai_chance = { factor = 10 }
-		add_national_unity = 0.01 
+		add_national_unity = 0.01
 		JAP = { country_event = { id = jdom.22 } }
 	}
 }
 
-country_event = {#the soviets join 
-	id = jdom.21 
-	title = jdom.21.t 
-	desc = jdom.21.d 
-	is_triggered_only = yes 
+country_event = {#the soviets join
+	id = jdom.21
+	title = jdom.21.t
+	desc = jdom.21.d
+	is_triggered_only = yes
 	option = {
-		name = jdom.21.a 
+		name = jdom.21.a
 	}
-}	
+}
 
-country_event = {#the soviets refuse 
-	id = jdom.22 
-	title = jdom.22.t 
-	desc = jdom.22.d 
-	is_triggered_only = yes 
+country_event = {#the soviets refuse
+	id = jdom.22
+	title = jdom.22.t
+	desc = jdom.22.d
+	is_triggered_only = yes
 	option = {
-		name = jdom.22.a 
+		name = jdom.22.a
 		reverse_add_opinion_modifier = { target = SOV modifier = JAP_SOV_refusal }
 	}
 }
 
 news_event = {#japanese civil war
-	id = jdom.23 
-	title = jdom.23.t 
-	desc = jdom.23.d 
-	is_triggered_only = yes 
-	major = yes 
+	id = jdom.23
+	title = jdom.23.t
+	desc = jdom.23.d
+	is_triggered_only = yes
+	major = yes
 	option = {
-		name = jdom.23.a 
+		name = jdom.23.a
 	}
 }
 
-###more events here 
+###more events here
 
 ####constitution events####
 country_event = {#liberal constitution
-	id = jdom.24 
-	title = jdom.24.t 
-	desc = jdom.24.d 
-	is_triggered_only = yes 
+	id = jdom.24
+	title = jdom.24.t
+	desc = jdom.24.d
+	is_triggered_only = yes
 	option = {
 		name = jdom.24.a
 	}
 }
 
 country_event = {#conservative constitution
-	id = jdom.25 
-	title = jdom.25.t 
-	desc = jdom.25.d 
-	is_triggered_only = yes 
+	id = jdom.25
+	title = jdom.25.t
+	desc = jdom.25.d
+	is_triggered_only = yes
 	option = {
 		name = jdom.24.a
 	}
 }
 
 country_event = {#socialist constitution
-	id = jdom.26 
-	title = jdom.26.t 
-	desc = jdom.26.d 
-	is_triggered_only = yes 
+	id = jdom.26
+	title = jdom.26.t
+	desc = jdom.26.d
+	is_triggered_only = yes
 	option = {
 		name = jdom.24.a
 	}
@@ -597,26 +597,26 @@ country_event = {#socialist constitution
 
 ####elections and stuff####
 
-country_event = {#Japanese elections of 1940 lib 
-	id = jdom.27 
-	title = jdom.27.t 
-	desc = jdom.27.d 
-	is_triggered_only = yes 
-	option = {#liberals 
-		name = jdom.3.a 
+country_event = {#Japanese elections of 1940 lib
+	id = jdom.27
+	title = jdom.27.t
+	desc = jdom.27.d
+	is_triggered_only = yes
+	option = {#liberals
+		name = jdom.3.a
 		ai_chance = { factor = 60 }
-		set_politics = { 
-		
-			ruling_party = liberalism 
-			elections_allowed = no 
-			
+		set_politics = {
+
+			ruling_party = liberalism
+			elections_allowed = no
+
 		}
-		
-		add_popularity = { 
-			
-				ideology = liberalism  
-				popularity = 0.2 
-				
+
+		add_popularity = {
+
+				ideology = liberalism
+				popularity = 0.2
+
 		}
 		create_country_leader = {
 			name = "Wakatsuki Reijiro"
@@ -625,29 +625,29 @@ country_event = {#Japanese elections of 1940 lib
 			expire = "1949.1.1"
 			ideology = market_liberalism
 			traits = {
-			
+
 			}
 		}
-		
+
 		hidden_effect = { country_event = { id = jdom.? days = 1460 } }
-		
-		add_national_unity = 0.04 
+
+		add_national_unity = 0.04
 	}
-	option = {#conservatives 
-		name = jdom.3.b 
+	option = {#conservatives
+		name = jdom.3.b
 		ai_chance = { factor = 30 }
-		set_politics = { 
-		
-			ruling_party = conservatism 
-			elections_allowed = no 
-			
+		set_politics = {
+
+			ruling_party = conservatism
+			elections_allowed = no
+
 		}
-		
-		add_popularity = { 
-			
-				ideology = conservatism  
-				popularity = 0.2 
-				
+
+		add_popularity = {
+
+				ideology = conservatism
+				popularity = 0.2
+
 		}
 		create_country_leader = {
 			name = "Ichirō Hatoyama"
@@ -656,28 +656,28 @@ country_event = {#Japanese elections of 1940 lib
 			expire = "1949.1.1"
 			ideology = democratic_conservatism
 			traits = {
-			
+
 			}
 		}
-		
+
 		hidden_effect = { country_event = { id = jdom.? days = 1460 } }
-		
+
 	}
-	option = {#socialists 
-		name = jdom.27.c 
+	option = {#socialists
+		name = jdom.27.c
 		ai_chance = { factor = 10 }
-		set_politics = { 
-		
-			ruling_party = socialism 
-			elections_allowed = no 
-			
+		set_politics = {
+
+			ruling_party = socialism
+			elections_allowed = no
+
 		}
-		
-		add_popularity = { 
-			
-				ideology = socialism  
-				popularity = 0.2 
-				
+
+		add_popularity = {
+
+				ideology = socialism
+				popularity = 0.2
+
 		}
 		create_country_leader = {
 			name = "Suzuki Bunji"
@@ -686,34 +686,34 @@ country_event = {#Japanese elections of 1940 lib
 			expire = "1949.2.10"
 			ideology = democratic_socialism
 			traits = {
-			
+
 			}
 		}
-		
-		add_national_unity = 0.02 
+
+		add_national_unity = 0.02
 	}
 }
 
 country_event = {#Japanese elections of 1940 con
-	id = jdom.28 
-	title = jdom.28.t 
-	desc = jdom.28.d 
-	is_triggered_only = yes 
-	option = {#conservatives  
-		name = jdom.28.a 
+	id = jdom.28
+	title = jdom.28.t
+	desc = jdom.28.d
+	is_triggered_only = yes
+	option = {#conservatives
+		name = jdom.28.a
 		ai_chance = { factor = 60 }
-		set_politics = { 
-		
-			ruling_party = conservatism 
-			elections_allowed = no 
-			
+		set_politics = {
+
+			ruling_party = conservatism
+			elections_allowed = no
+
 		}
-		
-		add_popularity = { 
-			
-				ideology = conservatism  
-				popularity = 0.2 
-				
+
+		add_popularity = {
+
+				ideology = conservatism
+				popularity = 0.2
+
 		}
 		create_country_leader = {
 			name = "Ichirō Hatoyama"
@@ -722,29 +722,29 @@ country_event = {#Japanese elections of 1940 con
 			expire = "1949.1.1"
 			ideology = democratic_conservatism
 			traits = {
-			
+
 			}
 		}
-		
+
 		hidden_effect = { country_event = { id = jdom.? days = 1460 } }
-		
-		add_national_unity = 0.03 
+
+		add_national_unity = 0.03
 	}
-	option = {#liberals 
-		name = jdom.28.b 
+	option = {#liberals
+		name = jdom.28.b
 		ai_chance = { factor = 40 }
-		set_politics = { 
-		
-			ruling_party = liberalism 
-			elections_allowed = no 
-			
+		set_politics = {
+
+			ruling_party = liberalism
+			elections_allowed = no
+
 		}
-		
-		add_popularity = { 
-			
-				ideology = liberalism  
-				popularity = 0.2 
-				
+
+		add_popularity = {
+
+				ideology = liberalism
+				popularity = 0.2
+
 		}
 		create_country_leader = {
 			name = "Wakatsuki Reijiro"
@@ -753,27 +753,27 @@ country_event = {#Japanese elections of 1940 con
 			expire = "1949.1.1"
 			ideology = market_liberalism
 			traits = {
-			
+
 			}
 		}
-		
+
 		hidden_effect = { country_event = { id = jdom.? days = 1460 } }
-		
+
 	}
 }
 
 country_event = {#Hamaguchi retires liberal
-	id = jdom.29 
-	title = jdom.29.t 
-	desc = jdom.29.d 
-	fire_only_once = yes 
+	id = jdom.29
+	title = jdom.29.t
+	desc = jdom.29.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		date > 1939.2.10
 		has_government = liberalism
 	}
 	option = {
-		name = jdom.29.a 
+		name = jdom.29.a
 		create_country_leader = {
 			name = "Kijuro Shidehara"
 			desc = "doesntmatter"
@@ -781,43 +781,43 @@ country_event = {#Hamaguchi retires liberal
 			expire = "1949.1.1"
 			ideology = market_liberalism
 			traits = {
-			
+
 			}
 		}
-		
+
 		add_national_unity = -0.01
 	}
 }
 
 country_event = {#Hamaguchi retires not liberal
-	id = jdom.30 
-	title = jdom.30.t 
-	desc = jdom.30.d 
-	fire_only_once = yes 
+	id = jdom.30
+	title = jdom.30.t
+	desc = jdom.30.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		date > 1939.2.10
 		NOT = {
 			has_government = liberalism
 		}
 	}
 	option = {
-		name = jdom.29.a 
+		name = jdom.29.a
 	}
 }
 
 country_event = {#Inukai dies conservative
-	id = jdom.31 
-	title = jdom.31.t 
-	desc = jdom.31.d 
-	fire_only_once = yes 
+	id = jdom.31
+	title = jdom.31.t
+	desc = jdom.31.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		date > 1940.2.3
 		has_government = conservatism
 	}
 	option = {
-		name = jdom.31.a 
+		name = jdom.31.a
 		create_country_leader = {
 			name = "Tsuneo Kanemitsu"
 			desc = "doesntmatter"
@@ -827,30 +827,30 @@ country_event = {#Inukai dies conservative
 			traits = {
 			}
 		}
-		
+
 		add_national_unity = -0.01
 	}
 }
- country_event = {#socialist elections 1939 
-	id = jdom.32 
-	title = jdom.32.t 
-	desc = jdom.32.d 
-	is_triggered_only = yes 
+ country_event = {#socialist elections 1939
+	id = jdom.32
+	title = jdom.32.t
+	desc = jdom.32.d
+	is_triggered_only = yes
 	option = {
-		name = jdom.32.a 
-		add_national_unity = -0.01 
-		
-		add_popularity = { 
-			
-				ideology = socialism  
-				popularity = 0.07 
-				
+		name = jdom.32.a
+		add_national_unity = -0.01
+
+		add_popularity = {
+
+				ideology = socialism
+				popularity = 0.07
+
 		}
-		add_popularity = { 
-			
-				ideology = communism  
-				popularity = 0.05 
-				
+		add_popularity = {
+
+				ideology = communism
+				popularity = 0.05
+
 		}
 		create_country_leader = {
 			name = "Toyohiko Kagawa"
@@ -862,4 +862,16 @@ country_event = {#Inukai dies conservative
 			}
 		}
 	}
+ }
+
+ country_event = { #Soviet planted Dissidents
+    id = jdom.33
+		title = jdom.33.t
+		desc = jdom.33.d
+		is_triggered_only = yes
+
+		option = {
+		   name = jdom.33.a
+		   add_ideas = JAP_Soviet_Agents_idea
+		}
  }

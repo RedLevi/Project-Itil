@@ -64,4 +64,9 @@ GER_asia_relations = { value = 50 }
 ###France###
 NFA_traitors = { value = -150 }
 GER_enemies = { value = -150 }
+###Soviet###
+Soviet_Revanchism = { value = -200 }
+Soviet_Denounce = { value = -50 }
+Soviet_Expansionism = { value = -200 }
+Soviet_Peace = { value = 75 }
 }

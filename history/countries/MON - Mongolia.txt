@@ -25,31 +25,42 @@ set_politics = {
 		liberalism = {
 			popularity = 5
 		}
-		
+
 		communism = {
 			popularity = 42
 		}
-		
+
 		socialism = {
 			popularity = 5
 		}
-		
+
 		reactionarism = {
 			popularity = 33
 		}
-		
+
 	}
-	
-	ruling_party = reactionarism 
+
+	ruling_party = reactionarism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
 create_country_leader = {
-	name = "Anandyn Amar"
+	name = "Bogd Khan"
 	desc = "POLITICS_ANANDYN_AMAR_DESC"
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_communism.dds"
+	picture = "gfx/leaders/MON/Bogd_Khan.dds"
+	expire = "1965.1.1"
+	ideology = fundamentalism
+	traits = {
+		Jebtsundamba_Khutuktu
+	}
+}
+
+create_country_leader = {
+	name = "Damdin Sukhbaatar"
+	desc = "POLITICS_ANANDYN_AMAR_DESC"
+	picture = "gfx/leaders/MON/Damdin_Sukhbaatar.dds"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {

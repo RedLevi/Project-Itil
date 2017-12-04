@@ -20,12 +20,20 @@
  reactionarism_desc:0 "Reactionarism"
  national_integralism:0 "National Integralism"
  national_integralism_desc:0 "National Integralism"
- 
+
  GER_conservatism_party:0 "Zentrum"
  GER_socialism_party:0 "SPD"
- GER_socialism_party_party_long:0 "Sozialdemokratische Partei Deutschlands" 
+ GER_socialism_party_long:0 "Sozialdemokratische Partei Deutschlands"
  GER_liberalism_party:0 "FVP"
  GER_liberalism_party_long:0 "Fortschrittliche Volkspartei"
  GER_national_integralism_party:0 "SNAB"
  GER_national_integralism_party_long:0 "Sozialistnationalische Arbeiterbund"
- 
+
+ SOV_communism_party:0 "SSDRP"
+ SOV_communism_part_long:0 "Sovetskaya sotsial-demokraticheskaya rabochaya partiya"
+ SOV_socialism:0 "Trudoviks"
+ SOV_socialism_party_long:0 "Trudoviks"
+ SOV_liberalism_party:0 "KDP"
+ SOV_liberalism_party_long:0 "Konstitutsionno-Demokraticheskaya Partiya"
+ SOV_conservatism_party:0 "Oktyabristi"
+ SOV_conservatism_party_long:0 "Soyuz 17 Oktyabrya"

@@ -228,6 +228,17 @@ leader_traits = {
 		}
 	}
 
+  Jebtsundamba_Khutuktu = {
+     random = no
+     unity_factor = 0.2
+     army_morale_Factor = 0.2
+     army_defence_factor = 0.2
+
+     ai_will_do = {
+        factor = 1
+     }
+  }
+
 	### IDEA TRAITS ###
 
 	# drift is a percent applied weekly

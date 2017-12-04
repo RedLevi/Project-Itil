@@ -64,7 +64,7 @@ set_politics = {
 		}
 
 		liberalism = {
-			popularity = 5
+			popularity = 10
 		}
 
 		communism = {
@@ -76,7 +76,7 @@ set_politics = {
 		}
 
 		reactionarism = {
-			popularity = 5
+			popularity = 0
 		}
 
 	}

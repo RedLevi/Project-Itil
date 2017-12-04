@@ -1018,27 +1018,8 @@ focus = {
 	}
 
 }
-focus = {
-	id = Fund_Japanese_Dissidents
-	icon = GFX_goal_generic_war_with_comintern
-	cost = 10.00
-	prerequisite = {
-		focus = Take_On_Japan
-	}
-	x = 56
-	y = 4
-	bypass = {
-	   JAP = {
-		    has_government = communism
-		 }
-	}
-	completion_reward = {
-		    JAP = {
-					 country_event = jdom.33
-				}
-	}
 
-}
+
 focus = {
 	id = Aid_PRF
 	icon = GFX_focus_china_yellow_dragon
@@ -1093,6 +1074,186 @@ focus = {
 	}
 
 }
+
+focus = {
+	id = Red_China
+	icon = GFX_goal_support_communism
+	cost = 10.00
+	prerequisite = {
+		focus = Denounce_Feng
+		focus = Supply_Guominjun
+	}
+	x = 59
+	y = 6
+
+}
+focus = {
+	id = Manchurian_Uprising
+	icon = GFX_goal_generic_special_forces
+	cost = 10.00
+	prerequisite = {
+		focus = Fund_Japanese_Dissidents
+	}
+	prerequisite = {
+		focus = Bogd_Khanate
+	}
+	x = 56
+	y = 5
+
+}
+focus = {
+	id = Korea_Revolution
+	icon = GFX_goal_generic_political_pressure
+	cost = 10.00
+	prerequisite = {
+		focus = Manchurian_Uprising
+	}
+	x = 56
+	y = 6
+
+}
+focus = {
+	id = Sinkiang_Revolution
+	icon = GFX_focus_RAJ_indian_gurkhas
+	cost = 10.00
+	prerequisite = {
+		focus = Bogd_Khanate
+	}
+	x = 53
+	y = 5
+
+}
+focus = {
+	id = Invite_Ho_Chi_Minh
+	icon = GFX_goal_generic_attack_allies
+	cost = 10.00
+	prerequisite = {
+		focus = Crush_The_Traitors
+	}
+	x = 62
+	y = 8
+
+}
+focus = {
+	id = Indochinese_Revolution
+	icon = GFX_goal_generic_demand_territory
+	cost = 10.00
+	prerequisite = {
+		focus = Invite_Ho_Chi_Minh
+	}
+	x = 62
+	y = 9
+
+}
+focus = {
+	id = Crush_The_Reactionaries
+	icon = GFX_focus_soviet_union
+	cost = 10.00
+	prerequisite = {
+		focus = Polish_Crisis
+	}
+	x = 65
+	y = 11
+
+}
+focus = {
+	id = Revolution_In_India
+	icon = GFX_focus_RAJ_seek_help_from_soviet
+	cost = 10.00
+	prerequisite = {
+		focus = Contact_Indian_Nationalists
+	}
+	x = 54
+	y = 8
+
+}
+focus = {
+	id = Demand_Oilfields
+	icon = GFX_goal_generic_oil_refinery
+	cost = 10.00
+	prerequisite = {
+		focus = Organize_Unions_Persia
+	}
+	x = 60
+	y = 8
+
+}
+focus = {
+	id = Fund_Jewish_Communists
+	icon = GFX_goal_support_communism
+	cost = 10.00
+	prerequisite = {
+		focus = Syrian_Socialists
+	}
+	mutually_exclusive = {
+		focus = Anti_Zionist_Policy
+	}
+	x = 58
+	y = 8
+
+}
+focus = {
+	id = Anti_Zionist_Policy
+	icon = GFX_focus_SAF_colonialist_crusade
+	cost = 10.00
+	prerequisite = {
+		focus = Syrian_Socialists
+	}
+	mutually_exclusive = {
+		focus = Fund_Jewish_Communists
+	}
+	x = 56
+	y = 8
+
+}
+focus = {
+	id = Secure_Middle_East
+	icon = GFX_focus_generic_join_comintern
+	cost = 10.00
+	prerequisite = {
+		focus = Fund_Jewish_Communists
+		focus = Anti_Zionist_Policy
+	}
+	prerequisite = {
+		focus = Demand_Oilfields
+	}
+	x = 59
+	y = 9
+
+}
+focus = {
+	id = Destroy_Imperialists
+	icon = GFX_goal_tfv_burn_the_royal_portraits
+	cost = 10.00
+	prerequisite = {
+		focus = Secure_Middle_East
+	}
+	prerequisite = {
+		focus = Revolution_In_India
+	}
+	x = 59
+	y = 10
+
+}
+focus = {
+	id = Polish_Crisis
+	icon = GFX_focus_generic_polish_deal
+	cost = 10.00
+	prerequisite = {
+		focus = Demand_Bessarabia
+	}
+	prerequisite = {
+		focus = German_Syndicalism
+	}
+	prerequisite = {
+		focus = Indochinese_Revolution
+	}
+	x = 65
+	y = 10
+
+}
+
+
 
 
 	focus = {
@@ -1629,183 +1790,6 @@ focus = {
 		technology = super_heavy_tank
 		}
 		}
-
-	}
-	focus = {
-		id = Red_China
-		icon = GFX_goal_support_communism
-		cost = 10.00
-		prerequisite = {
-			focus = Denounce_Feng
-			focus = Supply_Guominjun
-		}
-		x = 59
-		y = 6
-
-	}
-	focus = {
-		id = Manchurian_Uprising
-		icon = GFX_goal_generic_special_forces
-		cost = 10.00
-		prerequisite = {
-			focus = Fund_Japanese_Dissidents
-		}
-		prerequisite = {
-			focus = Bogd_Khanate
-		}
-		x = 56
-		y = 5
-
-	}
-	focus = {
-		id = Korea_Revolution
-		icon = GFX_goal_generic_political_pressure
-		cost = 10.00
-		prerequisite = {
-			focus = Manchurian_Uprising
-		}
-		x = 56
-		y = 6
-
-	}
-	focus = {
-		id = Sinkiang_Revolution
-		icon = GFX_focus_RAJ_indian_gurkhas
-		cost = 10.00
-		prerequisite = {
-			focus = Bogd_Khanate
-		}
-		x = 53
-		y = 5
-
-	}
-	focus = {
-		id = Invite_Ho_Chi_Minh
-		icon = GFX_goal_generic_attack_allies
-		cost = 10.00
-		prerequisite = {
-			focus = Crush_The_Traitors
-		}
-		x = 62
-		y = 8
-
-	}
-	focus = {
-		id = Indochinese_Revolution
-		icon = GFX_goal_generic_demand_territory
-		cost = 10.00
-		prerequisite = {
-			focus = Invite_Ho_Chi_Minh
-		}
-		x = 62
-		y = 9
-
-	}
-	focus = {
-		id = Crush_The_Reactionaries
-		icon = GFX_focus_soviet_union
-		cost = 10.00
-		prerequisite = {
-			focus = Polish_Crisis
-		}
-		x = 65
-		y = 11
-
-	}
-	focus = {
-		id = Revolution_In_India
-		icon = GFX_focus_RAJ_seek_help_from_soviet
-		cost = 10.00
-		prerequisite = {
-			focus = Contact_Indian_Nationalists
-		}
-		x = 54
-		y = 8
-
-	}
-	focus = {
-		id = Demand_Oilfields
-		icon = GFX_goal_generic_oil_refinery
-		cost = 10.00
-		prerequisite = {
-			focus = Organize_Unions_Persia
-		}
-		x = 60
-		y = 8
-
-	}
-	focus = {
-		id = Fund_Jewish_Communists
-		icon = GFX_goal_support_communism
-		cost = 10.00
-		prerequisite = {
-			focus = Syrian_Socialists
-		}
-		mutually_exclusive = {
-			focus = Anti_Zionist_Policy
-		}
-		x = 58
-		y = 8
-
-	}
-	focus = {
-		id = Anti_Zionist_Policy
-		icon = GFX_focus_SAF_colonialist_crusade
-		cost = 10.00
-		prerequisite = {
-			focus = Syrian_Socialists
-		}
-		mutually_exclusive = {
-			focus = Fund_Jewish_Communists
-		}
-		x = 56
-		y = 8
-
-	}
-	focus = {
-		id = Secure_Middle_East
-		icon = GFX_focus_generic_join_comintern
-		cost = 10.00
-		prerequisite = {
-			focus = Fund_Jewish_Communists
-			focus = Anti_Zionist_Policy
-		}
-		prerequisite = {
-			focus = Demand_Oilfields
-		}
-		x = 59
-		y = 9
-
-	}
-	focus = {
-		id = Destroy_Imperialists
-		icon = GFX_goal_tfv_burn_the_royal_portraits
-		cost = 10.00
-		prerequisite = {
-			focus = Secure_Middle_East
-		}
-		prerequisite = {
-			focus = Revolution_In_India
-		}
-		x = 59
-		y = 10
-
-	}
-	focus = {
-		id = Polish_Crisis
-		icon = GFX_focus_generic_polish_deal
-		cost = 10.00
-		prerequisite = {
-			focus = Demand_Bessarabia
-		}
-		prerequisite = {
-			focus = German_Syndicalism
-		}
-		prerequisite = {
-			focus = Indochinese_Revolution
-		}
-		x = 65
-		y = 10
 
 	}
 }

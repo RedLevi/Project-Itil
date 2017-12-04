@@ -1,5 +1,16 @@
 ﻿add_namespace = soviet
 
+######################################
+###Soviet Republic Events#############
+###By:     Markush       #############
+######################################
+
+##########################################
+###Events 1-11 are internal politics   ###
+###Events 11-... are foreign politics  ###
+###Events 100-... Is Soviet Union      ###
+##########################################
+
 country_event = { #Introduction#
    id = soviet.1
    title = soviet.1.t
@@ -299,6 +310,7 @@ country_event = { #Soviet Foreign policy#
       }
    }
 
+   mean_time_to_happen = { days = 30 }
    option = { #Full revolution path, only Kirov and Trotsky#
       name = soviet.14.a
       trigger = {

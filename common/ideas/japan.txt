@@ -598,7 +598,7 @@ ideas = {
 
 		}
 
-	}
+
 
 	  JAP_Soviet_Agents_idea = {
 
@@ -606,7 +606,7 @@ ideas = {
 		   available = {
 
 			    always = no
-					
+
 			 }
 
 			 removal_cost = -1
@@ -618,6 +618,7 @@ ideas = {
 
 			 }
 		}
+	}
 
 	political_advisor = {
 		sanzo_nosaka = {

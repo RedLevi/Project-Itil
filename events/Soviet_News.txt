@@ -1,0 +1,147 @@
+add_namespace = sovnews
+
+
+country_event = { #Georgian war response
+   id = sovnews.1
+   title = sovnews.1.t
+   desc = sovnews.1.d
+   is_triggered_only = yes
+
+   option = { #Attack Now#
+      name = sovnews.1.a
+      add_political_power = 50
+      SOV = { declare_war_on = { target = GEO type = annex_everything } }
+   }
+   option = { #Attack Later#
+      name = sovnews.1.b
+      add_political_power = -50
+   }
+}
+
+country_event = { #Georgia Accepts#
+   id = sovnews.2
+   title = sovnews.2.t
+   desc = sovnews.2.d
+   is_triggered_only = yes
+
+   option = {
+      name = sovnews.2.a
+   }
+}
+
+country_event = { #Latvia Accepts#
+   id = sovnews.3
+   title = sovnews.3.t
+   desc = sovnews.3.d
+   is_triggered_only = yes
+
+   option = {
+      name = sovnews.3.a
+   }
+}
+
+country_event = { #Latvian war response
+   id = sovnews.4
+   title = sovnews.4.t
+   desc = sovnews.4.d
+   is_triggered_only = yes
+
+   option = { #Attack Now#
+      name = sovnews.4.a
+      add_political_power = 50
+      SOV = { declare_war_on = { target = LAT type = annex_everything } }
+   }
+   option = { #Attack Later#
+      name = sovnews.4.b
+      add_political_power = -75
+   }
+}
+
+country_event = { #Estonia Accepts#
+   id = sovnews.5
+   title = sovnews.5.t
+   desc = sovnews.5.d
+   is_triggered_only = yes
+
+   option = {
+      name = sovnews.5.a
+   }
+}
+
+country_event = { #Estonian war response
+   id = sovnews.6
+   title = sovnews.6.t
+   desc = sovnews.6.d
+   is_triggered_only = yes
+
+   option = { #Attack Now#
+      name = sovnews.6.a
+      add_political_power = 30
+      SOV = { declare_war_on = { target = EST type = annex_everything } }
+   }
+   option = { #Attack Later#
+      name = sovnews.6.b
+      add_political_power = -75
+   }
+}
+
+country_event = { #Lithuania Accepts#
+   id = sovnews.7
+   title = sovnews.7.t
+   desc = sovnews.7.d
+   is_triggered_only = yes
+
+   option = {
+      name = sovnews.7.a
+   }
+}
+
+country_event = { #Lithuanian war response
+   id = sovnews.8
+   title = sovnews.8.t
+   desc = sovnews.8.d
+   is_triggered_only = yes
+
+   option = { #Attack Now#
+      name = sovnews.8.a
+      add_political_power = 30
+      SOV = { declare_war_on = { target = LIT type = annex_everything } }
+   }
+   option = { #Attack Later#
+      name = sovnews.8.b
+      add_political_power = -75
+   }
+}
+
+country_event = { #Mad Finns#
+   id = sovnews.9
+   title = sovnews.9.t
+   desc = sovnews.9.d
+   is_triggered_only = yes
+
+   option = {
+      name = sovnews.9.a
+   }
+}
+
+country_event = { #Finns give Karelia
+   id = sovnews.10
+   title = sovnews.10.t
+   desc = sovnews.10.d
+   is_triggered_only = yes
+
+   option = {
+      name = sovnews.10.a
+   }
+}
+
+country_event = { #Finns Refuse#
+   id = sovnews.11
+   title = sovnews.11.t
+   desc = sovnews.11.d
+   is_triggered_only = yes
+
+   option = {
+      name = sovnews.11.a
+   }
+}

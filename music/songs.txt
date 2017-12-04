@@ -107,6 +107,45 @@ music = {
 }
 
 music = {
+	song = "AM II 45a AMS Sedan-Marsch"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = GER
+		}
+	}
+}
+
+music = {
+	song = "AM II 173 AMS Helenenmarsch"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = GER
+		}
+	}
+}
+
+music = {
+	song = "AM II 239 AMS Marsch der freiwilligen Jäger"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = GER
+		}
+	}
+}
+
+music = {
 	song = "Preußischer Militärmarsch Grenadiermarsch 1791"
 	chance = {
 		modifier = {
@@ -160,6 +199,32 @@ music = {
 			factor = 2
 			tag = AUS
 		}			
+	}
+}
+
+music = {
+	song = "Radetzkymarsch"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = AUS
+		}
+	}
+}
+
+music = {
+	song = "Unter dem Doppeladler (Under the Double Eagle)"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = AUS
+		}
 	}
 }
 
@@ -307,7 +372,8 @@ music = {
 		}
 		modifier = {
 			factor = 2
-			tag = ISR
+			tag = POL
+			tag = LIT
 		}	
 	}
 }
@@ -320,7 +386,8 @@ music = {
 		}
 		modifier = {
 			factor = 2
-			tag = ISR
+			tag = POL
+			tag = LIT
 		}			
 	}
 }
@@ -351,3 +418,51 @@ music = {
 	}
 }
 
+music = {
+	song = "The Full Hatikva Tunisian Jewish Version"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = ISR
+		}
+	}
+}
+music = {
+	song = "Hayalim Almonim Lehi Anthem"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = ISR
+		}
+	}
+}
+music = {
+	song = "Shaul Meisles Tehazekna"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = ISR
+		}
+	}
+}
+music = {
+	song = "Roei no Uta Japanese Millitary Song"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = JAP
+		}
+	}
+}

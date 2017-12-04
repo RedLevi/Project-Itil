@@ -959,7 +959,7 @@ country_event = { #In case SPF retreats into africa
       }
    }
 
-   immediate = {
+   option = {
       name = france.33.a
       NFA = { annex_country = { target = SPF transfer_troops = yes } }
    }

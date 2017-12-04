@@ -1,5 +1,16 @@
 ﻿add_namespace = soviet
 
+######################################
+###Soviet Republic Events#############
+###By:     Markush       #############
+######################################
+
+##########################################
+###Events 1-11 are internal politics   ###
+###Events 11-... are foreign politics  ###
+###Events 100-... Is Soviet Union      ###
+##########################################
+
 country_event = { #Introduction#
    id = soviet.1
    title = soviet.1.t
@@ -77,6 +88,7 @@ country_event = { #31st Congress Trotsky
   name = soviet.5.a
   set_country_flag = Gosplan_Congress
   set_country_flag = RKKA_Congress
+  set_country_flag = Trotsky_leader
   }
 }
 
@@ -134,6 +146,7 @@ country_event = { #STruggle for Power#
      add_ideas = Kirov_General_Secretary
      set_country_flag = Gosplan_Congress
      set_country_flag = RKKA_Congress
+     set_country_flag = Kirov_Leader
    }
   option = { #Rykov#
      name = soviet.9.b
@@ -152,6 +165,7 @@ country_event = { #STruggle for Power#
      	indomitable_perseverance
      	}
     }
+    set_country_flag = Right_Opposition_Leader
   }
 }
 
@@ -291,16 +305,231 @@ country_event = { #Soviet Foreign policy#
    trigger = {
       tag = SOV
       OR = {
-         NOT = {
-            has_country_flag = Trotsky_Out
-         }
-         has_country_flag = Kirov_Revolution
-      }
-      OR = {
          has_completed_focus = 31st_Congress_Trotsky
          has_completed_focus = 31st_Congress
       }
+   }
 
+   mean_time_to_happen = { days = 30 }
+   option = { #Full revolution path, only Kirov and Trotsky#
+      name = soviet.14.a
+      trigger = {
+         OR = {
+            has_country_flag = Kirov_Leader
+            has_country_flag = Trotsky_leader
+         }
+      }
+      add_national_unity = -0.1
+      set_country_flag = Soviet_Revolution
+      unlock_national_focus = The_Revolution
+      add_political_power = 300
+      set_country_flag = Full_revolution
+   }
+   option = { #Half revolution path, only Kirov and Rykov/Bukharin
+      name = soviet.14.b
+      trigger = {
+         OR = {
+             has_country_flag = Kirov_leader
+             has_country_flag = Right_Opposition_Leader
+         }
+      }
+      add_national_unity = -0.05
+      set_country_flag = Soviet_Revolution
+      unlock_national_focus = The_Revolution
+      set_country_flag = Half_Revolution
+   }
+   option = { #Isolationism path, only Rykov/Bukharin
+      name = soviet.14.c
+      trigger = {
+         has_country_flag = Right_Opposition_Leader
+      }
+      add_national_unity = 0.1
+      add_political_power = -500
+      set_country_flag = isolationism
+   }
+}
+
+country_event = { #Georgian Ultimatum
+   id = soviet.15
+   title = soviet.15.t
+   desc = soviet.15.d
+   is_triggered_only = yes
+
+   option = { #Attack
+      name = soviet.15.a
+      create_wargoal = { type = annex_everything target = GEO }
+   }
+   option = { #Ultimatum
+      name = soviet.15.b
+      GEO = { country_event = { id = soviet.16 days = 4 } }
+   }
+   option = { #Nothing
+      name = soviet.15.c
+      add_political_power = -100
+   }
+}
+
+country_event = { #Georgian response#
+   id = soviet.16
+   title = soviet.16.t
+   desc = soviet.16.d
+   is_triggered_only = yes
+
+   option = { #Succumb
+      name = soviet.16.a
+      SOV = { annex_country = { target = GEO transfer_troops = yes } }
+      SOV = { country_event = { id = sovnews.2 days = 1 } }
+      ai_chance = { factor = 40 }
+   }
+   option = { #WAR
+      name = soviet.16.a
+      SOV = { create_wargoal = { type = annex_everything target = GEO } }
+      SOV = { country_event = { id = sovnews.1 days = 1 } }
+      ai_chance = { factor = 60 }
+   }
+}
+
+country_event = { #Latvia Integration#
+   id = soviet.17
+   title = soviet.17.t
+   desc = soviet.17.d
+   is_triggered_only = yes
+
+   option = { #Join the USSR#
+      name = soviet.17.a
+      SOV = { annex_country = { target = LAT transfer_troops = yes } }
+      SOV = { country_event = { id = sovnews.3 hours = 1 } }
+      ai_chance = { factor = 60 }
+   }
+
+   option = { #WAR
+      name = soviet.17.b
+      SOV = { create_wargoal = { type = annex_everything target = LAT } }
+      SOV = { country_event = { id = sovnews.4 hours = 1 } }
+      add_national_unity = -0.3
+      ai_chance = { factor = 40 }
+   }
+}
+
+country_event = { #Estonian Integration#
+   id = soviet.18
+   title = soviet.18.t
+   desc = soviet.18.d
+   is_triggered_only = yes
+
+   option = { #Join the USSR#
+      name = soviet.18.a
+      SOV = { annex_country = { target = EST transfer_troops = yes } }
+      SOV = { country_event = { id = sovnews.5 hours = 1 } }
+      ai_chance = { factor = 20 }
+   }
+
+   option = { #WAR
+      name = soviet.18.b
+      SOV = { create_wargoal = { type = annex_everything target = LAT } }
+      SOV = { country_event = { id = sovnews.6 hours = 1 } }
+      add_national_unity = 0.2
+      ai_chance = { factor = 80 }
+   }
+}
+
+country_event = { #Lithuanian Integration#
+   id = soviet.19
+   title = soviet.19.t
+   desc = soviet.19.d
+   is_triggered_only = yes
+
+   option = { #Join the USSR#
+      name = soviet.19.a
+      SOV = { annex_country = { target = LIT transfer_troops = yes } }
+      SOV = { country_event = { id = sovnews.7 hours = 1 } }
+      ai_chance = { factor = 20 }
+   }
+
+   option = { #WAR
+      name = soviet.19.b
+      SOV = { create_wargoal = { type = annex_everything target = LIT } }
+      SOV = { country_event = { id = sovnews.8 hours = 1 } }
+      add_national_unity = 0.2
+      ai_chance = { factor = 80 }
+   }
+}
+
+country_event = { #Finnish Question#
+   id = soviet.20
+   title = soviet.20.t
+   desc = soviet.20.d
+   is_triggered_only = yes
+
+   option = { #Demand Karelia and Salla#
+      name = soviet.20.a
+      FIN = { country_event = { id = soviet.21 days = 2 } }
+   }
+   option = { #Demand annexation#
+      name = soviet.20.b
+      FIN = { country_event = { id = soviet.22 days = 2 } }
+   }
+   option = { #Declare war#
+      name = soviet.20.c
+      add_political_power = 50
+      create_wargoal = { type = annex_everything = target = FIN }
+      add_opinion_modifier = { target = FIN modifier = Soviet_Expansionism }
+   }
+   option = { #Leave them alone#
+      name = soviet.20.e
+      add_political_power = -50
+      add_opinion_modifier = { target = FIN modifier = Soviet_Peace }
+   }
+}
+
+country_event = { #Finland Karelia#
+   id = soviet.21
+   title = soviet.21.t
+   desc = soviet.21.d
+   is_triggered_only = yes
+
+   option = { #Give them what they want#
+      name = soviet.21.a
+      SOV = { transfer_state = 146 }
+      SOV = { transfer_state = 147 }
+      add_national_unity = -0.1
+      ai_chance = { factor = 30 }
+      SOV = { country_event = { id = sovnews.10 hours = 3 } }
+   }
+   option = { #We will show them who is boss#
+      name = spoviet.21.b
+      FIN = { declare_war_on = { target = SOV type = annex_everything } }
+      add_national_unity = 0.3
+      SOV = { country_event = { id = sovnews.9 hours = 3 } }
+   }
+   option = { #no
+      name = soviet.21.c
+      SOV = { create_wargoal = { type = annex_everything target = FIN } }
+      SOV = { country_event = { id = sovnews.11 hours = 3 } }
+   }
+}
+
+country_event = { #Finland Karelia#
+   id = soviet.22
+   title = soviet.22.t
+   desc = soviet.22.d
+   is_triggered_only = yes
+
+   option = { #Give them what they want#
+      name = soviet.22.a
+      SOV = { annex_country = { target = FIN transfer_troops = yes } }
+      ai_chance = { factor = 0 }
+   }
+   option = { #We will show them who is boss#
+      name = spoviet.22.b
+      FIN = { declare_war_on = { target = SOV type = annex_everything } }
+      add_national_unity = 0.3
+      SOV = { country_event = { id = sovnews.9 hours = 3 } }
+   }
+   option = { #no
+      name = soviet.22.c
+      SOV = { create_wargoal = { type = annex_everything target = FIN } }
+      SOV = { country_event = { id = sovnews.11 hours = 3 } }
    }
 }
 

@@ -1,89 +1,89 @@
 ﻿####koach####
-add_namespace = jfor 
+add_namespace = jfor
 ####Hawaii refferendum chain####
-country_event = {#arrange refferendum in hawaii 
-	id = jfor.1 
-	title = jfor.1.t 
-	desc = jfor.1.d 
-	fire_only_once = yes 
+country_event = {#arrange refferendum in hawaii
+	id = jfor.1
+	title = jfor.1.t
+	desc = jfor.1.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		HAW = {
-			exists = yes 
+			exists = yes
 			OR = {
-				is_subject = no 
-				is_subject_of = JAP 
+				is_subject = no
+				is_subject_of = JAP
 			}
 			NOT = { has_war_with = USA }
 		}
 	}
 	mean_time_to_happen = { days = 30 }
-	
-	option = {#push for refferendum 
-		name = jfor.1.a 
+
+	option = {#push for refferendum
+		name = jfor.1.a
 		ai_chance = { factor = 90 }
 		HAW = { country_event = { id = jfor.2 days = 1 } }
 		hidden_effect = { country_event = { id = jfor.3 days = 7 } }
 	}
-	option = {#nah 
-		name = jfor.2.b 
+	option = {#nah
+		name = jfor.2.b
 		ai_chance = { factor = 10 }
 	}
 }
 
 country_event = {#Japanese pressure for refferendum
-	id = jfor.2 
-	title = jfor.2.t 
-	desc = jfor.2.d 
-	is_triggered_only = yes 
+	id = jfor.2
+	title = jfor.2.t
+	desc = jfor.2.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.2.a 
-		add_national_unity = -0.01 
+		name = jfor.2.a
+		add_national_unity = -0.01
 	}
 }
 
-country_event = {#annexation refferendum 
-	id = jfor.3 
-	title = jfor.3.t 
-	desc = jfor.3.d 
-	is_triggered_only = yes 
-	option = {#annex 
-		name = jfor.3.a 
+country_event = {#annexation refferendum
+	id = jfor.3
+	title = jfor.3.t
+	desc = jfor.3.d
+	is_triggered_only = yes
+	option = {#annex
+		name = jfor.3.a
 		ai_chance = { factor = 65 }
 		JAP = { country_event = { id = jfor.4 } }
 	}
-	option = {#fail 
-		name = jfor.3.b 
+	option = {#fail
+		name = jfor.3.b
 		ai_chance = { factor = 35 }
-		add_national_unity = 0.05 
+		add_national_unity = 0.05
 		JAP = { country_event = { id = jfor.5 } }
 	}
 }
 
 country_event = {#annexation of hawaii
-	id = jfor.4 
-	title = jfor.4.t 
-	desc = jfor.4.d 
-	is_triggered_only = yes 
+	id = jfor.4
+	title = jfor.4.t
+	desc = jfor.4.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.4.a 
+		name = jfor.4.a
 		annex_country = { target = HAW transfer_troops = yes }
-		add_state_core = 629 
+		add_state_core = 629
 		add_named_threat = { threat = 2 name = JAP_annex_hawaii }
 	}
 }
 
-country_event = {#No annexation 
-	id = jfor.5 
-	title = jfor.5.t 
-	desc = jfor.5.d 
-	is_triggered_only = yes 
-	option = {#ok 
-		name = jfor.5.a 
+country_event = {#No annexation
+	id = jfor.5
+	title = jfor.5.t
+	desc = jfor.5.d
+	is_triggered_only = yes
+	option = {#ok
+		name = jfor.5.a
 		ai_chance = { factor = 75 }
 	}
-	option = {#war 
-		name = jfor.5.b 
+	option = {#war
+		name = jfor.5.b
 		ai_chance = { factor = 25 }
 		declare_war_on = { target = HAW type = annex_everything }
 	}
@@ -91,20 +91,20 @@ country_event = {#No annexation
 
 ####Anhui chain####
 
-country_event = {#Japan offers protection 
-	id = jfor.6 
-	title = jfor.6.t 
-	desc = jfor.6.d 
-	is_triggered_only = yes 
-	option = {#agree 
-		name = jfor.6.a 
+country_event = {#Japan offers protection
+	id = jfor.6
+	title = jfor.6.t
+	desc = jfor.6.d
+	is_triggered_only = yes
+	option = {#agree
+		name = jfor.6.a
 		ai_chance = { factor = 70 }
 		add_ideas = ANH_japanese_advisors
-		JAP = { country_event = { id = jfor.7 days = 1 } } 
-		add_national_unity = -0.1 
+		JAP = { country_event = { id = jfor.7 days = 1 } }
+		add_national_unity = -0.1
 	}
-	option = {#decline 
-		name = jfor.6.b 
+	option = {#decline
+		name = jfor.6.b
 		ai_chance = { factor = 30 }
 		add_national_unity = 0.05
 		JAP = { country_event = { id = jfor.8 days = 1 } }
@@ -112,21 +112,21 @@ country_event = {#Japan offers protection
 }
 
 country_event = {#Anhui agrees
-	id = jfor.7 
-	title = jfor.7.t 
-	desc = jfor.7.d 
-	is_triggered_only = yes 
-	option = { 
+	id = jfor.7
+	title = jfor.7.t
+	desc = jfor.7.d
+	is_triggered_only = yes
+	option = {
 		name = jfor.7.a
-		puppet = ANH 
+		puppet = ANH
 		add_to_faction = ANH
 		hidden_effect = {
 			ANH = {
-				set_politics = { 
-		
-				ruling_party = reactionarism 
-				elections_allowed = no 
-			
+				set_politics = {
+
+				ruling_party = reactionarism
+				elections_allowed = no
+
 				}
 			}
 		}
@@ -134,16 +134,16 @@ country_event = {#Anhui agrees
 }
 
 country_event = {#Anhui refuses
-	id = jfor.8 
-	title = jfor.8.t 
-	desc = jfor.8.d 
-	is_triggered_only = yes 
-	option = {#ok 
-		name = jfor.8.a 
+	id = jfor.8
+	title = jfor.8.t
+	desc = jfor.8.d
+	is_triggered_only = yes
+	option = {#ok
+		name = jfor.8.a
 		ai_chance = { factor = 60 }
 	}
-	option = {#decline 
-		name = jfor.8.b 
+	option = {#decline
+		name = jfor.8.b
 		trigger = {
 			NOT = { has_government = liberalism }
 		}
@@ -154,80 +154,80 @@ country_event = {#Anhui refuses
 }
 
 country_event = {#Japan attacks
-	id = jfor.9 
-	title = jfor.9.t 
-	desc = jfor.9.d 
-	is_triggered_only = yes 
-	option = { 
+	id = jfor.9
+	title = jfor.9.t
+	desc = jfor.9.d
+	is_triggered_only = yes
+	option = {
 		name = jfor.9.a
 	}
 }
 
-####Mongolia chain#### 
+####Mongolia chain####
 
 country_event = {#Japan supports us
-	id = jfor.10 
-	title = jfor.10.t 
-	desc = jfor.10.d 
-	is_triggered_only = yes 
+	id = jfor.10
+	title = jfor.10.t
+	desc = jfor.10.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.10.a 
+		name = jfor.10.a
 		add_ideas = JAP_support_MON_idea
 		custom_effect_tooltip = JAP_sent_equipment_MON
 	}
 }
 
-country_event = {#Japan offers alliance 
+country_event = {#Japan offers alliance
 	id = jfor.11
-	title = jfor.11.t 
-	desc = jfor.11.d 
-	is_triggered_only = yes 
-	option = {#agree 
-		name = jfor.11.a 
+	title = jfor.11.t
+	desc = jfor.11.d
+	is_triggered_only = yes
+	option = {#agree
+		name = jfor.11.a
 		ai_chance = { factor = 80 }
 		JAP = { country_event = { id = jfor.12 } }
 	}
-	option = {#refuse 
+	option = {#refuse
 		trigger = {
 			has_civil_war = no
 			has_war = no
 		}
 		name = jfor.11.b
 		ai_chance = { factor = 20 }
-		add_national_unity = 0.05 
+		add_national_unity = 0.05
 		JAP = { country_event = { id = jfor.13 } }
 		reverse_add_opinion_modifier = { target = JAP modifier = MON_refused_JAP }
 	}
 }
 
-country_event = {#Mongolia agrees 
-	id = jfor.12 
-	title = jfor.12.t 
-	desc = jfor.12.d 
-	is_triggered_only = yes 
+country_event = {#Mongolia agrees
+	id = jfor.12
+	title = jfor.12.t
+	desc = jfor.12.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.12.a 
+		name = jfor.12.a
 		add_to_faction = MON
 	}
 }
 
-country_event = {#Mongolia refuses 
-	id = jfor.13 
-	title = jfor.13.t 
-	desc = jfor.13.d 
-	is_triggered_only = yes 
+country_event = {#Mongolia refuses
+	id = jfor.13
+	title = jfor.13.t
+	desc = jfor.13.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.13.a 
+		name = jfor.13.a
 	}
 }
 
 ####shanxi events####
 
-country_event = {#Japanese influence 
+country_event = {#Japanese influence
 	id = jfor.14
-	title = jfor.14.t 
-	desc = jfor.14.d 
-	is_triggered_only = yes 
+	title = jfor.14.t
+	desc = jfor.14.d
+	is_triggered_only = yes
 	option = {
 		name = jfor.14.a
 		add_ideas = JAP_support_SHX
@@ -235,33 +235,33 @@ country_event = {#Japanese influence
 	}
 }
 
-####Manchurian events#### 
+####Manchurian events####
 
-country_event = {#Manchuria demands intervention 
-	id = jfor.15 
-	title = jfor.15.t 
-	desc = jfor.15.d 
-	fire_only_once = yes 
+country_event = {#Manchuria demands intervention
+	id = jfor.15
+	title = jfor.15.t
+	desc = jfor.15.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		has_completed_focus = JAP_western_approach
 	}
 	mean_time_to_happen = { days = 50 }
 	option = {
-		name = jfor.15.a 
+		name = jfor.15.a
 	}
 }
 
 country_event = {#Japanese ultimatum
-	id = jfor.16 
-	title = jfor.16.t 
-	desc = jfor.16.d 
+	id = jfor.16
+	title = jfor.16.t
+	desc = jfor.16.d
 	is_triggered_only = yes
-	option = {#refuse 
-		name = jfor.16.a 
-		add_national_unity = 0.1 
+	option = {#refuse
+		name = jfor.16.a
+		add_national_unity = 0.1
 		JAP = { country_event = { id = jfor.17 } }
-		create_faction = chinese_united_front 
+		create_faction = chinese_united_front
 		if = { limit = { ANH = { exists = yes has_war = no NOT = { is_subject_of = JAP } } } ANH = { country_event = { id = jfor.18 days = 1 } } }
 		if = { limit = { CHI = { exists = yes has_war = no NOT = { is_subject_of = JAP } } } CHI = { country_event = { id = jfor.21 days = 2 } } }
 		if = { limit = { SHX = { exists = yes has_war = no NOT = { is_subject_of = JAP } } } SHX = { country_event = { id = jfor.22 days = 3 } } }
@@ -274,323 +274,323 @@ country_event = {#Japanese ultimatum
 }
 
 country_event = {#Zhili refuses
-	id = jfor.17 
-	title = jfor.17.t 
-	desc = jfor.17.d 
-	is_triggered_only = yes 
+	id = jfor.17
+	title = jfor.17.t
+	desc = jfor.17.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.17.a 
+		name = jfor.17.a
 		declare_war_on = { target = ZHI type = annex_everything }
 	}
 }
 
 country_event = {#ANH united front
-	id = jfor.18 
-	title = jfor.18.t 
-	desc = jfor.18.d 
-	is_triggered_only = yes 
-	option = {#join 
-		name = jfor.18.a 
+	id = jfor.18
+	title = jfor.18.t
+	desc = jfor.18.d
+	is_triggered_only = yes
+	option = {#join
+		name = jfor.18.a
 		ai_chance = { factor = 40 }
 		ZHI = { add_to_faction = ANH }
 		declare_war_on = { target = JAP type = annex_everything }
 		ZHI = { country_event = { id = jfor.19 } }
 	}
 	option = {#refuse
-		name = jfor.18.b 
+		name = jfor.18.b
 		ai_chance = { factor = 60 }
 		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
-	
+
 }
 
 country_event = {#COUNTRY refuses
-	id = jfor.19 
-	title = jfor.19.t 
-	desc = jfor.19.d 
-	is_triggered_only = yes 
+	id = jfor.19
+	title = jfor.19.t
+	desc = jfor.19.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.19.a 
+		name = jfor.19.a
 	}
 }
 
 country_event = {#COUNTRY agrees
-	id = jfor.20 
-	title = jfor.20.t 
-	desc = jfor.20.d 
-	is_triggered_only = yes 
+	id = jfor.20
+	title = jfor.20.t
+	desc = jfor.20.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.20.a 
+		name = jfor.20.a
 	}
 }
 
 country_event = {#CHI united front
-	id = jfor.21 
-	title = jfor.18.t 
-	desc = jfor.18.d 
-	is_triggered_only = yes 
-	option = {#join 
-		name = jfor.18.a 
+	id = jfor.21
+	title = jfor.18.t
+	desc = jfor.18.d
+	is_triggered_only = yes
+	option = {#join
+		name = jfor.18.a
 		ai_chance = { factor = 75 }
 		ZHI = { add_to_faction = CHI }
 		declare_war_on = { target = JAP type = annex_everything }
 		ZHI = { country_event = { id = jfor.19 } }
 	}
 	option = {#refuse
-		name = jfor.18.b 
+		name = jfor.18.b
 		ai_chance = { factor = 25 }
 		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
-	
+
 }
 
 country_event = {#SHX united front
-	id = jfor.22 
-	title = jfor.18.t 
-	desc = jfor.18.d 
-	is_triggered_only = yes 
-	option = {#join 
-		name = jfor.18.a 
+	id = jfor.22
+	title = jfor.18.t
+	desc = jfor.18.d
+	is_triggered_only = yes
+	option = {#join
+		name = jfor.18.a
 		ai_chance = { factor = 40 }
 		ZHI = { add_to_faction = SHX }
 		declare_war_on = { target = JAP type = annex_everything }
 		ZHI = { country_event = { id = jfor.19 } }
 	}
 	option = {#refuse
-		name = jfor.18.b 
+		name = jfor.18.b
 		ai_chance = { factor = 20 }
 		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 		set_country_flag = SHX_neutrality
 	}
-	option = {#help the Japanese 
+	option = {#help the Japanese
 		trigger = {
 			has_country_flag = SHX_japanese_influence
 		}
-		name = jfor.22.c 
+		name = jfor.22.c
 		ai_chance = { factor = 40 }
 		JAP = { add_to_faction = SHX }
 		declare_war_on = { target = ZHI type = annex_everything }
 		ZHI = { country_event = { id = jfor.23 } }
 		JAP = { country_event = { id = jfor.24 } }
 	}
-	
+
 }
 
-country_event = {#Shanxi betrays us! 
-	id = jfor.23 
-	title = jfor.23.t 
-	desc = jfor.23.d 
-	is_triggered_only = yes 
+country_event = {#Shanxi betrays us!
+	id = jfor.23
+	title = jfor.23.t
+	desc = jfor.23.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.23.a 
+		name = jfor.23.a
 	}
 }
 
-country_event = {#Shanxi joins us! 
-	id = jfor.24 
-	title = jfor.24.t 
-	desc = jfor.24.d 
-	is_triggered_only = yes 
+country_event = {#Shanxi joins us!
+	id = jfor.24
+	title = jfor.24.t
+	desc = jfor.24.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.24.a 
+		name = jfor.24.a
 	}
 }
 
 country_event = {#PRC united front
-	id = jfor.25 
-	title = jfor.18.t 
-	desc = jfor.18.d 
-	is_triggered_only = yes 
-	option = {#join 
-		name = jfor.18.a 
+	id = jfor.25
+	title = jfor.18.t
+	desc = jfor.18.d
+	is_triggered_only = yes
+	option = {#join
+		name = jfor.18.a
 		ai_chance = { factor = 50 }
 		ZHI = { add_to_faction = PRC }
 		declare_war_on = { target = JAP type = annex_everything }
 		ZHI = { country_event = { id = jfor.19 } }
 	}
 	option = {#refuse
-		name = jfor.18.b 
+		name = jfor.18.b
 		ai_chance = { factor = 50 }
 		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
-	
+
 }
 
 country_event = {#XSM united front
-	id = jfor.26 
-	title = jfor.18.t 
-	desc = jfor.18.d 
-	is_triggered_only = yes 
-	option = {#join 
-		name = jfor.18.a 
+	id = jfor.26
+	title = jfor.18.t
+	desc = jfor.18.d
+	is_triggered_only = yes
+	option = {#join
+		name = jfor.18.a
 		ai_chance = { factor = 75 }
 		ZHI = { add_to_faction = XSM }
 		declare_war_on = { target = JAP type = annex_everything }
 		ZHI = { country_event = { id = jfor.19 } }
 	}
 	option = {#refuse
-		name = jfor.18.b 
+		name = jfor.18.b
 		ai_chance = { factor = 25 }
 		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
-	
+
 }
 
 country_event = {#YUN united front
-	id = jfor.27 
-	title = jfor.18.t 
-	desc = jfor.18.d 
-	is_triggered_only = yes 
-	option = {#join 
+	id = jfor.27
+	title = jfor.18.t
+	desc = jfor.18.d
+	is_triggered_only = yes
+	option = {#join
 		trigger = {
 			SIC = { is_in_faction_with = ZHI }
 		}
-		name = jfor.18.a 
+		name = jfor.18.a
 		ai_chance = { factor = 70 }
 		ZHI = { add_to_faction = YUN }
 		declare_war_on = { target = JAP type = annex_everything }
 		ZHI = { country_event = { id = jfor.19 } }
 	}
 	option = {#refuse
-		name = jfor.18.b 
+		name = jfor.18.b
 		ai_chance = { factor = 30 }
 		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
-	
+
 }
 
 country_event = {#SIC united front
-	id = jfor.28 
-	title = jfor.18.t 
-	desc = jfor.18.d 
-	is_triggered_only = yes 
-	option = {#join 
-		name = jfor.18.a 
+	id = jfor.28
+	title = jfor.18.t
+	desc = jfor.18.d
+	is_triggered_only = yes
+	option = {#join
+		name = jfor.18.a
 		ai_chance = { factor = 85 }
 		ZHI = { add_to_faction = SIC }
 		declare_war_on = { target = JAP type = annex_everything }
 		ZHI = { country_event = { id = jfor.19 } }
 	}
 	option = {#refuse
-		name = jfor.18.b 
+		name = jfor.18.b
 		ai_chance = { factor = 15 }
 		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
-	
+
 }
 
 country_event = {#GUO united front
-	id = jfor.29 
-	title = jfor.18.t 
-	desc = jfor.18.d 
-	is_triggered_only = yes 
-	option = {#join 
-		name = jfor.18.a 
+	id = jfor.29
+	title = jfor.18.t
+	desc = jfor.18.d
+	is_triggered_only = yes
+	option = {#join
+		name = jfor.18.a
 		ai_chance = { factor = 50 }
 		ZHI = { add_to_faction = GUO }
 		declare_war_on = { target = JAP type = annex_everything }
 		ZHI = { country_event = { id = jfor.19 } }
 	}
 	option = {#refuse
-		name = jfor.18.b 
+		name = jfor.18.b
 		ai_chance = { factor = 50 }
 		reverse_add_opinion_modifier = { target = ZHI modifier = refused_chinese_call }
 		ZHI = { country_event = { id = jfor.20 } }
 	}
-	
+
 }
 
 ####post war events####
 
 country_event = {#Fate of Liaoning
-	id = jfor.30 
-	title = jfor.30.t 
-	desc = jfor.30.d 
-	fire_only_once = yes 
+	id = jfor.30
+	title = jfor.30.t
+	desc = jfor.30.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		ZHI = { exists = no }
 		610 = { is_controlled_by = JAP }
 		609 = { is_controlled_by = JAP }
 	}
-	
+
 	mean_time_to_happen = { days = 5 }
-	
+
 	option = {#give it to Manchuria
 		trigger = {
-			MAN = { 
-				is_in_faction_with = JAP 
+			MAN = {
+				is_in_faction_with = JAP
 				controls_state = 716
 			}
 		}
-		name = jfor.30.a 
+		name = jfor.30.a
 		ai_chance = { factor = 50 }
 		MAN = {
-			transfer_state = 610 
-			transfer_state = 609 
+			transfer_state = 610
+			transfer_state = 609
 			country_event = { id = jfor.31 }
 		}
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = SHX 
+			is_in_faction_with = SHX
 			SHX = { controls_state = 611 }
 		}
-		name = jfor.30.b 
+		name = jfor.30.b
 		ai_chance = { factor = 40 }
 		SHX = {
-			transfer_state = 610 
-			transfer_state = 609 
+			transfer_state = 610
+			transfer_state = 609
 			country_event = { id = jfor.31 }
 		}
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = ANH 
+			is_in_faction_with = ANH
 			ANH = { controls_state = 608 }
 		}
-		name = jfor.30.c 
+		name = jfor.30.c
 		ai_chance = { factor = 10 }
 		ANH = {
-			transfer_state = 610 
-			transfer_state = 609 
+			transfer_state = 610
+			transfer_state = 609
 			country_event = { id = jfor.31 }
 		}
 	}
 	option = {
-		name = jfor.30.e 
+		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05 
-		add_state_claim = 610 
-		add_state_claim = 609 
+		add_national_unity = -0.05
+		add_state_claim = 610
+		add_state_claim = 609
 	}
 }
 
 country_event = {#japan gives us Liaoning
-	id = jfor.31 
-	title = jfor.31.t 
-	desc = jfor.31.d 
-	is_triggered_only = yes 
+	id = jfor.31
+	title = jfor.31.t
+	desc = jfor.31.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.31.a 
+		name = jfor.31.a
 		hidden_effect = { country_event = { id = jfor.32 days = 150 } }
 	}
 }
 
-country_event = {#liaoning cores 
+country_event = {#liaoning cores
 	id = jfor.32
-	title = jfor.32.t 
-	desc = jfor.32.d 
-	is_triggered_only = yes 
+	title = jfor.32.t
+	desc = jfor.32.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.32.a 
+		name = jfor.32.a
 		if = { limit = { controls_state = 610 } add_state_core = 610 }
 		if = { limit = { controls_state = 609 } add_state_core = 609 }
 		add_national_unity = 0.01
@@ -598,105 +598,105 @@ country_event = {#liaoning cores
 }
 
 country_event = {#Fate of Hebei
-	id = jfor.33 
-	title = jfor.33.t 
-	desc = jfor.33.d 
-	fire_only_once = yes 
+	id = jfor.33
+	title = jfor.33.t
+	desc = jfor.33.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		ZHI = { exists = no }
 		608 = { is_controlled_by = JAP }
 		614 = { is_controlled_by = JAP }
 		749 = { is_controlled_by = JAP }
 	}
-	
+
 	mean_time_to_happen = { days = 10 }
-	
+
 	option = {#give it to Manchuria
 		trigger = {
-			MAN = { 
-				is_in_faction_with = JAP 
+			MAN = {
+				is_in_faction_with = JAP
 				controls_state = 609
 			}
 		}
-		name = jfor.30.a 
+		name = jfor.30.a
 		ai_chance = { factor = 30 }
 		MAN = {
-			transfer_state = 608  
+			transfer_state = 608
 			transfer_state = 614
-			transfer_state = 749 
+			transfer_state = 749
 			country_event = { id = jfor.34 }
 		}
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = SHX 
+			is_in_faction_with = SHX
 
 		}
-		name = jfor.30.b 
+		name = jfor.30.b
 		ai_chance = { factor = 40 }
 		SHX = {
-			transfer_state = 608  
+			transfer_state = 608
 			transfer_state = 614
-			transfer_state = 749 
+			transfer_state = 749
 			country_event = { id = jfor.34 }
 		}
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = ANH 
+			is_in_faction_with = ANH
 		}
-		name = jfor.30.c 
+		name = jfor.30.c
 		ai_chance = { factor = 30 }
 		ANH = {
-			transfer_state = 608  
+			transfer_state = 608
 			transfer_state = 614
-			transfer_state = 749 
+			transfer_state = 749
 			country_event = { id = jfor.34 }
 		}
 	}
 	option = {
-		name = jfor.30.e 
+		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05 
-		add_state_claim = 608  
+		add_national_unity = -0.05
+		add_state_claim = 608
 		add_state_claim = 614
-		add_state_claim = 749 
+		add_state_claim = 749
 	}
 }
 
-country_event = {#japan hands over hebei 
-	id = jfor.34 
-	title = jfor.34.t 
-	desc = jfor.34.d 
-	is_triggered_only = yes 
+country_event = {#japan hands over hebei
+	id = jfor.34
+	title = jfor.34.t
+	desc = jfor.34.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.34.a 
+		name = jfor.34.a
 		country_event = { id = jfor.35 days = 96 }
 	}
 }
 
-country_event = {#cores in hebei 
-	id = jfor.35 
-	title = jfor.35.t 
-	desc = jfor.35.d 
-	is_triggered_only = yes 
+country_event = {#cores in hebei
+	id = jfor.35
+	title = jfor.35.t
+	desc = jfor.35.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.35.a 
-		add_state_core = 608 
-		add_state_core = 614 
-		add_state_core = 749 
-		add_national_unity = 0.01 
+		name = jfor.35.a
+		add_state_core = 608
+		add_state_core = 614
+		add_state_core = 749
+		add_national_unity = 0.01
 	}
 }
 
 country_event = {#Fate of central china
-	id = jfor.36 
-	title = jfor.36.t 
-	desc = jfor.36.d 
-	fire_only_once = yes 
+	id = jfor.36
+	title = jfor.36.t
+	desc = jfor.36.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		CHI = { exists = no }
 		607 = { is_controlled_by = JAP }
 		598 = { is_controlled_by = JAP }
@@ -705,132 +705,132 @@ country_event = {#Fate of central china
 		750 = { is_controlled_by = JAP }
 		620 = { is_controlled_by = JAP }
 	}
-	
+
 	mean_time_to_happen = { days = 15 }
-	
+
 	option = {#give it to Manchuria
 		trigger = {
-			MAN = { 
-				is_in_faction_with = JAP 
+			MAN = {
+				is_in_faction_with = JAP
 				controls_state = 749
 			}
 		}
-		name = jfor.30.a 
+		name = jfor.30.a
 		ai_chance = { factor = 20 }
 		MAN = {
-			transfer_state = 607  
+			transfer_state = 607
 			transfer_state = 598
-			transfer_state = 606 
-			transfer_state = 613 
-			transfer_state = 750 
-			transfer_state = 620 
+			transfer_state = 606
+			transfer_state = 613
+			transfer_state = 750
+			transfer_state = 620
 			country_event = { id = jfor.37 }
 		}
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = SHX 
+			is_in_faction_with = SHX
 
 		}
-		name = jfor.30.b 
+		name = jfor.30.b
 		ai_chance = { factor = 40 }
 		SHX = {
-			transfer_state = 607  
+			transfer_state = 607
 			transfer_state = 598
-			transfer_state = 606 
-			transfer_state = 613 
-			transfer_state = 750 
-			transfer_state = 620 
+			transfer_state = 606
+			transfer_state = 613
+			transfer_state = 750
+			transfer_state = 620
 			country_event = { id = jfor.37 }
 		}
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = ANH 
+			is_in_faction_with = ANH
 			ANH = { controls_state = 749 }
 		}
-		name = jfor.30.c 
+		name = jfor.30.c
 		ai_chance = { factor = 40 }
 		ANH = {
-			transfer_state = 607  
+			transfer_state = 607
 			transfer_state = 598
-			transfer_state = 606 
-			transfer_state = 613 
-			transfer_state = 750 
-			transfer_state = 620 
+			transfer_state = 606
+			transfer_state = 613
+			transfer_state = 750
+			transfer_state = 620
 			country_event = { id = jfor.37 }
 		}
 	}
 	option = {
-		name = jfor.30.e 
+		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05 
-			add_state_claim = 607  
+		add_national_unity = -0.05
+			add_state_claim = 607
 			add_state_claim = 598
-			add_state_claim = 606 
-			add_state_claim = 613 
-			add_state_claim = 750 
-			add_state_claim = 620 
-			
+			add_state_claim = 606
+			add_state_claim = 613
+			add_state_claim = 750
+			add_state_claim = 620
+
 	}
 }
 
-country_event = {#japan hands over central china 
-	id = jfor.37 
-	title = jfor.37.t 
-	desc = jfor.37.d 
-	is_triggered_only = yes 
+country_event = {#japan hands over central china
+	id = jfor.37
+	title = jfor.37.t
+	desc = jfor.37.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.34.a 
+		name = jfor.34.a
 		country_event = { id = jfor.38 days = 96 }
 	}
 }
 
-country_event = {#cores in hebei 
-	id = jfor.38 
-	title = jfor.38.t 
-	desc = jfor.38.d 
-	is_triggered_only = yes 
+country_event = {#cores in hebei
+	id = jfor.38
+	title = jfor.38.t
+	desc = jfor.38.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.38.a 
-		add_state_core = 607  
+		name = jfor.38.a
+		add_state_core = 607
 		add_state_core = 598
-		add_state_core = 606 
-		add_state_core = 613 
-		add_state_core = 750 
-		add_state_core = 620 
-		add_national_unity = 0.01 
+		add_state_core = 606
+		add_state_core = 613
+		add_state_core = 750
+		add_state_core = 620
+		add_national_unity = 0.01
 	}
 }
 
 
 country_event = {#Fate of southern
-	id = jfor.39 
-	title = jfor.39.t 
-	desc = jfor.39.d 
-	fire_only_once = yes 
+	id = jfor.39
+	title = jfor.39.t
+	desc = jfor.39.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		PRC = { exists = no }
 		596 = { is_controlled_by = JAP }
 		592 = { is_controlled_by = JAP }
 	}
-	
+
 	mean_time_to_happen = { days = 30 }
-	
+
 	option = {#give it to Manchuria
 		trigger = {
-			MAN = { 
-				is_in_faction_with = JAP 
+			MAN = {
+				is_in_faction_with = JAP
 				controls_state = 606
 			}
 		}
-		name = jfor.30.a 
+		name = jfor.30.a
 		ai_chance = { factor = 20 }
 		every_state = {
 				limit = {
-					is_core_of = PRC 
-					is_controlled_by = JAP 
+					is_core_of = PRC
+					is_controlled_by = JAP
 				}
 				MAN = { transfer_state = PREV }
 			}
@@ -840,15 +840,15 @@ country_event = {#Fate of southern
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = SHX 
+			is_in_faction_with = SHX
 			SHX = { controls_state = 606 }
 		}
-		name = jfor.30.b 
+		name = jfor.30.b
 		ai_chance = { factor = 40 }
 		every_state = {
 				limit = {
-					is_core_of = PRC 
-					is_controlled_by = JAP 
+					is_core_of = PRC
+					is_controlled_by = JAP
 				}
 				SHX = { transfer_state = PREV }
 			}
@@ -858,15 +858,15 @@ country_event = {#Fate of southern
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = ANH 
+			is_in_faction_with = ANH
 			ANH = { controls_state = 749 }
 		}
-		name = jfor.30.c 
+		name = jfor.30.c
 		ai_chance = { factor = 40 }
 		every_state = {
 				limit = {
-					is_core_of = PRC 
-					is_controlled_by = JAP 
+					is_core_of = PRC
+					is_controlled_by = JAP
 				}
 				ANH = { transfer_state = PREV }
 			}
@@ -875,76 +875,76 @@ country_event = {#Fate of southern
 		}
 	}
 	option = {
-		name = jfor.30.e 
+		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05 
+		add_national_unity = -0.05
 			every_state = {
 				limit = {
-					is_core_of = PRC 
-					is_controlled_by = JAP 
+					is_core_of = PRC
+					is_controlled_by = JAP
 				}
 				ROOT = { add_state_claim = PREV }
 			}
-			
-			add_national_unity = -0.05 
+
+			add_national_unity = -0.05
 	}
 }
 
 country_event = {#japan hands over southern
-	id = jfor.40 
-	title = jfor.40.t 
-	desc = jfor.40.d 
-	is_triggered_only = yes 
+	id = jfor.40
+	title = jfor.40.t
+	desc = jfor.40.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.34.a 
+		name = jfor.34.a
 		country_event = { id = jfor.41 days = 96 }
 	}
 }
 
-country_event = {#cores in hebei 
-	id = jfor.41 
-	title = jfor.41.t 
-	desc = jfor.41.d 
-	is_triggered_only = yes 
-	option = {	
-		name = jfor.41.a 
+country_event = {#cores in hebei
+	id = jfor.41
+	title = jfor.41.t
+	desc = jfor.41.d
+	is_triggered_only = yes
+	option = {
+		name = jfor.41.a
 		every_state = {
 				limit = {
-					is_core_of = PRC 
-					is_controlled_by = ROOT 
+					is_core_of = PRC
+					is_controlled_by = ROOT
 				}
 				ROOT = { add_state_core = PREV }
 			}
-		add_national_unity = 0.01 
+		add_national_unity = 0.01
 	}
 }
 
 country_event = {#Fate of shanxi
-	id = jfor.42 
-	title = jfor.42.t 
-	desc = jfor.42.d 
-	fire_only_once = yes 
+	id = jfor.42
+	title = jfor.42.t
+	desc = jfor.42.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		SHX = { exists = no }
 		615 = { is_controlled_by = JAP }
 	}
-	
+
 	mean_time_to_happen = { days = 30 }
-	
+
 	option = {#give it to Manchuria
 		trigger = {
-			MAN = { 
-				is_in_faction_with = JAP 
+			MAN = {
+				is_in_faction_with = JAP
 				controls_state = 610
 			}
 		}
-		name = jfor.30.a 
+		name = jfor.30.a
 		ai_chance = { factor = 50 }
 		every_state = {
 				limit = {
-					is_core_of = SHX 
-					is_controlled_by = JAP 
+					is_core_of = SHX
+					is_controlled_by = JAP
 				}
 				MAN = { transfer_state = PREV }
 			}
@@ -955,15 +955,15 @@ country_event = {#Fate of shanxi
 	option = {
 		trigger = {
 			SHX = { exists = yes }
-			is_in_faction_with = SHX 
+			is_in_faction_with = SHX
 			SHX = { controls_state = 606 }
 		}
-		name = jfor.30.b 
+		name = jfor.30.b
 		ai_chance = { factor = 0 }
 		every_state = {
 				limit = {
-					is_core_of = SHX 
-					is_controlled_by = JAP 
+					is_core_of = SHX
+					is_controlled_by = JAP
 				}
 				SHX = { transfer_state = PREV }
 			}
@@ -973,15 +973,15 @@ country_event = {#Fate of shanxi
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = ANH 
+			is_in_faction_with = ANH
 			ANH = { controls_state = 614 }
 		}
-		name = jfor.30.c 
+		name = jfor.30.c
 		ai_chance = { factor = 50 }
 		every_state = {
 				limit = {
-					is_core_of = SHX 
-					is_controlled_by = JAP 
+					is_core_of = SHX
+					is_controlled_by = JAP
 				}
 				ANH = { transfer_state = PREV }
 			}
@@ -990,76 +990,76 @@ country_event = {#Fate of shanxi
 		}
 	}
 	option = {
-		name = jfor.30.e 
+		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05 
+		add_national_unity = -0.05
 			every_state = {
 				limit = {
-					is_core_of = SHX 
-					is_controlled_by = JAP 
+					is_core_of = SHX
+					is_controlled_by = JAP
 				}
 				ROOT = { add_state_claim = PREV }
 			}
-			
-			add_national_unity = -0.05 
+
+			add_national_unity = -0.05
 	}
 }
 
 country_event = {#japan hands over shanxi
-	id = jfor.43 
-	title = jfor.43.t 
-	desc = jfor.43.d 
-	is_triggered_only = yes 
+	id = jfor.43
+	title = jfor.43.t
+	desc = jfor.43.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.34.a 
+		name = jfor.34.a
 		country_event = { id = jfor.44 days = 96 }
 	}
 }
 
-country_event = {#cores in hebei 
-	id = jfor.44 
-	title = jfor.44.t 
-	desc = jfor.44.d 
-	is_triggered_only = yes 
+country_event = {#cores in hebei
+	id = jfor.44
+	title = jfor.44.t
+	desc = jfor.44.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.44.a 
+		name = jfor.44.a
 		every_state = {
 				limit = {
-					is_core_of = SHX 
-					is_controlled_by = ROOT 
+					is_core_of = SHX
+					is_controlled_by = ROOT
 				}
 				ROOT = { add_state_core = PREV }
 			}
-		add_national_unity = 0.01 
+		add_national_unity = 0.01
 	}
 }
 
 country_event = {#Fate of shaanxi
-	id = jfor.45 
-	title = jfor.45.t 
-	desc = jfor.45.d 
-	fire_only_once = yes 
+	id = jfor.45
+	title = jfor.45.t
+	desc = jfor.45.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		GUO = { exists = no }
 		622 = { is_controlled_by = JAP }
 	}
-	
+
 	mean_time_to_happen = { days = 20 }
-	
+
 	option = {#give it to Manchuria
 		trigger = {
-			MAN = { 
-				is_in_faction_with = JAP 
+			MAN = {
+				is_in_faction_with = JAP
 				controls_state = 615
 			}
 		}
-		name = jfor.30.a 
+		name = jfor.30.a
 		ai_chance = { factor = 30 }
 		every_state = {
 				limit = {
-					is_core_of = GUO 
-					is_controlled_by = JAP 
+					is_core_of = GUO
+					is_controlled_by = JAP
 				}
 				MAN = { transfer_state = PREV }
 			}
@@ -1070,15 +1070,15 @@ country_event = {#Fate of shaanxi
 	option = {
 		trigger = {
 			SHX = { exists = yes }
-			is_in_faction_with = SHX 
+			is_in_faction_with = SHX
 			SHX = { controls_state = 615 }
 		}
-		name = jfor.30.b 
+		name = jfor.30.b
 		ai_chance = { factor = 40 }
 		every_state = {
 				limit = {
-					is_core_of = GUO 
-					is_controlled_by = JAP 
+					is_core_of = GUO
+					is_controlled_by = JAP
 				}
 				SHX = { transfer_state = PREV }
 			}
@@ -1088,15 +1088,15 @@ country_event = {#Fate of shaanxi
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = ANH 
+			is_in_faction_with = ANH
 			ANH = { OR = { controls_state = 615  controls_state = 607 } }
 		}
-		name = jfor.30.c 
+		name = jfor.30.c
 		ai_chance = { factor = 30 }
 		every_state = {
 				limit = {
-					is_core_of = GUO 
-					is_controlled_by = JAP 
+					is_core_of = GUO
+					is_controlled_by = JAP
 				}
 				ANH = { transfer_state = PREV }
 			}
@@ -1105,76 +1105,76 @@ country_event = {#Fate of shaanxi
 		}
 	}
 	option = {
-		name = jfor.30.e 
+		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05 
+		add_national_unity = -0.05
 			every_state = {
 				limit = {
-					is_core_of = GUO 
-					is_controlled_by = JAP 
+					is_core_of = GUO
+					is_controlled_by = JAP
 				}
 				ROOT = { add_state_claim = PREV }
 			}
-			
-			add_national_unity = -0.05 
+
+			add_national_unity = -0.05
 	}
 }
 
 country_event = {#japan hands over shaanxi
-	id = jfor.46 
-	title = jfor.46.t 
-	desc = jfor.46.d 
-	is_triggered_only = yes 
+	id = jfor.46
+	title = jfor.46.t
+	desc = jfor.46.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.34.a 
+		name = jfor.34.a
 		country_event = { id = jfor.47 days = 96 }
 	}
 }
 
-country_event = {#cores in shaanxi 
-	id = jfor.47 
-	title = jfor.47.t 
-	desc = jfor.47.d 
-	is_triggered_only = yes 
+country_event = {#cores in shaanxi
+	id = jfor.47
+	title = jfor.47.t
+	desc = jfor.47.d
+	is_triggered_only = yes
 	option = {
 		name = jfor.47.a
 		every_state = {
 				limit = {
-					is_core_of = GUO 
-					is_controlled_by = ROOT 
+					is_core_of = GUO
+					is_controlled_by = ROOT
 				}
 				ROOT = { add_state_core = PREV }
 			}
-		add_national_unity = 0.01 
+		add_national_unity = 0.01
 	}
 }
 
 country_event = {#Fate of qinghai
-	id = jfor.48 
-	title = jfor.48.t 
-	desc = jfor.48.d 
-	fire_only_once = yes 
+	id = jfor.48
+	title = jfor.48.t
+	desc = jfor.48.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		XSM = { exists = no }
 		604 = { is_controlled_by = JAP }
 	}
-	
+
 	mean_time_to_happen = { days = 35 }
-	
+
 	option = {#give it to Manchuria
 		trigger = {
-			MAN = { 
-				is_in_faction_with = JAP 
+			MAN = {
+				is_in_faction_with = JAP
 				OR = { controls_state = 621 controls_state = 283 }
 			}
 		}
-		name = jfor.30.a 
+		name = jfor.30.a
 		ai_chance = { factor = 30 }
 		every_state = {
 				limit = {
-					is_core_of = XSM 
-					is_controlled_by = JAP 
+					is_core_of = XSM
+					is_controlled_by = JAP
 				}
 				MAN = { transfer_state = PREV }
 			}
@@ -1185,15 +1185,15 @@ country_event = {#Fate of qinghai
 	option = {
 		trigger = {
 			SHX = { exists = yes }
-			is_in_faction_with = SHX 
+			is_in_faction_with = SHX
 			SHX = { controls_state = 621 }
 		}
-		name = jfor.30.b 
+		name = jfor.30.b
 		ai_chance = { factor = 40 }
 		every_state = {
 				limit = {
-					is_core_of = XSM 
-					is_controlled_by = JAP 
+					is_core_of = XSM
+					is_controlled_by = JAP
 				}
 				SHX = { transfer_state = PREV }
 			}
@@ -1203,15 +1203,15 @@ country_event = {#Fate of qinghai
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = ANH 
+			is_in_faction_with = ANH
 			ANH = { OR = { controls_state = 621 controls_state = 283 } }
 		}
-		name = jfor.30.c 
+		name = jfor.30.c
 		ai_chance = { factor = 30 }
 		every_state = {
 				limit = {
-					is_core_of = XSM 
-					is_controlled_by = JAP 
+					is_core_of = XSM
+					is_controlled_by = JAP
 				}
 				ANH = { transfer_state = PREV }
 			}
@@ -1220,76 +1220,76 @@ country_event = {#Fate of qinghai
 		}
 	}
 	option = {
-		name = jfor.30.e 
+		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05 
+		add_national_unity = -0.05
 			every_state = {
 				limit = {
-					is_core_of = XSM 
-					is_controlled_by = JAP 
+					is_core_of = XSM
+					is_controlled_by = JAP
 				}
 				ROOT = { add_state_claim = PREV }
 			}
-			
-			add_national_unity = -0.05 
+
+			add_national_unity = -0.05
 	}
 }
 
 country_event = {#japan hands over qinghai
-	id = jfor.49 
-	title = jfor.49.t 
-	desc = jfor.49.d 
-	is_triggered_only = yes 
+	id = jfor.49
+	title = jfor.49.t
+	desc = jfor.49.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.34.a 
+		name = jfor.34.a
 		country_event = { id = jfor.50 days = 96 }
 	}
 }
 
-country_event = {#cores in qinghai 
-	id = jfor.50 
-	title = jfor.50.t 
-	desc = jfor.50.d 
-	is_triggered_only = yes 
+country_event = {#cores in qinghai
+	id = jfor.50
+	title = jfor.50.t
+	desc = jfor.50.d
+	is_triggered_only = yes
 	option = {
 		name = jfor.47.a
 		every_state = {
 				limit = {
-					is_core_of = XSM 
-					is_controlled_by = ROOT 
+					is_core_of = XSM
+					is_controlled_by = ROOT
 				}
 				ROOT = { add_state_core = PREV }
 			}
-		add_national_unity = 0.01 
+		add_national_unity = 0.01
 	}
 }
 
 
 country_event = {#Fate of sichuan
-	id = jfor.51 
-	title = jfor.51.t 
-	desc = jfor.51.d 
-	fire_only_once = yes 
+	id = jfor.51
+	title = jfor.51.t
+	desc = jfor.51.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		SIC = { exists = no }
 		605 = { is_controlled_by = JAP }
 	}
-	
+
 	mean_time_to_happen = { days = 35 }
-	
+
 	option = {#give it to Manchuria
 		trigger = {
-			MAN = { 
-				is_in_faction_with = JAP 
+			MAN = {
+				is_in_faction_with = JAP
 			}
 		}
-		name = jfor.30.a 
+		name = jfor.30.a
 		ai_chance = { factor = 30 }
 		every_state = {
 				limit = {
-					is_core_of = SIC 
-					is_controlled_by = JAP 
+					is_core_of = SIC
+					is_controlled_by = JAP
 				}
 				MAN = { transfer_state = PREV }
 			}
@@ -1299,14 +1299,14 @@ country_event = {#Fate of sichuan
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = SHX 
+			is_in_faction_with = SHX
 			}
-		name = jfor.30.b 
+		name = jfor.30.b
 		ai_chance = { factor = 40 }
 		every_state = {
 				limit = {
-					is_core_of = SIC 
-					is_controlled_by = JAP 
+					is_core_of = SIC
+					is_controlled_by = JAP
 				}
 				SHX = { transfer_state = PREV }
 			}
@@ -1316,14 +1316,14 @@ country_event = {#Fate of sichuan
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = ANH 
+			is_in_faction_with = ANH
 		}
-		name = jfor.30.c 
+		name = jfor.30.c
 		ai_chance = { factor = 30 }
 		every_state = {
 				limit = {
-					is_core_of = SIC 
-					is_controlled_by = JAP 
+					is_core_of = SIC
+					is_controlled_by = JAP
 				}
 				ANH = { transfer_state = PREV }
 			}
@@ -1332,75 +1332,75 @@ country_event = {#Fate of sichuan
 		}
 	}
 	option = {
-		name = jfor.30.e 
+		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05 
+		add_national_unity = -0.05
 			every_state = {
 				limit = {
-					is_core_of = SIC 
-					is_controlled_by = JAP 
+					is_core_of = SIC
+					is_controlled_by = JAP
 				}
 				ROOT = { add_state_claim = PREV }
 			}
-			
-			add_national_unity = -0.05 
+
+			add_national_unity = -0.05
 	}
 }
 
 country_event = {#japan hands over qinghai
-	id = jfor.52 
-	title = jfor.52.t 
-	desc = jfor.52.d 
-	is_triggered_only = yes 
+	id = jfor.52
+	title = jfor.52.t
+	desc = jfor.52.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.34.a 
+		name = jfor.34.a
 		country_event = { id = jfor.53 days = 96 }
 	}
 }
 
-country_event = {#cores in qinghai 
-	id = jfor.53 
-	title = jfor.53.t 
-	desc = jfor.53.d 
-	is_triggered_only = yes 
+country_event = {#cores in qinghai
+	id = jfor.53
+	title = jfor.53.t
+	desc = jfor.53.d
+	is_triggered_only = yes
 	option = {
 		name = jfor.47.a
 		every_state = {
 				limit = {
-					is_core_of = SIC 
-					is_controlled_by = ROOT 
+					is_core_of = SIC
+					is_controlled_by = ROOT
 				}
 				ROOT = { add_state_core = PREV }
 			}
-		add_national_unity = 0.01 
+		add_national_unity = 0.01
 	}
 }
 
 country_event = {#Fate of Yunnan
-	id = jfor.54 
-	title = jfor.54.t 
-	desc = jfor.54.d 
-	fire_only_once = yes 
+	id = jfor.54
+	title = jfor.54.t
+	desc = jfor.54.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		YUN = { exists = no }
 		325 = { is_controlled_by = JAP }
 	}
-	
+
 	mean_time_to_happen = { days = 40 }
-	
+
 	option = {#give it to Manchuria
 		trigger = {
-			MAN = { 
-				is_in_faction_with = JAP 
+			MAN = {
+				is_in_faction_with = JAP
 			}
 		}
-		name = jfor.30.a 
+		name = jfor.30.a
 		ai_chance = { factor = 30 }
 		every_state = {
 				limit = {
-					is_core_of = YUN 
-					is_controlled_by = JAP 
+					is_core_of = YUN
+					is_controlled_by = JAP
 				}
 				MAN = { transfer_state = PREV }
 			}
@@ -1410,14 +1410,14 @@ country_event = {#Fate of Yunnan
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = SHX 
+			is_in_faction_with = SHX
 			}
-		name = jfor.30.b 
+		name = jfor.30.b
 		ai_chance = { factor = 40 }
 		every_state = {
 				limit = {
-					is_core_of = YUN 
-					is_controlled_by = JAP 
+					is_core_of = YUN
+					is_controlled_by = JAP
 				}
 				SHX = { transfer_state = PREV }
 			}
@@ -1427,14 +1427,14 @@ country_event = {#Fate of Yunnan
 	}
 	option = {
 		trigger = {
-			is_in_faction_with = ANH 
+			is_in_faction_with = ANH
 		}
-		name = jfor.30.c 
+		name = jfor.30.c
 		ai_chance = { factor = 30 }
 		every_state = {
 				limit = {
-					is_core_of = YUN 
-					is_controlled_by = JAP 
+					is_core_of = YUN
+					is_controlled_by = JAP
 				}
 				ANH = { transfer_state = PREV }
 			}
@@ -1443,125 +1443,125 @@ country_event = {#Fate of Yunnan
 		}
 	}
 	option = {
-		name = jfor.30.e 
+		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05 
+		add_national_unity = -0.05
 			every_state = {
 				limit = {
-					is_core_of = YUN 
-					is_controlled_by = JAP 
+					is_core_of = YUN
+					is_controlled_by = JAP
 				}
 				ROOT = { add_state_claim = PREV }
 			}
-			
-			add_national_unity = -0.05 
+
+			add_national_unity = -0.05
 	}
 }
 
 country_event = {#japan hands over qinghai
-	id = jfor.55 
-	title = jfor.55.t 
-	desc = jfor.55.d 
-	is_triggered_only = yes 
+	id = jfor.55
+	title = jfor.55.t
+	desc = jfor.55.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.34.a 
+		name = jfor.34.a
 		country_event = { id = jfor.56 days = 96 }
 	}
 }
 
-country_event = {#cores in qinghai 
-	id = jfor.56 
-	title = jfor.56.t 
-	desc = jfor.56.d 
-	is_triggered_only = yes 
+country_event = {#cores in qinghai
+	id = jfor.56
+	title = jfor.56.t
+	desc = jfor.56.d
+	is_triggered_only = yes
 	option = {
 		name = jfor.47.a
 		every_state = {
 				limit = {
-					is_core_of = YUN 
-					is_controlled_by = ROOT 
+					is_core_of = YUN
+					is_controlled_by = ROOT
 				}
 				ROOT = { add_state_core = PREV }
 			}
-		add_national_unity = 0.01 
+		add_national_unity = 0.01
 	}
 }
 
 ###siam chain###
 
-country_event = {#the Japanese offer alliance 
-	id = jfor.57 
+country_event = {#the Japanese offer alliance
+	id = jfor.57
 	title = jfor.57.t
-	desc = jfor.57.d 
-	is_triggered_only = yes 
-	option = {#agree 
-		name = jfor.57.a 
+	desc = jfor.57.d
+	is_triggered_only = yes
+	option = {#agree
+		name = jfor.57.a
 		ai_chance = { factor = 80 }
 		JAP = { country_event = { id = jfor.58 } }
 	}
-	option = {#refuse 
-		name = jfor.57.b 
+	option = {#refuse
+		name = jfor.57.b
 		ai_chance = { factor = 20 }
 		JAP = { country_event = { id = jfor.59 } }
-		add_national_unity = 0.02 
+		add_national_unity = 0.02
 		reverse_add_opinion_modifier = { target = JAP modifier = MON_refused_JAP }
 	}
 }
 
 country_event = {#the siamese agree
-	id = jfor.58 
+	id = jfor.58
 	title = jfor.58.t
-	desc = jfor.58.d 
-	is_triggered_only = yes 
-	option = { 
-		name = jfor.58.a 
+	desc = jfor.58.d
+	is_triggered_only = yes
+	option = {
+		name = jfor.58.a
 		add_to_faction = SIA
 	}
 }
 
 country_event = {#the siamese refuse
-	id = jfor.59 
+	id = jfor.59
 	title = jfor.59.t
-	desc = jfor.59.d 
-	is_triggered_only = yes 
-	option = { 
-		name = jfor.59.a 
+	desc = jfor.59.d
+	is_triggered_only = yes
+	option = {
+		name = jfor.59.a
 	}
 }
 
 ####philippines chain#####
-	
-country_event = {#Japan offers protection 
-	id = jfor.60 
-	title = jfor.60.t 
-	desc = jfor.60.d 
-	is_triggered_only = yes 
-	option = {#refuse 
-		name = jfor.60.a 
+
+country_event = {#Japan offers protection
+	id = jfor.60
+	title = jfor.60.t
+	desc = jfor.60.d
+	is_triggered_only = yes
+	option = {#refuse
+		name = jfor.60.a
 		ai_chance = { factor = 65 }
-		add_national_unity = 0.02 
+		add_national_unity = 0.02
 		JAP = { country_event = { id = jfor.61 } }
 		reverse_add_opinion_modifier = { target = JAP modifier = MON_refused_JAP }
 	}
-	option = {#agree 
-		name = jfor.60.b 
+	option = {#agree
+		name = jfor.60.b
 		ai_chance = { factor = 35 }
-		add_national_unity = -0.05 
+		add_national_unity = -0.05
 		JAP = { country_event = { id = jfor.62 } }
 	}
 }
 
-country_event = {#PHL refuses 
-	id = jfor.61 
-	title = jfor.61.t 
-	desc = jfor.61.d 
-	is_triggered_only = yes 
-	option = {#ok 
-		name = jfor.61.a 
+country_event = {#PHL refuses
+	id = jfor.61
+	title = jfor.61.t
+	desc = jfor.61.d
+	is_triggered_only = yes
+	option = {#ok
+		name = jfor.61.a
 		ai_chance = { factor = 70 }
 	}
-	option = {#agree 
-		name = jfor.61.b 
+	option = {#agree
+		name = jfor.61.b
 		trigger = { NOT = { has_government = liberalism } }
 		ai_chance = { factor = 30 }
 		declare_war_on = { target = PHL type = annex_everything }
@@ -1569,20 +1569,20 @@ country_event = {#PHL refuses
 	}
 }
 
-country_event = {#PHL agrees 
-	id = jfor.62 
-	title = jfor.62.t 
-	desc = jfor.62.d 
-	is_triggered_only = yes 
-	option = {#ok 
-		name = jfor.62.a 
-		puppet = PHL 
-		add_to_faction = PHL 
-		hidden_effect = { 
+country_event = {#PHL agrees
+	id = jfor.62
+	title = jfor.62.t
+	desc = jfor.62.d
+	is_triggered_only = yes
+	option = {#ok
+		name = jfor.62.a
+		puppet = PHL
+		add_to_faction = PHL
+		hidden_effect = {
 			PHL = {
-				set_politics = { 
-				ruling_party = reactionarism 
-				elections_allowed = no 
+				set_politics = {
+				ruling_party = reactionarism
+				elections_allowed = no
 			}
 			create_country_leader = {
 				name = "Masaharu Homma"
@@ -1591,7 +1591,7 @@ country_event = {#PHL agrees
 				expire = "1950.1.1"
 				ideology = autocracy
 				traits = {
-				
+
 					}
 				}
 			}
@@ -1600,43 +1600,43 @@ country_event = {#PHL agrees
 }
 
 country_event = {#the Japanese attack
-	id = jfor.63 
+	id = jfor.63
 	title = jfor.63.t
-	desc = jfor.63.d 
-	is_triggered_only = yes 
-	option = { 
-		name = jfor.63.a 
+	desc = jfor.63.d
+	is_triggered_only = yes
+	option = {
+		name = jfor.63.a
 	}
 }
 
-country_event = {#post war 
-	id = jfor.64 
-	title = jfor.64.t 
-	desc = jfor.64.d 
-	fire_only_once = yes 
+country_event = {#post war
+	id = jfor.64
+	title = jfor.64.t
+	desc = jfor.64.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
-		controls_state = 327 
+		tag = JAP
+		controls_state = 327
 		PHL = { exists = no }
 	}
 	mean_time_to_happen = { days = 10 }
-	option = {#release it 
-		name = jfor.64.a 
+	option = {#release it
+		name = jfor.64.a
 		ai_chance = { factor = 70 }
 		every_state = {
 			limit = {
-				is_controlled_by = JAP 
+				is_controlled_by = JAP
 				is_core_of = PHL
 			}
-			PHL = { transfer_state = PREV } 
+			PHL = { transfer_state = PREV }
 		}
-		puppet = PHL 
-		add_to_faction = PHL 
-		hidden_effect = { 
+		puppet = PHL
+		add_to_faction = PHL
+		hidden_effect = {
 			PHL = {
-				set_politics = { 
-				ruling_party = reactionarism 
-				elections_allowed = no 
+				set_politics = {
+				ruling_party = reactionarism
+				elections_allowed = no
 			}
 			create_country_leader = {
 				name = "Masaharu Homma"
@@ -1645,38 +1645,38 @@ country_event = {#post war
 				expire = "1950.1.1"
 				ideology = autocracy
 				traits = {
-				
+
 					}
 				}
 			}
 		}
 	}
-	option = {#occupy 
-		name = jfor.64.b 
+	option = {#occupy
+		name = jfor.64.b
 		trigger = {
 			NOT = { has_government = liberalism }
 		}
 		ai_chance = { factor = 30 }
-		add_national_unity = -0.035 
-		set_country_flag = JAP_colonize_PHL 
+		add_national_unity = -0.035
+		set_country_flag = JAP_colonize_PHL
 	}
 }
 
 ####Indonesian chain#####
 
-country_event = {#Indonesian uprising 
+country_event = {#Indonesian uprising
 	id = jfor.65
-	title = jfor.65.t 
-	desc = jfor.65.d 
-	is_triggered_only = yes 
+	title = jfor.65.t
+	desc = jfor.65.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.65.a 
+		name = jfor.65.a
 		INS = { transfer_state = 335 }
-		hidden_effect = { 
+		hidden_effect = {
 			INS = {
-				set_politics = { 
-				ruling_party = socialism 
-				elections_allowed = no 
+				set_politics = {
+				ruling_party = socialism
+				elections_allowed = no
 			}
 			create_country_leader = {
 				name = "Sukarno"
@@ -1685,10 +1685,10 @@ country_event = {#Indonesian uprising
 				expire = "1950.1.1"
 				ideology = democratic_socialism
 				traits = {
-				
+
 					}
 				}
-				load_oob = INS_revolt 
+				load_oob = INS_revolt
 			}
 		}
 		INS = { declare_war_on = { target = HOL type = annex_everything } }
@@ -1696,57 +1696,57 @@ country_event = {#Indonesian uprising
 	}
 }
 
-country_event = {#Revolt in Indonesia 
-	id = jfor.66 
-	title = jfor.66.t 
+country_event = {#Revolt in Indonesia
+	id = jfor.66
+	title = jfor.66.t
 	desc = jfor.66.d
-	is_triggered_only = yes 
+	is_triggered_only = yes
 	option = {
-		name = jfor.66.a 
-		add_to_faction = INS 
+		name = jfor.66.a
+		add_to_faction = INS
 		declare_war_on = { target = HOL type = annex_everything }
 	}
 }
 
-country_event = {#help from Germany? 
-	id = jfor.67 
-	title = jfor.67.t 
+country_event = {#help from Germany?
+	id = jfor.67
+	title = jfor.67.t
 	desc = jfor.67.d
-	fire_only_once = yes 
+	fire_only_once = yes
 	trigger = {
-		tag = HOL 
-		has_war_with = JAP 
+		tag = HOL
+		has_war_with = JAP
 		is_in_faction = no
 		NOT = { has_war_with = GER }
 	}
 	mean_time_to_happen = { days = 10 }
 	option = {
-		name = jfor.67.a 
+		name = jfor.67.a
 		ai_chance = { factor = 70 }
 		GER = { country_event = { id = jfor.68 days = 1 } }
 	}
 	option = {
-		name = jfor.67.b 
+		name = jfor.67.b
 		ai_chance = { factor = 30 }
-		add_national_unity = 0.02 
+		add_national_unity = 0.02
 	}
 }
 
 country_event = {#HELp the dutch?
-	id = jfor.68 
-	title = jfor.68.t 
+	id = jfor.68
+	title = jfor.68.t
 	desc = jfor.68.d
-	is_triggered_only = yes 
+	is_triggered_only = yes
 	option = {
-		name = jfor.68.a 
-		ai_chance = { 
-			factor = 70 
-			modifier = { 
+		name = jfor.68.a
+		ai_chance = {
+			factor = 70
+			modifier = {
 
-				factor = -55 
-				
+				factor = -55
+
 				OR = {
-					has_war_with = SOV 
+					has_war_with = SOV
 					has_war_with = ENG
 				}
 
@@ -1758,15 +1758,15 @@ country_event = {#HELp the dutch?
 		JAP = { country_event = { id = jfor.70 } }
 	}
 	option = {
-		name = jfor.68.b 
-		ai_chance = { 
-			factor = 30 
-			modifier = { 
+		name = jfor.68.b
+		ai_chance = {
+			factor = 30
+			modifier = {
 
-				factor = 55 
-				
+				factor = 55
+
 				OR = {
-					has_war_with = SOV 
+					has_war_with = SOV
 					has_war_with = ENG
 				}
 
@@ -1777,65 +1777,65 @@ country_event = {#HELp the dutch?
 	}
 }
 
-country_event = {#the germans agree 
-	id = jfor.69 
-	title = jfor.69.t 
+country_event = {#the germans agree
+	id = jfor.69
+	title = jfor.69.t
 	desc = jfor.69.d
-	is_triggered_only = yes 
+	is_triggered_only = yes
 	option = {
-		name = jfor.69.a 
+		name = jfor.69.a
 	}
 }
 
-country_event = {#the germans intervene 
-	id = jfor.70 
-	title = jfor.70.t 
+country_event = {#the germans intervene
+	id = jfor.70
+	title = jfor.70.t
 	desc = jfor.70.d
-	is_triggered_only = yes 
+	is_triggered_only = yes
 	option = {
-		name = jfor.70.a 
+		name = jfor.70.a
 	}
 }
 
-country_event = {#the germans refuse 
-	id = jfor.71 
-	title = jfor.71.t 
+country_event = {#the germans refuse
+	id = jfor.71
+	title = jfor.71.t
 	desc = jfor.71.d
-	is_triggered_only = yes 
+	is_triggered_only = yes
 	option = {
-		name = jfor.71.a 
+		name = jfor.71.a
 	}
 }
 
-country_event = {#Victory no GER 
-	id = jfor.72 
-	title = jfor.72 
-	desc = jfor.72 
-	fire_only_once = yes 
+country_event = {#Victory no GER
+	id = jfor.72
+	title = jfor.72
+	desc = jfor.72
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
-		has_war_with = HOL 
-		is_in_faction_with = INS 
+		tag = JAP
+		has_war_with = HOL
+		is_in_faction_with = INS
 		NOT = { has_war_with = GER }
-		334 = { is_friendly = yes } 
-		672 = { is_friendly = yes } 
-		335 = { is_friendly = yes } 
-		673 = { is_friendly = yes }  
-		668 = { is_friendly = yes } 
-		669 = { is_friendly = yes } 
+		334 = { is_friendly = yes }
+		672 = { is_friendly = yes }
+		335 = { is_friendly = yes }
+		673 = { is_friendly = yes }
+		668 = { is_friendly = yes }
+		669 = { is_friendly = yes }
 	}
-	
+
 	mean_time_to_happen = { days = 30 }
-	
-	option = {#Peace with the dutch 
-		name = jfor.72.a 
+
+	option = {#Peace with the dutch
+		name = jfor.72.a
 		ai_chance = { factor = 95 }
-		add_national_unity = 0.03 
+		add_national_unity = 0.03
 		HOL = { country_event = { id = jfor.73 } }
 		every_state = {
 			limit = {
-				is_core_of = INS 
-				is_friendly = yes 
+				is_core_of = INS
+				is_friendly = yes
 			}
 			INS = { transfer_state = PREV }
 		}
@@ -1843,127 +1843,127 @@ country_event = {#Victory no GER
 	#there is actually no reason to keep the war going
 }
 
-country_event = {#Japan is victorious 
-	id = jfor.73 
-	title = jfor.73.t 
-	desc = jfor.73.d 
-	is_triggered_only = yes 
+country_event = {#Japan is victorious
+	id = jfor.73
+	title = jfor.73.t
+	desc = jfor.73.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.73.a 
-		white_peace = JAP 
-		white_peace = INS 
-		add_national_unity = -0.1 
+		name = jfor.73.a
+		white_peace = JAP
+		white_peace = INS
+		add_national_unity = -0.1
 	}
 }
 
-country_event = {#Victory yes GER 
-	id = jfor.74 
-	title = jfor.74 
-	desc = jfor.74 
-	fire_only_once = yes 
+country_event = {#Victory yes GER
+	id = jfor.74
+	title = jfor.74
+	desc = jfor.74
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
-		has_war_with = HOL 
-		is_in_faction_with = INS 
-		has_war_with = GER 
-		334 = { is_friendly = yes } 
-		672 = { is_friendly = yes } 
-		335 = { is_friendly = yes } 
-		673 = { is_friendly = yes }  
-		668 = { is_friendly = yes } 
-		669 = { is_friendly = yes } 
-		746 = { is_friendly = yes } 
-		286 = { is_friendly = yes } 
-		741 = { is_friendly = yes } 
-		670 = { is_friendly = yes } 
-		671 = { is_friendly = yes } 
+		tag = JAP
+		has_war_with = HOL
+		is_in_faction_with = INS
+		has_war_with = GER
+		334 = { is_friendly = yes }
+		672 = { is_friendly = yes }
+		335 = { is_friendly = yes }
+		673 = { is_friendly = yes }
+		668 = { is_friendly = yes }
+		669 = { is_friendly = yes }
+		746 = { is_friendly = yes }
+		286 = { is_friendly = yes }
+		741 = { is_friendly = yes }
+		670 = { is_friendly = yes }
+		671 = { is_friendly = yes }
 	}
-	
+
 	mean_time_to_happen = { days = 30 }
-	
-	option = {#Peace with the dutch 
-		name = jfor.72.a 
+
+	option = {#Peace with the dutch
+		name = jfor.72.a
 		ai_chance = { factor = 95 }
-		add_national_unity = 0.05 
+		add_national_unity = 0.05
 		GER = { country_event = { id = jfor.75 } }
 		every_state = {
 			limit = {
-				is_core_of = INS 
-				is_friendly = yes 
+				is_core_of = INS
+				is_friendly = yes
 			}
 			INS = { transfer_state = PREV }
 		}
 		if = { limit = { is_in_faction_with = SIA } SIA = { transfer_state = 760 transfer_state = 741 } else = { transfer_state = 760 transfer_state = 741 } }
-		transfer_state = 671 
-		transfer_state = 286 
-		transfer_state = 746 
-		transfer_state = 737 
-		transfer_state = 634 
-		transfer_state = 734 
-		transfer_state = 635 
-		transfer_state = 726 
-		transfer_state = 641 
+		transfer_state = 671
+		transfer_state = 286
+		transfer_state = 746
+		transfer_state = 737
+		transfer_state = 634
+		transfer_state = 734
+		transfer_state = 635
+		transfer_state = 726
+		transfer_state = 641
 	}
 	#there is actually no reason to keep the war going
 }
 
-country_event = {#Japan is victorious GER 
-	id = jfor.75 
-	title = jfor.75.t 
-	desc = jfor.75.d 
-	is_triggered_only = yes 
-	option = {#peace 
-		name = jfor.73.a 
+country_event = {#Japan is victorious GER
+	id = jfor.75
+	title = jfor.75.t
+	desc = jfor.75.d
+	is_triggered_only = yes
+	option = {#peace
+		name = jfor.73.a
 		ai_chance = { factor = 50 }
-		white_peace = JAP 
-		white_peace = INS 
+		white_peace = JAP
+		white_peace = INS
 		HOL = { white_peace = INS white_peace = JAP }
-		add_national_unity = -0.1 
+		add_national_unity = -0.1
 	}
-	option = {#do nothing 
-		name = jfor.75.a 
+	option = {#do nothing
+		name = jfor.75.a
 	}
 }
 
-country_event = {#fate of indochina 
-	id = jfor.76 
-	title = jfor.76.t 
-	desc = jfor.76.d 
-	fire_only_once = yes 
+country_event = {#fate of indochina
+	id = jfor.76
+	title = jfor.76.t
+	desc = jfor.76.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		OR = {
-			controls_state = 671 
-			controls_state = 670 
-			controls_state = 286 
+			controls_state = 671
+			controls_state = 670
+			controls_state = 286
 			controls_state = 741
 		}
 		NOT = { has_war_with = GER }
 	}
 	mean_time_to_happen = { days = 10 }
-	option = {#liberate 
-		name = jfor.76.a 
+	option = {#liberate
+		name = jfor.76.a
 		ai_chance = { factor = 75 }
 		if = { limit = { is_in_faction_with = SIA } SIA = { transfer_state = 760 transfer_state = 741 } }
-		if = { 
-			limit = { 
-				VIN = { 
-					exists = no } 
-			} 
+		if = {
+			limit = {
+				VIN = {
+					exists = no }
+			}
 			every_state = {
 				limit = {
-					is_controlled_by = JAP 
-					is_core_of = VIN 
+					is_controlled_by = JAP
+					is_core_of = VIN
 				}
 				VIN = { transfer_state = PREV }
 			}
-			puppet = VIN 
-			add_to_faction = VIN 
-			hidden_effect = { 
+			puppet = VIN
+			add_to_faction = VIN
+			hidden_effect = {
 				VIN = {
-					set_politics = { 
-					ruling_party = reactionarism 
-					elections_allowed = no 
+					set_politics = {
+					ruling_party = reactionarism
+					elections_allowed = no
 				}
 				create_country_leader = {
 					name = "Bao Đai"
@@ -1977,26 +1977,26 @@ country_event = {#fate of indochina
 				}
 			}
 		}
-		if = { 
-			limit = { 
-				CAM = { 
-					exists = no 
-				} 
-			} 
+		if = {
+			limit = {
+				CAM = {
+					exists = no
+				}
+			}
 			every_state = {
 				limit = {
-					is_controlled_by = JAP 
-					is_core_of = CAM 
+					is_controlled_by = JAP
+					is_core_of = CAM
 				}
 				CAM = { transfer_state = PREV }
 			}
-			puppet = CAM 
-			add_to_faction = CAM 
-			hidden_effect = { 
+			puppet = CAM
+			add_to_faction = CAM
+			hidden_effect = {
 				CAM = {
-					set_politics = { 
-					ruling_party = reactionarism 
-					elections_allowed = no 
+					set_politics = {
+					ruling_party = reactionarism
+					elections_allowed = no
 				}
 				create_country_leader = {
 					name = "Norodom Sihanouk"
@@ -2010,26 +2010,26 @@ country_event = {#fate of indochina
 				}
 			}
 		}
-		if = { 
-			limit = { 
-				LAO = { 
-					exists = no 
-				} 
-			} 
+		if = {
+			limit = {
+				LAO = {
+					exists = no
+				}
+			}
 			every_state = {
 				limit = {
-					is_controlled_by = JAP 
-					is_core_of = LAO 
+					is_controlled_by = JAP
+					is_core_of = LAO
 				}
 				LAO = { transfer_state = PREV }
 			}
-			puppet = LAO 
-			add_to_faction = LAO 
-			hidden_effect = { 
+			puppet = LAO
+			add_to_faction = LAO
+			hidden_effect = {
 				LAO = {
-					set_politics = { 
-					ruling_party = reactionarism 
-					elections_allowed = no 
+					set_politics = {
+					ruling_party = reactionarism
+					elections_allowed = no
 				}
 				create_country_leader = {
 					name = "Sisavang Vong"
@@ -2044,8 +2044,8 @@ country_event = {#fate of indochina
 			}
 		}
 	}
-	option = {#colony 
-		name = jfor.76.b 
+	option = {#colony
+		name = jfor.76.b
 		trigger = {
 			NOT = {
 				has_government = liberalism
@@ -2054,72 +2054,72 @@ country_event = {#fate of indochina
 			}
 		}
 		ai_chance = { factor = 25 }
-		add_national_unity = -0.035 
+		add_national_unity = -0.035
 	}
 }
 
 ####diplomacy with britain#####
 
-country_event = {#Japan seeks reconciliation 
+country_event = {#Japan seeks reconciliation
 	id = jfor.77
-	title = jfor.77.t 
-	desc = jfor.77.d 
-	is_triggered_only = yes 
+	title = jfor.77.t
+	desc = jfor.77.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.77.a 
+		name = jfor.77.a
 		reverse_add_opinion_modifier = { target = JAP modifier = JAP_friendly_england }
 	}
 }
 
-country_event = {#Anglo-Japanese alliance 
+country_event = {#Anglo-Japanese alliance
 	id = jfor.78
-	title = jfor.78.t 
-	desc = jfor.78.d 
-	fire_only_once = yes 
+	title = jfor.78.t
+	desc = jfor.78.d
+	fire_only_once = yes
 	trigger = {
-		tag = ENG 
+		tag = ENG
 		OR = {
-			has_war_with = GER 
-			has_war_with = SOV 
+			has_war_with = GER
+			has_war_with = SOV
 		}
 		NOT = {
-			has_war_with = JAP 
+			has_war_with = JAP
 		}
 		JAP = {
 			NOT = {
 				has_government = communism
 			}
 			has_completed_focus = JAP_friend_england
-			is_subject = no 
+			is_subject = no
 		}
 	}
-	
+
 	mean_time_to_happen = { days = 25 }
-	option = {#offer it 
-		name = jfor.78.a 
+	option = {#offer it
+		name = jfor.78.a
 		ai_chance = { factor = 50 }
 		JAP = { country_event = { id = jfor.79 days = 1 } }
 	}
-	option = {#dont 
-		name = jfor.78.b 
+	option = {#dont
+		name = jfor.78.b
 		ai_chance = { factor = 50 }
-		add_national_unity = 0.02 
+		add_national_unity = 0.02
 	}
 }
 
 country_event = {#The British offer alliance!
-	id = japan.79 
-	title = jfor.79.t 
-	desc = jfor.79.d 
-	is_triggered_only = yes 
-	option = {#agree 
-		name = jfor.79.a 
+	id = jfor.79 
+	title = jfor.79.t
+	desc = jfor.79.d
+	is_triggered_only = yes
+	option = {#agree
+		name = jfor.79.a
 		ai_chance = { factor = 50 }
 		every_country = {
 			limit = {
 				OR = {
-					is_in_faction_with = JAP 
-					is_subject_of = JAP 
+					is_in_faction_with = JAP
+					is_subject_of = JAP
 				}
 			}
 			ENG = { add_to_faction = PREV }
@@ -2127,95 +2127,95 @@ country_event = {#The British offer alliance!
 		ENG = { add_to_faction = JAP }
 		ENG = { country_event = { id = jfor.80 } }
 	}
-	option = {#decline 
-		name = jfor.79.b 
+	option = {#decline
+		name = jfor.79.b
 		ai_chance = { factor = 50 }
-		add_national_unity = 0.05 
+		add_national_unity = 0.05
 		ENG = { country_event = { id = jfor.81 } }
 	}
 }
 
-country_event = {#Japanese agree 
-	id = jfor.80 
-	title = jfor.80.t 
-	desc = jfor.80.d 
-	is_triggered_only = yes 
+country_event = {#Japanese agree
+	id = jfor.80
+	title = jfor.80.t
+	desc = jfor.80.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.80.a 
+		name = jfor.80.a
 	}
 }
 
-country_event = {#Japanese refuse 
-	id = jfor.81 
-	title = jfor.81.t 
-	desc = jfor.81.d 
-	is_triggered_only = yes 
+country_event = {#Japanese refuse
+	id = jfor.81
+	title = jfor.81.t
+	desc = jfor.81.d
+	is_triggered_only = yes
 	option = {
-		name = jfor.80.a 
+		name = jfor.80.a
 	}
 }
 
 ####additional Chinese war events#####
-country_event = {#Invite Shanxi to war? 
-	id = jfor.82 
-	title = jfor.82.t 
-	desc = jfor.82.d 
-	fire_only_once = yes 
+country_event = {#Invite Shanxi to war?
+	id = jfor.82
+	title = jfor.82.t
+	desc = jfor.82.d
+	fire_only_once = yes
 	trigger = {
-		tag = JAP 
+		tag = JAP
 		has_completed_focus = JAP_support_SHX
-		has_war_with = ZHI 
+		has_war_with = ZHI
 		NOT = { has_war_with = SHX }
 		NOT = { has_government = communism }
 		SHX = { NOT = { has_country_flag = SHX_neutrality } }
 	}
 	mean_time_to_happen = { days = 30 }
-	option = {#invite 
-		name = jfor.82.a 
+	option = {#invite
+		name = jfor.82.a
 		ai_chance = { factor = 90 }
 		SHX = { country_event = { id = jfor.83 } }
 	}
-	option = {#don't 
-		name = jfor.82.b 
+	option = {#don't
+		name = jfor.82.b
 		ai_chance = { factor = 10 }
 	}
 }
 
 country_event = {#Japanese offer
-	id = jfor.83 
-	title = jfor.83.t 
-	desc = jfor.83.d 
-	is_triggered_only = yes 
-	option = {#AGREE 
-		name = jfor.83.a 
+	id = jfor.83
+	title = jfor.83.t
+	desc = jfor.83.d
+	is_triggered_only = yes
+	option = {#AGREE
+		name = jfor.83.a
 		ai_chance = { factor = 50 }
 		JAP = { country_event = { id = jfor.84 days = 1 } }
 	}
-	option = {#don't 
-		name = jfor.83.b 
+	option = {#don't
+		name = jfor.83.b
 		ai_chance = { factor = 50 }
 		JAP = { country_event = { id = jfor.85 days = 1 } }
 	}
 }
 
-country_event = {#Shanxi agrees 
-	id = jfor.84 
-	title = jfor.84.t 
-	desc = jfor.84.d 
-	is_triggered_only = yes 
-	option = {#AGREE 
-		name = jfor.84.a 
-		add_to_faction = SHX 
+country_event = {#Shanxi agrees
+	id = jfor.84
+	title = jfor.84.t
+	desc = jfor.84.d
+	is_triggered_only = yes
+	option = {#AGREE
+		name = jfor.84.a
+		add_to_faction = SHX
 		hidden_effect = { SHX = { declare_war_on = { target = ZHI type = annex_everything } } }
 	}
 }
 
-country_event = {#Shanxi refuses 
-	id = jfor.85 
-	title = jfor.85.t 
-	desc = jfor.85.d 
-	is_triggered_only = yes 
-	option = {#AGREE 
-		name = jfor.85.a 
+country_event = {#Shanxi refuses
+	id = jfor.85
+	title = jfor.85.t
+	desc = jfor.85.d
+	is_triggered_only = yes
+	option = {#AGREE
+		name = jfor.85.a
 	}
 }

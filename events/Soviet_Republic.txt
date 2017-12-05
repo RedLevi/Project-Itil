@@ -141,7 +141,7 @@ country_event = { #STruggle for Power#
 
    option = { #Kirov#
      name = soviet.9.a
-     add_national_unity = -0.05
+     add_national_unity = 0.1
      add_political_power = -300
      add_ideas = Kirov_General_Secretary
      set_country_flag = Gosplan_Congress
@@ -472,7 +472,7 @@ country_event = { #Finnish Question#
    option = { #Declare war#
       name = soviet.20.c
       add_political_power = 50
-      create_wargoal = { type = annex_everything = target = FIN }
+      create_wargoal = { type = annex_everything  target = FIN }
       add_opinion_modifier = { target = FIN modifier = Soviet_Expansionism }
    }
    option = { #Leave them alone#

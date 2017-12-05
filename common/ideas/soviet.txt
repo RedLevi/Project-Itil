@@ -133,6 +133,20 @@ ideas = {
 	research_time_factor = -0.05
  }
 }
+
+Kirov_General_Secretary = {
+   allowed = {
+      always = no
+      original_tag = SOV
+   }
+
+
+   removal_cost = -1
+
+   modifier = {
+      unity_weekly = 0.001
+   }
+}
 	}
 
 

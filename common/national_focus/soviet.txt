@@ -1019,6 +1019,29 @@ focus = {
 
 }
 
+focus = {
+	id = Fund_Japanese_Dissidents
+	icon = GFX_goal_generic_war_with_comintern
+	cost = 10.00
+	prerequisite = {
+		focus = Take_On_Japan
+	}
+	x = 56
+	y = 4
+	bypass = {
+	   JAP = {
+		    has_government = communism
+		 }
+	}
+	completion_reward = {
+		    JAP = {
+					 country_event = jdom.33
+				}
+	}
+
+}
+
+
 
 focus = {
 	id = Aid_PRF
@@ -1070,7 +1093,7 @@ focus = {
 	x = 60
 	y = 5
 	completion_reward = {
-	   add_opinion_modifier = { target = GUP modifier = Soviet_Denounce }
+	   add_opinion_modifier = { target = GUO modifier = Soviet_Denounce }
 	}
 
 }

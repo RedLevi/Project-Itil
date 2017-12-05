@@ -75,9 +75,9 @@ set_politics = {
 create_country_leader = {
 	name = "Noe Zhordania"
 	desc = ""
-	picture = "gfx/leaders/GEO/Noe_Zhordania.dds"
+	picture = "Noe_Zhordania.dds"
 	expire = "1953.3.1"
-	ideology = social_reformism
+	ideology = democratic_socialism
 	traits = {
 
 	}
@@ -93,5 +93,3 @@ create_country_leader = {
 
 	}
 }
-
-#couldnt find anything else, the commies simply forced everyone else into exile

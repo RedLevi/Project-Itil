@@ -56,7 +56,7 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 
-			set_cosmetic_tag = CHN
+			set_cosmetic_tag = CMC
 		}
 	}
 	focus = {
@@ -100,7 +100,9 @@ focus_tree = {
 		}
 		x = 3
 		y = 1
-
+		completion_reward = {
+			add_national_unity = 0.20
+		}
 	}
 	focus = {
 		id = eliminate_illegitimates
@@ -111,7 +113,7 @@ focus_tree = {
 		}
 		x = 1
 		y = 2
-
+		completion_reward = {}
 	}
 	focus = {
 		id = the_tibetian_question
@@ -172,9 +174,6 @@ focus_tree = {
 		id = chinese_socialism
 		icon = GFX_focus_generic_join_comintern
 		cost = 10
-		prerequisite = {
-			focus = yellow_dragon
-		}
 		x = 13
 		y = 1
 		completion_reward = {

@@ -952,7 +952,7 @@ country_event = { # Hungary is at War! (Romania)
 	desc = aus.6.d
 	is_triggered_only = yes
 
-	option = { # Demand Northern Transylavnia & Crisana back!
+	option = { # Demand Northern Transylvania & Crisana back!
 		name = aus.6.a
 		ai_chance = { factor = 9 }
 		add_political_power = 20
@@ -973,17 +973,21 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { # Give it back
-		name = aus.26.t
+		name = aus.26.a
 		ai_chance = { factor = 4 }
 		add_political_power = -10
 		ROM = {
 			transfer_state = 76
 			transfer_state = 83
 		}
+		hidden_effect = {
+			76 = { add_core_of = ROM }
+			83 = { add_core_of = ROM }
+		}
 	}
 
 	option = { # nope
-		name = aus.26.d
+		name = aus.26.b
 		ai_chance = { factor = 1 }
 		ROM = { country_event = { id = aus.27 days = 4 } }
 	}

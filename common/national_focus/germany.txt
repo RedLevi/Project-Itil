@@ -1895,7 +1895,7 @@ focus_tree = {
 		icon = GFX_focus_generic_little_entente
 		x = 18
 		y = 7
-		cost = 10
+		cost = 1
 		ai_will_do = {
 			factor = 8
 		}
@@ -1907,12 +1907,11 @@ focus_tree = {
 			NFA = {
 				exists = yes
 				NOT = { has_war_with = GER }
-				IFA = { has_capitulated = yes }
 			}
 		}
 
 		completion_reward = {
-			NFA = { country_event = germany.26 }
+			GER = { country_event = germany.26 }
 		}
 	}
 

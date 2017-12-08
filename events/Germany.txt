@@ -536,11 +536,7 @@ country_event = { #French Volunteers
 	 desc = germany.26.d
 	 fire_only_once = yes
 
-	 trigger = {
-	    tag = GER
-			country_exists = NFA
-			NFA = { has_war_with = SPF }
-	 }
+	 is_triggered_only = yes
 
 	 option = { #Send volunteers to NFA
       name = germany.26.a

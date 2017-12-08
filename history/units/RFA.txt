@@ -1,4 +1,4 @@
-##### Division Templates #####
+﻿##### Division Templates #####
 division_template = {
 	name = "Division d'Infanterie"		
 	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. Coloniale, 

@@ -349,6 +349,8 @@ country_event = { #Soviet Foreign policy#
    }
 }
 
+
+
 country_event = { #Georgian Ultimatum
    id = soviet.15
    title = soviet.15.t
@@ -368,6 +370,7 @@ country_event = { #Georgian Ultimatum
       add_political_power = -100
    }
 }
+
 
 country_event = { #Georgian response#
    id = soviet.16

@@ -42,7 +42,7 @@ set_national_unity = 0.55
 
 add_ideas = {
 	#multiple_splitt_party
-	#home_of_revolution
+	home_of_revolution
 	#great_country
 	limited_freedom_law
 	nationalized_economy_law

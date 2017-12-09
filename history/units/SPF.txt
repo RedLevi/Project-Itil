@@ -1,4 +1,4 @@
-#########Division TEMPLATES#########
+﻿#########Division TEMPLATES#########
 division_template = {
 	name = "Division d'Infanterie"		
 	# Represents: Division d'Infanterie (Series A and B), Div. d'Inf. Coloniale, 
@@ -306,10 +306,10 @@ division= {
 		location = 9523
 		division_template = "Division d'Infanterie" 	# Second line, reserve equipment
 		start_experience_factor = 0.2
+
 		start_equipment_factor = 0.5
 
 	}
-
 	# Ie Corps d'Armée (Région Militaire in 1936) -- Lille
 	division= {	
 		name = "7ème Division d'Infanterie"
@@ -390,7 +390,7 @@ division= {
 		start_equipment_factor = 0.5
 
 	}
-}
+
 	
 ####NAVYY##########################
 navy = {				
@@ -414,7 +414,8 @@ navy = {
 		ship = { name = "Ariane" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SPF } } }				
 		ship = { name = "Eurydice" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA } } }				
 		ship = { name = "Danaé" definition = submarine equipment = { submarine_1 = { amount = 1 owner = FRA } } }				
-	}	
+	}
+}	
 
 #############AIRFORCE############
 air_wings = {

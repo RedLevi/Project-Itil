@@ -290,9 +290,9 @@ division= {
 		division_template = "Division d'Infanterie" 	# Frontline, best equipment
 		start_experience_factor = 0.5
 	}
-}
+
 #####NAVY######
-navy = {				
+    navy = {				
 		name = "Flottille de Haute Mers"			
 		base = 9737 
 		location = 9737  #Bordeaux			
@@ -320,6 +320,7 @@ navy = {
 		ship = { name = "Milan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SFA version_name = "Aigle & Vauquelin Class" } } }
 		ship = { name = "Épervier" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SFA version_name = "Aigle & Vauquelin Class" } } }
 	}
+}
 	
 ####AIRFORCE#######
 air_wings = {
@@ -331,3 +332,4 @@ air_wings = {
 			amount = 96
 		}
 	}
+}

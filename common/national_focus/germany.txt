@@ -1911,7 +1911,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			GER = { country_event = germany.26 }
+			NFA = { country_event = germany.26 }
+			 add_manpower = -55000
+			 reverse_add_opinion_modifier = { target = NFA modifier = Sent_volunteers }
 		}
 	}
 

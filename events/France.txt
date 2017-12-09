@@ -75,10 +75,11 @@ country_event = { #1936 ELECTION#
 
 
 country_event = { #CIVIL WAR#
-  id = france.5
+    id = france.5
 	title = france.5.t
 	desc = france.5.d
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -90,11 +91,13 @@ country_event = { #CIVIL WAR#
 			SPF = { transfer_state = 514 }
 			SPF = { transfer_state = 515 }
 			SPF = { transfer_state = 557 }
+			SPF = { transfer_state = 556 }
+			SPF = { transfer_state = 272 }
 			SPF = { transfer_state = 24 }
 			SPF = { transfer_state = 16 }
 			SPF = { transfer_state = 29 }
 			SPF = { transfer_state = 20 }
-		  NFA = { transfer_state = 14 }
+		    NFA = { transfer_state = 14 }
 			NFA = { transfer_state = 30 }
 			NFA = { transfer_state = 15 }
 			RFA = { transfer_state = 18 }
@@ -146,7 +149,7 @@ country_event = { #CIVIL WAR#
 			SPF = { transfer_state = 16 }
 			SPF = { transfer_state = 29 }
 			SPF = { transfer_state = 20 }
-		  NFA = { transfer_state = 14 }
+		    NFA = { transfer_state = 14 }
 			NFA = { transfer_state = 30 }
 			NFA = { transfer_state = 15 }
 			RFA = { transfer_state = 18 }
@@ -190,7 +193,7 @@ country_event = { #ALLIANCE#
     id = france.6
 	title = france.6.t
 	desc = france.6.d
-
+	hidden = yes
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -280,6 +283,7 @@ country_event = { #NFA DECLARES WAR#
     id = france.7
 	title = france.7.t
 	desc = france.7.d
+	hidden = yes
 
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -749,12 +753,12 @@ country_event = { #NEWS event for NFA##
 
 country_event = { #news event for SPF#
     id = france.25
-	title = france.25.t
-	desc = france.25.d
+	title = france.24.t
+	desc = france.24.d
 	is_triggered_only = yes
 
 	option = {
-	    name = france.25.a
+	    name = france.24.a
     }
 }
 
@@ -852,35 +856,38 @@ country_event = { #PETAINS DECISION
     is_triggered_only = yes
 
     option = { #Submit to Germany#
-    name = france.30.a
-    set_global_flag = petain_cooperation
-    NFA = { dismantle_faction = yes }
-    GER = { add_to_faction = NFA }
-    GER = { declare_war_on = { target = SPF type = annex_everything } }
-    GER = { declare_war_on = { target = RFA type = annex_everything } }
-    ai_chance = { factor = 30 }
-    NFA = {
-       remove_state_core = 28
-     }
-    RFA = {
-       country_event = france.34
-    }
-    SPF = {
-       country_event = france.34
-    }
-    SYA = {
-       country_event = france.34
-    }
-    SFA = {
-       country_event = france.34
-    }
-    GER = {
-       country_event = { id = germany.28 hours = 1 }
-    }
+		name = france.30.a
+		set_global_flag = petain_cooperation
+		NFA = { dismantle_faction = yes }
+		GER = { add_to_faction = NFA }
+		NFA = { declare_war_on = { target = SPF type = annex_everything } }
+		NFA = { declare_war_on = { target = RFA type = annex_everything } }
+		GER = { declare_war_on = { target = SPF type = annex_everything } }
+		GER = { declare_war_on = { target = RFA type = annex_everything } }
+		ai_chance = { factor = 30 }
+		NFA = {
+		   remove_state_core = 28
+		 }
+		RFA = {
+		   country_event = france.34
+		}
+		SPF = {
+		   country_event = france.34
+		}
+		SYA = {
+		   country_event = france.34
+		}
+		SFA = {
+		   country_event = france.34
+		}
+		GER = {
+		   country_event = { id = germany.28 hours = 1 }
+		}
   }
   option = { #No germany#
-  name = france.30.b
-  ai_chance = { factor = 70 }
+	  name = france.30.b
+	  ai_chance = { factor = 70 }
+	  GER = { country_event = { id = germany.29 } }
   }
 
 }

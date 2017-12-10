@@ -23,6 +23,9 @@ bookmarks = {
 			overconfident_general_staff
 			}
 			focuses = {
+				GER_reichskanzler
+				GER_imperial_dominance
+				GER_attack_soviets
 			}
 		}
 		"JAP"={

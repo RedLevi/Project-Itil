@@ -1045,7 +1045,7 @@ focus = {
 		prerequisite = {
 			focus = Japan_Lessons
 		}
-		x = 230
+		x = 30
 		y = 3
 		completion_reward = {
 			navy_experience = 30
@@ -1097,7 +1097,7 @@ focus = {
 			focus = Kharkiv_Komintern
 		}
 		x = 28
-		y = 5
+		y = 6
 		completion_reward = {
 		add_tech_bonus = {
 		name = Volgograd_Tractor_Plant

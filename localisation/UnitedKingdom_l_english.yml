@@ -101,8 +101,8 @@ ENG_SIA_alliance:0 "Alliance with Siam?"
 ENG_PHL_influence:0 "Influence the Phillipines"
 ENG_PHL_alliance:0 "Alliance with the Phillipines?"
 ENG_china_focus:0 "Chinese Ambitions"
-ENG_zhi_focus:0 "Support the Zhili Clique"
-ENG_chi_focus:0 "Support the Revival Front"
+ENG_ZHI_focus:0 "Support the Zhili Clique"
+ENG_CHI_focus:0 "Support the Revival Front"
 
 ENG_imperial_conference:0 "The Imperial Conference"
 ENG_home_rule:0 "Home Rule"
@@ -115,9 +115,9 @@ ENG_fed_CAN:0 "Federalize Canada"
 ENG_fed_SAF:0 "Federalize South Africa"
 ENG_fed_IRE:0 "Federalize Ireland"
 ENG_fed_ZIM:0 "Federalize Rhodesia"
-ENG_fed_ast:0 "Federalize Australia"
-ENG_fed_raj:0 "Federalize India"
-ENG_fed_znl:0 "Federalize New Zealand"
+ENG_fed_AST:0 "Federalize Australia"
+ENG_fed_RAJ:0 "Federalize India"
+ENG_fed_ZNL:0 "Federalize New Zealand"
 
 
 

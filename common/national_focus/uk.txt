@@ -2031,7 +2031,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_fed_CAN
-		icon = GFX_CAN_federalize
+		icon = GFX_focus_AST_never_gallipoli
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_federalization_focus
@@ -2057,7 +2057,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_fed_SAF
-		icon = GFX_SAF_federalize
+		icon = GFX_focus_AST_never_gallipoli
 		cost = 5.00
 		prerequisite = {
 			focus = ENG_federalization_focus
@@ -2083,7 +2083,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_fed_IRE
-		icon = GFX_IRE_federalize
+		icon = GFX_focus_AST_never_gallipoli
 		cost = 3.00
 		prerequisite = {
 			focus = ENG_federalization_focus
@@ -2161,7 +2161,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_fed_RAJ
-		icon = GFX_CAN_federalize
+		icon = GFX_focus_AST_never_gallipoli
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_federalization_focus
@@ -2236,7 +2236,7 @@ focus_tree = {
 		icon = GFX_focus_SAF_secure_africa
 		cost = 10.00
 		prerequisite = {
-			focus = ENG_home_rule
+			focus = GFX_focus_SAF_secure_africa
 		}
 		x = 43
 		y = 2

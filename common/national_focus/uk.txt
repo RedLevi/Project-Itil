@@ -2236,7 +2236,7 @@ focus_tree = {
 		icon = GFX_focus_SAF_secure_africa
 		cost = 10.00
 		prerequisite = {
-			focus = GFX_focus_SAF_secure_africa
+			focus = ENG_home_rule
 		}
 		x = 43
 		y = 2

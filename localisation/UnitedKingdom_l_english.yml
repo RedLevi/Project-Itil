@@ -66,7 +66,7 @@ ENG_destroyer_focus_desc:0 "We cannot have a ship consisting just of Battleships
 ENG_submarine_focus:0 "Underwater Fleet"
 ENG_northern_port:0 "Northern Ports"
 ENG_liverpool_docks:0 "Liverpudlian Docks"
-ENG_merchant_fleets:0 "Merchant Fleets"
+ENG_merchant_fleet:0 "The Merchant Fleet"
 ENG_newcastle_docks:0 "Docks in Newcastle"
 
 #Army#
@@ -117,7 +117,7 @@ ENG_fed_IRE:0 "Federalize Ireland"
 ENG_fed_ZIM:0 "Federalize Rhodesia"
 ENG_fed_AST:0 "Federalize Australia"
 ENG_fed_RAJ:0 "Federalize India"
-ENG_fed_ZNL:0 "Federalize New Zealand"
+ENG_fed_NZL:0 "Federalize New Zealand"
 
 
 

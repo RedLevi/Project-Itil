@@ -572,7 +572,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_ally_norway
-		icon = GFX_?
+		icon = GFX_goal_generic_improve_relations
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_support_norway
@@ -703,7 +703,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_northern_port
-		icon = GFX_goal_generic_build_nay
+		icon = GFX_goal_generic_build_navy
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_thalassocratic_ambitions
@@ -1117,7 +1117,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_middle_east_theater
-		icon = GFX_focus_generic_diplomatic_treaty
+		icon = GFX_goal_generic_demand_territory
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_bastion_democracy
@@ -1345,7 +1345,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_support_arab
-		icon = GFX_?
+		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_levantine_funding
@@ -1690,7 +1690,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_SIA_alliance
-		icon = GFX_?
+		icon = GFX_goal_generic_national_unity
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_SIA_influence
@@ -1842,7 +1842,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_PHL_alliance
-		icon = GFX_?
+		icon = GFX_goal_generic_national_unity
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_PHL_influence
@@ -1870,7 +1870,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_china_focus
-		icon = GFX_?
+		icon = GFX_goal_demand_sudetenland
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_east_asia_theater
@@ -1905,7 +1905,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_ZHI_focus
-		icon = GFX_?
+		icon = GFX_goal_generic_major_alliance
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_china_focus
@@ -1956,7 +1956,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_CHI_focus
-		icon = GFX_?
+		icon = GFX_goal_generic_major_alliance
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_china_focus
@@ -2252,7 +2252,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_home_india
-		icon = GFX_?
+		icon = GFX_focus_RAJ_all_india_forward_bloc
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_home_rule
@@ -2297,7 +2297,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ENG_home_asia
-		icon = GFX_?
+		icon = GFX_focus_china_yellow_dragon
 		cost = 10.00
 		prerequisite = {
 			focus = ENG_home_rule

@@ -64,6 +64,11 @@ ENG_battleship_focus_desc:0 "The Battleship is without a doubt the queen of the 
 ENG_destroyer_focus:0 "Support ships"
 ENG_destroyer_focus_desc:0 "We cannot have a ship consisting just of Battleships. For our capital ships to use their full potential, we need to support them with a capable screen of destroyers and light cruisers."
 ENG_submarine_focus:0 "Underwater Fleet"
+ENG_northern_port:0 "Northern Ports"
+ENG_liverpool_docks:0 "Liverpudlian Docks"
+ENG_merchant_fleets:0 "Merchant Fleets"
+ENG_newcastle_docks:0 "Docks in Newcastle"
+
 #Army#
 ENG_military_reforms:0 "Reform the Army"
 ENG_military_reforms_desc:0 "The British army is still one of the most advanced armies in the world, though if we want global supremacy, we need to gain a cutting edge over our opponents."
@@ -79,6 +84,43 @@ ENG_mobile_warfare:0 "Mobile Warfare"
 ENG_mobile_warfare_desc:0 "Anyone who thinks that leg infantry and horses will determine future warfare are fools. Mobilization is a golden oppurtunity that shall not be wasted."
 ENG_royal_army_focus:0 "The Royal Army"
 ENG_royal_army_focus_desc:0 "With the reforms complete, nobody can stand in the way of the Royal Army. Onwards to victory!"
+ENG_war_economy:0 "War Economy"
+
+ENG_middle_east_theater:0 "The Middle Eastern Theatre"
+ENG_fortify_egypt:0 "Fortify Egypt"
+ENG_fortify_persia:0 "Fortify Persia"
+ENG_persia_oil:0 "Persian Oil"
+ENG_levantine_pact:0 "Levanite Pact"
+ENG_levantine_funding:0 "Fund the Pact"
+ENG_support_arab:0 "Support Syria"
+
+ENG_east_asia_theater:0 "The East Asian Theatre"
+ENG_fortify_asia:0 "Fortify Asian Holdings"
+ENG_SIA_influence:0 "Influence Siam"
+ENG_SIA_alliance:0 "Alliance with Siam?"
+ENG_PHL_influence:0 "Influence the Phillipines"
+ENG_PHL_alliance:0 "Alliance with the Phillipines?"
+ENG_china_focus:0 "Chinese Ambitions"
+ENG_zhi_focus:0 "Support the Zhili Clique"
+ENG_chi_focus:0 "Support the Revival Front"
+
+ENG_imperial_conference:0 "The Imperial Conference"
+ENG_home_rule:0 "Home Rule"
+ENG_home_africa:0 "African Rule"
+ENG_home_india:0 "Indian Rule"
+ENG_home_asia:0 "Asian Rule"
+
+ENG_federalization_focus:0 "Federalization"
+ENG_fed_CAN:0 "Federalize Canada"
+ENG_fed_SAF:0 "Federalize South Africa"
+ENG_fed_IRE:0 "Federalize Ireland"
+ENG_fed_ZIM:0 "Federalize Rhodesia"
+ENG_fed_ast:0 "Federalize Australia"
+ENG_fed_raj:0 "Federalize India"
+ENG_fed_znl:0 "Federalize New Zealand"
+
+
+
 #Air Force#
 ENG_royal_air_force:0 "Royal Air Force"
 ENG_royal_air_force_desc:0 "The RAF is a force to be reckoned with, and if the enemy cant control the air, they wont be able to control the land. "Through Adversity to the Stars""

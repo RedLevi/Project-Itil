@@ -1,0 +1,102 @@
+########################################
+# Yugoslavian Focus Tree - By HappyNTH #
+########################################
+
+focus_tree = {
+	id = yug_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = YUG
+		}
+	}
+
+	focus = {
+		id = YUG_ethnic_question
+		icon = GFX_goal_generic_attack_allies
+		x = 3
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+		}
+
+	}
+
+	focus = {
+		id = YUG_enhanced_freedoms
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_ethnic_question
+		}
+		completion_reward = {
+			swap_ideas = { remove_idea = YUG_dc add_idea = YUG_dc_free }
+		}
+	}
+
+	focus = {
+		id = YUG_puppet_borders
+		icon = GFX_focus_generic_self_management
+		x = 1
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = no
+		available = {
+			NOT = { has_war = yes }
+			AND = {
+				owns_state = 109 # Croatia
+				owns_state = 103 # Dalmatia
+				owns_state = 163 # Zara
+				owns_state = 105 # Montenegro
+				# 44 Albania
+			}
+		}
+		prerequisite = {
+			focus = YUG_enhanced_freedoms
+		}
+		completion_reward = {
+			release_puppet = CRO
+			release_puppet = MNT
+		}
+	}
+
+	focus = {
+		id = YUG_bosnian_question
+		icon = GFX_focus_generic_self_management
+		x = 1
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = no
+		available = {
+			NOT = { has_war = yes }
+			owns_state = 104 # Bosnia
+		}
+		prerequisite = {
+			focus = YUG_puppet_borders
+		}
+		completion_reward = {
+			country_event = { days = 2 id = yug.1 }
+		}
+	}
+}

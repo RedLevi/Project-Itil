@@ -1,5 +1,42 @@
 ideas = {
 
+		country = {
+			YUG_dc = {
+				allowed = {
+					original_tag = AUS
+					always = no
+				}
+				allowed_civil_war = {
+					always = no
+				}
+				removal_cost = -1
+				picture = idea_generic_deal_with_the_devil
+				modifier = {
+					non_core_manpower = -0.02
+					unity_factor = -0.30
+					political_power_gain = -1
+				}
+			}
+
+			YUG_dc_free = {
+				allowed = {
+					original_tag = AUS
+					always = no
+				}
+				allowed_civil_war = {
+					always = no
+				}
+				removal_cost = -1
+				picture = idea_generic_deal_with_the_devil
+				modifier = {
+					non_core_manpower = -0.02
+					unity_factor = -0.20
+					political_power_gain = -0.6
+				}
+			}
+
+		}
+
 		political_advisor = {
 
 		YUG_slobodan_jovanovic = {

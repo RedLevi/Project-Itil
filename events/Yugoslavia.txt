@@ -3,3 +3,27 @@
 ####################################
 
 add_namespace = yug
+
+country_event = {
+	id = yug.1
+	title = yug.1.t
+	desc = yug.1.d
+
+	is_triggered_only = yes
+
+	option = { # Yes, we will even split that much
+		name = yug.1.a
+		add_political_power = 100		
+		custom_effect_tooltip = seryug_change
+		hidden_effect = {
+			set_cosmetic_tag = seryug
+			release_puppet = BOS
+		}
+	}
+
+	option = { # No, we can't weaken ourselves that much
+		name = yug.1.b
+		104 = { add_core_of = YUG }
+		add_political_power = -50
+	}
+}

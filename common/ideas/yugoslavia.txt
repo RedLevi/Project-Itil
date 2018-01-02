@@ -3,14 +3,14 @@ ideas = {
 		country = {
 			YUG_dc = {
 				allowed = {
-					original_tag = AUS
+					original_tag = YUG
 					always = no
 				}
 				allowed_civil_war = {
 					always = no
 				}
 				removal_cost = -1
-				picture = idea_generic_deal_with_the_devil
+				picture = FRA_scw_intervention_republicans_focus
 				modifier = {
 					non_core_manpower = -0.02
 					unity_factor = -0.30
@@ -20,18 +20,34 @@ ideas = {
 
 			YUG_dc_free = {
 				allowed = {
-					original_tag = AUS
+					original_tag = YUG
 					always = no
 				}
 				allowed_civil_war = {
 					always = no
 				}
 				removal_cost = -1
-				picture = idea_generic_deal_with_the_devil
+				picture = FRA_scw_intervention_republicans_focus
 				modifier = {
 					non_core_manpower = -0.02
 					unity_factor = -0.20
 					political_power_gain = -0.6
+				}
+			}
+
+			YUG_dc_int = {
+				allowed = {
+					original_tag = YUG
+					always = no
+				}
+				allowed_civil_war = {
+					always = no
+				}
+				removal_cost = -1
+				picture = FRA_scw_intervention_republicans_focus
+				modifier = {
+					unity_factor = -0.20
+					political_power_gain = -1
 				}
 			}
 

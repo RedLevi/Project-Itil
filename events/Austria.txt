@@ -32,12 +32,8 @@ country_event = { # Austria's initiation event
 			OR = {
 				has_war_with = HUN
 				is_in_faction_with = HUN
-				NOT = {
-					OR = {
-						is_subject_of = HUN
-						HUN = { is_subject_of = AUS }
-					}
-				}
+				is_subject_of = HUN
+				HUN = { is_subject_of = AUS }
 				has_war_with = ENG
 				has_war_with = SOV
 				has_war_with = YUG
@@ -707,7 +703,7 @@ country_event = { # Austria invades Hungary! (Yugoslavia)
 
 	option = { # Send an ultimatum to Hungary
 		name = aus.5.b
-		# HUN = { country_event = { id = aus.23 days = 7 } }
+		HUN = { country_event = { id = aus.23 days = 7 } }
 		ai_chance = { factor = 5 }
 	}
 
@@ -858,6 +854,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { # Maybe it's for the best
+		name = aus.23.a
 		ai_chance = { factor = 4 }
 		YUG = {
 			transfer_state = 45
@@ -866,6 +863,7 @@ country_event = {
 	}
 
 	option = { # No way 
+		name = aus.23.b
 		ai_chance = { factor = 1 }
 		YUG = { country_event = { id = aus.24 days = 2 } }
 	}

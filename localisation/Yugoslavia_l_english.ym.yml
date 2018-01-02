@@ -1,5 +1,9 @@
 ﻿l_english:
 ####events####
+yug.1.t:0 "The Bosnian Question"
+yug.1.d:0 "We have decided on a process of decentralisation, and we have released the border zones. Now we must decide on the final step - do we continue decentralisation right down to puppeting Bosnia and changing our name back to Serbia, or do we stop our decentralisation efforts there - greatly hurting our political capital?"
+yug.1.a:0 "Yes, we will release Bosnia."
+yug.1.b:0 "No, we can't weaken ourselves that much."
 
 ####focus####
 YUG_ethnic_question:0 "A Matter of Ethnicities"
@@ -19,3 +23,4 @@ YUG_dc_free_desc:0 "Yugoslavia is still a divided country, but things are improv
 ####opinion####
 
 ####tooltip####
+seryug_change:0 "We will release Bosnia as a puppet state, and change our name back to Serbia."

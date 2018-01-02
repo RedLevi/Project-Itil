@@ -1,0 +1,51 @@
+﻿l_english:
+####events####
+yug.1.t:0 "The Bosnian Question"
+yug.1.d:0 "We have decided on a process of decentralisation, and we have released the border zones. Now we must decide on the final step - do we continue decentralisation right down to puppeting Bosnia and changing our name back to Serbia, or do we stop our decentralisation efforts there - greatly hurting our political capital?"
+yug.1.a:0 "Yes, we will release Bosnia."
+yug.1.b:0 "No, we can't weaken ourselves that much."
+
+####focus####
+## Ethnic Questions ##
+YUG_ethnic_question:0 "A Matter of Ethnicities"
+YUG_ethnic_question_desc:0 "The problem is with our country - it's lack of unity - boils down to the wide difference in ethnic groups in Yugoslavia. We need to get our heads down and work out a solution, before the ethnic groups attempt to rise up..."
+# Enhanced Freedoms #
+YUG_enhanced_freedoms:0 "Enhanced Freedoms"
+YUG_enhanced_freedoms_desc:0 "One of the possible solutions is to release ethnic groups in puppet states. We are, in essence, creating the states we previously conquered, but hopefully they will be more nationalistic and enthusiastic to a local government rather than our glorious one here."
+YUG_puppet_borders:0 "Puppet the Borders"
+YUG_puppet_borders_desc:0 "The first stage towards fulfilling our chosen path is to create puppet states in the border zones - Croatia and Montenegro."
+YUG_bosnian_question:0 "The Bosnian Question"
+YUG_bosnian_question_desc:0 "Now we have created puppet states in Croatia and Montenegro, we must decide on what to do with the Bosnian lands. They are small enough to possibly directly integrate, or we could puppet them as well and declare ourselves the Kingdom of Serbia once again."
+# Freedoms / Integration Shared Part #
+YUG_rural_inf:0 "Rural Infastructure"
+YUG_rural_inf_desc:0 "Building up the existing rural infastructure networks will both help our construction & military deployment, and will also promote support in these areas."
+YUG_capital_rail:0 "Trans-Capital Railways"
+YUG_capital_rail_desc:0 "An ambitious project to create a railway line has been proposed to link the cities of Zagreb, Sarajevo and Podgorica together. Let's execute it!"
+YUG_croat_goods:0 "Croatian Goods"
+YUG_croat_goods_desc:0 "To further the integration process, we shall build some factories in Croatian lands. Hopefully the local populaton will think better of us."
+YUG_alb_goods:0 "Albanian Factories"
+YUG_alb_goods_desc:0 "Albania is the most tricky to deal with, as they were annexed last. Hopefully these factories will be able to push them enough for us to finish our ethnic ambitions."
+
+# Etnic Integration #
+YUG_ethnic_int:0 "Ethnic Integration"
+YUG_ethnic_int_desc:0 " A second possible solution to the ethnicity problem is in response to the opinion we can't just force our culture on the conquered territories, but equally we can't weaken ourselves by puppeting them. Let us choose the middle ground and attempt to integrate the ethnic groups into one Yugoslavian group."
+
+# Serbian Dominance #
+YUG_serbian_dom:0 "Serbian Dominance"
+YUG_serbian_dom_desc:0 "Finally, there are some parts of the government that would prefer to retain the elite of all of Yugoslavia as Serbian, in response to the nationalistic threat in our conquered territories. This would probably fire up nationalistic movements in most of, if not all, the occupied territories - but is it a worth price to pay to retain exclusive power?"
+
+####ideas####
+YUG_dc:0 "A Divided Country"
+YUG_dc_desc:0 "Yugoslavia is a divided country. Serbian conquest of Bosnia, Croatia and Montenegro during the Austrian civil war led to a great territorial gain for Yugoslavia, but the Serbian monarchy and Serbian-dominated government are having trouble getting the new ethnic groups to enthusiastically enlist to server the Yugoslavian forces. Drastic measures are needed, but the government is divided in how to deal with the problem."
+YUG_dc_free:0 "A Divided Country"
+YUG_dc_free_desc:0 "Yugoslavia is still a divided country, but things are improving. We've decided that things need to change - we shall break up Yugoslavia into puppet states under the central Serbian government - this will hopefully encourage more nationalist participation in our lands, and thus more men in our armies."
+YUG_dc_int:0 "A Divided Country"
+YUG_dc_int_desc:0 "Yugoslavia is still a divided country, but things are improving. We've decided that things need to change - we shall attempt to integrate the ethnic groups into a greater one - Yugoslavian - with the hope that everyone sees themselves as Yugoslavian first and foremost. This will hopefully encourage nationalistic participation."
+YUG_dc_dom:0 "A Divided Country"
+YUG_dc_dom_desc:0 "Yugoslavia is still a divided country, but things are improving. Serbians are clearly the superior ethnic group in Yugoslavia, and as such we will attempt to force Serbian culture on the newly conquered territories and ensure only Serbs have high ranking jobs. This may lead to tensions, however."
+
+####opinion####
+
+####tooltip####
+seryug_change:0 "We will release Bosnia as a puppet state, and change our name back to Serbia."
+albania_factories:0 "The building of factories for the Albanias will have an effect based on our chosen ethnic integration path."

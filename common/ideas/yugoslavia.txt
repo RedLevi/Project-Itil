@@ -10,7 +10,7 @@ ideas = {
 					always = no
 				}
 				removal_cost = -1
-				picture = FRA_scw_intervention_republicans_focus
+				picture = FRA_scw_intervention_nationalists_focus
 				modifier = {
 					non_core_manpower = -0.02
 					unity_factor = -0.30
@@ -27,8 +27,9 @@ ideas = {
 					always = no
 				}
 				removal_cost = -1
-				picture = FRA_scw_intervention_republicans_focus
+				picture = FRA_scw_intervention_nationalists_focus
 				modifier = {
+					liberalism_drift = 0.05
 					non_core_manpower = -0.02
 					unity_factor = -0.20
 					political_power_gain = -0.6
@@ -44,10 +45,28 @@ ideas = {
 					always = no
 				}
 				removal_cost = -1
-				picture = FRA_scw_intervention_republicans_focus
+				picture = FRA_scw_intervention_nationalists_focus
 				modifier = {
+					conservatism_drift = 0.05
 					unity_factor = -0.20
 					political_power_gain = -1
+				}
+			}
+
+			YUG_dc_dom = {
+				allowed = {
+					original_tag = YUG
+					always = no
+				}
+				allowed_civil_war = {
+					always = no
+				}
+				removal_cost = -1
+				picture = FRA_scw_intervention_nationalists_focus
+				modifier = {
+					reactionarism_drift = 0.05
+					unity_factor = -0.30
+					political_power_gain = -0.6
 				}
 			}
 

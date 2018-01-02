@@ -50,9 +50,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = { remove_idea = YUG_dc add_idea = YUG_dc_free }
+			set_country_flag = YUG_enhanced_freedoms
 		}
 		mutually_exclusive = {
 			focus = YUG_ethnic_int
+			focus = YUG_serbian_dom
 		}
 	}
 
@@ -103,7 +105,7 @@ focus_tree = {
 			focus = YUG_puppet_borders
 		}
 		completion_reward = {
-			country_event = { days = 2 id = yug.1 }
+			country_event = { days = 1 id = yug.1 }
 		}
 	}
 
@@ -120,10 +122,16 @@ focus_tree = {
 		}
 		available_if_capitulated = no
 		available = {
+			any_country = {
 			AND = {
+				OR = {
+					is_puppet_of = YUG
+					tag = YUG
+				}
 				owns_state = 103 # Dalmatia
 				owns_state = 163 # Zara
 				owns_state = 44 # Albania
+			}
 			}
 		}
 		prerequisite = {
@@ -157,9 +165,16 @@ focus_tree = {
 		}
 		available_if_capitulated = no
 		available = {
+			any_country = {
 			AND = {
-				owns_state = 109
-				owns_state = 105
+				OR = {
+					is_puppet_of = YUG
+					tag = YUG
+				}
+				owns_state = 109 # Croatia
+				owns_state = 105 # Montenegro
+				owns_state = 104 # Bosnia
+			}
 			}
 		}
 		prerequisite = {
@@ -174,6 +189,92 @@ focus_tree = {
 				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
 				add_extra_state_shared_building_slots = 2
 			}
+			104 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_croat_goods
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 9
+		}
+		available_if_capitulated = no
+		available = {
+			any_country = {
+			AND = {
+				OR = {
+					is_puppet_of = YUG
+					tag = YUG
+				}
+				owns_state = 109 # Croatia
+				owns_state = 103 # Dalmatia
+			}
+			}
+		}
+		prerequisite = {
+			focus = YUG_capital_rail
+		}
+		completion_reward = {
+			109 = {
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_extra_state_shared_building_slots = 2
+			}
+			103 = {
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_alb_goods
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 3
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 9
+		}
+		available_if_capitulated = no
+		availible = {
+			owns_state = 44
+		}
+		prerequisite = {
+			focus = YUG_capital_rail
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = YUG_enhanced_freedoms
+				}
+				release_puppet = ALB
+				add_political_power = 40
+			}
+			if = {
+				limit = {
+					has_country_flag = YUG_ethnic_integration
+				}
+				#country_event = { id = yug.? days = 1 }
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_country_flag = YUG_ethnic_integration
+							has_country_flag = YUG_enhanced_freedoms
+						}
+					}
+				}
+				custom_effect_tooltip = albania_factories
+			}
 		}
 	}
 
@@ -181,7 +282,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_ethnic_int
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_focus_generic_diplomatic_treaty
 		x = 5
 		y = 1
 		cost = 10
@@ -189,21 +290,41 @@ focus_tree = {
 			factor = 10
 		}
 		available_if_capitulated = no
-		available = {
-			AND = {
-				owns_state = 103 # Dalmatia
-				owns_state = 163 # Zara
-				owns_state = 44 # Albania
-			}
-		}
 		prerequisite = {
 			focus = YUG_ethnic_question
 		}
 		mutually_exclusive = {
 			focus = YUG_enhanced_freedoms
+			focus = YUG_serbian_dom
 		}
 		completion_reward = {
 			swap_ideas = { remove_idea = YUG_dc add_idea = YUG_dc_int }
+			set_country_flag = YUG_ethnic_integration
+		}
+	}
+
+	## Serbian Dominance ##
+
+	focus = {
+		id = YUG_serbian_dom
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 7
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_ethnic_question
+		}
+		mutually_exclusive = {
+			focus = YUG_enhanced_freedoms
+			focus = YUG_ethnic_int
+		}
+		completion_reward = {
+			swap_ideas = { remove_idea = YUG_dc add_idea = YUG_dc_dom }
+			set_country_flag = YUG_serbian_dominance
 		}
 	}
 }

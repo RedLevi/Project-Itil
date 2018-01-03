@@ -1,0 +1,16 @@
+-- Ante Rebellum Changelog --
+
+Hotfix 0.1.1:
+
+A slight error in the French events has been fixed, meaning all the events actually work now
+Made the Soviet tree clearer on how to trigger the Gosplan Congress, tweaking some events for this to happen
+Fixed the Fall of Tehran event constantly firing
+If Latvia refuses to be integrated by the Soviets, the puppet status ends and the Soviets can declare war
+Federalisation of New Zealand and Australia should now work
+Sweden is no longer 'Sweeden' in the Germany tree
+The Soviets have some focuses and ideas on the game menu
+Imperial Cities Comany no longer exits and has ceased bugging us about it not having a history file
+Drafting the Five Year Plan gives a nasty construction modifier, and gives an incentive to actually completing the 5-year plan and taking that national unity hit
+The Soviets have ministers to fill all their slots now
+Yugoslavia no longer has cores on territory it conquered during the Austrian Civil War. This will be properly addressed with the focus tree next release
+Netherlands now has the name Netherlands rather than The Netherlands

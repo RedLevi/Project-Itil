@@ -535,10 +535,6 @@ SIC = {
     color = rgb { 150 75 75 }
 	color_ui = rgb { 138 155 116 }
 }
-ICC = {
-    color = rgb { 5 150 200 }
-	color_ui = rgb { 138 155 116 }
-}
 GUI = {
     color = rgb { 100 180 235 }
 	color_ui = rgb { 138 155 116 }

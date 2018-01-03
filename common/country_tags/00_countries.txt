@@ -2,7 +2,6 @@ BOH = "countries/Bohemia.txt"
 GAL = "countries/Galicia-Lodomeria.txt"
 BOS = "countries/Bosnia.txt"
 SIC = "countries/Sichuan.txt"
-ICC = "countries/Imperial_Cities_Company.txt"
 
 GUI = "countries/Guizhou.txt"
 SHA = "countries/Shaanxi.txt"

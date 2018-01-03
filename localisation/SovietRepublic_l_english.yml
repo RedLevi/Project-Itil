@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
 ####focus####
 30th_Congress:0 "XXXth Congress"
 30th_Congress_desc:0 "The 30th Congress's role is to discuss the possible amendment to the 24th Congress, along with other critical changes."
@@ -124,6 +124,7 @@ Dealing_With_Nationalists:0 "Dealing With The Nationalists"
  Mikhail_Tomsky:0 "Mikhail Tomsky"
  Grigory_Zinoviev:0 "Grigory Zinoviev"
  SOV_OKB_idea:0 "The OKB"
+ SOV_five_year_plan_draft:0 "The Five Year Plan Draft"
 
 Gosplan_Congress_Happens:0 "The Gosplan Congress Occurs"
 gosplan_complete:0 "The Gosplan Congress has occured through completing either the left or the right political path."

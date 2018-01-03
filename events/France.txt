@@ -774,10 +774,10 @@ country_event = { #Italian involvement#
 		country_exists = ITA
 		}
 		mean_time_to_happen = { days = 100 }
-    option = { ask ITA 
-	name = france.26.a
+    option = { #ask ITA 
+		name = france.26.a
 		ai_chance = { factor = 50 }
-		ITA = { country_event = { france.36 } }
+		ITA = { country_event = { id = france.36 } }
 	}
     option = { #dont do anything
 		name = france.26.b	
@@ -1003,15 +1003,10 @@ country_event = {#intervention event for ITA
 		ITA = { add_to_faction = SYA }
 		ITA = { declare_war_on = { target = NFA type = annex_everything } }
 		ITA = { declare_war_on = { target = SPF type = annex_everything } }
-		news_event = { id = france.37 }
 	}
 	option = {#do nothing 
 		name = france.36.a 
 		ai_chance = { factor = 25 } 
 		SYA = { country_event = { id = france.38 } }
 	}
-}
-
-news_event = {#italian intervention 
-	id = france.37
 }

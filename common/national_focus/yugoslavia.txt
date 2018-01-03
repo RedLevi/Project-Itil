@@ -226,7 +226,7 @@ focus_tree = {
 			factor = 9
 		}
 		available_if_capitulated = no
-		availible = {
+		available = {
 			owns_state = 44
 		}
 		prerequisite = {

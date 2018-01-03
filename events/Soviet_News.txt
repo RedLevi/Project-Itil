@@ -1,4 +1,4 @@
-add_namespace = sovnews
+﻿add_namespace = sovnews
 
 
 country_event = { #Georgian war response

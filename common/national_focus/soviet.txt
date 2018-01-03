@@ -365,7 +365,6 @@ focus = {
 	   add_ideas = SOV_successful_nep_idea
 		 add_national_unity =  0.05
 	}
-
 }
 ##################################################################
 #####Economic Tree################################################
@@ -560,7 +559,7 @@ focus = {
 		x = 15
 		y = 2
 		completion_reward = {
-		add_ideas = SOV_five_year_plan
+		add_ideas = SOV_five_year_plan_draft
 		}
 
 	}
@@ -695,7 +694,7 @@ focus = {
 		y = 6
 		completion_reward = {
 		add_national_unity = -0.15
-
+		remove_ideas = SOV_five_year_plan_draft
 		}
 	}
 ###############################################################################
@@ -1124,9 +1123,9 @@ focus = {
 		id = Moscow_Arsenal
 		icon = GFX_focus_secret_rearmament
 		cost = 10.00
-		prerequisite = {
-			focus = Reform_The_Army
-		}
+		#prerequisite = {
+		#	focus = Reform_The_Army
+		#}
 		prerequisite = {
 			focus = Kharkiv_Komintern
 		}

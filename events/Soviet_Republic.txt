@@ -151,7 +151,6 @@ country_event = { #STruggle for Power#
   option = { #Rykov#
      name = soviet.9.b
      add_political_power = 100
-     add_ideas = Right_Opposition
      hidden_effect = {
         retire_country_leader = yes
      }

@@ -40,8 +40,12 @@ bookmarks = {
 			history = "SOV_GATHERING_STORM_DESC"
 			ideology = communism
 			ideas = {
+				home_of_revolution
 			}
 			focuses = {
+				30th_Congress
+				New_Economic_Policy
+				Central_Planning
 			}
 		}
 		"PRC"={

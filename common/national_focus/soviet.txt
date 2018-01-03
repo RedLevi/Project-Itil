@@ -123,7 +123,9 @@ focus = {
 	y = 5
 	completion_reward = {
 	    country_event = { id = soviet.5 days = 2 }
-     }
+	    set_country_flag = Gosplan_Congress
+    	custom_effect_tooltip = Gosplan_Congress_Happens
+    }
 }
 ####################################################
 ########Right Path##################################
@@ -216,7 +218,9 @@ focus = {
 	x = 44
 	y = 5
 	completion_reward = {
-	country_event = { id = soviet.8 days = 3 }
+		country_event = { id = soviet.8 days = 3 }
+		set_country_flag = Gosplan_Congress
+    	custom_effect_tooltip = Gosplan_Congress_Happens
 	}
 
 }
@@ -232,7 +236,12 @@ focus = {
 		cost = 5.00
 		x = 8
 		y = 0
-		available = { has_country_flag = Gosplan_Congress }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = gosplan_complete
+				has_country_flag = Gosplan_Congress
+			}
+		}
 		completion_reward = {
 		     add_political_power = 100
 		}

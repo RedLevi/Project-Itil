@@ -598,7 +598,7 @@ country_event = {#AST annexation offer
 		name = engdom.6.a 
 		ai_chance = { factor = 95 }
 		
-		ENG = { country_event = { id = engdom.18 } }
+		ENG = { country_event = { id = engdom.19 } }
 	
 	}
 	
@@ -657,7 +657,7 @@ country_event = {#NZL federal
 		name = engdom.5.a 
 		ai_chance = { factor = 100 }
 		
-		NZL = { country_event = { id = engdom.20 days = 3 } }
+		NZL = { country_event = { id = engdom.21 days = 3 } }
 		
 		add_national_unity = 0.015
 	

@@ -86,7 +86,6 @@ country_event = { #31st Congress Trotsky
 
   option = {
   name = soviet.5.a
-  set_country_flag = Gosplan_Congress
   set_country_flag = RKKA_Congress
   set_country_flag = Trotsky_leader
   }
@@ -112,7 +111,7 @@ country_event = { #Trotsky is Deposed
   fire_only_once = yes
 
   option = {
-     name = soviet.7.a
+    name = soviet.7.a
   }
 }
 
@@ -147,6 +146,7 @@ country_event = { #STruggle for Power#
      set_country_flag = Gosplan_Congress
      set_country_flag = RKKA_Congress
      set_country_flag = Kirov_Leader
+     custom_effect_tooltip = Gosplan_Congress_Happens
    }
   option = { #Rykov#
      name = soviet.9.b
@@ -195,11 +195,13 @@ country_event = { #Rykov or Bukharin
          hidden_effect = {
             retire_country_leader = yes
          }
+         custom_effect_tooltip = Gosplan_Congress_Happens
    }
    option = { #Stay with Rykov#
       name = soviet.10.b
       set_country_flag = Gosplan_Congress
       set_country_flag = RKKA_Congress
+      custom_effect_tooltip = Gosplan_Congress_Happens
    }
 }
 
@@ -407,8 +409,11 @@ country_event = { #Latvia Integration#
 
    option = { #WAR
       name = soviet.17.b
-      SOV = { create_wargoal = { type = annex_everything target = LAT } }
-      SOV = { country_event = { id = sovnews.4 hours = 1 } }
+      SOV = { 
+        create_wargoal = { type = annex_everything target = LAT }
+        end_puppet = LAT
+        country_event = { id = sovnews.4 hours = 1 }
+      }
       add_national_unity = -0.3
       ai_chance = { factor = 40 }
    }

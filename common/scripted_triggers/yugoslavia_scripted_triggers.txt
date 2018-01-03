@@ -1,0 +1,77 @@
+owns_puppet_109 = {
+
+	any_country = {
+		AND = {
+			OR = {
+				is_puppet_of = YUG
+				tag = YUG
+			}
+			owns_state = 109
+		}
+	}
+}
+
+owns_puppet_103 = {
+
+	any_country = {
+		AND = {
+			OR = {
+				is_puppet_of = YUG
+				tag = YUG
+			}
+			owns_state = 103
+		}
+	}
+}
+
+owns_puppet_163 = {
+
+	any_country = {
+		AND = {
+			OR = {
+				is_puppet_of = YUG
+				tag = YUG
+			}
+			owns_state = 109
+		}
+	}
+}
+
+owns_puppet_105 = {
+
+	any_country = {
+		AND = {
+			OR = {
+				is_puppet_of = YUG
+				tag = YUG
+			}
+			owns_state = 105
+		}
+	}
+}
+
+owns_puppet_44 = {
+
+	any_country = {
+		AND = {
+			OR = {
+				is_puppet_of = YUG
+				tag = YUG
+			}
+			owns_state = 44
+		}
+	}
+}
+
+owns_puppet_104 = {
+
+	any_country = {
+		AND = {
+			OR = {
+				is_puppet_of = YUG
+				tag = YUG
+			}
+			owns_state = 104
+		}
+	}
+}

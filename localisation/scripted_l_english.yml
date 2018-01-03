@@ -1,3 +1,11 @@
 ﻿l_english: 
+####triggers####
+### Yugoslavia ###
+owns_puppet_109:0 "We, or a subject of ours, owns Croatia"
+owns_puppet_103:0 "We, or a subject of ours, owns Dalmatia"
+owns_puppet_163:0 ""We, or a subject of ours, owns Zara"
+owns_puppet_105:0 ""We, or a subject of ours, owns Montenegro"
+owns_puppet_44:0 "We, or a subject of ours, owns Albania"
+owns_puppet_104:0 "We, or a subject of ours, owns Bosnia"
 
 ####effects####

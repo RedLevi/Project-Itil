@@ -5,14 +5,14 @@
 focus_tree = {
 	id = yug_focus
 
-	#country = {
-	#	factor = 0
-	#
-	#	modifier = {
-	#		add = 10
-	#		tag = YUG
-	#	}
-	#}
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = YUG
+		}
+	}
 
 	### Question of Ethnicities ###
 

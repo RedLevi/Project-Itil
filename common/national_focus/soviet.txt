@@ -680,10 +680,6 @@ focus = {
 		id = FYP_Complete
 		icon = GFX_focus_YUG_pan_slavic_congress
 		cost = 10.00
-		bypass = {
-		has_completed_focus = FYP_civ_3
-		has_completed_focus = FYP_mil_3
-		}
 		prerequisite = {
 			focus = FYP_civ_3
 		}

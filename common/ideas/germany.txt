@@ -16,7 +16,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription = 0.03
+				conscription = 0.005
 			}
 		
 		}
@@ -40,7 +40,7 @@ ideas = {
 				land_doctrine = -0.66
 			}
 			modifier = {
-				conscription = -0.003
+				conscription_factor = -0.2
 			}
 		}
 		
@@ -166,8 +166,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription = 0.01 
-				training_time_factor = -0.07
+				training_time_factor = -0.1
 			}
 		
 		}
@@ -262,7 +261,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				conscription = 0.05 
+				conscription = 0.005
 				army_morale_factor = 0.2 
 			}
 		

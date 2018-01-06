@@ -2173,7 +2173,7 @@ focus_tree = {
 				is_in_faction_with = SOV
 			}
 			is_subject = no
-			date > 139.1.1
+			date > 1940.1.1
 		}
         available_if_capitulated = no
 		prerequisite = { focus = GER_prussian_ports }

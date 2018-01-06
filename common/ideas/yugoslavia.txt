@@ -10,7 +10,7 @@ ideas = {
 					always = no
 				}
 				removal_cost = -1
-				picture = FRA_scw_intervention_nationalists_focus
+				picture = GFX_idea_yug_divided_nation
 				modifier = {
 					non_core_manpower = -0.02
 					unity_factor = -0.30
@@ -27,7 +27,7 @@ ideas = {
 					always = no
 				}
 				removal_cost = -1
-				picture = FRA_scw_intervention_nationalists_focus
+				picture = GFX_idea_yug_divided_nation
 				modifier = {
 					liberalism_drift = 0.05
 					non_core_manpower = -0.02
@@ -45,7 +45,7 @@ ideas = {
 					always = no
 				}
 				removal_cost = -1
-				picture = FRA_scw_intervention_nationalists_focus
+				picture = GFX_idea_yug_divided_nation
 				modifier = {
 					conservatism_drift = 0.05
 					unity_factor = -0.20
@@ -62,7 +62,7 @@ ideas = {
 					always = no
 				}
 				removal_cost = -1
-				picture = FRA_scw_intervention_nationalists_focus
+				picture = GFX_idea_yug_divided_nation
 				modifier = {
 					reactionarism_drift = 0.05
 					unity_factor = -0.30

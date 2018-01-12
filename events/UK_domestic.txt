@@ -97,7 +97,15 @@ country_event = {#British elections 1936
 				popularity = 0.2 
 				
 			}
-			
+			create_country_leader = {
+			name = "Stanley Baldwin"
+			desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
+			picture = "Baldwin.dds"
+			expire = "1965.1.1"
+			ideology = social_reformism
+			traits = {
+				
+			}
 			add_national_unity = -0.01
 	
 	}
@@ -120,6 +128,16 @@ country_event = {#British elections 1936
 			popularity = 0.2 
 				
 		}
+		
+		create_country_leader = {
+			name = "James Maxton"
+			desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
+			picture = "James_Maxton.dds"
+			expire = "1965.1.1"
+			ideology = social_reformism
+			traits = {
+				
+			}
 		
 		add_national_unity = 0.015
 	

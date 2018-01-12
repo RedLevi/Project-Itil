@@ -49,9 +49,7 @@ communist_peace = {
 		}
 		modifier = {
 			factor = 0.75
-				any_owned_state = { 
 					is_owner_neighbor_of = ROOT
-			}
 		}									
 	}
 
@@ -69,7 +67,7 @@ communist_peace = {
 				}
 			}		
 		}
-
+	}
 	# ROOT = Taker, FROM = Giver
 	puppet = {
 		factor = 500

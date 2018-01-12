@@ -42,7 +42,7 @@ country_event = {#border skirmish
 		add_manpower = -700
 		country_event = { id = ame.3 }
 		hidden_effect = { AME = { country_event = { id = ame.4 } } }
-		declare_war_on = { target = AME type = annex_everything }
+		declare_war_on = { target = AME type = civil_war }
 	}
 	option = {#no war 
 		name = ame.2.b 

@@ -80,6 +80,7 @@ communist_peace = {
 							OR = {
 								owner = { tag = ROOT }
 								owner = { is_puppet_of = ROOT }
+								owner = { is_in_faction_with = ROOT }
 								has_claimed_state_in_peace_conference = ROOT
 							}
 						}
@@ -139,10 +140,12 @@ communist_peace = {
 		}
 		modifier = { #Don't puppet nations in civil war... this is too buggy.
 			factor = 0
+			OR = { 
 			FROM = { has_civil_war = yes }
+			FROM = { has_civil_war _war_goal	 }
+			}
 		}
-
-
+	}
 	# ROOT = Taker, FROM = State
 	take_states = {
 		factor = 200

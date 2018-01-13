@@ -1,2 +1,9 @@
 l_english:
 ####events#####
+norway.1.t=0 "Norway ask`s Germany for protection"
+norway.1.d=0 
+norway.1.a=0 "Send advisors"
+norway.1.b=0 "Make Aliance with Sweeden"
+norway.2.t=0 "Germany Accepts"
+norway.2.d=0 
+norway.2.a=0 "Great News"

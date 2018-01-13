@@ -1,0 +1,40 @@
+################################
+Norway events
+################################
+
+add_namespace = norway
+
+#Norway ask gernay for protection£
+country_event = {
+	id = norway.1
+	title = norway.1.t
+	desc = norway.1.d
+	
+	fire_only_onse = yes
+	
+	
+		triger = {
+		}
+		
+		
+	option = {
+		name = norway.1.a
+		ai_factor = { factor = 50 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

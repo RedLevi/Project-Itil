@@ -30,84 +30,52 @@ set_politics = {
 
 	parties = {
 	    conservatism = {
-			popularity = 10
+			popularity = 36
 		}
 
 		national_integralism = {
-			popularity = 10
+			popularity = 5
 		}
 
 		liberalism = {
-			popularity = 15
+			popularity = 4
 		}
 		
 		communism = {
-			popularity = 12
+			popularity = 6
 		}
 		
 		socialism = {
-			popularity = 43
+			popularity = 13
 		}
 		
 		reactionarism = {
-			popularity = 10
+			popularity = 6
 		}
 		
 	}
 	
-	ruling_party = socialism
+	ruling_party = conservatism
 	last_election = "1932.9.18"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
 
 set_convoys = 25
-set_national_unity = 0.9
+set_national_unity = 0.7
 
 
 create_country_leader = {
-	name = "Per Albin Hansson"
+	name = "Gösta Adolfsson Bagge"
 	desc = "POLITICS_PER_ALBIN_HANSSON_DESC"
-	picture = "Portrait_Sweden_Per_Albin_Hansson.dds"
-	expire = "1965.1.1"
-	ideology = fabianism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Sven Olov Lindholm"
-	desc = "POLITICS_SVEN_OLOV_LINDHOLM_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	expire = "1965.1.1"
-	ideology = integralism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Sven Linderot"
-	desc = "POLITICS_SVEN_LINDEROT_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Axel Pehrsson-Bramstorp"
-	desc = "POLITICS_AXEL_PEHRSSON_BRAMSTORP_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+	picture = "Bagge.dds"
 	expire = "1965.1.1"
 	ideology = democratic_conservatism
 	traits = {
 		#
 	}
 }
+
 
 create_corps_commander = {
 	name = "Folke Högberg"

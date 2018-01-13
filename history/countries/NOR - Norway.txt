@@ -32,72 +32,39 @@ set_politics = {
 		}
 
 		national_integralism = {
-			popularity = 1
+			popularity = 11
 		}
 
 		liberalism = {
-			popularity = 30
+			popularity = 25
 		}
 		
 		communism = {
-			popularity = 5
+			popularity = 3
 		}
 		
 		socialism = {
-			popularity = 29
+			popularity = 5
 		}
 		
 		reactionarism = {
-			popularity = 15
+			popularity = 36
 		}
 		
 	}
 	
-	ruling_party = socialism
+	ruling_party = reactionarism
 	last_election = "1933.10.16"
 	election_frequency = 36
 	elections_allowed = yes
 }
 
 create_country_leader = {
-	name = "Johan Nygaardsvold"
+	name = "Joakim Lehmkuhl"
 	desc = "POLITICS_JOHAN_NYGAARDSVOLD_DESC"
-	picture = "Portrait_Norway_Johan_Nygaardsvold.dds"
+	picture = "Lehmkuhl.dds"
 	expire = "1965.1.1"
-	ideology = fabianism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Vidkun Quisling"
-	desc = "POLITICS_VIDKUN_QUISLING_DESC"
-	picture = "Portrait_Norway_Vidkun_Quisling.dds"
-	expire = "1965.1.1"
-	ideology = integralism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Johan Ludwig Mowinckel"
-	desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
-	expire = "1965.1.1"
-	ideology = democratic_conservatism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Adam Egede-Nissen"
-	desc = "POLITICS_ADAM_EGEDE_NISSEN_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-	expire = "1965.1.1"
-	ideology = marxism
+	ideology = autocracy
 	traits = {
 		#
 	}

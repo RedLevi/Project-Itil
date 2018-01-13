@@ -155,7 +155,7 @@ country_event = { #STruggle for Power#
         retire_country_leader = yes
      }
      create_country_leader = {
-     	name = "Alexei_Rykov"
+     	name = "Alexei Rykov"
      	desc = "POLITICS_LEON_TROTSKY_DESC"
      	picture = "Alexei_Rykov.dds"
      	expire = "1965.1.1"
@@ -178,6 +178,7 @@ country_event = { #Rykov or Bukharin
 
    option = {
       name = soviet.10.a
+	  ai_chance = { factor = 50 } 
         create_country_leader = { #Pick Bukharin#
       	   name = "Nikolai Bukharin"
       	   desc = "POLITICS_LEON_TROTSKY_DESC"
@@ -197,6 +198,7 @@ country_event = { #Rykov or Bukharin
          custom_effect_tooltip = Gosplan_Congress_Happens
    }
    option = { #Stay with Rykov#
+	ai_chance = { factor = 50 } 
       name = soviet.10.b
       set_country_flag = Gosplan_Congress
       set_country_flag = RKKA_Congress
@@ -229,26 +231,31 @@ country_event = { #Fate of Bogd Khanate#
    fire_only_once = yes
    is_triggered_only = yes
 
-   option = { #Subjugate Mongolia#
-      name = soviet.12.a
-      SOV = {
-         create_wargoal = {
-            type = annex_everything
-            target = MON
-        }
-      }
-    }
    option = { #support Sukhbataar
-    name = soviet.12.b
+    name = soviet.12.a
     MON = {
-       set_politics = {
-          ruling_party = communism
-          elections_allowed = no
-      }
+      start_civil_war = {
+				ruling_party = reactionarism
+				ideology = communism
+				size = 0.3
+				capital = 329
+				states = { 329 }
+			}
     }
-    SOV = {
-       add_to_faction = MON
-    }
+    random_other_country = {
+		limit = {
+			original_tag = MON
+			has_government = communism
+		}
+		SOV = { add_to_faction = THIS }
+		create_corps_commander = {
+		name = "Damdin Sukhbaatar"
+		picture = "Damdin_Sukhbaatar.dds"
+		traits = {  }
+		skill = 3
+		}
+	}
+	MON = { country_event = { id = soviet.23 } }
   }
 }
 
@@ -259,7 +266,8 @@ country_event = { #Mongolia Partition#
    fire_only_once = yes
    trigger = {
       tag = SOV
-      SOV = {
+	  MON = { is_in_faction_with = SOV }
+      MON = {
          has_full_control_of_state = 329
          has_full_control_of_state = 330
          has_full_control_of_state = 612
@@ -268,35 +276,36 @@ country_event = { #Mongolia Partition#
 
    option = { #Mongolia Integrated
       name = soviet.13.a
-      add_national_unity = -0.02
-      add_political_power = -200
+	  trigger = {
+		MON = {
+			is_ai = no 
+		}
+	  }
+	  ai_chance = { factor = 20 }
+      add_national_unity = -0.05
+      add_political_power = -100
+	  annex_country = { target = MON transfer_troops = yes }
       add_state_core = 329
       add_state_core = 330
       add_state_core = 612
    }
    option = { #Mongol SSR
       name = soviet.13.b
-      release = MON
+	  ai_chance = { factor = 40 }
       puppet = MON
       add_political_power = -100
-      set_autonomy = { target = MON autonomy_state = autonomy_integrated_puppet}
-      MON = {
-      set_cosmetic_tag = MON_SSR
-      }
-   }
-   option = {
+      set_autonomy = { target = MON autonomy_state = autonomy_dominion
+		}
+	}
+	
+	option = { #Free mongolia
       name = soviet.13.c
-      release = MON
-      puppet = MON
-      MON = {
-         set_politics = {
-            ruling_party = communism
-            elections_allowed = no
-        }
-      }
-   }
+	  ai_chance = { factor = 40 }
+      add_political_power = 100 
+	  add_national_unity = 0.03
+		}
+	}
 }
-
 country_event = { #Soviet Foreign policy#
    id = soviet.14
    title = soviet.14.t
@@ -314,6 +323,7 @@ country_event = { #Soviet Foreign policy#
    mean_time_to_happen = { days = 30 }
    option = { #Full revolution path, only Kirov and Trotsky#
       name = soviet.14.a
+	  ai_chance = { factor = 30 }
       trigger = {
          OR = {
             has_country_flag = Kirov_Leader
@@ -328,24 +338,24 @@ country_event = { #Soviet Foreign policy#
    }
    option = { #Half revolution path, only Kirov and Rykov/Bukharin
       name = soviet.14.b
+	  ai_chance = { factor = 50 }
       trigger = {
          OR = {
              has_country_flag = Kirov_leader
              has_country_flag = Right_Opposition_Leader
          }
       }
-      add_national_unity = -0.05
       set_country_flag = Soviet_Revolution
-      unlock_national_focus = The_Revolution
       set_country_flag = Half_Revolution
    }
    option = { #Isolationism path, only Rykov/Bukharin
       name = soviet.14.c
+	  ai_chance = { factor = 10 }
       trigger = {
          has_country_flag = Right_Opposition_Leader
       }
       add_national_unity = 0.1
-      add_political_power = -500
+      add_political_power = -200
       set_country_flag = isolationism
    }
 }
@@ -360,15 +370,14 @@ country_event = { #Georgian Ultimatum
 
    option = { #Attack
       name = soviet.15.a
+	  ai_chance = { factor = 40 }
       create_wargoal = { type = annex_everything target = GEO }
+	  add_state_claim = 231 
    }
    option = { #Ultimatum
       name = soviet.15.b
-      GEO = { country_event = { id = soviet.16 days = 4 } }
-   }
-   option = { #Nothing
-      name = soviet.15.c
-      add_political_power = -100
+	  ai_chance = { factor = 50 }
+      GEO = { country_event = { id = soviet.16 } }
    }
 }
 
@@ -387,7 +396,7 @@ country_event = { #Georgian response#
    }
    option = { #WAR
       name = soviet.16.a
-      SOV = { create_wargoal = { type = annex_everything target = GEO } }
+      SOV = { create_wargoal = { type = annex_everything target = GEO }  add_state_claim = 231 }
       SOV = { country_event = { id = sovnews.1 days = 1 } }
       ai_chance = { factor = 60 }
    }
@@ -403,7 +412,7 @@ country_event = { #Latvia Integration#
       name = soviet.17.a
       SOV = { annex_country = { target = LAT transfer_troops = yes } }
       SOV = { country_event = { id = sovnews.3 hours = 1 } }
-      ai_chance = { factor = 60 }
+      ai_chance = { factor = 90 }
    }
 
    option = { #WAR
@@ -414,7 +423,7 @@ country_event = { #Latvia Integration#
         country_event = { id = sovnews.4 hours = 1 }
       }
       add_national_unity = -0.3
-      ai_chance = { factor = 40 }
+      ai_chance = { factor = 10 }
    }
 }
 
@@ -469,22 +478,22 @@ country_event = { #Finnish Question#
    is_triggered_only = yes
 
    option = { #Demand Karelia and Salla#
+	ai_chance = { factor = 65 }
       name = soviet.20.a
+	  add_threat = 2
       FIN = { country_event = { id = soviet.21 days = 2 } }
    }
    option = { #Demand annexation#
-      name = soviet.20.b
+      name = soviet.20.b 
+	  ai_chance = { factor = 30 }
+	  add_threat = 5 
       FIN = { country_event = { id = soviet.22 days = 2 } }
    }
-   option = { #Declare war#
-      name = soviet.20.c
-      add_political_power = 50
-      create_wargoal = { type = annex_everything  target = FIN }
-      add_opinion_modifier = { target = FIN modifier = Soviet_Expansionism }
-   }
    option = { #Leave them alone#
-      name = soviet.20.e
+      name = soviet.20.c
+	  ai_chance = { factor = 5 }
       add_political_power = -50
+	  add_threat = -1 
       add_opinion_modifier = { target = FIN modifier = Soviet_Peace }
    }
 }
@@ -500,19 +509,18 @@ country_event = { #Finland Karelia#
       SOV = { transfer_state = 146 }
       SOV = { transfer_state = 147 }
       add_national_unity = -0.1
-      ai_chance = { factor = 30 }
-      SOV = { country_event = { id = sovnews.10 hours = 3 } }
-   }
-   option = { #We will show them who is boss#
-      name = spoviet.21.b
-      FIN = { declare_war_on = { target = SOV type = annex_everything } }
-      add_national_unity = 0.3
-      SOV = { country_event = { id = sovnews.9 hours = 3 } }
+      ai_chance = { factor = 60 }
+      SOV = { country_event = { id = sovnews.10 } }
    }
    option = { #no
-      name = soviet.21.c
+      name = soviet.21.b
+	  ai_chance = { factor = 40 }
       SOV = { create_wargoal = { type = annex_everything target = FIN } }
-      SOV = { country_event = { id = sovnews.11 hours = 3 } }
+	  SOV = {
+		add_state_claim = 146
+		add_state_claim = 147 
+	  }
+      SOV = { country_event = { id = sovnews.11 } }
    }
 }
 
@@ -527,17 +535,82 @@ country_event = { #Finland Karelia#
       SOV = { annex_country = { target = FIN transfer_troops = yes } }
       ai_chance = { factor = 0 }
    }
-   option = { #We will show them who is boss#
-      name = spoviet.22.b
-      FIN = { declare_war_on = { target = SOV type = annex_everything } }
-      add_national_unity = 0.3
-      SOV = { country_event = { id = sovnews.9 hours = 3 } }
-   }
    option = { #no
       name = soviet.22.c
+	  ai_chance = {  factor = 100 }
       SOV = { create_wargoal = { type = annex_everything target = FIN } }
-      SOV = { country_event = { id = sovnews.11 hours = 3 } }
+      SOV = { country_event = { id = sovnews.11 } }
+	  SOV = {
+		add_state_claim = 146
+		add_state_claim = 147 
+	  }
    }
+}
+
+country_event = {#notification for mongolian civil war 
+	id = soviet.23 
+	title = soviet.23.t 
+	desc = soviet.23.d 
+	is_triggered_only = yes 
+	option = {
+		name = soviet.23.a 
+	}
+}
+
+country_event = {#mongolian civil war help call 
+	id = soviet.24
+	title = soviet.24.t 
+	desc = soviet.24.d 
+	fire_only_once = yes 
+	trigger = {
+		original_tag = MON 
+		has_government = communism 
+		has_civil_war = yes 
+		NOT = { is_in_faction_with = SOV }
+	}
+	option = {
+		name = soviet.24.a 
+		SOV = { country_event = { id = soviet.25 } }
+	}
+}
+
+country_event = {#mongolian civil war help RESPONSE 
+	id = soviet.25
+	title = soviet.25.t 
+	desc = soviet.25.d 
+	is_triggered_only = yes 
+	option = {
+		name = soviet.25.a 
+		add_to_faction = FROM
+		declare_war_on = { target = MON type = annex_everything } 
+	}
+}
+
+country_event = {#tag switch for sov mongolia 
+	id = soviet.26 
+	title = soviet.26.t 
+	desc = soviet.26.d 
+	fire_only_once = yes 
+	trigger = {
+		original_tag = MON 
+		has_government = communism 
+		is_in_faction_with = SOV 
+		has_civil_war = no 
+	}
+	hidden = yes 
+	option = {
+		name = soviet.26.a 
+		MON = {
+			transfer_state = 330 
+			change_tag_from = ROOT 
+			annex_country = { target = ROOT transfer_troops = yes }
+			 set_politics = {
+                ruling_party = communism
+                elections_allowed = no
+            }
+            add_popularity = { ideology = communism popularity = 0.7 }
+		}
+	}
 }
 
 country_event = { #TEST EVENT FOR USSR##NOT MEANT FOR NON-TEST USE##

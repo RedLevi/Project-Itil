@@ -699,7 +699,7 @@ focus = {
 focus = {
 	id = The_Revolution
 	icon = GFX_focus_soviet_union_question
-	cost = 1.00
+	cost = 10.00
 	x = 66
 	y = 0
 	available = {
@@ -726,7 +726,7 @@ focus = {
 focus = {
 	id = Dealing_With_Nationalists
 	icon = GFX_focus_generic_join_comintern
-	cost = 2.00
+	cost = 10.00
 	prerequisite = {
 		focus = The_Revolution
 	}
@@ -740,7 +740,7 @@ focus = {
 focus = {
 	id = Look_To_South
 	icon = GFX_goal_generic_position_armies
-	cost = 2.00
+	cost = 10.00
 	prerequisite = {
 		focus = Dealing_With_Nationalists
 	}
@@ -754,7 +754,7 @@ focus = {
 focus = {
 	id = The_Mad_Pasha
 	icon = GFX_goal_generic_secret_weapon
-	cost = 3.00
+	cost = 10.00
 	prerequisite = {
 		focus = Look_To_South
 	}
@@ -770,9 +770,19 @@ focus = {
 focus = {
 	id = Georgian_Ultimatum
 	icon = GFX_goal_generic_forceful_treaty
-	cost = 2.00
+	cost = 10.00
 	prerequisite = {
 		focus = Look_To_South
+	}
+	available = {
+		GEO = {
+			exists = yes 
+			NOT = {
+				is_in_faction_with = SOV 
+				has_government = communism
+				is_puppet_of = SOV 
+			}
+		}
 	}
 	x = 64
 	y = 5
@@ -785,18 +795,20 @@ focus = {
 focus = {
 	id = Look_To_West
 	icon = GFX_goal_generic_position_armies
-	cost = 2.00
+	cost = 10.00
 	prerequisite = {
 		focus = Dealing_With_Nationalists
 	}
 	x = 68
 	y = 3
-
+	completion_reward = {
+		NOR = { country_event = { id = norway.1 } }
+	}
 }
 focus = {
 	id = Crush_The_Traitors
 	icon = GFX_goal_generic_political_pressure
-	cost = 4.00
+	cost = 10.00
 	prerequisite = {
 		focus = Look_To_West
 	}
@@ -812,7 +824,17 @@ focus = {
 focus = {
 	id = Demand_Lithuania
 	icon = GFX_goal_generic_more_territorial_claims
-	cost = 2.00
+	cost = 10.00
+	available = {
+		LIT = {
+			exists = yes 
+			NOT = {
+				is_in_faction_with = SOV 
+				has_government = communism
+				is_puppet_of = SOV 
+			}
+		}
+	}
 	prerequisite = {
 		focus = Look_To_West
 	}
@@ -827,9 +849,17 @@ focus = {
 focus = {
 	id = Integrate_Latvia
 	icon = GFX_focus_cze_german_puppet
-	cost = 2.00
+	cost = 10.00
 	prerequisite = {
 		focus = Look_To_West
+	}
+	available = {
+		LAT = {
+			exists = yes 
+				is_in_faction_with = SOV 
+				has_government = communism
+				is_puppet_of = SOV 
+		}
 	}
 	x = 70
 	y = 5
@@ -843,7 +873,17 @@ focus = {
 focus = {
 	id = Demand_Estonia
 	icon = GFX_goal_generic_more_territorial_claims
-	cost = 2.00
+	cost = 10.00
+	available = {
+		EST = {
+			exists = yes 
+			NOT = {
+				is_in_faction_with = SOV 
+				has_government = communism
+				is_puppet_of = SOV 
+			}
+		}
+	}
 	prerequisite = {
 		focus = Look_To_West
 	}
@@ -910,13 +950,23 @@ focus = {
 	id = Bogd_Khanate
 	icon = GFX_focus_RAJ_lions_of_the_great_war
 	cost = 10.00
+	available = {
+		MON = {
+			exists = yes 
+			NOT = {
+				is_in_faction_with = SOV 
+				has_government = communism
+				is_puppet_of = SOV 
+			}
+		}
+	}
 	prerequisite = {
 		focus = Take_On_Japan
 	}
 	x = 53
 	y = 4
 	completion_reward = {
-	   country_event = { id = soviet.12 days = 3 }
+	   country_event = { id = soviet.12 }
 	}
 
 }

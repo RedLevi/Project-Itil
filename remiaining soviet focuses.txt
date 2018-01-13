@@ -1,0 +1,660 @@
+focus = {
+		id = Deep_Battle
+		icon = GFX_focus_generic_little_entente
+		cost = 10.00
+		prerequisite = {
+			focus = Japan_Lessons
+		}
+		x = 32
+		y = 3
+
+	}
+	focus = {
+		id = Tukhachevsky_Deep_Battle
+		icon = GFX_goal_generic_army_motorized
+		cost = 10.00
+		prerequisite = {
+			focus = Deep_Battle
+		}
+		mutually_exclusive = {
+			focus = Frunze_Deep_Battle
+		}
+		x = 31
+		y = 4
+
+	}
+	focus = {
+		id = Tukhachevsky_Deep_Battle_2
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = Tukhachevsky_Deep_Battle
+		}
+		x = 31
+		y = 5
+
+	}
+	focus = {
+		id = Frunze_Deep_Battle
+		icon = GFX_goal_generic_army_tanks
+		cost = 10.00
+		prerequisite = {
+			focus = Deep_Battle
+		}
+		mutually_exclusive = {
+			focus = Tukhachevsky_Deep_Battle
+		}
+		x = 33
+		y = 4
+
+	}
+	focus = {
+		id = Frunze_Deep_Battle_2
+		icon = GFX_focus_generic_license_production
+		cost = 10.00
+		prerequisite = {
+			focus = Frunze_Deep_Battle
+		}
+		x = 33
+		y = 5
+
+	}
+	focus = {
+		id = Implement_Deep_Battle
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = Frunze_Deep_Battle_2
+			focus = Tukhachevsky_Deep_Battle_2
+		}
+		x = 32
+		y = 6
+
+	}
+	focus = {
+		id = Centralize
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = Soviet_Question
+		}
+		mutually_exclusive = {
+			focus = Decentralize
+		}
+		x = 36
+		y = 8
+
+	}
+	focus = {
+		id = Integrate_Kazakh_SSR
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = Centralize
+		}
+		x = 35
+		y = 9
+
+	}
+	focus = {
+		id = Integrate_Byelorussian_SSR
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = Centralize
+		}
+		x = 37
+		y = 9
+
+	}
+	focus = {
+		id = Soviet_Union
+		icon = GFX_focus_soviet_union
+		cost = 10.00
+		prerequisite = {
+			focus = Integrate_Byelorussian_SSR
+		}
+		prerequisite = {
+			focus = Integrate_Kazakh_SSR
+		}
+		x = 36
+		y = 10
+
+	}
+
+	focus = {
+		id = Decentralize
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = Soviet_Question
+		}
+		mutually_exclusive = {
+			focus = Centralize
+		}
+		x = 42
+		y = 8
+
+	}
+	focus = {
+		id = Release_Kazakh_SSR
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = Decentralize
+		}
+		x = 41
+		y = 9
+
+	}
+	focus = {
+		id = Release_Byelorussian_SSR
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = Decentralize
+		}
+		x = 43
+		y = 9
+
+	}
+	focus = {
+		id = Revolutionary_Union
+		icon = GFX_focus_soviet_union
+		cost = 10.00
+		prerequisite = {
+			focus = Release_Byelorussian_SSR
+		}
+		prerequisite = {
+			focus = Release_Kazakh_SSR
+		}
+		x = 42
+		y = 10
+
+	}
+
+	focus = {
+		id = Reform_The_Army
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = Implement_Deep_Battle
+		}
+		x = 32
+		y = 7
+
+	}
+	focus = {
+		id = Soviet_Question
+		icon = GFX_Soviet_Union_Question
+		cost = 10.00
+		x = 39
+		y = 7
+		available = { always = no }
+
+
+	}
+	focus = {
+		id = A_New_Navy
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = VMF_Meeting
+		}
+		x = 26
+		y = 4
+
+	}
+	focus = {
+		id = Assymetric_Tactics
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10.00
+		prerequisite = {
+			focus = A_New_Navy
+		}
+		mutually_exclusive = {
+			focus = Standing_Fleet
+		}
+		x = 27
+		y = 5
+
+	}
+	focus = {
+		id = Wolf_Packs
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10.00
+		prerequisite = {
+			focus = Assymetric_Tactics
+		}
+		x = 27
+		y = 6
+
+	}
+	focus = {
+		id = Standing_Fleet
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = A_New_Navy
+		}
+		mutually_exclusive = {
+			focus = Assymetric_Tactics
+		}
+		x = 25
+		y = 5
+
+	}
+	focus = {
+		id = A_New_Weapon
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = Standing_Fleet
+		}
+		x = 25
+		y = 6
+
+	}
+	focus = {
+		id = Leningrad_Docks
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = Wolf_Packs
+			focus = A_New_Weapon
+		}
+		x = 26
+		y = 7
+
+	}
+	focus = {
+		id = Red_Fleet
+		icon = GFX_goal_generic_build_navy
+		cost = 10.00
+		prerequisite = {
+			focus = Leningrad_Docks
+		}
+		x = 26
+		y = 8
+
+	}
+	focus = {
+		id = Fighter_Forces
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10.00
+		prerequisite = {
+			focus = VVS_Meeting
+		}
+		x = 20
+		y = 4
+
+	}
+	focus = {
+		id = Strategic_path
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = Fighter_Forces
+		}
+		x = 21
+		y = 5
+
+	}
+	focus = {
+		id = Tactical_Path
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = Fighter_Forces
+		}
+		x = 19
+		y = 5
+
+	}
+	focus = {
+		id = Strategic_Bombers
+		icon = GFX_goal_poland_goal
+		cost = 10.00
+		prerequisite = {
+			focus = Strategic_path
+		}
+		x = 21
+		y = 6
+
+	}
+	focus = {
+		id = Tactical_Bombers
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = Tactical_Path
+		}
+		x = 19
+		y = 6
+
+	}
+	focus = {
+		id = CAS_Forces
+		icon = GFX_goal_generic_CAS
+		cost = 10.00
+		prerequisite = {
+			focus = Strategic_Bombers
+			focus = Tactical_Bombers
+		}
+		x = 20
+		y = 7
+
+	}
+	focus = {
+		id = Red_Airforce
+		icon = GFX_goal_generic_build_airforce
+		cost = 10.00
+		prerequisite = {
+			focus = CAS_Forces
+		}
+		x = 20
+		y = 8
+
+	}
+	focus = {
+		id = Red_army
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = Reform_The_Army
+		}
+		x = 32
+		y = 8
+
+	}
+	focus = {
+		id = Combined_Forces
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = Red_Airforce
+		}
+		prerequisite = {
+			focus = Red_Fleet
+		}
+		prerequisite = {
+			focus = Red_army
+		}
+		x = 26
+		y = 10
+
+	}
+	focus = {
+	id = Red_China
+	icon = GFX_goal_support_communism
+	cost = 10.00
+	prerequisite = {
+		focus = Denounce_Feng
+		focus = Supply_Guominjun
+	}
+	x = 59
+	y = 6
+
+}
+focus = {
+	id = Manchurian_Uprising
+	icon = GFX_goal_generic_special_forces
+	cost = 10.00
+	prerequisite = {
+		focus = Fund_Japanese_Dissidents
+	}
+	prerequisite = {
+		focus = Bogd_Khanate
+	}
+	x = 56
+	y = 5
+
+}
+focus = {
+	id = Korea_Revolution
+	icon = GFX_goal_generic_political_pressure
+	cost = 10.00
+	prerequisite = {
+		focus = Manchurian_Uprising
+	}
+	x = 56
+	y = 6
+
+}
+focus = {
+	id = Sinkiang_Revolution
+	icon = GFX_focus_RAJ_indian_gurkhas
+	cost = 10.00
+	prerequisite = {
+		focus = Bogd_Khanate
+	}
+	x = 53
+	y = 5
+
+}
+focus = {
+	id = Invite_Ho_Chi_Minh
+	icon = GFX_goal_generic_attack_allies
+	cost = 10.00
+	prerequisite = {
+		focus = Crush_The_Traitors
+	}
+	x = 62
+	y = 8
+
+}
+focus = {
+	id = Indochinese_Revolution
+	icon = GFX_goal_generic_demand_territory
+	cost = 10.00
+	prerequisite = {
+		focus = Invite_Ho_Chi_Minh
+	}
+	x = 62
+	y = 9
+
+}
+focus = {
+	id = Crush_The_Reactionaries
+	icon = GFX_focus_soviet_union
+	cost = 10.00
+	prerequisite = {
+		focus = Polish_Crisis
+	}
+	x = 65
+	y = 11
+
+}
+focus = {
+	id = Revolution_In_India
+	icon = GFX_focus_RAJ_seek_help_from_soviet
+	cost = 10.00
+	prerequisite = {
+		focus = Contact_Indian_Nationalists
+	}
+	x = 54
+	y = 8
+
+}
+focus = {
+	id = Demand_Oilfields
+	icon = GFX_goal_generic_oil_refinery
+	cost = 10.00
+	prerequisite = {
+		focus = Organize_Unions_Persia
+	}
+	x = 60
+	y = 8
+
+}
+focus = {
+	id = Fund_Jewish_Communists
+	icon = GFX_goal_support_communism
+	cost = 10.00
+	prerequisite = {
+		focus = Syrian_Socialists
+	}
+	mutually_exclusive = {
+		focus = Anti_Zionist_Policy
+	}
+	x = 58
+	y = 8
+
+}
+focus = {
+	id = Anti_Zionist_Policy
+	icon = GFX_focus_SAF_colonialist_crusade
+	cost = 10.00
+	prerequisite = {
+		focus = Syrian_Socialists
+	}
+	mutually_exclusive = {
+		focus = Fund_Jewish_Communists
+	}
+	x = 56
+	y = 8
+
+}
+focus = {
+	id = Secure_Middle_East
+	icon = GFX_focus_generic_join_comintern
+	cost = 10.00
+	prerequisite = {
+		focus = Fund_Jewish_Communists
+		focus = Anti_Zionist_Policy
+	}
+	prerequisite = {
+		focus = Demand_Oilfields
+	}
+	x = 59
+	y = 9
+
+}
+focus = {
+	id = Destroy_Imperialists
+	icon = GFX_goal_tfv_burn_the_royal_portraits
+	cost = 10.00
+	prerequisite = {
+		focus = Secure_Middle_East
+	}
+	prerequisite = {
+		focus = Revolution_In_India
+	}
+	x = 59
+	y = 10
+
+}
+focus = {
+	id = Polish_Crisis
+	icon = GFX_focus_generic_polish_deal
+	cost = 10.00
+	prerequisite = {
+		focus = Demand_Bessarabia
+	}
+	prerequisite = {
+		focus = German_Syndicalism
+	}
+	prerequisite = {
+		focus = Indochinese_Revolution
+	}
+	x = 65
+	y = 10
+
+}
+focus = {
+	id = Italian_Deal
+	icon = GFX_goal_generic_dangerous_deal
+	cost = 3.00
+	prerequisite = {
+		focus = Crush_The_Traitors
+	}
+	x = 68
+	y = 8
+
+}
+focus = {
+	id = German_Syndicalism
+	icon = GFX_focus_yug_pan_slavic_congress
+	cost = 3.00
+	prerequisite = {
+		focus = Italian_Deal
+	}
+	x = 68
+	y = 9
+
+}
+focus = {
+	id = Demand_Bessarabia
+	icon = GFX_goal_generic_territory_or_war
+	cost = 3.00
+	prerequisite = {
+		focus = Crush_The_Traitors
+	}
+	x = 65
+	y = 8
+
+}
+focus = {
+	id = Demand_Armenia
+	icon = GFX_goal_generic_military_deal
+	cost = 2.00
+	prerequisite = {
+		focus = Georgian_Ultimatum
+	}
+	x = 63
+	y = 6
+
+}
+focus = {
+	id = Demand_Azerbaijan
+	icon = GFX_goal_generic_military_deal
+	cost = 2.00
+	prerequisite = {
+		focus = Georgian_Ultimatum
+	}
+	x = 65
+	y = 6
+
+}
+focus = {
+	id = Syrian_Socialists
+	icon = GFX_focus_generic_soviet_politics
+	cost = 3.00
+	prerequisite = {
+		focus = Demand_Armenia
+	}
+	prerequisite = {
+		focus = Demand_Azerbaijan
+	}
+	x = 57
+	y = 7
+
+}
+focus = {
+	id = Organize_Unions_Persia
+	icon = GFX_goal_generic_trade
+	cost = 3.00
+	prerequisite = {
+		focus = Demand_Azerbaijan
+	}
+	prerequisite = {
+		focus = Demand_Armenia
+	}
+	x = 60
+	y = 7
+
+}
+focus = {
+	id = Contact_Indian_Nationalists
+	icon = GFX_focus_RAJ_british_investors
+	cost = 2.00
+	prerequisite = {
+		focus = The_Mad_Pasha
+	}
+	x = 54
+	y = 7
+	completion_reward = {
+	   #RAJ = { country event }
+	}
+
+}

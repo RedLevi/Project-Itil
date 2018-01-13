@@ -999,13 +999,15 @@ country_event = {#intervention event for ITA
 		name = france.36.a 
 		ai_chance = { factor = 75 }
 		SPF = { remove_from_faction = SYA }
-		ITA = { create_faction = synditern }
-		ITA = { add_to_faction = SYA }
 		SYA = { 
 			white_peace = NFA 
 			white_peace = IFA 
 			white_peace = RFA
 		}
+		NFA = { white_peace = SYA }
+		ITA = { create_faction = synditern }
+		ITA = { add_to_faction = SYA }
+		
 		ITA = { declare_war_on = { target = NFA type = annex_everything } }
 		ITA = { declare_war_on = { target = SPF type = annex_everything } }
 	}

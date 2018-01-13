@@ -65,6 +65,7 @@ very_low_stability:0 "Very Low Stability"
 low_stability:0 "Low Stability"
 normal_stability:0 "Normal Stability"
 high_stability:0 "High Stability"
+very_high_stability:0 "Very High Stability"
 ####party popularity####
 very_low_popularity:0 "Very Low Popularity"
 very_low_popularity_desc:0 "The people have lost all trust in the ruling party and the government and many are actively opposing it."

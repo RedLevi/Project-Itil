@@ -9,8 +9,9 @@ country_event = {
 		id = norway.1
 		title = norway.1.t
 		desc = norway.1.d
+       
 	
-		fire_only_onse = yes
+		is_triggered_only = yes
 
 
 		triger = {
@@ -33,16 +34,19 @@ country_event = {
 			create_faction = "norway_sweeden_alliance"
 			add_to_faction = SWE
 		}		
+	
+	
 	}
 
-	
-	
+
+
 country_event = {
 	id = norway.2
 	title = norway.2.t
 	desc = norway.2.d 
 	
-	fire_only_onse = yes 
+
+	is_triggered_only = yes
 	
 	
 	triger = {
@@ -52,9 +56,9 @@ country_event = {
 	option = {	
 		name = norway.2.a 
 		ai_factor = { factor = 50 }
-    }
-		
+    }	
 	
+}
 	
 	
 	

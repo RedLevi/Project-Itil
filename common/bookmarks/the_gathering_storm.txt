@@ -80,19 +80,19 @@ bookmarks = {
 
 
 		# minors from DLC ####
-		"YUG" = {
-			minor = yes
-			history = "YUG_GATHERING_STORM_DESC"
-			ideology = conservatism
-			ideas = {
-				YUG_dc
-			}
-			focuses = {
-				YUG_enhanced_freedoms
-				YUG_ethnic_int
-				YUG_serbian_dom
-			}
-		}
+		#"YUG" = {
+		#	minor = yes
+		#	history = "YUG_GATHERING_STORM_DESC"
+		#	ideology = conservatism
+		#	ideas = {
+		#		YUG_dc
+		#	}
+		#	focuses = {
+		#		YUG_enhanced_freedoms
+		#		YUG_ethnic_int
+		#		YUG_serbian_dom
+		#	}
+		#}
 
 
 		"CHI"={

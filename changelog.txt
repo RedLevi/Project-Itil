@@ -1,5 +1,19 @@
 -- Ante Rebellum Changelog --
 
+Hotfix 0.1.2:
+
+Extensive work on Soviet localisation, especially events - it should all be there now
+The Five Year Plan final focus will no longer bypass and so the idea should now go away
+Germany has been nerfed slightly, especially regarding recruitable population
+Germany is further resticted by focuses before they can go to war with the Soviets, allowing the latter slightly more buildup time to make the fight fairer
+Localisation fixes in the Germany tree and the England tree
+The Russian state has been slightly buffed
+Ideologies now have world tension limits before being able to perform diplomatic actions - no more justifying on Poland in 1936, sorry Germany
+Fixes to the French civil war - there should hopefully no longer be two sides who don't declare on each other
+Synditern is no longer Synintern
+Peace conference AI has been vastly improved
+Minor popularity and ruling party tweaks for both Sweden and Norway
+
 Hotfix 0.1.1:
 
 A slight error in the French events has been fixed, meaning all the events actually work now

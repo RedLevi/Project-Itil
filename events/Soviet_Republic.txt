@@ -49,12 +49,12 @@ country_event = { #Internal Policies
 
   is_triggered_only = yes
 
-  option = { #Authoritarian
+  option = { #Authoritarian, simmilar to Stalin OTL
     name = soviet.3.a
     set_country_flag = authoritarian_internal
     SOV = { country_event = { id = soviet.4 days = 2 } }
   }
-  option = {
+  option = { #A more liberal government, similar to early USSR
     name = soviet.3.b
     set_country_flag = liberal_internal
     SOV = { country_event = { id = soviet.4 days = 2 } }
@@ -68,18 +68,28 @@ country_event = { #Economic Policies
 
   is_triggered_only = yes
 
-  option = { # Continue the NEP
+  option = { # Market Socialism, OTL Yugoslavia
     name = soviet.4.a
-    set_country_flag = nep_economic
+    set_country_flag = msocialist_economic
     SOV = { country_event = { id = soviet.5 days = 2 } }
   }
-  option = {
+  option = { #State Capitalism, OTL PR China
     name = soviet.4.b
-    set_country_flag = fyp_economic
+    trigger = {
+       NOT = {
+          has_country_flag = liberal_internal
+       }
+    }
+    set_country_flag = scapitalist_economic
     SOV = { country_event = { id = soviet.5 days = 2 } }
   }
-  option = {
+  option = { #Decentralized Socialism, Basically Syndicalism and Anarcho-Collectivism
     name = soviet.4.c
+    trigger = {
+       NOT = {
+          has_country_flag = authoritarian_internal
+       }
+    }
     set_country_flag = dec_soc_economic
     SOV = { country_event = { id = soviet.5 days = 2 } }
   }
@@ -92,17 +102,27 @@ country_event = { #National Policies
 
    is_triggered_only = yes
 
-   option = {
+   option = { #International, Unitary world state
      name = soviet.5.a
      set_country_flag = int_national
      SOV = { country_event = { id = soviet.6 days = 2 } }
    }
-   option = {
+   option = { #National, Revert to Russian nationalism
      name = soviet.5.b
+     trigger = {
+        OR = {
+           NOT = {
+              has_country_flag = authoritarian_internal
+           }
+           NOT = {
+              has_country_flag = dec_soc_economic
+           }
+        }
+     }
      set_country_flag = nat_national
      SOV = { country_event = { id = soviet.6 days = 2 } }
    }
-   option = {
+   option = { #Federalization, Soviet union.
      name = soviet.5.c
      set_country_flag = fed_national
      SOV = { country_event = { id = soviet.6 days = 2 } }
@@ -116,35 +136,60 @@ country_event = { #foreign POlicies
 
    is_triggered_only = yes
 
-   option = {
+   option = { #Defensive, might retake some core territories, but will not expand more than OTL USSR
      name = soviet.6.a
+     trigger = {
+        OR = {
+           NOT = {
+              has_country_flag = int_national
+           }
+           NOT = {
+              has_country_flag = fed_national
+           }
+           NOT = {
+              has_country_flag = dec_soc_economic
+           }
+        }
+     }
      set_country_flag = def_foreign
    }
-   option = {
+   option = { #World Revolution, Will spread the Revolution throught the world.
      name = soviet.6.b
      set_country_flag = worldrev_foreign
    }
-   option = {
+   option = { #Imperialist, Similar to OTL USSR. Will conquer to further its own goals.
      name = soviet.6.c
+     trigger = {
+        OR = {
+           NOT = {
+              has_country_flag = int_national
+           }
+        }
+     }
      set_country_flag = imp_foreign
    }
 }
 
-country_event = { #Trotsky wing
+country_event = { #Trotsky wing, Party centre lead by Trotsky. You probably know whats it about.
    id = soviet.7
    desc = soviet.7.d
    title = soviet.7.t
 
    trigger = {
-      has_country_flag = { authoritarian_internal }
+      has_country_flag = authoritarian_internal
       OR = {
          AND = {
-            has_country_flag = fyp_economic
+            has_country_flag = scapitalist_economic
             has_country_flag = int_national
             has_country_flag = worldrev_foreign
          }
          AND = {
-            has_country_flag = fyp_economic
+            has_country_flag = scapitalist_economic
+            has_country_flag = fed_national
+            has_country_flag = worldrev_foreign
+         }
+         AND = {
+            has_country_flag = msocialist_economic
             has_country_flag = fed_national
             has_country_flag = worldrev_foreign
          }
@@ -156,7 +201,7 @@ country_event = { #Trotsky wing
    }
 }
 
-country_event = { #Kirov Opposition
+country_event = { #Kirov Opposition, Kirov's Stalin-like faction. This is the best choice without a doubt ( ͡° ͜ʖ ͡°)
    id = soviet.8
    title = soviet.8.t
    desc = soviet.8.d
@@ -165,12 +210,12 @@ country_event = { #Kirov Opposition
       has_country_flag = authoritarian_internal
       OR = {
          AND = {
-            has_country_flag = fyp_economic
+            has_country_flag = scapitalist_economic
             has_country_flag = fed_national
             has_country_flag = imp_foreign
          }
          AND = {
-            has_country_flag = nep_economic
+            has_country_flag = msocialist_economic
             has_country_flag = fed_national
             has_country_flag = imp_foreign
          }
@@ -193,7 +238,7 @@ country_event = { #Kirov Opposition
    }
 }
 
-country_event = { #Right opposition
+country_event = { #Left Opposition, OTL Mensheviks, anarchists and Syndies.
    id = soviet.9
    title = soviet.9.t
    desc = soviet.9.d
@@ -202,14 +247,14 @@ country_event = { #Right opposition
       has_country_flag = liberal_internal
       OR = {
          AND = {
-            has_country_flag = nep_economic
-            has_country_flag = nat_national
-            has_country_flag = def_foreign
+            has_country_flag = dec_soc_economic
+            has_country_flag = int_national
+            has_country_flag = worldrev_foreign
          }
          AND = {
-            has_country_flag = nep_economic
+            has_country_flag = dec_soc_economic
             has_country_flag = fed_national
-            has_country_flag = def_foreign
+            has_country_flag = worldrev_foreign
          }
       }
    }
@@ -218,17 +263,51 @@ country_event = { #Right opposition
       name = soviet.9.a
       retire_country_leader = yes
       create_country_leader = {
-     	   name = "Alexei Rykov"
-     	   desc = "POLITICS_LEON_TROTSKY_DESC"
-     	   picture = "Alexei_Rykov.dds"
-      	 expire = "1965.1.1"
-     	   ideology = marxism
-     	   traits = {
-     	      indomitable_perseverance
-     	   }
+   	     name = "Victor Serge"
+   	     desc = "POLITICS_LEON_TROTSKY_DESC"
+   	     picture = "Victor_Serge.dds"
+   	     expire = "1965.1.1"
+   	     ideology = anarcho_communism
+   	     traits = { }
       }
    }
 }
+
+country_event = { #Moderates, OTL Social Revolutionaries, and other moderate socialists and liberals.
+   id = soviet.10
+   title = soviet.10.t
+   desc = soviet.10.d
+
+   trigger = {
+      has_country_flag = liberal_internal
+      OR = {
+         AND = {
+            has_country_flag = msocialist_economic
+            has_country_flag = nat_national
+            has_country_flag = def_foreign
+         }
+         AND = {
+            has_country_flag = msocialist_economic
+            has_country_flag = nat_national
+            has_country_flag = imp_foreign
+         }
+      }
+   }
+   option = {
+      name = soviet.10.a
+      retire_country_leader = yes
+      create_country_leader = {
+   	     name = "Viktor Chernov"
+   	     desc = "POLITICS_LEON_TROTSKY_DESC"
+   	     picture = "Viktor_Chernov.dds"
+   	     expire = "1965.1.1"
+   	     ideology = socialist_revolutionary
+   	     traits = { }
+      }
+   }
+}
+
+
 
 news_event = { #Kirov Death News#
    id = soviet.11

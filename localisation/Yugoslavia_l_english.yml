@@ -49,3 +49,6 @@ YUG_dc_dom_desc:0 "Yugoslavia is still a divided country, but things are improvi
 ####tooltip####
 seryug_change:0 "We will release Bosnia as a puppet state, and change our name back to Serbia."
 albania_factories:0 "The building of factories for the Albanias will have an effect based on our chosen ethnic integration path."
+integrate_bos:0 "Efforts to integrate the Bosnians will begin"
+integrate_bos:0 "Efforts to integrate the Croatians will begin"
+integrate_mon:0 "Efforts to integrate the Montenegrins will begin"

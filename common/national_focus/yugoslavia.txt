@@ -188,7 +188,7 @@ focus_tree = {
 		id = YUG_croat_goods
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 1
-		y = 4
+		y = 5
 		cost = 10
 		ai_will_do = {
 			factor = 9
@@ -220,7 +220,7 @@ focus_tree = {
 		id = YUG_alb_goods
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 3
-		y = 4
+		y = 5
 		cost = 10
 		ai_will_do = {
 			factor = 9
@@ -282,6 +282,94 @@ focus_tree = {
 		completion_reward = {
 			swap_ideas = { remove_idea = YUG_dc add_idea = YUG_dc_int }
 			set_country_flag = YUG_ethnic_integration
+		}
+	}
+
+	focus = {
+		id = YUG_bos_focus
+		icon = GFX_goal_continuous_increase_nu
+		x = 5
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_ethnic_int
+		}
+		available = {
+			NOT = { has_war = yes }
+			owns_state = 104 # Bosnia
+		}
+		completion_reward = {
+			custom_effect_tooltip = integrate_bos
+			hidden_effect = {
+				random_list = {
+					5 = { country_event = { id = yug.2 days = 34 } } # 5% chance - miserable failure
+					30 = { country_event = { id = yug.3 days = 34 } } # 30% chance - workable outcome
+					50 = { country_event = { id = yug.3 days = 34 } } # 50% chance - good outcome
+					15 = { country_event = { id = yug.4 days = 34 } } # 15% chance - fantastic outcome
+				}	
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_cro_focus
+		icon = GFX_focus_yug_banovina_of_croatia
+		x = 5
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_bos_focus
+		}
+		available = {
+			NOT = { has_war = yes }
+			owns_state = 109 # Croatia
+			owns_state = 103 # Dalmatia
+			owns_state = 163 # Zara
+		}
+		completion_reward = {
+			custom_effect_tooltip = integrate_cro
+			#hidden_effect = {
+			#	country_event = { id = yug.5 days = 34 } # 15% chance - miserable failure
+			#	country_event = { id = yug.6 days = 34 } # 50% chance - workable outcome
+			#	country_event = { id = yug.7 days = 34 } # 30% chance - good outcome
+			#	country_event = { id = yug.8 days = 34 } # 5% chance - fantastic outcome
+			#}
+		}
+	}
+
+	focus = {
+		id = YUG_mon_focus
+		icon = GFX_focus_yug_banovina_of_croatia
+		x = 5
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_bos_focus
+		}
+		available = {
+			NOT = { has_war = yes }
+			owns_state = 105 # Montenegro
+		}
+		completion_reward = {
+			custom_effect_tooltip = integrate_mon
+			#hidden_effect = {
+			#	country_event = { id = yug.9 days = 34 } # 10% chance - miserable failure
+			#	country_event = { id = yug.10 days = 34 } # 40% chance - workable outcome
+			#	country_event = { id = yug.11 days = 34 } # 30% chance - good outcome
+			#	country_event = { id = yug.12 days = 34 } # 10% chance - fantastic outcome
+			#}
 		}
 	}
 

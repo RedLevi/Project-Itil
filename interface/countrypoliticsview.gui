@@ -49,29 +49,28 @@ guiTypes = {
 			position = { x= 19 y = 305 }
 			Orientation = "UPPER_LEFT"
 			frame = 1
-		}			
-		
+		}
 		containerWindowType = {
 			name = "chart_explanation"
-			position = { x = 18 y = 116 }
+			position = { x = 300 y = 298 }
+			size = { width = 245 height = 79 }
+			clipping = yes
 			verticalScrollbar = "right_vertical_slider"
-			size = { width = 330 height = 70 }
-			clipping = no
-			
-#			background = {
-#				name = "Background"		
-#				spriteType ="GFX_pol_piechart_bg"
-#			}
+			margin = { top = 3 bottom = 2}
+			background = {
+				name = "Background"		
+				spriteType ="GFX_pol_piechart_bg"
+				position = { x = 37 y = 3 }
+			}
 			
 			gridBoxType = {
 				name = "parties_grid"
-				position = { x = 260 y = 184 }
-				size = { width = 125%% height = 125%% }
-				slotsize = { width = 230 height = 16 }
+				position = { x = -20 y = -5 }
+				size = { width = 230 height = 80 }
+				slotsize = { width = 230 height = 14 }
 				format = "UPPER_LEFT"
 			}
 		}
-
 		
 		containerWindowType = {
 			name = "political_pie_chart"
@@ -113,7 +112,7 @@ guiTypes = {
 				font = "hoi_18mbs"
 				text = "ideology"
 				maxWidth = 155
-				maxHeight = 30
+				maxHeight = 20
 			}
 			
 			instantTextboxType = {
@@ -375,8 +374,8 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "ideas"
-			position = { x = 0 y = 425 } # moves the box on which idea buttons are placed
-			size = { width=100%% height=95%% }
+			position = { x = 0 y = 425 }
+			size = { width=100%% height=100%% }
 			verticalScrollbar = "right_vertical_slider"
 			margin = { top = 14 bottom = 13}
 		
@@ -391,8 +390,8 @@ guiTypes = {
 				name = "idea_categories_grid"
 				position = { x = 17 y = 0 }
 				size = { width = 100%% height = 100%% }
-				slotsize = { width = 64 height = 106 } # moves the rows of idea buttons
-				max_slots_horizontal = 1 # decides whether it is possible to have several rows next to each other
+				slotsize = { width = 64 height = 106 }
+				max_slots_horizontal = 1
 				format = "UPPER_LEFT"
 			}
 
@@ -422,8 +421,9 @@ guiTypes = {
 		iconType ={
 			name ="politics_bottom"
 			spriteType = "GFX_main_screens_bottom"
-			position = { x = 2 y = -50 }
-			Orientation = "LOWER_LEFT"
+			position = { x = -2 y = 383 }
+			Orientation = "UPPER_LEFT"
+			scale = 1.02
 		}
 
 		iconType = {
@@ -434,41 +434,39 @@ guiTypes = {
 	
 		buttonType = {
 			name = "manage_occupied_button"
-			position = { x = -500 y = -43 }
+			position = { x = 20 y = 390 }
 			quadTextureSprite = "GFX_button_221x34"
 			buttonFont = "hoi_16mbs"
-			Orientation = "LOWER_RIGHT"
+			Orientation = "UPPER_LEFT"
 			buttonText = "MANAGE_OCCUPIED_TERRITORIES"
-		}
-		
-		
+		}			
 
 		buttonType = {
 			name = "show_subjects_button"
-			position = { x = -250 y = -43 }
+			position = { x = 280 y = 390 }
 			quadTextureSprite = "GFX_button_221x34"
 			buttonFont = "hoi_16mbs"
-			Orientation = "LOWER_RIGHT"
+			Orientation = "UPPER_LEFT"
 			buttonText = "MANAGE_SUBJECTS"
 		}		
 		
 	}
 	
 	containerWindowType = {
-		name = "country_politics_idea_category_entry" # all idea political idea buttons
+		name = "country_politics_idea_category_entry"
 		position = { x = 0 y = 0 }
 		size = { width=550 height= 100 }
 		clipping = no
 		
 		iconType ={
 			name ="category_header"
-			spriteType = "GFX_category_header" # bar on which you can see the name of idea group
+			spriteType = "GFX_category_header"
 			position = { x=-5 y=2 }
 			Orientation = "UPPER_LEFT"
 		}
 		iconType ={
 			name ="category_icon"
-			spriteType = "GFX_idea_categories" # icons near ideas
+			spriteType = "GFX_idea_categories"
 			position = { x=4 y=8 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -496,8 +494,8 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "political_ideas_window"
-		position = { x = -356 y = 100 }	 
-		show_position = { x = 544 y = 100 } # moves the entire window that pops up when clicking on an idea
+		position = { x = -356 y = 100 }	
+		show_position = { x = 544 y = 100 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300
@@ -552,7 +550,7 @@ guiTypes = {
 				
 				gridBoxType = {
 					name = "box"
-					position = { x = 10 y = 10 } # moves the individual ideas in the idea window
+					position = { x = 10 y = 10 }
 					size = { width = 500 height = 1 }
 					slotsize = { width = 231 height = 75 }
 					max_slots_horizontal = 2
@@ -635,7 +633,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "add_idea_button"
-			position = { x = 0 y = 0 } # sets where all idea buttons are
+			position = { x = 0 y = 0 }
 			spriteType = "GFX_add_pol_idea_button"
 			clicksound = click_default
 		}
@@ -673,7 +671,7 @@ guiTypes = {
 		iconType = {
 			name = "idea_traits"
 			position = { x = 53 y = 51 }
-			spriteType = "GFX_idea_traits_strip" # sets the location of icons on the icons of the selectable ideas (yes I wrote that right)
+			spriteType = "GFX_idea_traits_strip"
 			centerposition = yes
 			alwaystransparent = yes
 			frame = 1
@@ -714,7 +712,7 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "political_party_info_entry"
-		size = { width = 330 height = 26 }
+		size = { width = 330 height = 18 }
 		clipping = no
 
 		iconType = {
@@ -751,7 +749,7 @@ guiTypes = {
 			text = "party name"
 			fixedsize = yes
 			maxWidth = 170
-			maxHeight = 30
+			maxHeight = 18
 		}
 	}
 	
@@ -762,7 +760,7 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "trait"
-			position = { x = -16 y = 0 } # moves trait name
+			position = { x = -16 y = 0 }
 			font = "hoi_16mbs"
 			fixedsize = yes
 			text = ""

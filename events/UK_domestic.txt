@@ -109,7 +109,7 @@ country_event = {#British elections 1936
 			add_national_unity = -0.01
 	
 	}
-	
+	}
 	option = { #democratic party 
 	
 		name = engdom.3.c 

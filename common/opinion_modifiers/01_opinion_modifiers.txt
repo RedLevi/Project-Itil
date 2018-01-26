@@ -69,4 +69,7 @@ Soviet_Revanchism = { value = -200 }
 Soviet_Denounce = { value = -50 }
 Soviet_Expansionism = { value = -200 }
 Soviet_Peace = { value = 75 }
+#AME#
+AME_agression = { value = -75 }
+AME_reconciliation = { value = 25 }
 }

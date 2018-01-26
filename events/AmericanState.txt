@@ -1,4 +1,4 @@
-﻿###koach###
+###koach###
 add_namespace = ame 
 ###triggers for the american civil war###
 
@@ -235,8 +235,7 @@ country_event = {#peace summit?
 	trigger = { 
 		tag = AME 
 		has_opinion_modifier = hostile_status
-		has_country_flag = AME_ford
-		date > 1936.11.3
+		has_country_flag = AME_dip_ford_flag
 		NOT = { has_war_with = USA }
 		USA = { 
 			exists = yes 

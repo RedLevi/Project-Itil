@@ -69,6 +69,8 @@ bookmarks = {
 			history = "USA_GATHERING_STORM_DESC"
 			ideology = national_integralism
 			ideas = {
+				AME_great_depression
+				AME_national_disunity
 			}
 			focuses = {
 			}

@@ -2,8 +2,230 @@ ideas = {
 
 	country = {
 	
+		AME_int_KKK_idea = {
+		
+			picture = ENG_the_war_to_end_all_wars
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			 
+				unity_factor = 0.05 
+				land_reinforce_rate = 0.1 
+			
+			}
+		
+		}
+	
+		AME_int_war_idea = {
+		
+			picture = generic_manpower_bonus
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			 
+				unity_factor = 0.1 
+				conscription = 0.15
+			
+			}
+		
+		}
+		
+		AME_eco_ford_idea = {
+		
+			picture = generic_foreign_capital
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			 
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.035 
+				political_power_gain = -0.02 
+			
+			}
+		
+		}
+	
+		AME_eco_party_idea = {
+		
+			picture = generic_flexible_foreign_policy
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				industrial_capacity_factory = 0.05 
+				consumer_goods_factor = -0.01
+				unity_factor = 0.035 
+			
+			}
+		
+		}
+	
+		AME_eco_KKK_idea = {
+		
+			picture = generic_production_bonus
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				production_speed_buildings_factor = 0.3 
+				consumer_goods_factor = -0.02
+				research_time_factor = 0.025 
+				unity_factor = -0.05 
+			
+			}
+			
+		}
+		AME_eco_war_idea = {
+		
+			picture = generic_license_production
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				production_speed_arms_factory_factor = 0.15 
+				production_speed_industrial_complex_factor = -0.1 
+				conversion_cost_civ_to_mil_factor = -0.2 
+			
+			}
+		
+		}
+	
+		AME_great_depression = {
+		
+			picture = great_depression
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				consumer_goods_factor = 0.15 
+				industrial_capacity_factory = -0.15
+			
+			}
+		
+		}
+		
+		AME_national_disunity = {
+		
+			picture = generic_disjointed_gov
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+					unity_factor = -0.3 
+					conscription_factor = -0.02
+			
+			}
+		
+		}
+	
 		AME_peace_idea = {
 		
+			picture = generic_deal_with_the_devil2 
+			
 			available = {
 			
 				always = yes

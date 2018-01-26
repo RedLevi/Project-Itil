@@ -4,6 +4,8 @@ ideas = {
 		
 		USA_great_depression = {
 		
+			
+			
 			available = {
 			
 				always = yes
@@ -17,7 +19,7 @@ ideas = {
 			}
 			
 			removal_cost = -1 
-			
+			picture = great_depression 
 			modifier = {
 			
 				consumer_goods_factor = 0.15 
@@ -28,7 +30,9 @@ ideas = {
 		}
 		
 		USA_peace_idea = {
-		
+			
+			
+			
 			available = {
 			
 				always = yes
@@ -42,7 +46,7 @@ ideas = {
 			}
 			
 			removal_cost = -1 
-			
+			picture = generic_deal_with_the_devil2
 			modifier = {
 			
 				consumer_goods_factor = -0.01
@@ -68,7 +72,7 @@ ideas = {
 			}
 			
 			removal_cost = -1 
-			
+			picture = new_deal
 			modifier = {
 			
 				consumer_goods_factor = 0.1
@@ -79,6 +83,9 @@ ideas = {
 		}
 		
 		new_deal_one = {
+			
+		
+			picture = new_deal
 			available = {
 			
 				always = yes
@@ -103,7 +110,8 @@ ideas = {
 		}
 		
 		new_deal_two = {
-		
+			
+			picture = new_deal
 			available = {
 			
 				always = yes
@@ -127,6 +135,8 @@ ideas = {
 		}
 		
 		new_deal_three = {
+		
+			picture = new_deal
 		
 			available = {
 			

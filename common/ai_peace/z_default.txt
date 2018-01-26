@@ -29,7 +29,6 @@ communist_peace = {
 					NOT = { 
 						is_claimed_by = ROOT
 						is_core_of = ROOT
-						has_claimed_state_in_peace_conference = ROOT
 					}
 				}
 			}
@@ -42,7 +41,6 @@ communist_peace = {
 					OR = { 
 						is_claimed_by = ROOT
 						is_core_of = ROOT
-						has_claimed_state_in_peace_conference = ROOT
 					}
 				}
 			}
@@ -90,20 +88,8 @@ communist_peace = {
 		}
 		modifier = { 
 			factor = 0
-			OR = {
-				AND = {
-					#Is NOT a major
-					NOT = { num_of_factories > 100 }
-					NOT = { tag = GER }
-					NOT = { tag = ENG }
-					NOT = { tag = ITA }
-					NOT = { tag = FRA }
-					NOT = { tag = USA }
-					NOT = { tag = JAP }
-					NOT = { tag = SOV }
-				}
 				is_puppet = yes
-			}
+			
 		}
 		modifier = {
 			factor = 0
@@ -122,7 +108,6 @@ communist_peace = {
 			factor = 0
 			OR = { 
 			FROM = { has_civil_war = yes }
-			FROM = { has_war_goal = civil_war }
 			}
 		}
 	}

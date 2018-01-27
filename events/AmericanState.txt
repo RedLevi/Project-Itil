@@ -147,7 +147,6 @@ country_event = {#American Party
 	option = {
 		name = ame.10.a 
 		add_national_unity = -0.01
-		hidden_effect = { country_event = { id = ame.11 days = 80 } }
 	}
 }
 
@@ -155,9 +154,39 @@ country_event = {#constitutional convention
 	id = ame.11 
 	title = ame.11.t 
 	desc = ame.11.d 
-	is_triggered_only = yes 
+	fire_only_once = yes 
+	trigger = {
+	
+		tag = AME
+		OR = {
+		
+			has_completed_focus = AME_int_ford
+			has_completed_focus = AME_int_party
+			has_completed_focus = AME_int_KKK
+			has_completed_focus = AME_int_war 
+		
+		}
+	
+	} 
+	
+	mean_time_to_happen = { days = 10 }
+	
 	option = {#american party 
 		name = ame.11.a 
+		trigger = {
+		
+			OR = {
+				
+				has_country_flag = AME_dip_party_flag 
+				has_country_flag = AME_eco_party_flag 
+				has_country_flag = AME_int_party_flag
+				
+				}
+
+			
+			}
+		
+		
 		ai_chance = { factor = 25 }
 		add_national_unity = 0.05 
 		set_country_flag = AME_americanist
@@ -171,10 +200,22 @@ country_event = {#constitutional convention
 				
 			}
 		}
-		country_event = { id = ame.16 days = 3 }
+		
 	}
 	option = {#KKK 
 		name = ame.11.b 
+		trigger = {
+		
+			OR = {
+				
+				has_country_flag = AME_dip_KKK_flag 
+				has_country_flag = AME_eco_KKK_flag 
+				has_country_flag = AME_int_KKK_flag
+				
+				}
+
+			
+			}
 		ai_chance = { factor = 25 }
 		add_national_unity = 0.035
 		set_country_flag = AME_KKK
@@ -188,10 +229,22 @@ country_event = {#constitutional convention
 				
 			}
 		}
-		country_event = { id = ame.17 days = 3 }
+		
 	}
 	option = {#Ford 
 		name = ame.11.c 
+		trigger = {
+		
+			OR = {
+				
+				has_country_flag = AME_dip_ford_flag 
+				has_country_flag = AME_eco_ford_flag 
+				has_country_flag = AME_int_ford_flag
+				
+				}
+
+			
+			}
 		ai_chance = { factor = 25 }
 		add_national_unity = -0.01 
 		set_country_flag = AME_ford
@@ -205,10 +258,22 @@ country_event = {#constitutional convention
 				
 			}
 		}
-		country_event = { id = ame.19 days = 3 }
+		
 	}
-	option = {#Ford 
+	option = {#war 
 		name = ame.11.e 
+		trigger = {
+		
+			OR = {
+				
+				has_country_flag = AME_dip_war_flag 
+				has_country_flag = AME_eco_war_flag 
+				has_country_flag = AME_int_war_flag
+				
+				}
+
+			
+			}
 		ai_chance = { factor = 25 }
 		add_national_unity = -0.04 
 		set_country_flag = AME_military
@@ -222,7 +287,7 @@ country_event = {#constitutional convention
 				
 			}
 		}
-		country_event = { id = ame.18 days = 3 }
+		
 	}
 }
 
@@ -314,47 +379,3 @@ country_event = {#No peace with the federalists
 }
 
 ####American constitution events###
-
-country_event = {#Americanist constitution 
-	id = ame.16 
-	title = ame.16.t 
-	desc = ame.16.d 
-	is_triggered_only = yes 
-	option = {
-		name = ame.16.a 
-		add_ideas = AME_americanist_rule
-	}
-}
-
-country_event = {#KKK constitution 
-	id = ame.17 
-	title = ame.17.t 
-	desc = ame.17.d 
-	is_triggered_only = yes 
-	option = {
-		name = ame.17.a 
-		add_ideas = AME_KKK_rule
-	}
-}
-
-country_event = {#Military constitution 
-	id = ame.18 
-	title = ame.18.t 
-	desc = ame.18.d 
-	is_triggered_only = yes 
-	option = {
-		name = ame.18.a 
-		add_ideas = AME_military_rule
-	}
-}
-
-country_event = {#Fordist constitution 
-	id = ame.19 
-	title = ame.19.t 
-	desc = ame.19.d 
-	is_triggered_only = yes 
-	option = {
-		name = ame.19.a 
-		add_ideas = AME_fordist_rule
-	}
-}

@@ -210,7 +210,7 @@ focus_tree = {
 	
 	focus = {
 		id = AME_int_KKK
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_focus_CZE_german_puppet
 		x = 9
 		y = 3
 		cost = 10
@@ -222,6 +222,40 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = AME_int_KKK_flag
 			add_ideas = AME_int_KKK_idea
+		}
+	}
+	
+	focus = {
+		id = AME_int_party
+		icon = GFX_goal_generic_secret_weapon
+		x = 12
+		y = 3
+		cost = 10
+		
+		mutually_exclusive = { focus =  AME_int_war focus = AME_int_KKK focus = AME_int_ford }
+		prerequisite = { focus = AME_dip_war  focus =  AME_dip_KKK focus = AME_dip_party focus = AME_dip_ford }
+        available_if_capitulated = no
+
+		completion_reward = {
+			set_country_flag = AME_int_party_flag
+			add_ideas = AME_int_party_idea
+		}
+	}
+	
+	focus = {
+		id = AME_int_ford
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 15
+		y = 3
+		cost = 10
+		
+		mutually_exclusive = { focus =  AME_int_war focus = AME_int_KKK focus = AME_int_party }
+		prerequisite = { focus = AME_dip_war  focus =  AME_dip_KKK focus = AME_dip_party focus = AME_dip_ford }
+        available_if_capitulated = no
+
+		completion_reward = {
+			set_country_flag = AME_int_ford_flag
+			add_ideas = AME_int_ford_idea
 		}
 	}
 }

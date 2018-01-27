@@ -2,6 +2,63 @@ ideas = {
 
 	country = {
 	
+		AME_int_ford_idea = {
+		
+			picture = ROM_king_carol_ii_hedonist
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			 
+				unity_factor = 0.2 
+				political_power_gain = 0.1
+				consumer_goods_factor = 0.02 
+			
+			}
+			
+		}
+	
+		AME_int_party_idea = {
+		
+			picture = generic_fascism_drift_2
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			 
+				unity_factor = 0.1 
+				political_power_gain = 0.35 
+				army_core_attack_factor = 0.1 
+				army_core_defence_factor = 0.1 
+			
+			}
+		
+		}
+	
 		AME_int_KKK_idea = {
 		
 			picture = ENG_the_war_to_end_all_wars

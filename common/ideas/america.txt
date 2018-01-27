@@ -2,6 +2,33 @@ ideas = {
 
 	country = {
 	
+		AME_great_depression_2 = {
+		
+			picture = great_depression
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				consumer_goods_factor = 0.125 
+				industrial_capacity_factory = -0.125
+			
+			}
+		
+		}
+	
 		AME_int_ford_idea = {
 		
 			picture = ROM_king_carol_ii_hedonist
@@ -247,6 +274,7 @@ ideas = {
 			
 				consumer_goods_factor = 0.15 
 				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.25
 			
 			}
 		

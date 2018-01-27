@@ -38,7 +38,7 @@ country_event = { #Constitutent Assembly#
 
    option = {
       name = soviet.2.a
-      SOV = { country_event = { id = soviet.3 days = 2 } }
+      set_country_flag = const_assembly
    }
 }
 
@@ -52,12 +52,10 @@ country_event = { #Internal Policies
   option = { #Authoritarian, simmilar to Stalin OTL
     name = soviet.3.a
     set_country_flag = authoritarian_internal
-    SOV = { country_event = { id = soviet.4 days = 2 } }
-  }
+    }
   option = { #A more liberal government, similar to early USSR
     name = soviet.3.b
     set_country_flag = liberal_internal
-    SOV = { country_event = { id = soviet.4 days = 2 } }
   }
 }
 
@@ -71,7 +69,6 @@ country_event = { #Economic Policies
   option = { # Market Socialism, OTL Yugoslavia
     name = soviet.4.a
     set_country_flag = msocialist_economic
-    SOV = { country_event = { id = soviet.5 days = 2 } }
   }
   option = { #State Capitalism, OTL PR China
     name = soviet.4.b
@@ -81,7 +78,6 @@ country_event = { #Economic Policies
        }
     }
     set_country_flag = scapitalist_economic
-    SOV = { country_event = { id = soviet.5 days = 2 } }
   }
   option = { #Decentralized Socialism, Basically Syndicalism and Anarcho-Collectivism
     name = soviet.4.c
@@ -91,7 +87,6 @@ country_event = { #Economic Policies
        }
     }
     set_country_flag = dec_soc_economic
-    SOV = { country_event = { id = soviet.5 days = 2 } }
   }
 }
 
@@ -105,7 +100,6 @@ country_event = { #National Policies
    option = { #International, Unitary world state
      name = soviet.5.a
      set_country_flag = int_national
-     SOV = { country_event = { id = soviet.6 days = 2 } }
    }
    option = { #National, Revert to Russian nationalism
      name = soviet.5.b
@@ -120,12 +114,10 @@ country_event = { #National Policies
         }
      }
      set_country_flag = nat_national
-     SOV = { country_event = { id = soviet.6 days = 2 } }
    }
    option = { #Federalization, Soviet union.
      name = soviet.5.c
      set_country_flag = fed_national
-     SOV = { country_event = { id = soviet.6 days = 2 } }
    }
 }
 
@@ -175,6 +167,8 @@ country_event = { #Trotsky wing, Party centre lead by Trotsky. You probably know
    desc = soviet.7.d
    title = soviet.7.t
 
+   fire_only_once = yes
+
    trigger = {
       has_country_flag = authoritarian_internal
       OR = {
@@ -198,6 +192,7 @@ country_event = { #Trotsky wing, Party centre lead by Trotsky. You probably know
 
    option = {
       name = soviet.7.a
+      set_country_flag = trotsky_victory
    }
 }
 
@@ -205,6 +200,8 @@ country_event = { #Kirov Opposition, Kirov's Stalin-like faction. This is the be
    id = soviet.8
    title = soviet.8.t
    desc = soviet.8.d
+
+   fire_only_once = yes
 
    trigger = {
       has_country_flag = authoritarian_internal
@@ -224,17 +221,7 @@ country_event = { #Kirov Opposition, Kirov's Stalin-like faction. This is the be
 
    option = {
       name = soviet.8.a
-      retire_country_leader = yes
-      create_country_leader = {
-   	     name = "Sergey Kirov"
-   	     desc = "POLITICS_LEON_TROTSKY_DESC"
-   	     picture = "Sergey_Kirov.dds"
-   	     expire = "1965.1.1"
-   	     ideology = marxism
-   	     traits = {
-   	        glorious_leader
-   	     }
-      }
+      set_country_flag = kirov_victory
    }
 }
 
@@ -242,6 +229,8 @@ country_event = { #Left Opposition, OTL Mensheviks, anarchists and Syndies.
    id = soviet.9
    title = soviet.9.t
    desc = soviet.9.d
+
+   fire_only_once = yes
 
    trigger = {
       has_country_flag = liberal_internal
@@ -262,6 +251,7 @@ country_event = { #Left Opposition, OTL Mensheviks, anarchists and Syndies.
    option = {
       name = soviet.9.a
       retire_country_leader = yes
+      set_country_flag = left_victory
       create_country_leader = {
    	     name = "Victor Serge"
    	     desc = "POLITICS_LEON_TROTSKY_DESC"
@@ -277,6 +267,8 @@ country_event = { #Moderates, OTL Social Revolutionaries, and other moderate soc
    id = soviet.10
    title = soviet.10.t
    desc = soviet.10.d
+
+   fire_only_once = yes
 
    trigger = {
       has_country_flag = liberal_internal
@@ -296,6 +288,7 @@ country_event = { #Moderates, OTL Social Revolutionaries, and other moderate soc
    option = {
       name = soviet.10.a
       retire_country_leader = yes
+      set_country_flag = moderate_victory
       create_country_leader = {
    	     name = "Viktor Chernov"
    	     desc = "POLITICS_LEON_TROTSKY_DESC"

@@ -21,7 +21,7 @@ focus_tree = {
 focus = {
  	id = 1936_assembly
  	icon = GFX_focus_lenin_soviet
- 	cost = 2.00
+ 	cost = 3.00
  	x = 41
  	y = 0
  	completion_reward = {
@@ -29,6 +29,169 @@ focus = {
  	country_event = { id = soviet.2 days = 1 }
     }
  }
+ focus = {
+  	id = Internal_Policies
+  	icon = GFX_focus_renounce_the_treaty_of_trianon
+  	cost = 2.00
+		prerequisite = {
+		   focus = 1936_assembly
+		}
+		available = {
+			 has_country_flag = const_assembly
+		}
+  	x = 40
+  	y = 1
+  	completion_reward = {
+  	   country_event = { id = soviet.3 days = 1 }
+    }
+  }
+	focus = {
+   	id = Economic_Policies
+   	icon = GFX_goal_generic_neutrality_focus
+   	cost = 2.00
+ 		prerequisite = {
+ 		   focus = Internal_Policies
+ 		}
+ 		available = {
+		   OR = {
+ 			    has_country_flag = authoritarian_internal
+					has_country_flag = liberal_internal
+			 }
+ 		}
+   	x = 40
+   	y = 2
+   	completion_reward = {
+   	   country_event = { id = soviet.4 days = 1 }
+     }
+   }
+	 focus = {
+    	id = National_Policies
+    	icon = GFX_goal_generic_national_unity
+    	cost = 2.00
+  		prerequisite = {
+  		   focus = 1936_assembly
+  		}
+  		available = {
+ 		     OR = {
+  			    has_country_flag = dec_soc_economic
+ 				    has_country_flag = msocialist_economic
+				    has_country_flag = scapitalist_economic
+ 			   }
+  		}
+    	x = 42
+    	y = 1
+    	completion_reward = {
+    	   country_event = { id = soviet.5 days = 1 }
+      }
+    }
+		focus = {
+     	id = Foreign_Policies
+     	icon = GFX_goal_generic_position_armies
+     	cost = 2.00
+   		prerequisite = {
+   		   focus = National_Policies
+   		}
+   		available = {
+  		     OR = {
+   			       has_country_flag = nat_national
+  				     has_country_flag = int_national
+ 				       has_country_flag = fed_national
+  			   }
+   		}
+     	x = 42
+     	y = 2
+     	completion_reward = {
+     	   country_event = { id = soviet.6 days = 1 }
+       }
+     }
+   focus = {
+	    id = Trotsky_Wins
+			icon = GFX_goal_support_communism
+			cost = 3
+			prerequisite = {
+			   focus = Foreign_Policies
+			}
+			prerequisite = {
+				 focus = Economic_Policies
+			}
+			available = {
+			   has_country_flag = trotsky_victory
+			}
+			x = 38
+     	y = 3
+			completion_reward = {
+
+			}
+	 }
+	 focus = {
+	    id = Kirov_Wins
+			icon = GFX_focus_generic_join_comintern
+			cost = 3
+			prerequisite = {
+			   focus = Foreign_Policies
+			}
+			prerequisite = {
+			   focus = Economic_Policies
+			}
+			available = {
+			   has_country_flag = kirov_victory
+			}
+			x = 40
+     	y = 3
+			completion_reward = {
+			   retire_country_leader = yes
+         create_country_leader = {
+					  name = "Sergey Kirov"
+					  desc = "POLITICS_LEON_TROTSKY_DESC"
+					  picture = "Sergey_Kirov.dds"
+					  expire = "1965.1.1"
+					  ideology = marxism
+					  traits = {
+						   glorious_leader
+					  }
+			   }
+			}
+	 }
+	 focus = {
+	    id = Left_Wins
+			icon = GFX_focus_generic_soviet_politics
+			cost = 3
+			prerequisite = {
+			   focus = Foreign_Policies
+			}
+			prerequisite = {
+				 focus = Economic_Policies
+			}
+			available = {
+			   has_country_flag = left_victory
+			}
+			x = 42
+     	y = 3
+			completion_reward = {
+
+			}
+	 }
+	 focus = {
+	    id = Moderates_Win
+			icon = GFX_focus_generic_self_management
+			cost = 3
+			prerequisite = {
+			   focus = Foreign_Policies
+			}
+			prerequisite = {
+				 focus = Economic_Policies
+			}
+			available = {
+			   has_country_flag = moderate_victory
+			}
+			x = 44
+     	y = 3
+			completion_reward = {
+
+			}
+	 }
+
+
 
 ###################################################################
 #####Economic Tree#################################################
@@ -192,7 +355,7 @@ focus = {
  		}
 	}
 
-	
+
 
 	focus = {
 		id = Resources_Exploitation
@@ -582,11 +745,11 @@ focus = {
 	}
 	available = {
 		GEO = {
-			exists = yes 
+			exists = yes
 			NOT = {
-				is_in_faction_with = SOV 
+				is_in_faction_with = SOV
 				has_government = communism
-				is_puppet_of = SOV 
+				is_puppet_of = SOV
 			}
 		}
 	}
@@ -633,11 +796,11 @@ focus = {
 	cost = 10.00
 	available = {
 		LIT = {
-			exists = yes 
+			exists = yes
 			NOT = {
-				is_in_faction_with = SOV 
+				is_in_faction_with = SOV
 				has_government = communism
-				is_puppet_of = SOV 
+				is_puppet_of = SOV
 			}
 		}
 	}
@@ -661,10 +824,10 @@ focus = {
 	}
 	available = {
 		LAT = {
-			exists = yes 
-				is_in_faction_with = SOV 
+			exists = yes
+				is_in_faction_with = SOV
 				has_government = communism
-				is_puppet_of = SOV 
+				is_puppet_of = SOV
 		}
 	}
 	x = 70
@@ -682,11 +845,11 @@ focus = {
 	cost = 10.00
 	available = {
 		EST = {
-			exists = yes 
+			exists = yes
 			NOT = {
-				is_in_faction_with = SOV 
+				is_in_faction_with = SOV
 				has_government = communism
-				is_puppet_of = SOV 
+				is_puppet_of = SOV
 			}
 		}
 	}
@@ -758,11 +921,11 @@ focus = {
 	cost = 10.00
 	available = {
 		MON = {
-			exists = yes 
+			exists = yes
 			NOT = {
-				is_in_faction_with = SOV 
+				is_in_faction_with = SOV
 				has_government = communism
-				is_puppet_of = SOV 
+				is_puppet_of = SOV
 			}
 		}
 	}
@@ -895,7 +1058,7 @@ focus = {
 		y = 3
 		completion_reward = {
 		air_experience = 30
-		}	
+		}
 
 	}
 	focus = {
@@ -911,7 +1074,7 @@ focus = {
 			navy_experience = 30
 		}
 	}
-	
+
 	focus = {
 		id = Design_Bureaus
 		icon = GFX_goal_generic_forceful_treaty
@@ -919,9 +1082,9 @@ focus = {
 		prerequisite = {
 			focus = Japan_Lessons
 		}
-		#prerequisite = {
-		#	focus = Deep_Battle
-		#}
+		prerequisite = {
+		focus = Deep_Battle
+		}
 		x = 29
 		y = 4
 		completion_reward = {
@@ -969,15 +1132,12 @@ focus = {
 		}
 
 	}
-	
-	
+
+
 	focus = {
 		id = Moscow_Arsenal
 		icon = GFX_focus_secret_rearmament
 		cost = 10.00
-		#prerequisite = {
-		#	focus = Reform_The_Army
-		#}
 		prerequisite = {
 			focus = Kharkiv_Komintern
 		}
@@ -993,7 +1153,7 @@ focus = {
 		}
 
 	}
-	
+
 	focus = {
 		id = Lenin_Heavy_Tank_Plant
 		icon = GFX_focus_soviet_Superheavy
@@ -1023,7 +1183,7 @@ focus = {
 		}
 
 	}
-}
+
 
 focus = {
 		id = Deep_Battle
@@ -1098,107 +1258,6 @@ focus = {
 		y = 6
 
 	}
-	focus = {
-		id = Centralize
-		icon = GFX_focus_generic_self_management
-		cost = 10.00
-		prerequisite = {
-			focus = Soviet_Question
-		}
-		mutually_exclusive = {
-			focus = Decentralize
-		}
-		x = 36
-		y = 8
-
-	}
-	focus = {
-		id = Integrate_Kazakh_SSR
-		icon = GFX_goal_anschluss
-		cost = 10.00
-		prerequisite = {
-			focus = Centralize
-		}
-		x = 35
-		y = 9
-
-	}
-	focus = {
-		id = Integrate_Byelorussian_SSR
-		icon = GFX_goal_anschluss
-		cost = 10.00
-		prerequisite = {
-			focus = Centralize
-		}
-		x = 37
-		y = 9
-
-	}
-	focus = {
-		id = Soviet_Union
-		icon = GFX_focus_soviet_union
-		cost = 10.00
-		prerequisite = {
-			focus = Integrate_Byelorussian_SSR
-		}
-		prerequisite = {
-			focus = Integrate_Kazakh_SSR
-		}
-		x = 36
-		y = 10
-
-	}
-
-	focus = {
-		id = Decentralize
-		icon = GFX_focus_generic_soviet_politics
-		cost = 10.00
-		prerequisite = {
-			focus = Soviet_Question
-		}
-		mutually_exclusive = {
-			focus = Centralize
-		}
-		x = 42
-		y = 8
-
-	}
-	focus = {
-		id = Release_Kazakh_SSR
-		icon = GFX_goal_generic_alliance
-		cost = 10.00
-		prerequisite = {
-			focus = Decentralize
-		}
-		x = 41
-		y = 9
-
-	}
-	focus = {
-		id = Release_Byelorussian_SSR
-		icon = GFX_goal_generic_alliance
-		cost = 10.00
-		prerequisite = {
-			focus = Decentralize
-		}
-		x = 43
-		y = 9
-
-	}
-	focus = {
-		id = Revolutionary_Union
-		icon = GFX_focus_soviet_union
-		cost = 10.00
-		prerequisite = {
-			focus = Release_Byelorussian_SSR
-		}
-		prerequisite = {
-			focus = Release_Kazakh_SSR
-		}
-		x = 42
-		y = 10
-
-	}
 
 	focus = {
 		id = Reform_The_Army
@@ -1212,23 +1271,13 @@ focus = {
 
 	}
 	focus = {
-		id = Soviet_Question
-		icon = GFX_Soviet_Union_Question
-		cost = 10.00
-		x = 39
-		y = 7
-		available = { always = no }
-
-
-	}
-	focus = {
 		id = A_New_Navy
 		icon = GFX_goal_generic_navy_cruiser
 		cost = 10.00
 		prerequisite = {
 			focus = VMF_Meeting
 		}
-		x = 26
+		x = 25
 		y = 4
 
 	}
@@ -1242,7 +1291,7 @@ focus = {
 		mutually_exclusive = {
 			focus = Standing_Fleet
 		}
-		x = 27
+		x = 26
 		y = 5
 
 	}
@@ -1253,7 +1302,7 @@ focus = {
 		prerequisite = {
 			focus = Assymetric_Tactics
 		}
-		x = 27
+		x = 26
 		y = 6
 
 	}
@@ -1267,7 +1316,7 @@ focus = {
 		mutually_exclusive = {
 			focus = Assymetric_Tactics
 		}
-		x = 25
+		x = 24
 		y = 5
 
 	}
@@ -1278,7 +1327,7 @@ focus = {
 		prerequisite = {
 			focus = Standing_Fleet
 		}
-		x = 25
+		x = 24
 		y = 6
 
 	}
@@ -1290,7 +1339,7 @@ focus = {
 			focus = Wolf_Packs
 			focus = A_New_Weapon
 		}
-		x = 26
+		x = 25
 		y = 7
 
 	}
@@ -1301,7 +1350,7 @@ focus = {
 		prerequisite = {
 			focus = Leningrad_Docks
 		}
-		x = 26
+		x = 25
 		y = 8
 
 	}
@@ -1389,6 +1438,7 @@ focus = {
 		cost = 10.00
 		prerequisite = {
 			focus = Reform_The_Army
+			focus = Moscow_Arsenal
 		}
 		x = 32
 		y = 8
@@ -1684,4 +1734,5 @@ focus = {
 	   #RAJ = { country event }
 	}
 
+}
 }

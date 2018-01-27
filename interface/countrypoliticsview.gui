@@ -59,7 +59,7 @@ guiTypes = {
 			margin = { top = 3 bottom = 2}
 			background = {
 				name = "Background"		
-				spriteType ="GFX_pol_piechart_bg"
+				spriteType ="GFX_pol_ideologies_bg"
 				position = { x = 37 y = 3 }
 			}
 			

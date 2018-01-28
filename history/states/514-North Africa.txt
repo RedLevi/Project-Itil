@@ -3,6 +3,7 @@ state={
 	id=514
 	name="STATE_514" # Algerian Desert
 	manpower = 207733
+        impassable = yes
 	
 	state_category = wasteland
 

@@ -5,6 +5,7 @@ state={
 		4138 4961 7987 8103 10900 12836 
 	}
 	manpower=12312
+        impassable = yes
 
 	history={
 		owner = ENG

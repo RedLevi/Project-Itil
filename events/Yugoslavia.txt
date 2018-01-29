@@ -27,3 +27,116 @@ country_event = {
 		add_political_power = -50
 	}
 }
+
+### Ethnic Integration Events ###
+## Bosnia ##
+
+country_event = { # Miserable Failure
+	id = yug.2
+	title = yug.2.t
+	desc = yug.2.d
+
+	is_triggered_only = yes
+
+	option = { # Send in the troops, crush the riots, enforce the policy
+		name = yug.2.a
+		add_political_power = -20
+		add_manpower = -1000
+		add_national_unity = -0.02
+		104 = { 
+			add_manpower = -2000
+			add_core_of = YUG
+		}
+		set_country_flag = BOS_put_down
+	}
+
+	option = { # Compromise is the way forwards
+		name = yug.2.b
+		add_political_power = -80
+		104 = {
+			add_core_of = YUG
+		}
+	}
+
+	option = { # Give up our efforts
+		name = yug.2.c
+		add_political_power = 20
+	}
+}
+
+country_event = { # Workable Outcome
+	id = yug.3
+	title = yug.3.t
+	desc = yug.3.d
+
+	is_triggered_only = yes
+
+	option = { # Nice work
+		name = yug.3.a
+		104 = {
+			add_core_of = YUG
+		}
+	}
+}
+
+country_event = { # Good Outcome
+	id = yug.4
+	title = yug.4.t
+	desc = yug.4.d
+
+	is_triggered_only = yes
+
+	option = { # Nice work
+		name = yug.4.a
+		add_political_power = 20
+		104 = {
+			add_core_of = YUG
+		}
+	}
+
+	option = { # Push for industrial benefits!
+		name = yug.4.b
+		add_political_power = -20
+		104 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			add_core_of = YUG
+		}
+	}
+}
+
+country_event = { # Good Outcome
+	id = yug.5
+	title = yug.5.t
+	desc = yug.5.d
+
+	is_triggered_only = yes
+
+	option = { # Nice work
+		name = yug.5.a
+		add_political_power = 20
+		104 = {
+			add_core_of = YUG
+		}
+	}
+
+	option = { # Push for industrial benefits!
+		name = yug.5.b
+		add_political_power = -20
+		104 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			add_core_of = YUG
+		}
+	}
+
+	option = { # Push for military benefits!
+		name = yug.6.a
+		add_political_power = -40
+		add_manpower = 10000
+		104 = {
+			add_manpower = 10000
+			add_core_of = YUG
+		}
+	}
+}

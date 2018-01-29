@@ -317,7 +317,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_cro_focus
-		icon = GFX_focus_yug_banovina_of_croatia
+		icon = GFX_focus_YUG_banovina_of_croatia
 		x = 5
 		y = 3
 		cost = 10
@@ -347,7 +347,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_mon_focus
-		icon = GFX_focus_yug_banovina_of_croatia
+		icon = GFX_focus_generic_support_the_left_right
 		x = 5
 		y = 4
 		cost = 10
@@ -356,7 +356,7 @@ focus_tree = {
 		}
 		available_if_capitulated = no
 		prerequisite = {
-			focus = YUG_bos_focus
+			focus = YUG_cro_focus
 		}
 		available = {
 			NOT = { has_war = yes }
@@ -395,6 +395,181 @@ focus_tree = {
 		completion_reward = {
 			swap_ideas = { remove_idea = YUG_dc add_idea = YUG_dc_dom }
 			set_country_flag = YUG_serbian_dominance
+		}
+	}
+
+	focus = {
+		id = YUG_inc_cen
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 7
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_serbian_dom
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = YUG_serbify_bos
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 7
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			owns_state = 104 # Bosnia
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_inc_cen
+		}
+		completion_reward = {
+			104 = {
+				add_core_of = YUG
+			}
+			custom_effect_tooltip = bosnian_unrest
+			set_country_flag = BOS_forcefully_integrated
+		}
+	}
+
+	focus = {
+		id = YUG_ser_resources
+		icon = GFX_goal_generic_construction2
+		x = 9
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			owns_state = 107 # Capital
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_inc_cen
+		}
+		completion_reward = {
+			add_resource = { type = steel amount = 12 state = 107 }
+		}
+	}
+
+	focus = {
+		id = YUG_force_cro
+		icon = GFX_focus_YUG_banovina_of_croatia
+		x = 7
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 11
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_serbify_bos
+		}
+		prerequisite = {
+			focus = YUG_ser_resources
+		}
+		completion_reward = {
+			109 = {
+				add_core_of = YUG
+			}
+			103 = {
+				add_core_of = YUG
+			}
+			163 = {
+				add_core_of = YUG
+			}
+			custom_effect_tooltip = croatian_unrest
+			set_country_flag = CRO_forcefully_integrated
+		}
+	}
+
+	focus = {
+		id = YUG_bos_mil_goods
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 9
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			owns_state = 104 # Bosnia
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_serbify_bos
+		}
+		prerequisite = {
+			focus = YUG_ser_resources
+		}
+		completion_reward = {
+			104 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_crush_mon
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 8
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			owns_state = 105 # Montenegro
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_force_cro
+		}
+		prerequisite = {
+			focus = YUG_bos_mil_goods
+		}
+		completion_reward = {
+			105 = {
+				add_core_of = YUG
+			}
+			custom_effect_tooltip = croatian_unrest
+			set_country_flag = MON_forcefully_integrated
+		}
+	}
+
+	focus = {
+		id = the_yug_line
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 8
+		y = 6
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			owns_state = 109 # Croatia
+			owns_state = 103 # Dalmatia
+			owns_state = 163 # Zara
+			owns_state = 105 # Montenegro
+			# 44 Albania
+			# 104 Bosnia
+			# 107 Capital
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_crush_mon
+		}
+		completion_reward = {
+			add_political_power = 10
 		}
 	}
 }

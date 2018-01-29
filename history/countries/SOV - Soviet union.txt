@@ -41,7 +41,7 @@ set_convoys = 50
 set_national_unity = 0.55
 
 add_ideas = {
-	#multiple_splitt_party
+	split_party
 	home_of_revolution
 	#great_country
 	limited_freedom_law

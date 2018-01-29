@@ -1,6 +1,7 @@
 state={
 	id=683
 	name="STATE_683"
+        impassable = yes
 	
 	state_category = wasteland
 	

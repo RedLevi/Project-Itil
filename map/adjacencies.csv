@@ -201,4 +201,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 11618;671;impassable;-1;-1;-1;-1;-1;;alpine5 mountains
 671;11634;impassable;-1;-1;-1;-1;-1;;alpine5 mountains
 671;3675;impassable;-1;-1;-1;-1;-1;;alpine5 mountains
+12512;13058;impassable;-1;-1;-1;-1;-1;;greenland
+12512;13066;impassable;-1;-1;-1;-1;-1;;greenland
+12512;10245;impassable;-1;-1;-1;-1;-1;;greenland
 -1;-1;;-1;-1;-1;-1;-1;-1

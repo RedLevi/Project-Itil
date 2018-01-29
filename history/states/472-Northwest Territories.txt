@@ -1,6 +1,7 @@
 state={
 	id=472
 	name="STATE_472"
+        impassable = yes
 	resources={
 		oil=10
 		steel=12

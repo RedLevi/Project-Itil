@@ -1,4 +1,4 @@
-###koach###
+﻿###koach###
 add_namespace = ame 
 ###triggers for the american civil war###
 

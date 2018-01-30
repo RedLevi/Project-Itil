@@ -168,7 +168,15 @@ focus = {
 			x = 42
      	y = 3
 			completion_reward = {
-
+			   retire_country_leader = yes
+			   create_country_leader = {
+				    name = "Victor Serge"
+				    desc = "POLITICS_LEON_TROTSKY_DESC"
+				    picture = "Victor_Serge.dds"
+				    expire = "1965.1.1"
+				    ideology = anarcho_communism
+				    traits = { }
+			   }
 			}
 	 }
 	 focus = {
@@ -187,7 +195,15 @@ focus = {
 			x = 44
      	y = 3
 			completion_reward = {
-
+			   retire_country_leader = yes
+			   create_country_leader = {
+					   name = "Viktor Chernov"
+					   desc = "POLITICS_LEON_TROTSKY_DESC"
+					   picture = "Viktor_Chernov.dds"
+					   expire = "1965.1.1"
+					   ideology = socialist_revolutionary
+					   traits = { }
+			   }
 			}
 	 }
 

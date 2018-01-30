@@ -1,5 +1,5 @@
-################################
-Norway events
+﻿################################
+#Norway events
 ################################
 
 add_namespace = norway
@@ -8,25 +8,25 @@ add_namespace = norway
 country_event = {
 	id = norway.1
 	title = norway.1.t
-	desc = norway.1.d  
-	
+	desc = norway.1.d
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = norway.1.a #
-		ai_factor = { factor = 50 }
+		ai_chance = { factor = 50 }
 		GER = {
-		country_event = { id = germany.2 days = 1 } 
+		country_event = { id = germany.2 days = 1 }
 		}
 	}
 
 	option = {
 		name= norway.1.b #allied with Sweeden
-		ai_factor = { factor = 50 }
+		ai_chance = { factor = 50 }
 		create_faction = "norway_sweeden_alliance"
 		add_to_faction = SWE
-	}		
-	
+	}
+
 }
 
 
@@ -34,17 +34,17 @@ country_event = {
 country_event = {
 	id = norway.2
 	title = norway.2.t
-	desc = norway.2.d 
-	
+	desc = norway.2.d
+
 
 	is_triggered_only = yes
-	
 
-	
-	
-	option = {	
-		name = norway.2.a 
-		ai_factor = { factor = 50 }
-    }	
-	
+
+
+
+	option = {
+		name = norway.2.a
+		ai_chance = { factor = 50 }
+    }
+
 }

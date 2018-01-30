@@ -2,100 +2,100 @@
 
 add_namespace = engdom
 
-country_event = {#the imperial conference 
+country_event = {#the imperial conference
 
 	id = engdom.1
-	title = engdom.1.t 
-	desc = engdom.1.d 
-	
-	is_triggered_only = yes 
-	
+	title = engdom.1.t
+	desc = engdom.1.d
+
+	is_triggered_only = yes
+
 	option = {
-	
-		name = engdom.1.a 
-		
-		add_national_unity = -0.025 
-	
+
+		name = engdom.1.a
+
+		add_national_unity = -0.025
+
 	}
 
 }
 
-country_event = {#Constitutional crisis 1936 
+country_event = {#Constitutional crisis 1936
 
-	id = engdom.2 
-	title = engdom.2.t 
-	desc = engdom.2.d 
-	
-	fire_only_once = yes 
-	
+	id = engdom.2
+	title = engdom.2.t
+	desc = engdom.2.d
+
+	fire_only_once = yes
+
 	trigger = {
-	
-		tag = ENG 
-		
+
+		tag = ENG
+
 		date > 1936.7.7
-	
+
 	}
-	
+
 	option = {
-	
-		name = engdom.2.a 
-		
-		add_national_unity = -0.02 
-		
+
+		name = engdom.2.a
+
+		add_national_unity = -0.02
+
 		country_event = { id = engdom.3 days = 30 }
-	
+
 	}
 
 }
 
-country_event = {#British elections 1936 
+country_event = {#British elections 1936
 
-	id = engdom.3 
-	title = engdom.3.t 
-	desc = engdom.3.d 
-	
-	is_triggered_only = yes 
-	
-	option = {#Liberal victory 
-	
-		name = engdom.3.a 
+	id = engdom.3
+	title = engdom.3.t
+	desc = engdom.3.d
+
+	is_triggered_only = yes
+
+	option = {#Liberal victory
+
+		name = engdom.3.a
 		ai_chance = { factor = 50 }
-		
-		set_politics = { 
-		
-			ruling_party = liberalism 
-			elections_allowed = no 
-			
+
+		set_politics = {
+
+			ruling_party = liberalism
+			elections_allowed = no
+
 		}
-		
-			add_popularity = { 
-			
-				ideology = liberalism  
-				popularity = 0.2 
-				
+
+			add_popularity = {
+
+				ideology = liberalism
+				popularity = 0.2
+
 			}
-			
-			add_national_unity = 0.01 
-	
+
+			add_national_unity = 0.01
+
 	}
-	
-	option = {#tory victory 
-	
-		name = engdom.3.b 
+
+	option = {#tory victory
+
+		name = engdom.3.b
 		ai_chance = { factor = 30 }
-		
-		set_politics = { 
-		
-			ruling_party = conservatism 
-			elections_allowed = no 
-			
+
+		set_politics = {
+
+			ruling_party = conservatism
+			elections_allowed = no
+
 		}
-		
-			add_popularity = { 
-			
-				ideology = conservatism  
-				popularity = 0.2 
-				
+
+			add_popularity = {
+
+				ideology = conservatism
+				popularity = 0.2
+
 			}
 			create_country_leader = {
 			name = "Stanley Baldwin"
@@ -104,31 +104,32 @@ country_event = {#British elections 1936
 			expire = "1965.1.1"
 			ideology = social_reformism
 			traits = {
-				
+
+			}
 			}
 			add_national_unity = -0.01
-	
+
+
 	}
-	}
-	option = { #democratic party 
-	
-		name = engdom.3.c 
+	option = { #democratic party
+
+		name = engdom.3.c
 		ai_chance = { factor = 20 }
-		
-		set_politics = { 
-		
-			ruling_party = socialism 
-			elections_allowed = no 
-			
+
+		set_politics = {
+
+			ruling_party = socialism
+			elections_allowed = no
+
 		}
-		
-		add_popularity = { 
-			
-			ideology = socialism  
-			popularity = 0.2 
-				
+
+		add_popularity = {
+
+			ideology = socialism
+			popularity = 0.2
+
 		}
-		
+
 		create_country_leader = {
 			name = "James Maxton"
 			desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
@@ -136,718 +137,720 @@ country_event = {#British elections 1936
 			expire = "1965.1.1"
 			ideology = social_reformism
 			traits = {
-				
+
 			}
-		
+			}
+
 		add_national_unity = 0.015
-	
-	}
+
+
 
 }
+}
 
-news_event = { #Federalization 
+news_event = { #Federalization
 
-	id = engdom.4 
-	title = engdom.4.t 
-	desc = engdom.4.d 
-	
+	id = engdom.4
+	title = engdom.4.t
+	desc = engdom.4.d
+
 	major = yes
-	
-	is_triggered_only = yes 
-	
-	option = {
-	
-		trigger = {
-		
-			NOT = {
-			
-				is_subject_of = ENG 
-			
-			}
-		
-		}
-		
-		name = engdom.4.a 
-	
-	}
-	
-	option = {
-	
-		trigger = {
-		
-			is_subject_of = ENG 
-		
-		}
-		
-		name = engdom.4.b 
 
-		add_national_unity = -0.01 
-	
+	is_triggered_only = yes
+
+	option = {
+
+		trigger = {
+
+			NOT = {
+
+				is_subject_of = ENG
+
+			}
+
+		}
+
+		name = engdom.4.a
+
+	}
+
+	option = {
+
+		trigger = {
+
+			is_subject_of = ENG
+
+		}
+
+		name = engdom.4.b
+
+		add_national_unity = -0.01
+
 	}
 
 }
 
-country_event = {#IRE federal 
+country_event = {#IRE federal
 
-	id = engdom.5 
-	title = engdom.5.t 
-	desc = engdom.5.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.5
+	title = engdom.5.t
+	desc = engdom.5.d
+
+	is_triggered_only = yes
+
 	option = {#Harsh
-	
-		name = engdom.5.a 
+
+		name = engdom.5.a
 		ai_chance = { factor = 70 }
-		
+
 		IRE = { country_event = { id = engdom.6 days = 3 } }
-		
+
 		add_national_unity = 0.015
-	
+
 	}
-	
+
 		###MAYBE ANOTHER OPTION
-	
-	option = {#leave them 
-	
-		name = engdom.5.c 
+
+	option = {#leave them
+
+		name = engdom.5.c
 		ai_chance = { factor = 0 }
-		
+
 		add_national_unity = -0.075
 
 		reverse_add_opinion_modifier = { target = IRE modifier = spared_federal }
-	
+
 	}
 
 }
 
-country_event = {#Ireland annexation offer 
+country_event = {#Ireland annexation offer
 
-	id = engdom.6 
-	title = engdom.6.t 
-	desc = engdom.6.d 
-	
-	is_triggered_only = yes 
-	
-	option = {#comply 
-	
+	id = engdom.6
+	title = engdom.6.t
+	desc = engdom.6.d
+
+	is_triggered_only = yes
+
+	option = {#comply
+
 		trigger = { NOT = { has_war_with = ENG } }
-		
-		name = engdom.6.a 
+
+		name = engdom.6.a
 		ai_chance = { factor = 50 }
-		
+
 		ENG = { country_event = { id = engdom.7 } }
-	
+
 	}
-	
-	option = {#revolt 
-	
+
+	option = {#revolt
+
 		trigger = { NOT = { has_war_with = ENG } }
 		name = engdom.6.b
 		ai_chance = { factor = 50 }
-		
-		imperial_war_effect = yes 
-	
+
+		imperial_war_effect = yes
+
 	}
-	
-	option = {#invalid 
-	
-		trigger = { 
-		
+
+	option = {#invalid
+
+		trigger = {
+
 			has_war_with = ENG
-		
+
 		}
-		
-		name = engdom.6.c 
-	
-	}	
+
+		name = engdom.6.c
+
+	}
 
 }
 
-country_event = {#The irish kneel 
+country_event = {#The irish kneel
 
-	id = engdom.7 
-	title = engdom.7.t 
-	desc = engdom.7.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.7
+	title = engdom.7.t
+	desc = engdom.7.d
+
+	is_triggered_only = yes
+
 	option = {
-	
-		name = engdom.7.a 
+
+		name = engdom.7.a
 		annex_country = { target = IRE transfer_troops = yes }
-		add_national_unity = 0.02  
-	
+		add_national_unity = 0.02
+
 	}
 
 }
 
-country_event = {#CAN federal 
+country_event = {#CAN federal
 
-	id = engdom.8 
-	title = engdom.8.t 
-	desc = engdom.8.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.8
+	title = engdom.8.t
+	desc = engdom.8.d
+
+	is_triggered_only = yes
+
 	option = {#Harsh
-	
-		name = engdom.5.a 
+
+		name = engdom.5.a
 		ai_chance = { factor = 90 }
-		
+
 		CAN = { country_event = { id = engdom.9 days = 3 } }
-		
+
 		add_national_unity = 0.015
-	
+
 	}
-	
+
 		###MAYBE ANOTHER OPTION
-	
-	option = {#leave them 
-	
-		name = engdom.5.c 
+
+	option = {#leave them
+
+		name = engdom.5.c
 		ai_chance = { factor = 10 }
-		
+
 		add_national_unity = -0.075
 
 		reverse_add_opinion_modifier = { target = CAN modifier = spared_federal }
-	
+
 	}
 
 }
 
-country_event = {#Canada annexation offer 
+country_event = {#Canada annexation offer
 
-	id = engdom.9 
-	title = engdom.6.t 
-	desc = engdom.6.d 
-	
-	is_triggered_only = yes 
-	
-	option = {#comply 
-	
+	id = engdom.9
+	title = engdom.6.t
+	desc = engdom.6.d
+
+	is_triggered_only = yes
+
+	option = {#comply
+
 		trigger = { NOT = { has_war_with = ENG } }
-		
-		name = engdom.6.a 
+
+		name = engdom.6.a
 		ai_chance = { factor = 10 }
-		
+
 		ENG = { country_event = { id = engdom.10 } }
-	
+
 	}
-	
-	option = {#revolt 
-	
+
+	option = {#revolt
+
 		trigger = { NOT = { has_war_with = ENG } }
 		name = engdom.6.b
 		ai_chance = { factor = 90 }
-		
-		imperial_war_effect = yes 
-	
+
+		imperial_war_effect = yes
+
 	}
-	
-	option = {#invalid 
-	
-		trigger = { 
-		
+
+	option = {#invalid
+
+		trigger = {
+
 			has_war_with = ENG
-		
+
 		}
-		
-		name = engdom.6.c 
-	
-	}	
+
+		name = engdom.6.c
+
+	}
 
 }
 
-country_event = {#The Canadians kneel 
+country_event = {#The Canadians kneel
 
-	id = engdom.10 
-	title = engdom.10.t 
-	desc = engdom.10.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.10
+	title = engdom.10.t
+	desc = engdom.10.d
+
+	is_triggered_only = yes
+
 	option = {
-	
-		name = engdom.7.a 
+
+		name = engdom.7.a
 		annex_country = { target = CAN transfer_troops = yes }
-		add_national_unity = 0.02  
-	
+		add_national_unity = 0.02
+
 	}
 
 }
 
-country_event = {#SAF federal 
+country_event = {#SAF federal
 
-	id = engdom.11 
-	title = engdom.11.t 
-	desc = engdom.11.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.11
+	title = engdom.11.t
+	desc = engdom.11.d
+
+	is_triggered_only = yes
+
 	option = {#Harsh
-	
-		name = engdom.5.a 
+
+		name = engdom.5.a
 		ai_chance = { factor = 95 }
-		
+
 		SAF = { country_event = { id = engdom.12 days = 3 } }
-		
+
 		add_national_unity = 0.015
-	
+
 	}
-	
+
 		###MAYBE ANOTHER OPTION
-	
-	option = {#leave them 
-	
-		name = engdom.5.c 
+
+	option = {#leave them
+
+		name = engdom.5.c
 		ai_chance = { factor = 5 }
-		
+
 		add_national_unity = -0.075
 
 		reverse_add_opinion_modifier = { target = SAF modifier = spared_federal }
-	
+
 	}
 
 }
 
-country_event = {#SAF annexation offer 
+country_event = {#SAF annexation offer
 
-	id = engdom.12 
-	title = engdom.6.t 
-	desc = engdom.6.d 
-	
-	is_triggered_only = yes 
-	
-	option = {#comply 
-	
+	id = engdom.12
+	title = engdom.6.t
+	desc = engdom.6.d
+
+	is_triggered_only = yes
+
+	option = {#comply
+
 		trigger = { NOT = { has_war_with = ENG } }
-		
-		name = engdom.6.a 
+
+		name = engdom.6.a
 		ai_chance = { factor = 10 }
-		
+
 		ENG = { country_event = { id = engdom.13 } }
-	
+
 	}
-	
-	option = {#revolt 
-	
+
+	option = {#revolt
+
 		trigger = { NOT = { has_war_with = ENG } }
 		name = engdom.6.b
 		ai_chance = { factor = 90 }
-		
-		imperial_war_effect = yes 
-	
+
+		imperial_war_effect = yes
+
 	}
-	
-	option = {#invalid 
-	
-		trigger = { 
-		
+
+	option = {#invalid
+
+		trigger = {
+
 			has_war_with = ENG
-		
+
 		}
-		
-		name = engdom.6.c 
-	
-	}	
+
+		name = engdom.6.c
+
+	}
 
 }
 
-country_event = {#The SAF kneel 
+country_event = {#The SAF kneel
 
-	id = engdom.13 
-	title = engdom.13.t 
-	desc = engdom.13.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.13
+	title = engdom.13.t
+	desc = engdom.13.d
+
+	is_triggered_only = yes
+
 	option = {
-	
-		name = engdom.7.a 
+
+		name = engdom.7.a
 		annex_country = { target = SAF transfer_troops = yes }
-		add_national_unity = 0.02  
-	
+		add_national_unity = 0.02
+
 	}
 
 }
 
-country_event = {#ZIM federal 
+country_event = {#ZIM federal
 
-	id = engdom.14 
-	title = engdom.14.t 
-	desc = engdom.14.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.14
+	title = engdom.14.t
+	desc = engdom.14.d
+
+	is_triggered_only = yes
+
 	option = {#Harsh
-	
-		name = engdom.5.a 
+
+		name = engdom.5.a
 		ai_chance = { factor = 100 }
-		
+
 		ZIM = { country_event = { id = engdom.15 days = 3 } }
-		
+
 		add_national_unity = 0.015
-	
+
 	}
-	
+
 		###MAYBE ANOTHER OPTION
-	
-	option = {#leave them 
-	
-		name = engdom.5.c 
+
+	option = {#leave them
+
+		name = engdom.5.c
 		ai_chance = { factor = 0 }
-		
+
 		add_national_unity = -0.075
 
 		reverse_add_opinion_modifier = { target = ZIM modifier = spared_federal }
-	
+
 	}
 
 }
 
-country_event = {#ZIM annexation offer 
+country_event = {#ZIM annexation offer
 
-	id = engdom.15 
-	title = engdom.6.t 
-	desc = engdom.6.d 
-	
-	is_triggered_only = yes 
-	
-	option = {#comply 
-	
+	id = engdom.15
+	title = engdom.6.t
+	desc = engdom.6.d
+
+	is_triggered_only = yes
+
+	option = {#comply
+
 		trigger = { NOT = { has_war_with = ENG } }
-		
-		name = engdom.6.a 
+
+		name = engdom.6.a
 		ai_chance = { factor = 95 }
-		
+
 		ENG = { country_event = { id = engdom.16 } }
-	
+
 	}
-	
-	option = {#revolt 
-	
+
+	option = {#revolt
+
 		trigger = { NOT = { has_war_with = ENG } }
 		name = engdom.6.b
 		ai_chance = { factor = 5 }
-		
-		imperial_war_effect = yes 
-	
+
+		imperial_war_effect = yes
+
 	}
-	
-	option = {#invalid 
-	
-		trigger = { 
-		
+
+	option = {#invalid
+
+		trigger = {
+
 			has_war_with = ENG
-		
+
 		}
-		
-		name = engdom.6.c 
-	
-	}	
+
+		name = engdom.6.c
+
+	}
 
 }
 
-country_event = {#The ZIM kneel 
+country_event = {#The ZIM kneel
 
-	id = engdom.16 
-	title = engdom.16.t 
-	desc = engdom.16.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.16
+	title = engdom.16.t
+	desc = engdom.16.d
+
+	is_triggered_only = yes
+
 	option = {
-	
-		name = engdom.7.a 
+
+		name = engdom.7.a
 		annex_country = { target = ZIM transfer_troops = yes }
-		add_national_unity = 0.02  
-	
+		add_national_unity = 0.02
+
 	}
 
 }
 
-country_event = {#AST federal 
+country_event = {#AST federal
 
-	id = engdom.17 
-	title = engdom.17.t 
-	desc = engdom.17.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.17
+	title = engdom.17.t
+	desc = engdom.17.d
+
+	is_triggered_only = yes
+
 	option = {#Harsh
-	
-		name = engdom.5.a 
+
+		name = engdom.5.a
 		ai_chance = { factor = 100 }
-		
+
 		AST = { country_event = { id = engdom.18 days = 3 } }
-		
+
 		add_national_unity = 0.015
-	
+
 	}
-	
+
 		###MAYBE ANOTHER OPTION
-	
-	option = {#leave them 
-	
-		name = engdom.5.c 
+
+	option = {#leave them
+
+		name = engdom.5.c
 		ai_chance = { factor = 0 }
-		
+
 		add_national_unity = -0.075
 
 		reverse_add_opinion_modifier = { target = AST modifier = spared_federal }
-	
+
 	}
 
 }
 
-country_event = {#AST annexation offer 
+country_event = {#AST annexation offer
 
-	id = engdom.18 
-	title = engdom.6.t 
-	desc = engdom.6.d 
-	
-	is_triggered_only = yes 
-	
-	option = {#comply 
-	
+	id = engdom.18
+	title = engdom.6.t
+	desc = engdom.6.d
+
+	is_triggered_only = yes
+
+	option = {#comply
+
 		trigger = { NOT = { has_war_with = ENG } }
-		
-		name = engdom.6.a 
+
+		name = engdom.6.a
 		ai_chance = { factor = 95 }
-		
+
 		ENG = { country_event = { id = engdom.19 } }
-	
+
 	}
-	
-	option = {#revolt 
-	
+
+	option = {#revolt
+
 		trigger = { NOT = { has_war_with = ENG } }
 		name = engdom.6.b
 		ai_chance = { factor = 5 }
-		
-		imperial_war_effect = yes 
-	
+
+		imperial_war_effect = yes
+
 	}
-	
-	option = {#invalid 
-	
-		trigger = { 
-		
+
+	option = {#invalid
+
+		trigger = {
+
 			has_war_with = ENG
-		
+
 		}
-		
-		name = engdom.6.c 
-	
-	}	
+
+		name = engdom.6.c
+
+	}
 
 }
 
-country_event = {#The AST kneel 
+country_event = {#The AST kneel
 
-	id = engdom.19 
-	title = engdom.19.t 
-	desc = engdom.19.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.19
+	title = engdom.19.t
+	desc = engdom.19.d
+
+	is_triggered_only = yes
+
 	option = {
-	
-		name = engdom.7.a 
+
+		name = engdom.7.a
 		annex_country = { target = AST transfer_troops = yes }
-		add_national_unity = 0.02  
-	
+		add_national_unity = 0.02
+
 	}
 
 }
 
-country_event = {#NZL federal 
+country_event = {#NZL federal
 
-	id = engdom.20 
-	title = engdom.20.t 
-	desc = engdom.20.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.20
+	title = engdom.20.t
+	desc = engdom.20.d
+
+	is_triggered_only = yes
+
 	option = {#Harsh
-	
-		name = engdom.5.a 
+
+		name = engdom.5.a
 		ai_chance = { factor = 100 }
-		
+
 		NZL = { country_event = { id = engdom.21 days = 3 } }
-		
+
 		add_national_unity = 0.015
-	
+
 	}
-	
+
 		###MAYBE ANOTHER OPTION
-	
-	option = {#leave them 
-	
-		name = engdom.5.c 
+
+	option = {#leave them
+
+		name = engdom.5.c
 		ai_chance = { factor = 0 }
-		
+
 		add_national_unity = -0.075
 
 		reverse_add_opinion_modifier = { target = NZL modifier = spared_federal }
-	
+
 	}
 
 }
 
-country_event = {#NZL annexation offer 
+country_event = {#NZL annexation offer
 
-	id = engdom.21 
-	title = engdom.6.t 
-	desc = engdom.6.d 
-	
-	is_triggered_only = yes 
-	
-	option = {#comply 
-	
+	id = engdom.21
+	title = engdom.6.t
+	desc = engdom.6.d
+
+	is_triggered_only = yes
+
+	option = {#comply
+
 		trigger = { NOT = { has_war_with = ENG } }
-		
-		name = engdom.6.a 
+
+		name = engdom.6.a
 		ai_chance = { factor = 95 }
-		
+
 		ENG = { country_event = { id = engdom.22 } }
-	
+
 	}
-	
-	option = {#revolt 
-	
+
+	option = {#revolt
+
 		trigger = { NOT = { has_war_with = ENG } }
 		name = engdom.6.b
 		ai_chance = { factor = 5 }
-		
-		imperial_war_effect = yes 
-	
+
+		imperial_war_effect = yes
+
 	}
-	
-	option = {#invalid 
-	
-		trigger = { 
-		
+
+	option = {#invalid
+
+		trigger = {
+
 			has_war_with = ENG
-		
+
 		}
-		
-		name = engdom.6.c 
-	
-	}	
+
+		name = engdom.6.c
+
+	}
 
 }
 
-country_event = {#The NZL kneel 
+country_event = {#The NZL kneel
 
-	id = engdom.22 
-	title = engdom.22.t 
-	desc = engdom.22.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.22
+	title = engdom.22.t
+	desc = engdom.22.d
+
+	is_triggered_only = yes
+
 	option = {
-	
-		name = engdom.7.a 
+
+		name = engdom.7.a
 		annex_country = { target = NZL transfer_troops = yes }
-		add_national_unity = 0.02  
-	
+		add_national_unity = 0.02
+
 	}
 
 }
 
-country_event = {#RAJ federal 
+country_event = {#RAJ federal
 
-	id = engdom.23 
-	title = engdom.23.t 
-	desc = engdom.23.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.23
+	title = engdom.23.t
+	desc = engdom.23.d
+
+	is_triggered_only = yes
+
 	option = {#Harsh
-	
-		name = engdom.5.a 
+
+		name = engdom.5.a
 		ai_chance = { factor = 60 }
-		
+
 		RAJ = { country_event = { id = engdom.24 days = 3 } }
-		
+
 		add_national_unity = 0.015
-	
+
 	}
-	
+
 		###MAYBE ANOTHER OPTION
-	
-	option = {#leave them 
-	
-		name = engdom.5.c 
+
+	option = {#leave them
+
+		name = engdom.5.c
 		ai_chance = { factor = 40 }
-		
+
 		add_national_unity = -0.025
 
 		reverse_add_opinion_modifier = { target = RAJ modifier = spared_federal }
-	
+
 	}
 
 }
 
-country_event = {#RAJ annexation offer 
+country_event = {#RAJ annexation offer
 
-	id = engdom.24 
-	title = engdom.6.t 
-	desc = engdom.6.d 
-	
-	is_triggered_only = yes 
-	
-	option = {#comply 
-	
+	id = engdom.24
+	title = engdom.6.t
+	desc = engdom.6.d
+
+	is_triggered_only = yes
+
+	option = {#comply
+
 		trigger = { NOT = { has_war_with = ENG } }
-		
-		name = engdom.6.a 
+
+		name = engdom.6.a
 		ai_chance = { factor = 10 }
-		
+
 		ENG = { country_event = { id = engdom.25 } }
-	
+
 	}
-	
-	option = {#revolt 
-	
+
+	option = {#revolt
+
 		trigger = { NOT = { has_war_with = ENG } }
 		name = engdom.6.b
 		ai_chance = { factor = 90 }
-		
-		imperial_war_effect = yes 
-	
+
+		imperial_war_effect = yes
+
 	}
-	
-	option = {#invalid 
-	
-		trigger = { 
-		
+
+	option = {#invalid
+
+		trigger = {
+
 			has_war_with = ENG
-		
+
 		}
-		
-		name = engdom.6.c 
-	
-	}	
+
+		name = engdom.6.c
+
+	}
 
 }
 
-country_event = {#The RAJ kneel 
+country_event = {#The RAJ kneel
 
-	id = engdom.25 
-	title = engdom.25.t 
-	desc = engdom.25.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.25
+	title = engdom.25.t
+	desc = engdom.25.d
+
+	is_triggered_only = yes
+
 	option = {
-	
-		name = engdom.7.a 
+
+		name = engdom.7.a
 		annex_country = { target = RAJ transfer_troops = yes }
-		add_national_unity = 0.02  
-	
+		add_national_unity = 0.02
+
 	}
 
 }
@@ -855,228 +858,228 @@ country_event = {#The RAJ kneel
 country_event = {#Home Rule Africa
 
 	id = engdom.26
-	title = engdom.26.t 
-	desc = engdom.26.d 
-	
-	is_triggered_only = yes 
-	
+	title = engdom.26.t
+	desc = engdom.26.d
+
+	is_triggered_only = yes
+
 	option = {
-	
-		name = engdom.26.a 
-		
-		add_national_unity = 0.05 
-		
+
+		name = engdom.26.a
+
+		add_national_unity = 0.05
+
 		every_state = {
-		
-			limit = {  
-			
-				is_controlled_by = ENG 
+
+			limit = {
+
+				is_controlled_by = ENG
 				is_core_of = SOM
-			
+
 			}
-			
+
 			SOM = {
-			
+
 				transfer_state = PREV
-			
+
 			}
-		
+
 		}
-		
+
 		set_autonomy = {
 				target = SOM
 				autonomous_state = autonomy_dominion
 				freedom_level = 0.2
 			}
-	
-	
-	
+
+
+
 	every_state = {
-		
-			limit = {  
-			
-				is_controlled_by = ENG 
+
+			limit = {
+
+				is_controlled_by = ENG
 				is_core_of = SUD
-			
+
 			}
-			
+
 			SUD = {
-			
+
 				transfer_state = PREV
-			
+
 			}
-		
+
 		}
-		
+
 		set_autonomy = {
 				target = SUD
 				autonomous_state = autonomy_dominion
 				freedom_level = 0.2
 			}
-			
+
 		every_state = {
-		
-			limit = {  
-			
-				is_controlled_by = ENG 
+
+			limit = {
+
+				is_controlled_by = ENG
 				is_core_of = KEN
-			
+
 			}
-			
+
 			KEN = {
-			
+
 				transfer_state = PREV
-			
+
 			}
-		
+
 		}
-		
+
 		set_autonomy = {
 				target = KEN
 				autonomous_state = autonomy_dominion
 				freedom_level = 0.2
 		}
-		
+
 		every_state = {
-		
-			limit = {  
-			
-				is_controlled_by = ENG 
+
+			limit = {
+
+				is_controlled_by = ENG
 				is_core_of = NIG
-			
+
 			}
-			
+
 			NIG = {
-			
+
 				transfer_state = PREV
-			
+
 			}
-		
+
 		}
-		
+
 		set_autonomy = {
 				target = NIG
 				autonomous_state = autonomy_dominion
 				freedom_level = 0.2
 		}
-		
+
 		every_state = {
-		
-			limit = {  
-			
-				is_controlled_by = ENG 
+
+			limit = {
+
+				is_controlled_by = ENG
 				is_core_of = GHA
-			
+
 			}
-			
+
 			GHA = {
-			
+
 				transfer_state = PREV
-			
+
 			}
-		
+
 		}
-		
+
 		set_autonomy = {
 				target = GHA
 				autonomous_state = autonomy_dominion
 				freedom_level = 0.2
 		}
-		
+
 		every_state = {
-		
-			limit = {  
-			
-				is_controlled_by = ENG 
+
+			limit = {
+
+				is_controlled_by = ENG
 				is_core_of = SIE
-			
+
 			}
-			
+
 			SIE = {
-			
+
 				transfer_state = PREV
-			
+
 			}
-		
+
 		}
-		
+
 		set_autonomy = {
 				target = SIE
 				autonomous_state = autonomy_dominion
 				freedom_level = 0.2
 		}
-		
+
 		every_state = {
-		
-			limit = {  
-			
-				is_controlled_by = ENG 
+
+			limit = {
+
+				is_controlled_by = ENG
 				is_core_of = GAM
-			
+
 			}
-			
+
 			GAM = {
-			
+
 				transfer_state = PREV
-			
+
 			}
-		
+
 		}
-		
+
 		set_autonomy = {
 				target = GAM
 				autonomous_state = autonomy_dominion
 				freedom_level = 0.2
 		}
-		
+
 		every_state = {
-		
-			limit = {  
-			
-				is_controlled_by = ENG 
+
+			limit = {
+
+				is_controlled_by = ENG
 				is_core_of = BOT
-			
+
 			}
-			
+
 			BOT = {
-			
+
 				transfer_state = PREV
-			
+
 			}
-		
+
 		}
-		
+
 		set_autonomy = {
 				target = BOT
 				autonomous_state = autonomy_dominion
 				freedom_level = 0.2
 		}
-		
+
 		ZIM = { add_state_core = 545 }
-		
+
 		every_state = {
-		
-			limit = {  
-			
-				is_controlled_by = ENG 
+
+			limit = {
+
+				is_controlled_by = ENG
 				is_core_of = ZIM
-			
+
 			}
-			
+
 			ZIM = {
-			
+
 				transfer_state = PREV
-			
+
 			}
-		
+
 		}
-		
+
 		set_autonomy = {
 				target = ZIM
 				autonomous_state = autonomy_dominion
 				freedom_level = 0.2
 		}
-	
+
 	}
 
 }
@@ -1084,65 +1087,65 @@ country_event = {#Home Rule Africa
 country_event = {#Home Rule Asia
 
 	id = engdom.27
-	title = engdom.27.t 
-	desc = engdom.27.d 
-	
-	is_triggered_only = yes 
-	
+	title = engdom.27.t
+	desc = engdom.27.d
+
+	is_triggered_only = yes
+
 	option = {
-	
-		name = engdom.26.a 
-		
-		add_national_unity = 0.05 
-		
+
+		name = engdom.26.a
+
+		add_national_unity = 0.05
+
 		every_state = {
-		
-			limit = {  
-			
-				is_controlled_by = ENG 
+
+			limit = {
+
+				is_controlled_by = ENG
 				is_core_of = MAL
-			
+
 			}
-			
+
 			MAL = {
-			
+
 				transfer_state = PREV
-			
+
 			}
-		
+
 		}
-		
+
 		set_autonomy = {
 				target = MAL
 				autonomous_state = autonomy_dominion
 				freedom_level = 0.2
 			}
-	
-	
-	
+
+
+
 	every_state = {
-		
-			limit = {  
-			
-				is_controlled_by = ENG 
+
+			limit = {
+
+				is_controlled_by = ENG
 				is_core_of = HNK
-			
+
 			}
-			
+
 			HNK = {
-			
+
 				transfer_state = PREV
-			
+
 			}
-		
+
 		}
-		
+
 		set_autonomy = {
 				target = HNK
 				autonomous_state = autonomy_dominion
 				freedom_level = 0.2
 			}
-	
+
 	}
 
 }
@@ -1150,289 +1153,289 @@ country_event = {#Home Rule Asia
 country_event = {#Home Rule Asia
 
 	id = engdom.28
-	title = engdom.28.t 
-	desc = engdom.28.d 
-	
-	is_triggered_only = yes 
-	
+	title = engdom.28.t
+	desc = engdom.28.d
+
+	is_triggered_only = yes
+
 	option = {
-	
-		name = engdom.26.a 
-		
-		add_national_unity = 0.05 
-		
+
+		name = engdom.26.a
+
+		add_national_unity = 0.05
+
 		every_state = {
-		
-			limit = {  
-			
-				is_controlled_by = RAJ 
+
+			limit = {
+
+				is_controlled_by = RAJ
 				is_core_of = PAK
-			
+
 			}
-			
+
 			PAK = {
-			
+
 				transfer_state = PREV
-			
+
 			}
-		
+
 		}
-		
+
 		set_autonomy = {
 				target = PAK
 				autonomous_state = autonomy_dominion
 				freedom_level = 0.2
 			}
-	
-	
-	
+
+
+
 	every_state = {
-		
-			limit = {  
-			
-				is_controlled_by = PAK 
+
+			limit = {
+
+				is_controlled_by = PAK
 				is_core_of = BUR
-			
+
 			}
-			
+
 			BUR = {
-			
+
 				transfer_state = PREV
-			
+
 			}
-		
+
 		}
-		
+
 		set_autonomy = {
 				target = BUR
 				autonomous_state = autonomy_dominion
 				freedom_level = 0.2
 			}
-			
+
 		set_autonomy = {
 				target = RAJ
 				autonomous_state = autonomy_dominion
 				freedom_level = 0.2
 		}
-	
+
 	}
 
 }
 
-country_event = {#Anti-war protest 
+country_event = {#Anti-war protest
 
-	id = engdom.29 
-	title = engdom.29.t 
-	desc = engdom.29.d 
-	
-	fire_only_once = yes 
-	
+	id = engdom.29
+	title = engdom.29.t
+	desc = engdom.29.d
+
+	fire_only_once = yes
+
 	trigger = {
-	
-		tag = ENG 
-		
-		has_war = yes 
-		
-		has_global_flag = imperial_war_flag 
-	
+
+		tag = ENG
+
+		has_war = yes
+
+		has_global_flag = imperial_war_flag
+
 	}
-	
+
 	mean_time_to_happen = { days = 70 }
-	
+
 	option = {
-	
-		name = engdom.29.a 
-		
-		add_national_unity = -0.025 
-	
+
+		name = engdom.29.a
+
+		add_national_unity = -0.025
+
 	}
 
 }
 
-country_event = {#Massive socialist event 
+country_event = {#Massive socialist event
 
 	id = engdom.30
-	title = engdom.30.t 
-	desc = engdom.30.d 
-	
-	is_triggered_only = yes 
-	
-	option = {#possibly add some branches here 
-	
-		name = engdom.30.a 
-		
-		add_national_unity = -0.035 
-		
+	title = engdom.30.t
+	desc = engdom.30.d
+
+	is_triggered_only = yes
+
+	option = {#possibly add some branches here
+
+		name = engdom.30.a
+
+		add_national_unity = -0.035
+
 		hidden_effect = { country_event = { id = engdom.31 days = 20 } }
-	
+
 	}
 
 }
 
-country_event = {#British civil war 
+country_event = {#British civil war
 
-	id = engdom.31 
-	title = engdom.31.t 
-	desc = engdom.31.d 
-	
-	is_triggered_only = yes 
-	
+	id = engdom.31
+	title = engdom.31.t
+	desc = engdom.31.d
+
+	is_triggered_only = yes
+
 	option = {#loyal
-	
+
 		trigger = { is_ai = no }
-		
-		name = engdom.31.a 
-		
+
+		name = engdom.31.a
+
 		start_civil_war = {
-		
+
 				ideology = communism
 				size = 0.5
 				capital = 132
 				states = { 132 128 120 136 133 121 131 130 132 122 }
-				
+
 			}
-			
+
 			random_other_country = {
-			
+
 				limit = {
 					original_tag = ENG
 					has_government = communism
 				}
-				
-				set_equipment_fraction = 0.5 
+
+				set_equipment_fraction = 0.5
 				set_national_unity = 0.9
-				
+
 				add_popularity = {
-				
+
 					ideology = communism
 					popularity = 0.35
-					
+
 				}
-				
+
 				add_popularity = {
-				
+
 					ideology = socialism
 					popularity = 0.1
-					
+
 				}
-				
+
 			}
-			
-			set_global_flag = british_civil_war 
-			
+
+			set_global_flag = british_civil_war
+
 			country_event = { id = engdom.32 }
 	}
-	
+
 	option = {#commie
-	
+
 		trigger = { is_ai = no }
-		
+
 		name = engdom.31.b
-		
+
 		start_civil_war = {
-			
+
 				ruling_party = communism
 				ideology = conservatism
 				size = 0.5
 				capital = 126
 				states = { 129 125 126 338 123 127 }
-				
+
 			}
-			
+
 			random_other_country = {
-			
+
 				limit = {
 					original_tag = ENG
 					has_government = conservatism
 				}
-				
-				set_equipment_fraction = 0.5 
+
+				set_equipment_fraction = 0.5
 				set_national_unity = 0.9
-				
+
 				add_popularity = {
-				
+
 					ideology = conservatism
 					popularity = 0.35
-					
+
 				}
-				
+
 				add_popularity = {
-				
+
 					ideology = reactionarism
 					popularity = 0.1
-					
+
 				}
-				
+
 			}
-			
-			set_global_flag = british_civil_war 
-			
+
+			set_global_flag = british_civil_war
+
 			country_event = { id = engdom.32 }
 	}
-	
-	option = {#ai 
-	
+
+	option = {#ai
+
 		trigger = { is_ai = yes }
-	
-		name = engdom.31.c 
-		
+
+		name = engdom.31.c
+
 		start_civil_war = {
-		
+
 				ideology = communism
 				size = 0.5
 				capital = 132
 				states = { 132 128 120 136 133 121 131 130 122 }
-				
+
 			}
-			
+
 			random_other_country = {
-			
+
 				limit = {
 					original_tag = ENG
 					has_government = communism
 				}
-				
-				set_equipment_fraction = 0.5 
+
+				set_equipment_fraction = 0.5
 				set_national_unity = 0.9
-				
+
 				add_popularity = {
-				
+
 					ideology = communism
 					popularity = 0.35
-					
+
 				}
-				
+
 				add_popularity = {
-				
+
 					ideology = socialism
 					popularity = 0.1
-					
+
 				}
-				
+
 			}
-			
-			set_global_flag = british_civil_war 
-			
+
+			set_global_flag = british_civil_war
+
 			country_event = { id = engdom.32 }
-	
+
 	}
 
 }
 
 news_event = {#british civil war news
 
-	id = engdom.32 
-	title = engdom.32.t 
-	desc = engdom.32.d 
-	
-	is_triggered_only = yes 
-	
-	major = yes 
-	
+	id = engdom.32
+	title = engdom.32.t
+	desc = engdom.32.d
+
+	is_triggered_only = yes
+
+	major = yes
+
 	option = {
-	
+
 		name = engdom.32.a
-	
+
 	}
 
 }

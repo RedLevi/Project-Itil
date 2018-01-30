@@ -23,6 +23,40 @@ ideas = {
 			}
 		}
 
+    political_chaos = {
+       removal_cost = -1
+       picture = GFX_idea_trotskyite_plot
+
+       allowed = {
+ 				always = no
+ 			}
+
+      allowed_civil_war = {
+				has_government = communism
+			}
+
+      modifier = {
+         political_power_gain = -0.25
+      }
+    }
+
+    political_disaster = {
+       removal_cost = -1
+       picture = GFX_idea_trotskyite_plot
+
+       allowed = {
+ 				always = no
+ 			}
+
+      allowed_civil_war = {
+				has_government = communism
+			}
+
+      modifier = {
+         political_power_gain = -0.25
+      }
+    }
+
 
 	    SOV_New_economic_policy_idea = {
 
@@ -97,7 +131,7 @@ ideas = {
 				production_speed_buildings_factor = -0.4
 			 }
 		}
-		
+
 
 	SOV_Military_Buildup_idea = {
 
@@ -290,220 +324,220 @@ Head_of_Government = {
 
    political_advisor = {
 		mikhail_kalinin = {
-			
-			
+
+
 			allowed = {
 				original_tag = "SOV"
 			}
-			
+
 			traits = { popular_figurehead }
 		}
 
 		SOV_vyacheslav_molotov = {
-			
+
 			picture = generic_political_advisor_europe_1
-			
+
 			allowed = {
 				original_tag = SOV
 			}
-			
+
 			traits = { smooth_talking_charmer }
 		}
 
 		SOV_nikolai_voznesensky = {
-			
+
 			picture = generic_political_advisor_europe_2
-			
+
 			allowed = {
 				original_tag = SOV
 			}
-			
+
 			traits = { captain_of_industry }
 		}
-		
+
 		nikita_khrushchev = {
-			
-			
+
+
 			allowed = {
 				original_tag = "SOV"
 			}
 
-			
+
 			traits = { communist_revolutionary }
-	
-	
+
+
 			do_effect = {
 				NOT = {
 					has_government = communism
 				}
 			}
-			
+
 			ai_will_do = {
 				factor = 0
 			}
-		}	
-			
+		}
+
 		alexander_kerensky = {
-			
-			
+
+
 			allowed = {
 				original_tag = "SOV"
 			}
-			
 
-			
+
+
 			traits = { democratic_reformer }
-	
-	
+
+
 			do_effect = {
 				NOT = {
 					has_government = democratic
 				}
 			}
-			
+
 			ai_will_do = {
 				factor = 0
 			}
 		}
 	}
-		
+
 	army_chief = {
-		
-		
+
+
 		semyon_timoshenko = {
 			#Also unit leader: 404
-			
+
 			allowed = {
 				original_tag = SOV
 			}
-					
+
 			traits = { army_chief_reform_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		kliment_voroshilov = {
 			#Also unit leader: 405
-			
+
 			allowed = {
 				original_tag = SOV
 			}
-						
+
 			traits = { army_chief_drill_1 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		alexander_yegorov = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
-			
+
+
 			# PURGED
 			traits = { army_chief_defensive_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		vasily_blucher = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 
 			}
-			
 
-			
+
+
 			# PURGED
 			traits = { army_chief_maneuver_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
-		}	
+		}
 	}
 	navy_chief = {
-		
+
 		pyotr_smirnov = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 
 			}
-			
+
 			# PURGED
 			traits = { navy_chief_naval_aviation_1 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		mikhail_frinovsky = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 
 			}
 
-			
+
 			# PURGED
 			traits = { navy_chief_commerce_raiding_1 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		nikolay_kuznetsov = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 
 			}
-			
+
 			# Not Purged, but eventually demoted
 			traits = { navy_chief_reform_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		ivan_yumashev = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 
 			}
-			
+
 			traits = { navy_chief_decisive_battle_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
-		}	
+		}
 	}
-	
+
 	air_chief = {
-		
-		
+
+
 		alexander_novikov = {
-						
+
 			allowed = {
 				original_tag = SOV
 
@@ -511,46 +545,46 @@ Head_of_Government = {
 
 			# Not Purged, but imprisoned
 			traits = { air_chief_reform_3 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		konstantin_vershinin = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 
 			}
 
 			traits = { air_chief_ground_support_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		yakov_smushkevich = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 
 			}
-			
+
 			# PURGED
 			traits = { air_chief_safety_2 } # Could also have reform
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		pavel_rychagov = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 
@@ -558,49 +592,49 @@ Head_of_Government = {
 
 			# PURGED
 			traits = { air_chief_all_weather_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}	
-	}
-	
-	
-	high_command = {
-	
-		ivan_konev = {
-			#Also unit leader: 408
-			
-			allowed = {
-				original_tag = SOV
-			}
-			
-			traits = { army_concealment_2 }
-			# Almost certainly a psychopath
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+	}
+
+
+	high_command = {
+
+		ivan_konev = {
+			#Also unit leader: 408
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			traits = { army_concealment_2 }
+			# Almost certainly a psychopath
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
 		aleksandr_vasilevsky = {
 			#Also unit leader: 407
-			
+
 			allowed = {
 				original_tag = SOV
 
 			}
-			
+
 			traits = { army_regrouping_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		konstantin_rokossovsky = {
 			#Also unit leader: 402
-			
+
 			allowed = {
 				original_tag = SOV # Unlocked via focus
 				hidden_trigger = {
@@ -609,570 +643,570 @@ Head_of_Government = {
 							has_war_with = SOV
 							original_tag = SOV
 							has_unit_leader = 403
-						} 
+						}
 					}
 				}
 			}
 
-			
+
 			# Not purged, but tried and tortured, then released
 			traits = { army_armored_3 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}	
-		
-		pavel_zhigarev = {
-			
-			
-			allowed = {
-				original_tag = SOV
 
-			}
-			available = 
-			{
-				 
-			}
-			
-
-			
-			traits = { air_airborne_1 }
-			
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
-		sergei_khudyakov = {
-			
-			
+
+		pavel_zhigarev = {
+
+
 			allowed = {
 				original_tag = SOV
 
 			}
-			
+			available =
+			{
+
+			}
+
+
+
+			traits = { air_airborne_1 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		sergei_khudyakov = {
+
+
+			allowed = {
+				original_tag = SOV
+
+			}
+
 			# Purged, but post-war
 			traits = { air_close_air_support_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		stepan_krasovsky = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 
 			}
-			available = 
+			available =
 			{
-				 
-			}
-			
 
-			
+			}
+
+
+
 			traits = { air_air_combat_training_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
-		}	
-		
+		}
+
 		vladimir_kasatonov = {
 			#Also unit leader: 403
-			
+
 			allowed = {
 				original_tag = SOV
 
 			}
-			
+
 			traits = { navy_submarine_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		gordey_levchenko = {
 			#Also unit leader: 406
-			
+
 			allowed = {
 				original_tag = SOV
 
 			}
-			
+
 			# Not purged, but arrested and released
 			traits = { navy_capital_ship_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
-		
+
 		arseniy_golovko = {
 			#Also unit leader: 409
-			
+
 			allowed = {
 				original_tag = SOV
 
 			}
-			available = 
+			available =
 			{
-				 
+
 				hidden_trigger = {
-					NOT = { 
+					NOT = {
 						any_other_country = {
 							has_war_with = SOV
 							original_tag = SOV
 							has_unit_leader = 409
-						} 
+						}
 					}
 				}
 			}
-			
 
-			
+
+
 			traits = { navy_amphibious_assault_2 }
-			
+
 			ai_will_do = {
 				factor = 1
 			}
-		}	
+		}
 	}
-		
+
 	tank_manufacturer = {
-		
+
 		designer = yes
-		
+
 		morozov_design_bureau = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
 			research_bonus = {
 				armor = 0.10
 			}
-			
+
 			traits = { fast_tank_manufacturer }
-			
+
 			modifier = {
 			}
 		}
-		
+
 		astrov_design_bureau = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
 			research_bonus = {
 				armor = 0.10
 			}
-			
+
 			traits = { medium_tank_manufacturer }
-			
+
 			modifier = {
 			}
 		}
-		
+
 		okmo = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
 			research_bonus = {
 				armor = 0.10
 			}
-			
+
 			traits = { heavy_tank_manufacturer }
-			
+
 			modifier = {
 			}
 		}
 	}
-	
+
 	aircraft_manufacturer = {
-		
+
 		designer = yes
-		
+
 		mig_design_bureau = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
 			research_bonus = {
 				air_equipment = 0.10
 			}
-			
+
 			traits = { light_aircraft_manufacturer }
-			
+
 			modifier = {
 			}
 		}
-		
+
 		ilyushin_design_bureau = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
 			research_bonus = {
 				air_equipment = 0.10
 			}
-			
+
 			traits = { medium_aircraft_manufacturer }
-			
+
 			modifier = {
 			}
 		}
-		
+
 		tupolev_design_bureau = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
 			research_bonus = {
 				air_equipment = 0.10
 			}
-			
+
 			traits = { heavy_aircraft_manufacturer }
-			
+
 			modifier = {
 			}
 		}
-		
+
 		yakovlev_design_bureau = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
 			research_bonus = {
 				air_equipment = 0.10
 			}
-			
+
 			traits = { naval_aircraft_manufacturer }
-			
+
 			modifier = {
 			}
 		}
-	}	
-	
-	
+	}
+
+
 	industrial_concern = {
-				
+
 		stalingrad_tractor_factory = {
-		
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
 			research_bonus = {
 				industry = 0.10
 			}
-			
+
 			traits = { industrial_concern }
-			
+
 			modifier = {
 			}
 		}
-		
+
 		leningrad_polytechnical_institute = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
 			research_bonus = {
 				electronics = 0.10
 			}
-			
+
 			traits = { electronics_concern }
-			
+
 			modifier = {
 			}
 		}
 	}
-	
+
 	materiel_manufacturer = {
-			
+
 		designer = yes
-		
+
 		grabin_design_bureau = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
 			research_bonus = {
 				artillery = 0.10
 			}
-			
-			traits = { artillery_manufacturer }
-			
-			modifier = {
-			}
-		}	
-		
-	
-		
-		tula_arms_plant = {
-			
-			
-			allowed = {
-				original_tag = SOV
-			}
-			
 
-			
-			research_bonus = {
-				infantry_weapons = 0.10
-			}
-			
-			traits = { infantry_equipment_manufacturer }
-			
+			traits = { artillery_manufacturer }
+
 			modifier = {
 			}
 		}
-		
-		gaz = {
-			
-			
+
+
+
+		tula_arms_plant = {
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+
+			traits = { infantry_equipment_manufacturer }
+
+			modifier = {
+			}
+		}
+
+		gaz = {
+
+
+			allowed = {
+				original_tag = SOV
+			}
+
+
+
 			research_bonus = {
 				motorized_equipment = 0.10
 				mot_rockets = 0.50
 			}
-			
+
 			traits = { motorized_equipment_manufacturer }
-			
+
 			modifier = {
 			}
 		}
 	}
-	
+
 	naval_manufacturer = {
-	
+
 		designer = yes
-		
+
 		nevskoye_design_bureau = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
 			research_bonus = {
 				naval_equipment = 0.10
 			}
-			
+
 			traits = { naval_manufacturer }
-			
+
 			modifier = {
 			}
 		}
 	}
-	
-	theorist = {	
-	
-			
+
+	theorist = {
+
+
 		mikhail_tukhachevsky = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 
 			}
-			
+
 			cost = 250
-			
+
 			research_bonus = {
 				cat_mass_assault = 0.10
 			}
-			
+
 			# PURGED
 			traits = { mass_assault_expert }
 		}
-		
+
 		boris_shaposhnikov = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
 			research_bonus = {
 				land_doctrine = 0.07
 			}
-			
+
 			traits = { military_theorist }
 		}
-		
+
 		georgy_zhukov = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV # Unlocked via focus
 
 			}
-			
+
 			cost = 250
-			
+
 			research_bonus = {
 				cat_mass_assault = 0.10
 			}
-			
+
 			traits = { mass_assault_expert }
 		}
-		
+
 		sergey_gorshkov = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 
 			}
-			available = 
+			available =
 			{
-				 
+
 			}
-			
+
 			cost = 150
-			
+
 			research_bonus = {
 				naval_doctrine = 0.07
 			}
-			
+
 			traits = { naval_theorist }
 		}
-		
+
 		vladimir_tributs = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
+
 			cost = 250
-			
+
 			research_bonus = {
 				cat_fleet_in_being = 0.10
 			}
-			
+
 			traits = { grand_fleet_proponent}
 		}
-		
+
 		sergei_rudenko = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 
 			}
-			available = 
+			available =
 			{
-				 
+
 			}
-			
+
 			cost = 250
-			
+
 			research_bonus = {
 				cat_battlefield_support = 0.10
 			}
-			
+
 			traits = { close_air_support_proponent }
 		}
-		
+
 		alexander_golovanov = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
 			research_bonus = {
 				air_doctrine = 0.07
 			}
-			
+
 			traits = { air_warfare_theorist }
 		}
-		
+
 		igor_kurchatov = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
 
-			
+
+
 			research_bonus = {
 				nuclear = 0.10
 			}
-			
+
 			traits = { nuclear_scientist }
 		}
-		
+
 		sergei_korolev = {
-			
-			
+
+
 			allowed = {
 				original_tag = SOV
 			}
-			
+
 			research_bonus = {
 				rocketry = 0.10
 			}
 
-			
+
 			traits = { rocket_scientist }
 		}
 	}

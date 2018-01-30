@@ -45,8 +45,7 @@ bookmarks = {
 			focuses = {
 				1936_assembly
 				The_Revolution
-				New_Economic_Policy
-				Central_Planning
+				Establish_OKB
 			}
 		}
 		"PRC"={

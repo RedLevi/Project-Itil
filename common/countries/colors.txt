@@ -548,8 +548,8 @@ KAZ = {
 	color_ui = rgb { 138 155 116 }
 }
 TUK = {
-    color = rgb { 30 200 80 }
-	color_ui = rgb { 138 155 116 }
+    color = rgb { 88 172 204 }
+	color_ui = rgb { 88 172 204 }
 }
 RUS = {
     color = rgb { 13 125 24 }

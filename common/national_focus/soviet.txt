@@ -833,7 +833,7 @@ focus = {
 
 focus = {
 	id = Integrate_Latvia
-	icon = GFX_focus_cze_german_puppet
+	icon = GFX_focus_CZE_german_puppet
 	cost = 10.00
 	prerequisite = {
 		focus = Look_To_West
@@ -1596,7 +1596,7 @@ focus = {
 }
 focus = {
 	id = Anti_Zionist_Policy
-	icon = GFX_focus_SAF_colonialist_crusade
+	icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 	cost = 10.00
 	prerequisite = {
 		focus = Syrian_Socialists

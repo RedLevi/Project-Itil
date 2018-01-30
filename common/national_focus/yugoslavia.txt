@@ -55,6 +55,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = YUG_ethnic_int
 			focus = YUG_serbian_dom
+			focus = YUG_left_coalition
 		}
 	}
 
@@ -278,6 +279,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = YUG_enhanced_freedoms
 			focus = YUG_serbian_dom
+			focus = YUG_left_coalition
 		}
 		completion_reward = {
 			swap_ideas = { remove_idea = YUG_dc add_idea = YUG_dc_int }
@@ -391,6 +393,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = YUG_enhanced_freedoms
 			focus = YUG_ethnic_int
+			focus = YUG_left_coalition
 		}
 		completion_reward = {
 			swap_ideas = { remove_idea = YUG_dc add_idea = YUG_dc_dom }
@@ -558,11 +561,11 @@ focus_tree = {
 		available = {
 			owns_state = 109 # Croatia
 			owns_state = 103 # Dalmatia
-			owns_state = 163 # Zara
+			# owns_state = 163
 			owns_state = 105 # Montenegro
-			# 44 Albania
-			# 104 Bosnia
-			# 107 Capital
+			owns_state = 44 # Albania
+			owns_state = 104 # Bosnia
+			owns_state = 107 # Capital
 		}
 		available_if_capitulated = no
 		prerequisite = {
@@ -570,6 +573,76 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 10
+			103 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			109 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			105 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			44 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			104 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			107 = {
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_pacify_albania
+		icon = GFX_goal_generic_dangerous_deal
+		x = 8
+		y = 6
+		available = {
+			owns_state = 44 # Albania
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = the_yug_line
+		}
+		completion_reward = {
+			104 = {
+				add_core_of = YUG
+			}
+			custom_effect_tooltip = albanian_unrest
+			set_country_flag = ALB_forcefully_integrated
+		}
+	}
+
+	## Communist Option ##
+
+	focus = {
+		id = YUG_left_coalition
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 11
+		y = 1
+		mutually_exclusive = {
+			focus = YUG_enhanced_freedoms
+			focus = YUG_ethnic_int
+			focus = YUG_serbian_dom
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = no
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = YUG_leftists_win
+				has_country_flag = YUG_leftist_coalition
+			}
+		}
+		prerequisite = {
+			focus = YUG_ethnic_question
+		}
+		completion_reward = {
+			swap_ideas = { remove_idea = YUG_dc add_idea = YUG_fourth_option }
+			set_country_flag = YUG_communism
 		}
 	}
 }

@@ -70,6 +70,23 @@ ideas = {
 				}
 			}
 
+			YUG_fourth_option = {
+				allowed = {
+					original_tag = YUG
+					always = no
+				}
+				allowed_civil_war = {
+					always = no
+				}
+				removal_cost = -1
+				picture = GFX_idea_generic_communism_drift_bonus
+				modifier = {
+					socialism_drift = 0.05
+					unity_factor = -0.25
+					political_power_gain = -0.8
+				}
+			}
+
 		}
 
 		political_advisor = {

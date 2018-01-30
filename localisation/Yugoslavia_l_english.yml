@@ -34,6 +34,9 @@ YUG_ethnic_int_desc:0 " A second possible solution to the ethnicity problem is i
 YUG_serbian_dom:0 "Serbian Dominance"
 YUG_serbian_dom_desc:0 "Finally, there are some parts of the government that would prefer to retain the elite of all of Yugoslavia as Serbian, in response to the nationalistic threat in our conquered territories. This would probably fire up nationalistic movements in most of, if not all, the occupied territories - but is it a worth price to pay to retain exclusive power?"
 
+# Communist Alternative #
+YUG_fourth_option:0 "The Leftist Coalitions's Plan"
+
 ####ideas####
 YUG_dc:0 "A Divided Country"
 YUG_dc_desc:0 "Yugoslavia is a divided country. Serbian conquest of Bosnia, Croatia and Montenegro during the Austrian civil war led to a great territorial gain for Yugoslavia, but the Serbian monarchy and Serbian-dominated government are having trouble getting the new ethnic groups to enthusiastically enlist to server the Yugoslavian forces. Drastic measures are needed, but the government is divided in how to deal with the problem."
@@ -43,6 +46,7 @@ YUG_dc_int:0 "A Divided Country"
 YUG_dc_int_desc:0 "Yugoslavia is still a divided country, but things are improving. We've decided that things need to change - we shall attempt to integrate the ethnic groups into a greater one - Yugoslavian - with the hope that everyone sees themselves as Yugoslavian first and foremost. This will hopefully encourage nationalistic participation."
 YUG_dc_dom:0 "A Divided Country"
 YUG_dc_dom_desc:0 "Yugoslavia is still a divided country, but things are improving. Serbians are clearly the superior ethnic group in Yugoslavia, and as such we will attempt to force Serbian culture on the newly conquered territories and ensure only Serbs have high ranking jobs. This may lead to tensions, however."
+YUG_fourth_option:0 "Promise of a Socialist Slav State"
 
 ####opinion####
 
@@ -56,3 +60,4 @@ bosnian_unrest:0 "This will cause severe unrest among the Bosnian people, possib
 montenegro_unrest:0 "This will cause severe unrest among the Montenegrins, possibly leading to a future uprising depending on the actions we take"
 croatian_unrest:0 "This will cause severe unrest among the Croatian people, possibly leading to a future uprising depending on the actions we take"
 albanian_unrest:0 "This will cause severe unrest among the Albanian people, possibly leading to a future uprising depending on the actions we take"
+YUG_leftists_win:0 "The Leftist Coalition is in control of the legislature"

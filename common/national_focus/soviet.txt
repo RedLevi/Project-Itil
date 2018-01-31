@@ -1667,7 +1667,7 @@ focus = {
 }
 focus = {
 	id = German_Syndicalism
-	icon = GFX_focus_yug_pan_slavic_congress
+	icon = GFX_focus_YUG_pan_slavic_congress
 	cost = 3.00
 	prerequisite = {
 		focus = Italian_Deal

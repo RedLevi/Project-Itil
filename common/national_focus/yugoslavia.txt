@@ -116,7 +116,7 @@ focus_tree = {
 		id = YUG_rural_inf
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 3
-		y = 2
+		y = 3
 		cost = 10
 		ai_will_do = {
 			factor = 9
@@ -153,7 +153,7 @@ focus_tree = {
 		id = YUG_capital_rail
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 3
-		y = 3
+		y = 4
 		cost = 10
 		ai_will_do = {
 			factor = 9
@@ -188,7 +188,7 @@ focus_tree = {
 	focus = {
 		id = YUG_croat_goods
 		icon = GFX_goal_generic_construct_mil_factory
-		x = 1
+		x = 2
 		y = 5
 		cost = 10
 		ai_will_do = {
@@ -218,10 +218,34 @@ focus_tree = {
 	}
 
 	focus = {
+		id = YUG_bos_steel
+		icon = GFX_goal_generic_construction2
+		x = 4
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 9
+		}
+		available_if_capitulated = no
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = owns_puppet_109
+				owns_puppet_109 = yes
+			}
+		}
+		prerequisite = {
+			focus = YUG_capital_rail
+		}
+		completion_reward = {
+			add_resource = { type = steel amount = 20 state = 104 }
+		}
+	}
+
+	focus = {
 		id = YUG_alb_goods
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 3
-		y = 5
+		y = 6
 		cost = 10
 		ai_will_do = {
 			factor = 9
@@ -231,7 +255,10 @@ focus_tree = {
 			owns_state = 44
 		}
 		prerequisite = {
-			focus = YUG_capital_rail
+			focus = YUG_croat_goods
+		}
+		prerequisite = {
+			focus = YUG_bos_steel
 		}
 		completion_reward = {
 			if = {
@@ -643,6 +670,53 @@ focus_tree = {
 		completion_reward = {
 			swap_ideas = { remove_idea = YUG_dc add_idea = YUG_fourth_option }
 			set_country_flag = YUG_communism
+		}
+	}
+
+	### Foreign Tree ###
+
+	focus = {
+		id = YUG_outwards_vision
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 18
+		y = 0
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = no
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = YUG_looking_outwards
+				OR = {
+					has_completed_focus = YUG_enhanced_freedoms
+					has_completed_focus = YUG_ethnic_int
+					has_completed_focus = YUG_serbian_dom
+					has_completed_focus = YUG_left_coalition
+				}
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = YUG_expansionist_propaganda
+		icon = GFX_goal_generic_propaganda
+		x = 18
+		y = 1
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_outwards_vision
+		}
+		completion_reward = {
+			every_neighbor_country = {
+				reverse_add_opinion_modifier = { target = ROOT modifier = YUG_looking_out }
+			}
+			add_ideas = YUG_expansionist
 		}
 	}
 }

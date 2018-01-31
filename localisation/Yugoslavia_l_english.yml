@@ -48,7 +48,10 @@ YUG_dc_dom:0 "A Divided Country"
 YUG_dc_dom_desc:0 "Yugoslavia is still a divided country, but things are improving. Serbians are clearly the superior ethnic group in Yugoslavia, and as such we will attempt to force Serbian culture on the newly conquered territories and ensure only Serbs have high ranking jobs. This may lead to tensions, however."
 YUG_fourth_option:0 "Promise of a Socialist Slav State"
 
+YUG_expansionist:0 "Expansionist Visions"
+
 ####opinion####
+YUG_looking_out:0 "Yugoslavian Expansionism"
 
 ####tooltip####
 seryug_change:0 "We will release Bosnia as a puppet state, and change our name back to Serbia."
@@ -61,3 +64,4 @@ montenegro_unrest:0 "This will cause severe unrest among the Montenegrins, possi
 croatian_unrest:0 "This will cause severe unrest among the Croatian people, possibly leading to a future uprising depending on the actions we take"
 albanian_unrest:0 "This will cause severe unrest among the Albanian people, possibly leading to a future uprising depending on the actions we take"
 YUG_leftists_win:0 "The Leftist Coalition is in control of the legislature"
+YUG_looking_outwards:0 "We must have at least decided on a policy to deal with internal ethnic tensions"

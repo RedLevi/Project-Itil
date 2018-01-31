@@ -72,4 +72,6 @@ Soviet_Peace = { value = 75 }
 #AME#
 AME_agression = { value = -75 }
 AME_reconciliation = { value = 25 }
+### Yugoslavia ###
+YUG_looking_out = { value = -20 }
 }

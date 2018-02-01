@@ -60,10 +60,28 @@ focus_tree = {
 	}
 
 	focus = {
+		id = YUG_prep_people
+		# icon = 
+		x = 1
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_enhanced_freedoms
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
 		id = YUG_puppet_borders
 		icon = GFX_focus_generic_self_management
 		x = 1
-		y = 2
+		y = 3
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -80,7 +98,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = YUG_enhanced_freedoms
+			focus = YUG_prep_people
 		}
 		completion_reward = {
 			release_puppet = CRO
@@ -92,7 +110,7 @@ focus_tree = {
 		id = YUG_bosnian_question
 		icon = GFX_focus_generic_self_management
 		x = 1
-		y = 3
+		y = 4
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -601,22 +619,22 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 10
 			103 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			109 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			105 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			44 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			104 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 			107 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+				add_building_construction = { type = infrastructure level = 1 instant_build = yes }
 			}
 		}
 	}

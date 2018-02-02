@@ -1,0 +1,24 @@
+state={
+	id=765
+	name="STATE_765"
+	
+	provinces={
+		332 11251
+	}
+	history={
+		owner = GER
+		
+		buildings = {
+			infrastructure = 7
+
+
+
+		}
+		add_core_of = DEN
+		add_claim_by = GER 
+
+	}
+	manpower=23000
+	state_category=rural
+	buildings_max_level_factor=1.000
+}

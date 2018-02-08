@@ -22,7 +22,7 @@ focus = {
  	id = 1936_assembly
  	icon = GFX_focus_lenin_soviet
  	cost = 3.00
- 	x = 41
+ 	x = 38
  	y = 0
  	completion_reward = {
  	add_political_power = 150
@@ -39,7 +39,7 @@ focus = {
 		available = {
 			 has_country_flag = const_assembly
 		}
-  	x = 40
+  	x = 37
   	y = 1
   	completion_reward = {
   	   country_event = { id = soviet.3 days = 1 }
@@ -58,7 +58,7 @@ focus = {
 					has_country_flag = liberal_internal
 			 }
  		}
-   	x = 40
+   	x = 37
    	y = 2
    	completion_reward = {
    	   country_event = { id = soviet.4 days = 1 }
@@ -78,7 +78,7 @@ focus = {
 				    has_country_flag = scapitalist_economic
  			   }
   		}
-    	x = 42
+    	x = 39
     	y = 1
     	completion_reward = {
     	   country_event = { id = soviet.5 days = 1 }
@@ -98,7 +98,7 @@ focus = {
  				       has_country_flag = fed_national
   			   }
    		}
-     	x = 42
+     	x = 39
      	y = 2
      	completion_reward = {
      	   country_event = { id = soviet.6 days = 1 }
@@ -117,7 +117,7 @@ focus = {
 			available = {
 			   has_country_flag = trotsky_victory
 			}
-			x = 38
+			x = 36
      	y = 3
 			completion_reward = {
 
@@ -165,7 +165,7 @@ focus = {
 			available = {
 			   has_country_flag = left_victory
 			}
-			x = 42
+			x = 44
      	y = 3
 			completion_reward = {
 			   retire_country_leader = yes
@@ -192,7 +192,7 @@ focus = {
 			available = {
 			   has_country_flag = moderate_victory
 			}
-			x = 44
+			x = 48
      	y = 3
 			completion_reward = {
 			   retire_country_leader = yes
@@ -206,6 +206,219 @@ focus = {
 			   }
 			}
 	 }
+
+	 focus = {
+		id = Status_Quo
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			 focus = Trotsky_Wins
+		}
+		x = 35
+		y = 4
+
+	}
+	focus = {
+		id = Strengthen_GPU
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		prerequisite = {
+			focus = Trotsky_Wins
+			focus = Kirov_Wins
+		}
+		x = 38
+		y = 4
+
+	}
+	focus = {
+		id = Iron_Fist_Rule
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			 focus = Kirov_Wins
+		}
+		x = 41
+		y = 4
+
+	}
+	focus = {
+		id = Democratic_Communism
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			 focus = Left_Wins
+		}
+		x = 43
+		y = 4
+
+	}
+	focus = {
+		id = Reinstate_Democracy
+		icon = GFX_goal_continuous_increase_nu
+		cost = 10.00
+		prerequisite = {
+			focus = Left_Wins
+			focus = Moderates_Win
+		}
+		x = 46
+		y = 4
+
+	}
+	focus = {
+		id = Anti_Communism
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			 focus = Moderates_Win
+		}
+		x = 49
+		y = 4
+
+	}
+	focus = {
+		id = Intelligence_Agency
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = Strengthen_GPU
+		}
+		mutually_exclusive = {
+			focus = Secret_Police
+		}
+		x = 37
+		y = 5
+
+	}
+	focus = {
+		id = Secret_Police
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10.00
+		prerequisite = {
+			focus = Strengthen_GPU
+		}
+		mutually_exclusive = {
+			focus = Intelligence_Agency
+		}
+		x = 39
+		y = 5
+
+	}
+	focus = {
+		id = Restricted_Voting
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = Reinstate_Democracy
+		}
+		mutually_exclusive = {
+			focus = Freedom_Again
+		}
+		x = 45
+		y = 5
+
+	}
+	focus = {
+		id = Freedom_Again
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = Reinstate_Democracy
+		}
+		mutually_exclusive = {
+			focus = Restricted_Voting
+		}
+		x = 47
+		y = 5
+
+	}
+	focus = {
+		id = International_Supremacy
+		icon = GFX_focus_generic_air_defense
+		cost = 10.00
+		prerequisite = {
+			focus = Intelligence_Agency
+		}
+		x = 37
+		y = 6
+
+	}
+	focus = {
+		id = Death_Squads
+		icon = GFX_goal_generic_small_arms
+		cost = 10.00
+		prerequisite = {
+			focus = Secret_Police
+		}
+		x = 39
+		y = 6
+
+	}
+	focus = {
+		id = Controlled_Democracy
+		icon = GFX_focus_CZE_german_puppet
+		cost = 10.00
+		prerequisite = {
+			focus = Restricted_Voting
+		}
+		x = 45
+		y = 6
+
+	}
+	focus = {
+		id = Individual_Freedom
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = Freedom_Again
+		}
+		x = 47
+		y = 6
+
+	}
+	focus = {
+		id = Lenins_Legacy
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = Status_Quo
+		}
+		x = 35
+		y = 6
+
+	}
+	focus = {
+		id = New_Communism
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = Iron_Fist_Rule
+		}
+		x = 41
+		y = 6
+
+	}
+	focus = {
+		id = Decentralized_Country
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = Democratic_Communism
+		}
+		x = 43
+		y = 6
+
+	}
+	focus = {
+		id = Return_of_the_Republic
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 10.00
+		prerequisite = {
+			focus = Anti_Communism
+		}
+		x = 49
+		y = 6
+
+	}
 
 
 
@@ -352,7 +565,10 @@ focus = {
 	}
 }
 ##################################################################
-#####Economic Tree################################################
+#### Economic Tree ###############################################
+##################################################################
+##################################################################
+#### State Capitalism ############################################
 ##################################################################
  	focus = {
  		id = Central_Planning
@@ -369,170 +585,6 @@ focus = {
  		completion_reward = {
  		add_political_power = 50
  		}
-	}
-
-
-
-	focus = {
-		id = Resources_Exploitation
-		icon = GFX_goal_generic_production2
-		cost = 10.00
-		prerequisite = {
-			focus = Gosplan_Congress
-		}
-		x = 2
-		y = 1
-	}
-
-	focus = {
-		id = Siberian_Chrome
-		icon = GFX_goal_generic_construction2
-		cost = 10.00
-		prerequisite = {
-			focus = Resources_Exploitation
-		}
-		x = 2
-		y = 2
-		completion_reward = {
-		add_resource = { type = chrome amount = 10 state = 582 }
-		}
-	}
-	focus = {
-		id = Siberian_Steel
-		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10.00
-		prerequisite = {
-			focus = Siberian_Chrome
-		}
-		x = 2
-		y = 3
-		completion_reward = {
-   add_resource = { type = steel amount = 20 state = 653 }
-	}
-}
-	focus = {
-		id = Siberian_Oil
-		icon = GFX_goal_generic_oil_refinery
-		cost = 10.00
-		prerequisite = {
-			focus = Siberian_Steel
-		}
-		x = 2
-		y = 4
-		completion_reward = {
-		add_resource = { type = oil amount = 20 state = 398 }
-		}
-
-	}
-
-	focus = {
-		id = RKKA_Congress
-		icon = GFX_focus_generic_join_comintern
-		cost = 10.00
-		x = 29
-		y = 0
-		available = { has_country_flag = RKKA_Congress }
-		completion_reward = {
-		army_experience = 30
-		}
-	}
-
-
-	focus = {
-		id = Soviet_Technology
-		icon = GFX_focus_generic_socialist_science
-		cost = 10.00
-		prerequisite = {
-			focus = Central_Planning
-			focus = NEP_foreign_1
-		}
-		x = 9
-		y = 3
-		completion_reward = {
-		add_research_slot = 1
-		}
-
-	}
-	focus = {
-		id = Establish_OKB
-		icon = GFX_focus_generic_license_production
-		cost = 10.00
-		prerequisite = {
-			focus = Soviet_Technology
-		}
-		x = 10
-		y = 4
-		completion_reward {
-		add_ideas = SOV_OKB_idea
-		}
-
-	}
-	focus = {
-		id = OKB_3
-		icon = GFX_goal_generic_air_bomber
-		cost = 10.00
-		prerequisite = {
-			focus = Establish_OKB
-		}
-		x = 9
-		y = 5
-		completion_reward = {
-		   add_tech_bonus = {
-			    name = Tupolev_Petlyakov
-					bonus = 0.4
-					uses = 3
-					category = tactical_bomber
-					category = cas_bomber
-			 }
-		}
-
-	}
-	focus = {
-		id = OKB_1
-		icon = GFX_goal_generic_air_fighter
-		cost = 10.00
-		prerequisite = {
-			focus = Establish_OKB
-		}
-		x = 11
-		y = 5
-		completion_reward = {
-		   add_tech_bonus = {
-			    name = Mig_Yakovlev
-					bonus = 0.4
-					uses = 3
-					technology = early_fighter
-					technology = fighter1
-					technology = fighter2
-					technology = fighter3
-					technology = heavy_fighter1
-					technology = heavy_fighter2
-					technology = heavy_fighter3
-			 }
-		}
-
-	}
-	focus = {
-		id = OKB_2
-		icon = GFX_focus_rocketry
-		cost = 10.00
-		prerequisite = {
-			focus = OKB_1
-		}
-		prerequisite = {
-			focus = OKB_3
-		}
-		x = 10
-		y = 6
-		completion_reward = {
-		add_tech_bonus = {
-		name = Korolev
-		bonus = 0.5
-		uses = 2
-		category = rocketry
-		}
-		}
-
 	}
 	focus = {
 		id = Draft_FYP
@@ -671,13 +723,313 @@ focus = {
 		prerequisite = {
 			focus = FYP_mil_3
 		}
+		available = {
+		   has_country_flag = fyp_done
+		}
 		x = 15
 		y = 6
 		completion_reward = {
-		add_national_unity = -0.15
 		remove_ideas = SOV_five_year_plan_draft
 		}
 	}
+	##################################################################
+	#### Economic Tree ###############################################
+	##################################################################
+	##################################################################
+	#### Decentralized Socialism #####################################
+	##################################################################
+
+	focus = {
+		id = Decentralized_Socialism
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		prerequisite = {
+			focus = Gosplan_Congress
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+		   add_national_unity = 0.05
+		}
+
+	}
+	focus = {
+		id = Empower_Syndicates
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = Decentralized_Socialism
+		}
+		mutually_exclusive = {
+			focus = Empower_The_People
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+		   add_ideas = syndicates_sov
+		}
+
+	}
+	focus = {
+		id = Decentralized_Planning
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = Empower_Syndicates
+		}
+		x = 0
+		y = 3
+		completion_reward = {
+		   add_ideas = decentralized_planning
+		}
+
+	}
+	focus = {
+		id = Empower_The_People
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = Decentralized_Socialism
+		}
+		mutually_exclusive = {
+			focus = Empower_Syndicates
+		}
+		x = 2
+		y = 2
+		completion_reward = {
+		   add_national_unity = 0.1
+			 add_ideas = power_to_people
+		}
+
+	}
+	focus = {
+		id = Participatory_Planning
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = Empower_The_People
+		}
+		x = 2
+		y = 3
+		completion_reward = {
+		   add_ideas = participatory_planning
+		}
+
+	}
+	focus = {
+		id = Collectivization
+		icon = GFX_focus_generic_self_management
+		cost = 10.00
+		prerequisite = {
+			focus = Participatory_Planning
+			focus = Decentralized_Planning
+		}
+		x = 1
+		y = 4
+		completion_reward = {
+		   add_ideas = collectivized_economy_law
+		}
+
+	}
+	focus = {
+		id = Anarcho_Communism
+		icon = GFX_goal_support_communism
+		cost = 10.00
+		prerequisite = {
+			focus = Participatory_Planning
+		}
+		prerequisite = {
+			focus = Collectivization
+		}
+		x = 2
+		y = 5
+		completion_reward = {
+		   add_national_unity = 0.1
+		}
+
+	}
+	focus = {
+		id = Syndicalism
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10.00
+		prerequisite = {
+			focus = Decentralized_Planning
+		}
+		prerequisite = {
+			focus = Collectivization
+		}
+		x = 0
+		y = 5
+		completion_reward = {
+		   add_political_power = 600
+		}
+
+	}
+
+
+
+	focus = {
+		id = Resources_Exploitation
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = Gosplan_Congress
+		}
+		x = 18
+		y = 1
+	}
+
+	focus = {
+		id = Siberian_Chrome
+		icon = GFX_goal_generic_construction2
+		cost = 10.00
+		prerequisite = {
+			focus = Resources_Exploitation
+		}
+		x = 18
+		y = 2
+		completion_reward = {
+		add_resource = { type = chrome amount = 10 state = 582 }
+		}
+	}
+	focus = {
+		id = Siberian_Steel
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = Siberian_Chrome
+		}
+		x = 18
+		y = 3
+		completion_reward = {
+   add_resource = { type = steel amount = 20 state = 653 }
+	}
+}
+	focus = {
+		id = Siberian_Oil
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = Siberian_Steel
+		}
+		x = 18
+		y = 4
+		completion_reward = {
+		add_resource = { type = oil amount = 20 state = 398 }
+		}
+
+	}
+
+	focus = {
+		id = RKKA_Congress
+		icon = GFX_focus_generic_join_comintern
+		cost = 10.00
+		x = 29
+		y = 0
+		available = { has_country_flag = RKKA_Congress }
+		completion_reward = {
+		army_experience = 30
+		}
+	}
+
+
+	focus = {
+		id = Soviet_Technology
+		icon = GFX_focus_generic_socialist_science
+		cost = 10.00
+		prerequisite = {
+			focus = Central_Planning
+			focus = NEP_foreign_1
+		}
+		x = 9
+		y = 3
+		completion_reward = {
+		add_research_slot = 1
+		}
+
+	}
+	focus = {
+		id = Establish_OKB
+		icon = GFX_focus_generic_license_production
+		cost = 10.00
+		prerequisite = {
+			focus = Soviet_Technology
+		}
+		x = 10
+		y = 4
+		completion_reward {
+		add_ideas = SOV_OKB_idea
+		}
+
+	}
+	focus = {
+		id = OKB_3
+		icon = GFX_goal_generic_air_bomber
+		cost = 10.00
+		prerequisite = {
+			focus = Establish_OKB
+		}
+		x = 9
+		y = 5
+		completion_reward = {
+		   add_tech_bonus = {
+			    name = Tupolev_Petlyakov
+					bonus = 0.4
+					uses = 3
+					category = tactical_bomber
+					category = cas_bomber
+			 }
+		}
+
+	}
+	focus = {
+		id = OKB_1
+		icon = GFX_goal_generic_air_fighter
+		cost = 10.00
+		prerequisite = {
+			focus = Establish_OKB
+		}
+		x = 11
+		y = 5
+		completion_reward = {
+		   add_tech_bonus = {
+			    name = Mig_Yakovlev
+					bonus = 0.4
+					uses = 3
+					technology = early_fighter
+					technology = fighter1
+					technology = fighter2
+					technology = fighter3
+					technology = heavy_fighter1
+					technology = heavy_fighter2
+					technology = heavy_fighter3
+			 }
+		}
+
+	}
+	focus = {
+		id = OKB_2
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = OKB_1
+		}
+		prerequisite = {
+			focus = OKB_3
+		}
+		x = 10
+		y = 6
+		completion_reward = {
+		add_tech_bonus = {
+		name = Korolev
+		bonus = 0.5
+		uses = 2
+		category = rocketry
+		}
+		}
+
+	}
+
 ###############################################################################
 #######Foreign Policy##########################################################
 ###############################################################################

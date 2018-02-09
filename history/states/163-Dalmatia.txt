@@ -1,15 +1,28 @@
-state=
-{
+state={
 	id=163
-	name="STATE_163"
-	
-	
-	
-	
+	name="STATE_163" # Zara
+	manpower = 1441
+
+	state_category = town
+
+
 	history={
-		
+		owner = ITA
+		victory_points = {
+			3943 5
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			3943 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = CRO
+		add_core_of = YUG
 	}
+
 	provinces={
-		 
+		3943
 	}
 }

@@ -232,6 +232,20 @@ ideas = {
   }
   }
 
+  participatory_planning = {
+  allowed = {
+     original_tag = SOV
+     always = no
+  }
+
+  removal_cost = -1
+
+  modifier = {
+     unity_factor = 0.5
+     
+  }
+  }
+
 
 	SOV_OKB_idea = {
 	allowed = {

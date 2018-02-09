@@ -1049,7 +1049,7 @@ country_event = { #war fix NFA
 	}
 }
 
-country_event = { #war fix SPF
+country_event = { #War fix SPF
 	id = france.38
 	title = france.38.t
 	desc = france.38.d

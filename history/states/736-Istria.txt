@@ -2,7 +2,7 @@ state={
 	id=736
 	name="STATE_736"
 	
-	state_category = city
+	state_category = large_town
 
 	history={
 		owner = AUS
@@ -10,19 +10,16 @@ state={
 		add_core_of = YUG
                 add_core_of = ITA
 		buildings = {
-			infrastructure = 2
-			11735 = {
-				naval_base = 5
-
-			}
+			infrastructure = 4
+			
 
 		}
 
 	}
 
 	provinces={
-		599 6626 11595 11735 13205 13206
+		599 11595 13205 13206
 	}
-	manpower=1063159
+	manpower=327000
 	buildings_max_level_factor=1.000
 }

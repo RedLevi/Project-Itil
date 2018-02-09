@@ -21,7 +21,7 @@ state={
 	}
 
 	provinces={
-		599 6626 11595 11735 2923 13205 13206
+		599 6626 11595 11735 13205 13206
 	}
 	manpower=1063159
 	buildings_max_level_factor=1.000

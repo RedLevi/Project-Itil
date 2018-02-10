@@ -216,7 +216,7 @@ country_event = { #ALLIANCE#
                 tag = SYA
                 tag = SFA
                 tag = NFA
-                tag = NFA
+                tag = IFA
                 tag = RFA
             }
         }

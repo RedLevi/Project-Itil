@@ -88,11 +88,11 @@ bookmarks = {
 			ideology = conservatism
 			ideas = {
 				YUG_dc
+				YUG_executive_power
 			}
 			focuses = {
-				YUG_enhanced_freedoms
-				YUG_ethnic_int
-				YUG_serbian_dom
+				YUG_ethnic_question
+				YUG_outwards_vision
 			}
 		}
 

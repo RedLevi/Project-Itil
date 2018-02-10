@@ -1,6 +1,23 @@
 ideas = {
 
 		country = {
+			YUG_executive_power = {
+				allowed = {
+					original_tag = YUG
+					always = no
+				}
+				allowed_civil_war = {
+					always = no
+				}
+				removal_cost = -1
+				picture = GFX_idea_HUN_hungarian_monarchy
+				modifier = {
+					unity_factor = -0.05
+					political_power_gain = -0.4
+					reactionarism_drift = 0.05
+				}
+			}
+
 			YUG_dc = {
 				allowed = {
 					original_tag = YUG
@@ -14,7 +31,7 @@ ideas = {
 				modifier = {
 					non_core_manpower = -0.02
 					unity_factor = -0.30
-					political_power_gain = -1
+					political_power_gain = -0.5
 				}
 			}
 
@@ -32,7 +49,7 @@ ideas = {
 					liberalism_drift = 0.05
 					non_core_manpower = -0.02
 					unity_factor = -0.20
-					political_power_gain = -0.6
+					political_power_gain = -0.3
 				}
 			}
 
@@ -49,7 +66,7 @@ ideas = {
 				modifier = {
 					conservatism_drift = 0.05
 					unity_factor = -0.20
-					political_power_gain = -1
+					political_power_gain = -0.5
 				}
 			}
 
@@ -66,7 +83,7 @@ ideas = {
 				modifier = {
 					reactionarism_drift = 0.05
 					unity_factor = -0.30
-					political_power_gain = -0.6
+					political_power_gain = -0.3
 				}
 			}
 

@@ -78,8 +78,8 @@ focus_tree = {
 	}
 
 	focus = {
-		id = YUG_puppet_borders
-		icon = GFX_focus_generic_self_management
+		id = YUG_banov_cro
+		icon = GFX_focus_YUG_banovina_of_croatia
 		x = 1
 		y = 3
 		cost = 10
@@ -92,8 +92,7 @@ focus_tree = {
 			AND = {
 				owns_state = 109 # Croatia
 				owns_state = 103 # Dalmatia
-				owns_state = 163 # Zara
-				owns_state = 105 # Montenegro
+				# owns_state = 105
 				# 44 Albania
 			}
 		}
@@ -102,7 +101,30 @@ focus_tree = {
 		}
 		completion_reward = {
 			release_puppet = CRO
+			add_political_power = 20
+		}
+	}
+
+	focus = {
+		id = YUG_puppet_mnt
+		icon = GFX_focus_generic_home_defense
+		x = 1
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available_if_capitulated = no
+		available = {
+			NOT = { has_war = yes }
+			owns_state = 105 # Montenegro
+		}
+		prerequisite = {
+			focus = YUG_banov_cro
+		}
+		completion_reward = {
 			release_puppet = MNT
+			add_political_power = 20
 		}
 	}
 
@@ -110,7 +132,7 @@ focus_tree = {
 		id = YUG_bosnian_question
 		icon = GFX_focus_generic_self_management
 		x = 1
-		y = 4
+		y = 5
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -121,7 +143,7 @@ focus_tree = {
 			owns_state = 104 # Bosnia
 		}
 		prerequisite = {
-			focus = YUG_puppet_borders
+			focus = YUG_puppet_mnt
 		}
 		completion_reward = {
 			country_event = { days = 1 id = yug.1 }
@@ -134,7 +156,7 @@ focus_tree = {
 		id = YUG_rural_inf
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 3
-		y = 3
+		y = 4
 		cost = 10
 		ai_will_do = {
 			factor = 9
@@ -143,20 +165,15 @@ focus_tree = {
 		available = {
 			AND = {
 				owns_puppet_103 = yes
-				owns_puppet_163 = yes
 				owns_puppet_44 = yes
 			}
 		}
 		prerequisite = {
-			focus = YUG_enhanced_freedoms
-			focus = YUG_ethnic_int
+			focus = YUG_banov_cro
+			focus = YUG_bos_focus
 		}
 		completion_reward = {
 			103 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
-				add_extra_state_shared_building_slots = 1
-			}
-			163 = {
 				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
 				add_extra_state_shared_building_slots = 1
 			}
@@ -171,7 +188,7 @@ focus_tree = {
 		id = YUG_capital_rail
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 3
-		y = 4
+		y = 5
 		cost = 10
 		ai_will_do = {
 			factor = 9
@@ -207,7 +224,7 @@ focus_tree = {
 		id = YUG_croat_goods
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 2
-		y = 5
+		y = 6
 		cost = 10
 		ai_will_do = {
 			factor = 9
@@ -239,7 +256,7 @@ focus_tree = {
 		id = YUG_bos_steel
 		icon = GFX_goal_generic_construction2
 		x = 4
-		y = 5
+		y = 6
 		cost = 10
 		ai_will_do = {
 			factor = 9
@@ -263,7 +280,7 @@ focus_tree = {
 		id = YUG_alb_goods
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 3
-		y = 6
+		y = 7
 		cost = 10
 		ai_will_do = {
 			factor = 9
@@ -379,7 +396,6 @@ focus_tree = {
 			NOT = { has_war = yes }
 			owns_state = 109 # Croatia
 			owns_state = 103 # Dalmatia
-			owns_state = 163 # Zara
 		}
 		completion_reward = {
 			custom_effect_tooltip = integrate_cro
@@ -533,9 +549,6 @@ focus_tree = {
 			103 = {
 				add_core_of = YUG
 			}
-			163 = {
-				add_core_of = YUG
-			}
 			custom_effect_tooltip = croatian_unrest
 			set_country_flag = CRO_forcefully_integrated
 		}
@@ -576,6 +589,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		cost = 10
 		available = {
 			owns_state = 105 # Montenegro
 		}
@@ -600,13 +614,13 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 8
 		y = 6
+		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
 		available = {
 			owns_state = 109 # Croatia
 			owns_state = 103 # Dalmatia
-			# owns_state = 163
 			owns_state = 105 # Montenegro
 			owns_state = 44 # Albania
 			owns_state = 104 # Bosnia
@@ -643,10 +657,11 @@ focus_tree = {
 		id = YUG_pacify_albania
 		icon = GFX_goal_generic_dangerous_deal
 		x = 8
-		y = 6
+		y = 7
 		available = {
 			owns_state = 44 # Albania
 		}
+		cost = 10
 		available_if_capitulated = no
 		prerequisite = {
 			focus = the_yug_line
@@ -701,6 +716,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		cost = 10
 		available_if_capitulated = no
 		available = {
 			custom_trigger_tooltip = {
@@ -726,6 +742,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		cost = 10
 		available_if_capitulated = no
 		prerequisite = {
 			focus = YUG_outwards_vision
@@ -735,6 +752,33 @@ focus_tree = {
 				reverse_add_opinion_modifier = { target = ROOT modifier = YUG_looking_out }
 			}
 			add_ideas = YUG_expansionist
+		}
+	}
+
+	focus = {
+		id = YUG_slovene_revolts
+		# icon = 
+		x = 14
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		cost = 10
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_expansionist_propaganda
+		}
+		mutually_exclusive = {
+			focus = YUG_conquer_slovenia
+		}
+		available = {
+			has_completed_focus = YUG_enhanced_freedoms
+		}
+		completion_reward = {
+			custom_effec_tooltip = YUG_slovenian_uprisings
+			hidden_effect = {
+				AUS = { country_event = { days = 3 id = yug.6 } }
+			}
 		}
 	}
 }

@@ -100,7 +100,7 @@ ideas = {
 				modifier = {
 					socialism_drift = 0.05
 					unity_factor = -0.25
-					political_power_gain = -0.8
+					political_power_gain = -0.4
 				}
 			}
 
@@ -116,7 +116,24 @@ ideas = {
 				picture = GFX_idea_FRA_national_mobilization_focus
 				modifier = {
 					conscription_factor = 0.05
-					planning_speed = 0.05
+					planning_speed = 0.1
+				}
+			}
+
+			YUG_solo_preperations = {
+				allowed = {
+					original_tag = YUG
+					always = no
+				}
+				allowed_civil_war = {
+					always = no
+				}
+				removal_cost = -1
+				icon = GFX_idea_FRA_scw_intervention_nationalists_focus
+				modifier = {
+					production_factory_efficiency_gain_factor = 0.05
+					consumer_goods_factor = -0.02
+					production_speed_arms_factory_factor = 0.05
 				}
 			}
 

@@ -9,13 +9,14 @@ yug.1.b:0 "No, we can't weaken ourselves that much."
 ## Ethnic Questions ##
 YUG_ethnic_question:0 "A Matter of Ethnicities"
 YUG_ethnic_question_desc:0 "The problem is with our country - it's lack of unity - boils down to the wide difference in ethnic groups in Yugoslavia. We need to get our heads down and work out a solution, before the ethnic groups attempt to rise up..."
+YUG_look_south:0 "Look South"
+YUG_look_south_desc:0 "The first hurdle to cross, regradless of our approach, is Macedonia. Let us bind them to us!"
 # Enhanced Freedoms #
 YUG_enhanced_freedoms:0 "Enhanced Freedoms"
 YUG_enhanced_freedoms_desc:0 "One of the possible solutions is to release ethnic groups in puppet states. We are, in essence, creating the states we previously conquered, but hopefully they will be more nationalistic and enthusiastic to a local government rather than our glorious one here."
-YUG_prep_people:0 "Prepare the People"
-YUG_prep_people_desc:0 "Before we begin drastic structure changes, we should inform the people as to our intentions of increasing autonomy. This should lead to substantial newfound support for our rule, and we can capitalise on the political power this brings us."
 YUG_banov_cro:0 "Banovina of Croatia"
 YUG_banov_cro_desc:0 "Croatia is the most troublesome of the once-states to exist within our borders. "
+
 YUG_bosnian_question:0 "The Bosnian Question"
 YUG_bosnian_question_desc:0 "Now we have created puppet states in Croatia and Montenegro, we must decide on what to do with the Bosnian lands. They are small enough to possibly directly integrate, or we could puppet them as well and declare ourselves the Kingdom of Serbia once again."
 # Freedoms / Integration Shared Part #
@@ -81,6 +82,8 @@ YUG_expansionist:0 "Expansionist Visions"
 
 ####opinion####
 YUG_looking_out:0 "Yugoslavian Expansionism"
+YUG_ROM_axis:0 "Signed a military co-operation treaty"
+YUG_ROM_axis_denied:0 "Refused to join together in a military treaty"
 
 ####tooltip####
 seryug_change:0 "We will release Bosnia as a puppet state, and change our name back to Serbia."

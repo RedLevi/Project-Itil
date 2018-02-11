@@ -13,6 +13,7 @@ country_event = {
 
 	option = { # Yes, we will even split that much
 		name = yug.1.a
+		ai_chance = { factor = 2 }
 		add_political_power = 100		
 		custom_effect_tooltip = seryug_change
 		hidden_effect = {
@@ -23,6 +24,7 @@ country_event = {
 
 	option = { # No, we can't weaken ourselves that much
 		name = yug.1.b
+		ai_chance = { factor = 8 }
 		104 = { add_core_of = YUG }
 		add_political_power = -50
 	}
@@ -129,6 +131,79 @@ country_event = { # Good Outcome
 		104 = {
 			add_manpower = 10000
 			add_core_of = YUG
+		}
+	}
+}
+
+country_event = { # Yugoslavia - Romania Pact
+	id = yug.16
+	title = yug.16.t
+	desc = yug.16.d
+
+	is_triggered_only = yes
+
+	option = { # Sign us up
+		name = yug.16.a
+		ai_chance = { factor = 99 }
+		add_political_power = 20
+		YUG = {
+			create_faction = "YUG_ROM_pact"
+			add_to_faction = ROM
+		}
+		reverse_add_opinion_modifier = { target = YUG modifier = YUG_ROM_axis }
+	}
+	option = { # No thanks
+		name = yug.16.b
+		ai_chance = { factor = 1 }
+		add_political_power = -20
+		reverse_add_opinion_modifier = { target = YUG modifier = YUG_ROM_axis_denied }
+	}
+}
+
+country_event = { # Yug demands Vojvodina!
+	id = yug.17
+	title = yug.17.t
+	desc = yug.17d
+
+	is_triggered_only = yes
+
+	option = { # Back down
+		name = yug.17.a
+		ai_chance = { factor = 8 }
+		YUG = {
+			country_event = { id = yug.18 days = 1 }
+			transfer_state = 45
+		}
+		if = {
+			limit = {
+				CRO = {
+					AND = {
+						exists = yes
+						is_puppet_of = YUG
+					}
+				}
+			}
+			CRO = { transfer_state = 766 }
+		}
+		if = {
+			limit = {
+				CRO = {
+					NOT = {
+						AND = {
+							exists = yes
+							is_puppet_of = YUG
+						}
+					}
+				}
+			}
+			YUG = { transfer_state = 766 }
+		}
+	}
+
+	option = { # Refuse
+		name = yug.17.b
+		YUG = {
+			country_event = { id = yug.19 days = 4}
 		}
 	}
 }

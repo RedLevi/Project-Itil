@@ -1,0 +1,562 @@
+focus_tree = {
+	id = french_focus
+	
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = FRA_civil_war
+		icon = ?
+		x = 4
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+        available_if_capitulated = no
+		bypass = { has_war = yes }
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FRA_reactionary_war
+		icon = ?
+		x = 3
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_civil_war }
+		
+        available = {
+			has_government = reactionarism
+		}		
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_commie_war
+		icon = ?
+		x = 5
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_civil_war }
+		
+        available = {
+			has_government = communism
+		}		
+
+		completion_reward = {
+		}
+	}	
+
+	focus = {
+		id = FRA_civil_war_ends
+		icon = ?
+		x = 4
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_reactionary_war focus = FRA_commie_war }
+		
+        available = {
+		    has_war = no
+		}		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FRA_choose_petain
+		icon = ?
+		x = 1
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_civil_war_ends }
+		
+        available = {
+		    has_war = no
+			OR = {
+			has_government = reactionarism
+			has_government = national_integralism
+			}
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_choose_maurras
+		icon = ?
+		x = 3
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_civil_war_ends }
+		
+        available = {
+		    has_war = no
+			OR = {
+			has_government = reactionarism
+			has_government = national_integralism
+			}
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_choose_natsyn
+		icon = ?
+		x = 5
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_civil_war_ends }
+		
+        available = {
+		    has_war = no
+			OR = {
+			has_government = reactionarism
+			has_government = national_integralism
+			}
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_choose_commie
+		icon = ?
+		x = 7
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_civil_war_ends }
+		
+        available = {
+		    has_war = no
+			OR = {
+			has_government = communism
+			has_government = socialism	
+			has_government = liberalism
+			}		
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_choose_syn
+		icon = ?
+		x = 9
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_civil_war_ends }
+		
+        available = {
+		    has_war = no
+			OR = {
+			has_government = communism
+			has_government = socialism	
+			has_government = liberalism
+			}		
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_second_civil_war
+		icon = ?
+		x = 11
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_civil_war_ends }
+		
+        available = {
+		    always = no
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_economic_recovery
+		icon = ?
+		x = 15
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		
+        available_if_capitulated = no
+		
+        available = {
+		    has_war = no
+			###make flag for after 2nd civil war or elected options###
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_commie_revolution
+		icon = ?
+		x = 12
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_economic_recovery }
+		
+        available = {
+		    has_war = no
+			has_government = communism
+			###make flag for after 2nd civil war or elected options###
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_mixed_economy
+		icon = ?
+		x = 14
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_economic_recovery }
+		
+        available = {
+		    has_war = no
+			OR = {
+			has_government = reactionarism
+			has_government = conservatism
+			has_government = national_integralism		
+			}
+			###make flag for after 2nd civil war or elected options###
+		}		
+
+		completion_reward = {
+		}
+	}	
+
+	focus = {
+		id = FRA_free_market
+		icon = ?
+		x = 16
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_economic_recovery }
+		
+        available = {
+		    has_war = no
+			OR = {
+			has_government = reactionarism
+			has_government = conservatism
+			}
+			###make flag for after 2nd civil war or elected options###
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_syndic_thought
+		icon = ?
+		x = 18
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_economic_recovery }
+		
+        available = {
+		    has_war = no
+			OR = {
+			has_government = national_integralism
+			has_government = communism
+			}
+			###make flag for after 2nd civil war or elected options###
+		}		
+
+		completion_reward = {
+		}
+	}		
+	
+	focus = {
+		id = FRA_army_rebuild
+		icon = ?
+		x = 20
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		
+        available = {
+		    has_war = no
+			###make flag for after 2nd civil war or elected options###
+		}		
+
+		completion_reward = {
+		}
+	}		
+	
+	focus = {
+		id = FRA_conscription_policy
+		icon = ?
+		x = 20
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_army_rebuild }
+		
+        available = {
+		    has_war = no
+			###make flag for after 2nd civil war or elected options###
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_professional_army
+		icon = ?
+		x = 19
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_conscription_policy }
+		
+        available = {
+		    has_war = no
+			###make flag for after 2nd civil war or elected options###
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_universal_con
+		icon = ?
+		x = 21
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_conscription_policy }
+		
+        available = {
+		    has_war = no
+			###make flag for after 2nd civil war or elected options###
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_women_con
+		icon = ?
+		x = 21
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_universal_con }
+		
+        available = {
+		    has_war = no
+			###make flag for after 2nd civil war or elected options###
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_doctrine
+		icon = ?
+		x = 22
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_army_rebuild }
+		
+        available = {
+		    has_war = no
+			###make flag for after 2nd civil war or elected options###
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_mobalization
+		icon = ?
+		x = 22
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_doctrine }
+		
+        available = {
+		    has_war = no
+			###make flag for after 2nd civil war or elected options###
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_firepower
+		icon = ?
+		x = 24
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_doctrine }
+		
+        available = {
+		    has_war = no
+			###make flag for after 2nd civil war or elected options###
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_armor_army
+		icon = ?
+		x = 26
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_doctrine }
+		
+        available = {
+		    has_war = no
+			###make flag for after 2nd civil war or elected options###
+		}		
+
+		completion_reward = {
+		}
+	}		
+}	

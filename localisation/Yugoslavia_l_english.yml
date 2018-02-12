@@ -1,9 +1,54 @@
 ﻿l_english:
 ####events####
+## Introduction ##
+yug.0.t:0 "The Kingdom of Yugoslavia"
+yug.0.d:0 "The Kingdom of Yugoslavia cam into being on the 13th of February 1922, following the annexation of Bosnia by Serbia. It proceeded to invade Croatia on the 3rd April, who were already defending a Hungarian attack. Croatia fell quickly, and the new Yugoslav forces initiated both skirmishes against the Hungarians in northern Croatia and partisan groups accross the country - the later often violently conducted by armed Serbian militias. Further border clashes occur between Yugoslav, Hungarian and Austrian troops, but Yugoslavia ultimatley failed to advance into Vojvodina or Slovenia, and only gained the southern part of the Istari peninsula. \nOn the 16th of August 1925, King Alexander agrees on a constitution with his provisional government, making Yugoslavia a unitary monarchy. Nationalist parties, especially the Croatian Peasant Party, gain large support in elections, but ultimately the Radical Party wins through slightly dubious means. Just months before the next elections in 1929, however, a Radical Party parliament member shoots dead two members of the Croatian Peasant Party and wound three further, including the party leader. Huge uprisings in the occupied territories occur, notably in Croatia, and a general strike occurs in these areas. In reaction, King Alexander suspends the constitution on the 6th January 1929, and enters a period of absolute dictatorship that brutally crushes the protests in Croatia. \nOn the 18th of March 1931, King Alexander announces a new constitution - giving the king emergency powers, the ability to appoint half of the upper house and direct control of the military. Any law could be passed with the support of just one of the two houses if the King approved of the law. \nKing Alexander was assassinate in Marseiller, France on the 9th of October 1934, by a radical nationalistic group. As per his will, Prince Paul took power as the cheif regent for the young Peter II. Prince-Regent Paul has proved more pragmatic that Alexander, and makes significantly less use of the exectutive powers laid out to him in the constitution. This doesn't mean they aren't available, however."
+yug.0.a:0 "God is with Prince-Regent Paul"
+## Question of Ethnicities ##
+# Puppeting #
 yug.1.t:0 "The Bosnian Question"
 yug.1.d:0 "We have decided on a process of decentralisation, and we have released the border zones. Now we must decide on the final step - do we continue decentralisation right down to puppeting Bosnia and changing our name back to Serbia, or do we stop our decentralisation efforts there - greatly hurting our political capital?"
 yug.1.a:0 "Yes, we will release Bosnia."
 yug.1.b:0 "No, we can't weaken ourselves that much."
+# Integration #
+
+# Serbian Dominance #
+
+## Expansionism ##
+yug.16.t:0 "Yugoslvia Offers an Alliance"
+yug.16.d:0 "Yugoslav diplomats in Budapest today have passed our diplomats an alliance request. They would like us to enter into a formal alliance with them, including military co-operation. The pretext, they state, is to defend the Balkans against external aggressors and to maintain peace within the Balkans itself. However, it also involves secret protocols to carve up Hungary between the two of us - in the event of war between Yugoslavia and Hungary, we will be called to arms. Once Hungary has been defeated, Northern Transylvania and other ancestral Romanian territories will returned to us, whilst Hungary and Slovakia will be turned into Yugoslavian protectorates. Is this deal satisfactory?"
+yug.16.a:0 "Agree to the Pact"
+yug.16.b:0 "Politely Decline"
+yug.17.t:0 "Yugoslavian demands Vojvodina!"
+yug.17.d:0 "The Yugoslav embassy in Budapest has passed us a message from the leadership of Yugoslvia. They have the audacity to demand that we transfer ownership of Vojvodina to them, including Croatian West Vojvodina, or face military action. To empasise their point, they have massed some of their armed forces at the border. Do we appease them, or do we hold our ground?"
+yug.17.a:0 "Hand over Vojvodina"
+yug.17.b:0 "Refuse their unjust demands!"
+yug.18.t:0 "Hungary backs down"
+yug.18.d:0 "The message from the Hungarians is clear - they will hand over our rightful territories. We have won this bout, but we have futher business with Hungary. Until then, we can rejoice!"
+yug.18.a:0 "Hoorah!"
+yug.19.t:0 "Hungary refuses"
+yug.19.d:0 "The response we recieved from the Hungarians was not the one we wanted to here, but it was the one we were expecting. Our troops our ready to die for our cause, so let us make it count. All they await is the formal declaration of war."
+yug.19.a:0 "To War We Go"
+yug.20.t:0 "The Fate of Hungary"
+yug.20.d:0 "The time to end Hungary is here. For too long have they been a thorn in our side, but now we are strong enough to put a stop to their nonsence and bring them under out control. Only a few things need to be ironed out, such as do we just puppet a Hungarian state, or weaken it by creating a Slovakian state. Once we have this worked out, we'll just pop a note over to Hungary and hope they'll accept. If not, well, we do have the military ready."
+yug.20.a:0 "Return Romania its territories and puppet just Hungary"
+yug.20.b:0 "Return Romania its territories and puppet Hungary and Slovakia"
+yug.20.c:0 "Just puppet Hungary"
+yug.20.e:0 "Puppet both Hungary and Slovakia"
+yug.21.t:0 "Yugoslavia demands our obediance!"
+yug.21.d:0 "Yugoslavia just can't get enough, apparently. Now they demand that we toe their line completely and fold to whatever territorial and soverinity demands they have. This will almost certainly fatally criple us, but is this the price we must pay to protect our people and live in peace?"
+yug.21.a:0 "We must fold"
+yug.21.b:0 "No - we will fight!"
+yug.22.t:0 "The Hungarian Response"
+yug.22.d1:0 "Hungary has foolishly refused to fold to our demands, and instead mobalised their army ready for war. We now must decide to follow through with our threats, for the good of Balkan security, or never be taken seriously again. What must we do?"
+yug.22.b:0 "To War!"
+yug.22.c:0 "Back Down"
+yug.22.d2:0 "Hungary has wisely decided to accept out protection and territorial adjustments that we set out in our recent set of demands. The Yugoslavian embassy in Budapest has temporarily seized control of the state until we can iron out details with the Hungarians over rulership and the like, though this should follow soon enough. Tonight we will party, and extend a warm welcome to our new friends!"
+yug.22.a:0 "Hooray!"
+yug.23.t:0 "Hungary folds to Yugoslavia"
+yug.23.d:0 "Hungary has today decided to fold to demands set out by the Yugoslavian government, including territorial adjustments and Yugoslav overlordship over Hungary. Some experts claim it was inevitable, but others are amazed Hungary went down without a fight."
+yug.23.a:0 "We now hold Transylvania. A toast to our Yugoslav friends!"
+yug.23.b:0 "New opressors, same situation"
 
 ####focus####
 ## Ethnic Questions ##

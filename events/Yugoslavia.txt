@@ -4,6 +4,21 @@
 
 add_namespace = yug
 
+country_event = { # Introduction
+	id = yug.0
+	title = yug.0.t
+	desc = yug.0.d
+
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = { # God is with Regent Paul
+		name = yug.0.a
+	}
+}
+
 country_event = {
 	id = yug.1
 	title = yug.1.t
@@ -250,6 +265,7 @@ country_event = { # The Fate of Hungary
 					owns_state = 76
 				}
 			}
+			not = { has_war_with = ROM }
 		}
 		ai_chance = {
 			factor = 3
@@ -271,6 +287,7 @@ country_event = { # The Fate of Hungary
 					owns_state = 73
 				}
 			}
+			not = { has_war_with = ROM }
 		}
 		ai_chance = {
 			factor = 7
@@ -378,7 +395,7 @@ country_event = {
 			}
 		}
 	}
-	option = { # fold
+	option = { # Refuse
 		name = yug.21.b
 		ai_chance = {
 			factor = 2
@@ -391,7 +408,18 @@ country_event = {
 country_event = { # Hungary Folds
 	id = yug.22
 	title = yug.22.t
-	desc = yug.22.d
+	desc = {
+		text = yug.22.d1
+		trigger = {
+			has_global_flag = HUN_refuses_YUG
+		}
+	}
+	desc = {
+		text = yug.22.d2
+		trigger = {
+			not = { has_global_flag = HUN_refuses_YUG }
+		}
+	}
 
 	is_triggered_only = yes
 
@@ -410,6 +438,9 @@ country_event = { # Hungary Folds
 		trigger = {
 			has_global_flag = HUN_refuses_YUG
 		}
+		ai_chance = {
+			factor = 9
+		}
 		name = yug.22.b
 		declare_war_on = { target = HUN type = annex_everything }
 		add_national_unity = 0.05
@@ -419,6 +450,9 @@ country_event = { # Hungary Folds
 		name = yug.22.c
 		trigger = {
 			has_global_flag = HUN_refuses_YUG
+		}
+		ai_chance = {
+			factor = 1
 		}
 		add_political_power = -50
 	}

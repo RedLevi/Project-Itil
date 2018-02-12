@@ -74,6 +74,8 @@ AME_agression = { value = -75 }
 AME_reconciliation = { value = 25 }
 ### Yugoslavia ###
 YUG_looking_out = { value = -20 }
-YUG_ROM_axis = { value = 50 }
-YUG_ROM_axis_denied = { value = -50 }
+YUG_ROM_axis = { value = 40 }
+YUG_ROM_axis_denied = { value = -40 }
+YUG_ROM_land = { value = 50 }
+YUG_ROM_no_land = { value = 50 }
 }

@@ -880,6 +880,25 @@ focus_tree = {
 		prerequisite = {
 			focus = YUG_uniting_yugoslavia
 		}
+		available = {
+			NOT = {
+				is_puppet = yes
+			}
+			HUN = {
+				OR = {
+					owns_state = 45
+					owns_state = 766
+				}
+			}
+		}
+		bypass = {
+			HUN = {
+				NOT = {
+					owns_state = 45
+					owns_state = 766
+				}
+			}
+		}
 		completion_reward = {
 			add_political_power = 100
 		}
@@ -939,7 +958,7 @@ focus_tree = {
 			focus = YUG_rom_alliance
 		}
 		completion_reward = {
-			add_ideas = YUG_solo_preperations
+			add_timed_idea = { idea = YUG_solo_preperations days = 100 }
 		}
 	}
 
@@ -960,10 +979,79 @@ focus_tree = {
 		available = {
 			NOT = {
 				is_puppet = yes
+				is_in_faction_with = HUN
+			}
+			HUN = {
+				OR = {
+					owns_state = 45
+					owns_state = 766
+				}
+			}
+		}
+		bypass = {
+			HUN = {
+				NOT = {
+					owns_state = 45
+					owns_state = 766
+				}
+			}
+			HUN = {
+				is_in_faction_with = YUG
 			}
 		}
 		completion_reward = {
 			HUN = { country_event = { id = yug.17 days = 3 } }
+		}
+	}
+
+	focus = {
+		id = YUG_fate_of_hungary
+		icon = GFX_focus_CZE_german_puppet
+		x = 19
+		y = 5
+		ai_will_do = {
+			factor = 10
+		}
+		cost = 10
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_demand_voj
+		}
+		available = {
+			NOT = {
+				OR = {
+					is_puppet = yes
+					has_war_with = ROM
+					HUN = { owns_state = 45 }
+					HUN = { owns_state = 766 }
+				}
+			}
+		}
+		bypass = {
+			AND = {
+				OR = {
+					NOT = { country_exists = HUN }
+					HUN = { is_puppet = yes }
+				}
+				OR = {
+					AND = {
+						owns_state = 45
+						CRO = { owns_state = 766 }
+					}
+					AND = {
+						owns_state = 45
+						owns_state = 766
+					}
+				}
+				NOT = {
+					owns_state = 155
+					owns_state = 154
+					owns_state = 43
+				}
+			}
+		}
+		completion_reward = {
+			country_event = { id = yug.20 days = 2 }
 		}
 	}
 

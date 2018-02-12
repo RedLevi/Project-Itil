@@ -163,7 +163,7 @@ country_event = { # Yugoslavia - Romania Pact
 country_event = { # Yug demands Vojvodina!
 	id = yug.17
 	title = yug.17.t
-	desc = yug.17d
+	desc = yug.17.d
 
 	is_triggered_only = yes
 
@@ -205,5 +205,247 @@ country_event = { # Yug demands Vojvodina!
 		YUG = {
 			country_event = { id = yug.19 days = 4}
 		}
+	}
+}
+
+country_event = { # Hungary backs down!
+	id = yug.18
+	title = yug.18.t
+	desc = yug.18.d
+
+	is_triggered_only = yes
+
+	option = { # Nice!
+		name = yug.18.a
+		add_political_power = 20
+	}
+}
+
+country_event = { # The Hungarians Refuse!
+	id = yug.19
+	title = yug.19.t
+	desc = yug.19.d
+
+	is_triggered_only = yes
+
+	option = { # To War!
+		declare_war_on = { target = HUN type = annex_everything }
+		add_national_unity = 0.05
+	}
+}
+
+country_event = { # The Fate of Hungary
+	id = yug.20
+	title = yug.20.t
+	desc = yug.20.d
+
+	is_triggered_only = yes
+
+	option = { # Puppet Hungary and Return territory to Romania
+		trigger = {
+			HUN = {
+				AND = {
+					owns_state = 82
+					owns_state = 83
+					owns_state = 76
+				}
+			}
+		}
+		ai_chance = {
+			factor = 3
+		}
+		name = yug.20.a
+		HUN = { country_event = { id = yug.21 days = 2 } }
+		set_global_flag = YUG_demands_1
+	}
+	option = { # Return territory and puppet Hungary and Slovakia
+		trigger = {
+			HUN = {
+				AND = {
+					owns_state = 82
+					owns_state = 83
+					owns_state = 76
+					owns_state = 70
+					owns_state = 664
+					owns_state = 71
+					owns_state = 73
+				}
+			}
+		}
+		ai_chance = {
+			factor = 7
+		}
+		name = yug.20.b
+		HUN = { country_event = { id = yug.21 days = 2 } }
+		set_global_flag = YUG_demands_2
+	}
+	option = { # Just puppet Hungary
+		trigger = {
+			NOT = { is_in_faction_with = ROM }
+		}
+		ai_chance = {
+			factor = 1
+		}
+		name = yug.20.c
+		HUN = { country_event { id = yug.21 days = 2 } }
+		set_global_flag = YUG_demands_3
+	}
+	option = { # Just puppet Hungary and Slovakia
+		trigger = {
+			HUN = {
+				AND = {
+					owns_state = 70
+					owns_state = 664
+					owns_state = 71
+					owns_state = 73
+				}
+			}
+			NOT = { is_in_faction_with = ROM }
+		}
+		ai_chance = {
+			factor = 2
+		}
+		name = yug.20.e
+		HUN = { country_event { id = yug.21 days = 2 } }
+		set_global_flag = YUG_demands_4
+	}
+}
+
+country_event = {
+	id = yug.21
+	title = yug.21.t
+	desc = yug.21.d
+
+	is_triggered_only = yes
+
+	option = { # fold
+		name = yug.21.a
+		ai_chance = {
+			factor = 8
+		}
+		if = {
+			limit = { has_global_flag = YUG_demands_1 }
+			set_global_flag = YUG_gives_ROM_land
+			ROM = {
+				transfer_state = 82
+				transfer_state = 83
+				transfer_state = 76
+				country_event = { id = yug.22 days = 3 }
+			}
+			YUG = {
+				puppet = HUN
+				country_event = { id = yug.23 days = 3 }
+			}
+		}
+		if = {
+			limit = { has_global_flag = YUG_demands_2 }
+			set_global_flag = YUG_gives_ROM_land
+			ROM = {
+				transfer_state = 82
+				transfer_state = 83
+				transfer_state = 76
+				country_event = { id = yug.22 days = 3 }
+			}
+			release = SLO
+			YUG = {
+				puppet = SLO
+				puppet = HUN
+				country_event = { id = yug.22 days = 3 }
+			}
+		}
+		if = {
+			limit = { has_global_flag = YUG_demands_3 }
+			set_global_flag = YUG_refused_ROM_land
+			hidden_effect = {
+				ROM = { country_event = { id =  yug.22 days = 3 } }
+			}
+			YUG = {
+				puppet = HUN
+				country_event = { id = yug.22 days = 3 }
+			}
+		}
+		if = {
+			limit = { has_global_flag = YUG_demands_4 }
+			set_global_flag = YUG_refused_ROM_land
+			hidden_effect = {
+				ROM = { country_event = { id = yug.22 days = 3 } }
+			}
+			release = SLO
+			YUG = {
+				puppet = SLO
+				puppet = HUN
+				country_event = { id = yug.22 days = 3 }
+			}
+		}
+	}
+	option = { # fold
+		name = yug.21.b
+		ai_chance = {
+			factor = 2
+		}
+		set_global_flag = HUN_refuses_YUG
+		country_event = { id = yug.22 days = 3 }
+	}
+}
+
+country_event = { # Hungary Folds
+	id = yug.22
+	title = yug.22.t
+	desc = yug.22.d
+
+	is_triggered_only = yes
+
+	option = { # Nice!
+		name = yug.22.a
+		trigger = {
+			OR = {
+				has_global_flag = YUG_gives_ROM_land
+				has_global_flag = YUG_refused_ROM_land
+			}
+		}
+		add_political_power = 20
+	}
+
+	option = { # To War!
+		trigger = {
+			has_global_flag = HUN_refuses_YUG
+		}
+		name = yug.22.b
+		declare_war_on = { target = HUN type = annex_everything }
+		add_national_unity = 0.05
+	}
+
+	option = { # Back Down!
+		name = yug.22.c
+		trigger = {
+			has_global_flag = HUN_refuses_YUG
+		}
+		add_political_power = -50
+	}
+}
+
+country_event = { # Hungary Folds
+
+	id = yug.23
+	title = yug.23.t
+	desc = yug.23.d
+
+	is_triggered_only = yes
+
+	option = { # A toast to our Yugoslav friends!
+		name = yug.23.a
+		trigger = {
+			has_global_flag = YUG_gives_ROM_land
+		}
+		reverse_add_opinion_modifier = { target = YUG modifier = YUG_ROM_land }
+		add_state_core = 82
+	}
+
+	option = { # Same situation, new opressors
+		name = yug.23.b
+		trigger = {
+			has_global_flag = YUG_refused_ROM_land
+		}
+		reverse_add_opinion_modifier = { target = YUG modifier = YUG_ROM_no_land }
 	}
 }

@@ -80,10 +80,14 @@ YUG_executive_power_desc:0 "A new constitution was created in 1931, after two ye
 
 YUG_expansionist:0 "Expansionist Visions"
 
+YUG_solo_prep:0 "Solo Preperations"
+
 ####opinion####
 YUG_looking_out:0 "Yugoslavian Expansionism"
 YUG_ROM_axis:0 "Signed a military co-operation treaty"
 YUG_ROM_axis_denied:0 "Refused to join together in a military treaty"
+YUG_ROM_land:0 "Handed over Transylvania when Hungary was carved up"
+YUG_ROM_no_land:0 "Refused to hand over Transylvania"
 
 ####tooltip####
 seryug_change:0 "We will release Bosnia as a puppet state, and change our name back to Serbia."

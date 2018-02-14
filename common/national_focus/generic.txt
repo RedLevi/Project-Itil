@@ -1680,7 +1680,7 @@ focus_tree = {
 	}
 	focus = {
 		id = adopt_communism_focus
-		icon = GFX_focus_yug_pan_slavic_congress
+		icon = GFX_focus_YUG_pan_slavic_congress
 		cost = 10.00
 		prerequisite = {
 			focus = communist_path_focus
@@ -1878,7 +1878,7 @@ focus_tree = {
 	}
 	focus = {
 		id = united_front_focus
-		icon = GFX_goal_generic_support_communism
+		icon = GFX_goal_support_communism
 		cost = 10.00
 		prerequisite = {
 			focus = world_revolution_focus
@@ -1993,7 +1993,7 @@ focus_tree = {
 	}
 	focus = {
 		id = adopt_liberalism_focus
-		icon = GFX_goal_generic_support_democracy
+		icon = GFX_goal_support_democracy
 		cost = 10.00
 		prerequisite = {
 			focus = liberalism_path_focus
@@ -2244,7 +2244,7 @@ focus_tree = {
 	}
 	focus = {
 		id = adopt_reactionarism_focus
-		icon = GFX_focus_renounce_the_treaty_of_triannon
+		icon = GFX_focus_renounce_the_treaty_of_trianon
 		cost = 10.00
 		prerequisite = {
 			focus = reactionarism_path_focus
@@ -2536,7 +2536,7 @@ focus_tree = {
 	}
 	focus = {
 		id = absolute_power_focus
-		icon = GFX_focus_SAF_colonialist_crusade
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
 		cost = 10.00
 		prerequisite = {
 			focus = royal_restoration_focus
@@ -2566,7 +2566,7 @@ focus_tree = {
 	}
 	focus = {
 		id = national_integrity_focus
-		icon = GFX_goal_generic_support_fascism
+		icon = GFX_goal_support_fascism
 		cost = 10.00
 		prerequisite = {
 			focus = adopt_integralism_focus

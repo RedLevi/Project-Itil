@@ -194,7 +194,7 @@ country_event = { # Yug demands Vojvodina!
 				CRO = {
 					AND = {
 						exists = yes
-						is_puppet_of = YUG
+						is_subject_of = YUG
 					}
 				}
 			}
@@ -206,7 +206,7 @@ country_event = { # Yug demands Vojvodina!
 					NOT = {
 						AND = {
 							exists = yes
-							is_puppet_of = YUG
+							is_subject_of = YUG
 						}
 					}
 				}
@@ -459,7 +459,6 @@ country_event = { # Hungary Folds
 }
 
 country_event = { # Hungary Folds
-
 	id = yug.23
 	title = yug.23.t
 	desc = yug.23.d
@@ -481,5 +480,95 @@ country_event = { # Hungary Folds
 			has_global_flag = YUG_refused_ROM_land
 		}
 		reverse_add_opinion_modifier = { target = YUG modifier = YUG_ROM_no_land }
+	}
+}
+
+country_event = { # Slovenia Revolts!
+	id = yug.24
+	title = yug.24.t
+	desc = yug.24.d
+
+	is_triggered_only = yes
+
+	#immediately = {
+	#	release = SLO
+	#}
+
+	#option = { # Deploy the army!
+	#
+	#}
+
+	#option = { # Let them go
+	#
+	#}
+}
+
+country_event = {
+	id = yug.27
+	title = yug.27.t
+	desc = yug.27.d
+
+	is_triggered_only = yes
+
+	option = { # Hand it over
+		name = yug.27.a
+		YUG = { country_event = { id = yug.28 days = 3} }
+		if = {
+			limit = {
+				owns_state = 102
+			}
+			YUG = {
+				transfer_state = 102
+			}
+		}
+		if = {
+			limit = {
+				owns_state = 736
+			}
+			YUG = {
+				transfer_state = 736
+			}
+		}
+	}
+
+	option = { # Never
+		name = yug.27.b
+		YUG = { country_event = { id = yug.29 days = 2 } }
+	}
+}
+
+country_event = { # Austria folds
+	id = yug.28
+	title = yug.28.t
+	desc = yug.28.d
+
+	is_triggered_only = yes
+
+	option = { # No war today
+		name = yug.28.a
+		add_political_power = 20
+	}
+}
+
+country_event = { # Austria refuses
+	id = yug.29
+	title = yug.29.t
+	desc = yug.29.d
+
+	is_triggered_only = yes
+
+	option = { # Full scale warfare
+		name = yug.29.a
+		declare_war_on = { target = AUS type = annex_everything }
+	}
+
+	option = { # Border warfare
+		name = yug.29.b
+		# border war
+	}
+
+	option = { # Back down
+		name = yug.29.c
+		add_political_power = -40
 	}
 }

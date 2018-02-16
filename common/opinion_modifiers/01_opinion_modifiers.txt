@@ -75,4 +75,12 @@ AME_reconciliation = { value = 25 }
 #NOR# 
 GER_NOR_reject = { value = -50 }
 NOR_SWE_agree = { value = 45 }
+### Yugoslavia ###
+YUG_looking_out = { value = -20 }
+YUG_ROM_axis = { value = 40 }
+YUG_ROM_axis_denied = { value = -40 }
+YUG_ROM_land = { value = 50 }
+YUG_ROM_no_land = { value = 50 }
+YUG_HUN_aggression = { value = -30 }
+YUG_AUS_aggression = { value = -30 }
 }

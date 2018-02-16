@@ -882,7 +882,7 @@ focus_tree = {
 		}
 		available = {
 			NOT = {
-				is_puppet = yes
+				is_subject = yes
 			}
 			HUN = {
 				OR = {
@@ -900,7 +900,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 50
+			reverse_add_opinion_modifier = { target = HUN modifier = YUG_HUN_aggression }
 		}
 	}
 
@@ -920,7 +921,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_war_with = ROM
-				is_puppet = yes
+				is_subject = yes
 			}
 		}
 		bypass = {
@@ -951,7 +952,7 @@ focus_tree = {
 		}
 		available = {
 			NOT = {
-				is_puppet = yes
+				is_subject = yes
 			}
 		}
 		mutually_exclusive = {
@@ -978,7 +979,7 @@ focus_tree = {
 		}
 		available = {
 			NOT = {
-				is_puppet = yes
+				is_subject = yes
 				is_in_faction_with = HUN
 			}
 			HUN = {
@@ -1020,7 +1021,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				OR = {
-					is_puppet = yes
+					is_subject = yes
 					has_war_with = ROM
 					HUN = { owns_state = 45 }
 					HUN = { owns_state = 766 }
@@ -1031,7 +1032,7 @@ focus_tree = {
 			AND = {
 				OR = {
 					NOT = { country_exists = HUN }
-					HUN = { is_puppet = yes }
+					HUN = { is_subject = yes }
 				}
 				OR = {
 					AND = {
@@ -1056,28 +1057,163 @@ focus_tree = {
 	}
 
 	focus = {
+		id = YUG_slovene_question
+		x = 22
+		y = 2
+		icon = GFX_goal_generic_army_tanks
+		ai_will_do = {
+			factor = 10
+		}
+		cost = 10
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = 50
+			reverse_add_opinion_modifier = { target = AUS modifier = YUG_AUS_aggression }
+		}
+	}
+
+	focus = {
 		id = YUG_slovene_revolts
 		# icon = 
-		x = 14
+		x = 21
 		y = 3
 		ai_will_do = {
 			factor = 10
 		}
 		cost = 10
 		available_if_capitulated = no
-		#prerequisite = {
-		#	focus = YUG_expansionist_propaganda
-		#}
-		#mutually_exclusive = {
-		#	focus = YUG_conquer_slovenia
-		#}
+		prerequisite = {
+			focus = YUG_slovene_question
+		}
+		mutually_exclusive = {
+			focus = YUG_conquer_slovenia
+		}
 		available = {
-			has_completed_focus = YUG_enhanced_freedoms
+			AND = {
+				has_completed_focus = YUG_enhanced_freedoms
+				AUS = {
+					OR = {
+						owns_state = 102 # Slovenia
+						owns_state = 736 # Istria
+					}
+				}
+			}
+			
+		}
+		bypass = {
+			AUS = {
+				NOT = {
+					OR = {
+						owns_state = 102 # Slovenia
+						owns_state = 736 # Istria
+					}
+				}
+			}
 		}
 		completion_reward = {
 			custom_effect_tooltip = YUG_slovenian_uprisings
 			hidden_effect = {
-				AUS = { country_event = { days = 3 id = yug.20 } }
+				AUS = { country_event = { days = 3 id = yug.24 } }
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_conquer_slovenia
+		# icon =
+		x = 23
+		y = 3
+		ai_will_do = {
+			factor = 10
+		}
+		cost = 10
+		available_if_capitulated = no
+		prerequisite = {
+			focus = YUG_slovene_question
+		}
+		mutually_exclusive = {
+			focus = YUG_slovene_revolts
+		}
+		available = {
+			AND = {
+				has_completed_focus = YUG_enhanced_freedoms
+				AUS = {
+					OR = {
+						owns_state = 102 # Slovenia
+						owns_state = 736 # Istria
+					}
+				}
+			}
+			
+		}
+		bypass = {
+			AUS = {
+				NOT = {
+					OR = {
+						owns_state = 102 # Slovenia
+						owns_state = 736 # Istria
+					}
+				}
+			}
+		}
+		completion_reward = {
+			AUS = {
+				country_event = { id = yug.27 days = 3 }
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_bring_slovenia
+		x = 22
+		y = 4
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_conquer_slovenia
+			focus = YUG_slovene_revolts
+		}
+		available_if_capitulated = no
+		available = {
+			OR = {
+				AND = {
+					owns_state = 102
+					owns_state = 736
+				}
+				SLV = {
+					exists = yes
+					is_in_faction_with = YUG
+					NOT = { has_war_with = AUS }
+				}
+			}
+			NOT = { has_war_with = AUS }
+		}
+		bypass = {
+			SLV = { is_subject_of = YUG }
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					SLV = {
+						exists = yes
+						NOT = { has_war_with = AUS }
+					}
+				}
+				puppet = SLV
+			}
+			if = {
+				limit = {
+					SLV = {
+						exists = no
+					}
+				}
+				102 = {
+					add_core_of = YUG
+				}
+				736 = {
+					add_core_of = YUG
+				}
 			}
 		}
 	}

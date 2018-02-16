@@ -15,6 +15,7 @@ yug.1.b:0 "No, we can't weaken ourselves that much."
 # Serbian Dominance #
 
 ## Expansionism ##
+# Vojvodina #
 yug.16.t:0 "Yugoslvia Offers an Alliance"
 yug.16.d:0 "Yugoslav diplomats in Budapest today have passed our diplomats an alliance request. They would like us to enter into a formal alliance with them, including military co-operation. The pretext, they state, is to defend the Balkans against external aggressors and to maintain peace within the Balkans itself. However, it also involves secret protocols to carve up Hungary between the two of us - in the event of war between Yugoslavia and Hungary, we will be called to arms. Once Hungary has been defeated, Northern Transylvania and other ancestral Romanian territories will returned to us, whilst Hungary and Slovakia will be turned into Yugoslavian protectorates. Is this deal satisfactory?"
 yug.16.a:0 "Agree to the Pact"
@@ -49,6 +50,24 @@ yug.23.t:0 "Hungary folds to Yugoslavia"
 yug.23.d:0 "Hungary has today decided to fold to demands set out by the Yugoslavian government, including territorial adjustments and Yugoslav overlordship over Hungary. Some experts claim it was inevitable, but others are amazed Hungary went down without a fight."
 yug.23.a:0 "We now hold Transylvania. A toast to our Yugoslav friends!"
 yug.23.b:0 "New opressors, same situation"
+# Slovenia #
+yug.24.t:0 "Slovenia Revolts!"
+yug.24.d:0 "Nationalist rebels across Slovenia have taken up arms - arms they mysterously didn't have a few months ago - and stormed our government buildings in multiple areas. They demand independence for a Slovene state from Austrian imperialist rule, and want it badly. Possibly worse is the fact that some of the Slovene elements of our armed forces reserves and most of the local Slovenian police forces have declared their allegiance to these rebels. Yugoslavia also appears to back the rebelions, threatening to defend the independence of the Slovenians with force, if neccesary. How shall we react?"
+yug.24.a:0 "Deploy our Army!"
+yug.24.b:0 "Let them go..."
+
+yug.27.t:0 "Yugoslavia 'politely' asks for Slovenia"
+yug.27.d:0 "This morning, the foreign minister for Yugoslavia summoned the Austrian ambassador in Belgrade to his office. Calmly he demanded that Austria transfers ownership of Slovenia to them, so they can properly defend the rights of the Slovenian peoples. At first our ambassador thought him joking, but apparently he was not. Shortly afterwards Yugoslavian divisions began arriving at the border, and have been met with support from the Slovenians in the borderlands. How do we reply?"
+yug.27.a:0 "Hand it over"
+yug.27.b:0 "We can protect the Slovenes well enough"
+yug.28.t:0 "Austria folds"
+yug.28.d:0 "In order to avoid a war, Austria has folded. Their military has withdrawn from Istria and Slovenia, and our own has advanced in response. The Slovenian people appear to be enthusiastic about the change of leadership, but only time will tell."
+yug.28.a:0 "Rejoice!"
+yug.29.t:0 "Austrian Refuses"
+yug.29.d:0 "Austria has refused our ultimatum. Some called it inevitable, but we now face a tough choice of tactic. Some of our generals argue for all-out warfare - it would certainly suit us with out military superiority. However, we risk Germany coming to Austria's aid, especially if Austria is in the Imperial Defensive Pact. A second faction amongst our generals is to engage in a limited form of border warfare. This significantly reduces the risk of German intervention, but we would be limited to combat in Istria and Slovenia. Beating the Austrian troops here would probably force a retreat from the areas. There is also, of course, the cowards way out and to back down, but this will surely stifle any future expansionist hopes."
+yug.29.a:0 "Full scale warfare"
+yug.29.b:0 "Border warfare"
+yug.29.c:0 "Back down"
 
 ####focus####
 ## Ethnic Questions ##
@@ -109,6 +128,15 @@ YUG_pacify_albania_desc:0 "Albania, our most recent conquest, must now recieve t
 # Communist Alternative #
 YUG_fourth_option:0 "The Leftist Coalitions's Plan"
 
+## Expansion ##
+YUG_outwards_vision:0 "Outwards Vision"
+
+# Vojvodina #
+
+
+# Slovenia #
+
+
 ####ideas####
 YUG_dc:0 "A Divided Country"
 YUG_dc_desc:0 "Yugoslavia is a divided country. Serbian conquest of Bosnia, Croatia and Montenegro during the Austrian civil war led to a great territorial gain for Yugoslavia, but the Serbian monarchy and Serbian-dominated government are having trouble getting the new ethnic groups to enthusiastically enlist to server the Yugoslavian forces. Drastic measures are needed, but the government is divided in how to deal with the problem."
@@ -133,6 +161,8 @@ YUG_ROM_axis:0 "Signed a military co-operation treaty"
 YUG_ROM_axis_denied:0 "Refused to join together in a military treaty"
 YUG_ROM_land:0 "Handed over Transylvania when Hungary was carved up"
 YUG_ROM_no_land:0 "Refused to hand over Transylvania"
+YUG_AUS_aggression:0 "Agression over Slovenia"
+YUG_HUN_aggression:0 "Agression over Vojvodina"
 
 ####tooltip####
 seryug_change:0 "We will release Bosnia as a puppet state, and change our name back to Serbia."

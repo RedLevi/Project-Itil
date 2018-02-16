@@ -69,6 +69,8 @@ country_event = { # Austria's initiation event
 							AND = {
 								owns_state = 45
 								owns_state = 82
+								owns_state = 45
+								owns_state = 766
 							}
 						}
 					}
@@ -689,6 +691,14 @@ country_event = { # Austria invades Hungary! (Yugoslavia)
 		AUS = { country_event = { id = aus.20 days = 7 } }
 		custom_effect_tooltip = YUG_AUS_war
 		ai_chance = {
+			trigger = {
+				NOT = {
+					AND = {
+						owns_state = 102
+						owns_state = 736
+					}
+				}
+			}
 			factor = 3
 			modifier = {
 				factor = 10
@@ -703,6 +713,14 @@ country_event = { # Austria invades Hungary! (Yugoslavia)
 
 	option = { # Send an ultimatum to Hungary
 		name = aus.5.b
+		trigger = {
+			NOT = {
+				AND = {
+					owns_state = 45
+					owns_state = 766
+				}
+			}
+		}
 		HUN = { country_event = { id = aus.23 days = 7 } }
 		ai_chance = { factor = 5 }
 	}
@@ -744,8 +762,22 @@ country_event = {
 			}
 		}
 		YUG = {
-			transfer_state = 102
-			transfer_state = 736
+			if = {
+				limit = {
+					owns_state = 102
+				}
+				YUG = {
+					transfer_state = 102
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 736
+				}
+				YUG = {
+					transfer_state = 736
+				}
+			}
 		}
 	}
 	

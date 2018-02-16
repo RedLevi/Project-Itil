@@ -146,4 +146,5 @@ RFA = "countries/Republican_France.txt"
 SFA = "countries/Socialist_France.txt"
 SYA = "countries/Syndicalist_France.txt"
 HAW = "countries/Hawaii.txt"
-SPF = "countries/Communist_France.txt
+SPF = "countries/Communist_France.txt"
+NAA = "countries/Manchurian_Partisans.txt"

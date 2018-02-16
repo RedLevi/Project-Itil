@@ -614,7 +614,7 @@ ideas = {
 			 modifier = {
 
           communism_drift = 0.1
-					production_speed_buildings_factor = -0.5
+					production_speed_buildings_factor = -0.05
 
 			 }
 		}

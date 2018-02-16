@@ -111,17 +111,17 @@ country_event = { #foreign POlicies
    option = { #Defensive, might retake some core territories, but will not expand more than OTL USSR
      name = soviet.6.a
      set_country_flag = def_foreign
-     set_country_flag = congress_done
+     set_country_flag = finished_congress
    }
    option = { #World Revolution, Will spread the Revolution throught the world.
      name = soviet.6.b
      set_country_flag = worldrev_foreign
-     set_country_flag = congress_done
+     set_country_flag = finished_congress
    }
    option = { #Imperialist, Similar to OTL USSR. Will conquer to further its own goals.
      name = soviet.6.c
      set_country_flag = imp_foreign
-     set_country_flag = congress_done
+     set_country_flag = finished_congress
    }
 }
 
@@ -269,7 +269,7 @@ country_event = { #If none of the above 12 paths are chosen, the leader gets cho
 
    trigger = {
       tag = SOV
-      has_country_flag = congress_done
+      has_country_flag = finished_congress
       NOT = {
           OR = {
             AND = {
@@ -826,7 +826,7 @@ country_event = { #In case all else fails, you choose your own leader
    }
 }
 
-country_event = {
+country_event = { #Thing that unlocks last state capitalismm focus
    id = soviet.28
    title = soviet.28.t
    desc = soviet.28.d
@@ -847,6 +847,76 @@ country_event = {
       set_country_flag = fyp_done
    }
 }
+
+country_event = { #Manchurian aid
+   id = soviet.29
+   title = soviet.29.t
+   desc = soviet.29.d
+   fire_only_once = yes
+
+   trigger = {
+      SOV = {
+         has_war_with = JAP
+         has_war_with = MAN
+      }
+      has_global_flag = manchurian_rebels
+   }
+
+   mean_time_to_happen = { days = 30 }
+   option = {
+      name = soviet.29.a
+         NAA = {
+            add_state_core = 717
+            add_state_core = 328
+            add_state_core = 716
+            add_state_core = 715
+            add_state_core = 714
+         }
+      NAA = {
+         transfer_state = 717
+      }
+      NAA = {
+         load_oob = Manchuria_Partisans
+      }
+      SOV = {
+         add_to_faction = NAA
+      }
+   }
+}
+
+
+
+country_event = { #Korean aid
+   id = soviet.31
+   title = soviet.31.t
+   desc = soviet.31.d
+   fire_only_once = yes
+
+   trigger = {
+      SOV = {
+         has_war_with = JAP
+      }
+      has_global_flag = korean_rebels
+   }
+
+   mean_time_to_happen = { days = 30 }
+   option = {
+      name = soviet.31.a
+      hidden_effect = {
+
+      }
+      KOR = {
+         transfer_state = 770
+      }
+      KOR = {
+         load_oob = KOR_1939
+      }
+      SOV = {
+         add_to_faction = KOR
+      }
+   }
+}
+
 
 country_event = { #TEST EVENT FOR USSR##NOT MEANT FOR NON-TEST USE##
   id = soviet.1000

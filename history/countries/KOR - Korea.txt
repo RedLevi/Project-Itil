@@ -1,6 +1,5 @@
 ﻿capital = 525 #South Korea - Seoul or Busan
 
-oob = "KOR_1936"
 
 # Starting tech
 set_technology = {
@@ -14,11 +13,11 @@ set_politics = {
 
 	parties = {
 	    conservatism = {
-			popularity = 40
+			popularity = 0
 		}
 
 		national_integralism = {
-			popularity = 1
+			popularity = 0
 		}
 
 		liberalism = {
@@ -26,51 +25,29 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 5
+			popularity = 60
 		}
 		
 		socialism = {
-			popularity = 9
+			popularity = 10
 		}
 		
 		reactionarism = {
-			popularity = 15
+			popularity = 0
 		}
 		
 	}
 	
-	ruling_party = conservatism
+	ruling_party = communism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 create_country_leader = {
-	name = "Syngman Rhee"
+	name = "Lyuh Woon-hyung"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = authoritarian_conservatism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Yi Kang"
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = autocracy
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Kim Il-sung"
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+	picture = "Yo_Unhyung.dds"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
@@ -78,13 +55,3 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Yi Un"
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = integralism
-	traits = {
-		#
-	}
-}

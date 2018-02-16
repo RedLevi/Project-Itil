@@ -1,4 +1,4 @@
-###########################################################
+ ###########################################################
 #####Soviet Republic National Focus Tree###################
 #####Made By:       Markush             ###################
 ###########################################################
@@ -120,7 +120,8 @@ focus = {
 			x = 36
      	y = 3
 			completion_reward = {
-
+			set_country_flag = gosplan_complete
+			set_country_flag = RKKA_Congress
 			}
 	 }
 	 focus = {
@@ -140,6 +141,8 @@ focus = {
      	y = 3
 			completion_reward = {
 			   retire_country_leader = yes
+				 set_country_flag = gosplan_complete
+				 set_country_flag = RKKA_Congress
          create_country_leader = {
 					  name = "Sergey Kirov"
 					  desc = "POLITICS_LEON_TROTSKY_DESC"
@@ -169,6 +172,8 @@ focus = {
      	y = 3
 			completion_reward = {
 			   retire_country_leader = yes
+				 set_country_flag = gosplan_complete
+				 set_country_flag = RKKA_Congress
 			   create_country_leader = {
 				    name = "Victor Serge"
 				    desc = "POLITICS_LEON_TROTSKY_DESC"
@@ -196,6 +201,8 @@ focus = {
      	y = 3
 			completion_reward = {
 			   retire_country_leader = yes
+				 set_country_flag = gosplan_complete
+				 set_country_flag = RKKA_Congress
 			   create_country_leader = {
 					   name = "Viktor Chernov"
 					   desc = "POLITICS_LEON_TROTSKY_DESC"
@@ -1279,7 +1286,10 @@ focus = {
 	x = 60
 	y = 3
 	completion_reward = {
-	   add_opinion_modifier = { target = JAP modifier = Soviet_Revanchism }
+	   reverse_add_opinion_modifier = { target = JAP modifier = Soviet_Revanchism }
+		 SOV = {
+		    country_event = { id = soviet.30 days = 1 }
+		 }
 	}
 
 }
@@ -1323,14 +1333,78 @@ focus = {
 		 }
 	}
 	completion_reward = {
-		    JAP = {
+		 JAP = {
 					 country_event = jdom.33
-				}
+		}
 	}
+}
+focus = {
+	id = Manchurian_Uprising
+	icon = GFX_goal_generic_special_forces
+	cost = 10.00
+	prerequisite = {
+		focus = Fund_Japanese_Dissidents
+	}
+	prerequisite = {
+		focus = Bogd_Khanate
+	}
+	x = 56
+	y = 5
+	bypass = {
+	   OR = {
+	      MAN = {
+		       is_in_faction_with = SOV
+		    }
+				MAN = {
+				   has_government = communism
+				}
+		 }
+	}
+	completion_reward = {
+	   hidden_effect = {
+		    set_global_flag = manchurian_rebels
+		 }
+		 custom_effect_tooltip = manchurian_rebels_tip
+	}
+}
+focus = {
+	id = Korea_Revolution
+	icon = GFX_goal_generic_political_pressure
+	cost = 10.00
+	prerequisite = {
+		focus = Manchurian_Uprising
+	}
+	x = 56
+	y = 6
+	bypass = {
+	   country_exists = KOR
+		 OR = {
+	      KOR = {
+		       is_in_faction_with = SOV
+		    }
+				KOR = {
+				   has_government = communism
+				}
+		 }
+	}
+	completion_reward = {
+	   hidden_effect = {
+		    set_global_flag = korean_rebels
+		 }
+		 custom_effect_tooltip = korean_rebels_tip
+	}
+}
+focus = {
+	id = Sinkiang_Revolution
+	icon = GFX_focus_RAJ_indian_gurkhas
+	cost = 10.00
+	prerequisite = {
+		focus = Bogd_Khanate
+	}
+	x = 53
+	y = 5
 
 }
-
-
 
 focus = {
 	id = Aid_PRF
@@ -1841,51 +1915,16 @@ focus = {
 	y = 6
 
 }
-focus = {
-	id = Manchurian_Uprising
-	icon = GFX_goal_generic_special_forces
-	cost = 10.00
-	prerequisite = {
-		focus = Fund_Japanese_Dissidents
-	}
-	prerequisite = {
-		focus = Bogd_Khanate
-	}
-	x = 56
-	y = 5
 
-}
-focus = {
-	id = Korea_Revolution
-	icon = GFX_goal_generic_political_pressure
-	cost = 10.00
-	prerequisite = {
-		focus = Manchurian_Uprising
-	}
-	x = 56
-	y = 6
-
-}
-focus = {
-	id = Sinkiang_Revolution
-	icon = GFX_focus_RAJ_indian_gurkhas
-	cost = 10.00
-	prerequisite = {
-		focus = Bogd_Khanate
-	}
-	x = 53
-	y = 5
-
-}
 focus = {
 	id = Invite_Ho_Chi_Minh
 	icon = GFX_goal_generic_attack_allies
 	cost = 10.00
 	prerequisite = {
-		focus = Crush_The_Traitors
+		focus = The_Mad_Pasha
 	}
 	x = 62
-	y = 8
+	y = 7
 
 }
 focus = {
@@ -1896,7 +1935,7 @@ focus = {
 		focus = Invite_Ho_Chi_Minh
 	}
 	x = 62
-	y = 9
+	y = 8
 
 }
 focus = {
@@ -1906,8 +1945,8 @@ focus = {
 	prerequisite = {
 		focus = Polish_Crisis
 	}
-	x = 65
-	y = 11
+	x = 64
+	y = 10
 
 }
 focus = {
@@ -1994,16 +2033,13 @@ focus = {
 	icon = GFX_focus_generic_polish_deal
 	cost = 10.00
 	prerequisite = {
-		focus = Demand_Bessarabia
-	}
-	prerequisite = {
-		focus = German_Syndicalism
+		focus = Italian_Deal
 	}
 	prerequisite = {
 		focus = Indochinese_Revolution
 	}
-	x = 65
-	y = 10
+	x = 64
+	y = 9
 
 }
 focus = {
@@ -2011,23 +2047,13 @@ focus = {
 	icon = GFX_goal_generic_dangerous_deal
 	cost = 3.00
 	prerequisite = {
-		focus = Crush_The_Traitors
+		focus = Demand_Bessarabia
 	}
-	x = 68
+	x = 66
 	y = 8
 
 }
-focus = {
-	id = German_Syndicalism
-	icon = GFX_focus_YUG_pan_slavic_congress
-	cost = 3.00
-	prerequisite = {
-		focus = Italian_Deal
-	}
-	x = 68
-	y = 9
 
-}
 focus = {
 	id = Demand_Bessarabia
 	icon = GFX_goal_generic_territory_or_war
@@ -2035,8 +2061,8 @@ focus = {
 	prerequisite = {
 		focus = Crush_The_Traitors
 	}
-	x = 65
-	y = 8
+	x = 66
+	y = 7
 
 }
 focus = {

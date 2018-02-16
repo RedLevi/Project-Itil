@@ -111,14 +111,17 @@ country_event = { #foreign POlicies
    option = { #Defensive, might retake some core territories, but will not expand more than OTL USSR
      name = soviet.6.a
      set_country_flag = def_foreign
+     set_country_flag = congress_done
    }
    option = { #World Revolution, Will spread the Revolution throught the world.
      name = soviet.6.b
      set_country_flag = worldrev_foreign
+     set_country_flag = congress_done
    }
    option = { #Imperialist, Similar to OTL USSR. Will conquer to further its own goals.
      name = soviet.6.c
      set_country_flag = imp_foreign
+     set_country_flag = congress_done
    }
 }
 
@@ -266,6 +269,7 @@ country_event = { #If none of the above 12 paths are chosen, the leader gets cho
 
    trigger = {
       tag = SOV
+      has_country_flag = congress_done
       NOT = {
           OR = {
             AND = {

@@ -4,8 +4,8 @@
 
 add_namespace = norway
 
-#Norway seaks for gernmany`s protection
-country_event = {
+
+country_event = { #Norway seeks germany's protection
 	id = norway.1
 	title = norway.1.t
 	desc = norway.1.d
@@ -13,38 +13,151 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = norway.1.a #
-		ai_chance = { factor = 50 }
+		name = norway.1.a 
+		ai_chance = { factor = 40 }
 		GER = {
-		country_event = { id = germany.2 days = 1 }
+		country_event = { id = norway.2 days = 1 }
 		}
 	}
 
 	option = {
-		name= norway.1.b #allied with Sweeden
-		ai_chance = { factor = 50 }
-		create_faction = "norway_sweeden_alliance"
-		add_to_faction = SWE
+		name = norway.1.b #allied with Sweeden
+		ai_chance = { factor = 40 }
+		SWE = { country_event = { id = norway.5 days = 1 }
+	}
+	}
+	option = {#do nothing 
+		 name = norway.1.c 
+		 ai_chance = { factor = 20 }
+		 add_national_unity = 0.01 
+	}
+
+}	
+
+
+
+country_event = {#Norway seeks protection
+	id = norway.2
+	title = norway.2.t
+	desc = norway.2.d
+	
+	is_triggered_only = yes
+
+	option = { #accept
+		name = norway.2.a
+		ai_chance = { factor = 65 }
+		add_to_faction = NOR 
+		NOR = { country_event = { id = norway.3 } }
+    }
+	
+	option = {#refuse 
+		name = norway.2.b 
+		ai_chance = { factor = 35 }
+		if = { limit = { NOR = { has_country_flag = NOR_sweden_refused } } NOR = { country_event = { id = norway.7 } } else = { country_event = { id = norway.4 } } }
+		reverse_add_opinion_modifier = { target = NOR modifier = GER_NOR_reject }
 	}
 
 }
 
+country_event = {#Germany accepts 
+	id = norway.3 
+	title = norway.3.t 
+	desc = norway.3.d 
+	is_triggered_only = yes 
+	option = {
+		name = norway.3.a 
+	}
+}
 
-
-country_event = {
-	id = norway.2
-	title = norway.2.t
-	desc = norway.2.d
-
+country_event = { #Germany refuses
+	id = norway.4
+	title = norway.4.t
+	desc = norway.4.d
 
 	is_triggered_only = yes
 
 
+	option = {
+		name = norway.1.a #allied with Sweeden
+		ai_chance = { factor = 80 }
+		SWE = { country_event = { id = norway.5 days = 1 }
+		set_country_flag = NOR_germany_refused
+	}
+	}
+	option = {#do nothing 
+		 name = norway.1.b
+		 ai_chance = { factor = 20 }
+	}
+
+}	
+
+country_event = {#Norway offers coalition 
+	id = norway.5 
+	title = norway.5.t 
+	desc = norway.5.d 
+	is_triggered_only = yes 
+	option = {#agree 
+		name = norway.5.a 
+		ai_chance = { factor = 50 }
+		NOR = { country_event = { id = norway.6 } }
+		reverse_add_opinion_modifier = { target = NOR modifier = NOR_SWE_agree }
+		NOR = { reverse_add_opinion_modifier = { target = SWE modifier = NOR_SWE_agree } }
+	}
+	option = {#refuse 
+		name = norway.5.b 
+		ai_chance = { factor = 50 }
+		if = { limit = { NOR = { has_country_flag = NOR_germany_refused } } NOR = { country_event = { id = norway.7 } } else = { country_event = { id = norway.8 } } } 
+		reverse_add_opinion_modifier = { target = NOR modifier = GER_NOR_reject }
+		
+	}
+}
+
+country_event = {#Nordic alliance 
+	id = norway.6 
+	title = norway.6.t 
+	desc = norway.6.d 
+	is_triggered_only = yes 
+	option = {
+		name = norway.6.a 
+		create_faction = nordic_coalition
+		add_to_faction = SWE 
+	}
+}
+
+country_event = { #both refuses
+	id = norway.7
+	title = norway.7.t
+	desc = norway.7.d
+
+	is_triggered_only = yes
 
 
 	option = {
-		name = norway.2.a
-		ai_chance = { factor = 50 }
-    }
+		name = norway.1.a
+		add_national_unity = -0.01 
+	}
 
 }
+
+country_event = { #Norway refuses
+	id = norway.8
+	title = norway.8.t
+	desc = norway.8.d
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = norway.8.a #allied with Sweeden
+		ai_chance = { factor = 90 }
+		SWE = { country_event = { id = norway.2 days = 1 }
+		set_country_flag = NOR_sweden_refused
+	}
+	}
+	option = {#do nothing 
+		 name = norway.8.b
+		 ai_chance = { factor = 10 }
+		 set_country_flag = NOR_sweden_refused
+	}
+
+}	

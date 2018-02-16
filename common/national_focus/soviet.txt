@@ -1139,7 +1139,7 @@ focus = {
 	x = 68
 	y = 3
 	completion_reward = {
-		hidden_effect = { NOR = { country_event = { id = norway.1 days = 3 } } }
+		if = { limit = { NOR = { is_in_faction = no } } hidden_effect = { NOR = { country_event = { id = norway.1 days = 3 } } } }
 	}
 }
 focus = {

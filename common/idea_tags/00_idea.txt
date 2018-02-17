@@ -14,8 +14,6 @@ idea_categories = {
 		removal_cost = -1
 	}
 	government = {
-	    slot = popularity
-	    slot = stability
 			slot = political_advisor
 			slot = political_advisor
 			slot = political_advisor
@@ -39,10 +37,8 @@ idea_categories = {
 		slot = mobilization_laws
 		slot = trade_laws
 		slot = economy
-		slot = internal_policy
-		slot = citizenship_policy
-		slot = foreign_policy
-
+		 slot = popularity
+	    slot = stability
 		cost = 150
 		removal_cost = 0
 	}

@@ -2,7 +2,24 @@ ideas = {
 
     country = {
 
+	 SOV_no_leadership = {
+			removal_cost = -1
+      picture = generic_disjointed_gov
 
+			allowed = {
+				always = no 
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				unity_factor = -0.1 
+			}
+		}
+	
+	
     home_of_revolution = {
 			removal_cost = -1
       picture = home_of_revolution

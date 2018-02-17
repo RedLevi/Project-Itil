@@ -1,4 +1,4 @@
- ###########################################################
+###########################################################
 #####Soviet Republic National Focus Tree###################
 #####Made By:       Markush             ###################
 ###########################################################
@@ -26,7 +26,7 @@ focus = {
  	y = 0
  	completion_reward = {
  	add_political_power = 150
- 	country_event = { id = soviet.2 days = 1 }
+ 	country_event = { id = soviet.2 }
     }
  }
  focus = {
@@ -42,7 +42,7 @@ focus = {
   	x = 37
   	y = 1
   	completion_reward = {
-  	   country_event = { id = soviet.3 days = 1 }
+  	   country_event = { id = soviet.3 }
     }
   }
 	focus = {
@@ -54,14 +54,15 @@ focus = {
  		}
  		available = {
 		   OR = {
- 			    has_country_flag = authoritarian_internal
-					has_country_flag = liberal_internal
+ 			    has_country_flag = SOV_authoritarian_internal
+					has_country_flag = SOV_liberal_internal
+					has_country_flag = SOV_internal_status_quo
 			 }
  		}
    	x = 37
    	y = 2
    	completion_reward = {
-   	   country_event = { id = soviet.4 days = 1 }
+   	   country_event = { id = soviet.4  }
      }
    }
 	 focus = {
@@ -73,15 +74,15 @@ focus = {
   		}
   		available = {
  		     OR = {
-  			    has_country_flag = dec_soc_economic
- 				    has_country_flag = msocialist_economic
-				    has_country_flag = scapitalist_economic
+  			    has_country_flag = SOV_dec_soc_economic
+ 				    has_country_flag = SOV_msocialist_economic
+				    has_country_flag = SOV_scapitalist_economic
  			   }
   		}
     	x = 39
     	y = 1
     	completion_reward = {
-    	   country_event = { id = soviet.5 days = 1 }
+    	   country_event = { id = soviet.5  }
       }
     }
 		focus = {
@@ -93,15 +94,15 @@ focus = {
    		}
    		available = {
   		     OR = {
-   			       has_country_flag = nat_national
-  				     has_country_flag = int_national
- 				       has_country_flag = fed_national
+   			       has_country_flag = SOV_int_national
+  				     has_country_flag = SOV_nat_national
+ 				       has_country_flag = SOV_fed_national
   			   }
    		}
      	x = 39
      	y = 2
      	completion_reward = {
-     	   country_event = { id = soviet.6 days = 1 }
+     	   country_event = { id = soviet.6 }
        }
      }
    focus = {
@@ -120,8 +121,7 @@ focus = {
 			x = 36
      	y = 3
 			completion_reward = {
-			set_country_flag = gosplan_complete
-			set_country_flag = RKKA_Congress
+				country_event = { id = soviet.8 }
 			}
 	 }
 	 focus = {
@@ -140,19 +140,8 @@ focus = {
 			x = 40
      	y = 3
 			completion_reward = {
-			   retire_country_leader = yes
-				 set_country_flag = gosplan_complete
-				 set_country_flag = RKKA_Congress
-         create_country_leader = {
-					  name = "Sergey Kirov"
-					  desc = "POLITICS_LEON_TROTSKY_DESC"
-					  picture = "Sergey_Kirov.dds"
-					  expire = "1965.1.1"
-					  ideology = marxism
-					  traits = {
-						   glorious_leader
-					  }
-			   }
+			country_event = { id = soviet.11 }
+			 
 			}
 	 }
 	 focus = {
@@ -166,22 +155,12 @@ focus = {
 				 focus = Economic_Policies
 			}
 			available = {
-			   has_country_flag = left_victory
+			   has_country_flag = SOV_left_victory
 			}
 			x = 44
      	y = 3
 			completion_reward = {
-			   retire_country_leader = yes
-				 set_country_flag = gosplan_complete
-				 set_country_flag = RKKA_Congress
-			   create_country_leader = {
-				    name = "Victor Serge"
-				    desc = "POLITICS_LEON_TROTSKY_DESC"
-				    picture = "Victor_Serge.dds"
-				    expire = "1965.1.1"
-				    ideology = anarcho_communism
-				    traits = { }
-			   }
+			country_event = { id = soviet.10 }
 			}
 	 }
 	 focus = {
@@ -195,14 +174,12 @@ focus = {
 				 focus = Economic_Policies
 			}
 			available = {
-			   has_country_flag = moderate_victory
+			   has_country_flag = SOV_moderate_victory
 			}
 			x = 48
      	y = 3
 			completion_reward = {
 			   retire_country_leader = yes
-				 set_country_flag = gosplan_complete
-				 set_country_flag = RKKA_Congress
 			   create_country_leader = {
 					   name = "Viktor Chernov"
 					   desc = "POLITICS_LEON_TROTSKY_DESC"
@@ -461,7 +438,7 @@ focus = {
  			focus = Gosplan_Congress
  		}
  		mutually_exclusive = {
- 			focus = Central_Planning
+ 			focus = Central_Planning focus = Decentralized_Socialism	
  		}
  		x = 6
  		y = 1
@@ -585,7 +562,7 @@ focus = {
  			focus = Gosplan_Congress
  		}
  		mutually_exclusive = {
- 			focus = New_Economic_Policy
+ 			focus = New_Economic_Policy focus = Decentralized_Socialism
  		}
  		x = 10
  		y = 1
@@ -753,6 +730,7 @@ focus = {
 		prerequisite = {
 			focus = Gosplan_Congress
 		}
+		mutually_exclusive = { focus = Central_Planning focus = New_Economic_Policy }
 		x = 1
 		y = 1
 		completion_reward = {
@@ -1286,10 +1264,7 @@ focus = {
 	x = 60
 	y = 3
 	completion_reward = {
-	   reverse_add_opinion_modifier = { target = JAP modifier = Soviet_Revanchism }
-		 SOV = {
-		    country_event = { id = soviet.30 days = 1 }
-		 }
+	   add_opinion_modifier = { target = JAP modifier = Soviet_Revanchism }
 	}
 
 }
@@ -1333,78 +1308,14 @@ focus = {
 		 }
 	}
 	completion_reward = {
-		 JAP = {
+		    JAP = {
 					 country_event = jdom.33
-		}
-	}
-}
-focus = {
-	id = Manchurian_Uprising
-	icon = GFX_goal_generic_special_forces
-	cost = 10.00
-	prerequisite = {
-		focus = Fund_Japanese_Dissidents
-	}
-	prerequisite = {
-		focus = Bogd_Khanate
-	}
-	x = 56
-	y = 5
-	bypass = {
-	   OR = {
-	      MAN = {
-		       is_in_faction_with = SOV
-		    }
-				MAN = {
-				   has_government = communism
 				}
-		 }
 	}
-	completion_reward = {
-	   hidden_effect = {
-		    set_global_flag = manchurian_rebels
-		 }
-		 custom_effect_tooltip = manchurian_rebels_tip
-	}
-}
-focus = {
-	id = Korea_Revolution
-	icon = GFX_goal_generic_political_pressure
-	cost = 10.00
-	prerequisite = {
-		focus = Manchurian_Uprising
-	}
-	x = 56
-	y = 6
-	bypass = {
-	   country_exists = KOR
-		 OR = {
-	      KOR = {
-		       is_in_faction_with = SOV
-		    }
-				KOR = {
-				   has_government = communism
-				}
-		 }
-	}
-	completion_reward = {
-	   hidden_effect = {
-		    set_global_flag = korean_rebels
-		 }
-		 custom_effect_tooltip = korean_rebels_tip
-	}
-}
-focus = {
-	id = Sinkiang_Revolution
-	icon = GFX_focus_RAJ_indian_gurkhas
-	cost = 10.00
-	prerequisite = {
-		focus = Bogd_Khanate
-	}
-	x = 53
-	y = 5
 
 }
+
+
 
 focus = {
 	id = Aid_PRF
@@ -1915,16 +1826,51 @@ focus = {
 	y = 6
 
 }
+focus = {
+	id = Manchurian_Uprising
+	icon = GFX_goal_generic_special_forces
+	cost = 10.00
+	prerequisite = {
+		focus = Fund_Japanese_Dissidents
+	}
+	prerequisite = {
+		focus = Bogd_Khanate
+	}
+	x = 56
+	y = 5
 
+}
+focus = {
+	id = Korea_Revolution
+	icon = GFX_goal_generic_political_pressure
+	cost = 10.00
+	prerequisite = {
+		focus = Manchurian_Uprising
+	}
+	x = 56
+	y = 6
+
+}
+focus = {
+	id = Sinkiang_Revolution
+	icon = GFX_focus_RAJ_indian_gurkhas
+	cost = 10.00
+	prerequisite = {
+		focus = Bogd_Khanate
+	}
+	x = 53
+	y = 5
+
+}
 focus = {
 	id = Invite_Ho_Chi_Minh
 	icon = GFX_goal_generic_attack_allies
 	cost = 10.00
 	prerequisite = {
-		focus = The_Mad_Pasha
+		focus = Crush_The_Traitors
 	}
 	x = 62
-	y = 7
+	y = 8
 
 }
 focus = {
@@ -1935,7 +1881,7 @@ focus = {
 		focus = Invite_Ho_Chi_Minh
 	}
 	x = 62
-	y = 8
+	y = 9
 
 }
 focus = {
@@ -1945,8 +1891,8 @@ focus = {
 	prerequisite = {
 		focus = Polish_Crisis
 	}
-	x = 64
-	y = 10
+	x = 65
+	y = 11
 
 }
 focus = {
@@ -2033,13 +1979,16 @@ focus = {
 	icon = GFX_focus_generic_polish_deal
 	cost = 10.00
 	prerequisite = {
-		focus = Italian_Deal
+		focus = Demand_Bessarabia
+	}
+	prerequisite = {
+		focus = German_Syndicalism
 	}
 	prerequisite = {
 		focus = Indochinese_Revolution
 	}
-	x = 64
-	y = 9
+	x = 65
+	y = 10
 
 }
 focus = {
@@ -2047,13 +1996,23 @@ focus = {
 	icon = GFX_goal_generic_dangerous_deal
 	cost = 3.00
 	prerequisite = {
-		focus = Demand_Bessarabia
+		focus = Crush_The_Traitors
 	}
-	x = 66
+	x = 68
 	y = 8
 
 }
+focus = {
+	id = German_Syndicalism
+	icon = GFX_focus_YUG_pan_slavic_congress
+	cost = 3.00
+	prerequisite = {
+		focus = Italian_Deal
+	}
+	x = 68
+	y = 9
 
+}
 focus = {
 	id = Demand_Bessarabia
 	icon = GFX_goal_generic_territory_or_war
@@ -2061,8 +2020,8 @@ focus = {
 	prerequisite = {
 		focus = Crush_The_Traitors
 	}
-	x = 66
-	y = 7
+	x = 65
+	y = 8
 
 }
 focus = {

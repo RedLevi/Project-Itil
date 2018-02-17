@@ -2,125 +2,256 @@ ideas = {
 
 	economy = { 
 		law = yes
-		free_market_law = {
+		undisturbed_isolation = {
 			
 			
-			available = {
-				
-				OR = {
-				
-					has_government = liberalism
-					has_government = conservatism
-				
-				}
-				
+			allowed = {
+				always = no
 			}
-			
 			removal_cost = -1
-			cost = 200 
 		
 			modifier = {
-				consumer_goods_factor = 0.05  
+				consumer_goods_factor = 0.40
 				production_speed_industrial_complex_factor = -0.5
 				production_speed_arms_factory_factor = -0.5
 				conversion_cost_civ_to_mil_factor = 0.5
 				conversion_cost_mil_to_civ_factor = 0.5
-				industrial_capacity_factory = -0.15 
-               	production_factory_max_efficiency_factor = -0.1
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				lend_lease_tension = 0.50
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.75
+			}
+			
+			allowed_to_remove = {
+				OR = {
+					threat > 0.5
+					has_war = yes
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		isolation = {
+			
+			
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.35
+				production_speed_industrial_complex_factor = -0.4
+				production_speed_arms_factory_factor = -0.4
+				conversion_cost_civ_to_mil_factor= 0.4
+				conversion_cost_mil_to_civ_factor = 0.4
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.5
+			}
+			allowed_to_remove = {
+				OR = {
+					threat > 0.75
+					has_war = yes					
+				}
+			}
+			
+			cancel_if_invalid = no
+		}
+		
+		civilian_economy = {
+			
+		
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.30
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = -0.3
+				conversion_cost_civ_to_mil_factor= 0.3
+				conversion_cost_mil_to_civ_factor = 0.3
 			}
 			
 			default = yes
-		
+			
+			cancel_if_invalid = no
 		}
 		
-		mixed_economy_law = {
+		low_economic_mobilisation = {
 			
 			available = {
-		
-				NOT = {
-				
+				OR = {
+					has_government = national_integralism
+					has_government = socialism
 					has_government = communism
-				
+					has_war = yes
+					threat > 0.05
 				}
-				
+
 			}
-				
+			
+			cost = 150
 			removal_cost = -1
-			cost = 200 
 			
 			modifier = {
-				consumer_goods_factor = 0.15 
-				production_speed_industrial_complex_factor = 0.1
+				consumer_goods_factor = 0.25
+
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 2
+
+   				modifier = {
+					factor = 20
+					
+					is_major = yes
+				}
+   			}
+		}
+		
+		partial_economic_mobilisation = {
+			
+			available = {
+				OR = {
+					has_government = national_integralism
+					has_government = communism
+					has_war = yes
+					threat > 0.15
+				}
+
+				
+			}
+
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.20
 				production_speed_arms_factory_factor = 0.1
 				conversion_cost_civ_to_mil_factor= -0.1
 				conversion_cost_mil_to_civ_factor = -0.1
-				industrial_capacity_factory = -0.05  
-				
 			}
 			
-			default = yes
-			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 2
+
+   				modifier = {
+					factor = 20
+					
+					is_major = yes
+				}
+   			}
 		}
 		
-		
-		collectivized_economy_law = {
+		war_economy = {
+			
 			
 			available = {
-			
+				threat > 0.15
 				OR = {
-					
-					has_government = socialism
+					has_government = national_integralism
 					has_government = communism
-					
+					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
+					AND = {
+						has_war = yes
+						any_enemy_country = {
+							ic_ratio = { 
+								tag = ROOT 
+								ratio > 0.4
+							}
+						}
 					}
-					
-				}			
-			
-			
-			cost = 250
+				}
+		
+			}
+		
+			cost = 150
 			removal_cost = -1
 			
 			modifier = {
-			
-				consumer_goods_factor = 0.1 
-				industrial_capacity_factory = -0.1 
-				unity_factor = 0.1
-				
+				consumer_goods_factor = 0.15
+				production_speed_arms_factory_factor = 0.2
+				conversion_cost_civ_to_mil_factor= -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
 			}
 			
-			default = yes 
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 5
+
+				modifier = {
+					#High prio on production
+					factor = 20
+					manpower_per_military_factory >  1000
+				}
+   			}
 		}
 		
-		nationalized_economy_law = {
+		tot_economic_mobilisation = {
+			
 			
 			available = {
-			
-				OR = {
-				
-					has_government = national_integralism
-					has_government = reactionarism
-					has_government = communism
-					has_government = socialism
-					
-				}			
+				has_war = yes
+				threat > 0.2
+				any_enemy_country = {
+					ic_ratio = { 
+						tag = ROOT 
+						ratio > 0.5
+					}
+				}
+
 			}
 
-			cost = 350  
+			ai_will_do = {
+   				factor = 1
+
+				modifier = {
+					factor = 25
+					#Prio this if nation has a lot of manpower compared to MIC
+					manpower_per_military_factory >  10000
+				}
+
+				modifier = {
+					#Block  unless nation has a lot of manpower
+					factor = 0
+					manpower_per_military_factory <  3000
+				}
+
+				
+				modifier = {
+					# never take this if we are on low conscription laws for safety
+					factor = 0
+					OR = {
+						has_idea = volunteer_only
+						has_idea = limited_conscription
+					}
+				}				
+   			}
+			
+			cost = 150
 			removal_cost = -1
 			
 			modifier = {
-			
-				consumer_goods_factor = 0.25  
-				production_speed_arms_factory_factor = 0.5
-				conversion_cost_civ_to_mil_factor= -0.5
-				conversion_cost_mil_to_civ_factor = -0.5
-				production_factory_max_efficiency_factor = 0.1 
-				industrial_capacity_factory = 0.2 
-				unity_factor = -0.05 
-				
+				consumer_goods_factor = 0.10
+				conscription = -0.03
+				production_speed_arms_factory_factor = 0.3
+				conversion_cost_civ_to_mil_factor= -0.3
+				conversion_cost_mil_to_civ_factor = -0.3
 			}
 			
-			default = yes 
+			cancel_if_invalid = no
 		}
 	}
 	
@@ -136,6 +267,7 @@ ideas = {
 			modifier = {
 				min_export = 0.8
 				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
 				production_speed_buildings_factor = 0.15
 				research_time_factor = -0.10
 			}
@@ -152,6 +284,7 @@ ideas = {
 			modifier = {
 				min_export = 0.5
 				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
 				production_speed_buildings_factor = 0.1
 				research_time_factor = -0.05
 			}
@@ -167,11 +300,12 @@ ideas = {
 			available = {
 				OR = {
 					AND = {
-					    OR = {
-							has_government = liberalism
-					        has_government = socialism
-					        has_government = conservatism
-							has_government = reactionarism
+						OR = {
+							
+							has_government = conservatism
+							has_government = liberalism 
+							has_government = socialism
+						
 						}
 						has_war = yes
 						any_enemy_country = {
@@ -182,11 +316,13 @@ ideas = {
 						}
 					}
 					AND = {
-						NOT = { 							
-						    has_government = liberalism
-					        has_government = socialism
-					        has_government = conservatism
-							has_government = reactionarism
+						NOT = { has_government = conservatism
+							has_government = liberalism 
+							has_government = socialism }
+						OR = {
+							has_idea = partial_economic_mobilisation
+							has_idea = war_economy
+							has_idea = tot_economic_mobilisation
 						}
 					}
 				}
@@ -198,6 +334,7 @@ ideas = {
 			modifier = {
 				min_export = 0.25
 				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.05
 				research_time_factor = -0.01
 			}
@@ -227,9 +364,10 @@ ideas = {
 					has_government = communism
 				}
 				OR = {
-					NOT = {	tag = SOV }
-					NOT = { has_opinion_modifier = MR_pact }
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation
 				}
+			
 			}
 			
 			cost = 150

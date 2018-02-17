@@ -1,8 +1,89 @@
 ideas = {
 
     country = {
+	
+	SOV_secret_police_idea = {
+	
+		removal_cost = -1
+		picture = generic_spy_coup
 
-	 SOV_no_leadership = {
+		allowed = {
+			always = no 
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		modifier = {
+			subversive_activites_upkeep = -0.15 
+			foreign_subversive_activites = -0.2 
+			drift_defence_factor = 0.1 
+			enemy_partisan_effect = -0.2 
+			
+		}
+		
+	}
+	
+	SOV_popular_front_idea = {
+	
+		removal_cost = -1
+		picture = generic_spy_coup
+
+		allowed = {
+			always = no 
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		modifier = {
+			subversive_activites_upkeep = -0.1
+		}
+		
+	}
+		
+	SOV_lenin_legacy_idea = {
+	
+		removal_cost = -1
+		picture = socialist_science_focus
+
+		allowed = {
+			always = no 
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		modifier = {
+			army_morale_factor = 0.1 
+			conscription = 0.005
+		}
+	
+	}	
+	SOV_iron_fist_idea = {
+	
+		removal_cost = -1
+		picture = generic_intel_bonus
+
+		allowed = {
+			always = no 
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		modifier = {
+			political_power_gain = 0.75
+			unity_factor = -0.05 
+		}
+		
+	}
+	
+	SOV_no_leadership = {
 			removal_cost = -1
       picture = generic_disjointed_gov
 
@@ -19,6 +100,23 @@ ideas = {
 			}
 		}
 	
+	
+	SOV_status_quo_idea = {
+			removal_cost = -1
+      picture = generic_pp_unity_bonus
+
+			allowed = {
+				always = no 
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			modifier = {
+				political_power_gain = 0.35 
+			}
+		}
 	
     home_of_revolution = {
 			removal_cost = -1

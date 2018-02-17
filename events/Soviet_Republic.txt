@@ -745,59 +745,6 @@ country_event = { #Mongolia Partition#
 		}
 	}
 
-country_event = { #Soviet Foreign policy#
-   id = soviet.14
-   title = soviet.14.t
-   desc = soviet.14.d
-   fire_only_once = yes
-
-   trigger = {
-      tag = SOV
-      OR = {
-         has_completed_focus = 31st_Congress_Trotsky
-         has_completed_focus = 31st_Congress
-      }
-   }
-
-   mean_time_to_happen = { days = 30 }
-   option = { #Full revolution path, only Kirov and Trotsky#
-      name = soviet.14.a
-	  ai_chance = { factor = 30 }
-      trigger = {
-         OR = {
-            has_country_flag = Kirov_Leader
-            has_country_flag = Trotsky_leader
-         }
-      }
-      add_national_unity = -0.1
-      set_country_flag = Soviet_Revolution
-      unlock_national_focus = The_Revolution
-      add_political_power = 300
-      set_country_flag = Full_revolution
-   }
-   option = { #Half revolution path, only Kirov and Rykov/Bukharin
-      name = soviet.14.b
-	  ai_chance = { factor = 50 }
-      trigger = {
-         OR = {
-             has_country_flag = Kirov_leader
-             has_country_flag = Right_Opposition_Leader
-         }
-      }
-      set_country_flag = Soviet_Revolution
-      set_country_flag = Half_Revolution
-   }
-   option = { #Isolationism path, only Rykov/Bukharin
-      name = soviet.14.c
-	  ai_chance = { factor = 10 }
-      trigger = {
-         has_country_flag = Right_Opposition_Leader
-      }
-      add_national_unity = 0.1
-      add_political_power = -200
-      set_country_flag = isolationism
-   }
-}
 
 
 
@@ -1194,7 +1141,27 @@ country_event = { #Korean aid
    }
 }
 
+country_event = {#Chernov victorious 
+	
+	id = soviet.32
+	title = soviet.32.t 
+	desc = soviet.32.d 
+	is_triggered_only = yes
+	
+	option = {
+		name = soviet.32.a 
+		retire_country_leader = yes
+			   create_country_leader = {
+					   name = "Viktor Chernov"
+					   desc = "POLITICS_LEON_TROTSKY_DESC"
+					   picture = "Viktor_Chernov.dds"
+					   expire = "1965.1.1"
+					   ideology = socialist_revolutionary
+					   traits = { }
+			   }
+	}
 
+}
 
 
 country_event = { #TEST EVENT FOR USSR##NOT MEANT FOR NON-TEST USE##

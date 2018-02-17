@@ -179,47 +179,58 @@ focus = {
 			x = 48
      	y = 3
 			completion_reward = {
-			   retire_country_leader = yes
-			   create_country_leader = {
-					   name = "Viktor Chernov"
-					   desc = "POLITICS_LEON_TROTSKY_DESC"
-					   picture = "Viktor_Chernov.dds"
-					   expire = "1965.1.1"
-					   ideology = socialist_revolutionary
-					   traits = { }
-			   }
+			
+			country_event = { id = soviet.32 }
+			   
 			}
 	 }
 
 	 focus = {
-		id = Status_Quo
+		id = SOV_Status_Quo
 		icon = GFX_goal_generic_military_deal
 		cost = 10.00
+		available = {
+			has_country_flag = SOV_internal_status_quo
+		}
 		prerequisite = {
 			 focus = Trotsky_Wins
+		}
+		completion_reward = {
+		
+			add_ideas = SOV_status_quo_idea
+		
 		}
 		x = 35
 		y = 4
 
 	}
 	focus = {
-		id = Strengthen_GPU
-		icon = GFX_goal_generic_attack_allies
+		id = SOV_regenerated_state 
+		icon = GFX_focus_generic_join_comintern
 		cost = 10.00
+		available = { has_country_flag = SOV_internal_status_quo }
 		prerequisite = {
 			focus = Trotsky_Wins
-			focus = Kirov_Wins
 		}
-		x = 38
+		completion_reward = {
+			add_political_power = 100 
+		}
+		x = 37
 		y = 4
 
 	}
 	focus = {
-		id = Iron_Fist_Rule
+		id = SOV_Iron_Fist_Rule
 		icon = GFX_goal_generic_war_with_comintern
 		cost = 10.00
+		available = {
+			has_country_flag = SOV_authoritarian_internal
+		}
 		prerequisite = {
-			 focus = Kirov_Wins
+			focus = Kirov_Wins 
+		}
+		completion_reward = {
+			add_ideas = SOV_iron_fist_idea
 		}
 		x = 41
 		y = 4
@@ -230,7 +241,7 @@ focus = {
 		icon = GFX_goal_generic_national_unity
 		cost = 10.00
 		prerequisite = {
-			 focus = Left_Wins
+			 focus = Trotsky_Wins focus = Kirov_Wins focus = Moderates_Win focus = Left_Wins
 		}
 		x = 43
 		y = 4
@@ -241,8 +252,7 @@ focus = {
 		icon = GFX_goal_continuous_increase_nu
 		cost = 10.00
 		prerequisite = {
-			focus = Left_Wins
-			focus = Moderates_Win
+			focus = Trotsky_Wins focus = Kirov_Wins focus = Moderates_Win focus = Left_Wins
 		}
 		x = 46
 		y = 4
@@ -260,31 +270,32 @@ focus = {
 
 	}
 	focus = {
-		id = Intelligence_Agency
+		id = SOV_popular_front
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10.00
 		prerequisite = {
-			focus = Strengthen_GPU
+			focus = SOV_regenerated_state focus = SOV_Status_Quo
 		}
-		mutually_exclusive = {
-			focus = Secret_Police
+		completion_reward = {
+				add_popularity = { ideology = communism popularity = 0.1 }
+				add_ideas = SOV_popular_front_idea
 		}
-		x = 37
+		x = 36
 		y = 5
 
 	}
 	focus = {
-		id = Secret_Police
+		id = SOV_Secret_Police
 		icon = GFX_focus_generic_strike_at_democracy1
 		cost = 10.00
 		prerequisite = {
-			focus = Strengthen_GPU
+			focus = Kirov_Wins
 		}
-		mutually_exclusive = {
-			focus = Intelligence_Agency
+		completion_reward = {
+			add_ideas = SOV_secret_police_idea
 		}
 		x = 39
-		y = 5
+		y = 4
 
 	}
 	focus = {
@@ -315,26 +326,19 @@ focus = {
 		y = 5
 
 	}
+	
 	focus = {
-		id = International_Supremacy
-		icon = GFX_focus_generic_air_defense
-		cost = 10.00
-		prerequisite = {
-			focus = Intelligence_Agency
-		}
-		x = 37
-		y = 6
-
-	}
-	focus = {
-		id = Death_Squads
+		id = Sov_Great_Purge
 		icon = GFX_goal_generic_small_arms
 		cost = 10.00
 		prerequisite = {
 			focus = Secret_Police
 		}
-		x = 39
-		y = 6
+		completion_reward = {
+			#I don't know yet
+		}
+		x = 38
+		y = 5
 
 	}
 	focus = {
@@ -360,13 +364,16 @@ focus = {
 
 	}
 	focus = {
-		id = Lenins_Legacy
+		id = SOV_Lenins_Legacy
 		icon = GFX_goal_support_communism
 		cost = 10.00
 		prerequisite = {
-			focus = Status_Quo
+			focus = SOV_popular_front
 		}
-		x = 35
+		completion_reward = {
+			add_ideas = SOV_lenin_legacy_idea
+		}
+		x = 36
 		y = 6
 
 	}

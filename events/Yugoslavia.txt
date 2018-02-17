@@ -338,7 +338,7 @@ country_event = {
 	option = { # fold
 		name = yug.21.a
 		ai_chance = {
-			factor = 8
+			factor = 6
 		}
 		if = {
 			limit = { has_global_flag = YUG_demands_1 }
@@ -351,6 +351,7 @@ country_event = {
 			}
 			YUG = {
 				puppet = HUN
+				set_autonomy = { target = HUN autonomy_state = autonomy_dominion }
 				country_event = { id = yug.23 days = 3 }
 			}
 		}
@@ -366,7 +367,9 @@ country_event = {
 			release = SLO
 			YUG = {
 				puppet = SLO
+				set_autonomy = { target = SLO autonomy_state = autonomy_dominion }
 				puppet = HUN
+				set_autonomy = { target = HUN autonomy_state = autonomy_dominion }
 				country_event = { id = yug.22 days = 3 }
 			}
 		}
@@ -378,6 +381,7 @@ country_event = {
 			}
 			YUG = {
 				puppet = HUN
+				set_autonomy = { target = HUN autonomy_state = autonomy_dominion }
 				country_event = { id = yug.22 days = 3 }
 			}
 		}
@@ -390,7 +394,9 @@ country_event = {
 			release = SLO
 			YUG = {
 				puppet = SLO
+				set_autonomy = { target = SLO autonomy_state = autonomy_dominion }
 				puppet = HUN
+				set_autonomy = { target = HUN autonomy_state = autonomy_dominion }
 				country_event = { id = yug.22 days = 3 }
 			}
 		}
@@ -398,10 +404,10 @@ country_event = {
 	option = { # Refuse
 		name = yug.21.b
 		ai_chance = {
-			factor = 2
+			factor = 4
 		}
 		set_global_flag = HUN_refuses_YUG
-		country_event = { id = yug.22 days = 3 }
+		YUG = { country_event = { id = yug.22 days = 3 } }
 	}
 }
 

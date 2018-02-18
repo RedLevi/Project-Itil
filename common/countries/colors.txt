@@ -567,10 +567,6 @@ KUR = {
 	color = rgb { 255 125 0 }
 	color_ui = rgb { 255  204  204 }
 }
-KOR = {
-	color = rgb { 255  240  195 }
-	color_ui = rgb { 255 248 229 }	
-}
 CAT = {
 	color = rgb { 255 170 0 }
 	color_ui = rgb { 255  204  204 }
@@ -679,5 +675,11 @@ SPF = {
 }
 
 NAA = {
-    color = rgb { 168 43 43 }
-	color_ui = rgb { 74 147 255 }
+   color = rgb { 168 43 43 }
+   color_ui = rgb { 74 147 255 }
+}
+
+SLV = {
+   color = rgb { 163 225 255 }
+   color_ui = rgb { 74 147 255 }
+}

@@ -153,7 +153,11 @@ YUG_executive_power_desc:0 "A new constitution was created in 1931, after two ye
 
 YUG_expansionist:0 "Expansionist Visions"
 
-YUG_solo_prep:0 "Solo Preperations"
+YUG_solo_preperations:0 "Solo Preperations"
+
+YUG_greater_yug_i:0 "Consolodating Greater Yugoslavia"
+
+YUG_balkan_supremacy:0 "Aspirations to Balkan Supremacy"
 
 ####opinion####
 YUG_looking_out:0 "Yugoslavian Expansionism"
@@ -176,3 +180,4 @@ croatian_unrest:0 "This will cause severe unrest among the Croatian people, poss
 albanian_unrest:0 "This will cause severe unrest among the Albanian people, possibly leading to a future uprising depending on the actions we take"
 YUG_leftists_win:0 "The Leftist Coalition is in control of the legislature"
 YUG_looking_outwards:0 "We must have at least decided on a policy to deal with internal ethnic tensions"
+YUG_slovenian_uprisings:0 "We will spark uprisings in Slovenia and back the revolt with our military, if we must"

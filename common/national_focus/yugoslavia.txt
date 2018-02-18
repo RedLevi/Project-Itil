@@ -61,7 +61,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_look_south
-		# icon = 
+		icon = GFX_goal_generic_demand_territory
 		x = 3
 		y = 2
 		cost = 10
@@ -187,12 +187,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			103 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
 				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
 			}
 			44 = {
-				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
 				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
 			}
 		}
 	}
@@ -791,6 +791,7 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 11
 		y = 1
+		cost = 10
 		mutually_exclusive = {
 			focus = YUG_enhanced_freedoms
 			focus = YUG_ethnic_int
@@ -1058,24 +1059,29 @@ focus_tree = {
 
 	focus = {
 		id = YUG_slovene_question
-		x = 22
+		x = 23
 		y = 2
 		icon = GFX_goal_generic_army_tanks
 		ai_will_do = {
 			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_uniting_yugoslavia
 		}
 		cost = 10
 		available_if_capitulated = no
 		completion_reward = {
 			add_political_power = 50
 			reverse_add_opinion_modifier = { target = AUS modifier = YUG_AUS_aggression }
+			add_state_claim = 102
+			add_state_claim = 736
 		}
 	}
 
 	focus = {
 		id = YUG_slovene_revolts
-		# icon = 
-		x = 21
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 22
 		y = 3
 		ai_will_do = {
 			factor = 10
@@ -1120,8 +1126,8 @@ focus_tree = {
 
 	focus = {
 		id = YUG_conquer_slovenia
-		# icon =
-		x = 23
+		icon = GFX_goal_generic_major_war
+		x = 24
 		y = 3
 		ai_will_do = {
 			factor = 10
@@ -1136,7 +1142,10 @@ focus_tree = {
 		}
 		available = {
 			AND = {
-				has_completed_focus = YUG_enhanced_freedoms
+				OR = {
+					has_completed_focus = YUG_ethnic_int
+					has_completed_focus = YUG_serbian_dom
+				}
 				AUS = {
 					OR = {
 						owns_state = 102 # Slovenia
@@ -1165,8 +1174,10 @@ focus_tree = {
 
 	focus = {
 		id = YUG_bring_slovenia
-		x = 22
+		x = 23
 		y = 4
+		cost = 10
+		icon = GFX_goal_molotov_ribbentrop_pact
 		ai_will_do = {
 			factor = 10
 		}
@@ -1215,6 +1226,106 @@ focus_tree = {
 					add_core_of = YUG
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = YUG_develop_slv
+		x = 23
+		y = 5
+		icon = GFX_goal_generic_trade
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_bring_slovenia
+		}
+		available_if_capitulated = no
+		available = {
+			OR = {
+				AND = {
+					owns_state = 102
+					owns_state = 736
+				}
+				SLV = {
+					exists = yes
+					is_in_faction_with = YUG
+					NOT = { has_war_with = AUS }
+				}
+			}
+			NOT = { has_war_with = AUS }
+		}
+		completion_reward = {
+			102 = {
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_extra_state_shared_building_slots = 2
+			}
+			736 = {
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_greater_yug
+		x = 21
+		y = 6
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 11
+		}
+		prerequisite = {
+			focus = YUG_develop_slv
+		}
+		prerequisite = {
+			focus = YUG_fate_of_hungary
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = YUG_balkan_supremacy
+		x = 17
+		y = 7
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_greater_yug
+		}
+		mutually_exclusive = {
+			focus = YUG_consolodate
+		}
+		completion_reward = {
+			swap_ideas = { remove_idea = YUG_expansionist add_idea = YUG_balkan_supremacy_i }
+		}
+	}
+
+	focus = {
+		id = YUG_consolodate
+		x = 25
+		y = 7
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_greater_yug
+		}
+		mutually_exclusive = {
+			focus = YUG_balkan_supremacy
+		}
+		completion_reward = {
+			swap_ideas = { remove_idea = YUG_expansionist add_idea = YUG_greater_yug_i }
 		}
 	}
 }

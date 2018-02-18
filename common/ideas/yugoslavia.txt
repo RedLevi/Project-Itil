@@ -44,7 +44,7 @@ ideas = {
 					always = no
 				}
 				removal_cost = -1
-				picture = idea_yug_divided_nation
+				picture = yug_divided_nation
 				modifier = {
 					liberalism_drift = 0.05
 					non_core_manpower = -0.02
@@ -62,7 +62,7 @@ ideas = {
 					always = no
 				}
 				removal_cost = -1
-				picture = idea_yug_divided_nation
+				picture = yug_divided_nation
 				modifier = {
 					conservatism_drift = 0.05
 					unity_factor = -0.20
@@ -79,7 +79,7 @@ ideas = {
 					always = no
 				}
 				removal_cost = -1
-				picture = idea_yug_divided_nation
+				picture = yug_divided_nation
 				modifier = {
 					reactionarism_drift = 0.05
 					unity_factor = -0.30
@@ -134,6 +134,38 @@ ideas = {
 					production_factory_efficiency_gain_factor = 0.05
 					consumer_goods_factor = -0.02
 					production_speed_arms_factory_factor = 0.05
+				}
+			}
+
+			YUG_greater_yug_i = {
+				allowed = {
+					original_tag = YUG
+					always = no
+				}
+				allowed_civil_war = {
+					always = no
+				}
+				removal_cost = -1
+				picture = GFX_idea_generic_intel_bonus
+				modifier = {
+					consumer_goods_factor = -0.05
+					army_core_defence_factor = 0.1
+				}
+			}
+
+			YUG_balkan_supremacy_i = {
+				allowed = {
+					original_tag = YUG
+					always = no
+				}
+				allowed_civil_war = {
+					always = no
+				}
+				removal_cost = -1
+				picture = GFX_idea_generic_intel_bonus
+				modifier = {
+					army_core_attack_factor = 0.1
+					conscription = 0.01
 				}
 			}
 

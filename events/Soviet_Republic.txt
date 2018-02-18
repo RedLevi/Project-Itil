@@ -1163,6 +1163,77 @@ country_event = {#Chernov victorious
 
 }
 
+country_event = {#Conflicting economic policy 
+	id = soviet.33 
+	title = soviet.33.t 
+	desc = soviet.33.d 
+	fire_only_once = yes 
+	trigger = {
+		
+		tag = SOV 
+		
+		OR = {
+			
+			AND = {
+			
+				has_country_flag = trotsky_victory 
+				NOT = {
+					
+					has_country_flag = SOV_scapitalist_economic
+					
+				}
+			
+			}
+			
+			AND = {
+			
+				has_country_flag = kirov_victory 
+				NOT = {
+					
+					has_country_flag = SOV_scapitalist_economic
+					has_country_flag = SOV_ms_economic
+					
+				}
+			
+			}
+			
+			AND = {
+			
+				has_country_flag =  SOV_left_victory
+				NOT = {
+					
+					has_country_flag = SOV_dec_soc_economic
+					
+				}
+			
+			}
+			
+			AND = {
+			
+				has_country_flag =  SOV_moderate_victory
+				NOT = {
+					
+					has_country_flag = SOV_ms_economic
+					
+				}
+			
+			}
+			
+		}
+	
+	}
+	
+	mean_time_to_happen = { days = 30 }
+	
+	option = {
+	
+		name = soviet.33.a 
+		add_ideas = SOV_economic_disharmony
+		add_national_unity = -0.035
+	
+	}
+}
+
 
 country_event = { #TEST EVENT FOR USSR##NOT MEANT FOR NON-TEST USE##
   id = soviet.1000

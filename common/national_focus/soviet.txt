@@ -237,11 +237,20 @@ focus = {
 
 	}
 	focus = {
-		id = Democratic_Communism
+		id = SOV_democratic_socialism
 		icon = GFX_goal_generic_national_unity
 		cost = 10.00
 		prerequisite = {
-			 focus = Trotsky_Wins focus = Kirov_Wins focus = Moderates_Win focus = Left_Wins
+			 focus = Left_Wins
+		}
+		available = {
+			has_country_flag = SOV_liberal_internal
+		}
+		completion_reward = {
+		
+			add_national_unity = 0.05 
+			add_political_power = 45 
+			
 		}
 		x = 43
 		y = 4
@@ -299,17 +308,22 @@ focus = {
 
 	}
 	focus = {
-		id = Restricted_Voting
-		icon = GFX_goal_generic_political_pressure
+		id = SOV_local_government
+		icon = GFX_focus_generic_soviet_politics
 		cost = 10.00
 		prerequisite = {
-			focus = Reinstate_Democracy
+			focus = Left_Wins
 		}
-		mutually_exclusive = {
-			focus = Freedom_Again
+		
+		completion_reward = {
+		
+			add_ideas = SOV_local_government_idea
+		
 		}
-		x = 45
-		y = 5
+		
+		available = { has_country_flag = SOV_left_victory }
+		x = 44
+		y = 4
 
 	}
 	focus = {
@@ -332,24 +346,32 @@ focus = {
 		icon = GFX_goal_generic_small_arms
 		cost = 10.00
 		prerequisite = {
-			focus = Secret_Police
+			focus = SOV_Secret_Police
 		}
+		prerequisite = { focus = SOV_Iron_Fist_Rule }
 		completion_reward = {
-			#I don't know yet
+			add_political_power = 150 
 		}
-		x = 38
+		x = 40
 		y = 5
 
 	}
 	focus = {
-		id = Controlled_Democracy
+		id = SOV_direct_democracy 
 		icon = GFX_focus_CZE_german_puppet
 		cost = 10.00
 		prerequisite = {
-			focus = Restricted_Voting
+			focus = SOV_democratic_socialism
 		}
-		x = 45
-		y = 6
+		prerequisite = { focus = SOV_local_government }
+		completion_reward = {
+			
+			add_political_power = 175 
+			add_national_unity = 0.025 
+		
+		}
+		x = 44
+		y = 5
 
 	}
 	focus = {
@@ -378,24 +400,34 @@ focus = {
 
 	}
 	focus = {
-		id = New_Communism
+		id = SOV_New_Communism
 		icon = GFX_focus_generic_join_comintern
 		cost = 10.00
 		prerequisite = {
-			focus = Iron_Fist_Rule
+			focus = Sov_Great_Purge
 		}
-		x = 41
+		completion_reward = {
+		
+			add_ideas = SOV_new_communism_idea
+		
+		}
+		x = 40
 		y = 6
 
 	}
 	focus = {
-		id = Decentralized_Country
+		id = SOV_unstate
 		icon = GFX_focus_generic_soviet_politics
 		cost = 10.00
 		prerequisite = {
-			focus = Democratic_Communism
+			focus = SOV_direct_democracy
 		}
-		x = 43
+		completion_reward = {
+			
+			add_ideas = SOV_unstate_idea
+		
+		}
+		x = 44
 		y = 6
 
 	}

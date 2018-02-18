@@ -684,6 +684,7 @@ country_event = { # Austria invades Hungary! (Yugoslavia)
 	id = aus.5
 	title = aus.5.t
 	desc = aust.5.d
+
 	is_triggered_only = yes
 
 	option = { # Send an ultimatum to Austria
@@ -708,7 +709,6 @@ country_event = { # Austria invades Hungary! (Yugoslavia)
 				}
 			}
 		}
-
 	}
 
 	option = { # Send an ultimatum to Hungary

@@ -69,7 +69,7 @@ guiTypes = {
 		windowType = {
 			name = "tip"
 			backGround =""
-			position = { x = 0 y = 0 }
+			position = { x = 0 y = -55 }
 			size = { x = 1024 y = 200 }
 			moveable = 0
 			dontRender = ""
@@ -87,7 +87,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "text"
-				position = { x = -450 y = -157 }
+				position = { x = -450 y = -122 }
 				textureFile = ""
 				font = "loadscreen_tip"
 				borderSize = {x = 0 y = 0}

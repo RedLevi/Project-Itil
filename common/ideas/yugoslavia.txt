@@ -53,6 +53,22 @@ ideas = {
 				}
 			}
 
+			YUG_pragmeatic_puppet = {
+				allowed = {
+					original_tag = YUG
+					always = no
+				}
+				allowed_civil_war = {
+					always = no
+				}
+				removal_cost = -1
+				picture = GFX_idea_generic_flexible_foreign_policy2
+				modifer = {
+					unity_factor = 0.10
+					political_power_gain = -0.1
+				}
+			}
+
 			YUG_dc_int = {
 				allowed = {
 					original_tag = YUG
@@ -70,6 +86,21 @@ ideas = {
 				}
 			}
 
+			YUG_suc_int = {
+				allowed = {
+					original_tag = YUG
+					always = no
+				}
+				allowed_civil_war = {
+					always = no
+				}
+				removal_cost = -1
+				picture = GFX_idea_generic_flexible_foreign_policy
+				modifer = {
+					unity_factor = 0.10
+				}
+			}
+
 			YUG_dc_dom = {
 				allowed = {
 					original_tag = YUG
@@ -84,6 +115,24 @@ ideas = {
 					reactionarism_drift = 0.05
 					unity_factor = -0.30
 					political_power_gain = -0.3
+				}
+			}
+
+			YUG_central_benefits = {
+				allowed = {
+					original_tag = YUG
+					always = no
+				}
+				allowed_civil_war = {
+					always = no
+				}
+				removal_cost = -1
+				picture = GFX_idea_generic_foreign_capital
+				modifer = {
+					unity_factor = -0.10
+					political_power_gain = -0.1
+					production_speed_buildings_factor = 0.05
+					consumer_goods_factor = -0.02
 				}
 			}
 

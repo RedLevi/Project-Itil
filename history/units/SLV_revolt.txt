@@ -1,0 +1,51 @@
+division_template = {
+	name = "Pehota Divizija"
+									
+	regiments = {
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+	}
+}
+
+units = {
+    division = {
+		name = "1. Ljubljanska Milica"
+		location = 9625
+		division_template = "Juntuán"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "2. Ljubljanska Milica"
+		location = 79625
+		division_template = "Juntuán"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "1. Istraška Milicija"
+		location = 599
+		division_template = "Juntuán"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+
+	}
+	division = {
+		name = "1. Podeželska Milica"
+		location = 596
+		division_template = "Juntuán"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2. Podeželska Milica"
+		location = 9596
+		division_template = "Juntuán"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}

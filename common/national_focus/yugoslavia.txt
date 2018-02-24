@@ -902,7 +902,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 50
-			reverse_add_opinion_modifier = { target = HUN modifier = YUG_HUN_aggression }
+			reverse_add_opinion_modifier = { target = HUN modifier = YUG_aggression }
 		}
 	}
 
@@ -1072,7 +1072,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			add_political_power = 50
-			reverse_add_opinion_modifier = { target = AUS modifier = YUG_AUS_aggression }
+			reverse_add_opinion_modifier = { target = AUS modifier = YUG_aggression }
 			add_state_claim = 102
 			add_state_claim = 736
 		}
@@ -1298,6 +1298,37 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = completed_first_reconquest
+				AND = {
+					OR = {
+						AND = {
+							owns_state = 102
+							owns_state = 736
+						}
+						SLV = {
+							exists = yes
+							is_puppet_of = YUG
+						}
+					}
+					OR = {
+						AND = {
+							owns_state = 45
+							owns_state = 766
+						}
+						AND = {
+							owns_state = 45
+							CRO = {
+								exists = yes
+								is_puppet_of = YUG
+								owns_state = 766
+							}
+						}
+					}
+				}	
+			}	
+		}
 		prerequisite = {
 			focus = YUG_greater_yug
 		}
@@ -1306,6 +1337,162 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = { remove_idea = YUG_expansionist add_idea = YUG_balkan_supremacy_i }
+		}
+	}
+
+	focus = {
+		id = YUG_prepare_interventions
+		x = 17 
+		y = 8
+		icon = GFX_focus_secret_rearmament
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_balkan_supremacy
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_of_ne
+		x = 14
+		y = 9
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_prepare_interventions
+		}
+		available = {
+			NOT = {
+				has_government = liberalism
+			}
+		}
+		completion_reward = {
+			reverse_add_opinion_modifier = { target = GRE modifier = YUG_aggression }
+		}
+	}
+
+	focus = {
+		id = YUG_GRE_mil
+		x = 14
+		y = 10
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_of_ne
+		}
+		available = {
+			NOT = {
+				has_government = liberalism
+				is_puppet = yes
+			}
+			OR = {
+				has_completed_focus = YUG_alb_goods
+				has_completed_focus = YUG_pacify_albania
+			}
+		}
+		bypass = {
+			GRE = {
+				OR = {
+					is_puppet_of = YUG
+					is_in_faction_with = YUG
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							has_completed_focus = YUG_alb_goods
+							has_country_flag = YUG_ethnic_integration
+						}
+						has_completed_focus = YUG_pacify_albania
+					}
+				}
+				754 = {
+					add_core_of = YUG
+				}
+			}
+			GRE = {
+				country_event = { id = yug.31 days = 2 }
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_GRE_trust
+		x = 14
+		y = 11
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_GRE_mil
+		}
+		available = {
+			AND = {
+				OR = {
+					ALB = {
+						owns_state = 754
+					}
+					owns_state = 754
+				}
+				GRE = {
+					is_puppet_of = YUG
+				}
+			}
+		}
+		completion_reward = {
+			GRE = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 

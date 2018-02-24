@@ -24,6 +24,9 @@ focus_tree = {
 		
         available_if_capitulated = no
 		bypass = { has_war = yes }
+		 available = {
+			always = no
+		}	
 
 		completion_reward = {
 		}
@@ -241,9 +244,209 @@ focus_tree = {
 	}	
 	
 	focus = {
+		id = FRA_fraternite
+		icon = ?
+		x = 3
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_choose_maurras focus = FRA_choose_natsyn focus = FRA_choose_petain }
+		
+        available = {
+		    always = no
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_liberte
+		icon = ?
+		x = 6
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_choose_petain focus = FRA_choose_syn }
+		
+        available = {
+		    always = no
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_egalite
+		icon = ?
+		x = 8
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_choose_commie focus = FRA_choose_syn }
+		
+        available = {
+		    always = no
+		}		
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_dictator_rep
+		icon = ?
+		x = 1
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_fraternite }
+		
+        available = {
+		    always = no
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_le_roi
+		icon = ?
+		x = 3
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_liberte focus = FRA_fraternite }
+		
+        available = {
+		    always = no
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_democratic_rep
+		icon = ?
+		x = 6
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_liberte }
+		
+        available = {
+		    always = no
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_proleteriat_rep
+		icon = ?
+		x = 8
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_egalite }
+		
+        available = {
+		    always = no
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_orleanist
+		icon = ?
+		x = 2
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_le_roi }	
+		mutually_exclusive = { focus = FRA_legitimist }
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_legitimist
+		icon = ?
+		x = 4
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_le_roi }	
+		mutually_exclusive = { focus = FRA_orleanist }
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_personal_cult
+		icon = ?
+		x = 6
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_proleteriat_rep focus = FRA_dictator_rep }	
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
 		id = FRA_economic_recovery
 		icon = ?
-		x = 15
+		x = 16
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -262,9 +465,9 @@ focus_tree = {
 	}	
 	
 	focus = {
-		id = FRA_commie_revolution
+		id = FRA_planned_economy
 		icon = ?
-		x = 12
+		x = 13
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -275,9 +478,7 @@ focus_tree = {
 		prerequisite = { focus = FRA_economic_recovery }
 		
         available = {
-		    has_war = no
 			has_government = communism
-			###make flag for after 2nd civil war or elected options###
 		}		
 
 		completion_reward = {
@@ -287,7 +488,7 @@ focus_tree = {
 	focus = {
 		id = FRA_mixed_economy
 		icon = ?
-		x = 14
+		x = 15
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -298,13 +499,11 @@ focus_tree = {
 		prerequisite = { focus = FRA_economic_recovery }
 		
         available = {
-		    has_war = no
 			OR = {
 			has_government = reactionarism
 			has_government = conservatism
 			has_government = national_integralism		
 			}
-			###make flag for after 2nd civil war or elected options###
 		}		
 
 		completion_reward = {
@@ -314,7 +513,7 @@ focus_tree = {
 	focus = {
 		id = FRA_free_market
 		icon = ?
-		x = 16
+		x = 17
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -325,12 +524,10 @@ focus_tree = {
 		prerequisite = { focus = FRA_economic_recovery }
 		
         available = {
-		    has_war = no
 			OR = {
 			has_government = reactionarism
 			has_government = conservatism
 			}
-			###make flag for after 2nd civil war or elected options###
 		}		
 
 		completion_reward = {
@@ -340,7 +537,7 @@ focus_tree = {
 	focus = {
 		id = FRA_syndic_thought
 		icon = ?
-		x = 18
+		x = 19
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -351,12 +548,10 @@ focus_tree = {
 		prerequisite = { focus = FRA_economic_recovery }
 		
         available = {
-		    has_war = no
 			OR = {
 			has_government = national_integralism
 			has_government = communism
 			}
-			###make flag for after 2nd civil war or elected options###
 		}		
 
 		completion_reward = {
@@ -364,9 +559,286 @@ focus_tree = {
 	}		
 	
 	focus = {
+		id = FRA_proleteriat_arise
+		icon = ?
+		x = 12
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_planned_economy }		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_proleteriat_mix
+		icon = ?
+		x = 14
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_planned_economy focus = FRA_mixed_economy }		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_capitalist_economy
+		icon = ?
+		x = 16
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_free_market focus = FRA_mixed_economy }		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_syndicalist_rev
+		icon = ?
+		x = 18
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_syndic_thought }		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FRA_industrial_boom_plan
+		icon = ?
+		x = 13
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_proleteriat_arise focus = FRA_proleteriat_mix }		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_infrastructure_plan
+		icon = ?
+		x = 13
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_industrial_boom_plan }		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_equality_prevails
+		icon = ?
+		x = 12
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { 
+		#focus = FRA_infrastructure_plan
+		focus = FRA_proleteriat_mix 
+		}		
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_equal_society
+		icon = ?
+		x = 14
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { 
+		#focus = FRA_infrastructure_plan 
+		focus = FRA_proleteriat_arise 
+		}		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_scientific_progress
+		icon = ?
+		x = 13
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_equality_prevails focus = FRA_equal_society }		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_reduce_company_tax
+		icon = ?
+		x = 16
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_capitalist_economy }		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_laizess_faire
+		icon = ?
+		x = 16
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_reduce_company_tax }		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_life_conditions_rise
+		icon = ?
+		x = 16
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_laizess_faire }		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_corporated_society
+		icon = ?
+		x = 18
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_syndicalist_rev }		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_hierarcy_industry
+		icon = ?
+		x = 18
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_corporated_society }		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_corporative_councils
+		icon = ?
+		x = 18
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_hierarcy_industry }		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_import_minds
+		icon = ?
+		x = 17
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_corporative_councils focus = FRA_life_conditions_rise }		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
 		id = FRA_army_rebuild
 		icon = ?
-		x = 20
+		x = 22
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -387,7 +859,7 @@ focus_tree = {
 	focus = {
 		id = FRA_conscription_policy
 		icon = ?
-		x = 20
+		x = 21
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -395,12 +867,7 @@ focus_tree = {
 		}
 		
         available_if_capitulated = no
-		prerequisite = { focus = FRA_army_rebuild }
-		
-        available = {
-		    has_war = no
-			###make flag for after 2nd civil war or elected options###
-		}		
+		prerequisite = { focus = FRA_army_rebuild }	
 
 		completion_reward = {
 		}
@@ -409,7 +876,7 @@ focus_tree = {
 	focus = {
 		id = FRA_professional_army
 		icon = ?
-		x = 19
+		x = 20
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -417,12 +884,7 @@ focus_tree = {
 		}
 		
         available_if_capitulated = no
-		prerequisite = { focus = FRA_conscription_policy }
-		
-        available = {
-		    has_war = no
-			###make flag for after 2nd civil war or elected options###
-		}		
+		prerequisite = { focus = FRA_conscription_policy }	
 
 		completion_reward = {
 		}
@@ -431,7 +893,7 @@ focus_tree = {
 	focus = {
 		id = FRA_universal_con
 		icon = ?
-		x = 21
+		x = 22
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -439,12 +901,7 @@ focus_tree = {
 		}
 		
         available_if_capitulated = no
-		prerequisite = { focus = FRA_conscription_policy }
-		
-        available = {
-		    has_war = no
-			###make flag for after 2nd civil war or elected options###
-		}		
+		prerequisite = { focus = FRA_conscription_policy }		
 
 		completion_reward = {
 		}
@@ -453,7 +910,7 @@ focus_tree = {
 	focus = {
 		id = FRA_women_con
 		icon = ?
-		x = 21
+		x = 22
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -462,11 +919,6 @@ focus_tree = {
 		
         available_if_capitulated = no
 		prerequisite = { focus = FRA_universal_con }
-		
-        available = {
-		    has_war = no
-			###make flag for after 2nd civil war or elected options###
-		}		
 
 		completion_reward = {
 		}
@@ -475,7 +927,7 @@ focus_tree = {
 	focus = {
 		id = FRA_doctrine
 		icon = ?
-		x = 22
+		x = 24
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -483,12 +935,7 @@ focus_tree = {
 		}
 		
         available_if_capitulated = no
-		prerequisite = { focus = FRA_army_rebuild }
-		
-        available = {
-		    has_war = no
-			###make flag for after 2nd civil war or elected options###
-		}		
+		prerequisite = { focus = FRA_army_rebuild }	
 
 		completion_reward = {
 		}
@@ -496,28 +943,6 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_mobalization
-		icon = ?
-		x = 22
-		y = 2
-		cost = 10
-		ai_will_do = {
-			factor = 2
-		}
-		
-        available_if_capitulated = no
-		prerequisite = { focus = FRA_doctrine }
-		
-        available = {
-		    has_war = no
-			###make flag for after 2nd civil war or elected options###
-		}		
-
-		completion_reward = {
-		}
-	}	
-	
-	focus = {
-		id = FRA_firepower
 		icon = ?
 		x = 24
 		y = 2
@@ -527,19 +952,50 @@ focus_tree = {
 		}
 		
         available_if_capitulated = no
-		prerequisite = { focus = FRA_doctrine }
-		
-        available = {
-		    has_war = no
-			###make flag for after 2nd civil war or elected options###
-		}		
+		prerequisite = { focus = FRA_doctrine }	
 
 		completion_reward = {
 		}
 	}	
 	
 	focus = {
-		id = FRA_armor_army
+		id = FRA_instant_equipment
+		icon = ?
+		x = 25
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_mobalization }
+		
+
+		completion_reward = {
+		}
+	}	
+
+	focus = {
+		id = FRA_breakthrough
+		icon = ?
+		x = 27
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_mobalization focus = FRA_firepower }
+		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_firepower
 		icon = ?
 		x = 26
 		y = 2
@@ -550,13 +1006,233 @@ focus_tree = {
 		
         available_if_capitulated = no
 		prerequisite = { focus = FRA_doctrine }
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_artillery
+		icon = ?
+		x = 29
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
 		
-        available = {
-		    has_war = no
-			###make flag for after 2nd civil war or elected options###
-		}		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_firepower }
+		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_armor_army
+		icon = ?
+		x = 28
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_doctrine }
+		
 
 		completion_reward = {
 		}
 	}		
+	
+	focus = {
+		id = FRA_armor_bonus
+		icon = ?
+		x = 31
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_armor_army }
+		
+
+		completion_reward = {
+		}
+	}		
+
+	focus = {
+		id = FRA_motor_bonus
+		icon = ?
+		x = 28
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_armor_bonus focus = FRA_firepower }
+		
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_naval_program
+		icon = ?
+		x = 29
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no		
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_battleship_focus
+		icon = ?
+		x = 28
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no		
+		prerequisite = { focus = FRA_naval_program }	
+		mutually_exclusive = { focus = FRA_submarine_focus }
+
+		completion_reward = {		
+		}
+	}		
+	
+	focus = {
+		id = FRA_submarine_focus
+		icon = ?
+		x = 30
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no	
+	    prerequisite = { focus = FRA_naval_program }	
+        mutually_exclusive = { focus = FRA_battleship_focus }		
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FRA_foreign_policy
+		icon = ?
+		x = 3
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no	
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_german_exchange
+		icon = ?
+		x = 1
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+
+        available_if_capitulated = no	
+		prerequisite = { focus = FRA_foreign_policy }
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_devil_alliance
+		icon = ?
+		x = 1
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no	
+		prerequisite = { focus = FRA_german_exchange }
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_allign_uk
+		icon = ?
+		x = 3
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no	
+		prerequisite = { focus = FRA_foreign_policy }
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_allign_soviet
+		icon = ?
+		x = 5
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no	
+		prerequisite = { focus = FRA_foreign_policy }
+
+		completion_reward = {
+		}
+	}		
+	
+	focus = {
+		id = FRA_new_bloc
+		icon = ?
+		x = 7
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no	
+		prerequisite = { focus = FRA_foreign_policy }
+
+		completion_reward = {
+		}
+	}
 }	

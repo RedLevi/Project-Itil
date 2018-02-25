@@ -49,7 +49,7 @@ focus_tree = {
 			focus = YUG_ethnic_question
 		}
 		available = {
-		custom_effect_tooltip = {
+		custom_trigger_tooltip = {
 			tooltip = YUG_enhanced_freedoms_req
 			OR = {
 				has_completed_focus = YUG_emergency_elections
@@ -175,6 +175,7 @@ focus_tree = {
 		x = 1
 		y = 8
 		cost = 10
+		icon = GFX_goal_generic_intelligence_exchange
 		ai_will_do = {
 			factor = 10
 		}
@@ -382,7 +383,7 @@ focus_tree = {
 			focus = YUG_ethnic_question
 		}
 		available = {
-		custom_effect_tooltip = {
+		custom_trigger_tooltip = {
 			tooltip = YUG_ethnic_int_req
 			OR = {
 				has_completed_focus = YUG_emergency_elections
@@ -426,7 +427,7 @@ focus_tree = {
 			owns_state = 104 # Bosnia
 		}
 		completion_reward = {
-			custom_effect_tooltip = integrate_bos
+			custom_trigger_tooltip = integrate_bos
 			hidden_effect = {
 				random_list = {
 					5 = { country_event = { id = yug.2 days = 34 } } # 5% chance - miserable failure
@@ -500,6 +501,7 @@ focus_tree = {
 		x = 5
 		y = 8
 		cost = 10
+		icon = GFX_goal_generic_neutrality_focus
 		ai_will_do = {
 			factor = 10
 		}
@@ -531,7 +533,7 @@ focus_tree = {
 			focus = YUG_ethnic_question
 		}
 		available = {
-		custom_effect_tooltip = {
+		custom_trigger_tooltip = {
 			tooltip = YUG_ser_dom_req
 			OR = {
 				has_completed_focus = YUG_emergency_elections
@@ -862,7 +864,7 @@ focus_tree = {
 
 	focus = {
 		id = YUG_centralisation_benefits
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
 		x = 9
 		y = 8
 		cost = 10
@@ -1119,6 +1121,17 @@ focus_tree = {
 						owns_state = 766
 					}
 				}
+			}
+		}
+		completion_reward = {
+			45 = {
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_extra_state_shared_building_slots = 2
+			}
+			766 = {
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_extra_state_shared_building_slots = 1
 			}
 		}
 	}
@@ -2114,6 +2127,105 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = YUG_basic_law
+		x = 1
+		y = 22
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_intensify_class_struggle
+		}
+	}
+
+	focus = {
+		id = YUG_literacy_campaign
+		x = 1
+		y = 23
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_basic_law
+		}
+	}
+
+	focus = {
+		id = YUG_five_year_plans
+		x = 3
+		y = 22
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_intensify_class_struggle
+		}
+	}
+
+	focus = {
+		id = YUG_worker_self_management
+		x = 3
+		y = 23
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_five_year_plans
+		}
+	}
+
+	focus = {
+		id = YUG_transform_nature
+		x = 1
+		y = 24
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_worker_self_management
+			focus = YUG_literacy_campaign
+		}
+	}
+
+	focus = {
+		id = YUG_people_university
+		x = 1
+		y = 25
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_transform_nature
+		}
+	}
+
+	focus = {
+		id = YUG_socialist_paradise
+		x = 1
+		y = 26
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_people_university
+		}
+	}
+
 	# Communist / Socialist Shared #
 
 	focus = {
@@ -2128,6 +2240,38 @@ focus_tree = {
 		prerequisite = {
 			focus = YUG_communists_win_out
 			focus = YUG_defend_democracy
+		}
+	}
+
+	focus = {
+		id = YUG_crush_internal
+		x = 4
+		y = 24
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_secure_rule
+		}
+	}
+
+	focus = {
+		id = YUG_handle_king
+		x = 4
+		y = 25
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_crush_internal
+		}
+		prerequisite = {
+			focus = YUG_worker_self_management
+			focus = YUG_universal_sufferage
 		}
 	}
 
@@ -2164,6 +2308,108 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = YUG_primary_education
+		x = 5
+		y = 22
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_dissasociate_with_far_left
+		}
+	}
+
+	focus = {
+		id = YUG_universal_sufferage
+		x = 5
+		y = 23
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_primary_education
+		}
+	}
+
+	focus = {
+		id = YUG_subsidise_transport
+		x = 7
+		y = 22
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_dissasociate_with_far_left
+			focus = YUG_fair_education
+			focus = YUG_civil_liberties
+		}
+	}
+
+	focus = {
+		id = YUG_market_stim
+		x = 7
+		y = 23
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_subsidise_transport
+		}
+	}
+
+	focus = {
+		id = YUG_work_standards
+		x = 7
+		y = 24
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_market_stim
+			focus = YUG_universal_sufferage
+		}
+	}
+
+	focus = {
+		id = YUG_beograd_uni
+		x = 7
+		y = 25
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_work_standards
+		}
+	}
+
+	focus = {
+		id = YUG_workers_shine
+		x = 7
+		y = 26
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_beograd_uni
+		}
+	}
+
+
 	# Liberal Tree #
 
 	focus = {
@@ -2187,6 +2433,243 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = YUG_raise_tax
+		x = 9
+		y = 17
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_liberal_victory
+		}
+	}
+
+	focus = {
+		id = YUG_fund_reform
+		x = 9
+		y = 18
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_raise_tax
+		}
+	}
+
+	# Con / Lib Shared Legislitive Tree #
+
+	focus = {
+		id = YUG_legislative_spree
+		x = 11
+		y = 19
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_fund_reform
+			focus = YUG_trickledown
+		}
+	}
+
+	focus = {
+		id = YUG_fair_education
+		x = 8
+		y = 20
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = liberalism
+		}
+		prerequisite = {
+			focus = YUG_legislative_spree
+		}
+	}
+
+	focus = {
+		id = YUG_civil_liberties
+		x = 9
+		y = 21
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = liberalism
+		}
+		prerequisite = {
+			focus = YUG_legislative_spree
+		}
+	}
+
+	focus = {
+		id = YUG_civil_enterprise
+		x = 10
+		y = 20
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_legislative_spree
+		}
+	}
+
+	focus = {
+		id = YUG_civil_priority
+		x = 10
+		y = 22
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_civil_enterprise
+		}
+		mutually_exclusive = {
+			focus = YUG_mil_priority
+		}
+	}
+
+	focus = {
+		id = YUG_vote_reform
+		x = 11
+		y = 21
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_legislative_spree
+		}
+	}
+
+	focus = {
+		id = YUG_revise_con
+		x = 11
+		y = 24
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_vote_reform
+		}
+	}
+
+	focus = {
+		id = YUG_con_monarchy
+		x = 10
+		y = 25
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_revise_con
+		}
+		mutually_exclusive = {
+			focus = YUG_still_some_power
+		}
+	}
+
+	focus = {
+		id = YUG_still_some_power
+		x = 12
+		y = 25
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_revise_con
+		}
+		mutually_exclusive = {
+			focus = YUG_con_monarchy
+		}
+	}
+
+	focus = {
+		id = YUG_war_prep
+		x = 12
+		y = 20
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_legislative_spree
+		}
+	}
+
+	focus = {
+		id = YUG_mil_priority
+		x = 12
+		y = 22
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		mutually_exclusive = {
+			focus = YUG_civil_priority
+		}
+		prerequisite = {
+			focus = YUG_war_prep
+		}
+	}
+
+	focus = {
+		id = YUG_emergency_act
+		x = 13
+		y = 21
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = conservatism
+		}
+		prerequisite = {
+			focus = YUG_legislative_spree
+		}
+	}
+
+	focus = {
+		id = YUG_state_security
+		x = 14
+		y = 20
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			has_government = conservatism
+		}
+		prerequisite = {
+			focus = YUG_legislative_spree
+		}
+	}
+
 	# Conservative Tree #
 
 	focus = {
@@ -2207,6 +2690,34 @@ focus_tree = {
 				tooltip = YUG_conservatives_won
 				has_country_flag = YUG_conservative_election
 			}
+		}
+	}
+
+	focus = {
+		id = YUG_empower_elite
+		x = 13
+		y = 17
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_conservative_victory
+		}
+	}
+
+	focus = {
+		id = YUG_trickledown
+		x = 13
+		y = 18
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = YUG_empower_elite
 		}
 	}
 

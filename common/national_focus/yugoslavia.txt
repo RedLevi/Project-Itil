@@ -897,7 +897,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = YUG_leftists_win
-				has_country_flag = YUG_leftist_coalition
+				has_country_flag = YUG_leftist_win
 			}
 		}
 		prerequisite = {
@@ -905,7 +905,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			swap_ideas = { remove_idea = YUG_dc add_idea = YUG_fourth_option }
-			set_country_flag = YUG_communism
 		}
 	}
 
@@ -2446,7 +2445,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = YUG_liberals_won
-				has_country_flag = YUG_liberal_election
+				has_country_flag = YUG_liberal_win
 			}
 		}
 	}
@@ -2671,7 +2670,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = YUG_conservatives_won
-				has_country_flag = YUG_conservative_election
+				has_country_flag = YUG_conservative_win
 			}
 		}
 	}

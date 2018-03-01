@@ -69,6 +69,22 @@ yug.29.a:0 "Full scale warfare"
 yug.29.b:0 "Border warfare"
 yug.29.c:0 "Back down"
 
+## Elections ##
+# Formation of Leftist Coalition #
+yug.34.t:0 "The Formation of the Leftist Coalition"
+yug.34.d:0 "With the elections of 1939 close at hand, the parties of the left have held a conference. Opinion polls have indicated the Democratic Party has only a small chance of winning the election, especially considering the Price Regent gets to appoint a half of the upper house. The option has therefore been raised that the parties of the left combine together in a grand, leftist coalition to stand a chance of defeating the People's Radical Party. If the plan goes ahead, the leftists themselves won't stand for election, and a unified 'Leftist Coalition' will. Due to the more radical elements in the coalition, in the event of a win more radical policies will be enacted - is this a price the Democratic Party are wlling to pay?"
+yug.34.a:0 "The Leftist Coalition forms"
+YUG_leftists_form:0 "This means the liberals will not stand for election, and the Leftist Coalition will instead"
+yug.34.b:0 "The Democratic Party refuses!"
+YUG_no_leftists:0 "The Democratic Party will stand for election by itself, and radical elements will have no chance of getting in to power"
+# Election Events #
+yug.35.t:0 "The Election of 1939"
+yug.35.d:0 "The day of the election has come! Today our peoples, those who are male and of working age, are allowed to come to the polling station to cast their ballot over who they wish to run our glorious country. Previously under King Alexander their vote would not have meant much - he always allocated his half of the upper house to the conservative party of the time, ensuring them a victory. However, now after Alexander's death Prince Paul has signalled a willingness to listen to the votes of the people and appoint his seats relative to that. However, this doesn't mean he has given up the power to assign seats if it so pleases him. Out of the parties standing, only two stand a real chance. Who will the public choose?"
+yug.35.a:0 "The People choose the Leftist Coalition"
+yug.35.b:0 "The People choose the Democratic Party"
+yug.35.c:0 "The People vote for their Radical Party"
+yug.36.t:0 "The Prince-Regent assigns his seats"
+
 ####focus####
 ## Ethnic Questions ##
 YUG_ethnic_question:0 "A Matter of Ethnicities"

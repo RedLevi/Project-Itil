@@ -1,6 +1,35 @@
 ideas = {
 
 	country = {
+	    karl_I = {
+		
+			available = {
+			
+				NOT = { has_government = communism }
+			
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+				
+					has_government = communism
+				
+				}
+			}
+			
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				unity_factor = 0.05
+				
+			
+			}
+		
+		
+		}
 
 		AUS_Reconquest_War = {
 

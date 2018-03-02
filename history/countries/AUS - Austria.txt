@@ -63,6 +63,7 @@ set_politics = {
 }
 
 set_national_unity = 0.70
+add_ideas = karl_I
 
 create_country_leader = {
 	name = "Karl I von Habsburg-Lothringen"

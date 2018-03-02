@@ -25,6 +25,8 @@ set_technology = {
 
 set_convoys = 10
 
+add_ideas = carol_II
+
 set_politics = {
 
 	parties = {

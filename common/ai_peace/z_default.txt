@@ -110,6 +110,13 @@ communist_peace = {
 			FROM = { has_civil_war = yes }
 			}
 		}
+		modifier = {
+		   factor = 0
+		   any_owned_state = {
+		      is_claimed_by = any_allied_country
+			  is_core_of = any_allied_country
+		   }
+		}
 	}
 	# ROOT = Taker, FROM = State
 	take_states = {

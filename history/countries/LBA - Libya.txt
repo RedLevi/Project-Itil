@@ -74,10 +74,10 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Hassan as-Senussi"
+	name = "Mohamed Ali El Hammi"
 	desc = ""
-	picture = "gfx/leaders/LBA/Portrait_Arabia_Generic_communism1.dds"
-	ideology = marxism
+	picture = "gfx/leaders/LBA/Mohhamed_Ali_El_Hammi.dds"
+	ideology = syndicalism
 	traits = {
 		#
 	}

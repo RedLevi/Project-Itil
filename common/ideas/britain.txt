@@ -3,7 +3,7 @@ ideas = {
 	
 	country = {
 	
-		george_v_idea = {
+		george_v = {
 		
 			available = {
 			
@@ -20,13 +20,12 @@ ideas = {
 				}
 			}
 			
-			picture = GFX_idea_george_v
 			
 			removal_cost = -1
 			
 			modifier = {
 				
-				unity_factor = 0.025
+				unity_factor = 0.05
 				
 			
 			}

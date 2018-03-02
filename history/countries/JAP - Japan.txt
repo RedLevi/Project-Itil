@@ -48,6 +48,7 @@ set_technology = {
 	
 set_convoys = 400
 set_national_unity = 0.5
+add_ideas = hirohito
 
 set_politics = {
 

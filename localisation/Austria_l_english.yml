@@ -132,6 +132,7 @@ AUS_sanctioned_by_GER_desc:0 "Due to our military actions against Hungary, Germa
 GER_sanction_AUS:0 "German Economc Sanctions of Austria"
 GER_sanction_AUS_desc:0 "We have decided to economically sanction Austria to force them to peace out with Hungary. However, this has had a slight impact on our own economy, due to how tightly entwined the two economies are. We will be able to shake this impact resonably quickly, however."
 war_alone:0 "We War Alone"
+karl_I:0 "Kaiser Karl Franz I"
 
 ####opinion####
 

@@ -1646,10 +1646,7 @@ spriteTypes = {
 
 	
 	### BRITISH IDEAS	
-	spriteType = {
-		name = "GFX_idea_george_v"
-		texturefile = "gfx/interface/ideas/idea_george_v.dds"
-	}
+
 	spriteType = {
 		name = "GFX_idea_king_edward"
 		texturefile = "gfx/interface/ideas/idea_king_edward.dds"
@@ -3306,9 +3303,57 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_kaiser_wilhelm_ii.dds"
 	}
 
-	spriteType = {
+	SpriteType = {
 		name = "GFX_idea_yug_divided_nation"
 		texturefile = "gfx/interface/ideas/idea_yug_divided_nation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_george_V"
+		texturefile = "gfx/interface/ideas/George_V.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_carol_II"
+		texturefile = "gfx/interface/ideas/idea_Carol_II.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_christian_X"
+		texturefile = "gfx/interface/ideas/Christian_X.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ferdinand_I"
+		texturefile = "gfx/interface/ideas/Ferdinand_I.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_george_II"
+		texturefile = "gfx/interface/ideas/George_II.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_gustav_v"
+		texturefile = "gfx/interface/ideas/idea_gustav_v.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_haakon_VII"
+		texturefile = "gfx/interface/ideas/Haakon_VII.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_hirohito"
+		texturefile = "gfx/interface/ideas/Hirohito.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_karl_I"
+		texturefile = "gfx/interface/ideas/Karl_I.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_prince_paul"
+		texturefile = "gfx/interface/ideas/Prince_Paul.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_rama_VII"
+		texturefile = "gfx/interface/ideas/Rama_VII.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_wilhelmina"
+		texturefile = "gfx/interface/ideas/Wilhelmina.dds"
 	}
 
 }

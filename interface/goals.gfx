@@ -127,7 +127,7 @@ spriteTypes = {
 	SpriteType = {
 	name = "GFX_thailand"
 	texturefile = "gfx/interface/goals/thailand.dds"
-	}	
+	}
 
 	#### Generic continuous goal icons
 
@@ -889,6 +889,11 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_goal_tfv_saf_secure_interests_in_africa"
 		texturefile = "gfx/interface/goals/focus_SAF_secure_africa.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SOV_secure_africa"
+		texturefile = "gfx/interface/goals/focus_SOV_secure_africa.dds"
 	}
 
 	SpriteType = {

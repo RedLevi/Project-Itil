@@ -63,6 +63,7 @@ set_politics = {
 
 set_convoys = 25
 set_national_unity = 0.7
+add_ideas = gustav_v
 
 
 create_country_leader = {

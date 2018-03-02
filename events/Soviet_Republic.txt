@@ -59,8 +59,8 @@ country_event = { #Internal Policies
 	ai_chance = { factor = 30 }
     set_country_flag = SOV_liberal_internal
   }
-  option = {#status quo, trotsky 
-		name = soviet.3.c 
+  option = {#status quo, trotsky
+		name = soviet.3.c
 		ai_chance = { factor = 40 }
 		set_country_flag = SOV_internal_status_quo
   }
@@ -150,441 +150,441 @@ country_event = { #End of the congress
 
    trigger = {
       has_country_flag = SOV_finished_congress
-	  tag = SOV 
+	  tag = SOV
    }
 
-   option = {#Trotsky, party center 
+   option = {#Trotsky, party center
 	trigger = {
-		
+
 		OR = {
-			
+
 			AND = {
-				
+
 				has_country_flag = SOV_internal_status_quo
 				has_country_flag = SOV_scapitalist_economic
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_internal_status_quo
 				has_country_flag = SOV_worldrev_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_internal_status_quo
 				has_country_flag = SOV_int_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_scapitalist_economic
 				has_country_flag = SOV_int_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_scapitalist_economic
 				has_country_flag = SOV_worldrev_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_int_national
 				has_country_flag = SOV_worldrev_foreign
-			
+
 			}
-		
+
 		}
-	
+
 	}
       name = soviet.7.a
       set_country_flag = trotsky_victory
    }
     option = {#Kirov, right opposition
 	trigger = {
-		
+
 		OR = {
-			
+
 			AND = {
-				
+
 				has_country_flag = SOV_authoritarian_internal
 				has_country_flag = SOV_scapitalist_economic
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_authoritarian_internal
 				has_country_flag = SOV_ms_economic
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_authoritarian_internal
 				has_country_flag = SOV_imp_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_authoritarian_internal
 				has_country_flag = SOV_fed_national_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_scapitalist_economic
 				has_country_flag = SOV_fed_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_ms_economic
 				has_country_flag = SOV_fed_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_scapitalist_economic
 				has_country_flag = SOV_imp_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_ms_economic
 				has_country_flag = SOV_imp_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_fed_national
 				has_country_flag = SOV_imp_foreign
-			
+
 			}
-		
+
 		}
-	
+
 	}
       name = soviet.7.b
       set_country_flag = kirov_victory
    }
     option = {#Shliapnikov, left opposition
 	trigger = {
-		
+
 		OR = {
-			
+
 			AND = {
-				
+
 				has_country_flag = SOV_liberal_internal
 				has_country_flag = SOV_dec_soc_economic
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_liberal_internal
 				has_country_flag = SOV_worldrev_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_liberal_internal
 				has_country_flag = SOV_int_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_dec_soc_economic
 				has_country_flag = SOV_int_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_dec_soc_economic
 				has_country_flag = SOV_worldrev_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_int_national
 				has_country_flag = SOV_worldrev_foreign
-			
+
 			}
-		
+
 		}
-	
+
 	}
       name = soviet.7.c
       set_country_flag = SOV_left_victory
    }
    option = {#Chernov, left opposition
 	trigger = {
-		
+
 		OR = {
-			
+
 			AND = {
-				
+
 				has_country_flag = SOV_liberal_internal
 				has_country_flag = SOV_ms_economic
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_liberal_internal
 				has_country_flag = SOV_def_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_liberal_internal
 				has_country_flag = SOV_imp_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_liberal_internal
 				has_country_flag = SOV_nat_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_ms_economic
 				has_country_flag = SOV_nat_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_ms_economic
 				has_country_flag = SOV_def_foreign
-			
+
 			}
 				AND = {
-				
+
 				has_country_flag = SOV_ms_economic
 				has_country_flag = SOV_imp_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_nat_national
 				has_country_flag = SOV_imp_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_nat_national
 				has_country_flag = SOV_def_foreign
-			
+
 			}
-		
+
 		}
-	
+
 	}
       name = soviet.7.e
       set_country_flag = SOV_moderate_victory
    }
 }
 
-country_event = {#no clear victor, very rare 
-	
-	id = soviet.8 
-	title = soviet.8.t 
-	desc = soviet.8.d 
-	fire_only_once = yes 
+country_event = {#no clear victor, very rare
+
+	id = soviet.8
+	title = soviet.8.t
+	desc = soviet.8.d
+	fire_only_once = yes
 	trigger = {
-		
-		tag = SOV 
+
+		tag = SOV
 		has_country_flag = SOV_finished_congress
 		NOT = {
-		
+
 			AND = {
-				
+
 				has_country_flag = SOV_internal_status_quo
 				has_country_flag = SOV_scapitalist_economic
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_internal_status_quo
 				has_country_flag = SOV_worldrev_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_internal_status_quo
 				has_country_flag = SOV_int_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_scapitalist_economic
 				has_country_flag = SOV_int_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_scapitalist_economic
 				has_country_flag = SOV_worldrev_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_int_national
 				has_country_flag = SOV_worldrev_foreign
-			
+
 			}
-		
+
 			AND = {
-				
+
 				has_country_flag = SOV_authoritarian_internal
 				has_country_flag = SOV_scapitalist_economic
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_authoritarian_internal
 				has_country_flag = SOV_ms_economic
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_authoritarian_internal
 				has_country_flag = SOV_imp_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_authoritarian_internal
 				has_country_flag = SOV_fed_national_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_scapitalist_economic
 				has_country_flag = SOV_fed_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_ms_economic
 				has_country_flag = SOV_fed_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_scapitalist_economic
 				has_country_flag = SOV_imp_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_ms_economic
 				has_country_flag = SOV_imp_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_fed_national
 				has_country_flag = SOV_imp_foreign
-			
+
 			}
-		
+
 			AND = {
-				
+
 				has_country_flag = SOV_liberal_internal
 				has_country_flag = SOV_ms_economic
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_liberal_internal
 				has_country_flag = SOV_def_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_liberal_internal
 				has_country_flag = SOV_imp_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_liberal_internal
 				has_country_flag = SOV_nat_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_ms_economic
 				has_country_flag = SOV_nat_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_ms_economic
 				has_country_flag = SOV_def_foreign
-			
+
 			}
 				AND = {
-				
+
 				has_country_flag = SOV_ms_economic
 				has_country_flag = SOV_imp_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_nat_national
 				has_country_flag = SOV_imp_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_nat_national
 				has_country_flag = SOV_def_foreign
-			
+
 			}
-			
+
 			AND = {
-				
+
 				has_country_flag = SOV_liberal_internal
 				has_country_flag = SOV_dec_soc_economic
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_liberal_internal
 				has_country_flag = SOV_worldrev_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_liberal_internal
 				has_country_flag = SOV_int_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_dec_soc_economic
 				has_country_flag = SOV_int_national
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_dec_soc_economic
 				has_country_flag = SOV_worldrev_foreign
-			
+
 			}
 			AND = {
-				
+
 				has_country_flag = SOV_int_national
 				has_country_flag = SOV_worldrev_foreign
-			
+
 			}
-		
+
 		}
-	
+
 	}
-	
+
 	option = {
-		name = soviet.8.a 
+		name = soviet.8.a
 		add_ideas = SOV_no_leadership
 		retire_country_leader = yes
          create_country_leader = {
@@ -594,7 +594,7 @@ country_event = {#no clear victor, very rare
 					  expire = "1965.1.1"
 					  ideology = marxism
 					  traits = {
-						   
+
 					  }
 			   }
 			}
@@ -602,30 +602,34 @@ country_event = {#no clear victor, very rare
 
 }
 
-country_event = {#Trotsky victorious 
-	
-	id = soviet.9 
-	title = soviet.9.t 
-	desc = soviet.9.d 
+country_event = {#Trotsky victorious
+
+	id = soviet.9
+	title = soviet.9.t
+	desc = soviet.9.d
 	is_triggered_only = yes
-	
+
 	option = {
-		name = soviet.9.a 
-		add_national_unity = 0.05 
+		name = soviet.9.a
+    set_country_flag = Gosplan_Congress
+    set_country_flag = Soviet_Revolution
+		add_national_unity = 0.05
 	}
 
 }
 
-country_event = {#Shliapnikov victorious 
-	
-	id = soviet.10 
-	title = soviet.10.t 
-	desc = soviet.10.d 
+country_event = {#Shliapnikov victorious
+
+	id = soviet.10
+	title = soviet.10.t
+	desc = soviet.10.d
 	is_triggered_only = yes
-	
+
 	option = {
-		name = soviet.10.a 
+		name = soviet.10.a
 		retire_country_leader = yes
+    set_country_flag = Gosplan_Congress
+    set_country_flag = Soviet_Revolution
 			  create_country_leader = {
 				   name = "Alexander Shliapnikov"
 				   desc = "POLITICS_LEON_TROTSKY_DESC"
@@ -637,19 +641,21 @@ country_event = {#Shliapnikov victorious
 	}
 
 }
- 
- country_event = {#Shliapnikov victorious 
-	
+
+ country_event = {#Kirov victorious
+
 	id = soviet.11
-	title = soviet.11.t 
-	desc = soviet.11.d 
+	title = soviet.11.t
+	desc = soviet.11.d
 	is_triggered_only = yes
-	
+
 	option = {
-		name = soviet.11.a 
+		name = soviet.11.a
 		retire_country_leader = yes
+    set_country_flag = Gosplan_Congress
+    set_country_flag = Soviet_Revolution
          create_country_leader = {
-	
+
 					  name = "Sergey Kirov"
 					  desc = "POLITICS_LEON_TROTSKY_DESC"
 					  picture = "Sergey_Kirov.dds"
@@ -662,7 +668,7 @@ country_event = {#Shliapnikov victorious
 	}
 
 }
-   
+
 country_event = { #Fate of Bogd Khanate#
    id = soviet.12
    title = soviet.12.t
@@ -1141,16 +1147,18 @@ country_event = { #Korean aid
    }
 }
 
-country_event = {#Chernov victorious 
-	
+country_event = {#Chernov victorious
+
 	id = soviet.32
-	title = soviet.32.t 
-	desc = soviet.32.d 
+	title = soviet.32.t
+	desc = soviet.32.d
 	is_triggered_only = yes
-	
+
 	option = {
-		name = soviet.32.a 
+		name = soviet.32.a
 		retire_country_leader = yes
+    set_country_flag = Gosplan_Congress
+    set_country_flag = Soviet_Revolution
 			   create_country_leader = {
 					   name = "Viktor Chernov"
 					   desc = "POLITICS_LEON_TROTSKY_DESC"
@@ -1163,74 +1171,74 @@ country_event = {#Chernov victorious
 
 }
 
-country_event = {#Conflicting economic policy 
-	id = soviet.33 
-	title = soviet.33.t 
-	desc = soviet.33.d 
-	fire_only_once = yes 
+country_event = {#Conflicting economic policy
+	id = soviet.33
+	title = soviet.33.t
+	desc = soviet.33.d
+	fire_only_once = yes
 	trigger = {
-		
-		tag = SOV 
-		
+
+		tag = SOV
+
 		OR = {
-			
+
 			AND = {
-			
-				has_country_flag = trotsky_victory 
+
+				has_country_flag = trotsky_victory
 				NOT = {
-					
+
 					has_country_flag = SOV_scapitalist_economic
-					
+
 				}
-			
+
 			}
-			
+
 			AND = {
-			
-				has_country_flag = kirov_victory 
+
+				has_country_flag = kirov_victory
 				NOT = {
-					
+
 					has_country_flag = SOV_scapitalist_economic
 					has_country_flag = SOV_ms_economic
-					
+
 				}
-			
+
 			}
-			
+
 			AND = {
-			
+
 				has_country_flag =  SOV_left_victory
 				NOT = {
-					
+
 					has_country_flag = SOV_dec_soc_economic
-					
+
 				}
-			
+
 			}
-			
+
 			AND = {
-			
+
 				has_country_flag =  SOV_moderate_victory
 				NOT = {
-					
+
 					has_country_flag = SOV_ms_economic
-					
+
 				}
-			
+
 			}
-			
+
 		}
-	
+
 	}
-	
+
 	mean_time_to_happen = { days = 30 }
-	
+
 	option = {
-	
-		name = soviet.33.a 
+
+		name = soviet.33.a
 		add_ideas = SOV_economic_disharmony
 		add_national_unity = -0.035
-	
+
 	}
 }
 

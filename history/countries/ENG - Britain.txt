@@ -96,7 +96,7 @@ if = {
 	}
 }
 
-add_ideas = george_v_idea
+add_ideas = george_v
 
 create_faction = leauge_of_nations
 add_to_faction = ENG

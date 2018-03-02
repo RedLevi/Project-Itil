@@ -1,13 +1,13 @@
 ideas = {
 
     country = {
-	
+
 	SOV_unstate_idea = {
 		removal_cost = -1
 		picture = FRA_matignon_agreements
 
 		allowed = {
-			always = no 
+			always = no
 		}
 
 		allowed_civil_war = {
@@ -15,21 +15,21 @@ ideas = {
 		}
 
 		modifier = {
-			
-			army_morale_factor = 0.3 
-			army_org_Factor = -0.15 
-			
+
+			army_morale_factor = 0.3
+			army_org_Factor = -0.15
+
 		}
-		
+
 	}
-	
+
 	SOV_local_government_idea = {
-	
+
 		removal_cost = -1
 		picture = generic_democratic_drift_bonus
 
 		allowed = {
-			always = no 
+			always = no
 		}
 
 		allowed_civil_war = {
@@ -37,24 +37,24 @@ ideas = {
 		}
 
 		modifier = {
-			
-			drift_defence_factor = -0.1 
-			unity_factor 0.05 
-			mobilization_laws_cost_factor = 0.15 
-			economy_cost_factor = 0.15 
-			
+
+			drift_defence_factor = -0.1
+			unity_factor 0.05
+			mobilization_laws_cost_factor = 0.15
+			economy_cost_factor = 0.15
+
 		}
-	
-	
+
+
 	}
-	
+
 	SOV_new_communism_idea = {
-	
+
 		removal_cost = -1
 		picture = generic_communism_drift_bonus
 
 		allowed = {
-			always = no 
+			always = no
 		}
 
 		allowed_civil_war = {
@@ -62,22 +62,22 @@ ideas = {
 		}
 
 		modifier = {
-			
-			army_morale_factor = 0.2 
-			conscription = 0.01 
-			consumer_goods_factor = -0.01 
-			
+
+			army_morale_factor = 0.2
+			conscription = 0.01
+			consumer_goods_factor = -0.01
+
 		}
-	
+
 	}
-	
+
 	SOV_secret_police_idea = {
-	
+
 		removal_cost = -1
 		picture = generic_spy_coup
 
 		allowed = {
-			always = no 
+			always = no
 		}
 
 		allowed_civil_war = {
@@ -85,22 +85,22 @@ ideas = {
 		}
 
 		modifier = {
-			subversive_activites_upkeep = -0.15 
-			foreign_subversive_activites = -0.2 
-			drift_defence_factor = 0.1 
-			enemy_partisan_effect = -0.2 
-			
+			subversive_activites_upkeep = -0.15
+			foreign_subversive_activites = -0.2
+			drift_defence_factor = 0.1
+			enemy_partisan_effect = -0.2
+
 		}
-		
+
 	}
-	
+
 	SOV_popular_front_idea = {
-	
+
 		removal_cost = -1
 		picture = generic_spy_coup
 
 		allowed = {
-			always = no 
+			always = no
 		}
 
 		allowed_civil_war = {
@@ -110,16 +110,16 @@ ideas = {
 		modifier = {
 			subversive_activites_upkeep = -0.1
 		}
-		
+
 	}
-		
+
 	SOV_lenin_legacy_idea = {
-	
+
 		removal_cost = -1
 		picture = socialist_science_focus
 
 		allowed = {
-			always = no 
+			always = no
 		}
 
 		allowed_civil_war = {
@@ -127,18 +127,18 @@ ideas = {
 		}
 
 		modifier = {
-			army_morale_factor = 0.1 
+			army_morale_factor = 0.1
 			conscription = 0.005
 		}
-	
-	}	
+
+	}
 	SOV_iron_fist_idea = {
-	
+
 		removal_cost = -1
 		picture = generic_intel_bonus
 
 		allowed = {
-			always = no 
+			always = no
 		}
 
 		allowed_civil_war = {
@@ -147,17 +147,17 @@ ideas = {
 
 		modifier = {
 			political_power_gain = 0.75
-			unity_factor = -0.05 
+			unity_factor = -0.05
 		}
-		
+
 	}
-	
+
 	SOV_no_leadership = {
 			removal_cost = -1
       picture = generic_disjointed_gov
 
 			allowed = {
-				always = no 
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -165,17 +165,17 @@ ideas = {
 			}
 
 			modifier = {
-				unity_factor = -0.1 
+				unity_factor = -0.1
 			}
 		}
-	
-	
+
+
 	SOV_status_quo_idea = {
 			removal_cost = -1
       picture = generic_pp_unity_bonus
 
 			allowed = {
-				always = no 
+				always = no
 			}
 
 			allowed_civil_war = {
@@ -183,10 +183,10 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_gain = 0.35 
+				political_power_gain = 0.35
 			}
 		}
-	
+
     home_of_revolution = {
 			removal_cost = -1
       picture = home_of_revolution
@@ -200,7 +200,7 @@ ideas = {
 			}
 
 			modifier = {
-				drift_defence_factor = 0.5
+				drift_defence_factor = 1
 			}
 			rule = {
 				can_create_factions = yes
@@ -426,7 +426,7 @@ ideas = {
 
   modifier = {
      unity_factor = 0.5
-     
+
   }
   }
 

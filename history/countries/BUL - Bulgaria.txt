@@ -18,6 +18,7 @@ set_technology = {
 
 
 set_convoys = 5
+add_ideas = ferdinand_I_idea
 
 set_politics = {
 

@@ -21,7 +21,37 @@ GRE_Megali_Idea = {
 			generate_wargoal_tension = -0.4
 		}
 	}
+	george_II = {
+		
+			available = {
+			
+				NOT = { has_government = communism }
+			
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+				
+					has_government = communism
+				
+				}
+			}
+			
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				unity_factor = 0.05
+				
+			
+			}
+		
+		
+		}
 }
+
 	
 	political_advisor = {
 

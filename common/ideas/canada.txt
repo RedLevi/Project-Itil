@@ -1,7 +1,11 @@
-ideas = {
+ideas = { 
+    
+
 
 	
 	political_advisor = {
+	
+	    
 
 		CAN_chuck_crate = {
 

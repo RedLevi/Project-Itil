@@ -20,7 +20,7 @@ set_technology = {
 	early_heavy_cruiser = 1
 	transport = 1
 }
-
+add_ideas = wilhelmina
 
 set_politics = {
 

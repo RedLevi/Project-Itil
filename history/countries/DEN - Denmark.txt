@@ -55,6 +55,8 @@ set_politics = {
 
 set_convoys = 40
 
+add_ideas = christian_X
+
 create_country_leader = {
 	name = "Thorvald Stauning"
 	desc = "POLITICS_THORVALD_STAUNING_DESC"

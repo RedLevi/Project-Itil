@@ -2020,7 +2020,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = YUG_1939_elections_held
-				has_country_flag = YUG_1939_elections_held
+				always = no
 			}
 		}
 		mutually_exclusive = {
@@ -2040,7 +2040,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = YUG_1939_king_decision
-				has_country_flag = YUG_1939_king_decision_made
+				always = no
 			}
 		}
 		prerequisite = {
@@ -2445,7 +2445,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = YUG_liberals_won
-				has_country_flag = YUG_liberal_win
+				has_country_flag = YUG_liberals_win
 			}
 		}
 	}

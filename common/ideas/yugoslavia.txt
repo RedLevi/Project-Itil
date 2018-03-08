@@ -1,36 +1,7 @@
 ideas = {
 
 		country = {
-		    prince_paul = {
-		
-			available = {
-			
-				NOT = { has_government = communism }
-			
-			}
-			
-			allowed_civil_war = {
-			
-				NOT = {
-				
-					has_government = communism
-				
-				}
-			}
-			
-			
-			removal_cost = -1
-			
-			modifier = {
-				
-				unity_factor = -0.025
-				
-			
-			}
-		
-		
-		    }
-			YUG_executive_power = {
+			YUG_executive_power = { # Prince Paul
 				allowed = {
 					original_tag = YUG
 					always = no

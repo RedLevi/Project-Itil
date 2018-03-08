@@ -786,6 +786,7 @@ country_event = {
 		add_popularity = { id = liberalism popularity = 0.3 }
 		add_popularity = { id = reactionism popularity = 0.05 }
 		country_event = { id = yug.36 days = 1 }
+		complete_national_focus = YUG_1939_election
 	}
 
 	option = { # Liberals Win
@@ -799,6 +800,7 @@ country_event = {
 		add_popularity = { id = liberalism popularity = 0.4 }
 		add_popularity = { id = reactionism popularity = 0.1 }
 		country_event = { id = yug.36 days = 1 }
+		complete_national_focus = YUG_1939_election
 	}
 
 	option = { # Conservatives Win
@@ -809,6 +811,7 @@ country_event = {
 		add_popularity = { id = conservatism popularity = 0.2 }
 		add_popularity = { id = reactionism popularity = 0.1 }
 		country_event = { id = yug.36 days = 1 }
+		complete_national_focus = YUG_1939_election
 	}
 }
 
@@ -845,10 +848,11 @@ country_event = {
 			set_country_flag = YUG_leftist_win
 			if = {
 				limit = { 
-					NOT = { has_government = communism }
+					NOT = { has_government = socialism }
 				}
-				set_politics = { ideology = communism }
+				set_politics = { ideology = socialism }
 			}
+			complete_national_focus = YUG_king_decision
 		}
 		if = {
 			limit = {
@@ -861,6 +865,7 @@ country_event = {
 				}
 				set_politics = { ideology = liberalism }
 			}	
+			complete_national_focus = YUG_king_decision
 		}
 		if = {
 			limit = {
@@ -872,7 +877,8 @@ country_event = {
 					NOT = { has_government = conservatism }
 				}
 				set_politics = { ideology = conservatism }
-			}		
+			}
+			complete_national_focus =YUG_king_decision		
 		}
 	}
 
@@ -889,6 +895,7 @@ country_event = {
 			}
 			set_politics = { ideology = conservatism }
 		}
+		complete_national_focus = YUG_king_decision	
 		add_popularity = { id = reactionism popularity = 0.1 }
 		add_political_power = -50
 		add_national_unity = -0.2

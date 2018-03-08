@@ -49,7 +49,7 @@ ideas = {
 			
 			modifier = {
 			 
-				unity_factor = 0.2 
+				stability_factor = 0.2 
 				political_power_gain = 0.1
 				consumer_goods_factor = 0.02 
 			
@@ -77,7 +77,7 @@ ideas = {
 			
 			modifier = {
 			 
-				unity_factor = 0.1 
+				stability_factor = 0.1 
 				political_power_gain = 0.35 
 				army_core_attack_factor = 0.1 
 				army_core_defence_factor = 0.1 
@@ -106,7 +106,7 @@ ideas = {
 			
 			modifier = {
 			 
-				unity_factor = 0.05 
+				stability_factor = 0.05 
 				land_reinforce_rate = 0.1 
 			
 			}
@@ -133,7 +133,7 @@ ideas = {
 			
 			modifier = {
 			 
-				unity_factor = 0.1 
+				stability_factor = 0.1 
 				conscription = 0.15
 			
 			}
@@ -190,7 +190,7 @@ ideas = {
 			
 				industrial_capacity_factory = 0.05 
 				consumer_goods_factor = -0.01
-				unity_factor = 0.035 
+				stability_factor = 0.035 
 			
 			}
 		
@@ -219,7 +219,7 @@ ideas = {
 				production_speed_buildings_factor = 0.3 
 				consumer_goods_factor = -0.02
 				research_time_factor = 0.025 
-				unity_factor = -0.05 
+				stability_factor = -0.05 
 			
 			}
 			
@@ -300,7 +300,7 @@ ideas = {
 			
 			modifier = {
 			
-					unity_factor = -0.3 
+					stability_factor = -0.3 
 					conscription_factor = -0.02
 			
 			}
@@ -353,7 +353,7 @@ ideas = {
 			
 			modifier = {
 			
-				unity_factor = 0.05 
+				stability_factor = 0.05 
 				political_power_gain = 0.5 
 				army_core_attack_factor = 0.1 
 				army_core_defence_factor = 0.1 

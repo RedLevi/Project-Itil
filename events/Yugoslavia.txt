@@ -66,7 +66,7 @@ country_event = { # Miserable Failure
 		name = yug.2.a
 		add_political_power = -20
 		add_manpower = -1000
-		add_national_unity = -0.02
+		add_stability = -0.02
 		104 = { 
 			add_manpower = -2000
 			add_core_of = YUG
@@ -252,7 +252,7 @@ country_event = { # The Hungarians Refuse!
 
 	option = { # To War!
 		declare_war_on = { target = HUN type = annex_everything }
-		add_national_unity = 0.05
+		add_stability = 0.05
 	}
 }
 
@@ -456,7 +456,7 @@ country_event = { # Hungary Folds
 		}
 		name = yug.22.b
 		declare_war_on = { target = HUN type = annex_everything }
-		add_national_unity = 0.05
+		add_stability = 0.05
 	}
 
 	option = { # Back Down!
@@ -898,6 +898,6 @@ country_event = {
 		complete_national_focus = YUG_king_decision	
 		add_popularity = { id = reactionism popularity = 0.1 }
 		add_political_power = -50
-		add_national_unity = -0.2
+		add_stability = -0.2
 	}
 }

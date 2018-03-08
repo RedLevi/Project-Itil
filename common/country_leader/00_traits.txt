@@ -9,7 +9,7 @@ leader_traits = {
 
 	prince_of_peace = {
 		random = no
-		unity_factor = 0.05
+		stability_factor = 0.05
 		justify_war_goal_time = 0.25
 
 		ai_will_do = {
@@ -74,7 +74,7 @@ leader_traits = {
 	inexperienced_imperialist = {
 		random = no
 		political_power_factor = -0.3
-		unity_factor = 0.05
+		stability_factor = 0.05
 		justify_war_goal_time = -0.25
 
 		ai_will_do = {
@@ -230,7 +230,7 @@ leader_traits = {
 
   Jebtsundamba_Khutuktu = {
      random = no
-     unity_factor = 0.2
+     stability_factor = 0.2
      army_morale_Factor = 0.2
      army_defence_factor = 0.2
 
@@ -266,7 +266,7 @@ leader_traits = {
 
 	popular_figurehead = {
 		sprite = 13
-		unity_factor = 0.1
+		stability_factor = 0.1
 
 		ai_will_do = {
 			factor = 1
@@ -336,7 +336,7 @@ leader_traits = {
   golden_boy = {
     random = yes
     sprite = 13
-    unity_factor = 0.15
+    stability_factor = 0.15
     political_power_factor = -0.1
 
     ai_will_do = {
@@ -359,7 +359,7 @@ leader_traits = {
     random = no
     sprite = 13
     political_power_factor = 0.3
-    unity_factor = -0.05
+    stability_factor = -0.05
 
     ai_will_do = {
       factor = 1

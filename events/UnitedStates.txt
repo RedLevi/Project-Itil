@@ -36,7 +36,7 @@ country_event = {#Presidential elections of 1936
 			
 			}
 		}
-		add_national_unity = 0.01 
+		add_stability = 0.01 
 		set_country_flag = USA_FDR 
 	}
 	option = {#Republican - Hiram 
@@ -65,7 +65,7 @@ country_event = {#Presidential elections of 1936
 			
 			}
 		}
-		add_national_unity = 0.03 
+		add_stability = 0.03 
 		set_country_flag = USA_Hiram 
 	}
 	option = {#Socialist - Sinclair 
@@ -100,7 +100,7 @@ country_event = {#Presidential elections of 1936
 			
 			}
 		}
-		add_national_unity = -0.05 
+		add_stability = -0.05 
 		set_country_flag = USA_sinclair 
 		add_ideas = mixed_economy_law
 	}
@@ -297,7 +297,7 @@ country_event = {#war with the AME
 	option = {#war 
 		name = usa.9.a 
 		ai_chance = { factor = 30 }
-		add_national_unity = 0.05 
+		add_stability = 0.05 
 		declare_war_on = { target = AME type = annex_everything }
 		AME = { country_event = { id = usa.10 } }
 		country_event = { id = usa.11 }
@@ -311,7 +311,7 @@ country_event = {#war with the AME
 	option = {#don't 
 		name = usa.9.c 
 		ai_chance = { factor = 10 }
-		add_national_unity = -0.05 
+		add_stability = -0.05 
 	}
 }
 
@@ -390,7 +390,7 @@ country_event = {#britain demands Alaska
 			transfer_state = 463 
 
 		}
-		add_national_unity = -0.03 
+		add_stability = -0.03 
 		ENG = { add_to_faction = USA }
 		declare_war_on = { target = AME type = annex_everything }
 		AME = { country_event = { id = usa.10 } }
@@ -413,7 +413,7 @@ country_event = {#Britain refuses help!
 		name = usa.15.a
 		ai_chance = { factor = 50 }
 		declare_war_on = { target = AME type = annex_everything }
-		add_national_unity = 0.05 
+		add_stability = 0.05 
 		AME = { country_event = { id = usa.10 } }
 		country_event = { id = usa.11 }
 	}
@@ -447,7 +447,7 @@ country_event = {#Californian Nationalists
 	}
 	option = {
 		name = usa.17.a 
-		add_national_unity = -0.02 
+		add_stability = -0.02 
 	}
 }
 
@@ -462,7 +462,7 @@ country_event = {#The TUUL
 	}
 	option = {
 		name = usa.18.a 
-		add_national_unity = -0.02 
+		add_stability = -0.02 
 	}
 }
 
@@ -483,14 +483,14 @@ country_event = {
 	option = {#new deal 
 		name = usa.19.a 
 		ai_chance = { factor = 50 }
-		add_national_unity = -0.015 
+		add_stability = -0.015 
 		swap_ideas = { remove_idea = USA_great_depression add_idea = new_deal_start }
 		hidden_effect = { country_event = { id = usa.3 days = 180 } }
 	}
 	option = {#invisible hand 
 		name = usa.19.b 
 		ai_chance = { factor = 50 }
-		add_national_unity = 0.03 
+		add_stability = 0.03 
 		hidden_effect = { country_event = { id = 20 days = 720 } }
 	}
 }
@@ -536,7 +536,7 @@ country_event = {#nationalists appeal isolationists
 	
 	option = {
 		name = usa.22.a 
-		add_national_unity = -0.01 
+		add_stability = -0.01 
 		hidden_effect = { country_event = { id = 23 days = 60 } }
 	}
 }
@@ -565,7 +565,7 @@ country_event = {#California reborn?
 		name = usa.24.a 
 		ai_chance = { factor = 50 }
 		set_cosmetic_tag = USA_CAL
-		add_national_unity = 0.1 
+		add_stability = 0.1 
 		every_state = {
 		
 			limit = {
@@ -579,7 +579,7 @@ country_event = {#California reborn?
 	option = {#Don't 
 		name = usa.24.b 
 		ai_chance = { factor = 50 }
-		add_national_unity = -0.05 
+		add_stability = -0.05 
 	}
 }
 ####events for Sinclair####
@@ -596,7 +596,7 @@ country_event = {#Anti-socialist protests
 	mean_time_to_happen = { days = 30 }
 	option = {
 		name = usa.25.a 
-		add_national_unity = -0.03
+		add_stability = -0.03
 	}
 }
 
@@ -738,14 +738,14 @@ country_event = {#end of two year plan
 		name = usa.30.a
 		ai_chance = { factor = 65 }
 		remove_ideas = USA_great_depression
-		add_national_unity = -0.05 
+		add_stability = -0.05 
 	}
 	option = {#stop it 
 		name = usa.30.b 
 		ai_chance = { factor = 35 }
 		remove_ideas = USA_great_depression
 		remove_ideas = USA_two_year_plan
-		add_national_unity = 0.03 
+		add_stability = 0.03 
 	}
 }
 
@@ -825,7 +825,7 @@ country_event = {#economic recovery
 	option = {
 		name = usa.33.a 
 		remove_ideas = USA_great_depression
-		add_national_unity = 0.05 
+		add_stability = 0.05 
 	}
 }
 
@@ -843,7 +843,7 @@ country_event = {#Issue on democracy
 		name = usa.34.a 
 		ai_chance = { factor = 25 }
 		add_ideas = open_society_law 
-		add_national_unity = 0.02 
+		add_stability = 0.02 
 	}
 	option = {#limited freedom 
 		name = usa.34.b 
@@ -854,13 +854,13 @@ country_event = {#Issue on democracy
 		name = usa.34.c 
 		ai_chance = { factor = 25 }
 		add_ideas = authoritarian_state_law
-		add_national_unity = -0.02 
+		add_stability = -0.02 
 	}
 	option = {#totalitarian 
 		name = usa.34.e 
 		ai_chance = { factor = 25 }
 		add_ideas = totalitarian_state_law
-		add_national_unity = -0.05 
+		add_stability = -0.05 
 	}
 }
 
@@ -941,12 +941,12 @@ country_event = {#Alaska annexed
 		name = usa.37.a 
 		ai_chance = { factor = 40 }
 		declare_war_on = { target = CAN type = annex_everything }
-		add_national_unity = 0.01 
+		add_stability = 0.01 
 	}
 	option = {#nothing 
 		name = usa.37.b 
 		ai_chance = { factor = 60 }
-		add_national_unity = -0.03 
+		add_stability = -0.03 
 	}
 }
 
@@ -1003,7 +1003,7 @@ country_event = {#Hawaiian succesion
 		}
 			declare_war_on = { target = HAW type = annex_everything }
 			JAP = { country_event = { id = usa.39 days = 1 } }
-			add_national_unity = 0.01 
+			add_stability = 0.01 
 	}
 	option = {#do nothing 
 		name = usa.38.b 
@@ -1042,7 +1042,7 @@ country_event = {#Hawaiian succesion
 			}
 		}
 		
-		add_national_unity = -0.01 
+		add_stability = -0.01 
 		hidden_effect = { JAP = { country_event = { id = usa.49 days = 10 } } }
 	}
 }
@@ -1062,7 +1062,7 @@ country_event = {#Hawaii-America war
 	option = {#dont 
 		name = usa.39.b 
 		ai_chance = { factor = 15 }
-		add_national_unity = -0.01 
+		add_stability = -0.01 
 	}
 }
 
@@ -1099,7 +1099,7 @@ country_event = {#Peace - USA wins
 	option = {#dont 
 		name = usa.41.b 
 		ai_chance = { factor = 30 }
-		add_national_unity = -0.01 
+		add_stability = -0.01 
 	}
 }
 
@@ -1111,7 +1111,7 @@ country_event = {#peace with Japan?
 	option = {#Peace 
 		name = usa.42.a 
 		ai_chance = { factor = 95 }
-		add_national_unity = 0.02 
+		add_stability = 0.02 
 		JAP = { country_event = { id = usa.43 } }
 		transfer_state = 629 
 		white_peace = HAW
@@ -1120,7 +1120,7 @@ country_event = {#peace with Japan?
 	option = {#decline 
 		name = usa.42.b 
 		ai_chance = { factor = 5 }
-		add_national_unity = -0.01 
+		add_stability = -0.01 
 		JAP = { country_event = { id = usa.44 } }
 	}
 }
@@ -1169,7 +1169,7 @@ country_event = {#Peace - JAP wins
 	option = {#dont 
 		name = usa.45.b 
 		ai_chance = { factor = 10 }
-		add_national_unity = -0.01 
+		add_stability = -0.01 
 	}
 }
 
@@ -1181,7 +1181,7 @@ country_event = {#peace with America?
 	option = {#Peace 
 		name = usa.46.a 
 		ai_chance = { factor = 100 }
-		add_national_unity = 0.05 
+		add_stability = 0.05 
 		USA = { country_event = { id = usa.47 } }
 		transfer_state = 632 
 		transfer_state = 631 
@@ -1197,7 +1197,7 @@ country_event = {#peace with America?
 	option = {#decline 
 		name = usa.46.b 
 		ai_chance = { factor = 5 }
-		add_national_unity = -0.01 
+		add_stability = -0.01 
 		USA = { country_event = { id = usa.48 } }
 	}
 }
@@ -1239,7 +1239,7 @@ country_event = {#seize american islands?
 		transfer_state = 726 
 		transfer_state = 727 
 		transfer_state = 650 
-		add_national_unity = 0.02 
+		add_stability = 0.02 
 		add_named_threat = { threat = 4 name = JAP_take_pacific }
 		USA = { country_event = { id = usa.50 } }
 		reverse_add_opinion_modifier = { target = USA modifier = JAP_USA_pacific_takeover }
@@ -1257,7 +1257,7 @@ country_event = {#Japan seizes our bases!
 	is_triggered_only = yes 
 	option = {
 		name = usa.50.a 
-		add_national_unity = -0.01 
+		add_stability = -0.01 
 	}
 }
 

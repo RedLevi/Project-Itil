@@ -248,7 +248,7 @@ focus = {
 		}
 		completion_reward = {
 
-			add_national_unity = 0.05
+			add_stability = 0.05
 			add_political_power = 45
 
 		}
@@ -367,7 +367,7 @@ focus = {
 		completion_reward = {
 
 			add_political_power = 175
-			add_national_unity = 0.025
+			add_stability = 0.025
 
 		}
 		x = 44
@@ -497,7 +497,7 @@ focus = {
  		y = 2
  		completion_reward = {
  		add_ideas = SOV_nep_1_idea
-		add_national_unity = 0.1
+		add_stability = 0.1
  		}
 
  	}
@@ -512,7 +512,7 @@ focus = {
  		y = 3
  		completion_reward = {
  		add_ideas = SOV_nep_2_idea
-		add_national_unity = 0.05
+		add_stability = 0.05
  		}
 
  	}
@@ -584,7 +584,7 @@ focus = {
 	y = 6
 	completion_reward = {
 	   add_ideas = SOV_successful_nep_idea
-		 add_national_unity =  0.05
+		 add_stability =  0.05
 	}
 }
 ##################################################################
@@ -773,7 +773,7 @@ focus = {
 		x = 1
 		y = 1
 		completion_reward = {
-		   add_national_unity = 0.05
+		   add_stability = 0.05
 		}
 
 	}
@@ -821,7 +821,7 @@ focus = {
 		x = 2
 		y = 2
 		completion_reward = {
-		   add_national_unity = 0.1
+		   add_stability = 0.1
 			 add_ideas = power_to_people
 		}
 
@@ -868,7 +868,7 @@ focus = {
 		x = 2
 		y = 5
 		completion_reward = {
-		   add_national_unity = 0.1
+		   add_stability = 0.1
 		}
 
 	}
@@ -1123,7 +1123,7 @@ focus = {
 	y = 5
 	completion_reward = {
 	   create_wargoal = { type = annex_everything target = TUK }
-		 add_national_unity = 0.03
+		 add_stability = 0.03
 	}
 
 }
@@ -1177,7 +1177,7 @@ focus = {
 	y = 5
 	completion_reward = {
 	   create_wargoal = { type = annex_everything target = UKR }
-		 add_national_unity = 0.05
+		 add_stability = 0.05
 	}
 
 }

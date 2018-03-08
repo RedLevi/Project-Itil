@@ -100,7 +100,7 @@ ideas = {
 			
 			
 			modifier = {
-				unity_factor = 0.05 
+				stability_factor = 0.05 
 			}
 		}
 		
@@ -213,7 +213,7 @@ ideas = {
 			
 			modifier = {
 				political_power_gain = 0.25 
-				unity_factor = 0.015 
+				stability_factor = 0.015 
 			}
 		
 		}
@@ -237,7 +237,7 @@ ideas = {
 			
 			modifier = {
 				political_power_gain = 0.1  
-				unity_factor = -0.04
+				stability_factor = -0.04
 				foreign_subversive_activites = -0.25 
 			}
 			

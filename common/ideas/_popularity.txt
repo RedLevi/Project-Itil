@@ -6,7 +6,7 @@ ideas = {
 			available = { always = no }
 			removal_cost = -1
 			modifier = {
-				unity_factor = -0.1
+				stability_factor = -0.1
 			}
 			picture = generic_morale_bonus
 		}
@@ -15,7 +15,7 @@ ideas = {
 			available = { always = no }
 			removal_cost = -1
 			modifier = {
-				unity_factor = -0.05
+				stability_factor = -0.05
 			}
 			picture = generic_morale_bonus
 		}
@@ -33,7 +33,7 @@ ideas = {
 			available = { always = no }
 			removal_cost = -1
 			modifier = {
-				unity_factor = 0.05
+				stability_factor = 0.05
 			}
 			picture = generic_morale_bonus
 		}
@@ -42,7 +42,7 @@ ideas = {
 			available = { always = no }
 			removal_cost = -1
 			modifier = {
-				unity_factor = 0.1
+				stability_factor = 0.1
 			}
 			picture = generic_morale_bonus
 		}

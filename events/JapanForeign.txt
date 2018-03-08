@@ -38,7 +38,7 @@ country_event = {#Japanese pressure for refferendum
 	is_triggered_only = yes
 	option = {
 		name = jfor.2.a
-		add_national_unity = -0.01
+		add_stability = -0.01
 	}
 }
 
@@ -55,7 +55,7 @@ country_event = {#annexation refferendum
 	option = {#fail
 		name = jfor.3.b
 		ai_chance = { factor = 35 }
-		add_national_unity = 0.05
+		add_stability = 0.05
 		JAP = { country_event = { id = jfor.5 } }
 	}
 }
@@ -101,12 +101,12 @@ country_event = {#Japan offers protection
 		ai_chance = { factor = 70 }
 		add_ideas = ANH_japanese_advisors
 		JAP = { country_event = { id = jfor.7 days = 1 } }
-		add_national_unity = -0.1
+		add_stability = -0.1
 	}
 	option = {#decline
 		name = jfor.6.b
 		ai_chance = { factor = 30 }
-		add_national_unity = 0.05
+		add_stability = 0.05
 		JAP = { country_event = { id = jfor.8 days = 1 } }
 	}
 }
@@ -194,7 +194,7 @@ country_event = {#Japan offers alliance
 		}
 		name = jfor.11.b
 		ai_chance = { factor = 20 }
-		add_national_unity = 0.05
+		add_stability = 0.05
 		JAP = { country_event = { id = jfor.13 } }
 		reverse_add_opinion_modifier = { target = JAP modifier = MON_refused_JAP }
 	}
@@ -259,7 +259,7 @@ country_event = {#Japanese ultimatum
 	is_triggered_only = yes
 	option = {#refuse
 		name = jfor.16.a
-		add_national_unity = 0.1
+		add_stability = 0.1
 		JAP = { country_event = { id = jfor.17 } }
 		create_faction = chinese_united_front
 		if = { limit = { ANH = { exists = yes has_war = no NOT = { is_subject_of = JAP } } } ANH = { country_event = { id = jfor.18 days = 1 } } }
@@ -567,7 +567,7 @@ country_event = {#Fate of Liaoning
 	option = {
 		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05
+		add_stability = -0.05
 		add_state_claim = 610
 		add_state_claim = 609
 	}
@@ -593,7 +593,7 @@ country_event = {#liaoning cores
 		name = jfor.32.a
 		if = { limit = { controls_state = 610 } add_state_core = 610 }
 		if = { limit = { controls_state = 609 } add_state_core = 609 }
-		add_national_unity = 0.01
+		add_stability = 0.01
 	}
 }
 
@@ -658,7 +658,7 @@ country_event = {#Fate of Hebei
 	option = {
 		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05
+		add_stability = -0.05
 		add_state_claim = 608
 		add_state_claim = 614
 		add_state_claim = 749
@@ -686,7 +686,7 @@ country_event = {#cores in hebei
 		add_state_core = 608
 		add_state_core = 614
 		add_state_core = 749
-		add_national_unity = 0.01
+		add_stability = 0.01
 	}
 }
 
@@ -764,7 +764,7 @@ country_event = {#Fate of central china
 	option = {
 		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05
+		add_stability = -0.05
 			add_state_claim = 607
 			add_state_claim = 598
 			add_state_claim = 606
@@ -799,7 +799,7 @@ country_event = {#cores in hebei
 		add_state_core = 613
 		add_state_core = 750
 		add_state_core = 620
-		add_national_unity = 0.01
+		add_stability = 0.01
 	}
 }
 
@@ -877,7 +877,7 @@ country_event = {#Fate of southern
 	option = {
 		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05
+		add_stability = -0.05
 			every_state = {
 				limit = {
 					is_core_of = PRC
@@ -886,7 +886,7 @@ country_event = {#Fate of southern
 				ROOT = { add_state_claim = PREV }
 			}
 
-			add_national_unity = -0.05
+			add_stability = -0.05
 	}
 }
 
@@ -915,7 +915,7 @@ country_event = {#cores in hebei
 				}
 				ROOT = { add_state_core = PREV }
 			}
-		add_national_unity = 0.01
+		add_stability = 0.01
 	}
 }
 
@@ -992,7 +992,7 @@ country_event = {#Fate of shanxi
 	option = {
 		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05
+		add_stability = -0.05
 			every_state = {
 				limit = {
 					is_core_of = SHX
@@ -1001,7 +1001,7 @@ country_event = {#Fate of shanxi
 				ROOT = { add_state_claim = PREV }
 			}
 
-			add_national_unity = -0.05
+			add_stability = -0.05
 	}
 }
 
@@ -1030,7 +1030,7 @@ country_event = {#cores in hebei
 				}
 				ROOT = { add_state_core = PREV }
 			}
-		add_national_unity = 0.01
+		add_stability = 0.01
 	}
 }
 
@@ -1107,7 +1107,7 @@ country_event = {#Fate of shaanxi
 	option = {
 		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05
+		add_stability = -0.05
 			every_state = {
 				limit = {
 					is_core_of = GUO
@@ -1116,7 +1116,7 @@ country_event = {#Fate of shaanxi
 				ROOT = { add_state_claim = PREV }
 			}
 
-			add_national_unity = -0.05
+			add_stability = -0.05
 	}
 }
 
@@ -1145,7 +1145,7 @@ country_event = {#cores in shaanxi
 				}
 				ROOT = { add_state_core = PREV }
 			}
-		add_national_unity = 0.01
+		add_stability = 0.01
 	}
 }
 
@@ -1222,7 +1222,7 @@ country_event = {#Fate of qinghai
 	option = {
 		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05
+		add_stability = -0.05
 			every_state = {
 				limit = {
 					is_core_of = XSM
@@ -1231,7 +1231,7 @@ country_event = {#Fate of qinghai
 				ROOT = { add_state_claim = PREV }
 			}
 
-			add_national_unity = -0.05
+			add_stability = -0.05
 	}
 }
 
@@ -1260,7 +1260,7 @@ country_event = {#cores in qinghai
 				}
 				ROOT = { add_state_core = PREV }
 			}
-		add_national_unity = 0.01
+		add_stability = 0.01
 	}
 }
 
@@ -1334,7 +1334,7 @@ country_event = {#Fate of sichuan
 	option = {
 		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05
+		add_stability = -0.05
 			every_state = {
 				limit = {
 					is_core_of = SIC
@@ -1343,7 +1343,7 @@ country_event = {#Fate of sichuan
 				ROOT = { add_state_claim = PREV }
 			}
 
-			add_national_unity = -0.05
+			add_stability = -0.05
 	}
 }
 
@@ -1372,7 +1372,7 @@ country_event = {#cores in qinghai
 				}
 				ROOT = { add_state_core = PREV }
 			}
-		add_national_unity = 0.01
+		add_stability = 0.01
 	}
 }
 
@@ -1445,7 +1445,7 @@ country_event = {#Fate of Yunnan
 	option = {
 		name = jfor.30.e
 		ai_chance = { factor = 0 }
-		add_national_unity = -0.05
+		add_stability = -0.05
 			every_state = {
 				limit = {
 					is_core_of = YUN
@@ -1454,7 +1454,7 @@ country_event = {#Fate of Yunnan
 				ROOT = { add_state_claim = PREV }
 			}
 
-			add_national_unity = -0.05
+			add_stability = -0.05
 	}
 }
 
@@ -1483,7 +1483,7 @@ country_event = {#cores in qinghai
 				}
 				ROOT = { add_state_core = PREV }
 			}
-		add_national_unity = 0.01
+		add_stability = 0.01
 	}
 }
 
@@ -1503,7 +1503,7 @@ country_event = {#the Japanese offer alliance
 		name = jfor.57.b
 		ai_chance = { factor = 20 }
 		JAP = { country_event = { id = jfor.59 } }
-		add_national_unity = 0.02
+		add_stability = 0.02
 		reverse_add_opinion_modifier = { target = JAP modifier = MON_refused_JAP }
 	}
 }
@@ -1539,14 +1539,14 @@ country_event = {#Japan offers protection
 	option = {#refuse
 		name = jfor.60.a
 		ai_chance = { factor = 65 }
-		add_national_unity = 0.02
+		add_stability = 0.02
 		JAP = { country_event = { id = jfor.61 } }
 		reverse_add_opinion_modifier = { target = JAP modifier = MON_refused_JAP }
 	}
 	option = {#agree
 		name = jfor.60.b
 		ai_chance = { factor = 35 }
-		add_national_unity = -0.05
+		add_stability = -0.05
 		JAP = { country_event = { id = jfor.62 } }
 	}
 }
@@ -1657,7 +1657,7 @@ country_event = {#post war
 			NOT = { has_government = liberalism }
 		}
 		ai_chance = { factor = 30 }
-		add_national_unity = -0.035
+		add_stability = -0.035
 		set_country_flag = JAP_colonize_PHL
 	}
 }
@@ -1728,7 +1728,7 @@ country_event = {#help from Germany?
 	option = {
 		name = jfor.67.b
 		ai_chance = { factor = 30 }
-		add_national_unity = 0.02
+		add_stability = 0.02
 	}
 }
 
@@ -1830,7 +1830,7 @@ country_event = {#Victory no GER
 	option = {#Peace with the dutch
 		name = jfor.72.a
 		ai_chance = { factor = 95 }
-		add_national_unity = 0.03
+		add_stability = 0.03
 		HOL = { country_event = { id = jfor.73 } }
 		every_state = {
 			limit = {
@@ -1852,7 +1852,7 @@ country_event = {#Japan is victorious
 		name = jfor.73.a
 		white_peace = JAP
 		white_peace = INS
-		add_national_unity = -0.1
+		add_stability = -0.1
 	}
 }
 
@@ -1884,7 +1884,7 @@ country_event = {#Victory yes GER
 	option = {#Peace with the dutch
 		name = jfor.72.a
 		ai_chance = { factor = 95 }
-		add_national_unity = 0.05
+		add_stability = 0.05
 		GER = { country_event = { id = jfor.75 } }
 		every_state = {
 			limit = {
@@ -1918,7 +1918,7 @@ country_event = {#Japan is victorious GER
 		white_peace = JAP
 		white_peace = INS
 		HOL = { white_peace = INS white_peace = JAP }
-		add_national_unity = -0.1
+		add_stability = -0.1
 	}
 	option = {#do nothing
 		name = jfor.75.a
@@ -2054,7 +2054,7 @@ country_event = {#fate of indochina
 			}
 		}
 		ai_chance = { factor = 25 }
-		add_national_unity = -0.035
+		add_stability = -0.035
 	}
 }
 
@@ -2103,7 +2103,7 @@ country_event = {#Anglo-Japanese alliance
 	option = {#dont
 		name = jfor.78.b
 		ai_chance = { factor = 50 }
-		add_national_unity = 0.02
+		add_stability = 0.02
 	}
 }
 
@@ -2130,7 +2130,7 @@ country_event = {#The British offer alliance!
 	option = {#decline
 		name = jfor.79.b
 		ai_chance = { factor = 50 }
-		add_national_unity = 0.05
+		add_stability = 0.05
 		ENG = { country_event = { id = jfor.81 } }
 	}
 }

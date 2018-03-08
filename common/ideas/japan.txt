@@ -24,7 +24,7 @@ ideas = {
 			
 			modifier = {
 				
-				unity_factor = 0.05
+				stability_factor = 0.05
 				
 			
 			}
@@ -61,7 +61,7 @@ ideas = {
 			modifier = {
 
 				research_time_factor = -0.015
-				unity_factor = 0.035
+				stability_factor = 0.035
 
 			}
 
@@ -96,7 +96,7 @@ ideas = {
 			modifier = {
 
 				political_power_gain = 0.25
-				unity_factor = 0.035
+				stability_factor = 0.035
 
 			}
 
@@ -374,7 +374,7 @@ ideas = {
 
 			modifier = {
 
-				unity_factor = 0.045
+				stability_factor = 0.045
 
 			}
 
@@ -571,7 +571,7 @@ ideas = {
 			modifier = {
 
 				industrial_capacity_factory = -0.02
-				unity_factor = -0.035
+				stability_factor = -0.035
 
 			}
 
@@ -596,7 +596,7 @@ ideas = {
 			modifier = {
 
 				industrial_capacity_factory = 0.02
-				unity_factor = 0.025
+				stability_factor = 0.025
 
 			}
 
@@ -622,7 +622,7 @@ ideas = {
 			modifier = {
 
 				industrial_capacity_factory = -0.1
-				unity_factor = -0.1
+				stability_factor = -0.1
 
 			}
 

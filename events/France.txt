@@ -345,6 +345,7 @@ country_event = { #NATIONALIST LOSS#
 		SFA = { dismantle_faction = yes }
 		SPF = { declare_war_on = { target = SFA type = civil_war } }
 		SPF = { declare_war_on = { target = SYA type = civil_war } }
+    SFA = { declare_war_on = { target = SYA type = civil_war } }
 		}
 	}
 
@@ -432,6 +433,7 @@ country_event = { #NATIONALIST VICTORY#
 		NFA = { dismantle_faction = yes }
 		NFA = { declare_war_on = { target = RFA type = civil_war } }
 		NFA = { declare_war_on = { target = IFA type = civil_war } }
+    RFA = { declare_war_on = { target = IFA type = civil_war } }
 		ai_chance = { factor = 50 }
     }
 }
@@ -907,7 +909,8 @@ country_event = { #ITALIAN DEFENSE OF SYA
     name = france.31.a
 	ai_chance = { factor = 80 }
     ITA = { create_faction = synditern }
-    ITA = { declare_war_on = { target = SPF type = annex } }
+    ITA = { declare_war_on = { target = SPF type = annex_everything } }
+    ITA = { declare_war_on = { target = SFA type = annex_everything } }
     ITA = { add_to_faction = SYA }
     }
     option = { #NO

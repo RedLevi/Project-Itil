@@ -613,7 +613,7 @@ country_event = {#Trotsky victorious
 		name = soviet.9.a
     set_country_flag = Gosplan_Congress
     set_country_flag = Soviet_Revolution
-		add_national_unity = 0.05
+		add_stability = 0.05
 	}
 
 }
@@ -727,7 +727,7 @@ country_event = { #Mongolia Partition#
 		}
 	  }
 	  ai_chance = { factor = 20 }
-      add_national_unity = -0.05
+      add_stability = -0.05
       add_political_power = -100
 	  annex_country = { target = MON transfer_troops = yes }
       add_state_core = 329
@@ -747,7 +747,7 @@ country_event = { #Mongolia Partition#
       name = soviet.13.c
 	  ai_chance = { factor = 40 }
       add_political_power = 100
-	  add_national_unity = 0.03
+	  add_stability = 0.03
 		}
 	}
 
@@ -814,7 +814,7 @@ country_event = { #Latvia Integration#
         end_puppet = LAT
         country_event = { id = sovnews.4 hours = 1 }
       }
-      add_national_unity = -0.3
+      add_stability = -0.3
       ai_chance = { factor = 10 }
    }
 }
@@ -836,7 +836,7 @@ country_event = { #Estonian Integration#
       name = soviet.18.b
       SOV = { create_wargoal = { type = annex_everything target = LAT } }
       SOV = { country_event = { id = sovnews.6 hours = 1 } }
-      add_national_unity = 0.2
+      add_stability = 0.2
       ai_chance = { factor = 80 }
    }
 }
@@ -858,7 +858,7 @@ country_event = { #Lithuanian Integration#
       name = soviet.19.b
       SOV = { create_wargoal = { type = annex_everything target = LIT } }
       SOV = { country_event = { id = sovnews.8 hours = 1 } }
-      add_national_unity = 0.2
+      add_stability = 0.2
       ai_chance = { factor = 80 }
    }
 }
@@ -900,7 +900,7 @@ country_event = { #Finland Karelia#
       name = soviet.21.a
       SOV = { transfer_state = 146 }
       SOV = { transfer_state = 147 }
-      add_national_unity = -0.1
+      add_stability = -0.1
       ai_chance = { factor = 60 }
       SOV = { country_event = { id = sovnews.10 } }
    }
@@ -1073,7 +1073,7 @@ country_event = { #Thing that unlocks last state capitalismm focus
 
    option = {
       name = soviet.28.a
-      add_national_unity = -0.15
+      add_stability = -0.15
       set_country_flag = fyp_done
    }
 }
@@ -1237,7 +1237,7 @@ country_event = {#Conflicting economic policy
 
 		name = soviet.33.a
 		add_ideas = SOV_economic_disharmony
-		add_national_unity = -0.035
+		add_stability = -0.035
 
 	}
 }

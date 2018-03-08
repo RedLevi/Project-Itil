@@ -34,7 +34,7 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			add_political_power = 150
-			add_national_unity = 0.20
+			add_stability = 0.20
 		}
 	}
 	focus = {
@@ -101,7 +101,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		completion_reward = {
-			add_national_unity = 0.20
+			add_stability = 0.20
 		}
 	}
 	focus = {

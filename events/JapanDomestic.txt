@@ -25,7 +25,7 @@ country_event = {#Left wing coalition
 	}
 	option = {
 		name = jdom.2.a
-		add_national_unity = -0.01
+		add_stability = -0.01
 	}
 }
 
@@ -67,7 +67,7 @@ country_event = {#Japanese elections of 1936
 
 		hidden_effect = { country_event = { id = jdom.27 days = 1460 } }
 
-		add_national_unity = 0.02
+		add_stability = 0.02
 	}
 	option = {#conservatives
 		name = jdom.3.b
@@ -98,7 +98,7 @@ country_event = {#Japanese elections of 1936
 
 		hidden_effect = { country_event = { id = jdom.28 days = 1460 } }
 
-		add_national_unity = 0.02
+		add_stability = 0.02
 	}
 	option = {#socialists
 		name = jdom.3.c
@@ -133,7 +133,7 @@ country_event = {#Japanese elections of 1936
 			}
 		}
 
-		add_national_unity = 0.02
+		add_stability = 0.02
 	}
 }
 ####some flavor political events####
@@ -171,7 +171,7 @@ country_event = {#left wing coalition falls apart SOC
 	mean_time_to_happen = { days = 35 }
 	option = {
 		name = jdom.5.a
-		add_national_unity = -0.02
+		add_stability = -0.02
 		hidden_effect = { country_event = { id = jdom.32 days = 30 } }
 	}
 }
@@ -194,7 +194,7 @@ country_event = {#Women suffrage
 
 	option = {
 		name = jdom.6.a
-		add_national_unity = -0.01
+		add_stability = -0.01
 	}
 }
 
@@ -212,7 +212,7 @@ country_event = {#Kokuhonsha rally
 
 	option = {
 		name = jdom.7.a
-		add_national_unity = -0.01
+		add_stability = -0.01
 	}
 }
 
@@ -267,7 +267,7 @@ country_event = {#Kokuhonsha runs to Manchuria
 	is_triggered_only = yes
 	option = {
 		name = jdom.10.a
-		add_national_unity = -0.03
+		add_stability = -0.03
 	}
 }
 
@@ -279,7 +279,7 @@ country_event = {#Japanese civil war
 	option = {
 		name = jdom.11.a
 		remove_ideas = JAP_peoples_revolution_idea
-		add_national_unity = 0.1
+		add_stability = 0.1
 
 		start_civil_war = {
 				ruling_party = communism
@@ -467,7 +467,7 @@ country_event = {#russia joins rebels
 	option = {#no need
 		name = jdom.17.b
 		ai_chance = { factor = 10 }
-		add_national_unity = 0.03
+		add_stability = 0.03
 	}
 }
 
@@ -494,7 +494,7 @@ country_event = {#russia attacks rebels
 	option = {#no need
 		name = jdom.17.b
 		ai_chance = { factor = 30 }
-		add_national_unity = 0.03
+		add_stability = 0.03
 	}
 }
 
@@ -525,7 +525,7 @@ country_event = {#Japan calls for aid
 	option = {
 		name = jdom.20.b
 		ai_chance = { factor = 10 }
-		add_national_unity = 0.01
+		add_stability = 0.01
 		JAP = { country_event = { id = jdom.22 } }
 	}
 }
@@ -631,7 +631,7 @@ country_event = {#Japanese elections of 1940 lib
 
 		hidden_effect = { country_event = { id = jdom.? days = 1460 } }
 
-		add_national_unity = 0.04
+		add_stability = 0.04
 	}
 	option = {#conservatives
 		name = jdom.3.b
@@ -690,7 +690,7 @@ country_event = {#Japanese elections of 1940 lib
 			}
 		}
 
-		add_national_unity = 0.02
+		add_stability = 0.02
 	}
 }
 
@@ -728,7 +728,7 @@ country_event = {#Japanese elections of 1940 con
 
 		hidden_effect = { country_event = { id = jdom.? days = 1460 } }
 
-		add_national_unity = 0.03
+		add_stability = 0.03
 	}
 	option = {#liberals
 		name = jdom.28.b
@@ -785,7 +785,7 @@ country_event = {#Hamaguchi retires liberal
 			}
 		}
 
-		add_national_unity = -0.01
+		add_stability = -0.01
 	}
 }
 
@@ -828,7 +828,7 @@ country_event = {#Inukai dies conservative
 			}
 		}
 
-		add_national_unity = -0.01
+		add_stability = -0.01
 	}
 }
  country_event = {#socialist elections 1939
@@ -838,7 +838,7 @@ country_event = {#Inukai dies conservative
 	is_triggered_only = yes
 	option = {
 		name = jdom.32.a
-		add_national_unity = -0.01
+		add_stability = -0.01
 
 		add_popularity = {
 

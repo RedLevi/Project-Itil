@@ -31,7 +31,7 @@ country_event = {#election campaign
 
 	option = {
 		name = germany.2.a
-		 add_national_unity = -0.01
+		 add_stability = -0.01
 	}
 }
 
@@ -73,7 +73,7 @@ country_event = {#federal elections of 1937
 		}
 
 		set_country_flag = GER_con_zen_1937
-		add_national_unity = 0.01
+		add_stability = 0.01
 	}
 	option = {#Zentrum-liberal
 		name = germany.3.b
@@ -109,7 +109,7 @@ country_event = {#federal elections of 1937
 		}
 
 		set_country_flag = GER_lib_zen_1937
-		add_national_unity = 0.03
+		add_stability = 0.03
 	}
 	option = {#Social-liberal
 		name = germany.3.c
@@ -140,7 +140,7 @@ country_event = {#federal elections of 1937
 		}
 
 		set_country_flag = GER_lib_soc_1937
-		add_national_unity = 0.05
+		add_stability = 0.05
 	}
 	option = {#Social-liberal-socialist
 		name = germany.3.e
@@ -176,7 +176,7 @@ country_event = {#federal elections of 1937
 		}
 
 		set_country_flag = GER_soc_1937
-		add_national_unity = -0.03
+		add_stability = -0.03
 	}
 }
 
@@ -198,7 +198,7 @@ country_event = {#Germany sends support
 		name = germany.4.a
 		ai_chance = { factor = 40 }
 		add_ideas = YUN_GER_support
-		add_national_unity = 0.03
+		add_stability = 0.03
 	}
 }
 
@@ -381,7 +381,7 @@ country_event = {#german offer
 		name = germany.18.b
 		ai_chance = { factor = 35 }
 		GER = { country_event = { id = germany.20 } }
-		add_national_unity = 0.05
+		add_stability = 0.05
 		reverse_add_opinion_modifier = { target = GER modifier = refused_GER_alliance }
 	}
 }
@@ -434,7 +434,7 @@ country_event = {#death of Otto
 	}
 	option = {
 		name = germany.22.a
-		add_national_unity = -0.075
+		add_stability = -0.075
 		GER = { country_event = { id = germany.23 days = 3 } }
 		kill_country_leader = yes
 	}
@@ -454,7 +454,7 @@ country_event = {#assasination in wallonia
 	option = {#Rexist
 		name = germany.23.b
 		ai_chance = { factor = 40 }
-		add_national_unity = -0.02
+		add_stability = -0.02
 		WLL = { country_event = { id = germany.25 } }
 	}
 }
@@ -466,7 +466,7 @@ country_event = {#New military governer
 	is_triggered_only = yes
 	option = {
 		name = germany.24.a
-		add_national_unity = -0.05
+		add_stability = -0.05
 		hidden_effect = {
 			set_politics = {
 
@@ -502,7 +502,7 @@ country_event = {#New wallonian government
 	is_triggered_only = yes
 	option = {
 		name = germany.24.a
-		add_national_unity = 0.1
+		add_stability = 0.1
 		hidden_effect = {
 			set_politics = {
 

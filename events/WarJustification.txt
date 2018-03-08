@@ -805,7 +805,7 @@ country_event = {
 		name = war_justification.301.a
 		trigger = { OR = { has_government = liberalism has_government = conservatism } }
 		add_political_power = -30
-		add_national_unity = -0.03
+		add_stability = -0.03
 		add_popularity = {
 			ideology = liberalism
 			popularity = -0.05
@@ -816,7 +816,7 @@ country_event = {
 		name = war_justification.301.b
 		trigger = { has_government = communism }
 		add_political_power = -30
-		add_national_unity = -0.03
+		add_stability = -0.03
 		add_popularity = {
 			ideology = communism
 			popularity = -0.05
@@ -832,7 +832,7 @@ country_event = {
 			}
 		}
 		add_political_power = -30
-		add_national_unity = -0.03
+		add_stability = -0.03
 		add_popularity = {
 			ideology = national_integralism
 			popularity = -0.05

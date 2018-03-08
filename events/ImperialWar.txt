@@ -152,7 +152,7 @@ country_event = {#Irish response
 		
 	
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 	
 	}
 	
@@ -173,7 +173,7 @@ country_event = {#Irish response
 			
 		}
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 	
 	}
 
@@ -209,7 +209,7 @@ country_event = {#Canadian response
 		add_state_core = 332
 		add_state_core = 331
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 	
 	}
 	
@@ -218,7 +218,7 @@ country_event = {#Canadian response
 		name = imperialwar.2.b 
 		ai_chance = { factor = 10 }
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 		
 		ENG = {
 
@@ -272,7 +272,7 @@ country_event = {#Egyptian response
 		
 	
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 	
 	}
 	
@@ -281,7 +281,7 @@ country_event = {#Egyptian response
 		name = imperialwar.2.b 
 		ai_chance = { factor = 15 }
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 		
 		ENG = {
 
@@ -329,7 +329,7 @@ country_event = {#Indian response
 		
 	
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 		
 		add_state_core = 422
 		
@@ -344,7 +344,7 @@ country_event = {#Indian response
 		name = imperialwar.2.b 
 		ai_chance = { factor = 10 }
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 		
 		ENG = {
 
@@ -392,7 +392,7 @@ country_event = {#Rhodesia response
 		
 		add_state_core = 545
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 		
 	
 	}
@@ -402,7 +402,7 @@ country_event = {#Rhodesia response
 		name = imperialwar.2.b 
 		ai_chance = { factor = 90 }
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 		
 		ENG = {
 
@@ -450,7 +450,7 @@ country_event = {#Australia response
 		
 	
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 		
 	
 	}
@@ -460,7 +460,7 @@ country_event = {#Australia response
 		name = imperialwar.2.b 
 		ai_chance = { factor = 80 }
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 		
 		ENG = {
 
@@ -508,7 +508,7 @@ country_event = {#New zealand response
 		
 	
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 		
 	
 	}
@@ -518,7 +518,7 @@ country_event = {#New zealand response
 		name = imperialwar.2.b 
 		ai_chance = { factor = 90 }
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 		
 		ENG = {
 
@@ -567,7 +567,7 @@ country_event = {#South African response
 	
 		add_state_core = 542
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 		
 	
 	}
@@ -577,7 +577,7 @@ country_event = {#South African response
 		name = imperialwar.2.b 
 		ai_chance = { factor = 30 }
 		
-		add_national_unity = 0.025
+		add_stability = 0.025
 		
 		ENG = {
 
@@ -691,7 +691,7 @@ country_event = {#Indian loyalists
 		
 		load_oob = RAJ_loyalist
 		
-		add_national_unity = 0.025 
+		add_stability = 0.025 
 		
 		RAJ = { country_event = imperialwar.12 }
 	
@@ -957,7 +957,7 @@ country_event = {#Imperial War rebels win
 		name = imperialwar.13.a 
 		ai_chance = { factor = 100 }
 		
-		add_national_unity = 0.75 
+		add_stability = 0.75 
 		
 		ENG = { country_event = { id = imperialwar.14 days = 1 } }
 	
@@ -968,7 +968,7 @@ country_event = {#Imperial War rebels win
 		name = imperialwar.13.b 
 		ai_chance = { factor = 0 }
 		
-		add_national_unity = -0.1 
+		add_stability = -0.1 
 	
 	}
 
@@ -1142,7 +1142,7 @@ country_event = {#peace offer for ENG
 		
 		}
 		
-		add_national_unity = -0.05 
+		add_stability = -0.05 
 		
 		clr_global_flag = imperial_war_flag
 		set_global_flag = imperial_war_over
@@ -1170,7 +1170,7 @@ country_event = {#peace offer for ENG
 		
 		}
 		
-		add_national_unity = -0.1 
+		add_stability = -0.1 
 	
 	}
 
@@ -1209,7 +1209,7 @@ country_event = {#Demand southern Persia
 		name = imperialwar.15.a 
 		ai_chance = { factor = 70 }
 		
-		add_national_unity = 0.01 
+		add_stability = 0.01 
 		
 		ENG = { country_event = { id = imperialwar.16 days = 1 } }
 		
@@ -1223,7 +1223,7 @@ country_event = {#Demand southern Persia
 		name = imperialwar.15.b 
 		ai_chance = { factor = 30 }
 		
-		add_national_unity = -0.01 
+		add_stability = -0.01 
 	
 	}
 
@@ -1254,7 +1254,7 @@ country_event = {#British side
 
 		}
 		
-		add_national_unity = -0.025 
+		add_stability = -0.025 
 		
 		every_state = { 
 		
@@ -1290,7 +1290,7 @@ country_event = {#British side
 			
 		}
 		
-		add_national_unity = 0.015 
+		add_stability = 0.015 
 		
 		SOV = { country_event = { id = imperialwar.18 days = 1 } }
 	
@@ -1310,7 +1310,7 @@ country_event = {#Britain concedes
 	
 		name = imperialwar.17.a 
 		
-		add_national_unity = 0.035 
+		add_stability = 0.035 
 	
 	}
 
@@ -1365,7 +1365,7 @@ country_event = {#Britain declines ultimatum - SOV
 		
 		}
 		
-		add_national_unity = -0.025 
+		add_stability = -0.025 
 		
 		PER = { country_event = { id = imperialwar.21} }
 		ENG = { country_event = { id = imperialwar.22 } }
@@ -1386,7 +1386,7 @@ country_event = {#Soviets help
 	option = {
 	
 		name = imperialwar.19.a 
-		add_national_unity = 0.01
+		add_stability = 0.01
 	
 	}
 
@@ -1403,7 +1403,7 @@ country_event = {#Soviets attack
 	option = {
 	
 		name = imperialwar.20.a 
-		add_national_unity = -0.01
+		add_stability = -0.01
 	
 	}
 
@@ -1420,7 +1420,7 @@ country_event = {#Soviets betray
 	option = {
 	
 		name = imperialwar.21.a 
-		add_national_unity = -0.015
+		add_stability = -0.015
 		
 		reverse_add_opinion_modifier = { target = SOV modifier = DIP_no_support }
 	
@@ -1439,7 +1439,7 @@ country_event = {#Soviets back down
 	option = {
 	
 		name = imperialwar.22.a 
-		add_national_unity = 0.025
+		add_stability = 0.025
 		
 	
 	}
@@ -1474,7 +1474,7 @@ country_event = {#Soviets win, british choice
 	option = {#don't 
 		name = imperialwar.23.b 
 		ai_chance = { factor = 50 }
-		add_national_unity = -0.015 
+		add_stability = -0.015 
 	}
 
 }
@@ -1490,13 +1490,13 @@ country_event = {#Soviets win, Soviet choice
 		name = imperialwar.24.a 
 		ai_chance = { factor = 50 }
 		ENG = { country_event = { id = imperialwar.25 } }
-		add_national_unity = 0.025 
+		add_stability = 0.025 
 	}
 	
 	option = {#don't 
 		name = imperialwar.24.b 
 		ai_chance = { factor = 50 }
-		add_national_unity = -0.01
+		add_stability = -0.01
 		ENG = { country_event = imperialwar.26 }
 	}
 
@@ -1512,7 +1512,7 @@ country_event = {#Peace with Soviets
 	option = {#agree
 		name = imperialwar.24.a 
 		PER = { country_event = { id = imperialwar.27 } }
-		add_national_unity = -0.015 
+		add_stability = -0.015 
 		every_country = {
 			limit = {
 			OR = {
@@ -1543,7 +1543,7 @@ country_event = {#No peace
 	
 	option = {
 		name = imperialwar.26.a 
-		add_national_unity = -0.25 	
+		add_stability = -0.25 	
 	}
 
 }
@@ -1557,7 +1557,7 @@ country_event = {#Persia wins
 	
 	option = {
 		name = imperialwar.27.a 
-		add_national_unity = -0.075
+		add_stability = -0.075
 	}
 
 }
@@ -1589,7 +1589,7 @@ country_event = {#British win, soviet choice
 	option = {#don't 
 		name = imperialwar.28.b 
 		ai_chance = { factor = 70 }
-		add_national_unity = -0.01 
+		add_stability = -0.01 
 	}
 
 }
@@ -1605,7 +1605,7 @@ country_event = {#British win, British choice
 		name = imperialwar.29.a 
 		ai_chance = { factor = 50 }
 		SOV = { country_event = { id = imperialwar.230 } }
-		add_national_unity = 0.025 
+		add_stability = 0.025 
 	}
 	
 	option = {#don't 
@@ -1626,7 +1626,7 @@ country_event = {#Peace with British
 	option = {#agree
 		name = imperialwar.30.a 
 		PER = { country_event = { id = imperialwar.32 } }
-		add_national_unity = -0.015 
+		add_stability = -0.015 
 		every_country = {
 		limit = {
 			OR = {
@@ -1651,7 +1651,7 @@ country_event = {#No peace
 	
 	option = {
 		name = imperialwar.31.a 
-		add_national_unity = -0.01 	
+		add_stability = -0.01 	
 	}
 
 }
@@ -1665,7 +1665,7 @@ country_event = {#Persia lose
 	
 	option = {
 		name = imperialwar.32.a 
-		add_national_unity = -0.05 	
+		add_stability = -0.05 	
 	}
 
 }
@@ -1686,7 +1686,7 @@ country_event = {#The British aren't watching - AME
 		trigger = { USA = { exists = yes } }
 		name = imperialwar.33.a 
 		ai_chance = { factor = 50 }
-		add_national_unity = 0.02 
+		add_stability = 0.02 
 		declare_war_on = { target = USA type = annex_everything }
 	}
 	option = {#invade Canada
@@ -1695,7 +1695,7 @@ country_event = {#The British aren't watching - AME
 			NOT = { has_country_flag = AME_KKK }
 		}
 		ai_chance = { factor = 40 }
-		add_national_unity = 0.02 
+		add_stability = 0.02 
 		declare_war_on = { target = CAN type = annex_everything }
 		ENG = { country_event = { id = imperialwar.34 days = 2 } }
 	}
@@ -1706,7 +1706,7 @@ country_event = {#The British aren't watching - AME
 			}
 		name = imperialwar.33.c 
 		ai_chance = { factor = 5 }
-		add_national_unity = 0.04 
+		add_stability = 0.04 
 		declare_war_on = { target = CAN type = annex_everything }
 		declare_war_on = { target = USA type = annex_everything }
 		ENG = { country_event = { id = imperialwar.34 days = 2 } }
@@ -1714,7 +1714,7 @@ country_event = {#The British aren't watching - AME
 	option = {#invade neither
 		name = imperialwar.33.e 
 		ai_chance = { factor = 5 }
-		add_national_unity = -0.015 
+		add_stability = -0.015 
 		add_named_threat = { name = AME_no_expansion threat = -3 }
 	}
 }
@@ -1732,6 +1732,6 @@ country_event = {#America invades Canada
 	option = {#later 
 		name = imperialwar.34.b 
 		ai_chance = { factor = 70 }
-		add_national_unity = -0.02 
+		add_stability = -0.02 
 	}
 }

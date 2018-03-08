@@ -29,7 +29,7 @@ country_event = { #Norway seeks germany's protection
 	option = {#do nothing 
 		 name = norway.1.c 
 		 ai_chance = { factor = 20 }
-		 add_national_unity = 0.01 
+		 add_stability = 0.01 
 	}
 
 }	
@@ -134,7 +134,7 @@ country_event = { #both refuses
 
 	option = {
 		name = norway.1.a
-		add_national_unity = -0.01 
+		add_stability = -0.01 
 	}
 
 }

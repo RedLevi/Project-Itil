@@ -14,7 +14,7 @@ country_event = {#the imperial conference
 
 		name = engdom.1.a
 
-		add_national_unity = -0.025
+		add_stability = -0.025
 
 	}
 
@@ -40,7 +40,7 @@ country_event = {#Constitutional crisis 1936
 
 		name = engdom.2.a
 
-		add_national_unity = -0.02
+		add_stability = -0.02
 
 		country_event = { id = engdom.3 days = 30 }
 
@@ -75,7 +75,7 @@ country_event = {#British elections 1936
 
 			}
 
-			add_national_unity = 0.01
+			add_stability = 0.01
 
 	}
 
@@ -107,7 +107,7 @@ country_event = {#British elections 1936
 
 			}
 			}
-			add_national_unity = -0.01
+			add_stability = -0.01
 
 
 	}
@@ -141,7 +141,7 @@ country_event = {#British elections 1936
 			}
 			}
 
-		add_national_unity = 0.015
+		add_stability = 0.015
 
 
 
@@ -184,7 +184,7 @@ news_event = { #Federalization
 
 		name = engdom.4.b
 
-		add_national_unity = -0.01
+		add_stability = -0.01
 
 	}
 
@@ -205,7 +205,7 @@ country_event = {#IRE federal
 
 		IRE = { country_event = { id = engdom.6 days = 3 } }
 
-		add_national_unity = 0.015
+		add_stability = 0.015
 
 	}
 
@@ -216,7 +216,7 @@ country_event = {#IRE federal
 		name = engdom.5.c
 		ai_chance = { factor = 0 }
 
-		add_national_unity = -0.075
+		add_stability = -0.075
 
 		reverse_add_opinion_modifier = { target = IRE modifier = spared_federal }
 
@@ -279,7 +279,7 @@ country_event = {#The irish kneel
 
 		name = engdom.7.a
 		annex_country = { target = IRE transfer_troops = yes }
-		add_national_unity = 0.02
+		add_stability = 0.02
 
 	}
 
@@ -300,7 +300,7 @@ country_event = {#CAN federal
 
 		CAN = { country_event = { id = engdom.9 days = 3 } }
 
-		add_national_unity = 0.015
+		add_stability = 0.015
 
 	}
 
@@ -311,7 +311,7 @@ country_event = {#CAN federal
 		name = engdom.5.c
 		ai_chance = { factor = 10 }
 
-		add_national_unity = -0.075
+		add_stability = -0.075
 
 		reverse_add_opinion_modifier = { target = CAN modifier = spared_federal }
 
@@ -374,7 +374,7 @@ country_event = {#The Canadians kneel
 
 		name = engdom.7.a
 		annex_country = { target = CAN transfer_troops = yes }
-		add_national_unity = 0.02
+		add_stability = 0.02
 
 	}
 
@@ -395,7 +395,7 @@ country_event = {#SAF federal
 
 		SAF = { country_event = { id = engdom.12 days = 3 } }
 
-		add_national_unity = 0.015
+		add_stability = 0.015
 
 	}
 
@@ -406,7 +406,7 @@ country_event = {#SAF federal
 		name = engdom.5.c
 		ai_chance = { factor = 5 }
 
-		add_national_unity = -0.075
+		add_stability = -0.075
 
 		reverse_add_opinion_modifier = { target = SAF modifier = spared_federal }
 
@@ -469,7 +469,7 @@ country_event = {#The SAF kneel
 
 		name = engdom.7.a
 		annex_country = { target = SAF transfer_troops = yes }
-		add_national_unity = 0.02
+		add_stability = 0.02
 
 	}
 
@@ -490,7 +490,7 @@ country_event = {#ZIM federal
 
 		ZIM = { country_event = { id = engdom.15 days = 3 } }
 
-		add_national_unity = 0.015
+		add_stability = 0.015
 
 	}
 
@@ -501,7 +501,7 @@ country_event = {#ZIM federal
 		name = engdom.5.c
 		ai_chance = { factor = 0 }
 
-		add_national_unity = -0.075
+		add_stability = -0.075
 
 		reverse_add_opinion_modifier = { target = ZIM modifier = spared_federal }
 
@@ -564,7 +564,7 @@ country_event = {#The ZIM kneel
 
 		name = engdom.7.a
 		annex_country = { target = ZIM transfer_troops = yes }
-		add_national_unity = 0.02
+		add_stability = 0.02
 
 	}
 
@@ -585,7 +585,7 @@ country_event = {#AST federal
 
 		AST = { country_event = { id = engdom.18 days = 3 } }
 
-		add_national_unity = 0.015
+		add_stability = 0.015
 
 	}
 
@@ -596,7 +596,7 @@ country_event = {#AST federal
 		name = engdom.5.c
 		ai_chance = { factor = 0 }
 
-		add_national_unity = -0.075
+		add_stability = -0.075
 
 		reverse_add_opinion_modifier = { target = AST modifier = spared_federal }
 
@@ -659,7 +659,7 @@ country_event = {#The AST kneel
 
 		name = engdom.7.a
 		annex_country = { target = AST transfer_troops = yes }
-		add_national_unity = 0.02
+		add_stability = 0.02
 
 	}
 
@@ -680,7 +680,7 @@ country_event = {#NZL federal
 
 		NZL = { country_event = { id = engdom.21 days = 3 } }
 
-		add_national_unity = 0.015
+		add_stability = 0.015
 
 	}
 
@@ -691,7 +691,7 @@ country_event = {#NZL federal
 		name = engdom.5.c
 		ai_chance = { factor = 0 }
 
-		add_national_unity = -0.075
+		add_stability = -0.075
 
 		reverse_add_opinion_modifier = { target = NZL modifier = spared_federal }
 
@@ -754,7 +754,7 @@ country_event = {#The NZL kneel
 
 		name = engdom.7.a
 		annex_country = { target = NZL transfer_troops = yes }
-		add_national_unity = 0.02
+		add_stability = 0.02
 
 	}
 
@@ -775,7 +775,7 @@ country_event = {#RAJ federal
 
 		RAJ = { country_event = { id = engdom.24 days = 3 } }
 
-		add_national_unity = 0.015
+		add_stability = 0.015
 
 	}
 
@@ -786,7 +786,7 @@ country_event = {#RAJ federal
 		name = engdom.5.c
 		ai_chance = { factor = 40 }
 
-		add_national_unity = -0.025
+		add_stability = -0.025
 
 		reverse_add_opinion_modifier = { target = RAJ modifier = spared_federal }
 
@@ -849,7 +849,7 @@ country_event = {#The RAJ kneel
 
 		name = engdom.7.a
 		annex_country = { target = RAJ transfer_troops = yes }
-		add_national_unity = 0.02
+		add_stability = 0.02
 
 	}
 
@@ -867,7 +867,7 @@ country_event = {#Home Rule Africa
 
 		name = engdom.26.a
 
-		add_national_unity = 0.05
+		add_stability = 0.05
 
 		every_state = {
 
@@ -1096,7 +1096,7 @@ country_event = {#Home Rule Asia
 
 		name = engdom.26.a
 
-		add_national_unity = 0.05
+		add_stability = 0.05
 
 		every_state = {
 
@@ -1162,7 +1162,7 @@ country_event = {#Home Rule Asia
 
 		name = engdom.26.a
 
-		add_national_unity = 0.05
+		add_stability = 0.05
 
 		every_state = {
 
@@ -1246,7 +1246,7 @@ country_event = {#Anti-war protest
 
 		name = engdom.29.a
 
-		add_national_unity = -0.025
+		add_stability = -0.025
 
 	}
 
@@ -1264,7 +1264,7 @@ country_event = {#Massive socialist event
 
 		name = engdom.30.a
 
-		add_national_unity = -0.035
+		add_stability = -0.035
 
 		hidden_effect = { country_event = { id = engdom.31 days = 20 } }
 

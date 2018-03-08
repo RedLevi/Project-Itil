@@ -43,7 +43,7 @@ GRE_Megali_Idea = {
 			
 			modifier = {
 				
-				unity_factor = 0.05
+				stability_factor = 0.05
 				
 			
 			}

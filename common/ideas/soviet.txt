@@ -23,6 +23,28 @@ ideas = {
 
 	}
 
+	innovative_military = {
+		removal_cost = -1
+		picture = GFX_idea_innovative_military
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+		research_bonus = {
+				land_doctrine = 0.33
+			}
+
+		modifier = {
+			planning_speed = -0.1
+            army_attack_factor = 0.05
+		}
+
+	}
+
 	SOV_local_government_idea = {
 
 		removal_cost = -1

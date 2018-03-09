@@ -1,0 +1,11 @@
+SOV_expansion = {
+   allowed = {
+       original_tag = SOV
+   }
+   available = {
+      has_completed_focus = The_Revolution
+   }
+   visible = {
+      has_completed_focus = The_Revolution
+   }
+}

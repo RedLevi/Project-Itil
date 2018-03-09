@@ -58,7 +58,7 @@ set_politics = {
 
 
 set_convoys = 80
-set_national_unity = 0.30 
+set_stability = 0.30 
 
 create_country_leader = {
 	name = "Otto von Below"

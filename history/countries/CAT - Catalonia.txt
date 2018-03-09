@@ -57,5 +57,5 @@ set_politics = {
 
 
 
-set_national_unity = 0.60
+set_stability = 0.60
 

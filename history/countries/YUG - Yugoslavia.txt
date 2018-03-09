@@ -57,7 +57,7 @@ set_politics = {
 	elections_allowed = yes
 }
 
-set_national_unity = 0.6
+set_stability = 0.6
 add_ideas = {
 	YUG_dc
 	YUG_executive_power

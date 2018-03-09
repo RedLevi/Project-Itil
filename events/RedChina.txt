@@ -207,7 +207,7 @@ country_event = {#Chiang dies
 				}
 				
 				set_equipment_fraction = 0.5 
-				set_national_unity = 0.9
+				set_stability = 0.9
 				
 				add_popularity = {
 				

@@ -248,6 +248,8 @@ SOV_unstate_desc:0 "The Soviet state have been decentralized to the degree a tru
  sovnews.11.d:0 "The Finns have refused our demands!"
 
  ###Ideas###
+ innovative_military:0 "Innovative General Staff"
+ innovative_military:0 "The Soviet Red army is one of the most revolutionary militaries in the world. After being formed during the 2nd Russo-Japanese war, the young Red Army is eager to reform the Soviet military using newly established military ideas from genius military theorists such as Tukhacehvsky, Trindafilov, Frunze and Yakir."
  Alexei_Rykov:0 "Alexei Rykov"
  Andrei_Bubnov:0 "Andrei Bubnov"
  Nikolai_Bukharin:0 "Nikolai Bukharin"
@@ -283,5 +285,8 @@ SOV_fed_national:0 "Federalism"
 trotsky_victory:0 "Party center maintains power"
 kirov_victory:0 "The Kirovists control the assembly"
 SOV_left_victory:0 "The Left opposition sweepes the assembly"
-
+SOV_expansion_tooltip:0 "§GThis focus will unlock expansion decisions"
+####Decisions####
+SOV_attack_turkestan:0 "Invasion of Turkestan"
+SOV_attack_turkestan_desc:0 "For too long have the people of central Asia been oppressed my Ismail Enver the "Mad Pasha". It is finally time to invade their crumbling state."
 

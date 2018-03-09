@@ -11,8 +11,12 @@ bookmarks = {
 			history = "ENG_GATHERING_STORM_DESC"
 			ideology = liberalism
 			ideas = {
+			george_v
 			}	
 			focuses = {
+			ENG_federalization_focus
+			ENG_home_rule
+			ENG_bastion_democracy
 			}		
 		}		
 		"GER"={
@@ -32,8 +36,12 @@ bookmarks = {
 			history = "JAP_GATHERING_STORM_DESC"
 			ideology = liberalism
 			ideas = {
+			hirohito
 			}
 			focuses = {
+			JAP_constitutional_reforms
+			JAP_expansionism_focus
+			JAP_war_england
 			}
 		}
 		"SOV"={
@@ -41,15 +49,16 @@ bookmarks = {
 			ideology = communism
 			ideas = {
 				home_of_revolution
+				innovative_military
 			}
 			focuses = {
-				1936_assembly
+				SOV_1936_assembly
 				The_Revolution
 				Establish_OKB
 			}
 		}
 		"PRC"={
-			history = "AUS_GATHERING_STORM_DESC"
+			history = "PRC_GATHERING_STORM_DESC"
 			ideology = communism
 			ideas = {
 			}
@@ -60,7 +69,7 @@ bookmarks = {
 			history = "USA_GATHERING_STORM_DESC"
 			ideology = liberalism
 			ideas = {
-				
+			USA_great_depression	
 			}	
 			focuses = {
 			}			
@@ -73,6 +82,8 @@ bookmarks = {
 				AME_national_disunity
 			}
 			focuses = {
+			AME_politics_start
+			AME_industry_focus
 			}
 		}
 

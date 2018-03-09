@@ -1,0 +1,92 @@
+SOV_expansion = {
+	SOV_attack_turkestan = {
+	    icon = GFX_decision_category_sov_great_patriotic_war
+	    allowed = {
+	       original_tag = SOV
+	    }
+	    available = {
+	        country_exists = TUK
+	        has_completed_focus = The_Mad_Pasha
+	        NOT = {
+	            TUK = {
+	                has_government = communism
+	            }
+	        }
+	        NOT = {
+	           SOV = {
+	              has_war_with = TUK
+	           }
+	        }
+	    }
+	    cost = 25
+	    days_remove = 5
+	    fire_only_once = yes
+	    remove_effect = {
+	       SOV = {
+	          declare_war_on = { target = TUK type = annex_everything }
+	       }
+	       add_war_support = -0.03
+	       add_stability = 0.03
+	    }
+	}
+	SOV_attack_ukraine = {
+	    icon = GFX_decision_category_sov_great_patriotic_war
+	    allowed = {
+	       original_tag = SOV
+	    }
+	    available = {
+	        country_exists = UKR
+	        has_completed_focus = Crush_The_Traitors
+	        NOT = {
+	            UKR = {
+	                has_government = communism
+	            }
+	        }
+	        NOT = {
+	           SOV = {
+	              has_war_with = UKR
+	           }
+	        }
+	    }
+	    cost = 25
+	    days_remove = 5
+	    fire_only_once = yes
+	    remove_effect = {
+	       SOV = {
+	          declare_war_on = { target = UKR type = annex_everything }
+	       }
+	       add_war_support = 0.03
+	       add_stability = 0.05
+	    }
+	}
+	SOV_attack_afghanistan = {
+	    icon = GFX_decision_category_sov_great_patriotic_war
+	    allowed = {
+	       original_tag = SOV
+	    }
+	    available = {
+	        country_exists = AFG
+	        has_completed_focus = Invasion_of_Afghanistan
+	        NOT = {
+	            AFG = {
+	                has_government = communism
+	            }
+	        }
+	        NOT = {
+	           SOV = {
+	              has_war_with = AFG
+	           }
+	        }
+	    }
+	    cost = 25
+	    days_remove = 5
+	    fire_only_once = yes
+	    remove_effect = {
+	       SOV = {
+	          declare_war_on = { target = AFG type = annex_everything }
+	       }
+	       add_war_support = -0.03
+	       add_stability = -0.03
+	    }
+	}
+}

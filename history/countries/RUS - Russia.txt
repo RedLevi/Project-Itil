@@ -40,7 +40,7 @@ set_technology = {
 add_ideas = { limited_conscription }
 
 set_convoys = 50
-set_national_unity = 0.6
+set_stability = 0.6
 
 set_politics = {
 

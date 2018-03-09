@@ -58,7 +58,7 @@ set_politics = {
 }
 
 set_convoys = 500
-set_national_unity = 0.6
+set_stability = 0.6
 
 create_country_leader = {
 	name = "Dirk Jan de Geer"

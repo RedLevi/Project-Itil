@@ -3308,7 +3308,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_yug_divided_nation.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_george_V"
+		name = "GFX_idea_george_v"
 		texturefile = "gfx/interface/ideas/George_V.dds"
 	}
 	SpriteType = {
@@ -3354,6 +3354,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_wilhelmina"
 		texturefile = "gfx/interface/ideas/Wilhelmina.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_innovative_military"
+		texturefile = "gfx/interface/ideas/idea_innovative_military.dds"
 	}
 
 }

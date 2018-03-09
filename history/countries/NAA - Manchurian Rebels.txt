@@ -9,7 +9,7 @@ set_technology = {
 }
 
 set_convoys = 10
-set_national_unity = 0.9
+set_stability = 0.9
 
 set_politics = {
 

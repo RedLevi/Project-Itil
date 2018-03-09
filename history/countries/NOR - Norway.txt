@@ -22,7 +22,7 @@ set_technology = {
 }
 
 set_convoys = 80		# biggest merchant marine in the world
-set_national_unity = 0.7
+set_stability = 0.7
 add_ideas = haakon_VII
 
 set_politics = {

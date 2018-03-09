@@ -1303,7 +1303,7 @@ country_event = {#British civil war
 				}
 
 				set_equipment_fraction = 0.5
-				set_national_unity = 0.9
+				set_stability = 0.9
 
 				add_popularity = {
 
@@ -1350,7 +1350,7 @@ country_event = {#British civil war
 				}
 
 				set_equipment_fraction = 0.5
-				set_national_unity = 0.9
+				set_stability = 0.9
 
 				add_popularity = {
 
@@ -1396,7 +1396,7 @@ country_event = {#British civil war
 				}
 
 				set_equipment_fraction = 0.5
-				set_national_unity = 0.9
+				set_stability = 0.9
 
 				add_popularity = {
 

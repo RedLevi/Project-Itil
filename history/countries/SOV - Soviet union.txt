@@ -38,13 +38,11 @@ set_technology = {
 }
 
 set_convoys = 50
-set_national_unity = 0.55
+set_stability = 0.45
 
 add_ideas = {
 	home_of_revolution
-	#great_country
-	limited_freedom_law
-	nationalized_economy_law
+	SOV_innovative_military_idea
 }
 
 create_faction = "second_international"
@@ -180,7 +178,10 @@ create_corps_commander = {
 	  picture = "Konstantin_Rokossovsky.dds"
 	traits = { panzer_leader }
 	skill = 4
-
+    attack_skill = 5
+    defense_skill = 3
+    planning_skill = 3
+    logistics_skill = 4
 }
 
 create_corps_commander = {
@@ -189,8 +190,10 @@ create_corps_commander = {
 		picture = "Aleksander_Vasilevsky.dds"
 	traits = {  }
 	skill = 4
-
-
+    attack_skill = 3
+    defense_skill = 2
+    planning_skill = 4
+    logistics_skill = 4
 }
 
 create_field_marshal = {
@@ -198,26 +201,63 @@ create_field_marshal = {
 		picture = "Boris_Shaposhnikov.dds"
 	traits = {  }
 	skill = 2
-
+    attack_skill = 3
+    defense_skill = 3
+    planning_skill = 4
+    logistics_skill = 2
 }
 
 create_field_marshal = {
 	name = "Mikhail Tukhachevsky"
 	id = 401
 		picture = "Mikhail_Tukhachevsky.dds"
-	traits = { offensive_doctrine fast_planner inspirational_leader }
+	traits = { offensive_doctrine brilliant_strategist inspirational_leader war_hero deep_battle_proponent }
 	skill = 5
-
-
+    attack_skill = 6
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 5
 }
 
 create_corps_commander = {
 	name = "Mikhail Frunze"
 		picture = "Mikhail_Frunze.dds"
-	traits = { trickster } #engineer
+	traits = { trickster adaptable panzer_leader deep_battle_proponent } 
 	skill = 5
-
-
+    attack_skill = 6
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Vladimir Trindafilov"
+		picture = "Vladimir_Trindafilov.dds"
+	traits = { trickster adaptable deep_battle_proponent } 
+	skill = 5
+    attack_skill = 7
+    defense_skill = 1
+    planning_skill = 3
+    logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Iona Yakir"
+		picture = "Iona_Yakir.dds"
+	traits = { infantry_officer deep_battle_proponent brilliant_strategist } 
+	skill = 5
+    attack_skill = 5
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Ieronim Uborevich"
+		picture = "Ieronim_Uborevich.dds"
+	traits = { infantry_officer fast_planner  } 
+	skill = 5
+    attack_skill = 4
+    defense_skill = 2
+    planning_skill = 4
+    logistics_skill = 3
 }
 
 create_navy_leader = {

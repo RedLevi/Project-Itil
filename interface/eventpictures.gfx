@@ -1817,14 +1817,18 @@ spriteTypes = {
 	}
 
 	spriteType = {
-	name = "GFX_petain_speech"
-	texturefile = "gfx/event_pictures/petain_speech.dds"
-}
+	   name = "GFX_petain_speech"
+	   texturefile = "gfx/event_pictures/petain_speech.dds"
+    }
 
-spriteType = {
-name = "GFX_worldmap"
-texturefile = "gfx/event_pictures/worldmap.dds"
-}
+    spriteType = {
+       name = "GFX_worldmap"
+       texturefile = "gfx/event_pictures/worldmap.dds"
+    }
+    spriteType = {
+       name = "GFX_sovstart"
+       texturefile = "gfx/event_pictures/sovstart.dds"
+    }
 
 
 	#### END DoD EVENTS ####

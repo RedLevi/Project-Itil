@@ -2,7 +2,7 @@
 
 oob = "JAP"
 
-set_national_unity = 0.65
+set_stability = 0.65
 
 set_research_slots = 4
 
@@ -47,7 +47,7 @@ set_technology = {
 
 	
 set_convoys = 400
-set_national_unity = 0.5
+set_stability = 0.5
 add_ideas = hirohito
 
 set_politics = {

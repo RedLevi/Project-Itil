@@ -19,7 +19,7 @@ focus_tree = {
 ######Internal Politics####################################
 ###########################################################
 focus = {
- 	id = 1936_assembly
+ 	id = SOV_1936_assembly
  	icon = GFX_focus_lenin_soviet
  	cost = 3.00
  	x = 38
@@ -34,7 +34,7 @@ focus = {
   	icon = GFX_focus_renounce_the_treaty_of_trianon
   	cost = 2.00
 		prerequisite = {
-		   focus = 1936_assembly
+		   focus = SOV_1936_assembly
 		}
 		available = {
 			 has_country_flag = const_assembly
@@ -70,7 +70,7 @@ focus = {
     	icon = GFX_goal_generic_national_unity
     	cost = 2.00
   		prerequisite = {
-  		   focus = 1936_assembly
+  		   focus = SOV_1936_assembly
   		}
   		available = {
  		     OR = {
@@ -755,12 +755,12 @@ focus = {
 		remove_ideas = SOV_five_year_plan_draft
 		}
 	}
-	##################################################################
-	#### Economic Tree ###############################################
-	##################################################################
-	##################################################################
-	#### Decentralized Socialism #####################################
-	##################################################################
+##################################################################
+#### Economic Tree ###############################################
+##################################################################
+##################################################################
+#### Decentralized Socialism #####################################
+##################################################################
 
 	focus = {
 		id = Decentralized_Socialism
@@ -851,7 +851,6 @@ focus = {
 		x = 1
 		y = 4
 		completion_reward = {
-		   add_ideas = collectivized_economy_law
 		}
 
 	}
@@ -913,7 +912,7 @@ focus = {
 		x = 18
 		y = 2
 		completion_reward = {
-		add_resource = { type = chrome amount = 10 state = 582 }
+		add_resource = { type = chromium amount = 10 state = 582 }
 		}
 	}
 	focus = {
@@ -1054,9 +1053,10 @@ focus = {
 
 	}
 
-###############################################################################
-#######Foreign Policy##########################################################
-###############################################################################
+#######################################################################
+#######Foreign Policy##################################################
+#######################################################################
+#######################################################################
 focus = {
 	id = The_Revolution
 	icon = GFX_focus_soviet_union_question
@@ -1122,8 +1122,7 @@ focus = {
 	x = 62
 	y = 5
 	completion_reward = {
-	   create_wargoal = { type = annex_everything target = TUK }
-		 add_stability = 0.03
+	   custom_effect_tooltip = SOV_expansion_tooltip
 	}
 
 }
@@ -1176,8 +1175,7 @@ focus = {
 	x = 66
 	y = 5
 	completion_reward = {
-	   create_wargoal = { type = annex_everything target = UKR }
-		 add_stability = 0.05
+       custom_effect_tooltip = SOV_expansion_tooltip
 	}
 
 }
@@ -1277,7 +1275,159 @@ focus = {
 	}
 
 }
+focus = {
+	id = Invasion_of_Afghanistan
+	icon = GFX_goal_generic_position_armies
+	cost = 10.00
+	prerequisite = {
+		focus = The_Mad_Pasha
+	}
+	available = {
+       OR = {
+          SOV = { owns_state = 405 }
+          SOV = { owns_state = 584 }
+       }
+	}
+	x = 61
+	y = 6
+	completion_reward = {
+       custom_effect_tooltip = SOV_expansion_tooltip
+	}
 
+}
+focus = {
+	id = Threaten_Ottomans
+	icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+	cost = 10.00
+	prerequisite = {
+		focus = Demand_Azerbaijan
+	}
+	prerequisite = {
+		focus = Demand_Armenia
+	}
+	x = 64
+	y = 7
+
+}
+focus = {
+	id = Deal_with_Romania
+	icon = GFX_focus_rom_abdicate
+	cost = 10.00
+	prerequisite = {
+		focus = Crush_The_Traitors
+	}
+	x = 67
+	y = 6
+
+}
+focus = {
+	id = Fate_Of_Hungary
+	icon = GFX_goal_generic_forceful_treaty
+	cost = 10.00
+	prerequisite = {
+		focus = Deal_with_Romania
+	}
+	x = 67
+	y = 7
+
+}
+focus = {
+	id = Secure_Scandinavia
+	icon = GFX_goal_demand_sudetenland
+	cost = 10.00
+	prerequisite = {
+		focus = Finnish_Question
+	}
+	x = 71
+	y = 7
+
+}
+focus = {
+	id = Strike_at_Germany
+	icon = GFX_goal_generic_war_with_comintern
+	cost = 10.00
+	prerequisite = {
+		focus = Secure_Scandinavia
+	}
+	prerequisite = {
+		focus = Fate_Of_Hungary
+	}
+	x = 69
+	y = 8
+
+}
+focus = {
+	id = Dismantle_Syria
+	icon = GFX_goal_generic_forceful_treaty
+	cost = 10.00
+	prerequisite = {
+		focus = Demand_Armenia
+	}
+	prerequisite = {
+		focus = Demand_Azerbaijan
+	}
+	x = 62
+	y = 7
+
+}
+focus = {
+	id = Liberate_Indochina
+	icon = GFX_focus_generic_support_the_left_right
+	cost = 10.00
+	prerequisite = {
+		focus = Red_China
+	}
+	x = 58
+	y = 7
+
+}
+focus = {
+	id = Strike_at_Britain
+	icon = GFX_focus_AST_never_gallipoli
+	cost = 10.00
+	prerequisite = {
+		focus = Liberate_India
+		focus = Liberate_Indochina
+	}
+	prerequisite = {
+		focus = Dismantle_Syria
+	}
+	x = 59
+	y = 8
+
+}
+focus = {
+	id = De_Colonization
+	icon = GFX_goal_SOV_secure_africa
+	cost = 10.00
+	prerequisite = {
+		focus = Strike_at_Britain
+	}
+	prerequisite = {
+		focus = Strike_at_Germany
+	}
+	x = 66
+	y = 9
+
+}
+focus = {
+	id = Spread_to_America
+	icon = GFX_focus_generic_join_comintern
+	cost = 10.00
+	prerequisite = {
+		focus = Strike_at_Britain
+	}
+	prerequisite = {
+		focus = Strike_at_Germany
+	}
+	x = 62
+	y = 9
+
+}
+#######################################################################
+########### Eastern Expansion #########################################
+#######################################################################
+#######################################################################
 focus = {
 	id = Dealing_With_Imperialists
 	icon = GFX_focus_AST_war_japan
@@ -1304,6 +1454,7 @@ focus = {
 	y = 3
 	completion_reward = {
 	   add_opinion_modifier = { target = JAP modifier = Soviet_Revanchism }
+
 	}
 
 }
@@ -1936,147 +2087,7 @@ focus = {
 
 }
 focus = {
-	id = Invasion_of_Afghanistan
-	icon = GFX_goal_generic_position_armies
-	cost = 10.00
-	prerequisite = {
-		focus = The_Mad_Pasha
-	}
-	x = 61
-	y = 6
-
-}
-focus = {
-	id = Threaten_Ottomans
-	icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-	cost = 10.00
-	prerequisite = {
-		focus = Demand_Azerbaijan
-	}
-	prerequisite = {
-		focus = Demand_Armenia
-	}
-	x = 64
-	y = 7
-
-}
-focus = {
-	id = Deal_with_Romania
-	icon = GFX_focus_rom_abdicate
-	cost = 10.00
-	prerequisite = {
-		focus = Crush_The_Traitors
-	}
-	x = 67
-	y = 6
-
-}
-focus = {
-	id = Fate_Of_Hungary
-	icon = GFX_goal_generic_forceful_treaty
-	cost = 10.00
-	prerequisite = {
-		focus = Deal_with_Romania
-	}
-	x = 67
-	y = 7
-
-}
-focus = {
-	id = Secure_Scandinavia
-	icon = GFX_goal_demand_sudetenland
-	cost = 10.00
-	prerequisite = {
-		focus = Finnish_Question
-	}
-	x = 71
-	y = 7
-
-}
-focus = {
-	id = Strike_at_Germany
-	icon = GFX_goal_generic_war_with_comintern
-	cost = 10.00
-	prerequisite = {
-		focus = Secure_Scandinavia
-	}
-	prerequisite = {
-		focus = Fate_Of_Hungary
-	}
-	x = 69
-	y = 8
-
-}
-focus = {
-	id = Dismantle_Syria
-	icon = GFX_goal_generic_forceful_treaty
-	cost = 10.00
-	prerequisite = {
-		focus = Demand_Armenia
-	}
-	prerequisite = {
-		focus = Demand_Azerbaijan
-	}
-	x = 62
-	y = 7
-
-}
-focus = {
-	id = Liberate_Indochina
-	icon = GFX_focus_generic_support_the_left_right
-	cost = 10.00
-	prerequisite = {
-		focus = Red_China
-	}
-	x = 58
-	y = 7
-
-}
-focus = {
-	id = Strike_at_Britain
-	icon = GFX_focus_AST_never_gallipoli
-	cost = 10.00
-	prerequisite = {
-		focus = Liberate_India
-		focus = Liberate_Indochina
-	}
-	prerequisite = {
-		focus = Dismantle_Syria
-	}
-	x = 59
-	y = 8
-
-}
-focus = {
-	id = De_Colonization
-	icon = GFX_goal_SOV_secure_africa
-	cost = 10.00
-	prerequisite = {
-		focus = Strike_at_Britain
-	}
-	prerequisite = {
-		focus = Strike_at_Germany
-	}
-	x = 66
-	y = 9
-
-}
-focus = {
-	id = Spread_to_America
-	icon = GFX_focus_generic_join_comintern
-	cost = 10.00
-	prerequisite = {
-		focus = Strike_at_Britain
-	}
-	prerequisite = {
-		focus = Strike_at_Germany
-	}
-	x = 62
-	y = 9
-
-}
-focus = {
-	id = Wolrd_Socialist_State
+	id = World_Socialist_State
 	icon = GFX_goal_support_communism
 	cost = 10.00
 	prerequisite = {

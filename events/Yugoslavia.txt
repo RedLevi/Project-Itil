@@ -19,6 +19,7 @@ country_event = { # Introduction
 		NOT = {
 			is_ai = yes
 		}
+		tag = YUG
 	}
 
 	option = { # God is with Regent Paul

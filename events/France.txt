@@ -9,7 +9,6 @@ country_event = { #INTRO EVENT#
 
 	trigger = {
 	date > 1936.1.1
-	date < 1936.1.3
 	tag = FRA
 	}
 
@@ -56,7 +55,6 @@ country_event = { #1936 ELECTION#
 
 	trigger = {
 	    date > 1936.4.25
-		date < 1936.4.28
 		tag = FRA
 		}
 

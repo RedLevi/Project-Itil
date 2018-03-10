@@ -472,7 +472,7 @@ country_event = { # Hungary Folds
 	}
 }
 
-country_event = { # Hungary Folds
+country_event = {
 	id = yug.23
 	title = yug.23.t
 	desc = yug.23.d
@@ -504,7 +504,7 @@ country_event = { # Slovenia Revolts!
 
 	is_triggered_only = yes
 
-	immediately = {
+	immediate = {
 		release = SLO
 		SLO = {
 			load_oob = SLO_revolters
@@ -634,7 +634,7 @@ country_event = {
 
 	option = { # Fold
 		name = yug.31.a
-		ai_will_do = {
+		ai_chance = {
 			factor = 1
 		}
 		if = {
@@ -666,7 +666,7 @@ country_event = {
 
 	option = { # Never!
 		name = yug.31.b
-		ai_will_do = {
+		ai_chance = {
 			factor = 4
 		}
 		YUG = { country_event = { id = yug.32  days = 1 } }
@@ -682,7 +682,7 @@ country_event = { # Greece Refuses!
 
 	option = { # We have reason for war
 		name = yug.32.a
-		ai_will_do = {
+		ai_chance = {
 			factor = 19
 		}
 		create_wargoal = {
@@ -696,7 +696,7 @@ country_event = { # Greece Refuses!
 
 	option = { # Back down then
 		name = yug.32.b
-		ai_will_do = {
+		ai_chance = {
 			factor = 1
 		}
 		add_political_power = -40
@@ -711,13 +711,13 @@ country_event = { # Greece is threatened
 	is_triggered_only = yes
 
 	option = { # Extend our protections to them
-		ai_will_do = {
+		ai_chance = {
 			factor = 3
 		}
 		give_guarantee = GRE
 	}
 	option = {
-		ai_will_do = {
+		ai_chance = {
 			factor = 7
 		}
 		add_political_power = 20
@@ -745,7 +745,7 @@ country_event = {
 
 	option = { # The leftist coalition forms
 		name = yug.34.a
-		ai_will_do = {
+		ai_chance = {
 			factor = 3
 		}
 		custom_effect_tooltip = YUG_leftists_form
@@ -754,7 +754,7 @@ country_event = {
 
 	option = {
 		name = yug.34.b
-		ai_will_do = {
+		ai_chance = {
 			factor = 7
 		}
 		custom_effect_tooltip = YUG_no_leftists
@@ -770,8 +770,9 @@ country_event = {
 	desc = yug.35.d
 
 	trigger = {
-		date = 1939.5.5
-		not = { has_country_flag = YUG_emergency_elections }
+		date > 1939.5.4
+		date < 1939.5.6
+		NOT = { has_country_flag = YUG_emergency_elections }
 	}
 
 	fire_only_once = yes
@@ -782,24 +783,24 @@ country_event = {
 			has_country_flag = YUG_leftists_form
 		}
 		set_country_flag = YUG_leftist_election
-		add_popularity = { id = communism popularity = 0.1 }
-		add_popularity = { id = socialism popularity = 0.15 }
-		add_popularity = { id = liberalism popularity = 0.3 }
-		add_popularity = { id = reactionism popularity = 0.05 }
+		add_popularity = { ideology = communism popularity = 0.1 }
+		add_popularity = { ideology = socialism popularity = 0.15 }
+		add_popularity = { ideology = liberalism popularity = 0.3 }
+		add_popularity = { ideology = reactionarism popularity = 0.05 }
 		country_event = { id = yug.36 days = 1 }
 		complete_national_focus = YUG_1939_election
 	}
 
 	option = { # Liberals Win
 		name = yug.35.b
-		tigger = {
+		trigger = {
 			NOT = { has_country_flag = YUG_leftists_form }
 		}
 		set_country_flag = YUG_liberal_election
-		add_popularity = { id = communism popularity = 0.02 }
-		add_popularity = { id = socialism popularity = 0.05 }
-		add_popularity = { id = liberalism popularity = 0.4 }
-		add_popularity = { id = reactionism popularity = 0.1 }
+		add_popularity = { ideology = communism popularity = 0.02 }
+		add_popularity = { ideology = socialism popularity = 0.05 }
+		add_popularity = { ideology = liberalism popularity = 0.4 }
+		add_popularity = { ideology = reactionarism popularity = 0.1 }
 		country_event = { id = yug.36 days = 1 }
 		complete_national_focus = YUG_1939_election
 	}
@@ -807,10 +808,10 @@ country_event = {
 	option = { # Conservatives Win
 		name = yug.35.c
 		set_country_flag = YUG_conservative_election
-		add_popularity = { id = socialism popularity = 0.1 }
-		add_popularity = { id = liberalism popularity = 0.2 }
-		add_popularity = { id = conservatism popularity = 0.2 }
-		add_popularity = { id = reactionism popularity = 0.1 }
+		add_popularity = { ideology = socialism popularity = 0.1 }
+		add_popularity = { ideology = liberalism popularity = 0.2 }
+		add_popularity = { ideology = conservatism popularity = 0.2 }
+		add_popularity = { ideology = reactionarism popularity = 0.1 }
 		country_event = { id = yug.36 days = 1 }
 		complete_national_focus = YUG_1939_election
 	}
@@ -851,7 +852,7 @@ country_event = {
 				limit = { 
 					NOT = { has_government = socialism }
 				}
-				set_politics = { ideology = socialism }
+				set_politics = { ruling_party = socialism elections_allowed = yes }
 			}
 			complete_national_focus = YUG_king_decision
 		}
@@ -864,7 +865,7 @@ country_event = {
 				limit = { 
 					NOT = { has_government = liberalism }
 				}
-				set_politics = { ideology = liberalism }
+				set_politics = { ruling_party = liberalism elections_allowed = yes }
 			}	
 			complete_national_focus = YUG_king_decision
 		}
@@ -877,7 +878,7 @@ country_event = {
 				limit = { 
 					NOT = { has_government = conservatism }
 				}
-				set_politics = { ideology = conservatism }
+				set_politics = { ruling_party = conservatism elections_allowed = yes }
 			}
 			complete_national_focus =YUG_king_decision		
 		}
@@ -894,10 +895,10 @@ country_event = {
 			limit = { 
 				NOT = { has_government = conservatism }
 			}
-			set_politics = { ideology = conservatism }
+			set_politics = { ruling_party = conservatism elections_allowed = yes }
 		}
 		complete_national_focus = YUG_king_decision	
-		add_popularity = { id = reactionism popularity = 0.1 }
+		add_popularity = { ideology = reactionarism popularity = 0.1 }
 		add_political_power = -50
 		add_stability = -0.2
 	}

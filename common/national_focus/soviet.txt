@@ -188,7 +188,7 @@ focus = {
 	 focus = {
 		id = SOV_Status_Quo
 		icon = GFX_goal_generic_military_deal
-		cost = 10.00
+		cost = 3
 		available = {
 			has_country_flag = SOV_internal_status_quo
 		}
@@ -207,7 +207,7 @@ focus = {
 	focus = {
 		id = SOV_regenerated_state
 		icon = GFX_focus_generic_join_comintern
-		cost = 10.00
+		cost = 3.00
 		available = { has_country_flag = SOV_internal_status_quo }
 		prerequisite = {
 			focus = Trotsky_Wins
@@ -222,7 +222,7 @@ focus = {
 	focus = {
 		id = SOV_Iron_Fist_Rule
 		icon = GFX_goal_generic_war_with_comintern
-		cost = 10.00
+		cost = 3.00
 		available = {
 			has_country_flag = SOV_authoritarian_internal
 		}
@@ -239,7 +239,7 @@ focus = {
 	focus = {
 		id = SOV_democratic_socialism
 		icon = GFX_goal_generic_national_unity
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			 focus = Left_Wins
 		}
@@ -259,9 +259,12 @@ focus = {
 	focus = {
 		id = Reinstate_Democracy
 		icon = GFX_goal_continuous_increase_nu
-		cost = 10.00
+		cost = 3.00
+		available = {
+		   always = no
+		}
 		prerequisite = {
-			focus = Trotsky_Wins focus = Kirov_Wins focus = Moderates_Win focus = Left_Wins
+		   focus = Moderates_Win focus = Left_Wins
 		}
 		x = 46
 		y = 4
@@ -270,7 +273,7 @@ focus = {
 	focus = {
 		id = Anti_Communism
 		icon = GFX_goal_anti_comintern_pact
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			 focus = Moderates_Win
 		}
@@ -281,7 +284,7 @@ focus = {
 	focus = {
 		id = SOV_popular_front
 		icon = GFX_goal_generic_intelligence_exchange
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = SOV_regenerated_state focus = SOV_Status_Quo
 		}
@@ -296,7 +299,7 @@ focus = {
 	focus = {
 		id = SOV_Secret_Police
 		icon = GFX_focus_generic_strike_at_democracy1
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = Kirov_Wins
 		}
@@ -310,7 +313,7 @@ focus = {
 	focus = {
 		id = SOV_local_government
 		icon = GFX_focus_generic_soviet_politics
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = Left_Wins
 		}
@@ -329,7 +332,7 @@ focus = {
 	focus = {
 		id = Freedom_Again
 		icon = GFX_goal_support_democracy
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = Reinstate_Democracy
 		}
@@ -344,7 +347,7 @@ focus = {
 	focus = {
 		id = Sov_Great_Purge
 		icon = GFX_goal_generic_small_arms
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = SOV_Secret_Police
 		}
@@ -359,7 +362,7 @@ focus = {
 	focus = {
 		id = SOV_direct_democracy
 		icon = GFX_focus_CZE_german_puppet
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = SOV_democratic_socialism
 		}
@@ -377,7 +380,7 @@ focus = {
 	focus = {
 		id = Individual_Freedom
 		icon = GFX_goal_generic_demand_territory
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = Freedom_Again
 		}
@@ -388,7 +391,7 @@ focus = {
 	focus = {
 		id = SOV_Lenins_Legacy
 		icon = GFX_goal_support_communism
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_popular_front
 		}
@@ -402,7 +405,7 @@ focus = {
 	focus = {
 		id = SOV_New_Communism
 		icon = GFX_focus_generic_join_comintern
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = Sov_Great_Purge
 		}
@@ -418,7 +421,7 @@ focus = {
 	focus = {
 		id = SOV_unstate
 		icon = GFX_focus_generic_soviet_politics
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_direct_democracy
 		}
@@ -434,7 +437,7 @@ focus = {
 	focus = {
 		id = Return_of_the_Republic
 		icon = GFX_focus_renounce_the_treaty_of_trianon
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = Anti_Communism
 		}
@@ -1147,8 +1150,60 @@ focus = {
 	x = 64
 	y = 5
 	completion_reward = {
-	   SOV = { country_event = { id = soviet.15 days = 4 } }
+	   custom_effect_tooltip = SOV_ultimatum_tooltip
 	}
+
+}
+
+focus = {
+	id = Demand_Armenia
+	icon = GFX_goal_generic_military_deal
+	cost = 2.00
+	prerequisite = {
+		focus = Georgian_Ultimatum
+	}
+	x = 63
+	y = 6
+    completion_reward = {
+	   custom_effect_tooltip = SOV_ultimatum_tooltip
+	}
+}
+focus = {
+	id = Demand_Azerbaijan
+	icon = GFX_goal_generic_military_deal
+	cost = 2.00
+	prerequisite = {
+		focus = Georgian_Ultimatum
+	}
+	x = 65
+	y = 6
+    completion_reward = {
+	   custom_effect_tooltip = SOV_ultimatum_tooltip
+	}
+}
+focus = {
+	id = Liberate_India
+	icon = GFX_focus_RAJ_seek_help_from_soviet
+	cost = 10.00
+	prerequisite = {
+		focus = Red_China
+	}
+	x = 60
+	y = 7
+
+}
+focus = {
+	id = World_Socialist_State
+	icon = GFX_goal_support_communism
+	cost = 10.00
+	prerequisite = {
+		focus = De_Colonization
+	}
+	prerequisite = {
+		focus = Spread_to_America
+	}
+	x = 64
+	y = 10
 
 }
 
@@ -1200,7 +1255,7 @@ focus = {
 	x = 68
 	y = 5
 	completion_reward = {
-	   LIT = { country_event = { id = soviet.19 days = 3 } }
+	   custom_effect_tooltip = SOV_ultimatum_tooltip
 	}
 
 }
@@ -1223,9 +1278,7 @@ focus = {
 	x = 70
 	y = 5
 	completion_reward = {
-	   LAT = {
-		    country_event = { id = soviet.17 days = 3 }
-		 }
+	   custom_effect_tooltip = SOV_latvia_tooltip
 	}
 
 }
@@ -1249,9 +1302,7 @@ focus = {
 	x = 72
 	y = 5
 	completion_reward = {
-	   EST = {
-		    country_event = { id = soviet.18 days = 3 }
-		 }
+	   custom_effect_tooltip = SOV_ultimatum_tooltip
 	}
 
 }
@@ -1271,7 +1322,7 @@ focus = {
 	x = 70
 	y = 6
 	completion_reward = {
-	   country_event = { id = soviet.20 days = 1 }
+	   custom_effect_tooltip = SOV_ultimatum_tooltip
 	}
 
 }
@@ -1505,7 +1556,66 @@ focus = {
 
 }
 
+focus = {
+	id = Red_China
+	icon = GFX_goal_support_communism
+	cost = 10.00
+	prerequisite = {
+		focus = Denounce_Feng
+		focus = Supply_Guominjun
+	}
+	x = 59
+	y = 6
 
+}
+focus = {
+	id = Manchurian_Uprising
+	icon = GFX_goal_generic_special_forces
+	cost = 10.00
+	prerequisite = {
+		focus = Fund_Japanese_Dissidents
+	}
+	prerequisite = {
+		focus = Bogd_Khanate
+	}
+	x = 56
+	y = 5
+	completion_reward = {
+	   hidden_effect = {
+	      set_global_flag = manchurian_rebels 
+	   }
+	   custom_effect_tooltip = SOV_manchuria_tooltip
+	}
+
+}
+focus = {
+	id = Korea_Revolution
+	icon = GFX_goal_generic_political_pressure
+	cost = 10.00
+	prerequisite = {
+		focus = Manchurian_Uprising
+	}
+	x = 56
+	y = 6
+	completion_reward = {
+	   hidden_effect = {
+	      set_global_flag = korean_rebels 
+	   }
+	   custom_effect_tooltip = SOV_Korea_tooltip
+	}
+
+}
+focus = {
+	id = Sinkiang_Revolution
+	icon = GFX_focus_RAJ_indian_gurkhas
+	cost = 10.00
+	prerequisite = {
+		focus = Bogd_Khanate
+	}
+	x = 53
+	y = 5
+
+}
 
 focus = {
 	id = Aid_PRF
@@ -1561,7 +1671,10 @@ focus = {
 	}
 
 }
-
+#############################################################
+############## Military #####################################
+#############################################################
+#############################################################
 	focus = {
 		id = Dismiss_oldguard
 		icon = GFX_focus_generic_military_mission
@@ -1713,13 +1826,13 @@ focus = {
 		add_research_slot = 1
 		add_tech_bonus = {
 		name = Lenin_Heavy_Tank_Plant
-		bonus = 0.4
+		bonus = 0.3
 		uses = 3
 		category = cat_heavy_armor
 		}
 		add_tech_bonus = {
 		name = T7_Tank
-		bonus = 0.7
+		bonus = 0.4
 		uses = 1
 		technology = super_heavy_tank
 		}
@@ -2004,99 +2117,6 @@ focus = {
 		y = 10
 
 	}
-	focus = {
-	id = Red_China
-	icon = GFX_goal_support_communism
-	cost = 10.00
-	prerequisite = {
-		focus = Denounce_Feng
-		focus = Supply_Guominjun
-	}
-	x = 59
-	y = 6
+	
 
-}
-focus = {
-	id = Manchurian_Uprising
-	icon = GFX_goal_generic_special_forces
-	cost = 10.00
-	prerequisite = {
-		focus = Fund_Japanese_Dissidents
-	}
-	prerequisite = {
-		focus = Bogd_Khanate
-	}
-	x = 56
-	y = 5
 
-}
-focus = {
-	id = Korea_Revolution
-	icon = GFX_goal_generic_political_pressure
-	cost = 10.00
-	prerequisite = {
-		focus = Manchurian_Uprising
-	}
-	x = 56
-	y = 6
-
-}
-focus = {
-	id = Sinkiang_Revolution
-	icon = GFX_focus_RAJ_indian_gurkhas
-	cost = 10.00
-	prerequisite = {
-		focus = Bogd_Khanate
-	}
-	x = 53
-	y = 5
-
-}
-
-focus = {
-	id = Demand_Armenia
-	icon = GFX_goal_generic_military_deal
-	cost = 2.00
-	prerequisite = {
-		focus = Georgian_Ultimatum
-	}
-	x = 63
-	y = 6
-
-}
-focus = {
-	id = Demand_Azerbaijan
-	icon = GFX_goal_generic_military_deal
-	cost = 2.00
-	prerequisite = {
-		focus = Georgian_Ultimatum
-	}
-	x = 65
-	y = 6
-
-}
-focus = {
-	id = Liberate_India
-	icon = GFX_focus_RAJ_seek_help_from_soviet
-	cost = 10.00
-	prerequisite = {
-		focus = Red_China
-	}
-	x = 60
-	y = 7
-
-}
-focus = {
-	id = World_Socialist_State
-	icon = GFX_goal_support_communism
-	cost = 10.00
-	prerequisite = {
-		focus = De_Colonization
-	}
-	prerequisite = {
-		focus = Spread_to_America
-	}
-	x = 64
-	y = 10
-
-}

@@ -1,4 +1,6 @@
 SOV_expansion = {
+   icon = GFX_decision_ger_military_buildup
+   picture = GFX_decision_cat_SOV_expansion
    allowed = {
        original_tag = SOV
    }
@@ -8,4 +10,32 @@ SOV_expansion = {
    visible = {
       has_completed_focus = The_Revolution
    }
+}
+
+SOV_diplomacy = {
+   icon = GFX_decision_generic_political_discourse
+   picture = GFX_decision_cat_SOV_diplomacy
+   allowed = {
+       original_tag = SOV
+   }
+}
+SOV_scandinavia = {
+   icon = GFX_decision_generic_political_discourse
+   picture = GFX_decision_cat_SOV_scandinavia
+   allowed = {
+      original_tag = SOV
+   }
+   visible = {
+      has_completed_focus = Finnish_Question
+   }
+}
+SOV_demands = {
+	icon = GFX_decision_generic_nationalism
+	picture = GFX_decision_cat_SOV_demands
+	allowed = {
+	   original_tag = SOV 
+	}
+	visible = {
+	   always = yes 
+	}
 }

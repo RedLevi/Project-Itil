@@ -39,10 +39,11 @@ set_technology = {
 
 set_convoys = 50
 set_stability = 0.45
+set_war_support = 0.7
 
 add_ideas = {
 	home_of_revolution
-	SOV_innovative_military_idea
+	innovative_military
 }
 
 create_faction = "second_international"
@@ -166,7 +167,9 @@ create_country_leader = {
 
 	}
 }
-
+##############################
+########GENERALS##############
+##############################
 add_namespace = {
 	name = "unit_leader_sov"
 	type = unit_leader
@@ -178,10 +181,10 @@ create_corps_commander = {
 	  picture = "Konstantin_Rokossovsky.dds"
 	traits = { panzer_leader }
 	skill = 4
-    attack_skill = 5
-    defense_skill = 3
+    attack_skill = 3
+    defense_skill = 2
     planning_skill = 3
-    logistics_skill = 4
+    logistics_skill = 1
 }
 
 create_corps_commander = {
@@ -189,11 +192,11 @@ create_corps_commander = {
 	id = 407
 		picture = "Aleksander_Vasilevsky.dds"
 	traits = {  }
-	skill = 4
-    attack_skill = 3
+	skill = 3
+    attack_skill = 2
     defense_skill = 2
-    planning_skill = 4
-    logistics_skill = 4
+    planning_skill = 1
+    logistics_skill = 1
 }
 
 create_field_marshal = {
@@ -201,10 +204,10 @@ create_field_marshal = {
 		picture = "Boris_Shaposhnikov.dds"
 	traits = {  }
 	skill = 2
-    attack_skill = 3
-    defense_skill = 3
-    planning_skill = 4
-    logistics_skill = 2
+    attack_skill = 1
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 1
 }
 
 create_field_marshal = {
@@ -213,10 +216,10 @@ create_field_marshal = {
 		picture = "Mikhail_Tukhachevsky.dds"
 	traits = { offensive_doctrine brilliant_strategist inspirational_leader war_hero deep_battle_proponent }
 	skill = 5
-    attack_skill = 6
+    attack_skill = 4
     defense_skill = 2
-    planning_skill = 3
-    logistics_skill = 5
+    planning_skill = 2
+    logistics_skill = 2
 }
 
 create_corps_commander = {
@@ -224,41 +227,102 @@ create_corps_commander = {
 		picture = "Mikhail_Frunze.dds"
 	traits = { trickster adaptable panzer_leader deep_battle_proponent } 
 	skill = 5
-    attack_skill = 6
-    defense_skill = 2
-    planning_skill = 3
+    attack_skill = 4
+    defense_skill = 1
+    planning_skill = 1
     logistics_skill = 4
 }
 create_corps_commander = {
 	name = "Vladimir Trindafilov"
 		picture = "Vladimir_Trindafilov.dds"
 	traits = { trickster adaptable deep_battle_proponent } 
-	skill = 5
-    attack_skill = 7
+	skill = 4
+    attack_skill = 5
     defense_skill = 1
-    planning_skill = 3
-    logistics_skill = 4
+    planning_skill = 1
+    logistics_skill = 1
 }
-create_corps_commander = {
+create_field_marshal = {
 	name = "Iona Yakir"
 		picture = "Iona_Yakir.dds"
-	traits = { infantry_officer deep_battle_proponent brilliant_strategist } 
-	skill = 5
-    attack_skill = 5
+	traits = { logistics_wizard deep_battle_proponent aggressive_assaulter } 
+	skill = 4
+    attack_skill = 3
     defense_skill = 2
-    planning_skill = 3
+    planning_skill = 2
+    logistics_skill = 3
+}
+create_field_marshal = {
+	name = "Sergey Kamenev"
+		picture = "Sergey_Kamenev.dds"
+	traits = { expert_delegator organisational_leader trait_cautious } 
+	skill = 3
+    attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
     logistics_skill = 4
 }
 create_corps_commander = {
 	name = "Ieronim Uborevich"
 		picture = "Ieronim_Uborevich.dds"
-	traits = { infantry_officer fast_planner  } 
-	skill = 5
-    attack_skill = 4
-    defense_skill = 2
-    planning_skill = 4
-    logistics_skill = 3
+	traits = { infantry_leader fast_planner  } 
+	skill = 3
+    attack_skill = 2
+    defense_skill = 1
+    planning_skill = 3
+    logistics_skill = 1
 }
+create_corps_commander = {
+	name = "Jukums Vācietis"
+		picture = "Jukums_Vacietis.dds"
+	traits = { infantry_leader fast_planner  } 
+	skill = 3
+    attack_skill = 3
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Ivan Chernyakhovsky"
+		picture = "Ivan_Chernyakhovsky.dds"
+	traits = { trait_cautious media_personality  } 
+	skill = 3
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 3
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Alexei Antonov"
+		picture = "Alexei_Antonov.dds"
+	traits = { infantry_leader trait_reckless  } 
+	skill = 3
+    attack_skill = 3
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Alexander Sedyakin"
+		picture = "Alexander_Sedyakin.dds"
+	traits = { winter_specialist trickster } 
+	skill = 3
+    attack_skill = 2
+    defense_skill = 3
+    planning_skill = 1
+    logistics_skill = 2
+}
+create_corps_commander = {
+	name = "August Kork"
+		picture = "August_Kork.dds"
+	traits = { organizer skilled_staffer } 
+	skill = 3
+    attack_skill = 2
+    defense_skill = 3
+    planning_skill = 1
+    logistics_skill = 2
+}
+
 
 create_navy_leader = {
 	name = "Filipp Oktyabrskiy"

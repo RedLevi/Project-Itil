@@ -1,0 +1,31 @@
+state={
+	id=771
+	name="STATE_771"
+
+	history={
+		owner = ARM
+		victory_points = {
+			10472 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = ARM
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		4583 12376 10472 652 6991 10403 7454 789 6976 11753 3714 
+	}
+	manpower=500000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

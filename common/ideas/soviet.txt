@@ -36,7 +36,7 @@ ideas = {
 		}
 		research_bonus = {
 				land_doctrine = 0.33
-			}
+		}
 
 		modifier = {
 			planning_speed = -0.1
@@ -479,7 +479,7 @@ Kirov_General_Secretary = {
       unity_weekly = 0.001
    }
 }
-	}
+}
 
 
 Head_of_Government = {

@@ -1085,3 +1085,38 @@ country_event = { #War fix SPF
 		if = { limit = { has_war_with = SYA } declare_war_on = SFA }
 	}
 }
+country_event = { #puppet_fix
+	id = france.39
+	title = france.39.t
+	desc = france.39.d 
+	trigger = {
+	   country_exists = ITA 
+	   country_exists = SYA 
+	   OR = {
+	      SPF = { is_puppet_of = ITA }
+	      RFA = { is_puppet_of = ITA }
+	      SFA = { is_puppet_of = ITA }
+	      NFA = { is_puppet_of = ITA }
+	      IFA = { is_puppet_of = ITA }
+	   }
+	}
+    option = {
+       name = france.39.a
+       any_country = {
+          limit = {
+             OR = {
+                tag = SPF
+                tag = RFA
+                tag = SFA
+                tag = IFA
+                tag = NFA
+             }
+             is_puppet_of = ITA
+          }
+          SYA = {
+             annex_country = {
+                target = PREV             }
+          }
+       }
+    }
+}

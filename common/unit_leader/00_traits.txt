@@ -139,7 +139,7 @@ leader_traits = {
 		trait_type = personality_trait
 
 		modifier = {
-			army_org_factor = 0.1
+			army_org_factor = 0.15
 			planning_speed = -0.2
 		}
 		

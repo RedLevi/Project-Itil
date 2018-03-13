@@ -1,4 +1,4 @@
-﻿add_namespace = soviet
+add_namespace = soviet
 
 ######################################
 ###Soviet Republic Events#############
@@ -789,7 +789,8 @@ country_event = { #Georgian response#
    }
    option = { #WAR
       name = soviet.16.a
-      SOV = { create_wargoal = { type = annex_everything target = GEO }  add_state_claim = 231 }
+      SOV = { create_wargoal = { type = annex_everything target = GEO } }
+      SOV = { add_state_claim = 231 }
       SOV = { country_event = { id = sovnews.1 days = 1 } }
       ai_chance = { factor = 60 }
    }
@@ -814,6 +815,7 @@ country_event = { #Latvia Integration#
         create_wargoal = { type = annex_everything target = LAT }
         end_puppet = LAT
         country_event = { id = sovnews.4 hours = 1 }
+        remove_from_faction = LAT
       }
       add_stability = -0.3
       ai_chance = { factor = 10 }
@@ -835,7 +837,7 @@ country_event = { #Estonian Integration#
 
    option = { #WAR
       name = soviet.18.b
-      SOV = { create_wargoal = { type = annex_everything target = LAT } }
+      SOV = { create_wargoal = { type = annex_everything target = EST } }
       SOV = { country_event = { id = sovnews.6 hours = 1 } }
       add_stability = 0.2
       ai_chance = { factor = 80 }
@@ -864,11 +866,11 @@ country_event = { #Lithuanian Integration#
    }
 }
 
-country_event = { #Finnish Question#
+country_event = { #Finnish Question###OBSOLETE###
    id = soviet.20
    title = soviet.20.t
    desc = soviet.20.d
-   is_triggered_only = yes
+   is_triggered_only = yes 
 
    option = { #Demand Karelia and Salla#
 	ai_chance = { factor = 65 }
@@ -902,12 +904,12 @@ country_event = { #Finland Karelia#
       SOV = { transfer_state = 146 }
       SOV = { transfer_state = 147 }
       add_stability = -0.1
-      ai_chance = { factor = 60 }
+      ai_chance = { factor = 30 }
       SOV = { country_event = { id = sovnews.10 } }
    }
    option = { #no
       name = soviet.21.b
-	  ai_chance = { factor = 40 }
+	  ai_chance = { factor = 70 }
       SOV = { create_wargoal = { type = annex_everything target = FIN } }
 	  SOV = {
 		add_state_claim = 146
@@ -1241,6 +1243,77 @@ country_event = {#Conflicting economic policy
 		add_stability = -0.035
 
 	}
+}
+
+country_event = { #Ukrainian consessions
+   id = soviet.34
+   title = soviet.34.t
+   desc = soviet.34.d 
+   is_triggered_only = yes 
+
+   option = { #Dont yield 
+      name = soviet.34.a 
+      ai_chance = {
+         factor = 1
+         modifier = {
+            factor = 0 
+            UKR = {
+               any_war_score < 35
+            }
+         }
+      }
+      SOV = {
+         country_event = {
+            id = soviet.35 hours = 3
+         }
+      }
+   }
+   option = { #yield 
+      name = soviet.34.b 
+      ai_chance = {
+         factor = 1
+         modifier = {
+            factor = 100
+            UKR = {
+               any_war_score < 35
+            }
+         }
+      }
+      add_stability = 0.1
+      SOV = { transfer_state = 234 }
+      SOV = { transfer_state = 218 }
+      SOV = { transfer_state = 137 }
+      SOV = { transfer_state = 228 }
+      SOV = { transfer_state = 227 }
+      SOV = { white_peace = UKR }
+   }
+}
+
+country_event = { #Ukrainian refusal
+   id = soviet.35
+   title = soviet.35.t
+   desc = soviet.35.d 
+   is_triggered_only = yes 
+
+   option = { #More war then 
+      name = soviet.35.a 
+      set_global_flag = GER_stubborn_sov
+      GER = {
+         declare_war_on = {
+            target = SOV type = annex_everything
+         }
+         add_political_power = 50
+         add_stability = 0.05
+      }
+   }
+   option = { #We must yield 
+       name = soviet.35.b
+       SOV = {
+          white_peace = UKR 
+          add_stability = -0.05
+          add_war_support = -0.1
+       }
+   }
 }
 
 

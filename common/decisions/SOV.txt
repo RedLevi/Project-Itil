@@ -4,7 +4,7 @@ SOV_expansion = {
 	    allowed = {
 	       original_tag = SOV
 	    }
-	    available = {
+	    visible = {
 	        country_exists = TUK
 	        has_completed_focus = The_Mad_Pasha
 	        NOT = {
@@ -17,6 +17,18 @@ SOV_expansion = {
 	              has_war_with = TUK
 	           }
 	        }
+	        NOT = {
+               TUK = {
+                  is_in_faction_with = SOV
+               }
+            }
+	    }
+	    ai_will_do = {
+	       factor = 1
+	       modifier = {
+	          factor = 0
+	          has_war = yes
+	       }
 	    }
 	    cost = 25
 	    days_remove = 5
@@ -34,7 +46,7 @@ SOV_expansion = {
 	    allowed = {
 	       original_tag = SOV
 	    }
-	    available = {
+	    visible = {
 	        country_exists = UKR
 	        has_completed_focus = Crush_The_Traitors
 	        NOT = {
@@ -47,6 +59,18 @@ SOV_expansion = {
 	              has_war_with = UKR
 	           }
 	        }
+	        NOT = {
+               UKR = {
+                  is_in_faction_with = SOV
+               }
+            }
+	    }
+	    ai_will_do = {
+	       factor = 1
+	       modifier = {
+	          factor = 0
+	          has_war = yes
+	       }
 	    }
 	    cost = 25
 	    days_remove = 5
@@ -64,7 +88,7 @@ SOV_expansion = {
 	    allowed = {
 	       original_tag = SOV
 	    }
-	    available = {
+	    visible = {
 	        country_exists = AFG
 	        has_completed_focus = Invasion_of_Afghanistan
 	        NOT = {
@@ -77,6 +101,18 @@ SOV_expansion = {
 	              has_war_with = AFG
 	           }
 	        }
+	        NOT = {
+               AFG = {
+                  is_in_faction_with = SOV
+               }
+            }
+	    }
+	    ai_will_do = {
+	       factor = 1
+	       modifier = {
+	          factor = 0
+	          has_war = yes
+	       }
 	    }
 	    cost = 25
 	    days_remove = 5
@@ -88,5 +124,346 @@ SOV_expansion = {
 	       add_war_support = -0.03
 	       add_stability = -0.03
 	    }
+	}
+}
+SOV_diplomacy = {
+  	SOV_deal_with_georgia = {
+         icon = GFX_decision_generic_operation
+         allowed = {
+            original_tag = SOV
+         }
+         visible = {
+     	    country_exists = GEO
+     	    has_completed_focus = Georgian_Ultimatum
+     	    NOT = {
+     	        GEO = {
+                    has_government = communism
+     	        }
+     	    }
+     	    NOT = {
+     	       SOV = {
+     	       has_war_with = GEO
+                }
+             }
+             NOT = {
+               GEO = {
+                  is_in_faction_with = SOV
+               }
+            }
+         }
+         ai_will_do = {
+	       factor = 1
+	       modifier = {
+	          factor = 0
+	          has_war = yes
+	       }
+	    }
+         cost = 45
+         days_remove = 5
+         fire_only_once = yes 
+         remove_effect = {
+            GEO = {
+               country_event = {
+                  id = soviet.16 hours = 1
+               }
+            }
+        }
+    }
+    SOV_deal_with_estonia = {
+         icon = GFX_decision_generic_operation
+         allowed = {
+            original_tag = SOV
+         }
+         visible = {
+     	    country_exists = EST
+     	    has_completed_focus = Demand_Estonia
+     	    NOT = {
+     	        EST = {
+                    has_government = communism
+     	        }
+     	    }
+     	    NOT = {
+     	       SOV = {
+     	       has_war_with = EST
+                }
+             }
+             NOT = {
+               EST = {
+                  is_in_faction_with = SOV
+               }
+            }
+         }
+         ai_will_do = {
+	       factor = 1
+	       modifier = {
+	          factor = 0
+	          has_war = yes
+	       }
+	    }
+         cost = 45
+         days_remove = 5
+         fire_only_once = yes 
+         remove_effect = {
+            EST = {
+               country_event = {
+                  id = soviet.18 hours = 1
+               }
+            }
+        }
+    }
+    SOV_deal_with_lithuania = {
+         icon = GFX_decision_generic_operation
+         allowed = {
+            original_tag = SOV
+         }
+         visible = {
+     	    country_exists = LIT
+     	    has_completed_focus = Demand_Lithuania
+     	    NOT = {
+     	        LIT = {
+                    has_government = communism
+     	        }
+     	    }
+     	    NOT = {
+     	       SOV = {
+     	       has_war_with = LIT
+                }
+             }
+             NOT = {
+               LIT = {
+                  is_in_faction_with = SOV
+               }
+            }
+         }
+         ai_will_do = {
+	       factor = 1
+	       modifier = {
+	          factor = 0
+	          has_war = yes
+	       }
+	    }
+         cost = 45
+         days_remove = 5
+         fire_only_once = yes 
+         remove_effect = {
+            LIT = {
+               country_event = {
+                  id = soviet.19 hours = 1
+               }
+            }
+        }
+    }
+    SOV_deal_with_latvia = {
+         icon = GFX_decision_generic_operation
+         allowed = {
+            original_tag = SOV
+         }
+         visible = {
+     	    country_exists = LAT
+     	    has_completed_focus = Integrate_Latvia
+     	    NOT = {
+     	       SOV = {
+     	       has_war_with = LAT
+                }
+             }
+         }
+         ai_will_do = {
+	       factor = 1
+	       modifier = {
+	          factor = 0
+	          has_war = yes
+	       }
+	    }
+         cost = 45
+         days_remove = 5
+         fire_only_once = yes 
+         remove_effect = {
+            LAT = {
+               country_event = {
+                  id = soviet.17 hours = 1
+               }
+            }
+        }
+    }
+}
+SOV_scandinavia = {
+	SOV_demand_karelia = {
+	    icon = GFX_decision_generic_independence
+	    allowed = {
+	       original_tag = SOV
+	    }
+	    visible = {
+	        country_exists = FIN 
+	        has_completed_focus = Finnish_Question
+	        NOT = {
+     	        FIN = {
+                    has_government = communism
+     	        }
+     	    }
+     	    NOT = {
+     	       SOV = {
+     	       has_war_with = FIN
+                }
+             }
+            NOT = {
+               FIN = {
+                  is_in_faction_with = SOV
+               }
+            }
+	    }
+	    ai_will_do = {
+	       factor = 1
+	       modifier = {
+	          factor = 0
+	          has_war = yes
+	       }
+	    }
+	    cost = 100
+	    days_remove = 7
+	    fire_only_once = yes
+	    remove_effect = {
+	       FIN = {
+	          country_event = { id = soviet.21 days = 1 }
+	       }
+	    }
+	}
+	SOV_demand_annexation = {
+	    icon = GFX_decision_generic_independence
+	    allowed = {
+	       original_tag = SOV
+	    }
+	    visible = {
+	        country_exists = FIN 
+	        has_completed_focus = Finnish_Question
+	        NOT = {
+     	        FIN = {
+                    has_government = communism
+     	        }
+     	    }
+     	    NOT = {
+     	       SOV = {
+     	       has_war_with = FIN
+                }
+             }
+            NOT = {
+               FIN = {
+                  is_in_faction_with = SOV
+               }
+            }
+	    }
+	    ai_will_do = {
+	       factor = 1
+	       modifier = {
+	          factor = 0
+	          has_war = yes
+	       }
+	    }
+	    cost = 30
+	    days_remove = 7
+	    fire_only_once = yes
+	    remove_effect = {
+	       FIN = {
+	          country_event = { id = soviet.22 days = 1 }
+	       }
+           add_stability = 0.03
+           add_war_support = 0.05
+	    }
+	}
+}
+SOV_demands = {
+	SOV_german_ukraine_ultimatum = {
+	   allowed = {
+	       original_tag = SOV
+	    }
+	    available = {
+	       OR = {
+	          NOT = {
+	             SOV = {
+	                has_war_with = UKR 
+	             }
+	          }
+	          has_global_flag = GER_stubborn_sov
+	       }
+	    }
+	    activation = {
+           has_global_flag = GER_ukraine_demands
+           SOV = {
+              has_war_with = UKR 
+           }
+	    }
+	    is_good = no 
+	    days_mission_timeout = 7
+        fire_only_once = yes 
+        timeout_effect = {
+           GER = {
+              add_to_faction = UKR 
+              declare_war_on = { target = SOV type = annex_everything }
+           }
+           add_stability = -0.1
+           add_war_support = 0.1
+        }
+        complete_effect = {
+           add_war_support = -0.05
+        }
+	}
+	SOV_white_peace_ukr = {
+	    icon = GFX_decision_generic_nationalism
+	    allowed = {
+	       original_tag = SOV
+	    }
+        visible = {
+	       has_global_flag = GER_ukraine_demands
+              SOV = {
+                 has_war_with = UKR  
+              }
+            NOT = {
+               has_global_flag = SOV_UKR_demands
+            }
+        }
+        ai_will_do = {
+	       factor = 10
+	    }
+        cost = 5
+        days_remove = 1
+        fire_only_once = yes 
+        remove_effect = {
+           hidden_effect = {
+              set_global_flag = SOV_UKR_white_peace
+           }
+           SOV = {
+              white_peace = UKR 
+              add_stability = -0.05
+              add_war_support = -0.1
+           }
+        }
+	}
+	SOV_peace_ukr = {
+	    icon = GFX_decision_generic_nationalism
+	    allowed = {
+	       original_tag = SOV
+	    }
+        visible = {
+	       has_global_flag = GER_ukraine_demands
+              SOV = {
+                 has_war_with = UKR  
+              }
+            NOT = {
+               has_global_flag = SOV_UKR_white_peace
+            }
+        }
+        ai_will_do = {
+	       factor = 25
+	    }
+        cost = 90
+        days_remove = 1
+        fire_only_once = yes 
+        remove_effect = {
+           hidden_effect = {
+              set_global_flag = SOV_UKR_demands
+           }
+           UKR = {
+              country_event = { id = soviet.34 hours = 3 }
+           }
+        }
 	}
 }

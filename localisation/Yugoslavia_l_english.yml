@@ -4,16 +4,6 @@
 yug.30.t:0 "The Kingdom of Yugoslavia"
 yug.30.d:0 "The Kingdom of Yugoslavia cam into being on the 13th of February 1922, following the annexation of Bosnia by Serbia. It proceeded to invade Croatia on the 3rd April, who were already defending a Hungarian attack. Croatia fell quickly, and the new Yugoslav forces initiated both skirmishes against the Hungarians in northern Croatia and partisan groups accross the country - the later often violently conducted by armed Serbian militias. Further border clashes occur between Yugoslav, Hungarian and Austrian troops, but Yugoslavia ultimatley failed to advance into Vojvodina or Slovenia, and only gained the southern part of the Istari peninsula. \nOn the 16th of August 1925, King Alexander agrees on a constitution with his provisional government, making Yugoslavia a unitary monarchy. Nationalist parties, especially the Croatian Peasant Party, gain large support in elections, but ultimately the Radical Party wins through slightly dubious means. Just months before the next elections in 1929, however, a Radical Party parliament member shoots dead two members of the Croatian Peasant Party and wound three further, including the party leader. Huge uprisings in the occupied territories occur, notably in Croatia, and a general strike occurs in these areas. In reaction, King Alexander suspends the constitution on the 6th January 1929, and enters a period of absolute dictatorship that brutally crushes the protests in Croatia. \nOn the 18th of March 1931, King Alexander announces a new constitution - giving the king emergency powers, the ability to appoint half of the upper house and direct control of the military. Any law could be passed with the support of just one of the two houses if the King approved of the law. \nKing Alexander was assassinate in Marseiller, France on the 9th of October 1934, by a radical nationalistic group. As per his will, Prince Paul took power as the cheif regent for the young Peter II. Prince-Regent Paul has proved more pragmatic that Alexander, and makes significantly less use of the exectutive powers laid out to him in the constitution. This doesn't mean they aren't available, however."
 yug.30.a:0 "God is with Prince-Regent Paul"
-## Question of Ethnicities ##
-# Puppeting #
-yug.1.t:0 "The Bosnian Question"
-yug.1.d:0 "We have decided on a process of decentralisation, and we have released the border zones. Now we must decide on the final step - do we continue decentralisation right down to puppeting Bosnia and changing our name back to Serbia, or do we stop our decentralisation efforts there - greatly hurting our political capital?"
-yug.1.a:0 "Yes, we will release Bosnia."
-yug.1.b:0 "No, we can't weaken ourselves that much."
-# Integration #
-
-# Serbian Dominance #
-
 ## Expansionism ##
 # Vojvodina #
 yug.16.t:0 "Yugoslvia Offers an Alliance"
@@ -91,65 +81,18 @@ yug.36.a:0 "Paul goes with the public opinion"
 yug.36.b:0 "The Prince appoints conservatives"
 
 ####focus####
-## Ethnic Questions ##
-YUG_ethnic_question:0 "A Matter of Ethnicities"
-YUG_ethnic_question_desc:0 "The problem is with our country - it's lack of unity - boils down to the wide difference in ethnic groups in Yugoslavia. We need to get our heads down and work out a solution, before the ethnic groups attempt to rise up..."
-YUG_look_south:0 "Look South"
-YUG_look_south_desc:0 "The first hurdle to cross, regradless of our approach, is Macedonia. Let us bind them to us!"
-# Enhanced Freedoms #
-YUG_enhanced_freedoms:0 "Enhanced Freedoms"
-YUG_enhanced_freedoms_desc:0 "One of the possible solutions is to release ethnic groups in puppet states. We are, in essence, creating the states we previously conquered, but hopefully they will be more nationalistic and enthusiastic to a local government rather than our glorious one here."
-YUG_banov_cro:0 "Banovina of Croatia"
-YUG_banov_cro_desc:0 "Croatia is the most troublesome of the once-states to exist within our borders. "
+### Emergency Stuff ###
+YUG_start_state_of_emergency:0 "Delcare a State of Emergency"
 
-YUG_bosnian_question:0 "The Bosnian Question"
-YUG_bosnian_question_desc:0 "Now we have created puppet states in Croatia and Montenegro, we must decide on what to do with the Bosnian lands. They are small enough to possibly directly integrate, or we could puppet them as well and declare ourselves the Kingdom of Serbia once again."
-# Freedoms / Integration Shared Part #
-YUG_rural_inf:0 "Rural Infastructure"
-YUG_rural_inf_desc:0 "Building up the existing rural infastructure networks will both help our construction & military deployment, and will also promote support in these areas."
-YUG_capital_rail:0 "Trans-Capital Railways"
-YUG_capital_rail_desc:0 "An ambitious project to create a railway line has been proposed to link the cities of Zagreb, Sarajevo and Podgorica together. Let's execute it!"
-YUG_croat_goods:0 "Croatian Goods"
-YUG_croat_goods_desc:0 "To further the integration process, we shall build some factories in Croatian lands. Hopefully the local populaton will think better of us."
-YUG_bos_steel:0 "Bosnian Steelworks"
-YUG_bos_steel_desc:0 "The industrial districts in Bosnia, especially Sarajevo, are developing well - however, with the right push we can specialise a small number of them to create steel, either from local or imported iron. This should reduce our reliance on foreign goods and increase our capacity to make arms for our men."
-YUG_alb_goods:0 "Albanian Factories"
-YUG_alb_goods_desc:0 "Albania is the most tricky to deal with, as they were annexed last. Hopefully these factories will be able to push them enough for us to finish our ethnic ambitions."
+YUG_form_emerg_council:0 "Form the Emergency Council"
 
-# Etnic Integration #
-YUG_ethnic_int:0 "Ethnic Integration"
-YUG_ethnic_int_desc:0 " A second possible solution to the ethnicity problem is in response to the opinion we can't just force our culture on the conquered territories, but equally we can't weaken ourselves by puppeting them. Let us choose the middle ground and attempt to integrate the ethnic groups into one Yugoslavian group."
-YUG_bos_focus:0 "Focus on Bosnia"
-YUG_bos_focus_desc:0 "The first target for our new integration scheme is Bosnia. The population is both ethnically and historically the closest to the Serbian population that dominates the governemnt, so they should theoretically be the easiest to successfully integrate - however, anything can happen."
-YUG_cro_focus:0 "Integrate Croatia"
-YUG_cro_focus_desc:0 "Next up on the list is the sizeable Croat population in our nothern lands. They make up significantly more of our total population than the Bosnians, so will be harder to integrate without a hitch. However, using the tactics we have learnt integrating the Bosnians we should have a smooth ride."
-YUG_mon_focus:0 "Draw Montenegro Closer"
-YUG_mon_focus_desc:0 "Of the heartlands, only one ethnic group remains to be integrated - the Montenegrins. We now have exensive experience behind us, so hopefully we can avoid any unrest and successfully bring Montenegro into the fold."
+YUG_emerg_compromise:0 "Compromise"
 
-# Serbian Dominance #
-YUG_serbian_dom:0 "Serbian Dominance"
-YUG_serbian_dom_desc:0 "Finally, there are some parts of the government that would prefer to retain the elite of all of Yugoslavia as Serbian, in response to the nationalistic threat in our conquered territories. This would probably fire up nationalistic movements in most of, if not all, the occupied territories - but is it a worth price to pay to retain exclusive power?"
-YUG_inc_cen:0 "Increased Centralisation"
-YUG_inc_cen:0 "Rather than increase the autonomy our borderlands enjoy, we must increase centralisation in reaction to growing ethnic tensions. It is only through this measure we can ensure that we retain power."
-YUG_serbify_bos:0 "Serbify Bosnia"
-YUG_serbify_bos_desc:0 "We must take decisive action to place Serbian officials incharge of all senior positions in the Bosnian area in order to take effective control of the region. Moreover, we shall enforce Serbian culture on the area, especially in the education sector. Through these measures we can both take control complete control of local industry and have significantly better access to the recruitable populations of Bosnia."
-YUG_ser_resources:0 "Serbian Resources"
-YUG_ser_resources_desc:0 "We must develop industry in Belgrade to significantly enhance the steel producation process. More steel will make us more guns and bullets - cruitial weapons in putting down any potential revolts!"
-YUG_force_cro:0 "Force Croatia into the Fold"
-YUG_force_cro_desc:0 "In light of our actions in Bosnia, Croatia has begun to resist our orders. We must again take action, as we did in Bosnia, to ensure our control and access to the local manpower. However, the population is significantly larger, so we anticipate the highest possible resistance to our actions."
-YUG_bos_mil_goods:0 "Bosnian Military Goods"
-YUG_bos_mil_goods_desc:0 "Now we have seized control, albeit percariously, we should develop the existing military complexes in Bosnia. Barring open revolt, they should be safe from enemy hands."
-YUG_crush_mon:0 "Crush Montenegro"
-YUG_crush_mon_desc:0 "The final hurdle remains - Montenegro. We must seize total control there as well, and hope they don't get any funny ideas..."
-the_yug_line:0 "The Yugoslav Line"
-the_yug_line_desc:0 "A series of railway networks must be built so we can swiftly ferry goods and men around the contry in response to any uprisings. Hoepfully this shall ensure our regieme's stability through this potentially troubled time."
-YUG_pacify_albania:0 "Pacify Albania"
-YUG_pacify_albania_desc:0 "Albania, our most recent conquest, must now recieve the same treatment as the rest of the country. With nationalistic sentiment already running high in Albania, they may be trouble."
+YUG_emerg_revenge:0 "Revenge"
 
-# Communist Alternative #
-YUG_fourth_option:0 "The Leftist Coalitions's Plan"
+YUG_restore_constitution:0 "Restore the Suspended Constitution"
 
-## Expansion ##
+### Expansion ###
 YUG_outwards_vision:0 "Outwards Vision"
 
 # Vojvodina #
@@ -177,6 +120,8 @@ YUG_fourth_option:0 "Promise of a Socialist Slav State"
 
 YUG_executive_power:0 "The Kings's Emergency Powers"
 YUG_executive_power_desc:0 "A new constitution was created in 1931, after two years of King Alexander's direct rule. The new constitution gives, amongst other things, emergency powers to the King, his personal appointment of half of the upper house and direct control of the military. Whilst Prince Paul, the Prince Regent for Prince Paul II, has been reluctant to use these provisions, there is no way to say for certain he won't in the face of political instability, or even something he just doesn't like."
+YUG_paul_rule:0 "Prince Paul's Direct Rule"
+YUG_paul_rule_desc:0 "Following the tragic death of King Alexander, Prince-Regent Paul has deemed it neccesary to take direct rule of the country form now on, so he can keep a tight lid on any independence groups seeking to assassinate him."
 
 YUG_expansionist:0 "Expansionist Visions"
 
@@ -205,10 +150,10 @@ montenegro_unrest:0 "This will cause severe unrest among the Montenegrins, possi
 croatian_unrest:0 "This will cause severe unrest among the Croatian people, possibly leading to a future uprising depending on the actions we take"
 albanian_unrest:0 "This will cause severe unrest among the Albanian people, possibly leading to a future uprising depending on the actions we take"
 YUG_leftists_win:0 "The Leftist Coalition is in control of the legislature"
-YUG_looking_outwards:0 "We must have at least decided on a policy to deal with internal ethnic tensions"
+YUG_looking_outwards:0 "Elections must have taken place"
 YUG_slovenian_uprisings:0 "We will spark uprisings in Slovenia and back the revolt with our military, if we must"
 go_war_alone:0 "It is recomended to fight this war without calling in Germany"
-completed_first_reconquest:0 "We have completed our reconquest of both Vojvodina and Slovenia, and West Vojvodina, Vojvodina, Slovenia and Istria must all be owned by us or a puppet."
+completed_first_reconquest:0 "We have completed our reconquest of both Vojvodina and Slovenia, such that West Vojvodina, Vojvodina, Slovenia and Istria must all be owned by us or a puppet."
 emergency_election:0 "This focus will auto-complete if emergency elections are held"
 YUG_1939_elections_held:0 "This focus will auto-complete when the planned 1939 election occurs"
 YUG_leftists_won:0 "The Leftist Coalition has won the election and now controls the legislature"
@@ -216,5 +161,13 @@ YUG_liberals_won:0 "The Democratic Party has won the election and now controls t
 YUG_conservatives_won:0 "The People's Radical Party has won the election and now controls the legislature"
 YUG_reactionary_control:0 "Prince Paul is in direct control and is using emergency powers for the forseeable future"
 YUG_enhanced_freedoms_req:0 "The Democratic Party must be in control of the legislature following an election"
-YUG_ethnic_int_req:0 "The People's Radical Party must be in control of the legislature following an election"
-YUG_ser_dom_req:0 "Reactionary elements are in control of the government following an election"
+YUG_ethnic_int_req:0 "The People's Radical Party or the Democratic Party must be in control of the legislature following an election"
+YUG_ser_dom_req:0 "The People's Radical Party is in control of the legislature following an election or Reactionary elements have seized power"
+YUG_state_of_emergency:0 "This focus will become available in emergency conditions"
+YUG_state_of_emergency_effect:0 "A state of emergency will be delcared, temporarily suspending the constitution and giving the monarch complete executive power."
+YUG_emergency_decisions:0 "Enables §Hdecisions§H to bring the country back into order."
+YUG_emerg_comp:0 "We will commit to a moderate policy - only pushing as far as we need to - and promise to restore democracy once the situation is delt with"
+YUG_emerg_rev:0 "We will commit to an extreme hardline policy. This will severly anger the opposition, but this is the price we must pay for revenge!"
+YUG_king_decision:0 "This focus will be auto-completed when the monarch has made his decisions on the election."
+YUG_restore_democracy:0 "We will organise emergency elections to take place in a short while"
+YUG_emerg_situation_ended:0 "The emergency situation has ended"

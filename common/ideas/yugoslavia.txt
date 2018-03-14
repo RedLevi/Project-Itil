@@ -43,6 +43,23 @@ ideas = {
 				modifier = {
 					stability_factor = -0.05
 					political_power_gain = -0.4
+					reactionarism_drift = 0.02
+				}
+			}
+
+			YUG_paul_rule = {
+				allowed = {
+					original_tag = YUG
+					always = no
+				}
+				allowed_civil_war = {
+					always = no
+				}
+				removal_cost = -1
+				picture = GFX_idea_HUN_hungarian_monarchy
+				modifier = {
+					stability_factor = -0.1
+					political_power_gain = -0.1
 					reactionarism_drift = 0.05
 				}
 			}

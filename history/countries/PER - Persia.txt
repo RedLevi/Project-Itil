@@ -71,9 +71,9 @@ create_country_leader = {
 #}
 
 create_country_leader = {
-	name = "Mirza Kuchik Khan"
+	name = "Haydar Khan Amo-oghli"
 	desc = "POLITICS_SOLEYMAN_MIRZA_ESKANDARI_DESC"
-	picture = "gfx/leaders/PER/Mirza_Khan.dds"
+	picture = "gfx/leaders/PER/Haydar_Khan.dds"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {

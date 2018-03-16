@@ -35,10 +35,7 @@ set_technology = {
 }
 
 
-add_ideas = {
-	open_society_law
-	collectivized_economy_law
-}	
+	
 
 set_convoys = 200
 set_stability = 0.6

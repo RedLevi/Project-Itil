@@ -37,12 +37,13 @@ set_technology = {
 }
 
 
-
+country_event = { id = ame.6 days = 1 }
 set_convoys = 400
 set_stability = 0.6
 
 add_ideas = AME_great_depression
 add_ideas = AME_national_disunity
+
 set_politics = {
 
 	parties = {

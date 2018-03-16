@@ -98,8 +98,7 @@ country_event = {#introduction
 	}
 	option = {
 		name = ame.6.a 
-		add_stability = -0.01
-		hidden_effect = { country_event = { id = ame.7 days = 25 } }
+		hidden_effect = { country_event = { id = ame.7 days = 1 } }
 	}
 }
 
@@ -110,8 +109,7 @@ country_event = {#American military faction
 	is_triggered_only = yes 
 	option = {
 		name = ame.7.a 
-		add_stability = -0.01
-		hidden_effect = { country_event = { id = ame.8 days = 15 } }
+		hidden_effect = { country_event = { id = ame.8 days = 1 } }
 	}
 }
 
@@ -122,8 +120,7 @@ country_event = {#American Industrial Committee
 	is_triggered_only = yes 
 	option = {
 		name = ame.8.a 
-		add_stability = -0.01
-		hidden_effect = { country_event = { id = ame.9 days = 15 } }
+		hidden_effect = { country_event = { id = ame.9 days = 1 } }
 	}
 }
 
@@ -134,8 +131,7 @@ country_event = {#KKK
 	is_triggered_only = yes 
 	option = {
 		name = ame.9.a 
-		add_stability = -0.01
-		hidden_effect = { country_event = { id = ame.10 days = 15 } }
+		hidden_effect = { country_event = { id = ame.10 days = 1 } }
 	}
 }
 
@@ -378,4 +374,31 @@ country_event = {#No peace with the federalists
 	}
 }
 
-####American constitution events###
+####political events###
+country_event = {
+
+	id = ame.16 
+	title = ame.16.t 
+	desc = ame.16.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.16.a 
+		361 = {
+		
+			damage_building = { type = industrial_complex damage = 0.6 }
+			damage_building = { type = industrial_complex damage = 0.5 }
+			damage_building = { type = infrastructure damage = 0.3 }
+		
+		}
+		358 = {
+		
+			damage_building = { type = arms_factory damage = 0.8 }
+			damage_building = { type = industrial_complex damage = 0.3 }
+			damage_building = { type = infrastructure damage = 0.2 }
+		
+		}
+		
+		add_stability = -0.05
+	} 
+
+}

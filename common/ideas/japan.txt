@@ -2,8 +2,10 @@ ideas = {
 
 	country = {
 	
-	    hirohito = {
+	    hirohito_idea = {
 		
+			picture = jap_hirohito
+			
 			available = {
 			
 				NOT = { has_government = communism }

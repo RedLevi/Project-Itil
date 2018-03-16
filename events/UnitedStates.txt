@@ -614,16 +614,12 @@ country_event = {#economic direction
 	option = {#nationalize and industrialize 
 		name = usa.26.a 
 		ai_chance = { factor = 50 }
-		swap_ideas = { remove_idea = mixed_economy_law add_idea = nationalized_economy_law }
-		add_ideas = USA_two_year_plan
 		hidden_effect = { country_event = { id = usa.27 days = 120 } }
 		hidden_effect = { country_event = { id = usa.30 days = 730 } }
 	}
 	option = {#collectivize
 		name = usa.26.b 
 		ai_chance = { factor = 50 }
-		swap_ideas = { remove_idea = mixed_economy_law add_idea = collectivized_economy_law }
-		add_ideas = USA_market_socialism
 		hidden_effect = { country_event = { id = usa.31 days = 150 } }
 		hidden_effect = { country_event = { id = usa.33 days = 900 } }
 	}
@@ -829,40 +825,6 @@ country_event = {#economic recovery
 	}
 }
 
-country_event = {#Issue on democracy 
-	id = usa.34 
-	title = usa.34.t 
-	desc = usa.34.d 
-	fire_only_once = yes 
-	trigger = {
-		tag = USA 
-		has_country_flag = USA_sinclair 
-	}
-	mean_time_to_happen = { days = 70 }
-	option = {#free society 
-		name = usa.34.a 
-		ai_chance = { factor = 25 }
-		add_ideas = open_society_law 
-		add_stability = 0.02 
-	}
-	option = {#limited freedom 
-		name = usa.34.b 
-		ai_chance = { factor = 25 }
-		add_ideas = limited_freedom_law
-	} 
-	option = {#authoritarian 
-		name = usa.34.c 
-		ai_chance = { factor = 25 }
-		add_ideas = authoritarian_state_law
-		add_stability = -0.02 
-	}
-	option = {#totalitarian 
-		name = usa.34.e 
-		ai_chance = { factor = 25 }
-		add_ideas = totalitarian_state_law
-		add_stability = -0.05 
-	}
-}
 
 country_event = {#transform to communism
 	id = usa.35 
@@ -872,7 +834,7 @@ country_event = {#transform to communism
 	trigger = {
 		tag = USA 
 		has_country_flag = USA_sinclair
-		has_government = communism
+		has_government = socialism
 		date > 1938.1.1 
 	}
 	option = {#do it 

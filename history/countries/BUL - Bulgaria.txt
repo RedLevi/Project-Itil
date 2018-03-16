@@ -4,6 +4,7 @@ oob = "BUL"
 
 add_ideas = {
 	limited_conscription
+	ferdinand_I_idea
 }
 
 set_technology = {
@@ -18,7 +19,6 @@ set_technology = {
 
 
 set_convoys = 5
-add_ideas = ferdinand_I_idea
 
 set_politics = {
 

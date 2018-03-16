@@ -201,6 +201,8 @@ JAP_militant_labor:0 "Militant labor unions"
 JAP_economic_cooperation_idea:0 "Bureau For Economic Cooperation"
 JAP_peoples_revolution_idea:0 "Socialist uprisings!"
 JAP_Soviet_Agents_idea:0 "Communist Dissidents"
+hirohito_idea:0 "The Showa Emperor"
+hirohito_idea_desc:0 "The Showa Emperor, Hirohito, ascended to the throne on the 25th of December 1926, and is the 124th emperor of Japan. He holds a mostly symbolic role and has little influence in politics, but he remains a powerful figure in the hearts and minds of the people."
 ####tooltips####
 JAP_reformist_victory:0 "Shakai Minshuto dominates the coalition"
 JAP_revolutionary_victory:0 "Rodonominto dominates the coalition"

@@ -2,8 +2,8 @@ ideas = {
 			
 	country = {
 	
-	    ferdinand_I = {
-		
+	    ferdinand_I_idea = {
+			picture = ferdinand_I
 			available = {
 			
 				NOT = { has_government = communism }

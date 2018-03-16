@@ -476,7 +476,7 @@ Kirov_General_Secretary = {
    removal_cost = -1
 
    modifier = {
-      unity_weekly = 0.001
+      stability_weekly = 0.001
    }
 }
 }

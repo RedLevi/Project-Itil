@@ -27,7 +27,7 @@ ideas = {
 					conscription = 0.005
 					military_leader_cost_factor = -0.5
 					special_forces_cap = 0.03
-					command_power_daily = 0.3 
+					
 
 			}
 		

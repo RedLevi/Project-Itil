@@ -98,7 +98,7 @@ focus_tree = {
 		
 		id = AME_mil_economic_focus
 		icon = GFX_goal_generic_build_tank 
-		x = 5 
+		x = 2 
 		y = 3
 		cost = 10	 
 		available_if_capitulated = no
@@ -114,7 +114,7 @@ focus_tree = {
 		
 		id = AME_mil_industry_focus1
 		icon = GFX_goal_generic_construct_mil_factory 
-		x = 4 
+		x = 1 
 		y = 4
 		cost = 10	 
 		available_if_capitulated = no
@@ -189,7 +189,7 @@ focus_tree = {
 		
 		id = AME_mil_industry_focus2
 		icon = GFX_goal_generic_construct_mil_factory 
-		x = 5 
+		x = 2
 		y = 5
 		cost = 10	 
 		available_if_capitulated = no
@@ -296,7 +296,7 @@ focus_tree = {
 		
 		id = AME_mil_infrastructure_focus
 		icon = GFX_goal_generic_construct_infrastructure 
-		x = 3
+		x = 0
 		y = 5
 		cost = 10	 
 		available_if_capitulated = no
@@ -329,7 +329,7 @@ focus_tree = {
 		
 		id = AME_mil_economic_end_focus
 		icon = GFX_goal_generic_construct_civ_factory 
-		x = 4
+		x = 1
 		y = 6
 		cost = 10	 
 		available_if_capitulated = no
@@ -345,7 +345,7 @@ focus_tree = {
 		
 		id = AME_mil_industry_focus3
 		icon = GFX_goal_generic_construct_mil_factory 
-		x = 6 
+		x = 3 
 		y = 7
 		cost = 10	 
 		available_if_capitulated = no
@@ -423,7 +423,7 @@ focus_tree = {
 		
 		id = AME_youth_camp_focus
 		icon = GFX_goal_generic_axis_build_infantry 
-		x = 7
+		x = 4
 		y = 3
 		cost = 10	 
 		available = { has_war = no }
@@ -439,14 +439,14 @@ focus_tree = {
 		
 		id = AME_military_education_focus
 		icon = GFX_focus_generic_little_entente 
-		x = 6
+		x = 3
 		y = 4
 		cost = 10	 
 		available = { has_war = no }
 		available_if_capitulated = no
 		prerequisite = { focus = AME_youth_camp_focus }
 		completion_reward = {
-			custom_effeadct_tooltip = AME_mil_economic_choice
+			custom_effect_tooltip = AME_mil_economic_choice
 		}
 	
 	}
@@ -455,7 +455,7 @@ focus_tree = {
 		
 		id = AME_military_citizenship
 		icon = GFX_focus_CZE_german_puppet 
-		x = 8
+		x = 5
 		y = 4
 		cost = 10	 
 		available = { has_war = no }
@@ -471,7 +471,7 @@ focus_tree = {
 		
 		id = AME_military_research
 		icon = GFX_focus_research 
-		x = 7
+		x = 4
 		y = 5
 		cost = 10	 
 		
@@ -479,6 +479,60 @@ focus_tree = {
 		prerequisite = { focus = AME_military_citizenship focus = AME_military_education_focus }
 		completion_reward = {
 			add_research_slot = 1 
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_military_empire
+		icon = GFX_goal_support_fascism 
+		x = 8
+		y = 3
+		cost = 10	 
+		
+		available_if_capitulated = no
+		prerequisite = { focus = AME_mil_path_focus }
+		completion_reward = {
+			add_named_threat = { threat = 3 name = AME_expansionism_threat }
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_military_MEX_focus
+		icon = GFX_goal_generic_military_sphere 
+		x = 7
+		y = 4
+		cost = 10	 
+		
+		available_if_capitulated = no
+		prerequisite = { focus = AME_military_empire }
+		completion_reward = {
+			reverse_add_opinion_modifier = { target = MEX modifier = AME_agression }
+			custom_effect_tooltip = AME_mil_economic_choice
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_dealing_with_federalists
+		icon = GFX_goal_support_democracy 
+		x = 10
+		y = 3
+		cost = 10	 
+		available = {
+			NOT = {
+				has_idea = AME_great_depression
+				has_idea = AME_great_depression_2
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = AME_mil_path_focus focus = AME_ford_path_focus }
+		completion_reward = {
+			custom_effect_tooltip = AME_mil_economic_choice
 		}
 	
 	}

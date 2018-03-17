@@ -9,7 +9,7 @@
 
 communist_peace = {
 	enable = {
-		has_government = communism
+		always = yes
 	}
 
 	annex_randomness = 0 #200
@@ -54,7 +54,21 @@ communist_peace = {
 	# ROOT = Taker, FROM = Liberated
 	liberate = { #Liberate might be buggy and might require country-specific workarounds...
 		factor = 200 
-
+		
+		modifier = {
+			   factor = 0
+			   any_country = {
+				is_in_faction_with = ROOT
+				is_puppet = no
+				FROM = {
+					OR = {
+						is_claimed_by = PREV
+						is_core_of = PREV
+					}
+				}
+			}
+		}
+		
 		modifier = {
 			factor = 0
 
@@ -111,11 +125,17 @@ communist_peace = {
 			}
 		}
 		modifier = {
-		   factor = 0
-		   any_owned_state = {
-		      is_claimed_by = any_allied_country
-			  is_core_of = any_allied_country
-		   }
+			   factor = 0
+			   any_country = {
+				is_in_faction_with = ROOT
+				is_puppet = no
+				FROM = {
+					OR = {
+						is_claimed_by = PREV
+						is_core_of = PREV
+					}
+				}
+			}
 		}
 	}
 	# ROOT = Taker, FROM = State

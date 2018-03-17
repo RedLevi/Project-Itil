@@ -127,3 +127,261 @@ AME_military_academy = {
 	}
 
 }
+
+AME_federals_decisions = {
+
+	AME_border_incident_decision = {
+	
+		icon = GFX_decision_generic_operation
+		available = { has_completed_focus = AME_mil_path_focus }
+		visible = {
+		
+			NOT = { has_war_with = USA }
+			has_completed_focus = AME_mil_path_focus
+		
+		}
+		 ai_will_do = {
+	       factor = 10
+		   
+	    }
+		cost = 50    
+		days_remove = 6
+		fire_only_once = yes	
+		war_with_on_remove = USA 
+		remove_effect = {
+	       AME = {
+				add_manpower = -500 	
+				add_named_threat = { threat = 2 name = border_incident }
+	       }
+			USA = {
+				country_event = { id = ame.2 }
+			}
+		   
+	    }
+	
+	}
+	
+	AME_federal_peace_decision = {
+	
+		icon = GFX_decision_generic_nationalism
+		available = { 
+			has_completed_focus = AME_ford_path_focus 
+			NOT = { has_war_with = USA }
+			USA = { 
+				exists = yes 
+				has_government = conservatism
+			}
+		}
+		visible = {
+			
+			has_completed_focus = AME_ford_path_focus
+			NOT = { has_country_flag = AME_war_ford_federal }
+		
+		}
+		 ai_will_do = {
+	       factor = 10
+		   
+	    }
+		cost = 100    
+		days_remove = 10
+		fire_only_once = yes	
+		remove_effect = {
+	       USA = { country_event = { id = ame.13 days = 3 } }
+	    }
+		complete_effect  = {
+			set_country_flag = AME_peace_ford_federal
+		}
+	
+	}
+	
+	AME_federal_war_ford = {
+	
+		icon = GFX_decision_generic_operation
+		available = { 
+			has_completed_focus = AME_ford_path_focus 
+			NOT = { has_war_with = USA }
+		}
+		visible = {
+			
+			has_completed_focus = AME_ford_path_focus
+			NOT = { has_country_flag = AME_peace_ford_federal }
+		
+		}
+		 ai_will_do = {
+	       factor = 5
+		   
+	    }
+		war_with_on_remove = USA 
+		cost = 40    
+		days_remove = 10
+		fire_only_once = yes	
+		remove_effect = {
+	       declare_war_on = { target = AME type = civil_war }
+	    }
+		complete_effect  = {
+			add_stability = -0.01
+			set_country_flag = AME_war_ford_federal
+		}
+	
+	}
+
+}
+AME_MEX_decisions = {
+
+	AME_claim_MEX_states = {
+
+		icon = GFX_decision_generic_nationalism
+		available = { 
+			NOT = { is_in_faction_with = MEX }
+			NOT = { has_war_with = MEX }
+		}
+		visible = {
+			
+			NOT = { is_in_faction_with = MEX }
+			NOT = { MEX = { is_subject_of = AME } }
+		
+		}
+		ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 0
+	          has_war = yes
+	       }
+		    modifier = {
+	          factor = 2
+	          has_country_flag = AME_fortified_MEX_border
+	       }
+	    }
+		
+		cost = 60    
+		days_remove = 15
+		fire_only_once = yes	
+		remove_effect = {
+			add_state_claim = 479
+			add_state_claim = 480 
+			add_state_claim = 482
+			add_state_claim = 483 
+			add_state_claim = 484 
+	    }
+		complete_effect = {
+			set_country_flag = AME_claimed_MEX_states
+		}
+		
+	}
+	
+	AME_war_MEX = {
+		
+		icon = GFX_decision_generic_operation
+		available = { 
+			NOT = { is_in_faction_with = MEX }
+			NOT = { has_war_with = MEX }
+		}
+		visible = {
+			
+			NOT = { is_in_faction_with = MEX }
+			NOT = { MEX = { is_subject_of = AME } }
+		
+		}
+		  ai_will_do = {
+	       factor = 5
+		    modifier = {
+	          factor = 0
+	          has_war = yes
+	       }
+		   modifier = {
+	          factor = 0.5
+	          NOT = { has_country_flag = AME_claimed_MEX_states }
+	       }
+		    modifier = {
+	          factor = 2
+	          has_country_flag = AME_fortified_MEX_border
+	       }
+	    }
+		war_with_on_remove = MEX 
+		cost = 70    
+		days_remove = 10
+		fire_only_once = yes	
+		remove_effect = {
+	       declare_war_on = { target = MEX type = annex_everything }
+	    }
+		
+	}
+	
+	AME_fortify_MEX_border = {
+		
+		icon = GFX_decision_generic_construction
+		available = { 
+			NOT = { has_war_with = MEX }
+			controls_state = 375
+		}
+		visible = {
+			
+			 has_completed_focus = AME_military_MEX_focus
+		
+		}
+		 ai_will_do = {
+	       factor = 10
+	    }
+		cost = 25    
+		days_remove = 85
+		fire_only_once = yes	
+		remove_effect = {
+	       375 = {
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 10740
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 10894
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 1954
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 5038
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 12728
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 2019
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 5061
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 12369
+									instant_build = yes
+				}
+		   } 
+	    }
+		complete_effect  = {
+			set_country_flag = AME_fortified_MEX_border
+			add_stability = 0.01 
+		}
+		
+	}
+
+}

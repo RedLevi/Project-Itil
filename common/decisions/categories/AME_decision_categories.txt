@@ -1,0 +1,18 @@
+AME_mil_economic = {
+   icon = GFX_decision_generic_political_discourse
+   allowed = {
+       tag = AME
+   }
+   visible = {
+      has_completed_focus = AME_mil_path_focus
+   }
+}
+AME_military_academy = {
+   icon = GFX_decision_generic_army_support
+   allowed = {
+       tag = AME
+   }
+   visible = {
+      has_completed_focus = AME_mil_path_focus
+   }
+}

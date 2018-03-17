@@ -1,6 +1,367 @@
 ideas = {
 
 	country = {
+		
+		AME_military_citizenship_idea = {
+		
+			picture = generic_manpower_bonus
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+					stability_factor = -0.025
+					war_support_factor = 0.05 
+					conscription = 0.005
+					military_leader_cost_factor = -0.5
+					special_forces_cap = 0.03
+					command_power_daily = 0.3 
+
+			}
+		
+		}
+		
+		AME_innovative_officers_idea = {
+		
+			picture = jap_supremacy_of_will
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			research_bonus = { land_doctrine = 0.1 }
+			research_bonus = { air_doctrine = 0.1 }
+			research_bonus = { naval_doctrine = 0.1 }
+			
+			modifier = {
+				army_leader_start_level = 1
+			}
+				
+		}
+		
+		AME_loyal_officers_idea = {
+		
+			picture = generic_army_war_college
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+					stability_factor = 0.025
+					army_morale_factor = 0.15  
+				
+			}
+		
+		}
+		
+		AME_youth_camp_idea = {
+		
+			picture = generic_infantry_bonus
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+					war_support_factor = 0.05 
+					training_time_factor = -0.1 
+				
+			}
+		
+		}
+		
+		AME_cooperated_markets = {
+		
+			picture = generic_production_bonus
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+					industrial_capacity_factory = 0.05
+				
+			}
+		
+		}
+		
+		AME_nationalized_markets = {
+		
+			picture = generic_production_bonus
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+					industrial_capacity_factory = 0.1
+					consumer_goods_factor = 0.075
+				
+			}
+		
+		}
+		
+		AME_mil_economic_idea = {
+		
+			picture = generic_production_bonus
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+					production_speed_arms_factory_factor = 0.5
+					production_speed_industrial_complex_factor = -0.5
+				
+			}
+		
+		}
+		
+		AME_purge_end = {
+		
+			picture = triumphant_will
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+					war_support_factor = 0.15
+				
+			}
+		
+		}
+		
+		AME_purged_officers = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				planning_speed = -0.15 
+				army_org = -0.15
+				army_morale_factor = -0.05 
+			}
+			research_bonus = { land_doctrine = -0.25 }
+			research_bonus = { air_doctrine = -0.25 }
+			research_bonus = { naval_doctrine = -0.25 }
+		
+		}
+		
+		AME_union_purge = {
+		
+			picture = FRA_factory_strikes
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				industrial_capacity_factory = -0.1 
+				local_resources_factor = -0.2 
+				production_speed_buildings_factor = -0.5 
+				consumer_goods_factor = 0.1 
+				industry_repair_factor = -0.5 
+			
+			}
+		
+		}
+		
+		AME_intellect_purge = {
+		
+			picture = ENG_the_war_to_end_all_wars
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				research_time_factor = 0.075
+			
+			}
+		
+		}
+		
+		AME_no_admins_idea = {
+		
+			picture = FRA_matignon_agreements
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				political_power_gain = -0.3
+			
+			}
+		
+		}
+		
+		AME_great_purge_idea = {
+		
+			picture = trotskyite_plot
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				MONTHLY_POPULATION = -0.015
+				conservatism_drift = -0.15
+				liberalism_drift = -0.2
+				socialism_drift = -0.25 
+				communism_drift = -0.3 
+			
+			}
+		
+		}
 	
 		AME_great_depression_2 = {
 		
@@ -22,235 +383,13 @@ ideas = {
 			
 			modifier = {
 			
-				consumer_goods_factor = 0.125 
-				industrial_capacity_factory = -0.125
+				consumer_goods_factor = 0.1 
+				industrial_capacity_factory = -0.1
 			
 			}
 		
 		}
 	
-		AME_int_ford_idea = {
-		
-			picture = ROM_king_carol_ii_hedonist
-			
-			available = {
-			
-				always = yes
-
-			}
-			
-			allowed_civil_war = {
-			
-				always = yes 
-			
-			}
-			
-			removal_cost = -1 
-			
-			modifier = {
-			 
-				stability_factor = 0.2 
-				political_power_gain = 0.1
-				consumer_goods_factor = 0.02 
-			
-			}
-			
-		}
-	
-		AME_int_party_idea = {
-		
-			picture = generic_fascism_drift_2
-			
-			available = {
-			
-				always = yes
-
-			}
-			
-			allowed_civil_war = {
-			
-				always = yes 
-			
-			}
-			
-			removal_cost = -1 
-			
-			modifier = {
-			 
-				stability_factor = 0.1 
-				political_power_gain = 0.35 
-				army_core_attack_factor = 0.1 
-				army_core_defence_factor = 0.1 
-			
-			}
-		
-		}
-	
-		AME_int_KKK_idea = {
-		
-			picture = ENG_the_war_to_end_all_wars
-			
-			available = {
-			
-				always = yes
-
-			}
-			
-			allowed_civil_war = {
-			
-				always = yes 
-			
-			}
-			
-			removal_cost = -1 
-			
-			modifier = {
-			 
-				stability_factor = 0.05 
-				land_reinforce_rate = 0.1 
-			
-			}
-		
-		}
-	
-		AME_int_war_idea = {
-		
-			picture = generic_manpower_bonus
-			
-			available = {
-			
-				always = yes
-
-			}
-			
-			allowed_civil_war = {
-			
-				always = yes 
-			
-			}
-			
-			removal_cost = -1 
-			
-			modifier = {
-			 
-				stability_factor = 0.1 
-				conscription = 0.15
-			
-			}
-		
-		}
-		
-		AME_eco_ford_idea = {
-		
-			picture = generic_foreign_capital
-			
-			available = {
-			
-				always = yes
-
-			}
-			
-			allowed_civil_war = {
-			
-				always = yes 
-			
-			}
-			
-			removal_cost = -1 
-			
-			modifier = {
-			 
-				consumer_goods_factor = -0.05
-				production_speed_industrial_complex_factor = 0.035 
-				political_power_gain = -0.02 
-			
-			}
-		
-		}
-	
-		AME_eco_party_idea = {
-		
-			picture = generic_flexible_foreign_policy
-			
-			available = {
-			
-				always = yes
-
-			}
-			
-			allowed_civil_war = {
-			
-				always = yes 
-			
-			}
-			
-			removal_cost = -1 
-			
-			modifier = {
-			
-				industrial_capacity_factory = 0.05 
-				consumer_goods_factor = -0.01
-				stability_factor = 0.035 
-			
-			}
-		
-		}
-	
-		AME_eco_KKK_idea = {
-		
-			picture = generic_production_bonus
-			
-			available = {
-			
-				always = yes
-
-			}
-			
-			allowed_civil_war = {
-			
-				always = yes 
-			
-			}
-			
-			removal_cost = -1 
-			
-			modifier = {
-			
-				production_speed_buildings_factor = 0.3 
-				consumer_goods_factor = -0.02
-				research_time_factor = 0.025 
-				stability_factor = -0.05 
-			
-			}
-			
-		}
-		AME_eco_war_idea = {
-		
-			picture = generic_license_production
-			
-			available = {
-			
-				always = yes
-
-			}
-			
-			allowed_civil_war = {
-			
-				always = yes 
-			
-			}
-			
-			removal_cost = -1 
-			
-			modifier = {
-			
-				production_speed_arms_factory_factor = 0.15 
-				production_speed_industrial_complex_factor = -0.1 
-				conversion_cost_civ_to_mil_factor = -0.2 
-			
-			}
-		
-		}
 	
 		AME_great_depression = {
 		

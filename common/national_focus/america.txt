@@ -17,7 +17,7 @@ focus_tree = {
 		
 		id = AME_internal_KKK_focus 
 		icon = GFX_focus_generic_strike_at_democracy2 
-		x = 10 
+		x = 12 
 		y = 0 
 		cost = 5	 
 		available_if_capitulated = no
@@ -28,5 +28,459 @@ focus_tree = {
 		}
 	
 	} 
+	
+	focus = {
+		
+		id = AME_internal_party_focus 
+		icon = GFX_goal_generic_secret_weapon 
+		x = 8 
+		y = 0 
+		cost = 5	 
+		available_if_capitulated = no
+		mutually_exclusive = { focus = AME_internal_KKK_focus }
+		completion_reward = {
+			add_stability = 0.01 
+			country_event = { id = ame.17 } 
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_great_purge_focus
+		icon = GFX_focus_generic_strike_at_democracy3 
+		x = 10 
+		y = 1 
+		cost = 25	 
+		available_if_capitulated = no
+		prerequisite = { focus = AME_internal_party_focus focus = AME_internal_KKK_focus }
+		completion_reward = {
+			country_event = { id = ame.25 }			
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_mil_path_focus
+		icon = GFX_focus_generic_military_mission 
+		x = 9 
+		y = 2 
+		cost = 10	 
+		available_if_capitulated = no
+		prerequisite = { focus = AME_great_purge_focus }
+		mutually_exclusive = { focus = AME_ford_path_focus  }
+		completion_reward = {
+			set_country_flag = AME_mil_path 	
+			add_war_support = 0.05 
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_ford_path_focus
+		icon = GFX_focus_generic_self_management 
+		x = 11 
+		y = 2 
+		cost = 10	 
+		available_if_capitulated = no
+		prerequisite = { focus = AME_great_purge_focus }
+		mutually_exclusive = { focus = AME_mil_path_focus  }
+		completion_reward = {
+			set_country_flag = AME_ford_path 	
+			add_stability = 0.05 
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_mil_economic_focus
+		icon = GFX_goal_generic_build_tank 
+		x = 5 
+		y = 3
+		cost = 10	 
+		available_if_capitulated = no
+		prerequisite = { focus = AME_mil_path_focus }
+		completion_reward = {
+			add_ideas = AME_mil_economic_idea
+				add_tech_bonus = { bonus = 0.5 uses = 2 category = industry }
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_mil_industry_focus1
+		icon = GFX_goal_generic_construct_mil_factory 
+		x = 4 
+		y = 4
+		cost = 10	 
+		available_if_capitulated = no
+		prerequisite = { focus = AME_mil_economic_focus }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
+	
+	}
+	
+	focus = {
+		
+		id = AME_mil_industry_focus2
+		icon = GFX_goal_generic_construct_mil_factory 
+		x = 5 
+		y = 5
+		cost = 10	 
+		available_if_capitulated = no
+		prerequisite = { focus = AME_mil_industry_focus1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			swap_ideas = { remove_idea = AME_great_depression add_idea = AME_great_depression_2 }
+		}
+		
+	
+	}
+	
+	focus = {
+		
+		id = AME_mil_infrastructure_focus
+		icon = GFX_goal_generic_construct_infrastructure 
+		x = 3
+		y = 5
+		cost = 10	 
+		available_if_capitulated = no
+		available = { controls_state = 382 controls_state = 376 }
+		prerequisite = { focus = AME_mil_industry_focus1 }
+		completion_reward = {
+			382 = {
+			
+			add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			
+			}
+			376 = {
+			
+			add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			
+			}
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_mil_economic_end_focus
+		icon = GFX_goal_generic_construct_civ_factory 
+		x = 4
+		y = 6
+		cost = 10	 
+		available_if_capitulated = no
+		prerequisite = { focus = AME_mil_infrastructure_focus focus = AME_mil_industry_focus2 }
+		completion_reward = {
+			set_country_flag = AME_mil_decide_economy
+			custom_effect_tooltip = AME_mil_economic_choice
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_mil_industry_focus3
+		icon = GFX_goal_generic_construct_mil_factory 
+		x = 6 
+		y = 7
+		cost = 10	 
+		available_if_capitulated = no
+		prerequisite = { focus = AME_mil_industry_focus2 }
+		prerequisite = { focus = AME_mil_economic_end_focus }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			remove_ideas = AME_great_depression_2
+			
+		}
+		
+	}
+	
+	focus = {
+		
+		id = AME_youth_camp_focus
+		icon = GFX_goal_generic_axis_build_infantry 
+		x = 7
+		y = 3
+		cost = 10	 
+		available = { has_war = no }
+		available_if_capitulated = no
+		prerequisite = { focus = AME_mil_path_focus }
+		completion_reward = {
+			add_ideas = AME_youth_camp_idea
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_military_education_focus
+		icon = GFX_focus_generic_little_entente 
+		x = 6
+		y = 4
+		cost = 10	 
+		available = { has_war = no }
+		available_if_capitulated = no
+		prerequisite = { focus = AME_youth_camp_focus }
+		completion_reward = {
+			custom_effeadct_tooltip = AME_mil_economic_choice
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_military_citizenship
+		icon = GFX_focus_CZE_german_puppet 
+		x = 8
+		y = 4
+		cost = 10	 
+		available = { has_war = no }
+		available_if_capitulated = no
+		prerequisite = { focus = AME_youth_camp_focus }
+		completion_reward = {
+			add_ideas = AME_military_citizenship_idea
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_military_research
+		icon = GFX_focus_research 
+		x = 7
+		y = 5
+		cost = 10	 
+		
+		available_if_capitulated = no
+		prerequisite = { focus = AME_military_citizenship focus = AME_military_education_focus }
+		completion_reward = {
+			add_research_slot = 1 
+		}
+	
+	}
 			
 }

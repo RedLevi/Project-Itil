@@ -93,8 +93,7 @@ country_event = {#introduction
 	desc = ame.6.d 
 	fire_only_once = yes 
 	trigger = { 
-		tag = AME 
-		date > 1936.1.5
+		tag = AME
 	}
 	option = {
 		name = ame.6.a 
@@ -146,42 +145,6 @@ country_event = {#American Party
 	}
 }
 
-country_event = {#constitutional convention 
-	id = ame.11 
-	title = ame.11.t 
-	desc = ame.11.d 
-	fire_only_once = yes 
-	trigger = {
-	
-		tag = AME
-		OR = {
-		
-			has_completed_focus = AME_int_ford
-			has_completed_focus = AME_int_party
-			has_completed_focus = AME_int_KKK
-			has_completed_focus = AME_int_war 
-		
-		}
-	
-	} 
-	
-	mean_time_to_happen = { days = 10 }
-	
-	option = {#american party 
-		name = ame.11.a 
-		trigger = {
-		
-			OR = {
-				
-				has_country_flag = AME_dip_party_flag 
-				has_country_flag = AME_eco_party_flag 
-				has_country_flag = AME_int_party_flag
-				
-				}
-
-			
-			}
-		
 		
 		ai_chance = { factor = 25 }
 		add_stability = 0.05 
@@ -375,7 +338,7 @@ country_event = {#No peace with the federalists
 }
 
 ####political events###
-country_event = {
+country_event = { #Purge of the Americanists
 
 	id = ame.16 
 	title = ame.16.t 
@@ -385,8 +348,7 @@ country_event = {
 		name = ame.16.a 
 		361 = {
 		
-			damage_building = { type = industrial_complex damage = 0.6 }
-			damage_building = { type = industrial_complex damage = 0.5 }
+			damage_building = { type = industrial_complex damage = 1.5 }
 			damage_building = { type = infrastructure damage = 0.3 }
 		
 		}
@@ -397,8 +359,271 @@ country_event = {
 			damage_building = { type = infrastructure damage = 0.2 }
 		
 		}
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Hiram Wesley Evans"
+				desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
+				picture = "Hiram_Evans.dds"
+				expire = "1965.1.1"
+				ideology = integralism
+				traits = {
+					
+				}
+			}
+			add_stability = -0.05
+		}
+}
+country_event = { #Purge of the KKK
+
+	id = ame.17 
+	title = ame.17.t 
+	desc = ame.17.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.17.a 
+		395 = {
 		
-		add_stability = -0.05
+			damage_building = { type = industrial_complex damage = 0.3 }
+			damage_building = { type = infrastructure damage = 0.1 }
+		
+		}
+		396 = {
+		
+			damage_building = { type = industrial_complex damage = 0.3 }
+			damage_building = { type = infrastructure damage = 0.1 }
+		
+		}
+		373 = {
+		
+			damage_building = { type = industrial_complex damage = 0.4 }
+			damage_building = { type = infrastructure damage = 0.2 }
+		
+		}
+		367 = {
+		
+			damage_building = { type = industrial_complex damage = 0.4 }
+			damage_building = { type = infrastructure damage = 0.3 }
+		
+		}
+		add_stability = 0.05
+		
 	} 
 
 }
+
+country_event = {#beginning of the purge
+	id = ame.18 
+	title = ame.18.t 
+	desc = ame.18.d 
+	fire_only_once = yes 
+	trigger = {
+		
+		tag = AME 
+		focus_progress = { focus = AME_great_purge_focus progress > 0.0 }
+	
+	}
+	option = {
+		name = ame.18.a 
+		add_ideas = AME_great_purge_idea
+		AME = { set_variable = { var = AME_revolt_var value = 0 } }
+	}
+
+
+}
+
+country_event = { #purge politicians
+	id = ame.19 
+	title = ame.19.t 
+	desc = ame.19.d 
+	fire_only_once = yes 
+	trigger = {
+		
+		tag = AME 
+		focus_progress = { focus = AME_great_purge_focus progress > 0.1 }
+	
+	}
+	option = {#purge them
+		name = ame.19.a 
+		ai_chance = { factor = 60 }
+		add_stability = -0.025 
+	}
+	option = {#spare them 
+		name = ame.19.b 
+		ai_chance = { factor = 40 }
+		add_to_variable = { var = AME_revolt_var value = 10 tooltip = AME_politicians_spared }
+	}
+
+}
+
+country_event = { #purge administrators
+	id = ame.20 
+	title = ame.20.t 
+	desc = ame.20.d 
+	fire_only_once = yes 
+	trigger = {
+		
+		tag = AME 
+		focus_progress = { focus = AME_great_purge_focus progress > 0.25 }
+	
+	}
+	option = {#purge them
+		name = ame.20.a 
+		ai_chance = { factor = 50 }
+		add_ideas = AME_no_admins_idea
+	}
+	option = {#spare them 
+		name = ame.20.b 
+		ai_chance = { factor = 50 }
+		add_to_variable = { var = AME_revolt_var value = 10  }
+	}
+
+}
+
+country_event = { #purge intellectuals
+	id = ame.21 
+	title = ame.21.t 
+	desc = ame.21.d 
+	fire_only_once = yes 
+	trigger = {
+		
+		tag = AME 
+		focus_progress = { focus = AME_great_purge_focus progress > 0.40 }
+	
+	}
+	option = {#purge them
+		name = ame.21.a 
+		ai_chance = { factor = 75 }
+		add_ideas = AME_intellect_purge
+	}
+	option = {#spare them 
+		name = ame.21.b 
+		ai_chance = { factor = 25 }
+		add_to_variable = { var = AME_revolt_var value = 10 }
+	}
+
+}
+
+country_event = { #purge unionists
+	id = ame.22 
+	title = ame.22.t 
+	desc = ame.22.d 
+	fire_only_once = yes 
+	trigger = {
+		
+		tag = AME 
+		focus_progress = { focus = AME_great_purge_focus progress > 0.60 }
+	
+	}
+	option = {#purge them
+		name = ame.22.a 
+		ai_chance = { factor = 80 }
+		add_timed_idea = { idea = AME_union_purge days = 70 } 
+		add_stability = -0.01 
+	}
+	option = {#spare them 
+		name = ame.22.b 
+		ai_chance = { factor = 20 }
+		add_to_variable = { var = AME_revolt_var value = 10  }
+	}
+
+}
+
+country_event = { #purge leaders
+	id = ame.23 
+	title = ame.23.t 
+	desc = ame.23.d 
+	fire_only_once = yes 
+	trigger = {
+		
+		tag = AME 
+		focus_progress = { focus = AME_great_purge_focus progress > 0.75 }
+	
+	}
+	option = {#purge them
+		name = ame.23.a 
+		ai_chance = { factor = 50 }
+		add_stability = -0.05 
+	}
+	option = {#spare them 
+		name = ame.23.b 
+		ai_chance = { factor = 50 }
+		add_to_variable = { var = AME_revolt_var value = 10  }
+	}
+
+}
+
+country_event = { #purge officers
+	id = ame.24 
+	title = ame.24.t 
+	desc = ame.24.d 
+	fire_only_once = yes 
+	trigger = {
+		
+		tag = AME 
+		focus_progress = { focus = AME_great_purge_focus progress > 0.90 }
+	
+	}
+	option = {#purge them
+		name = ame.23.a 
+		ai_chance = { factor = 30 }
+		add_ideas = AME_purged_officers
+	}
+	option = {#spare them 
+		name = ame.23.b 
+		ai_chance = { factor = 70 }
+		add_to_variable = { var = AME_revolt_var value = 10  }
+	}
+
+}
+
+country_event = { #end of the purge 
+	id = ame.25 
+	title = ame.25.t 
+	desc = ame.25.d 
+	is_triggered_only = yes 
+	option = {#purge them
+		name = ame.25.a 
+			swap_ideas = { remove_idea = AME_national_disunity add_idea = AME_purge_end }
+			remove_ideas = AME_great_purge_idea
+	}
+
+}
+
+country_event = { #AIC uprising
+	id = ame.26 
+	title = ame.26.t 
+	desc = ame.26.d 
+	is_triggered_only = yes 
+	option = {#them
+		name = ame.26.a 
+			start_civil_war = {
+				ideology = national_integralism
+				size = 0.0
+				capital = 393
+				states = { 393 396 395 168 394 }
+			}
+			random_other_country = {
+				limit = {
+					original_tag = AME
+					has_war_with = AME
+				}
+				load_oob = "AME_ford_revolt"
+				set_stability = 0.5
+				set_war_support = 0.5
+				create_country_leader = {
+					name = "Henry Ford"
+					desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
+					picture = "Henry_Ford.dds"
+					expire = "1965.1.1"
+					ideology = integralism
+					traits = {
+						
+					}
+				}
+			}
+			
+			set_country_flag = AME_uprising_ford
+	}
+
+}
+

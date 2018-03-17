@@ -1,0 +1,70 @@
+﻿division_template = {
+	name = "Militia Division"  	# Standard formation for frontline divisions
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+	support = {
+	}
+}
+
+units = {
+
+	division = {			
+		name = "1st AIC Militia"
+		location = 9450
+		division_template = "Militia Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+
+	}
+	
+	division = {			
+		name = "2nd AIC Militia"
+		location = 9450
+		division_template = "Militia Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+
+	}
+	
+	division = {			
+		name = "3rd AIC Militia"
+		location = 720
+		division_template = "Militia Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+
+	}
+	
+	division = {			
+		name = "4th AIC Militia"
+		location = 6710
+		division_template = "Militia Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+
+	}	
+	
+	division = {			
+		name = "5th AIC Militia"
+		location = 1595
+		division_template = "Militia Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+
+	}
+	
+	division = {			
+		name = "6th AIC Militia"
+		location = 12357
+		division_template = "Militia Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1.0
+
+	}
+
+}

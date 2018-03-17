@@ -696,6 +696,7 @@ country_event = { #Fate of Bogd Khanate#
 		SOV = { add_to_faction = THIS }
 		create_corps_commander = {
 		name = "Damdin Sukhbaatar"
+		id = 1000
 		picture = "Damdin_Sukhbaatar.dds"
 		traits = {  }
 		skill = 3
@@ -724,7 +725,7 @@ country_event = { #Mongolia Partition#
       name = soviet.13.a
 	  trigger = {
 		MON = {
-			is_ai = no
+			is_ai = yes
 		}
 	  }
 	  ai_chance = { factor = 20 }
@@ -997,14 +998,34 @@ country_event = {#tag switch for sov mongolia
 		name = soviet.26.a
 		MON = {
 			transfer_state = 330
-			change_tag_from = ROOT
 			annex_country = { target = ROOT transfer_troops = yes }
+			change_tag_from = ROOT
+			
+		}
+		MON = {
+			
 			 set_politics = {
                 ruling_party = communism
                 elections_allowed = no
             }
             add_popularity = { ideology = communism popularity = 0.7 }
+			create_country_leader = {
+				name = "Damdin Sukhbaatar"
+				desc = "POLITICS_ANANDYN_AMAR_DESC"
+				picture = "Damdin_Sukhbaatar.dds"
+				expire = "1965.1.1"
+				ideology = marxism
+				traits = {
+					#
+				}
+			}
+		
 		}
+		SOV = { 
+			puppet = MON
+		}
+		
+		every_army_leader = { limit = { has_id = 1000 } set_nationality = MON }
 	}
 }
 

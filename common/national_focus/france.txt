@@ -220,28 +220,7 @@ focus_tree = {
 
 		completion_reward = {
 		}
-	}	
-	
-	focus = {
-		id = FRA_second_civil_war
-		icon = ?
-		x = 11
-		y = 3
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		
-        available_if_capitulated = no
-		prerequisite = { focus = FRA_civil_war_ends }
-		
-        available = {
-		    always = no
-		}		
-
-		completion_reward = {
-		}
-	}	
+	}
 	
 	focus = {
 		id = FRA_fraternite
@@ -612,7 +591,7 @@ focus_tree = {
 	focus = {
 		id = FRA_syndicalist_rev
 		icon = ?
-		x = 18
+		x = 19
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -770,7 +749,7 @@ focus_tree = {
 	focus = {
 		id = FRA_corporated_society
 		icon = ?
-		x = 18
+		x = 19
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -787,7 +766,7 @@ focus_tree = {
 	focus = {
 		id = FRA_hierarcy_industry
 		icon = ?
-		x = 18
+		x = 19
 		y = 4
 		cost = 10
 		ai_will_do = {
@@ -804,7 +783,7 @@ focus_tree = {
 	focus = {
 		id = FRA_corporative_councils
 		icon = ?
-		x = 18
+		x = 19
 		y = 5
 		cost = 10
 		ai_will_do = {
@@ -838,7 +817,7 @@ focus_tree = {
 	focus = {
 		id = FRA_army_rebuild
 		icon = ?
-		x = 22
+		x = 24
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -859,7 +838,7 @@ focus_tree = {
 	focus = {
 		id = FRA_conscription_policy
 		icon = ?
-		x = 21
+		x = 22
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -876,7 +855,7 @@ focus_tree = {
 	focus = {
 		id = FRA_professional_army
 		icon = ?
-		x = 20
+		x = 21
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -893,7 +872,7 @@ focus_tree = {
 	focus = {
 		id = FRA_universal_con
 		icon = ?
-		x = 22
+		x = 23
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -910,7 +889,7 @@ focus_tree = {
 	focus = {
 		id = FRA_women_con
 		icon = ?
-		x = 22
+		x = 24
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -927,7 +906,7 @@ focus_tree = {
 	focus = {
 		id = FRA_doctrine
 		icon = ?
-		x = 24
+		x = 27
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -944,7 +923,7 @@ focus_tree = {
 	focus = {
 		id = FRA_mobalization
 		icon = ?
-		x = 24
+		x = 25
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -961,7 +940,7 @@ focus_tree = {
 	focus = {
 		id = FRA_instant_equipment
 		icon = ?
-		x = 25
+		x = 26
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -979,7 +958,7 @@ focus_tree = {
 	focus = {
 		id = FRA_breakthrough
 		icon = ?
-		x = 27
+		x = 28
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -997,7 +976,7 @@ focus_tree = {
 	focus = {
 		id = FRA_firepower
 		icon = ?
-		x = 26
+		x = 27
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -1014,7 +993,7 @@ focus_tree = {
 	focus = {
 		id = FRA_artillery
 		icon = ?
-		x = 29
+		x = 30
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -1032,7 +1011,7 @@ focus_tree = {
 	focus = {
 		id = FRA_armor_army
 		icon = ?
-		x = 28
+		x = 29
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -1050,7 +1029,7 @@ focus_tree = {
 	focus = {
 		id = FRA_armor_bonus
 		icon = ?
-		x = 31
+		x = 32
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -1068,7 +1047,7 @@ focus_tree = {
 	focus = {
 		id = FRA_motor_bonus
 		icon = ?
-		x = 28
+		x = 29
 		y = 4
 		cost = 10
 		ai_will_do = {
@@ -1084,61 +1063,235 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_naval_program
+		id = FRA_naval_air_command
 		icon = ?
-		x = 29
-		y = 0
+		x = 25
+		y = 6
 		cost = 10
 		ai_will_do = {
-			factor = 2
+			factor = 1
 		}
 		
-        available_if_capitulated = no		
+        available_if_capitulated = no
 
 		completion_reward = {
+		navy_experience = 50
 		}
 	}	
 	
 	focus = {
-		id = FRA_battleship_focus
+		id = FRA_abandon_old_ship
 		icon = ?
-		x = 28
-		y = 1
+		x = 23
+		y = 7
 		cost = 10
 		ai_will_do = {
-			factor = 2
+			factor = 1
 		}
 		
         available_if_capitulated = no		
-		prerequisite = { focus = FRA_naval_program }	
-		mutually_exclusive = { focus = FRA_submarine_focus }
+		prerequisite = { focus = FRA_naval_air_command }
+	    mutually_exclusive = { focus = FRA_on_our_own }
+
+		completion_reward = {		
+		}
+	}	
+	
+	focus = {
+		id = FRA_on_our_own
+		icon = ?
+		x = 27
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no		
+		prerequisite = { focus = FRA_naval_air_command }
+		mutually_exclusive = { focus = FRA_abandon_old_ship }
+
+		completion_reward = {		
+		}
+	}		
+
+	focus = {
+		id = FRA_repair_ships
+		icon = ?
+		x = 27
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_on_our_own }
+
+		completion_reward = {		
+		}
+	}		
+
+	focus = {
+		id = FRA_launch_air_program
+		icon = ?
+		x = 27
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_repair_ships }
+
+		completion_reward = {		
+		}
+	}	
+	
+	focus = {
+		id = FRA_renewal_in_charge
+		icon = ?
+		x = 27
+		y = 10
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_launch_air_program }
+
+		completion_reward = {		
+		}
+	}	
+	
+	focus = {
+		id = FRA_missile_program
+		icon = ?
+		x = 25
+		y = 11
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_renewal_in_charge focus = FRA_sov_air focus = FRA_brit_air focus = FRA_jap_air }
 
 		completion_reward = {		
 		}
 	}		
 	
 	focus = {
-		id = FRA_submarine_focus
+		id = FRA_sov_ship
 		icon = ?
-		x = 30
-		y = 1
+		x = 21
+		y = 8
 		cost = 10
 		ai_will_do = {
-			factor = 2
+			factor = 1
 		}
 		
-        available_if_capitulated = no	
-	    prerequisite = { focus = FRA_naval_program }	
-        mutually_exclusive = { focus = FRA_battleship_focus }		
+        available_if_capitulated = no		
+		prerequisite = { focus = FRA_abandon_old_ship }	
+		mutually_exclusive = { focus = FRA_jap_ship focus = FRA_brit_ship }
 
-		completion_reward = {
+		completion_reward = {		
+		}
+	}	
+	
+	focus = {
+		id = FRA_brit_ship
+		icon = ?
+		x = 23
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no		
+		prerequisite = { focus = FRA_abandon_old_ship }	
+		mutually_exclusive = { focus = FRA_sov_ship focus = FRA_jap_ship }
+
+		completion_reward = {		
+		}
+	}	
+	
+	focus = {
+		id = FRA_jap_ship
+		icon = ?
+		x = 25
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no		
+		prerequisite = { focus = FRA_abandon_old_ship }
+		mutually_exclusive = { focus = FRA_brit_ship focus = FRA_sov_ship }
+
+		completion_reward = {		
 		}
 	}
 	
 	focus = {
+		id = FRA_sov_air
+		icon = ?
+		x = 21
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no		
+		prerequisite = { focus = FRA_sov_ship }	
+
+		completion_reward = {		
+		}
+	}		
+	
+	focus = {
+		id = FRA_brit_air
+		icon = ?
+		x = 23
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no		
+		prerequisite = { focus = FRA_brit_ship }	
+
+		completion_reward = {		
+		}
+	}		
+	
+	focus = {
+		id = FRA_jap_air
+		icon = ?
+		x = 25
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		
+        available_if_capitulated = no		
+		prerequisite = { focus = FRA_jap_ship }	
+
+		completion_reward = {		
+		}
+	}	
+	
+	focus = {
 		id = FRA_foreign_policy
 		icon = ?
-		x = 3
+		x = 4
 		y = 7
 		cost = 10
 		ai_will_do = {
@@ -1231,6 +1384,57 @@ focus_tree = {
 		
         available_if_capitulated = no	
 		prerequisite = { focus = FRA_foreign_policy }
+
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = FRA_turn_on_britain
+		icon = ?
+		x = 3
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_new_bloc focus = FRA_allign_soviet }
+
+		completion_reward = {
+		}
+	}	
+	
+	focus = {
+		id = FRA_german_surprise
+		icon = ?
+		x = 5
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no	
+		prerequisite = { focus = FRA_new_bloc focus = FRA_allign_soviet }
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_save_america
+		icon = ?
+		x = 7
+		y = 9
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+        available_if_capitulated = no	
+		prerequisite = { focus = FRA_new_bloc focus = FRA_allign_soviet focus = FRA_allign_uk }
 
 		completion_reward = {
 		}

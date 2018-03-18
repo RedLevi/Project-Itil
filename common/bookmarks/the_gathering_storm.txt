@@ -32,6 +32,14 @@ bookmarks = {
 				GER_attack_soviets
 			}
 		}
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = liberalism
+			ideas = {
+			}
+			focuses = {
+			}
+		}				
 		"JAP"={
 			history = "JAP_GATHERING_STORM_DESC"
 			ideology = liberalism
@@ -55,14 +63,6 @@ bookmarks = {
 				SOV_1936_assembly
 				The_Revolution
 				Establish_OKB
-			}
-		}
-		"PRC"={
-			history = "PRC_GATHERING_STORM_DESC"
-			ideology = communism
-			ideas = {
-			}
-			focuses = {
 			}
 		}
 		"USA"={
@@ -106,7 +106,15 @@ bookmarks = {
 				YUG_outwards_vision
 			}
 		}
-
+		
+		"PRC"={
+			history = "PRC_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+			}
+			focuses = {
+			}
+		}		
 
 		"CHI"={
 			minor = yes

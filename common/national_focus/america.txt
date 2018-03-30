@@ -506,11 +506,29 @@ focus_tree = {
 		x = 7
 		y = 4
 		cost = 10	 
-		
+
 		available_if_capitulated = no
 		prerequisite = { focus = AME_military_empire }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = MEX modifier = AME_agression }
+			custom_effect_tooltip = AME_mil_economic_choice
+		}
+	
+	}
+
+	focus = {
+		
+		id = AME_military_CAN_focus
+		icon = GFX_focus_AST_never_gallipoli
+		x = 9
+		y = 4
+		cost = 10	 
+		
+		available_if_capitulated = no
+		prerequisite = { focus = AME_military_empire }
+		completion_reward = {
+			reverse_add_opinion_modifier = { target = CAN modifier = AME_agression }
+			reverse_add_opinion_modifier = { target = ENG modifier = AME_agression }
 			custom_effect_tooltip = AME_mil_economic_choice
 		}
 	

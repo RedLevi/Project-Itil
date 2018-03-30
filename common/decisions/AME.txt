@@ -306,18 +306,13 @@ AME_MEX_decisions = {
 	    }
 		
 	}
-	
+
 	AME_fortify_MEX_border = {
 		
 		icon = GFX_decision_generic_construction
 		available = { 
 			NOT = { has_war_with = MEX }
 			controls_state = 375
-		}
-		visible = {
-			
-			 has_completed_focus = AME_military_MEX_focus
-		
 		}
 		 ai_will_do = {
 	       factor = 10
@@ -385,3 +380,194 @@ AME_MEX_decisions = {
 	}
 
 }
+
+AME_CAN_decisions = {
+
+	AME_claim_CAN_states = {
+
+		icon = GFX_decision_generic_nationalism
+		available = { 
+			NOT = { is_in_faction_with = CAN }
+			NOT = { has_war_with = CAN }
+		}
+		visible = {
+			
+			NOT = { is_in_faction_with = CAN }
+			NOT = { CAN = { is_subject_of = AME } }
+		
+		}
+		ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 0
+	          has_war = yes
+	       }
+		    modifier = {
+	          factor = 2
+	          has_country_flag = AME_fortified_CAN_border
+	       }
+	    }
+		
+		cost = 70    
+		days_remove = 10
+		fire_only_once = yes	
+		remove_effect = {
+			add_state_claim = 465
+			add_state_claim = 464 
+			add_state_claim = 468
+			add_state_claim = 276  
+	    }
+		complete_effect = {
+			set_country_flag = AME_claimed_CAN_states
+		}
+		
+	}
+
+	AME_war_CAN = {
+		
+		icon = GFX_decision_generic_operation
+		available = { 
+			NOT = { is_in_faction_with = CAN }
+			NOT = { has_war_with = CAN }
+		}
+		visible = {
+			
+			NOT = { is_in_faction_with = CAN }
+			NOT = { CAN = { is_subject_of = AME } }
+		
+		}
+		  ai_will_do = {
+	       factor = 5
+		    modifier = {
+	          factor = 0
+	          has_war = yes
+	       }
+		   modifier = {
+	          factor = 0.5
+	          NOT = { has_country_flag = AME_claimed_CAN_states }
+	       }
+		    modifier = {
+	          factor = 2
+	          has_country_flag = AME_fortified_CAN_border
+	       }
+	    }
+		war_with_on_remove = CAN
+		cost = 100    
+		days_remove = 10
+		fire_only_once = yes	
+		remove_effect = {
+	       declare_war_on = { target = CAN type = annex_everything }
+	    }
+		
+	}
+
+	AME_fortify_CAN_border = {
+		
+		icon = GFX_decision_generic_construction
+		available = { 
+			NOT = { has_war_with = CAN }
+			controls_state = 357
+		}
+		 ai_will_do = {
+	       factor = 10
+	    }
+		cost = 50    
+		days_remove = 85
+		fire_only_once = yes	
+		remove_effect = {
+	       358 = {
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 11654
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 6778
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 598
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 3602
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 11662
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 2019
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 5061
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 12369
+									instant_build = yes
+				}
+		   } 
+		 357 = {
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 7629
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 10481
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 6719
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 12202
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 12221
+									instant_build = yes
+				}   
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 10247
+									instant_build = yes
+				}   
+	    }
+		complete_effect  = {
+			set_country_flag = AME_fortified_CAN_border
+		}
+	}	
+	}
+
+}
+

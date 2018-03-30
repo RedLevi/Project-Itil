@@ -32,7 +32,18 @@ AME_MEX_decisions = {
        tag = AME
    }
    visible = {
-      always = yes #has_completed_focus = AME_military_MEX_focus
+      has_completed_focus = AME_military_MEX_focus
+   }
+
+}
+AME_CAN_decisions = {
+
+  icon = GFX_decision_category_military_operation
+   allowed = {
+       tag = AME
+   }
+   visible = {
+      has_completed_focus = AME_military_CAN_focus
    }
 
 }

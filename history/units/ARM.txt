@@ -1,0 +1,93 @@
+##### Division Templates #####
+division_template = {
+	name = "Bazhin Hradzgut’yun"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 0 }
+	}
+}
+division_template = {
+	name = "Hetselazor" 		# Divisione Celere (Fast Division)
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+##### OOB #####
+units = {
+
+	division= {	
+		name = "1.Bazhin Hradzgut’yun"
+		location = 3714
+		division_template = "Bazhin Hradzgut’yun"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		name = "2.Bazhin Hradzgut’yun"
+		location = 6976
+		division_template = "Bazhin Hradzgut’yun"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+
+	division= {	
+		name = "3.Bazhin Hradzgut’yun"
+		location = 6991
+		division_template = "Bazhin Hradzgut’yun"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "4.Bazhin Hradzgut’yun"
+		location = 12376
+		division_template = "Bazhin Hradzgut’yun"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "5.Bazhin Hradzgut’yun"
+		location = 12320
+		division_template = "Bazhin Hradzgut’yun"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division= {	
+		name = "6.Bazhin Hradzgut’yun"
+		location = 4583
+		division_template = "Bazhin Hradzgut’yun"		
+		start_experience_factor = 0.15
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "7.Bazhin Hradzgut’yun"
+		location = 652
+		division_template = "Bazhin Hradzgut’yun"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "1.Hetselazor "
+		location = 12320
+		division_template = "Hetselazor"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		name = "2.Hetselazor "
+		location = 6991
+		division_template = "Hetselazor"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6
+	}
+
+	
+	
+

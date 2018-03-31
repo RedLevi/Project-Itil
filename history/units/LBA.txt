@@ -1,0 +1,56 @@
+##### Division Templates #####
+division_template = {
+	name = "Divisione di Fanteria"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 0 }
+	}
+}
+division_template = {
+	name = "Divisione Celere" 		# Divisione Celere (Fast Division)
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+##### OOB #####
+units = {
+
+	division= {	
+		name = "1a Divisione di Fanteria 'Benghazi'"
+		location = 11954
+		division_template = "Divisione di Fanteria"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		name = "2a Divisione di Fanteria 'Tripoli'"
+		location = 1149
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+
+	division= {	
+		name = "3a Divisione di Fanteria 'Tunesia'"
+		location = 11969
+		division_template = "Divisione di Fanteria"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "1a Divisione di Celere 'Tobruk'"
+		location = 9992
+		division_template = "Divisione Celere"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+
+	
+	
+

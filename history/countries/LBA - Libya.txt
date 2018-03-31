@@ -1,5 +1,7 @@
 ﻿capital = 448
 
+oob = "LBA"
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1

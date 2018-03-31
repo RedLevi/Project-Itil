@@ -1,0 +1,70 @@
+##### Division Templates #####
+division_template = {
+	name = "Gaq’opa kveiti"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 0 }
+	}
+}
+
+##### OOB #####
+units = {
+
+	division= {	
+		name = "1.Gaq’opa kveiti"
+		location = 11617
+		division_template = "Gaq’opa kveiti"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.2
+	}
+	division= {	
+		name = "2.Gaq’opa kveiti"
+		location = 672
+		division_template = "Gaq’opa kveiti"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+
+	division= {	
+		name = "3.Gaq’opa kveiti"
+		location = 654
+		division_template = "Gaq’opa kveiti"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.5
+	}
+	division= {	
+		name = "4.Gaq’opa kveiti"
+		location = 9626
+		division_template = "Gaq’opa kveiti"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "5.Gaq’opa kveiti"
+		location = 1530
+		division_template = "Gaq’opa kveiti"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.6
+	}
+	division= {	
+		name = "6.Gaq’opa kveiti"
+		location = 4534
+		division_template = "Gaq’opa kveiti"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		name = "7.Gaq’opa kveiti"
+		location = 6669
+		division_template = "Gaq’opa kveiti"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.4
+	}
+
+	
+	
+

@@ -244,10 +244,6 @@ AME_MEX_decisions = {
 		ai_will_do = {
 	       factor = 10
 		    modifier = {
-	          factor = 0
-	          has_war = yes
-	       }
-		    modifier = {
 	          factor = 2
 	          has_country_flag = AME_fortified_MEX_border
 	       }
@@ -262,10 +258,13 @@ AME_MEX_decisions = {
 			add_state_claim = 482
 			add_state_claim = 483 
 			add_state_claim = 484 
-	    }
-		complete_effect = {
 			set_country_flag = AME_claimed_MEX_states
+	    }
+		
+		complete_effect = {
+			add_threat = 1 
 		}
+	
 		
 	}
 	
@@ -285,7 +284,7 @@ AME_MEX_decisions = {
 		  ai_will_do = {
 	       factor = 5
 		    modifier = {
-	          factor = 0
+	          factor = 0.5
 	          has_war = yes
 	       }
 		   modifier = {
@@ -370,10 +369,88 @@ AME_MEX_decisions = {
 									province = 12369
 									instant_build = yes
 				}
-		   } 
+		   }
+			set_country_flag = AME_fortified_MEX_border
 	    }
 		complete_effect  = {
+			
+			add_stability = 0.01 
+		}
+		
+	}
+	AME_fortify_MEX_border_2 = {
+		
+		icon = GFX_decision_generic_construction
+		available = { 
+			NOT = { has_war_with = MEX }
+			controls_state = 760 
+			controls_state = 377 
+			controls_state = 378 
+		}
+		visible = {
+			has_country_flag = AME_fortified_MEX_border 
+		}
+		 ai_will_do = {
+	       factor = 10
+	    }
+		cost = 30     
+		days_remove = 120
+		fire_only_once = yes	
+		remove_effect = {
+	       760 = {
+				add_building_construction = {
+									type = bunker
+									level = 2
+									province = 5044
+									instant_build = yes
+				}
+			}
+			377 = {
+				add_building_construction = {
+									type = bunker
+									level = 2
+									province = 7920
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 2
+									province = 3834
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 2
+									province = 10783
+									instant_build = yes
+				}
+			}
+			378 = {
+				add_building_construction = {
+									type = bunker
+									level = 2
+									province = 7986
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 2
+									province = 12374
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 2
+									province = 1562
+									instant_build = yes
+				}
+			}
 			set_country_flag = AME_fortified_MEX_border
+		   }
+			
+	    
+		complete_effect  = {
+			
 			add_stability = 0.01 
 		}
 		
@@ -399,7 +476,7 @@ AME_CAN_decisions = {
 		ai_will_do = {
 	       factor = 10
 		    modifier = {
-	          factor = 0
+	          factor = 0.5 
 	          has_war = yes
 	       }
 		    modifier = {
@@ -416,11 +493,54 @@ AME_CAN_decisions = {
 			add_state_claim = 464 
 			add_state_claim = 468
 			add_state_claim = 276  
+			set_country_flag = AME_claimed_CAN_states
 	    }
 		complete_effect = {
-			set_country_flag = AME_claimed_CAN_states
+			add_threat = 1 
 		}
+			
+	}
+	
+	AME_claim_CAN_states_2 = {
+
+		icon = GFX_decision_generic_nationalism
+		available = { 
+			NOT = { is_in_faction_with = CAN }
+			NOT = { has_war_with = CAN }
+			controls_state = 386 
+		}
+		visible = {
+			
+			NOT = { is_in_faction_with = CAN }
+			NOT = { CAN = { is_subject_of = AME } }
 		
+		}
+		ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 0.5 
+	          has_war = yes
+	       }
+		    modifier = {
+	          factor = 2
+	          has_country_flag = AME_fortified_CAN_border
+	       }
+	    }
+		
+		cost = 40    
+		days_remove = 10
+		fire_only_once = yes	
+		remove_effect = {
+			add_state_claim = 473
+			add_state_claim = 471 
+			add_state_claim = 740 
+			add_state_claim = 739
+			set_country_flag = AME_claimed_CAN_states_2
+	    }
+		complete_effect = {
+			add_threat = 1 
+		}
+			
 	}
 
 	AME_war_CAN = {
@@ -439,10 +559,14 @@ AME_CAN_decisions = {
 		  ai_will_do = {
 	       factor = 5
 		    modifier = {
-	          factor = 0
+	          factor = 0.5
 	          has_war = yes
 	       }
 		   modifier = {
+				factor = 2
+				has_country_flag = AME_claimed_CAN_states_2
+	       }
+		    modifier = {
 	          factor = 0.5
 	          NOT = { has_country_flag = AME_claimed_CAN_states }
 	       }
@@ -452,7 +576,7 @@ AME_CAN_decisions = {
 	       }
 	    }
 		war_with_on_remove = CAN
-		cost = 100    
+		cost = 50    
 		days_remove = 10
 		fire_only_once = yes	
 		remove_effect = {
@@ -472,7 +596,7 @@ AME_CAN_decisions = {
 	       factor = 10
 	    }
 		cost = 50    
-		days_remove = 85
+		days_remove = 100
 		fire_only_once = yes	
 		remove_effect = {
 	       358 = {
@@ -563,10 +687,86 @@ AME_CAN_decisions = {
 									instant_build = yes
 				}   
 	    }
-		complete_effect  = {
-			set_country_flag = AME_fortified_CAN_border
+		393 = {
+			add_building_construction = {
+									type = bunker
+									level = 1
+									province = 9724
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 6710
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = bunker
+									level = 1
+									province = 10247
+									instant_build = yes
+				}
 		}
+		set_country_flag = AME_fortified_CAN_border
 	}	
+	}
+}
+	AME_cen_ame_invasion_decisions = {
+		
+		AME_cen_plan_invasion = {
+          target_trigger = {
+               FROM = {
+                    OR = {
+                         tag = GUA
+                         tag = HON
+                         tag = ELS
+						 tag = NIC
+						 tag = COS
+						 tag = PAN 
+                    }
+               }
+			 }
+			 fire_only_once = yes
+			   ai_will_do = {
+	       factor = 5
+		    modifier = {
+	          factor = 0.5
+	          has_war = yes
+	       }
+		    modifier = {
+	          factor = 2
+	          MEX = {
+				OR = {
+					is_in_faction_with = AME 
+					is_puppet_of = AME 
+					controls_state = 475
+				}
+			}
+	       }
+	    }
+			available = {
+				NOT = {
+					FROM = { has_war_with = AME }
+				}
+			}
+			visible = {
+				NOT = {
+					is_in_faction_with = FROM 
+					FROM = { is_puppet_of = AME }
+				}
+			}
+		  war_with_on_remove = FROM 
+		  cost = 50
+          fire_only_once = yes
+          days_remove = 7 
+		  remove_effect = {
+				create_wargoal = { type = puppet_wargoal_focus  target = FROM }
+				add_threat = 2 
+				FROM = { country_event = { ame.27 } }
+		  }
+          
+     }
+	
 	}
 
 }

@@ -13,10 +13,10 @@ communist_peace = {
 	}
 
 	annex_randomness = 0 #200
-	liberate_randomness = 0 #100
-	puppet_randomness = 0 #400
-	take_states_randomness = 0 #200
-	force_government_randomness = 0 #100
+	liberate_randomness = 100 #100
+	puppet_randomness = 100 #400
+	take_states_randomness = 100 #200
+	force_government_randomness = 100 #100
 	
 	# ROOT = Taker, FROM = Giver
 	annex = {

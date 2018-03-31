@@ -351,6 +351,7 @@ focus_tree = {
 		available_if_capitulated = no
 		prerequisite = { focus = AME_mil_industry_focus2 }
 		prerequisite = { focus = AME_mil_economic_end_focus }
+		prerequisite = { focus = AME_military_research_recover }
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -485,6 +486,24 @@ focus_tree = {
 	
 	focus = {
 		
+		id = AME_military_research_recover
+		icon = GFX_focus_research 
+		x = 4
+		y = 6
+		cost = 10	 
+		
+		available_if_capitulated = no
+		prerequisite = { focus = AME_military_research }
+		completion_reward = {
+			remove_ideas = AME_intellect_purge
+			custom_effect_tooltip = AME_mil_economic_choice
+			set_country_flag = AME_mil_new_universities
+		}
+	
+	}
+	
+	focus = {
+		
 		id = AME_military_empire
 		icon = GFX_goal_support_fascism 
 		x = 8
@@ -511,6 +530,50 @@ focus_tree = {
 		prerequisite = { focus = AME_military_empire }
 		completion_reward = {
 			reverse_add_opinion_modifier = { target = MEX modifier = AME_agression }
+			custom_effect_tooltip = AME_mil_economic_choice
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_military_LAT_focus
+		icon = GFX_goal_generic_occupy_start_war 
+		x = 7
+		y = 5
+		cost = 10	 
+
+		available_if_capitulated = no
+		prerequisite = { focus = AME_military_MEX_focus focus = AME_military_CAN_focus }
+		completion_reward = {
+			reverse_add_opinion_modifier = { target = GUA modifier = AME_agression }
+			reverse_add_opinion_modifier = { target = HON modifier = AME_agression }
+			reverse_add_opinion_modifier = { target = ELS modifier = AME_agression }
+			reverse_add_opinion_modifier = { target = NIC modifier = AME_agression }
+			reverse_add_opinion_modifier = { target = COS modifier = AME_agression } 
+			reverse_add_opinion_modifier = { target = PAN modifier = AME_agression }
+			custom_effect_tooltip = AME_mil_economic_choice
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_military_CAR_focus
+		icon = GFX_goal_generic_amphibious_assault 
+		x = 7
+		y = 7
+		cost = 10	 
+
+		available_if_capitulated = no
+		prerequisite = { focus = AME_military_MEX_focus focus = AME_military_CAN_focus }
+		completion_reward = {
+			reverse_add_opinion_modifier = { target = GUA modifier = AME_agression }
+			reverse_add_opinion_modifier = { target = HON modifier = AME_agression }
+			reverse_add_opinion_modifier = { target = ELS modifier = AME_agression }
+			reverse_add_opinion_modifier = { target = NIC modifier = AME_agression }
+			reverse_add_opinion_modifier = { target = COS modifier = AME_agression } 
+			reverse_add_opinion_modifier = { target = PAN modifier = AME_agression }
 			custom_effect_tooltip = AME_mil_economic_choice
 		}
 	

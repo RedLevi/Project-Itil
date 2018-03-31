@@ -31,7 +31,7 @@ bookmarks = {
 				GER_imperial_dominance
 				GER_attack_soviets
 			}
-		}
+		}	
 		"FRA"={
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = liberalism
@@ -39,7 +39,7 @@ bookmarks = {
 			}
 			focuses = {
 			}
-		}				
+		}
 		"JAP"={
 			history = "JAP_GATHERING_STORM_DESC"
 			ideology = liberalism
@@ -109,6 +109,7 @@ bookmarks = {
 		}
 		
 		"PRC"={
+		    minor = yes
 			history = "PRC_GATHERING_STORM_DESC"
 			ideology = communism
 			ideas = {

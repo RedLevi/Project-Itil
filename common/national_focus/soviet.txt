@@ -1505,6 +1505,7 @@ focus = {
 	y = 3
 	completion_reward = {
 	   add_opinion_modifier = { target = JAP modifier = Soviet_Revanchism }
+	   set_country_flag = SOV_japan_target
 
 	}
 

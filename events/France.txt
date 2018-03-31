@@ -87,6 +87,7 @@ country_event = { #CIVIL WAR#
 	option = {
 	    name = france.5.a #SPF
 		hidden_effect = {
+		    set_global_flag = fcw_start
 			SPF = { transfer_state = 460 }
 			SPF = { transfer_state = 459 }
 			SPF = { transfer_state = 513 }

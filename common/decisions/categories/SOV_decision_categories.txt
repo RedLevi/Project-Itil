@@ -39,3 +39,13 @@ SOV_demands = {
 	   always = yes 
 	}
 }
+SOV_japwar = {
+	icon = GFX_decision_generic_ignite_civil_war
+	picture = GFX_decision_cat_SOV_japwar
+	allowed = {
+	   original_tag = SOV 
+	}
+	visible = {
+	   has_completed_focus = Dealing_With_Imperialists
+	}
+}

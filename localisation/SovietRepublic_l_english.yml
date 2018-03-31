@@ -297,7 +297,7 @@ kirov_victory:0 "The Kirovists control the assembly"
 SOV_left_victory:0 "The Left opposition sweepes the assembly"
 SOV_expansion_tooltip:0 "§GThis focus will unlock expansion decisions"
 SOV_Korea_tooltip:0 "Once we attack Japan, Loyal Korean revolutionaries will rise up against their rule."
-SOV_manchuria_tooltip:0 ""
+SOV_manchuria_tooltip:0 "We will make sure red chinese heroes will revolt against Japanese oppression, once we invade."
 SOV_ultimatum_tooltip:0 "§GInstead of directly invading, we could try and threaten them with an ultimatum. This focus will unlock such a decision."
 SOV_latvia_tooltip:0 "The Soviet Republic of Latvia is already a de-facto part of the SDSR. Annexing it would only be a formality."
 ####Decisions####

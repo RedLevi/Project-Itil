@@ -447,5 +447,9 @@ spriteTypes = {
 		name = "GFX_decision_cat_SOV_demands"
 		texturefile = "gfx/interface/decisions/decision_cat_SOV_demands.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_cat_SOV_japwar"
+		texturefile = "gfx/interface/decisions/decision_cat_SOV_japwar.dds"
+	}
 }
 }

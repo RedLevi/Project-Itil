@@ -467,3 +467,28 @@ SOV_demands = {
         }
 	}
 }
+SOV_japwar = {
+    SOV_attack_jap = {
+       icon = GFX_decision_category_sov_great_patriotic_war
+       allowed = {
+          original_tag = SOV 
+       } 
+       visible = {
+          has_completed_focus = Dealing_With_Imperialists
+          has_country_flag = SOV_japan_target
+       }
+       ai_will_do = {
+          factor = 1
+          modifier = {
+             factor = 50
+             has_completed_focus = Korea_Revolution
+          }
+       }
+       cost = 10
+       days_remove = 7
+       fire_only_once = yes 
+       remove_effect = {
+          SOV = { declare_war_on = { target = RUS type = annex_everything } }
+       }
+    }
+}

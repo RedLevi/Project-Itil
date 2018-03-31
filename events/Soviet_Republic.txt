@@ -1,4 +1,4 @@
-add_namespace = soviet
+﻿add_namespace = soviet
 
 ######################################
 ###Soviet Republic Events#############
@@ -601,7 +601,6 @@ country_event = {#no clear victor, very rare
 			}
 	}
 
-}
 
 country_event = {#Trotsky victorious
 

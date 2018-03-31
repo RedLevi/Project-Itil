@@ -26,16 +26,15 @@ country_event = {
 	}
 }
 
-country_event = {
+news_event = {
    id = flv.2
 	 desc = flv.2.d
 	 title = flv.2.t
-	 picture = GFX_petain_speech
+	 picture = GFX_fcw_start
 	 fire_only_once = yes
 
    trigger = {
 	    has_global_flag = fcw_start
-			is_ai = no
 	 }
 
 	 option = {
@@ -44,3 +43,4 @@ country_event = {
 	 }
 
 }
+

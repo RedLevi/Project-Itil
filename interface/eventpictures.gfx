@@ -1829,6 +1829,10 @@ spriteTypes = {
        name = "GFX_sovstart"
        texturefile = "gfx/event_pictures/sovstart.dds"
     }
+    spriteType = {
+       name = "GFX_fcw_start"
+       texturefile = "gfx/event_pictures/fcw_start.dds"
+    }
 
 
 	#### END DoD EVENTS ####

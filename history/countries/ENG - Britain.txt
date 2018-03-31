@@ -111,8 +111,6 @@ add_to_faction = IRE
 add_to_faction = POR 
 
 
-give_guarantee = USA
-
 set_politics = {
 
 	parties = {

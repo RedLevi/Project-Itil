@@ -735,12 +735,14 @@ AME_CAN_decisions = {
 	       }
 		    modifier = {
 	          factor = 2
+			  OR = {
 	          MEX = {
 				OR = {
 					is_in_faction_with = AME 
 					is_puppet_of = AME 
-					controls_state = 475
 				}
+			}
+			controls_state = 475 
 			}
 	       }
 	    }
@@ -755,19 +757,504 @@ AME_CAN_decisions = {
 					FROM = { is_puppet_of = AME }
 				}
 			}
-		  war_with_on_remove = FROM 
+		
 		  cost = 50
           fire_only_once = yes
-          days_remove = 7 
+          days_remove = 30 
 		  remove_effect = {
 				create_wargoal = { type = puppet_wargoal_focus  target = FROM }
-				add_threat = 2 
-				FROM = { country_event = { ame.27 } }
+				add_threat = 2.5
+				FROM = { country_event = { id = ame.27 } }
 		  }
           
      }
 	
 	}
 
-}
+AME_car_invasion_decisions = {
 
+	AME_car_plan_invasion = {
+          target_trigger = {
+               FROM = {
+                    OR = {
+                         tag = CUB
+                         tag = DOM
+                         tag = HAI
+                    }
+               }
+			 }
+			 fire_only_once = yes
+			   ai_will_do = {
+	       factor = 7
+		    modifier = {
+	          factor = 0.5
+	          has_war = yes
+	       }
+	    }
+			available = {
+				NOT = {
+					FROM = { has_war_with = AME }
+				}
+			}
+			visible = {
+				NOT = {
+					is_in_faction_with = FROM 
+					FROM = { is_puppet_of = AME }
+				}
+			}
+		 
+		  cost = 50
+          fire_only_once = yes
+          days_remove = 30 
+		  remove_effect = {
+				create_wargoal = { type = puppet_wargoal_focus  target = FROM }
+				add_threat = 2.5
+				FROM = { country_event = {  id = ame.27 } }
+		  }
+          
+     }
+	
+	}
+	
+AME_war_preparedness_decisions = {
+		
+	AME_draft_units_decision = {
+
+		icon = GFX_decision_generic_nationalism
+		available = { 
+			has_war = yes 
+		}
+		visible = {
+			
+			has_completed_focus = AME_recruitment_centers_focus
+		
+		}
+		ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 2
+	          num_divisions < 40 
+	       }
+		   modifier = {
+	          factor = 0
+	          num_divisions > 80 
+	       }
+		   modifier = {
+	          factor = 0.5
+	          has_stability < 20 
+	       }
+		     modifier = {
+	          factor = 0.8
+	          has_stability < 50 
+	       }
+	    }
+		
+		cost = 100    
+		days_remove = 30 
+		days_re_enable = 365	
+		remove_effect = {
+			load_oob = AME_conscripts 
+			country_event = { id = ame.28 }
+	    }
+		complete_effect = {
+			add_stability = -0.05 
+		}
+			
+	}	
+	
+	AME_fortify_new_york = {
+
+		icon = GFX_decision_generic_construction
+		available = { 
+			controls_state = 358 
+			num_of_civilian_factories_available_for_projects > 10 
+		}
+		visible = {
+			
+			has_completed_focus = AME_fortification_focus
+		
+		}
+		ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 0.5
+	          num_of_civilian_factories_available_for_projects < 15 
+	       }
+	    }
+		modifier = {
+			civilian_factory_use = 10
+		}
+		cost = 25    
+		days_remove = 85 
+		fire_only_once = yes 	
+		remove_effect = {
+			358 = {
+				add_building_construction = {
+									type = bunker
+									level = 4
+									province = 3878
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = coastal_bunker 
+									level = 3
+									province = 3878
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = anti_air_building  
+									level = 2
+									instant_build = yes
+				}
+			}
+	    }
+			
+	}
+	
+	AME_fortify_washington = {
+
+		icon = GFX_decision_generic_construction
+		available = { 
+			controls_state = 361 
+			num_of_civilian_factories_available_for_projects > 10 
+		}
+		visible = {
+			
+			has_completed_focus = AME_fortification_focus
+		
+		}
+		ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 0.5
+	          num_of_civilian_factories_available_for_projects < 15 
+	       }
+	    }
+		modifier = {
+			civilian_factory_use = 10
+		}
+		cost = 25    
+		days_remove = 85 
+		fire_only_once = yes 	
+		remove_effect = {
+			361 = {
+				add_building_construction = {
+									type = bunker
+									level = 4
+									province = 3957
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = coastal_bunker 
+									level = 3
+									province = 3957
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = anti_air_building  
+									level = 2
+									instant_build = yes
+				}
+			}
+	    }
+			
+	}
+	
+	AME_fortify_boston = {
+
+		icon = GFX_decision_generic_construction
+		available = { 
+			controls_state = 357 
+			num_of_civilian_factories_available_for_projects > 10 
+		}
+		visible = {
+			
+			has_completed_focus = AME_fortification_focus
+		
+		}
+		ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 0.5
+	          num_of_civilian_factories_available_for_projects < 15 
+	       }
+	    }
+		modifier = {
+			civilian_factory_use = 10
+		}
+		cost = 25    
+		days_remove = 85 
+		fire_only_once = yes 	
+		remove_effect = {
+			357 = {
+				add_building_construction = {
+									type = bunker
+									level = 4
+									province = 6732
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = coastal_bunker 
+									level = 3
+									province = 6732
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = anti_air_building  
+									level = 2
+									instant_build = yes
+				}
+			}
+	    }
+			
+	}
+	
+	AME_fortify_miami = {
+
+		icon = GFX_decision_generic_construction
+		available = { 
+			controls_state = 366 
+			num_of_civilian_factories_available_for_projects > 10 
+		}
+		visible = {
+			
+			has_completed_focus = AME_fortification_focus
+		
+		}
+		ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 0.5
+	          num_of_civilian_factories_available_for_projects < 15 
+	       }
+	    }
+		modifier = {
+			civilian_factory_use = 10
+		}
+		cost = 25    
+		days_remove = 85 
+		fire_only_once = yes 	
+		remove_effect = {
+			366 = {
+				add_building_construction = {
+									type = bunker
+									level = 4
+									province = 1843
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = coastal_bunker 
+									level = 3
+									province = 1843
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = anti_air_building  
+									level = 2
+									instant_build = yes
+				}
+			}
+	    }
+			
+	}
+	
+	AME_fortify_huston = {
+
+		icon = GFX_decision_generic_construction
+		available = { 
+			controls_state = 375 
+			num_of_civilian_factories_available_for_projects > 10 
+		}
+		visible = {
+			
+			has_completed_focus = AME_fortification_focus
+		
+		}
+		ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 0.5
+	          num_of_civilian_factories_available_for_projects < 15 
+	       }
+	    }
+		modifier = {
+			civilian_factory_use = 10
+		}
+		cost = 25    
+		days_remove = 85 
+		fire_only_once = yes 	
+		remove_effect = {
+			375 = {
+				add_building_construction = {
+									type = bunker
+									level = 4
+									province = 10337
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = coastal_bunker 
+									level = 3
+									province = 10337
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = anti_air_building  
+									level = 2
+									instant_build = yes
+				}
+			}
+	    }
+			
+	}
+	
+	AME_fortify_san_francisco = {
+
+		icon = GFX_decision_generic_construction
+		available = { 
+			controls_state = 378 
+			num_of_civilian_factories_available_for_projects > 10 
+		}
+		visible = {
+			
+			has_completed_focus = AME_fortification_focus
+			owns_state = 378
+		
+		}
+		ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 0.5
+	          num_of_civilian_factories_available_for_projects < 15 
+	       }
+	    }
+		modifier = {
+			civilian_factory_use = 10
+		}
+		cost = 25    
+		days_remove = 85 
+		fire_only_once = yes 	
+		remove_effect = {
+			378 = {
+				add_building_construction = {
+									type = bunker
+									level = 4
+									province = 9671
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = coastal_bunker 
+									level = 3
+									province = 9671
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = anti_air_building  
+									level = 2
+									instant_build = yes
+				}
+			}
+	    }
+			
+	}
+	
+	AME_fortify_los_angeles = {
+
+		icon = GFX_decision_generic_construction
+		available = { 
+			controls_state = 378 
+			num_of_civilian_factories_available_for_projects > 10 
+		}
+		visible = {
+			
+			has_completed_focus = AME_fortification_focus
+			owns_state = 378
+		
+		}
+		ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 0.5
+	          num_of_civilian_factories_available_for_projects < 15 
+	       }
+	    }
+		modifier = {
+			civilian_factory_use = 10
+		}
+		cost = 25    
+		days_remove = 85 
+		fire_only_once = yes 	
+		remove_effect = {
+			378 = {
+				add_building_construction = {
+									type = bunker
+									level = 4
+									province = 9814
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = coastal_bunker 
+									level = 3
+									province = 9814
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = anti_air_building  
+									level = 2
+									instant_build = yes
+				}
+			}
+	    }
+			
+	}
+	
+	AME_fortify_seattle = {
+
+		icon = GFX_decision_generic_construction
+		available = { 
+			controls_state = 386 
+			num_of_civilian_factories_available_for_projects > 10 
+		}
+		visible = {
+			
+			has_completed_focus = AME_fortification_focus
+			owns_state = 386
+		
+		}
+		ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 0.5
+	          num_of_civilian_factories_available_for_projects < 15 
+	       }
+	    }
+		modifier = {
+			civilian_factory_use = 10
+		}
+		cost = 25    
+		days_remove = 85 
+		fire_only_once = yes 	
+		remove_effect = {
+			386 = {
+				add_building_construction = {
+									type = bunker
+									level = 4
+									province = 7315
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = coastal_bunker 
+									level = 3
+									province = 7315
+									instant_build = yes
+				}
+				add_building_construction = {
+									type = anti_air_building  
+									level = 2
+									instant_build = yes
+				}
+			}
+	    }
+			
+	}
+
+}

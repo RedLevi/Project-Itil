@@ -116,112 +116,6 @@ country_event = {#American Party
 		add_stability = -0.01
 	}
 }
-
-		
-		ai_chance = { factor = 25 }
-		add_stability = 0.05 
-		set_country_flag = AME_americanist
-		create_country_leader = {
-			name = "William Dudley Pelley"
-			desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
-			picture = "Pelley.dds"
-			expire = "1965.1.1"
-			ideology = integralism
-			traits = {
-				
-			}
-		}
-		
-	}
-	option = {#KKK 
-		name = ame.11.b 
-		trigger = {
-		
-			OR = {
-				
-				has_country_flag = AME_dip_KKK_flag 
-				has_country_flag = AME_eco_KKK_flag 
-				has_country_flag = AME_int_KKK_flag
-				
-				}
-
-			
-			}
-		ai_chance = { factor = 25 }
-		add_stability = 0.035
-		set_country_flag = AME_KKK
-		create_country_leader = {
-			name = "Hiram Wesley Evans"
-			desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
-			picture = "Hiram_Evans.dds"
-			expire = "1965.1.1"
-			ideology = integralism
-			traits = {
-				
-			}
-		}
-		
-	}
-	option = {#Ford 
-		name = ame.11.c 
-		trigger = {
-		
-			OR = {
-				
-				has_country_flag = AME_dip_ford_flag 
-				has_country_flag = AME_eco_ford_flag 
-				has_country_flag = AME_int_ford_flag
-				
-				}
-
-			
-			}
-		ai_chance = { factor = 25 }
-		add_stability = -0.01 
-		set_country_flag = AME_ford
-		create_country_leader = {
-			name = "Henry Ford"
-			desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
-			picture = "Henry_Ford.dds"
-			expire = "1965.1.1"
-			ideology = integralism
-			traits = {
-				
-			}
-		}
-		
-	}
-	option = {#war 
-		name = ame.11.e 
-		trigger = {
-		
-			OR = {
-				
-				has_country_flag = AME_dip_war_flag 
-				has_country_flag = AME_eco_war_flag 
-				has_country_flag = AME_int_war_flag
-				
-				}
-
-			
-			}
-		ai_chance = { factor = 25 }
-		add_stability = -0.04 
-		set_country_flag = AME_military
-		create_country_leader = {
-			name = "George Van Horn Moseley"
-			desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
-			picture = "George_Moseley.dds"
-			expire = "1965.1.1"
-			ideology = integralism
-			traits = {
-				
-			}
-		}
-		
-	}
-}
-
 ####peace treaty with the federalists####
 country_event = {#peace summit?
 	id = ame.12 
@@ -599,3 +493,25 @@ country_event = { #AIC uprising
 
 }
 
+country_event = { #America plans invasion
+	id = ame.27
+	title = ame.27.t 
+	desc = ame.27.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.27.a 
+		add_war_support = 0.05 
+	}
+
+}
+
+country_event = { #Conscripts
+	id = ame.28
+	title = ame.28.t 
+	desc = ame.28.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.28.a 
+	}
+
+}

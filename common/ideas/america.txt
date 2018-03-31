@@ -2,6 +2,62 @@ ideas = {
 
 	country = {
 		
+		AME_supplies_idea = {
+		
+			picture = FRA_motorized_focus
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+					attrition = -0.1
+					
+
+			}
+		
+		}
+		
+		AME_fortification_idea = {
+			
+			picture = GRE_fortification_focus
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+					production_speed_bunker_factor = 0.33
+					production_speed_coastal_bunker_factor = 0.33 
+					production_speed_anti_air_building_factor = 0.33 
+					
+
+			}
+			
+		}
+		
 		AME_military_citizenship_idea = {
 		
 			picture = generic_manpower_bonus

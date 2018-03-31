@@ -1,0 +1,89 @@
+﻿division_template = {
+	name = "Conscript Division"  	
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+	}
+}
+
+units = {
+	division = {			
+		name = "Conscript Division "
+		location = 3957
+		division_template = "Conscript Division"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.1
+
+	}
+	division = {			
+		name = "Conscript Division "
+		location = 6845
+		division_template = "Conscript Division"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.1
+
+	}	
+	division = {			
+		name = "Conscript Division "
+		location = 3873
+		division_template = "Conscript Division"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.1
+
+	}
+	division = {			
+		name = "Conscript Division "
+		location = 6732
+		division_template = "Conscript Division"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.1
+
+	}
+	division = {			
+		name = "Conscript Division "
+		location = 6710
+		division_template = "Conscript Division"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.1
+
+	}
+	division = {			
+		name = "Conscript Division "
+		location = 9450
+		division_template = "Conscript Division"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.1
+
+	}
+	division = {			
+		name = "Conscript Division "
+		location = 10337
+		division_template = "Conscript Division"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.1
+
+	}
+	division = {			
+		name = "Conscript Division "
+		location = 1843
+		division_template = "Conscript Division"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.1
+
+	}
+	division = {			
+		name = "Conscript Division "
+		location = 10717
+		division_template = "Conscript Division"
+		start_experience_factor = 0.0
+		start_equipment_factor = 0.1
+
+	}
+}

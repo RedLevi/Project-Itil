@@ -13,7 +13,7 @@ AME_military_academy = {
        tag = AME
    }
    visible = {
-      has_completed_focus = AME_mil_path_focus
+      has_completed_focus = AME_military_education_focus
    }
 }
 AME_federals_decisions = {
@@ -55,7 +55,28 @@ AME_cen_ame_invasion_decisions = {
        tag = AME
    }
    visible = {
-     has_completed_focus = AME_military_LAT_focus
+    has_completed_focus = AME_military_LAT_focus
    }
 
+}
+
+AME_car_invasion_decisions = {
+	icon = GFX_decision_category_ger_military_buildup
+   allowed = {
+       tag = AME
+   }
+   visible = {
+		has_completed_focus = AME_military_CAR_focus
+   }
+
+}
+
+AME_war_preparedness_decisions = {
+	icon = GFX_decision_category_army_reform
+   allowed = {
+       tag = AME
+   }
+   visible = {
+		always = yes #has_completed_focus = AME_prepare_for_war_focus
+   }
 }

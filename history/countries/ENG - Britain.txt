@@ -53,12 +53,17 @@ if = {
 	}
 	set_autonomy = {
 		target = EGY
-		autonomous_state = autonomy_integrated_puppet
+		autonomous_state = autonomy_puppet
 	}
 	set_autonomy = {
 		target = RAJ
 		autonomous_state = autonomy_colony
 		freedom_level = 0.35
+	}
+	set_autonomy = {
+		target = ZIM
+		autonomous_state = autonomy_colony
+		freedom_level = 0.1
 	}
 	set_autonomy = {
 		target = CAN

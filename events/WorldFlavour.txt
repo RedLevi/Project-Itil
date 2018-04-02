@@ -32,11 +32,7 @@ news_event = {
 	 title = flv.2.t
 	 picture = GFX_fcw_start
 	 fire_only_once = yes
-
-   trigger = {
-	    has_global_flag = fcw_start
-	 }
-
+	 major = yes
 	 option = {
 	    name = flv.2.a
 			

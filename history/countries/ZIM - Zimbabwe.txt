@@ -47,12 +47,11 @@ set_politics = {
 
 create_country_leader = {
 	
-	name = " Marcus James Hugins"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+	name = "Herbert Stanley"
+	picture = "Herbert_Stanley.dds"
 	expire = "1965.1.1"
-	ideology = integralism
+	ideology = democratic_conservatism
 	traits = { 
-		prince_of_terror
 		
 			}
 }

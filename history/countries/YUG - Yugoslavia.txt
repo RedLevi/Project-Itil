@@ -61,7 +61,7 @@ set_stability = 0.6
 add_ideas = {
 	YUG_dc
 	YUG_executive_power
-	prince_paul
+	YUG_prince_paul_idea
 }
 
 create_country_leader = {

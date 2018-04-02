@@ -86,6 +86,7 @@ country_event = { #CIVIL WAR#
 
 	option = {
 	    name = france.5.a #SPF
+	    news_event = flv.2
 		hidden_effect = {
 		    set_global_flag = fcw_start
 			SPF = { transfer_state = 460 }
@@ -139,6 +140,7 @@ country_event = { #CIVIL WAR#
 		}
 		option = {
 	    name = france.5.b #NFA
+	    news_event = flv.2
 		hidden_effect = {
 			SPF = { transfer_state = 460 }
 			SPF = { transfer_state = 459 }
@@ -1024,6 +1026,8 @@ country_event = {#intervention event for ITA
 
 		ITA = { declare_war_on = { target = NFA type = annex_everything } }
 		ITA = { declare_war_on = { target = SPF type = annex_everything } }
+		SYA = { declare_war_on = { target = NFA type = annex_everything } }
+		SYA = { declare_war_on = { target = SPF type = annex_everything } }
 	}
 	option = {#do nothing
 		name = france.36.a

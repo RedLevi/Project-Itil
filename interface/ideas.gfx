@@ -3682,6 +3682,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/Christian_X.dds"
 	}
 	SpriteType = {
+		name = "GFX_idea_pedro_III"
+		texturefile = "gfx/interface/ideas/Pedro_III.dds"
+	}
+	SpriteType = {
 		name = "GFX_idea_ferdinand_I"
 		texturefile = "gfx/interface/ideas/Ferdinand_I.dds"
 	}

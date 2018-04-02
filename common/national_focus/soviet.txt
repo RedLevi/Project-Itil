@@ -1122,6 +1122,18 @@ focus = {
 	prerequisite = {
 		focus = Look_To_South
 	}
+	available = {
+	   country_exists = TUK 
+	}
+	bypass = {
+		TUK = {
+		OR = {
+		is_in_faction_with = SOV
+		has_government = communism
+		is_puppet_of = SOV
+		}
+		}
+	}
 	x = 62
 	y = 5
 	completion_reward = {
@@ -1140,11 +1152,15 @@ focus = {
 	available = {
 		GEO = {
 			exists = yes
-			NOT = {
-				is_in_faction_with = SOV
-				has_government = communism
-				is_puppet_of = SOV
-			}
+		}
+	}
+	bypass = {
+		GEO = {
+		OR = {
+		is_in_faction_with = SOV
+		has_government = communism
+		is_puppet_of = SOV
+		}
 		}
 	}
 	x = 64
@@ -1162,6 +1178,18 @@ focus = {
 	prerequisite = {
 		focus = Georgian_Ultimatum
 	}
+	available = {
+	   country_exists = ARM 
+	}
+	bypass = {
+		ARM = {
+		OR = {
+		is_in_faction_with = SOV
+		has_government = communism
+		is_puppet_of = SOV
+		}
+		}
+	}
 	x = 63
 	y = 6
     completion_reward = {
@@ -1174,6 +1202,18 @@ focus = {
 	cost = 2.00
 	prerequisite = {
 		focus = Georgian_Ultimatum
+	}
+	available = {
+	   country_exists = AZR 
+	}
+	bypass = {
+		AZR = {
+		OR = {
+		is_in_faction_with = SOV
+		has_government = communism
+		is_puppet_of = SOV
+		}
+		}
 	}
 	x = 65
 	y = 6
@@ -1227,6 +1267,19 @@ focus = {
 	prerequisite = {
 		focus = Look_To_West
 	}
+	available = {
+	   country_exists = UKR 
+	}
+	bypass = {
+		UKR = {
+		OR = {
+		is_in_faction_with = SOV
+		has_government = communism
+		is_puppet_of = SOV
+		}
+		}
+	}
+
 	x = 66
 	y = 5
 	completion_reward = {
@@ -1242,11 +1295,15 @@ focus = {
 	available = {
 		LIT = {
 			exists = yes
-			NOT = {
-				is_in_faction_with = SOV
-				has_government = communism
-				is_puppet_of = SOV
-			}
+		}
+	}
+	bypass = {
+		LIT = {
+		OR = {
+		is_in_faction_with = SOV
+		has_government = communism
+		is_puppet_of = SOV
+		}
 		}
 	}
 	prerequisite = {
@@ -1268,13 +1325,14 @@ focus = {
 		focus = Look_To_West
 	}
 	available = {
+		country_exists = LAT
+	}
+	bypass = {
 		LAT = {
-			exists = yes
-				is_in_faction_with = SOV
-				has_government = communism
-				is_puppet_of = SOV
+		   exists = no
 		}
 	}
+
 	x = 70
 	y = 5
 	completion_reward = {
@@ -1289,11 +1347,15 @@ focus = {
 	available = {
 		EST = {
 			exists = yes
-			NOT = {
-				is_in_faction_with = SOV
-				has_government = communism
-				is_puppet_of = SOV
-			}
+		}
+	}
+	bypass = {
+		EST = {
+		OR = {
+		is_in_faction_with = SOV
+		has_government = communism
+		is_puppet_of = SOV
+		}
 		}
 	}
 	prerequisite = {
@@ -1319,6 +1381,19 @@ focus = {
 	prerequisite = {
 		focus = Demand_Lithuania
 	}
+	available = {
+	   country_exists = FIN 
+	}
+	bypass = {
+		FIN = {
+		OR = {
+		is_in_faction_with = SOV
+		has_government = communism
+		is_puppet_of = SOV
+		}
+		}
+	}
+
 	x = 70
 	y = 6
 	completion_reward = {
@@ -1334,11 +1409,22 @@ focus = {
 		focus = The_Mad_Pasha
 	}
 	available = {
+	   country_exists = AFG
        OR = {
           SOV = { owns_state = 405 }
           SOV = { owns_state = 584 }
        }
 	}
+	bypass = {
+		AFG = {
+		OR = {
+		is_in_faction_with = SOV
+		has_government = communism
+		is_puppet_of = SOV
+		}
+		}
+	}
+
 	x = 61
 	y = 6
 	completion_reward = {
@@ -1504,7 +1590,9 @@ focus = {
 	x = 60
 	y = 3
 	completion_reward = {
-	   add_opinion_modifier = { target = JAP modifier = Soviet_Revanchism }
+	   JAP = {
+	      add_opinion_modifier = { target = SOV modifier = Soviet_Revanchism }
+	   }
 	   set_country_flag = SOV_japan_target
 
 	}
@@ -1518,10 +1606,19 @@ focus = {
 		MON = {
 			exists = yes
 			NOT = {
-				is_in_faction_with = SOV
-				has_government = communism
-				is_puppet_of = SOV
+    		is_in_faction_with = SOV
+		    has_government = communism
+	      	is_puppet_of = SOV
 			}
+		}
+	}
+	bypass = {
+		MON = {
+		OR = {
+		is_in_faction_with = SOV
+		has_government = communism
+		is_puppet_of = SOV
+		}
 		}
 	}
 	prerequisite = {
@@ -1615,6 +1712,9 @@ focus = {
 	}
 	x = 53
 	y = 5
+	completion_reward = {
+	   custom_effect_tooltip = SOV_expansion_tooltip
+	}
 
 }
 

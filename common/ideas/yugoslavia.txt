@@ -1,8 +1,8 @@
 ideas = {
 
 		country = {
-		    prince_paul = {
-		
+		    YUG_prince_paul_idea = {
+		    picture = prince_paul
 			available = {
 			
 				NOT = { has_government = communism }
@@ -23,7 +23,7 @@ ideas = {
 			
 			modifier = {
 				
-				stability_factor = -0.025
+				stability_factor = 0.025
 				
 			
 			}

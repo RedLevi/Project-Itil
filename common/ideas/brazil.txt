@@ -1,4 +1,33 @@
 ideas = {
+    country = {
+       BRA_pedro_III_idea = {
+          picture = pedro_III
+          available = {
+			
+				NOT = { has_government = communism }
+			
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+				
+					has_government = communism
+				
+				}
+			}
+			
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				stability_factor = 0.05
+				
+			
+			}
+       }
+    }
 	political_advisor = {
 
 		BRA_washington_luis_pereira = {

@@ -34,7 +34,7 @@ units = {
 		name = "2.Bazhin Hradzgut’yun"
 		location = 6976
 		division_template = "Bazhin Hradzgut’yun"
-		start_experience_factor = 0.1
+		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
 
@@ -42,14 +42,14 @@ units = {
 		name = "3.Bazhin Hradzgut’yun"
 		location = 6991
 		division_template = "Bazhin Hradzgut’yun"		
-		start_experience_factor = 0.05
+		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
 	}
 	division= {	
 		name = "4.Bazhin Hradzgut’yun"
 		location = 12376
 		division_template = "Bazhin Hradzgut’yun"		
-		start_experience_factor = 0.05
+		start_experience_factor = 0.1
 		start_equipment_factor = 0.6
 	}
 	division= {	
@@ -70,7 +70,7 @@ units = {
 		name = "7.Bazhin Hradzgut’yun"
 		location = 652
 		division_template = "Bazhin Hradzgut’yun"		
-		start_experience_factor = 0.2
+		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
 	division= {	

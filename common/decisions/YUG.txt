@@ -1,0 +1,583 @@
+YUG_disturbed_time = {
+	
+	YUG_authorise_secret_police = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = {
+			tag = YUG
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = YUG_not_doing_policy
+				NOT = { has_country_flag = YUG_doing_policy }
+			}
+		}
+		visible = {
+			has_country_flag = YUG_emergency_situation
+		}
+
+		cost = 10
+		fire_only_once = yes
+		days_remove = 5
+
+		remove_effect = {
+			add_ideas = YUG_secret_police
+			clr_country_flag = YUG_doing_policy
+			add_to_variable = { var = YUG_dtv value = 1 tooltip = YUG_dtv_add_1 }
+		}
+
+		complete_reward = {
+			set_country_flag = YUG_doing_policy
+			set_country_falg = YUG_secret_police
+		}
+	}
+
+	YUG_attack_ustache = {
+		icon = GFX_decision_generic_ignite_civil_war
+		allowed = {
+			tag = YUG
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = YUG_not_doing_policy
+				NOT = { has_country_flag = YUG_doing_policy }
+			}
+		}
+		visible = {
+			has_country_flag = YUG_emergency_situation
+			has_country_flag = YUG_secret_police
+		}
+
+		cost = 10
+		fire_only_once = yes
+		days_remove = 5
+
+		remove_effect = {
+			swap_ideas = { remove_idea = YUG_ethnic_unrest add_idea = YUG_dc }
+			set_country_flag = YUG_crushed_ustache
+			clr_country_flag = YUG_doing_policy
+			add_to_variable = { var = YUG_dtv value = 1 tooltip = YUG_dtv_add_1 }
+		}
+
+		complete_reward = {
+			set_country_flag = YUG_doing_policy
+		}
+	}
+
+	YUG_factory_guards = {
+		icon = GFX_decision_generic_prepare_civil_war
+		allowed = {
+			tag = YUG
+		}
+		available = {
+			has_country_flag = YUG_emergency_situation
+			custom_trigger_tooltip = {
+				tooltip = YUG_not_doing_policy
+				NOT = { has_country_flag = YUG_doing_policy }
+			}
+		}
+		visible = {
+			has_country_flag = YUG_emergency_situation
+			NOT = { has_country_flag = YUG_compromise_workers }
+		}
+
+		cost = 20
+		fire_only_once = yes
+		days_remove = 50
+
+		modifier = {
+			stability_factor = -0.1
+			production_factory_max_efficiency_factor = 0.3 # 'armed guards in factories' OR 'compromise with the workers'
+			industrial_capacity_factory = 0.4 # 'armed guards in factories' OR 'compromise with the workers'
+		}
+
+		remove_effect = {
+			remove_ideas = YUG_dt_production
+			clr_country_flag = YUG_doing_policy
+			add_to_variable = { var = YUG_dtv value = 2 tooltip = YUG_dtv_add_2 }
+		}
+
+		complete_effect = {
+			set_country_flag = YUG_doing_policy
+			set_country_flag = YUG_factory_guards
+			custom_effect_tooltip = YUG_fg_cw_me
+		}
+	}
+
+	YUG_compromise_with_workers = {
+		icon = GFX_decision_generic_industry
+		allowed = {
+			tag = YUG
+		}
+		available = {
+			has_country_flag = YUG_emergency_situation
+			custom_trigger_tooltip = {
+				tooltip = YUG_not_doing_policy
+				NOT = { has_country_flag = YUG_doing_policy }
+			}
+		}
+		visible = {
+			has_country_flag = YUG_emergency_situation
+			NOT = { has_country_flag = YUG_factory_guards }
+		}
+
+		cost = 20
+		fire_only_once = yes
+		days_remove = 50
+
+		modifier = {
+			production_factory_max_efficiency_factor = 0.2 # 'armed guards in factories' OR 'compromise with the workers'
+			industrial_capacity_factory = 0.3 # 'armed guards in factories' OR 'compromise with the workers'
+		}
+
+		remove_effect = {
+			remove_ideas = YUG_dt_production
+			clr_country_flag = YUG_doing_policy
+			subtract_from_variable = { var = YUG_dtv value = 1 tooltip = YUG_dtv_sub_1 }
+		}
+
+		complete_effect = {
+			set_country_flag = YUG_doing_policy
+			set_country_flag = YUG_compromise_workers
+			custom_effect_tooltip = YUG_fg_cw_me
+		}
+	}
+
+	YUG_dock_order = {
+		icon = GFX_decision_generic_prepare_civil_war
+		allowed = {
+			tag = YUG
+		}
+		available = {
+			has_country_flag = YUG_emergency_situation
+			custom_trigger_tooltip = {
+				tooltip = YUG_not_doing_policy
+				NOT = { has_country_flag = YUG_doing_policy }
+			}
+		}
+		visible = {
+			has_country_flag = YUG_emergency_situation
+			NOT = { has_country_flag = YUG_compromise_docks }
+		}
+
+		cost = 20
+		fire_only_once = yes
+		days_remove = 50
+
+		modifier = {
+			stability_factor = -0.1
+			industrial_capacity_dockyard = 0.5 # 'establish order in the docks' OR 'compromise with the dockyards'
+		}
+
+		remove_effect = {
+			remove_ideas = YUG_dt_docks
+			clr_country_flag = YUG_doing_policy
+			add_to_variable = { var = YUG_dtv value = 1 tooltip = YUG_dtv_add_1 }
+		}
+
+		complete_effect = {
+			set_country_flag = YUG_doing_policy
+			set_country_flag = YUG_dock_guards
+			custom_effect_tooltip = YUG_do_cd_me
+		}
+	}
+
+	YUG_compromise_docks = {
+		icon = GFX_decision_generic_naval
+		allowed = {
+			tag = YUG
+		}
+		available = {
+			has_country_flag = YUG_emergency_situation
+			custom_trigger_tooltip = {
+				tooltip = YUG_not_doing_policy
+				NOT = { has_country_flag = YUG_doing_policy }
+			}
+		}
+		visible = {
+			has_country_flag = YUG_emergency_situation
+			NOT = { has_country_flag = YUG_dock_guards }
+		}
+
+		cost = 20
+		fire_only_once = yes
+		days_remove = 50
+
+		modifier = {
+			industrial_capacity_dockyard = 0.4 # 'establish order in the docks' OR 'compromise with the dockyards'
+		}
+
+		remove_effect = {
+			remove_ideas = YUG_dt_docks
+			clr_country_flag = YUG_doing_policy
+			subtract_from_variable = { var = YUG_dtv value = 1 tooltip = YUG_dtv_sub_1 }
+		}
+
+		complete_effect = {
+			set_country_flag = YUG_doing_policy
+			set_country_flag = YUG_compromise_docks
+			custom_effect_tooltip = YUG_do_cd_me
+		}
+	}
+
+	YUG_construction_order = {
+		icon = GFX_decision_generic_prepare_civil_war
+		allowed = {
+			tag = YUG
+		}
+		available = {
+			has_country_flag = YUG_emergency_situation
+			custom_trigger_tooltip = {
+				tooltip = YUG_not_doing_policy
+				NOT = { has_country_flag = YUG_doing_policy }
+			}
+		}
+		visible = {
+			has_country_flag = YUG_emergency_situation
+			NOT = { has_country_flag = YUG_compromise_construction }
+		}
+
+		cost = 20
+		fire_only_once = yes
+		days_remove = 50
+
+		modifier = {
+			stability_factor = -0.1
+			production_speed_buildings_factor = 0.4 # 'forced construction' OR 'compromise with the construction workers'
+        	industry_repair_factor = 0.4 # 'forced construction' OR 'compromise with the construction workers'
+		}
+
+		remove_effect = {
+			remove_ideas = YUG_dt_docks
+			clr_country_flag = YUG_doing_policy
+			add_to_variable = { var = YUG_dtv value = 2 tooltip = YUG_dtv_add_2 }
+		}
+
+		complete_effect = {
+			set_country_flag = YUG_doing_policy
+			set_country_flag = YUG_construction_guards
+			custom_effect_tooltip = YUG_co_cc_me
+		}
+	}
+
+	YUG_compromise_construction = {
+		icon = GFX_decision_generic_construction
+		allowed = {
+			tag = YUG
+		}
+		available = {
+			has_country_flag = YUG_emergency_situation
+			custom_trigger_tooltip = {
+				tooltip = YUG_not_doing_policy
+				NOT = { has_country_flag = YUG_doing_policy }
+			}
+		}
+		visible = {
+			has_country_flag = YUG_emergency_situation
+			NOT = { has_country_flag = YUG_construction_guards }
+		}
+
+		cost = 20
+		fire_only_once = yes
+		days_remove = 50
+
+		modifier = {
+			production_speed_buildings_factor = 0.3 # 'forced construction' OR 'compromise with the construction workers'
+        	industry_repair_factor = 0.3 # 'forced construction' OR 'compromise with the construction workers'
+		}
+
+		remove_effect = {
+			remove_ideas = YUG_dt_construction
+			clr_country_flag = YUG_doing_policy
+			subtract_from_variable = { var = YUG_dtv value = 1 tooltip = YUG_dtv_sub_1 }
+		}
+
+		complete_effect = {
+			set_country_flag = YUG_doing_policy
+			set_country_flag = YUG_compromise_construction
+			custom_effect_tooltip = YUG_co_cc_me
+		}
+	}
+
+	YUG_promise_goods = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			tag = YUG
+		}
+		available = {
+			has_country_flag = YUG_emergency_situation
+		}
+		visible = {
+			has_country_flag = YUG_emergency_situation
+		}
+
+		cost = 10
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = YUG_promised_goods
+			remove_ideas = YUG_dt_shortages
+			custom_effect_tooltip = YUG_held_to_promise
+		}
+	}
+
+	YUG_prepare_for_autocracy = {
+		icon = GFX_decision_generic_army_support
+		allowed = {
+			tag = YUG
+		}
+		available = {
+			has_country_flag = YUG_emergency_situation
+			custom_trigger_tooltip = {
+				tooltip = YUG_not_doing_policy
+				NOT = { has_country_flag = YUG_doing_policy }
+			}
+		}
+		visible = {
+			has_country_flag = YUG_emergency_situation
+			NOT = { has_country_flag = YUG_pfd }
+		}
+
+		cost = 20
+		fire_only_once = yes
+		days_remove = 10
+
+		remove_effect = {
+			swap_ideas = { remove_idea = YUG_dt_uncertain_path add_idea = YUG_dt_uncertain_path_react }
+			clr_country_flag = YUG_doing_policy
+			add_to_variable = { var = YUG_dtv value = 2 tooltip = YUG_dtv_add_2 }
+		}
+
+		complete_effect = {
+			set_country_flag = YUG_doing_policy
+			set_country_flag = YUG_pfa
+			custom_effect_tooltip = YUG_pfd_pfa_me
+		}
+	}
+
+	YUG_prepare_for_democracy = {
+		icon = GFX_decision_generic_civil_support
+		allowed = {
+			tag = YUG
+		}
+		available = {
+			has_country_flag = YUG_emergency_situation
+			custom_trigger_tooltip = {
+				tooltip = YUG_not_doing_policy
+				NOT = { has_country_flag = YUG_doing_policy }
+			}
+		}
+		visible = {
+			has_country_flag = YUG_emergency_situation
+			NOT = { has_country_flag = YUG_pfa }
+		}
+
+		cost = 20
+		fire_only_once = yes
+		days_remove = 10
+
+		remove_effect = {
+			remove_ideas = YUG_dt_uncertain_path
+			clr_country_flag = YUG_doing_policy
+			subtract_from_variable = { var = YUG_dtv value = 2 tooltip = YUG_dtv_sub_2 }
+		}
+
+		complete_effect = {
+			set_country_flag = YUG_doing_policy
+			set_country_flag = YUG_pfd
+			custom_effect_tooltip = YUG_pfd_pfa_me
+		}
+	}
+
+}
+
+YUG_deal_with_democracy = {
+	YUG_deal_with_socialists_r = {
+		icon = GFX_decisions_generic_break_treaty
+		allowed = {
+			tag = YUG
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = YUG_not_doing_policy
+				NOT = { has_country_flag = YUG_doing_party_policy }
+			}
+		}
+		visible = {
+			has_country_flag = YUG_deal_with_dem
+			has_government = reactionarism
+		}
+
+		cost = 20
+		fire_only_once = yes
+		days_remove = 100
+
+		remove_effect = {
+			clr_country_flag = YUG_doing_political_policy
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@socialism
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -0.8
+				}
+				add_popularity = {
+					ideology = socialism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -0.5
+				}
+				add_popularity = {
+					ideology = reactionarism
+					popularity = ban_ideology_var
+				}
+				add_popularity = {
+					ideology = communsim
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}				
+			}
+			custom_effect_tooltip = YUG_ban_socialists
+			add_stability = ban_ideology_var
+		}
+
+		complete_effect = {
+			set_country_flag = YUG_doing_political_policy
+		}
+	}
+
+	YUG_deal_with_liberals_r = {
+		icon = GFX_decisions_generic_break_treaty
+		allowed = {
+			tag = YUG
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = YUG_not_doing_policy
+				NOT = { has_country_flag = YUG_doing_party_policy }
+			}
+		}
+		visible = {
+			has_country_flag = YUG_deal_with_dem
+			has_government = reactionarism
+		}
+
+		cost = 20
+		fire_only_once = yes
+		days_remove = 100
+
+		remove_effect = {
+			clr_country_flag = YUG_doing_political_policy
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@liberalism
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -0.8
+				}
+				add_popularity = {
+					ideology = liberalism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -0.25
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 3
+				}
+				add_popularity = {
+					ideology = reactionarism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}				
+			}
+			custom_effect_tooltip = YUG_ban_liberals
+			add_stability = ban_ideology_var
+		}
+
+		complete_effect = {
+			set_country_flag = YUG_doing_political_policy
+		}
+	}
+
+	YUG_deal_with_conservatives = {
+		icon = GFX_decisions_generic_break_treaty
+		allowed = {
+			tag = YUG
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = YUG_not_doing_policy
+				NOT = { has_country_flag = YUG_doing_party_policy }
+			}
+		}
+		visible = {
+			has_country_flag = YUG_deal_with_dem
+		}
+
+		cost = 20
+		fire_only_once = yes
+		days_remove = 100
+
+		remove_effect = {
+			clr_country_flag = YUG_doing_political_policy
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@socialism
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -0.8
+				}
+				add_popularity = {
+					ideology = socialism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -0.25
+				}
+				add_popularity = {
+					ideology = national_integralism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 3
+				}
+				add_popularity = {
+					ideology = reactionarism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}				
+			}
+			custom_effect_tooltip = YUG_ban_conservatives
+			add_stability = ban_ideology_var
+		}
+
+		complete_effect = {
+			set_country_flag = YUG_doing_political_policy
+		}
+	}
+}

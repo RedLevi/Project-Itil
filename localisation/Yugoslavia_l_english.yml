@@ -2,8 +2,8 @@
 ####events####
 ## Introduction ##
 yug.30.t:0 "The Kingdom of Yugoslavia"
-yug.30.d:0 "The Kingdom of Yugoslavia cam into being on the 13th of February 1922, following the annexation of Bosnia by Serbia. It proceeded to invade Croatia on the 3rd April, who were already defending a Hungarian attack. Croatia fell quickly, and the new Yugoslav forces initiated both skirmishes against the Hungarians in northern Croatia and partisan groups accross the country - the later often violently conducted by armed Serbian militias. Further border clashes occur between Yugoslav, Hungarian and Austrian troops, but Yugoslavia ultimatley failed to advance into Vojvodina or Slovenia, and only gained the southern part of the Istari peninsula. \nOn the 16th of August 1925, King Alexander agrees on a constitution with his provisional government, making Yugoslavia a unitary monarchy. Nationalist parties, especially the Croatian Peasant Party, gain large support in elections, but ultimately the Radical Party wins through slightly dubious means. Just months before the next elections in 1929, however, a Radical Party parliament member shoots dead two members of the Croatian Peasant Party and wound three further, including the party leader. Huge uprisings in the occupied territories occur, notably in Croatia, and a general strike occurs in these areas. In reaction, King Alexander suspends the constitution on the 6th January 1929, and enters a period of absolute dictatorship that brutally crushes the protests in Croatia. \nOn the 18th of March 1931, King Alexander announces a new constitution - giving the king emergency powers, the ability to appoint half of the upper house and direct control of the military. Any law could be passed with the support of just one of the two houses if the King approved of the law. \nKing Alexander was assassinate in Marseiller, France on the 9th of October 1934, by a radical nationalistic group. As per his will, Prince Paul took power as the cheif regent for the young Peter II. Prince-Regent Paul has proved more pragmatic that Alexander, and makes significantly less use of the exectutive powers laid out to him in the constitution. This doesn't mean they aren't available, however."
-yug.30.a:0 "God is with Prince-Regent Paul"
+yug.30.d:0 "The Kingdom of Yugoslavia cam into being on the 13th of February 1922, following the annexation of Bosnia by Serbia. It proceeded to invade Croatia on the 3rd April, who were already defending a Hungarian attack. Croatia fell quickly, and the new Yugoslav forces initiated both skirmishes against the Hungarians in northern Croatia and partisan groups accross the country - the later often violently conducted by armed Serbian militias. Further border clashes occur between Yugoslav, Hungarian and Austrian troops, but Yugoslavia ultimatley failed to advance into Vojvodina or Slovenia, and only gained the southern part of the Istari peninsula. \nOn the 16th of August 1925, King Alexander agrees on a constitution with his provisional government, making Yugoslavia a unitary monarchy. Nationalist parties, especially the Croatian Peasant Party, gain large support in elections, but ultimately the Radical Party wins through slightly dubious means. Just months before the next elections in 1929, however, a Radical Party parliament member shoots dead two members of the Croatian Peasant Party and wound three further, including the party leader. Huge uprisings in the occupied territories occur, notably in Croatia, and a general strike occurs in these areas. In reaction, King Alexander suspends the constitution on the 6th January 1929, and enters a period of absolute dictatorship that brutally crushes the protests in Croatia. \nOn the 18th of March 1931, King Alexander announces a new constitution - giving the king emergency powers, the ability to appoint half of the upper house and direct control of the military. Any law could be passed with the support of just one of the two houses if the King approved of the law."
+yug.30.a:0 "God is with King Alexander"
 ## Expansionism ##
 # Vojvodina #
 yug.16.t:0 "Yugoslvia Offers an Alliance"
@@ -79,18 +79,41 @@ yug.36.d_liberal:0 "Following the election, Prince-Regent Paul now has the opper
 yug.36.d_conservative:0 "Following the election, Prince-Regent Paul now has the oppertunity to assign his seats. In the election, the Conservatives did extraordinarily well, winning the largest share of seats in both houses. Whilst this now means they control the lower house, the Constitution of 1932 means the monarch can assign half of the seats of the upper house, and laws can be passed with the support of the king and only one of the two houses. This effectively means the King has unrestricted legislative power - and his power passes to the Regent in event of a regency. \n \nA Conservative victory is the best case scenario - it means Prince-Regent Paul can assign his seats in a similar proportion to the public votes, which ensures a conservative victory whilst maintaining the outlook that Paul observes the public's view and doesn't wish to intervene in the running of the state."
 yug.36.a:0 "Paul goes with the public opinion"
 yug.36.b:0 "The Prince appoints conservatives"
+## Assasination Events ##
+yug.37.t:0 "The Assasination of King Alexander"
+yug.37.d:0 "Tragedy has struck! Alexander, our beloved King, has been slain! \nKing Alexander was participating in a state visit to Germany to dicuss co-operation in the containment of communist expanison in Europe, especially concerning the syndicalist state in Italy and political instability in France. King Alexander was assasinated at the hands of a young member of the Ustashe - the nationalistic Croatian independence group. Whilst tragic, there seems to be no sign of widespread unprisings in Croatia. \nThe country is starting to fall into chaos. King Alexander was very much at the centre of the entire beurocracy, so his assasination has immediately been felt. Alexander's son is too young to take up the throne, so Alexander's close cousin has been appointed as chief regent. He is expected to declare a state of emergency soon and take swift action to deal with the prevailing problems."
+yug.37.a:0 "Dark times are ahead"
+yug.38.d:0 "The King of Yugoslavia, King Alexander, was assasinated today in Munich during a sate visit to Germany. He was shot whilst entering the conference hall to meet King Wilheilm II of Germany, where they would discuss the spread of communism in Europe. The shot was fired by a young member of the Ustashe - a far right Croatian nationalist group - with assistance of two others. He is now in the custody of the Yugoslavian authorities. The assasination means that the ethnic question, which the government claimed was delt with, is clearly still a large problem. Yugoslavia is weaker than it seems."
+yug.38.a:0 "We mourn"
+yug.38.b:0 "On our soil?"
+yug.38.c:0 "This may keep them off our backs for a bit"
+yug.38.e:0 "Yugoslav weakness is our gain"
+yug.38.f:0 "The world is decending the chaos"
+yug.39.t:0 "The Trial of The Three"
+yug.39.d:0 "Today marks the final day of the Trial of Three - the three member of the Ustashe who perpetrated the assasination of King Alexander, Mijo Kralj, Zvonimir Popišil and Milan Rajić. The weight of evidence means they are inevitably guilty, but the question remains as to what punisment they recieve. Shall it be death, or shall they be imprisoned for life instead?"
+yug.39.a:0 "Capital Punishment is only fitting"
+yug.39.b:0 "Life Imprisonment is enough"
 
 ####focus####
 ### Emergency Stuff ###
 YUG_start_state_of_emergency:0 "Delcare a State of Emergency"
-
+YUG_start_state_of_emergency_desc:0 "Something terrible has happened! We must declare a state of emergency at once in order to increace our powers in dealing with the threat."
 YUG_form_emerg_council:0 "Form the Emergency Council"
-
+YUG_form_emerg_council_desc:0 "We have neither the skill nor time to enact changes alone - the Emergency Council must be convened by the Prince to help us deal with the issues at hand."
+YUG_emerg_situation_end:0 "Emergency Over"
+YUG_emerg_situation_end_desc:0 "The emergency is over - the day is won. We must now decide on what to do with the country, based on our choices in the unrest."
 YUG_emerg_compromise:0 "Compromise"
-
+YUG_emerg_compromise_desc:0 "Following the solution of the unrest facing our country, our actions have lead us to an overall compromise with the people. We shall step back and let a newly elected government take over. In exchange we have earnt their support and even respect."
 YUG_emerg_revenge:0 "Revenge"
-
+YUG_emerg_revenge_desc:0 "The time has come - Paul must seize complete power of the country for the forseeable future in order to both safeguard it and avenge King Alexander's death. A ruthless autocrat is not Paul's style, however, but revenge comes first..."
 YUG_restore_constitution:0 "Restore the Suspended Constitution"
+YUG_restore_constitution_desc:0 "Now the unrest has been conquered, it is time to hand over the reigns and restore the suspended constitution and bring democracy back to Yugoslavia."
+YUG_safe_hands:0 "Safe Hands"
+YUG_safe_hands_desc:0 "We must now formalise Prince-Regent Paul's complete power."
+### Politics ###
+## Autocracy ##
+YUG_restrict_parties:0 "Restrict Political Parties"
+YUG_restrict_parties_desc:0 "The biggest threat to our autocratic regieme is organised democratic groups. Let us deal with these once and for all."
 
 ### Expansion ###
 YUG_outwards_vision:0 "Outwards Vision"
@@ -99,7 +122,6 @@ YUG_outwards_vision:0 "Outwards Vision"
 
 
 # Slovenia #
-
 
 ####ideas####
 YUG_dc:0 "A Divided Country"
@@ -130,6 +152,73 @@ YUG_solo_preperations:0 "Solo Preperations"
 YUG_greater_yug_i:0 "Consolodating Greater Yugoslavia"
 
 YUG_balkan_supremacy_i:0 "Aspirations to Balkan Supremacy"
+
+YUG_king_alexander:0 "King Alexander I"
+YUG_king_alexander_desc:0 "King Alexander I is the ruler of Yugoslavia. He is popular, for it is he who united Yugoslavia into one country, but he is also somewhat reactionary leaning."
+YUG_prince_paul:0 "Prince-Regent Paul"
+YUG_prince_paul_desc:0 "Following King Alexander's tragic assassination in Munich, Prince-Regent Paul has taken over running the country until Alexander's son, Peter III, comes of age."
+YUG_prince_paul_liked:0 "Prince-Regent Paul"
+YUG_prince_paul_liked_desc:0 "Following King Alexander's tragic assassination in Munich, Prince-Regent Paul has taken over running the country until Alexander's son, Peter III, comes of age."
+
+## Disturbed Times ##
+YUG_dt_production:0 "Production Disturbed"
+YUG_dt_production_desc:0 "In the uncertainty following Alexander's death, many factory workers have taken the ethnic unrest as an oppertunity to go on strike!"
+YUG_dt_docks:0 "Dockyard Unrest"
+YUG_dt_docks_desc:0 "Our dockyards are small but influential. They clearly think this influence allows them to not need to work!"
+YUG_dt_construction:0 "Construction Disarray"
+YUG_dt_construction_desc:0 "We rely on construction teams more than ever in the industrial age. However, many of them are ethnic minorities and are using the chaos of Alexander's election to refuse to work!"
+YUG_dt_shortages:0 "Consumer Good Shortages"
+YUG_dt_shortages_desc:0 "The complete chaos following the assasination has lead to supply shortages in out strongholds. We must attend to this!"
+YUG_dt_uncertain_path:0 "An Uncertain Path"
+YUG_dt_uncertain_path_desc:0 "The people don't know what the future holds. We must fix this!"
+YUG_dt_uncertain_path_react:0 "Preperations for Autocracy"
+YUG_dt_uncertain_path_react_desc:0 "We have subtly informed the people of a possible political pathway - Autocracy. Hopefully the people begin to prepare for this future."
+YUG_ethnic_unrest:0 "Ethnic Unrest"
+YUG_ethnic_unrest_desc:0 "Ethnic tensions have shot skyhigh following the assasination, encouraged particularly in Croatia by the Ustashe."
+YUG_temp_secret_police:0 "Temporary Secret Police Force"
+YUG_temp_secret_police_desc:0 "We have created a temporary secret police force to help us deal with the Ustashe and other dissident groups. They will be disbanded once the emergency situation is at an end."
+
+#####decisions####
+YUG_disturbed_time:0 "Disturbed Times"
+YUG_disturbed_time_desc:0 "We live in disturbed times. After King Alexander's assasination, a wave of unrest has wracked the country. We must solve this crisis before we can thing of doing anything else. \n\nOur current aggressiveness is §R[?Root.YUG_dtv]§!. This will influence how our country goes on from here."
+YUG_factory_guards:0 "Armed Guards in Factories"
+YUG_factory_guards_desc:0 "Our military is still strong and is still loyal. By deploying some of them to guard factories both from attacks by resistance groups and from the workers themselves, we can ensure much better efficiency."
+YUG_not_doing_policy:0 "We must not be already implementing a different emergency policy"
+YUG_fg_cw_me:0 "§HArmed Guards in Factories§! and §HCompromise with the Workers§! are mutually exclusive, so the other will be disabled."
+YUG_compromise_with_workers:0 "Compromise with the Workers"
+YUG_compromise_with_workers_desc:0 "The workers only have a short list of demands, including better conditions and free elections in the near future. We could easily promise these changes to them and earn back their co-operation, without tanks in the streets."
+YUG_dock_order:0 "Re-establish Order in the Docks"
+YUG_dock_order_desc:0 "The demands from the workers of the dockyards are different from those of the factory workers, but our response must be the same - force them to work!"
+YUG_do_cd_me:0 "§HRe-establish Order in the Docks§! and §HCompromise with the Dockyards§! are mutually exclusive, so the other will be disabled."
+YUG_compromise_docks:0 "Compromise with the Dockyards"
+YUG_compromise_docks_desc:0 "The demands from the dockyards are not too dissimilar from those of the factories. We could easily promise to implement their reforms and then slyly go back on this at a latter date - or even better, leave it for an elected government to handle!"
+YUG_construction_order:0 "Forced Construction"
+YUG_construction_order_desc:0 "Nobody wants to work - not even the construction workers! Fortunately we have an army, and they have a solution to this predicarment..."
+YUG_co_cc_me:0 "§HForced Construction§! and §HCompromise with the Construction Workers§! are mutually exclusive, so the other will be disabled."
+YUG_compromise_construction:0 "Compromise with the Construction Workers"
+YUG_compromise_construction_desc:0 "All the construction workers want is better health and saftey guidelines and more paid leave - is that really too much to ask? Maybe not..."
+YUG_promise_goods:0 "Promise Goods"
+YUG_promise_goods_desc:0 "As is often the case, the people care more about consumer goods being available than they do their King being shot. We must promise them consumer goods in the near future so they can focus on the true issues at hand."
+YUG_held_to_promise:0 "The people will sure as hell hold us to this promise!"
+YUG_prepare_for_autocracy:0 "Prepare for Autocracy"
+YUG_prepare_for_autocracy_desc:0 "The people are like sheep, and we are the shepard. Soon we will take the people down a different route - one that lands them firmly in our hands from now on. We must prepare them for this eventuality."
+YUG_pfd_pfa_me:0 "§HPrepare for Autocracy§! and §HPrepare for Democracy§! are mutually exclusive, so the other will be disabled.""
+YUG_prepare_for_democracy:0 "Prepare for Democracy"
+YUG_prepare_for_democracy_desc:0 "Our people are uncertain as to the path we will take. We must reassure them that the emergency situation is only temporary, and they will once again have elections and a democratically elected government - just not now."
+## DT Variable ##
+YUG_dtv_sub_2:0 "Subtracts 2 from our aggressiveness variable"
+YUG_dtv_sub_1:0 "Subtracts 1 from our aggressiveness variable"
+YUG_dtv_add_1:0 "Adds 1 to our aggressiveness variable"
+YUG_dtv_add_2:0 "Adds 2 to our aggressiveness variable"
+## Dealing with Democracy ##
+YUG_deal_with_democracy:0 "Dealing with Democracy"
+YUG_deal_with_democracy_desc:0 "Organised democratic groups are the greatest threat to our new regieme. We must make sure we eliminate them - but this will sure hurt our stability!"
+YUG_deal_with_socialists_r:0 "Deal with the Socialists"
+YUG_ban_socialists:0 "The SPJ will be banned and its support will mostly be divided up between the SKJ and us"
+YUG_deal_with_liberals_r:0 "Deal with the Liberals"
+YUG_ban_liberals:0 "The Democratic Party will be banned and its support will mostly be divided up between the SKJ and us"
+YUG_deal_with_conservatives_r:0 "Deal with the Conservatives"
+YUG_ban_conservatives:0 "The NRS will be banned and its support will mostly be divided up between the ZBOR and us"
 
 ####opinion####
 YUG_looking_out:0 "Yugoslavian Expansionism"
@@ -165,9 +254,12 @@ YUG_ethnic_int_req:0 "The People's Radical Party or the Democratic Party must be
 YUG_ser_dom_req:0 "The People's Radical Party is in control of the legislature following an election or Reactionary elements have seized power"
 YUG_state_of_emergency:0 "This focus will become available in emergency conditions"
 YUG_state_of_emergency_effect:0 "A state of emergency will be delcared, temporarily suspending the constitution and giving the monarch complete executive power."
-YUG_emergency_decisions:0 "Enables §Hdecisions§H to bring the country back into order."
+YUG_emergency_decisions:0 "Enables §Hdecisions§! to bring the country back into order."
 YUG_emerg_comp:0 "We will commit to a moderate policy - only pushing as far as we need to - and promise to restore democracy once the situation is delt with"
 YUG_emerg_rev:0 "We will commit to an extreme hardline policy. This will severly anger the opposition, but this is the price we must pay for revenge!"
-YUG_king_decision:0 "This focus will be auto-completed when the monarch has made his decisions on the election."
+YUG_king_decision_tooltip:0 "This focus will be auto-completed when the monarch has made his decisions on the election."
 YUG_restore_democracy:0 "We will organise emergency elections to take place in a short while"
-YUG_emerg_situation_ended:0 "The emergency situation has ended"
+YUG_emerg_situation_ended:0 "The emergency situation has ended and we have completed all decisions in the §HDisturbed Times§! category."
+YUG_disturbed_times:0 "We gain a host of negative ideas, all delt with via decision once we have declared a state of emergency and convened an emergency council."
+YUG_compromise_variable:0 "Our aggressiveness in dealing with the unrest must be less than or equal to §R25§! for us to take this path. It is currently §R[?Root.YUG_dtv]§!"
+YUG_revenge_variable:0 "Our aggressiveness in dealing with the unrest must be greater than §R25§! for us to take this path. It is currently§R[?Root.YUG_dtv]§!."

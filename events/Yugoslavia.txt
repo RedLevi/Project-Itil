@@ -891,3 +891,121 @@ country_event = { # The King's Choice
 		add_stability = -0.2
 	}
 }
+
+### Assasination Events ###
+
+country_event = {
+	id = yug.37
+	title = yug.37.t
+	desc = yug.37.d
+
+	trigger = {
+		tag = YUG
+	}
+
+	mean_time_to_happen = { days = 120 }
+
+	fire_only_once = yes
+
+	immediate = {
+		swap_ideas = { remove_idea = YUG_king_alexander add_idea = YUG_prince_paul }
+		set_country_flag = YUG_country_emergency
+	}
+
+	option = { # Dark times are ahead
+		name = yug.37.a
+		custom_effect_tooltip = YUG_disturbed_times
+		hidden_effect = {
+			add_ideas = YUG_dt_production
+			add_ideas = YUG_dt_docks
+			add_ideas = YUG_dt_construction
+			add_ideas = YUG_dt_shortages
+			add_ideas = YUG_ethnic_unrest
+			news_event = { id = yug.38 hours = 6 }
+		}
+	}
+}
+
+news_event = {
+	id = yug.38
+	title = yug.37.t
+	desc = yug.38.d
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = { # We mourn King Alexander
+		trigger = {
+			tag = YUG
+		}
+		name = yug.38.a
+	}
+
+	option = { # On our soil?
+		trigger = {
+			tag = GER
+		}
+		name = yug.38.b
+		add_political_power = -20
+	}
+
+	option = { # This may keep them off our backs for a bit
+		trigger = {
+			OR = {
+				tag = HUN
+				tag = AUS
+				tag = BUL
+			}
+		}
+		name = yug.38.c
+	}
+
+	option = { # Yugoslav weakness if Italian gain
+		trigger = {
+			tag = ITA
+		}
+		name = yug.38.e
+	}
+
+	option = { # The world is decending into chaos
+		trigger = {
+			NOT = {
+				OR = {
+					tag = YUG
+					tag = GER
+					tag = HUN
+					tag = AUS
+					tag = BUL
+					tag = ITA
+				}
+			}
+		}
+		name = yug.38.f
+	}
+}
+
+country_event = {
+	id = yug.39
+	title = yug.39.t
+	desc = yug.39.d
+
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 100
+	}
+
+	trigger = {
+		has_country_flag = YUG_emergency_situation
+	}
+
+	option = { # The Death Penalty
+		name = yug.39.a
+		add_to_variable = { var = YUG_dtv value = 2 tooltip = YUG_dtv_add_2 }
+	}
+
+	option = { # Life Imprisonment
+		name = yug.39.b
+		add_stability = 0.05
+	}
+}

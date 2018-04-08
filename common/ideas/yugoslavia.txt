@@ -1,271 +1,418 @@
 ideas = {
 
-		country = {
-		    YUG_prince_paul_idea = {
-		    picture = prince_paul
-			available = {
-			
-				NOT = { has_government = communism }
-			
-			}
-			
-			allowed_civil_war = {
-			
-				NOT = {
-				
-					has_government = communism
-				
-				}
-			}
-			
-			
-			removal_cost = -1
-			
-			modifier = {
-				
-				stability_factor = 0.025
-				
-			
-			}
-		
-		
-		    }
-			YUG_executive_power = {
-				allowed = {
-					original_tag = YUG
-					always = no
-				}
-				allowed_civil_war = {
-					always = no
-				}
-				removal_cost = -1
-				picture = GFX_idea_HUN_hungarian_monarchy
-				modifier = {
-					stability_factor = -0.05
-					political_power_gain = -0.4
-					reactionarism_drift = 0.02
-				}
-			}
+	country = {
+      YUG_king_alexander = {
+        available = {
+          NOT = { has_government = communism }
+        }
+        allowed_civil_war = {
+          NOT = {
+            has_government = communism
+          }
+        }
+        removal_cost = -1
+        modifier = {
+          reactionarism_drift = 0.01
+          stability_factor = 0.05
+        }
+      }
+        YUG_prince_paul = {
+        picture = GFX_idea_yug_prince_paul
+        available = {
+          NOT = { has_government = communism }
+        }
+        allowed_civil_war = {
+          NOT = {
+            has_government = communism
+          }
+        }
+        removal_cost = -1
+        modifier = {
+          stability_factor = -0.05
+        }
+        }
+    	YUG_prince_paul_liked = {
+    		picture = GFX_idea_yug_prince_paul
+    		available = { NOT = { has_government = communsim } }
+    		allowed_civil_war = { NOT = { has_government = communsim } }
+    		removal_cost = -1
+    		modifier = {
+    			stability_factor = 0.05
+    			war_support_factor = 0.05
+    		}
+    	}
+      YUG_executive_power = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_HUN_hungarian_monarchy
+        modifier = {
+          stability_factor = -0.1
+          war_support_factor = 0.1
+          political_power_gain = -0.4
+        }
+      }
 
-			YUG_paul_rule = {
-				allowed = {
-					original_tag = YUG
-					always = no
-				}
-				allowed_civil_war = {
-					always = no
-				}
-				removal_cost = -1
-				picture = GFX_idea_HUN_hungarian_monarchy
-				modifier = {
-					stability_factor = -0.1
-					political_power_gain = -0.1
-					reactionarism_drift = 0.05
-				}
-			}
+      YUG_paul_rule = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          NOT = { has_government = communism }
+        }
+        removal_cost = -1
+        picture = GFX_idea_HUN_hungarian_monarchy
+        modifier = {
+          stability_factor = -0.1
+          war_support_factor = 0.1
+          political_power_gain = -0.2
+          reactionarism_drift = 0.05
+        }
+      }
 
-			YUG_dc = {
-				allowed = {
-					original_tag = YUG
-					always = no
-				}
-				allowed_civil_war = {
-					always = no
-				}
-				removal_cost = -1
-				picture = yug_divided_nation
-				modifier = {
-					non_core_manpower = -0.02
-					stability_factor = -0.30
-					political_power_gain = -0.5
-				}
-			}
+    	YUG_ethnic_unrest = {
+    		allowed = {
+    			original_tag = YUG
+    			always = no
+    		}
+    		allowed_civil_war = {
+    			always = yes
+    		}
+    		removal_cost = -1
+    		picture = yug_divided_nation
+    		modifier = {
+    			non_core_manpower = -0.02
+          		stability_factor = -0.4
+         		political_power_gain = -0.2
+         		foreign_subversive_activites = 0.2
+         		mobilization_laws_cost_factor = 1
+    		}
+    	}
 
-			YUG_dc_free = {
-				allowed = {
-					original_tag = YUG
-					always = no
-				}
-				allowed_civil_war = {
-					always = no
-				}
-				removal_cost = -1
-				picture = yug_divided_nation
-				modifier = {
-					liberalism_drift = 0.05
-					non_core_manpower = -0.02
-					stability_factor = -0.20
-					political_power_gain = -0.3
-				}
-			}
+      YUG_dc = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = yug_divided_nation
+        modifier = {
+          non_core_manpower = -0.02
+          stability_factor = -0.30
+          political_power_gain = -0.4
+        }
+      }
 
-			YUG_pragmatic_puppet = {
-				allowed = {
-					original_tag = YUG
-					always = no
-				}
-				allowed_civil_war = {
-					always = no
-				}
-				removal_cost = -1
-				picture = GFX_idea_generic_flexible_foreign_policy2
-				modifier = {
-					stability_factor = 0.10
-					political_power_gain = -0.1
-				}
-			}
+      YUG_dc_free = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = yug_divided_nation
+        modifier = {
+          liberalism_drift = 0.05
+          non_core_manpower = -0.02
+          stability_factor = -0.20
+          political_power_gain = -0.2
+        }
+      }
 
-			YUG_dc_int = {
-				allowed = {
-					original_tag = YUG
-					always = no
-				}
-				allowed_civil_war = {
-					always = no
-				}
-				removal_cost = -1
-				picture = yug_divided_nation
-				modifier = {
-					conservatism_drift = 0.05
-					stability_factor = -0.20
-					political_power_gain = -0.5
-				}
-			}
+      YUG_pragmatic_puppet = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_generic_flexible_foreign_policy2
+        modifier = {
+          stability_factor = 0.10
+          political_power_gain = -0.1
+        }
+      }
 
-			YUG_suc_int = {
-				allowed = {
-					original_tag = YUG
-					always = no
-				}
-				allowed_civil_war = {
-					always = no
-				}
-				removal_cost = -1
-				picture = GFX_idea_generic_flexible_foreign_policy
-				modifier = {
-					stability_factor = -0.05
-					political_power_gain = 0.1
-				}
-			}
+      YUG_dc_int = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = yug_divided_nation
+        modifier = {
+          conservatism_drift = 0.05
+          stability_factor = -0.20
+          political_power_gain = -0.4
+        }
+      }
 
-			YUG_dc_dom = {
-				allowed = {
-					original_tag = YUG
-					always = no
-				}
-				allowed_civil_war = {
-					always = no
-				}
-				removal_cost = -1
-				picture = yug_divided_nation
-				modifier = {
-					reactionarism_drift = 0.05
-					stability_factor = -0.30
-					political_power_gain = -0.3
-				}
-			}
+      YUG_suc_int = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_generic_flexible_foreign_policy
+        modifier = {
+          stability_factor = -0.05
+          political_power_gain = 0.1
+        }
+      }
 
-			YUG_central_benefits = {
-				allowed = {
-					original_tag = YUG
-					always = no
-				}
-				allowed_civil_war = {
-					always = no
-				}
-				removal_cost = -1
-				picture = GFX_idea_generic_foreign_capital
-				modifier = {
-					stability_factor = -0.10
-					political_power_gain = -0.1
-					production_speed_buildings_factor = 0.05
-					consumer_goods_factor = -0.02
-				}
-			}
+      YUG_dc_dom = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = yug_divided_nation
+        modifier = {
+          reactionarism_drift = 0.05
+          stability_factor = -0.30
+          political_power_gain = -0.2
+        }
+      }
 
-			YUG_fourth_option = {
-				allowed = {
-					original_tag = YUG
-					always = no
-				}
-				allowed_civil_war = {
-					always = no
-				}
-				removal_cost = -1
-				picture = GFX_idea_generic_communism_drift_bonus
-				modifier = {
-					socialism_drift = 0.05
-					stability_factor = -0.25
-					political_power_gain = -0.4
-				}
-			}
+      YUG_central_benefits = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_generic_foreign_capital
+        modifier = {
+          stability_factor = -0.10
+          political_power_gain = -0.1
+          production_speed_buildings_factor = 0.05
+          consumer_goods_factor = -0.02
+        }
+      }
 
-			YUG_expansionist = {
-				allowed = {
-					original_tag = YUG
-					always = no
-				}
-				allowed_civil_war = {
-					always = no
-				}
-				removal_cost = -1
-				picture = GFX_idea_FRA_national_mobilization_focus
-				modifier = {
-					conscription_factor = 0.05
-					planning_speed = 0.1
-				}
-			}
+      YUG_fourth_option = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_generic_communism_drift_bonus
+        modifier = {
+          socialism_drift = 0.05
+          stability_factor = -0.25
+          political_power_gain = -0.4
+        }
+      }
 
-			YUG_solo_preperations = {
-				allowed = {
-					original_tag = YUG
-					always = no
-				}
-				allowed_civil_war = {
-					always = no
-				}
-				removal_cost = -1
-				picture = GFX_idea_FRA_scw_intervention_nationalists_focus
-				modifier = {
-					production_factory_efficiency_gain_factor = 0.05
-					consumer_goods_factor = -0.02
-					production_speed_arms_factory_factor = 0.05
-				}
-			}
+      YUG_expansionist = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_FRA_national_mobilization_focus
+        modifier = {
+          conscription_factor = 0.05
+          planning_speed = 0.1
+        }
+      }
 
-			YUG_greater_yug_i = {
-				allowed = {
-					original_tag = YUG
-					always = no
-				}
-				allowed_civil_war = {
-					always = no
-				}
-				removal_cost = -1
-				picture = GFX_idea_generic_intel_bonus
-				modifier = {
-					consumer_goods_factor = -0.05
-					army_core_defence_factor = 0.1
-				}
-			}
+      YUG_solo_preperations = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_FRA_scw_intervention_nationalists_focus
+        modifier = {
+          production_factory_efficiency_gain_factor = 0.05
+          consumer_goods_factor = -0.02
+          production_speed_arms_factory_factor = 0.05
+        }
+      }
 
-			YUG_balkan_supremacy_i = {
-				allowed = {
-					original_tag = YUG
-					always = no
-				}
-				allowed_civil_war = {
-					always = no
-				}
-				removal_cost = -1
-				picture = GFX_idea_generic_intel_bonus
-				modifier = {
-					army_core_attack_factor = 0.1
-					conscription = 0.01
-				}
-			}
+      YUG_greater_yug_i = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_generic_intel_bonus
+        modifier = {
+          consumer_goods_factor = -0.05
+          army_core_defence_factor = 0.1
+        }
+      }
 
-		}
+      YUG_balkan_supremacy_i = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_generic_intel_bonus
+        modifier = {
+          army_core_attack_factor = 0.1
+          conscription = 0.01
+        }
+      }
+
+      ## Disturbed Times ##
+
+      YUG_dt_production = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_chi_war_of_resistance3
+        modifier = {
+          production_factory_max_efficiency_factor = -0.3 # 'armed guards in factories' OR 'compromise with the workers'
+          industrial_capacity_factory = -0.6 # 'armed guards in factories' OR 'compromise with the workers'
+          political_power_factor = -0.1
+        }
+      }
+
+      YUG_dt_docks = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_chi_war_of_resistance3
+        modifier = {
+          industrial_capacity_dockyard = -0.6 # 'establish order in the docks' OR 'compromise with the dockyards'
+          political_power_factor = -0.1
+        }
+      }
+
+      YUG_dt_construction = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_chi_war_of_resistance3
+        modifier = {
+          production_speed_buildings_factor = -0.5 # 'forced construction' OR 'compromise with the construction workers'
+          industry_repair_factor = -0.5 # 'forced construction' OR 'compromise with the construction workers'
+          political_power_factor = -0.1
+        }
+      }
+
+      YUG_dt_shortages = {
+        allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_chi_war_of_resistance3
+        modifier = {
+          consumer_goods_factor = 0.2 # 'attend to shortages'
+          political_power_factor = -0.1
+        }
+      }
+
+      YUG_dt_uncertain_path = {
+      	 allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_chi_war_of_resistance3
+        modifier = {
+        	stability_factor = -0.1
+        	war_support_factor = -0.1
+        }
+      }
+
+      YUG_dt_uncertain_path_react = {
+      	 allowed = {
+          original_tag = YUG
+          always = no
+        }
+        allowed_civil_war = {
+          always = no
+        }
+        removal_cost = -1
+        picture = GFX_idea_chi_war_of_resistance3
+        modifier = {
+        	stability_factor = -0.05
+        	war_support_factor = 0.05
+        	reactionarism_drift = 0.05
+        }
+      }
+    	YUG_temp_secret_police = {
+    		allowed = {
+    			original_tag = YUG
+    			always = no
+    		}
+    		allowed_civil_war = {
+    			always = yes
+    		}
+    		removal_cost = -1
+    		#picture = 
+    		modifier = {
+    			drift_defence_factor = 0.1
+    			political_power_factor = 0.2
+    			stability_factor = -0.05
+    		}
+    	}
+    }
 
 		political_advisor = {
 

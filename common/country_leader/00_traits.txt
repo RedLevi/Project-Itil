@@ -107,6 +107,13 @@ leader_traits = {
 		}
 	}
 
+	regent = {
+		random = no
+		ai_will_do = {
+			factor = 1
+		}
+		justify_war_goal_time = 0.5
+	}
 
 #ai_focus_defense_factor
 #ai_focus_aggressive_factor

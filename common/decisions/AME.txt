@@ -1258,3 +1258,57 @@ AME_war_preparedness_decisions = {
 	}
 
 }
+
+ AME_ally_germany_decisions = {
+
+AME_start_ger_dimplomacy_decision = {
+
+ icon = GFX_decision_generic_political_discourse
+ allowed = { tag = AME }
+ visible = {	
+ has_completed_focus = AME_look_to_germany	
+ }
+ cost = 50    
+ modifier = { political_power_gain = -0.25 }
+ fire_only_once = yes 	
+ days_remove = 50 
+ remove_effect = {
+ add_political_power = 100
+ reverse_add_opinion_modifier = { target = GER modifier = AME_good_relations }
+ add_opinion_modifier = { target = GER modifier = AME_good_relations }
+ set_country_flag = AME_ger_1
+      }
+   }
+AME_german_army_exchange = {
+
+ icon = GFX_decision_generic_prepare_civil_war
+ allowed = { tag = AME }
+ visible = {	
+ has_completed_focus = AME_look_to_germany	
+ }
+ cost = 75   
+ modifier = { experience_gain_army = 0.10   } 
+ fire_only_once = yes 	
+ days_remove = 100
+ remove_effect = {
+ add_political_power = 50
+ AME = { add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine } }	
+ GER = { add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine } }
+ set_country_flag = AME_ger_2 	
+      }
+   }   
+AME_join_germany = {
+
+ icon = GFX_decision_generic_political_discourse
+ allowed = { tag = AME }
+ visible = {	
+ has_country_flag = AME_ger_1
+ has_country_flag = AME_ger_2
+ }  
+ fire_only_once = yes 	
+ complete_effect = {	
+ GER = { country_event = { id = ame.29 }
+      }
+   }      
+ }
+

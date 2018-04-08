@@ -515,3 +515,44 @@ country_event = { #Conscripts
 	}
 
 }
+
+country_event = { #AsktojoinGermanyAlliance
+	id = ame.29
+	title = ame.29.t 
+	desc = ame.29.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.29.a 
+		AME = { country_event = { id = ame.30 } }
+	}
+	option = {
+		name = ame.29.b
+		AME = { country_event = { id = ame.31 } }
+	}
+
+}
+
+country_event = { #GermanyAccepts
+	id = ame.30
+	title = ame.30.t 
+	desc = ame.30.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.30.a 
+		GER = { add_to_faction = AME }
+	}
+
+}
+
+country_event = { #GermanyAccepts
+	id = ame.31
+	title = ame.31.t 
+	desc = ame.31.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.31.a 
+	}
+
+}
+
+

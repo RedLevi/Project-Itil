@@ -635,5 +635,33 @@ ideas = {
 			}
 		
 		}
+
+		AME_isolationist_policy = {
+		
+			available = {
+			
+				always = yes
+
+			}
+
+			picture = isolation
+			
+			allowed_civil_war = {
+			
+				always = no  
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				political_power_gain = 0.5
+				ai_get_ally_desire_factor = -100
+				join_faction_tension = 0.5
+			
+			}
+		
+		}
 	}
 }

@@ -80,3 +80,23 @@ AME_war_preparedness_decisions = {
 		always = yes #has_completed_focus = AME_prepare_for_war_focus
    }
 }
+
+AME_ally_germany_decisions = {
+  icon = GFX_decision_category_generic_political_actions
+   allowed = {
+       tag = AME
+   }
+   visible = {
+   has_completed_focus = AME_look_to_germany
+   }
+}
+
+AME_ally_england_decisions = {
+  icon = GFX_decision_category_generic_political_actions
+   allowed = {
+       tag = AME
+   }
+   visible = {
+   has_completed_focus = AME_an_old_friend
+   }
+}

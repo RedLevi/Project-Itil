@@ -435,8 +435,7 @@ focus_tree = {
         available_if_capitulated = no
 		
         available = {
-		    has_war = no
-			###make flag for after 2nd civil war or elected options###
+		    always = no
 		}		
 
 		completion_reward = {
@@ -827,8 +826,7 @@ focus_tree = {
         available_if_capitulated = no
 		
         available = {
-		    has_war = no
-			###make flag for after 2nd civil war or elected options###
+			always = no
 		}		
 
 		completion_reward = {
@@ -1073,6 +1071,9 @@ focus_tree = {
 		}
 		
         available_if_capitulated = no
+		available = {
+			always = no
+		}	
 
 		completion_reward = {
 		navy_experience = 50
@@ -1299,6 +1300,10 @@ focus_tree = {
 		}
 		
         available_if_capitulated = no	
+		available = {
+			always = no
+		}	
+
 
 		completion_reward = {
 		}

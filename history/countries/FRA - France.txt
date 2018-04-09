@@ -41,6 +41,10 @@ set_technology = {
 	fleet_in_being = 1
 }
 
+add_ideas = {
+    france_torn
+}
+
 set_convoys = 300
 set_stability = 0.4
 

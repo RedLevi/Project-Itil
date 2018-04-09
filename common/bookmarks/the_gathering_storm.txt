@@ -36,6 +36,7 @@ bookmarks = {
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = liberalism
 			ideas = {
+			france_torn
 			}
 			focuses = {
 			}

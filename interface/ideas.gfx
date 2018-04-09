@@ -4045,5 +4045,10 @@ spriteTypes = {
 		name = "GFX_idea_fidelatis_ad_america"
 		texturefile = "gfx/interface/ideas/idea_fidelatis_ad_america.dds"
 	}
+	### FRA
+	SpriteType = {
+		name = "GFX_idea_france_torn"
+		texturefile = "gfx/interface/ideas/idea_france_torn.dds"
+	}	
 
 }

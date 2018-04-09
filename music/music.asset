@@ -94,7 +94,7 @@ music = {
 	volume = 0.65
 }
 
-### French Anthems ###
+### French Anthems & Marches ###
 
 music = {
 	name = "Hymne du Royaume de France"
@@ -103,8 +103,26 @@ music = {
 }
 
 music = {
-	name = "La Victoire est a Nous"
-	file = "LaVictoireestaNous.ogg"
+	name = "Marche de la Garde Consulaire and La Victoire est a Nous"
+	file = "MarchedelaGardeConsulaire.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "The Lorraine March"
+	file = "TheLorraineMarch.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "France Libère Toi"
+	file = "FranceLibereToi.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Le Drapeau Rouge (The Red Flag)"
+	file = "LeDrapeauRouge.ogg"
 	volume = 0.65
 }
 

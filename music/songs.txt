@@ -16,7 +16,7 @@ music = {
 }
 
 music = {
-	song = "La Victoire est a Nous"
+	song = "Marche de la Garde Consulaire and La Victoire est a Nous"
 	chance = {
 		modifier = {
 			factor = 1
@@ -466,3 +466,40 @@ music = {
 		}
 	}
 }
+music = {
+	song = "The Lorraine March"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = FRA
+		}
+	}
+}
+music = {
+	song = "Le Drapeau Rouge (The Red Flag)"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = FRA
+		}
+	}
+}
+music = {
+	song = "France Libère Toi"
+	chance = {
+		modifier = {
+			factor = 1
+		}
+		modifier = {
+			factor = 2
+			tag = FRA
+		}
+	}
+}
+

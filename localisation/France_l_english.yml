@@ -68,7 +68,7 @@ FRA_instant_equipment:0 "Instant Equipment Doctine"
 FRA_breakthrough:0 "Breakthough in Army Reasearch"
 FRA_firepower:0 "Firepower Doctine"
 FRA_artillery:0 "Artillery Equipment"
-FRA_armor_army:"0 "Armor Building"
+FRA_armor_army:0 "Armor Building"
 FRA_armor_bonus:0 "Armor Bonus"
 FRA_motor_bonus:0 "Motorized Infantry"
 FRA_naval_air_command:0 "Naval & Air Command"
@@ -94,6 +94,10 @@ FRA_new_bloc:0 "New French Bloc"
 FRA_turn_on_britain:0 "Turn on the British!"
 FRA_german_surprise:0 "Surprise the Germans!"
 FRA_save_america:0 "Save American Democracy!"
+
+###ideas###
+france_torn:0 "Republic in Chaos"
+france_torn_desc:0 "Dissent and despair are affecting the French nation out of many factors and as now, the French Republic is under threat of both of the radical Right and Left-wing politics. The elections are soon coming and our nation in chaos so the future doesn't seem bright."
 
 ###EVENTS###
 france.1.t:0 "The state of France"

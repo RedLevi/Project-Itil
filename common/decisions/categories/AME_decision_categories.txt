@@ -77,7 +77,7 @@ AME_war_preparedness_decisions = {
        tag = AME
    }
    visible = {
-		always = yes #has_completed_focus = AME_prepare_for_war_focus
+		has_completed_focus = AME_prepare_for_war_focus
    }
 }
 

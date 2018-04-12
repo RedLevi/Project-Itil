@@ -523,10 +523,35 @@ country_event = { #AsktojoinGermanyAlliance
 	is_triggered_only = yes 
 	option = {
 		name = ame.29.a 
+		ai_chance = { 
+			factor = 50 
+			modifier = {
+				OR = {
+					has_war_with = SOV 
+					has_war_with = ENG 
+					has_war_with = JAP 
+				}
+				
+				factor = 40 
+			}
+		}
 		AME = { country_event = { id = ame.30 } }
+		add_stability = -0.02 
 	}
 	option = {
 		name = ame.29.b
+		ai_chance = { 
+			factor = 50 
+			modifier = {
+				OR = {
+					has_war_with = SOV 
+					has_war_with = ENG 
+					has_war_with = JAP 
+				}
+				
+				factor = -40 
+			}
+		}
 		AME = { country_event = { id = ame.31 } }
 	}
 
@@ -544,7 +569,7 @@ country_event = { #GermanyAccepts
 
 }
 
-country_event = { #GermanyAccepts
+country_event = { #GermanyDeclines
 	id = ame.31
 	title = ame.31.t 
 	desc = ame.31.d 
@@ -555,4 +580,112 @@ country_event = { #GermanyAccepts
 
 }
 
+country_event = {#recognizingAmericaGer 
+	id = ame.32 
+	title = ame.32.t 
+	desc = ame.32.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.32.a 
+	}
+}
 
+country_event = {#German-American military cooperation
+	id = ame.33 
+	title = ame.33.t 
+	desc = ame.33.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.32.a 
+		effect_tooltip = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine } 
+		}
+	}
+}
+
+country_event = {#recognizingAmericaEng 
+	id = ame.34 
+	title = ame.34.t 
+	desc = ame.34.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.34.a 
+	}
+}
+
+country_event = {#British-American military cooperation
+	id = ame.35
+	title = ame.35.t 
+	desc = ame.35.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.35.a 
+		effect_tooltip = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine } 
+		}
+	}
+}
+
+country_event = { #AsktojoinEnglandAlliance
+	id = ame.36
+	title = ame.36.t 
+	desc = ame.36.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.36.a 
+		ai_chance = { 
+			factor = 50 
+			modifier = {
+				OR = {
+					has_war_with = SOV 
+					has_war_with = GER 
+					has_war_with = JAP 
+				}
+				
+				factor = 40 
+			}
+		}
+		AME = { country_event = { id = ame.37 } }
+		add_stability = -0.02 
+	}
+	option = {
+		name = ame.36.b
+		ai_chance = { 
+			factor = 50 
+			modifier = {
+				OR = {
+					has_war_with = SOV 
+					has_war_with = GER 
+					has_war_with = JAP 
+				}
+				
+				factor = -40 
+			}
+		}
+		AME = { country_event = { id = ame.38 } }
+	}
+
+}
+
+country_event = { #BritainAccepts
+	id = ame.37
+	title = ame.37.t 
+	desc = ame.37.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.37.a 
+		ENG = { add_to_faction = AME }
+	}
+
+}
+
+country_event = { #BritainDeclines
+	id = ame.38
+	title = ame.38.t 
+	desc = ame.38.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.31.a 
+	}
+
+}

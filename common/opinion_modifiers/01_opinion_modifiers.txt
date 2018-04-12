@@ -71,7 +71,8 @@ Soviet_Expansionism = { value = -200 }
 Soviet_Peace = { value = 75 }
 #AME#
 AME_agression = { value = -75 }
-AME_good_relations = { value = 100 }
+AME_good_relations = { value = 30 }
+AME_GER_cooperation = { value = 75 }
 AME_reconciliation = { value = 25 }
 AME_ally = { value = 50 }
 #NOR# 

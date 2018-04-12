@@ -820,7 +820,7 @@ focus_tree = {
 		y = 1
 		cost = 10	 
 		available = {
-			always = yes 
+			NOT = { has_war_with = GER }
 		}
 		mutually_exclusive = { focus = AME_our_own_way focus = AME_an_old_friend focus = AME_isolationist }
 		prerequisite = { focus = AME_international_relations }
@@ -859,7 +859,8 @@ focus_tree = {
 		y = 1
 		cost = 10	 
 		available = {
-			always = yes 
+			NOT = { has_war_with = ENG }
+			has_idea = AME_peace_idea
 		}
 		mutually_exclusive = { focus = AME_our_own_way focus = AME_look_to_germany focus = AME_isolationist }
 		prerequisite = { focus = AME_international_relations }

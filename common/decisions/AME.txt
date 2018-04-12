@@ -169,7 +169,7 @@ AME_federals_decisions = {
 			NOT = { has_war_with = USA }
 			USA = { 
 				exists = yes 
-				has_government = conservatism
+				NOT = { has_government = communism }
 			}
 		}
 		visible = {
@@ -1262,53 +1262,187 @@ AME_war_preparedness_decisions = {
  AME_ally_germany_decisions = {
 
 AME_start_ger_dimplomacy_decision = {
-
- icon = GFX_decision_generic_political_discourse
- allowed = { tag = AME }
- visible = {	
- has_completed_focus = AME_look_to_germany	
- }
- cost = 50    
- modifier = { political_power_gain = -0.25 }
- fire_only_once = yes 	
- days_remove = 50 
- remove_effect = {
- add_political_power = 100
- reverse_add_opinion_modifier = { target = GER modifier = AME_good_relations }
- add_opinion_modifier = { target = GER modifier = AME_good_relations }
- set_country_flag = AME_ger_1
-      }
-   }
+	
+	ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 2 
+			  has_war = yes 
+	       }
+	    }
+	
+	 icon = GFX_decision_generic_political_discourse
+	 allowed = { tag = AME }
+	 visible = {	
+		has_completed_focus = AME_look_to_germany	
+	 }
+	 cost = 50    
+	 fire_only_once = yes 	
+	 days_remove = 50 
+	 remove_effect = {
+		 add_political_power = 100
+		 reverse_add_opinion_modifier = { target = GER modifier = AME_good_relations }
+		 add_opinion_modifier = { target = GER modifier = AME_good_relations }
+		 set_country_flag = AME_ger_1
+		AME = { 
+			add_ai_strategy = {
+				type = befriend
+				id = "GER"
+				value = 200
+			}
+		}
+		GER = { country_event = { id = ame.32 } }
+		  }
+	   }
 AME_german_army_exchange = {
 
  icon = GFX_decision_generic_prepare_civil_war
- allowed = { tag = AME }
- visible = {	
- has_completed_focus = AME_look_to_germany	
- }
- cost = 75   
- modifier = { experience_gain_army = 0.10   } 
- fire_only_once = yes 	
- days_remove = 100
- remove_effect = {
- add_political_power = 50
- AME = { add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine } }	
- GER = { add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine } }
- set_country_flag = AME_ger_2 	
-      }
-   }   
+	 allowed = { tag = AME }
+	 visible = {	
+		has_country_flag = AME_ger_1	
+	 }
+	 ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 2 
+			  has_war = yes 
+	       }
+	    }
+	 cost = 75   
+	 modifier = { experience_gain_army = 0.10   } 
+	 fire_only_once = yes 	
+	 days_remove = 100
+	 remove_effect = {
+		add_political_power = 50
+	 AME = { add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine } }	
+	 GER = { add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine } }	
+	 reverse_add_opinion_modifier = { target = GER modifier = AME_GER_cooperation }
+	 add_opinion_modifier = { target = GER modifier = AME_GER_cooperation }
+	 GER = { country_event = { id = ame.33 } }
+		  }
+	   }   
 AME_join_germany = {
-
- icon = GFX_decision_generic_political_discourse
- allowed = { tag = AME }
- visible = {	
- has_country_flag = AME_ger_1
- has_country_flag = AME_ger_2
- }  
- fire_only_once = yes 	
- complete_effect = {	
- GER = { country_event = { id = ame.29 }
-      }
+	available = { 
+		GER = { NOT = { has_government = communism } }
+	}
+	ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 2 
+			  has_war = yes 
+	       }
+		   modifier = {
+	          factor = 3 
+			  has_opinion = { target = GER value > 100 }
+	       }
+	    }
+	 icon = GFX_decision_generic_political_discourse
+	 allowed = { 
+			is_in_faction = no 
+			NOT = { has_war_with = GER }
+			has_opinion = { target = GER value > 100 }
+		}
+	 visible = {	
+		 has_country_flag = AME_ger_1
+	 }  
+	 fire_only_once = yes 	
+	 cost = 15
+	 complete_effect = {	
+	 GER = { country_event = { id = ame.29 } }
+		  }
    }      
  }
 
+AME_ally_england_decisions = {
+
+AME_start_eng_dimplomacy_decision = {
+	
+	ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 2 
+			  has_war = yes 
+	       }
+	    }
+	
+	 icon = GFX_decision_generic_political_discourse
+	 allowed = { tag = AME }
+	 visible = {	
+		has_completed_focus = AME_an_old_friend	
+	 }
+	 cost = 50    
+	 fire_only_once = yes 	
+	 days_remove = 50 
+	 remove_effect = {
+		 add_political_power = 100
+		 reverse_add_opinion_modifier = { target = ENG modifier = AME_good_relations }
+		 add_opinion_modifier = { target = ENG modifier = AME_good_relations }
+		 set_country_flag = AME_eng_1
+		AME = { 
+			add_ai_strategy = {
+				type = befriend
+				id = "ENG"
+				value = 200
+			}
+		}
+		ENG = { country_event = { id = ame.34 } }
+		  }
+	   }
+AME_english_army_exchange = {
+
+ icon = GFX_decision_generic_prepare_civil_war
+	 allowed = { tag = AME }
+	 visible = {	
+		has_country_flag = AME_eng_1	
+	 }
+	 ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 2 
+			  has_war = yes 
+	       }
+	    }
+	 cost = 75   
+	 modifier = { experience_gain_army = 0.10   } 
+	 fire_only_once = yes 	
+	 days_remove = 100
+	 remove_effect = {
+		add_political_power = 50
+	 AME = { add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine } }	
+	 ENG = { add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine } }	
+	 reverse_add_opinion_modifier = { target = ENG modifier = AME_GER_cooperation }
+	 add_opinion_modifier = { target = ENG modifier = AME_GER_cooperation }
+	 ENG = { country_event = { id = ame.35 } }
+		  }
+	   }   
+AME_join_england = {
+	ai_will_do = {
+	       factor = 10
+		    modifier = {
+	          factor = 2 
+			  has_war = yes 
+	       }
+		   modifier = {
+	          factor = 3 
+			  has_opinion = { target = ENG value > 100 }
+	       }
+	    }
+	 icon = GFX_decision_generic_political_discourse
+	 allowed = { 
+			is_in_faction = no 
+			NOT = { has_war_with = ENG }
+			has_opinion = { target = ENG value > 100 }
+		}
+	available = { 
+		ENG = { NOT = { has_government = communism } }
+	}
+	 visible = {	
+		 has_country_flag = AME_eng_1
+	 }  
+	 fire_only_once = yes 	
+	 cost = 15
+	 complete_effect = {	
+	 ENG = { country_event = { id = ame.36 } }
+		  }
+   }      
+ }

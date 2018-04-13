@@ -1,5 +1,5 @@
 SOV_expansion = {
-   icon = GFX_decision_ger_military_buildup
+   icon = GFX_decision_category_sov_great_patriotic_war
    picture = GFX_decision_cat_SOV_expansion
    allowed = {
        original_tag = SOV
@@ -40,12 +40,30 @@ SOV_demands = {
 	}
 }
 SOV_japwar = {
-	icon = GFX_decision_generic_ignite_civil_war
+	icon = GFX_decision_category_sov_great_patriotic_war
 	picture = GFX_decision_cat_SOV_japwar
 	allowed = {
 	   original_tag = SOV 
 	}
 	visible = {
 	   has_completed_focus = Dealing_With_Imperialists
+	}
+}
+SOV_claims = {
+	icon = GFX_decision_category_generic_propaganda
+	allowed = {
+	   original_tag = SOV
+	}
+	visible = {
+	   has_completed_focus = The_Revolution
+	}
+}
+SOV_middle_east = {
+	icon = GFX_decision_category_generic_independence
+	allowed = {
+	   original_tag = SOV
+	}
+	visible = {
+	   has_completed_focus = Threaten_Ottomans
 	}
 }

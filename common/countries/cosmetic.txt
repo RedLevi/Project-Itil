@@ -32,9 +32,14 @@ CMC = {
 
 USSR = {
     color = rgb { 204  0  0 }
-	color_ui = rgb { 255 179 96 }
+	color_ui = rgb { 130 18 18 }
 }
 
 seryug = {
     color = rgb { 72 73 126 }
+}
+
+SOVRUS = {
+    color = rgb {41 137 68}
+    color_ui = rgb { 56 102 69 }
 }

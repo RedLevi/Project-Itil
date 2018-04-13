@@ -34,6 +34,7 @@ country_event = { #Constitutent Assembly#
    title = soviet.2.t
    desc = soviet.2.d
    fire_only_once = yes
+   picture = GFX_sovcongress
 
    is_triggered_only = yes
 
@@ -47,6 +48,7 @@ country_event = { #Internal Policies
   id = soviet.3
   desc = soviet.3.d
   title = soviet.3.t
+  picture = GFX_sovcongress1
 
   is_triggered_only = yes
 
@@ -71,6 +73,7 @@ country_event = { #Economic Policies
   id = soviet.4
   title = soviet.4.t
   desc = soviet.4.d
+  picture = GFX_sovcongress1
 
   is_triggered_only = yes
 
@@ -95,6 +98,7 @@ country_event = { #National Policies
    id = soviet.5
    title = soviet.5.t
    desc = soviet.5.d
+   picture = GFX_sovcongress1
 
    is_triggered_only = yes
 
@@ -119,6 +123,7 @@ country_event = { #foreign POlicies
    id = soviet.6
    desc = soviet.6.d
    title = soviet.6.t
+   picture = GFX_sovcongress1
 
    is_triggered_only = yes
 
@@ -146,6 +151,7 @@ country_event = { #End of the congress
    id = soviet.7
    desc = soviet.7.d
    title = soviet.7.t
+   picture = GFX_kirovwin
 
    fire_only_once = yes
 
@@ -389,6 +395,7 @@ country_event = {#no clear victor, very rare
 	id = soviet.8
 	title = soviet.8.t
 	desc = soviet.8.d
+  picture = GFX_sovcongress1
 	fire_only_once = yes
 	trigger = {
 
@@ -648,6 +655,7 @@ country_event = {#Shliapnikov victorious
 	title = soviet.11.t
 	desc = soviet.11.d
 	is_triggered_only = yes
+  picture = GFX_kirovwin
 
 	option = {
 		name = soviet.11.a
@@ -1182,14 +1190,7 @@ country_event = {#Chernov victorious
 		retire_country_leader = yes
     set_country_flag = Gosplan_Congress
     set_country_flag = Soviet_Revolution
-			   create_country_leader = {
-					   name = "Viktor Chernov"
-					   desc = "POLITICS_LEON_TROTSKY_DESC"
-					   picture = "Viktor_Chernov.dds"
-					   expire = "1965.1.1"
-					   ideology = socialist_revolutionary
-					   traits = { }
-			   }
+		set_politics = { ruling_party = socialism elections_allowed = no }
 	}
 
 }

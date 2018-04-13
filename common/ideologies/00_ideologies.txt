@@ -149,7 +149,7 @@ ideologies = {
 			"FACTION_NAME_SOCIALISM_5"
 		}
 		
-		color = { 200 0 50 }
+		color = { 255 165 165 }
 		
 		war_impact_on_world_tension = 0.75		#Commie less threatening
 		faction_impact_on_world_tension = 0.5

@@ -1,6 +1,6 @@
 SOV_expansion = {
 	SOV_attack_turkestan = {
-	    icon = GFX_decision_category_sov_great_patriotic_war
+	    icon = GFX_decision_generic_ignite_civil_war
 	    allowed = {
 	       original_tag = SOV
 	    }
@@ -25,11 +25,9 @@ SOV_expansion = {
 	    }
 	    ai_will_do = {
 	       factor = 5
-	       modifier = {
-	          factor = 0
-	          has_war = yes
-	       }
+	       
 	    }
+      war_with_on_remove = TUK
 	    cost = 25
 	    days_remove = 5
 	    fire_only_once = yes
@@ -42,7 +40,7 @@ SOV_expansion = {
 	    }
 	}
 	SOV_attack_ukraine = {
-	    icon = GFX_decision_category_sov_great_patriotic_war
+	    icon = GFX_decision_generic_ignite_civil_war
 	    allowed = {
 	       original_tag = SOV
 	    }
@@ -66,12 +64,10 @@ SOV_expansion = {
             }
 	    }
 	    ai_will_do = {
-	       factor = 5
-	       modifier = {
-	          factor = 0
-	          has_war = yes
-	       }
+	       factor = 1
+	       
 	    }
+      war_with_on_remove = UKR
 	    cost = 25
 	    days_remove = 5
 	    fire_only_once = yes
@@ -84,7 +80,7 @@ SOV_expansion = {
 	    }
 	}
 	SOV_attack_afghanistan = {
-	    icon = GFX_decision_category_sov_great_patriotic_war
+	    icon = GFX_decision_generic_ignite_civil_war
 	    allowed = {
 	       original_tag = SOV
 	    }
@@ -109,11 +105,9 @@ SOV_expansion = {
 	    }
 	    ai_will_do = {
 	       factor = 5
-	       modifier = {
-	          factor = 0
-	          has_war = yes
-	       }
+	       
 	    }
+      war_with_on_remove = AFG
 	    cost = 25
 	    days_remove = 5
 	    fire_only_once = yes
@@ -126,7 +120,7 @@ SOV_expansion = {
 	    }
 	}
   SOV_attack_sinkiang = {
-     icon = GFX_decision_category_sov_great_patriotic_war
+     icon = GFX_decision_generic_ignite_civil_war
      allowed = {
          original_tag = SOV
       }
@@ -156,6 +150,7 @@ SOV_expansion = {
             has_war = yes
          }
       }
+      war_with_on_remove = SIK
       cost = 25
       days_remove = 5
       fire_only_once = yes
@@ -195,10 +190,7 @@ SOV_diplomacy = {
          }
          ai_will_do = {
 	       factor = 1
-	       modifier = {
-	          factor = 0
-	          has_war = yes
-	       }
+	       
 	    }
          cost = 45
          days_remove = 5
@@ -237,10 +229,7 @@ SOV_diplomacy = {
          }
          ai_will_do = {
 	       factor = 1
-	       modifier = {
-	          factor = 0
-	          has_war = yes
-	       }
+	       
 	    }
          cost = 45
          days_remove = 5
@@ -279,10 +268,7 @@ SOV_diplomacy = {
          }
          ai_will_do = {
 	       factor = 1
-	       modifier = {
-	          factor = 0
-	          has_war = yes
-	       }
+	       
 	    }
          cost = 45
          days_remove = 5
@@ -311,10 +297,7 @@ SOV_diplomacy = {
          }
          ai_will_do = {
 	       factor = 1
-	       modifier = {
-	          factor = 0
-	          has_war = yes
-	       }
+	       
 	    }
          cost = 45
          days_remove = 5
@@ -355,11 +338,9 @@ SOV_scandinavia = {
 	    }
 	    ai_will_do = {
 	       factor = 1
-	       modifier = {
-	          factor = 0
-	          has_war = yes
-	       }
+	       
 	    }
+      war_with_on_remove = FIN
 	    cost = 100
 	    days_remove = 7
 	    fire_only_once = yes
@@ -395,11 +376,9 @@ SOV_scandinavia = {
 	    }
 	    ai_will_do = {
 	       factor = 1
-	       modifier = {
-	          factor = 0
-	          has_war = yes
-	       }
+	       
 	    }
+      war_with_on_remove = FIN
 	    cost = 30
 	    days_remove = 7
 	    fire_only_once = yes
@@ -433,6 +412,7 @@ SOV_demands = {
               has_war_with = UKR 
            }
 	    }
+      war_with_on_timeout = GER
 	    is_good = no 
 	    days_mission_timeout = 7
         fire_only_once = yes 
@@ -511,7 +491,7 @@ SOV_demands = {
 }
 SOV_japwar = {
     SOV_attack_jap = {
-       icon = GFX_decision_category_sov_great_patriotic_war
+       icon = GFX_decision_generic_nationalism
        allowed = {
           original_tag = SOV 
        } 
@@ -526,6 +506,8 @@ SOV_japwar = {
              has_completed_focus = Korea_Revolution
           }
        }
+       war_with_on_remove = JAP
+       war_with_on_remove = RUS
        cost = 10
        days_remove = 7
        fire_only_once = yes 
@@ -533,4 +515,138 @@ SOV_japwar = {
           SOV = { declare_war_on = { target = RUS type = annex_everything } }
        }
     }
+}
+SOV_claims = {
+  SOV_claim_casia = {
+     icon = GFX_decision_generic_form_nation
+     allowed = {
+        original_tag = SOV 
+     }
+     visible = {
+        has_country_flag = SOV_imp_foreign
+        has_completed_focus = The_Revolution
+     }
+     ai_will_do = {
+        factor = 5
+        modifier = {
+           factor = 100
+           has_country_flag = Kirov_Wins
+        }
+     }
+     cost = 150
+     fire_only_once = yes 
+     days_remove = 7
+     remove_effect = {
+        every_state = {
+           limit = {
+              OR = {
+                 is_owned_by = TUK 
+                 is_owned_by = MON 
+                 is_owned_by = SIK 
+                 is_owned_by = AFG 
+             }
+           }
+           add_claim_by = SOV 
+        }
+        add_threat = 5
+     }
+  }
+  SOV_claim_caucaus = {
+     icon = GFX_decision_generic_form_nation
+     allowed = {
+        original_tag = SOV 
+     }
+     visible = {
+        has_country_flag = SOV_imp_foreign
+        has_completed_focus = The_Revolution
+     }
+     ai_will_do = {
+        factor = 5
+        modifier = {
+           factor = 100
+           has_country_flag = Kirov_Wins
+        }
+     }
+     cost = 70
+     fire_only_once = yes 
+     days_remove = 7
+     remove_effect = {
+        every_state = {
+           limit = {
+              OR = {
+                 is_owned_by = GEO
+                 is_owned_by = ARM  
+                 is_owned_by = AZR 
+             }
+           }
+           add_claim_by = SOV 
+        }
+        add_threat = 2
+     }
+  }
+  SOV_claim_baltic = {
+     icon = GFX_decision_generic_form_nation
+     allowed = {
+        original_tag = SOV 
+     }
+     visible = {
+        has_country_flag = SOV_imp_foreign
+        has_completed_focus = The_Revolution
+     }
+     ai_will_do = {
+        factor = 5
+        modifier = {
+           factor = 100
+           has_country_flag = Kirov_Wins
+        }
+     }
+     cost = 70
+     fire_only_once = yes 
+     days_remove = 7
+     remove_effect = {
+        every_state = {
+           limit = {
+              OR = {
+                 is_owned_by = EST 
+                 is_owned_by = LAT 
+                 is_owned_by = LIT 
+             }
+           }
+           add_claim_by = SOV 
+        }
+        add_threat = 3
+     }
+  }
+  SOV_claim_eeurope = {
+    icon = GFX_decision_generic_form_nation
+     allowed = {
+        original_tag = SOV 
+     }
+     visible = {
+        has_country_flag = SOV_imp_foreign
+        has_completed_focus = The_Revolution
+     }
+     ai_will_do = {
+        factor = 5
+        modifier = {
+           factor = 100
+           has_country_flag = Kirov_Wins
+        }
+     }
+     cost = 150
+     fire_only_once = yes 
+     days_remove = 7
+     remove_effect = {
+        every_state = {
+           limit = {
+              OR = {
+                 is_owned_by = UKR 
+                 is_owned_by = POL 
+             }
+           }
+           add_claim_by = SOV 
+        }
+        add_threat = 5
+     }
+  }
 }

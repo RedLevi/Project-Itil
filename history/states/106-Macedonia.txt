@@ -17,7 +17,7 @@ state={
 		victory_points = {
 			3882 1 
 		}
-
+        add_claim_by = BUL
 	}
 
 	provinces={

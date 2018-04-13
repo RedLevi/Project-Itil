@@ -91,7 +91,7 @@ if = {
 	}
 	set_autonomy = {
 		target = LAT
-		autonomous_state = autonomy_dominion
+		autonomous_state = autonomy_integrated_puppet
 		freedom_level = 0.1
 	}
 	else = {
@@ -158,9 +158,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Alexander Fyodorovich Kerensky"
+	name = "Viktor Chernov"
 	desc = "POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
-	picture = "Portrait_Soviet_Generic_1.dds"
+	picture = "Viktor_Chernov.dds"
 	expire = "1953.3.1"
 	ideology = democratic_socialism
 	traits = {

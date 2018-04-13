@@ -1833,6 +1833,16 @@ spriteTypes = {
        name = "GFX_fcw_start"
        texturefile = "gfx/event_pictures/fcw_start.dds"
     }
+    spriteType = {
+       name = "GFX_sovcongress"
+       texturefile = "gfx/event_pictures/sovcongress.dds"
+    }
+    spriteType = {
+       name = "GFX_kirovwin"
+       texturefile = "gfx/event_pictures/kirovwin.dds"
+    }
+    spriteType = {
+       name = "GFX_sovcongress1"
+       texturefile = "gfx/event_pictures/sovcongress_1.dds"
+    }
 
-
-	#### END DoD EVENTS ####

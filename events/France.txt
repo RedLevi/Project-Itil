@@ -831,18 +831,24 @@ country_event = { #SOVIET DECISION
 
     option = { #SEND EM#
     name = france.28.a
+    hidden_effect = {
     SPF = { load_oob = SOV_vol }
+    }
+    custom_effect_tooltip = SOV_french_help
     SOV = { add_manpower = -65000 }
-    add_opinion_modifier = { target = SPF modifier = Sent_volunteers }
+    add_opinion_modifier = { target = SOV modifier = Sent_volunteers }
     SPF = {
     create_corps_commander = {
      name = "Georgy Zhukov"
      picture = "Georgy_Zhukov.dds"
-     traits = { winter_specialist }
-     skill = 3 } }
+     traits = { winter_specialist deep_battle_proponent }
+     skill = 3 } 
+    add_opinion_modifier = { target = SPF modifier = Sent_volunteers }
+    }
     }
     option = { #NOPE#
-    add_opinion_modifier = { target = SPF modifier = No_Help }
+    name = france.28.b
+    SPF = { add_opinion_modifier = { target = SOV modifier = No_Help } }
     }
 }
 

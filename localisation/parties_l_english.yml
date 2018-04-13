@@ -29,14 +29,7 @@
  GER_national_integralism_party:0 "SNAB"
  GER_national_integralism_party_long:0 "Sozialistnationalische Arbeiterbund"
 
- SOV_communism_party:0 "SSDRP"
- SOV_communism_part_long:0 "Sovetskaya sotsial-demokraticheskaya rabochaya partiya"
- SOV_socialism_party:0 "Trudoviks"
- SOV_socialism_party_long:0 "Trudoviks"
- SOV_liberalism_party:0 "KDP"
- SOV_liberalism_party_long:0 "Konstitutsionno-Demokraticheskaya Partiya"
- SOV_conservatism_party:0 "Oktyabristi"
- SOV_conservatism_party_long:0 "Soyuz 17 Oktyabrya"
+###Soviet parties move to soviet localization###
 
 YUG_communism_party:0 "SKJ"
 YUG_communism_party_long:0 "League of Communists of Yugoslavia"

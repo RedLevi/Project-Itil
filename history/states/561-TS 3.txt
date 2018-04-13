@@ -15,13 +15,13 @@ state={
 			7763 10
 		}
 		add_core_of = RUS
-
+		add_core_of = SOV
 	}
 
 	provinces={
 		1730 1739 1807 1845 4725 4731 4847 7691 7754 7763 7785 7851 10678 12543 12591 12654 12657 12660 
 	}
-	manpower=604281
+	manpower=1004281
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

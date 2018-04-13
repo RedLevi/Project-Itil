@@ -257,27 +257,13 @@ focus = {
 
 	}
 	focus = {
-		id = Reinstate_Democracy
-		icon = GFX_goal_continuous_increase_nu
-		cost = 3.00
-		available = {
-		   always = no
-		}
-		prerequisite = {
-		   focus = Moderates_Win focus = Left_Wins
-		}
-		x = 46
-		y = 4
-
-	}
-	focus = {
 		id = Anti_Communism
 		icon = GFX_goal_anti_comintern_pact
 		cost = 3.00
 		prerequisite = {
 			 focus = Moderates_Win
 		}
-		x = 49
+		x = 47
 		y = 4
 
 	}
@@ -325,25 +311,10 @@ focus = {
 		}
 
 		available = { has_country_flag = SOV_left_victory }
-		x = 44
+		x = 45
 		y = 4
 
 	}
-	focus = {
-		id = Freedom_Again
-		icon = GFX_goal_support_democracy
-		cost = 3.00
-		prerequisite = {
-			focus = Reinstate_Democracy
-		}
-		mutually_exclusive = {
-			focus = Restricted_Voting
-		}
-		x = 47
-		y = 5
-
-	}
-
 	focus = {
 		id = Sov_Great_Purge
 		icon = GFX_goal_generic_small_arms
@@ -378,14 +349,34 @@ focus = {
 
 	}
 	focus = {
-		id = Individual_Freedom
-		icon = GFX_goal_generic_demand_territory
+		id = SOV_de_sovietization
+		icon = GFX_focus_generic_air_defense
 		cost = 3.00
-		prerequisite = {
-			focus = Freedom_Again
+		prerequisite = { focus = Moderates_Win }
+		completion_reward = {
+
+             add_popularity = { ideology = communism popularity = -0.3 }
+             add_popularity = { ideology = socialism popularity = 0.3 }
+
 		}
-		x = 47
-		y = 6
+		x = 49
+		y = 4
+
+	}
+	focus = {
+		id = SOV_russification
+		icon = GFX_focus_generic_air_defense
+		cost = 3.00
+		prerequisite = { focus = Anti_Communism }
+		prerequisite = { focus = SOV_de_sovietization }
+		completion_reward = {
+
+			add_political_power = 150
+			add_stability = -0.025
+
+		}
+		x = 48
+		y = 5
 
 	}
 	focus = {
@@ -435,15 +426,17 @@ focus = {
 
 	}
 	focus = {
-		id = Return_of_the_Republic
+		id = SOV_return_of_russia
 		icon = GFX_focus_renounce_the_treaty_of_trianon
 		cost = 5.00
 		prerequisite = {
 			focus = Anti_Communism
 		}
-		x = 49
+		x = 48
 		y = 6
-
+        completion_reward = {
+           set_cosmetic_tag = SOVRUS
+        }
 	}
 
 
@@ -964,8 +957,7 @@ focus = {
 		icon = GFX_focus_generic_socialist_science
 		cost = 10.00
 		prerequisite = {
-			focus = Central_Planning
-			focus = NEP_foreign_1
+			focus = Gosplan_Congress
 		}
 		x = 9
 		y = 3
@@ -1022,13 +1014,7 @@ focus = {
 			    name = Mig_Yakovlev
 					bonus = 0.3
 					uses = 3
-					technology = early_fighter
-					technology = fighter1
-					technology = fighter2
-					technology = fighter3
-					technology = heavy_fighter1
-					technology = heavy_fighter2
-					technology = heavy_fighter3
+					category = light_air
 			 }
 		}
 
@@ -1048,7 +1034,7 @@ focus = {
 		completion_reward = {
 		add_tech_bonus = {
 		name = Korolev
-		bonus = 0.5
+		bonus = 0.3
 		uses = 2
 		category = rocketry
 		}
@@ -1442,9 +1428,23 @@ focus = {
 	prerequisite = {
 		focus = Demand_Armenia
 	}
+	available = {
+	   country_exists = TUR
+	}
 	x = 64
 	y = 7
-
+	bypass = {
+	TUR = {
+		OR = {
+		is_in_faction_with = SOV
+		has_government = communism
+		is_puppet_of = SOV
+		}
+		}
+	}
+    completion_reward = {
+       custom_effect_tooltip = SOV_ottomemes
+    }
 }
 focus = {
 	id = Deal_with_Romania

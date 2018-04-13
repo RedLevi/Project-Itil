@@ -63,7 +63,7 @@ bookmarks = {
 			focuses = {
 				SOV_1936_assembly
 				The_Revolution
-				Establish_OKB
+				World_Socialist_State
 			}
 		}
 		"USA"={

@@ -37,8 +37,7 @@ idea_categories = {
 		slot = mobilization_laws
 		slot = trade_laws
 		slot = economy
-		 slot = popularity
-	    slot = stability
+		 
 		cost = 150
 		removal_cost = 0
 	}

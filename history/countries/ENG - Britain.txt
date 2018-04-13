@@ -44,6 +44,8 @@ set_technology = {
 	radio_detection = 1
 }
 
+reverse_add_opinion_modifier = { target = GER modifier = diplo_modifier_rival }
+reverse_add_opinion_modifier = { target = SOV modifier = diplo_modifier_rival }
 
 set_convoys = 800
 

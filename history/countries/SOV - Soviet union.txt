@@ -46,6 +46,11 @@ add_ideas = {
 	innovative_military
 }
 
+reverse_add_opinion_modifier = { target = JAP modifier = diplo_modifier_rival }
+reverse_add_opinion_modifier = { target = GER modifier = diplo_modifier_rival }
+reverse_add_opinion_modifier = { target = ENG modifier = diplo_modifier_rival }
+reverse_add_opinion_modifier = { target = RUS modifier = diplo_modifier_rival }
+
 create_faction = "second_international"
 add_to_faction = SOV
 add_to_faction = PER

@@ -164,6 +164,7 @@ country_event = {#Peace with the Integralists?
 			}
 			remove_core_of = USA
 		}
+		remove_opinion_modifier = { target = AME modifier = diplo_modifier_rival } 
 	}
 	option = {#no 
 		name = ame.13.b
@@ -190,6 +191,7 @@ country_event = {#peace with the federalists
 			}
 			remove_claim_by = AME
 		}
+		remove_opinion_modifier = { target = USA modifier = diplo_modifier_rival } 
 	}
 }
 

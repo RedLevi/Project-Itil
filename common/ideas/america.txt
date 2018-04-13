@@ -2,6 +2,168 @@ ideas = {
 
 	country = {
 		
+		AME_civil_service_idea = {
+			
+			available = {
+			
+				always = yes
+
+			}
+
+			picture = generic_reserve_divisions
+			
+			allowed_civil_war = {
+			
+				always = yes  
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				political_power_gain = 0.5 
+			
+			}
+		
+		}
+		
+		AME_universities_idea = {
+		
+			available = {
+			
+				always = yes
+
+			}
+
+			picture = GFX_idea_jap_supremacy_of_technology
+			
+			allowed_civil_war = {
+			
+				always = yes  
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				research_time_factor = -0.05 
+			
+			}
+		
+		}
+		
+		AME_corporatism_idea = {
+		
+			available = {
+			
+				always = yes
+
+			}
+
+			picture = GFX_idea_generic_central_management
+			
+			allowed_civil_war = {
+			
+				always = yes  
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				stability_factor = 0.05 
+				war_support_factor = 0.05
+				consumer_goods_factor = -0.045 
+			
+			}
+		
+		}
+		
+		AME_ford_recovery_idea = {
+			
+			available = {
+			
+				always = yes
+
+			}
+
+			picture = ROM_king_carol_ii_hedonist
+			
+			allowed_civil_war = {
+			
+				always = yes  
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				industrial_capacity_factory = 0.05 
+				consumer_goods_factor = -0.05
+			
+			}
+			
+		}
+		
+		AME_fordist_trade_idea = {
+		
+			available = {
+			
+				always = yes
+
+			}
+
+			picture = GFX_idea_generic_foreign_capital
+			
+			allowed_civil_war = {
+			
+				always = yes  
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				trade_opinion_factor = 0.5 
+				consumer_goods_factor = -0.015
+			
+			}
+		
+		}
+		
+		fordist_construction_idea = {
+		
+			available = {
+			
+				always = yes
+
+			}
+
+			picture = generic_exploit_mines
+			
+			allowed_civil_war = {
+			
+				always = yes  
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				production_speed_industrial_complex_factor = 0.33
+				production_speed_infrastructure_factor = 0.33
+				production_speed_arms_factory_factor = -0.33 
+			
+			}
+		
+		}
+		
 		AME_isolationist_policy = {
 		
 			available = {

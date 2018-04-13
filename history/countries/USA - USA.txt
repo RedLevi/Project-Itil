@@ -36,10 +36,11 @@ set_technology = {
 
 }
 
+reverse_add_opinion_modifier = { target = AME modifier = diplo_modifier_rival }
 
-
-set_convoys = 400
-set_stability = 0.6
+set_convoys = 150
+set_stability = 0.5
+set_war_support = 0.3 
 
 add_ideas = {
 	USA_great_depression

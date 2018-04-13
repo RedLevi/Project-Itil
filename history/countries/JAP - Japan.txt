@@ -46,6 +46,8 @@ set_technology = {
 }
 
 	
+reverse_add_opinion_modifier = { target = SOV modifier = diplo_modifier_rival }	
+	
 set_convoys = 400
 set_stability = 0.5
 add_ideas = hirohito_idea

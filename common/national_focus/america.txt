@@ -13,31 +13,16 @@ focus_tree = {
 	default = no
 	####political tree####
 	
-	focus = {
-		
-		id = AME_internal_KKK_focus 
-		icon = GFX_focus_generic_strike_at_democracy2 
-		x = 12 
-		y = 0 
-		cost = 5	 
-		available_if_capitulated = no
-		mutually_exclusive = { focus = AME_internal_party_focus }
-		completion_reward = {
-			add_war_support = 0.01 
-			country_event = { id = ame.16 } 
-		}
-	
-	} 
 	
 	focus = {
 		
 		id = AME_internal_party_focus 
 		icon = GFX_goal_generic_secret_weapon 
-		x = 8 
+		x = 10 
 		y = 0 
-		cost = 5	 
+		cost = 6	 
 		available_if_capitulated = no
-		mutually_exclusive = { focus = AME_internal_KKK_focus }
+		
 		completion_reward = {
 			add_stability = 0.01 
 			country_event = { id = ame.17 } 
@@ -53,7 +38,7 @@ focus_tree = {
 		y = 1 
 		cost = 25	 
 		available_if_capitulated = no
-		prerequisite = { focus = AME_internal_party_focus focus = AME_internal_KKK_focus }
+		prerequisite = { focus = AME_internal_party_focus }
 		completion_reward = {
 			country_event = { id = ame.25 }			
 		}
@@ -541,9 +526,7 @@ focus_tree = {
 		available_if_capitulated = no
 		prerequisite = { focus = AME_military_research }
 		completion_reward = {
-			remove_ideas = AME_intellect_purge
-			custom_effect_tooltip = AME_mil_economic_choice
-			set_country_flag = AME_mil_new_universities
+			
 		}
 	
 	}
@@ -672,9 +655,8 @@ focus_tree = {
 		cost = 10	 
 		available = {
 			OR = {
-				has_completed_focus = AME_internal_party_focus
-				has_completed_focus = AME_internal_KKK_focus
-			}
+				has_completed_focus = AME_ford_path_focus
+				has_completed_focus = AME_mil_path_focus
 		}
 		available_if_capitulated = no
 		completion_reward = {
@@ -740,24 +722,6 @@ focus_tree = {
 	
 	focus = {
 		
-		id = AME_supplies_focus
-		icon = GFX_goal_generic_consumer_goods 
-		x = 20
-		y = 1
-		cost = 10	 
-		available = {
-			always = yes 
-		}
-		prerequisite = { focus = AME_prepare_for_war_focus }
-		available_if_capitulated = no
-		completion_reward = {
-			add_ideas = AME_supplies_idea
-		}
-	
-	}
-	
-	focus = {
-		
 		id = AME_propaganda_focus 
 		icon = GFX_goal_generic_propaganda 
 		x = 22
@@ -774,7 +738,506 @@ focus_tree = {
 		}
 	
 	}
-
+	
+	###fordist path #### 
+	
+	focus = {
+		
+		id = AME_ford_economic_begin
+		icon = GFX_goal_generic_construction 
+		x = 19
+		y = 3
+		cost = 10	 
+		available = {
+			always = yes 
+		}
+		prerequisite = { focus = AME_ford_path_focus }
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = fordist_construction_idea
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_ford_economic_exp_1
+		icon = GFX_goal_generic_construct_civ_factory 
+		x = 20 
+		y = 4
+		cost = 10	 
+		available_if_capitulated = no
+		prerequisite = { focus = AME_ford_economic_begin }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		
+	
+	}
+	
+	focus = {
+		
+		id = AME_ford_economic_exp_2
+		icon = GFX_focus_generic_the_giant_wakes 
+		x = 20 
+		y = 5
+		cost = 10	 
+		available_if_capitulated = no
+		prerequisite = { focus = AME_ford_economic_exp_1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
+	
+	}
+	
+	focus = {
+		
+		id = AME_fordist_trade_focus
+		icon = GFX_goal_generic_positive_trade_relations 
+		x = 18
+		y = 4
+		cost = 10	 
+		prerequisite = { focus = AME_ford_economic_begin }
+		available = {
+			always = yes 
+		}
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = AME_fordist_trade_idea 
+			add_named_threat = { threat = -5 name = AME_ITC }
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_ford_infrastructure_focus_1
+		icon = GFX_goal_generic_construct_infrastructure 
+		x = 18
+		y = 5
+		cost = 10	 
+		available_if_capitulated = no
+		available = { controls_state = 357 controls_state = 358 controls_state = 359 controls_state = 360 controls_state = 361  }
+		prerequisite = { focus = AME_fordist_trade_focus }
+		completion_reward = {
+			357 = {
+			
+			add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			
+			}
+			358 = {
+			
+			add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			
+			}
+			361 = {
+			
+			add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			
+			}
+			360 = {
+			
+			add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			
+			}
+			359 = {
+			
+			add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			
+			}
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_ford_economic_exp_3
+		icon = GFX_goal_generic_construct_naval_dockyard 
+		x = 19 
+		y = 6
+		cost = 10	 
+		available_if_capitulated = no
+		prerequisite = { focus = AME_ford_economic_exp_2 }
+		prerequisite = { focus = AME_ford_infrastructure_focus_1 }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		
+	
+	}
+	
+	focus = {
+		
+		id = AME_ford_recovery_focus
+		icon = GFX_goal_generic_neutrality_focus 
+		x = 19
+		y = 7
+		cost = 10	 
+		available = {
+			always = yes 
+		}
+		prerequisite = { focus = AME_ford_economic_exp_3 }
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = { remove_idea = AME_great_depression add_idea = AME_ford_recovery_idea }
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_corporatism_focus
+		icon = GFX_goal_generic_national_unity 
+		x = 15
+		y = 3
+		cost = 10	 
+		available = {
+			always = yes 
+		}
+		prerequisite = { focus = AME_ford_path_focus }
+		available_if_capitulated = no
+		completion_reward = {
+			 add_ideas = AME_corporatism_idea 
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_universities_focus
+		icon = GFX_goal_generic_national_unity 
+		x = 16
+		y = 4
+		cost = 10	 
+		available = {
+			always = yes 
+		}
+		prerequisite = { focus = AME_corporatism_focus }
+		available_if_capitulated = no
+		completion_reward = {
+			if = { limit = { has_idea = AME_intellect_purge } remove_ideas = AME_intellect_purge else = { add_ideas = AME_universities_idea } }
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_civil_service_focus
+		icon = GFX_focus_generic_self_management 
+		x = 14
+		y = 4
+		cost = 10	 
+		available = {
+			always = yes 
+		}
+		prerequisite = { focus = AME_corporatism_focus }
+		available_if_capitulated = no
+		completion_reward = {
+			if = { limit = { has_idea = AME_no_admins_idea } remove_ideas = AME_no_admins_idea else = { add_ideas = AME_civil_service_idea } }
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_ford_research_focus
+		icon = GFX_goal_continuous_research 
+		x = 16
+		y = 5
+		cost = 10	 
+		available = {
+			always = yes 
+		}
+		prerequisite = { focus = AME_universities_focus }
+		available_if_capitulated = no
+		completion_reward = {
+			add_research_slot = 1 
+			
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_ford_constitution_focus
+		icon = GFX_goal_support_democracy 
+		x = 14
+		y = 5
+		cost = 10	 
+		available = {
+			always = yes 
+		}
+		prerequisite = { focus = AME_civil_service_focus }
+		available_if_capitulated = no
+		completion_reward = {
+		
+			add_stability = 0.05
+			custom_effect_tooltip = AME_constitution_tooltip
+			
+		}
+	
+	}
+	
 	focus = {
 		
 		id = AME_international_relations
@@ -783,7 +1246,10 @@ focus_tree = {
 		y = 0
 		cost = 10	 
 		available = {
-			always = yes 
+			OR = { 
+				has_completed_focus = AME_ford_path_focus 
+				has_completed_focus = AME_mil_path_focus
+			}
 		}
 		available_if_capitulated = no
 		completion_reward = {
@@ -791,6 +1257,10 @@ focus_tree = {
 		}
 	
 	}
+	
+
+
+	
 
 	focus = {
 		

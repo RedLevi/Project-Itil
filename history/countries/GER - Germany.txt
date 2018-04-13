@@ -46,6 +46,9 @@ add_ideas = {
     overconfident_general_staff	
 }
 
+reverse_add_opinion_modifier = { target = ENG modifier = diplo_modifier_rival }
+reverse_add_opinion_modifier = { target = SOV modifier = diplo_modifier_rival }
+
 create_faction = imperial_mutual_assistance_pact
 add_to_faction = GER
 add_to_faction = FLA

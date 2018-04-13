@@ -39,12 +39,14 @@ set_technology = {
 
 
 
-set_convoys = 400
-set_stability = 0.6
+set_convoys = 40
+set_stability = 0.5
 set_war_support = 0.2 
 
 add_ideas = AME_great_depression
 add_ideas = AME_national_disunity
+
+reverse_add_opinion_modifier = { target = USA modifier = diplo_modifier_rival }
 
 set_politics = {
 

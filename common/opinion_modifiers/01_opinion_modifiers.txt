@@ -18,7 +18,9 @@ opinion_modifiers = {
 	DIP_refuse_offer = { value = -10 }
 	DIP_no_support = { value = -25 }
 	No_Help = { value = -50 }
-	Sent_volunteers = { value = 100 }
+	Sent_volunteers = { value = 50 }
+	diplo_modifier_rival = { value = -65 }
+	
 #####ENG####
 ENG_EUR_theater = { value = 25 }
 ENG_dip_support = { value = 50 }

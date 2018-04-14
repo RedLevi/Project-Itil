@@ -62,7 +62,7 @@ ideas = {
 
 			}
 
-			picture = GFX_idea_generic_central_management
+			picture = generic_central_management
 			
 			allowed_civil_war = {
 			
@@ -117,7 +117,7 @@ ideas = {
 
 			}
 
-			picture = GFX_idea_generic_foreign_capital
+			picture = generic_foreign_capital
 			
 			allowed_civil_war = {
 			

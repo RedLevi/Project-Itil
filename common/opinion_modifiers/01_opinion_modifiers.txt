@@ -10,6 +10,20 @@
 
 opinion_modifiers = {
 
+##### TRADE MODIFIERS
+	embargo = {
+		trade = yes
+		value = -200
+	}
+	sanctions = {
+		trade = yes
+		value = -75
+	}
+	minor_sanctions = {
+		trade = yes
+		value = -45
+	}
+
 #######generic#######
 	world_revolution_negative = { value = -100 }
 	world_revolution_positive = { value = 100 }
@@ -20,6 +34,8 @@ opinion_modifiers = {
 	No_Help = { value = -50 }
 	Sent_volunteers = { value = 50 }
 	diplo_modifier_rival = { value = -65 }
+	embargo_lifted_good = { value = 10 months = 6 }
+	embargo_lifted_bad = { value = -10 months = 6 }
 	
 #####ENG####
 ENG_EUR_theater = { value = 25 }

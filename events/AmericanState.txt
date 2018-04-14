@@ -691,3 +691,128 @@ country_event = { #BritainDeclines
 	}
 
 }
+
+country_event = {#America asks to lift embargo 
+	
+	id = ame.39 
+	title = ame.39.t 
+	desc = ame.39.d 
+	is_triggered_only = yes 
+	option = {#agree 
+		name = ame.39.a 
+		ai_chance = { 
+			factor = 50 
+			modifier = {
+				factor = 10 
+				has_opinion = { target = AME value > 10 }
+			}
+		}
+		remove_opinion_modifier = { target = AME modifier = embargo }
+		reverse_add_opinion_modifier = { target = AME modifier = embargo_lifted_good }
+		AME = { country_event = { id = ame.40 } }
+	}
+	option = {#refuse 
+		name = ame.39.b
+		ai_chance = { 
+			factor = 50 
+			modifier = {
+				factor = -10 
+				has_opinion = { target = AME value > 10 }
+			}
+		}
+		AME = { country_event = { id = ame.41 } }
+		reverse_add_opinion_modifier = { target = AME modifier = embargo_lifted_bad }
+	}	
+
+}
+
+country_event = {#country agrees
+	id = ame.40 
+	title = ame.40.t 
+	desc = ame.40.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.40.a 
+	}
+}
+country_event = {#country refuses 
+	id = ame.41 
+	title = ame.41.t 
+	desc = ame.41.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.41.a 
+	}
+}
+
+country_event = {#First protest 
+	id = ame.42 
+	title = ame.42.t 
+	desc = ame.42.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = AME 
+		has_completed_focus = AME_ford_constitution_focus
+		has_completed_focus = AME_corporatism_focus
+	}
+	mean_time_to_happen = { days = 60 }
+	option = {
+		name = ame.42.a 
+		add_stability = 0.01 
+		set_country_flag = AME_elections_flag
+	}
+}
+
+country_event = {#controlled elections
+	id = ame.43 
+	title = ame.43.t 
+	desc = ame.43.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.43.a
+		country_event = { id = ame.46 days = 100 }
+	}
+}
+
+country_event = {#free elections
+	id = ame.44 
+	title = ame.44.t 
+	desc = ame.44.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.44.a
+		country_event = { id = ame.47 days = 100 }
+	}
+}
+
+country_event = {#elections banned
+	id = ame.45 
+	title = ame.45.t 
+	desc = ame.45.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.45.a
+	}
+}
+
+country_event = {#limited elections
+	id = ame.46 
+	title = ame.46.t 
+	desc = ame.46.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.46.a
+		add_stability = 0.01 
+	}
+}
+
+country_event = {#free elections
+	id = ame.47 
+	title = ame.47.t 
+	desc = ame.47.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.47.a
+		add_stability = 0.05 
+	}
+}

@@ -759,7 +759,6 @@ AME_CAN_decisions = {
 			}
 		
 		  cost = 50
-          fire_only_once = yes
           days_remove = 30 
 		  remove_effect = {
 				create_wargoal = { type = puppet_wargoal_focus  target = FROM }
@@ -804,7 +803,6 @@ AME_car_invasion_decisions = {
 			}
 		 
 		  cost = 50
-          fire_only_once = yes
           days_remove = 30 
 		  remove_effect = {
 				create_wargoal = { type = puppet_wargoal_focus  target = FROM }
@@ -1445,4 +1443,165 @@ AME_join_england = {
 	 ENG = { country_event = { id = ame.36 } }
 		  }
    }      
+ }
+ 
+ AME_trade_embargo_decisions = {
+ 
+	AME_lift_embargo = {
+          target_trigger = {
+               FROM = {
+                   			
+					has_opinion_modifier = embargo 
+			
+               }
+			 }
+			 fire_only_once = no 
+			   ai_will_do = {
+	       factor = 2
+		    modifier = {
+	          factor = 0
+	          has_war_with = FROM
+	       }
+		    modifier = {
+	          factor = 5
+			  OR = {
+				AND = {
+					
+					has_resources_amount = { resource = chromium amount < 0 }
+					FROM = { has_resources_amount = { resource = chromium amount > 0 } }
+				
+				}
+				AND = {
+					
+					has_resources_amount = { resource = oil amount < 0 }
+					FROM = { has_resources_amount = { resource = oil amount > 0 } }
+				
+				}
+				AND = {
+					
+					has_resources_amount = { resource = steel amount < 0 }
+					FROM = { has_resources_amount = { resource = steel amount > 0 } }
+				
+				}
+				AND = {
+					
+					has_resources_amount = { resource = rubber amount < 0 }
+					FROM = { has_resources_amount = { resource = rubber amount > 0 } }
+				
+				}	
+				AND = {
+					
+					has_resources_amount = { resource = tungsten amount < 0 }
+					FROM = { has_resources_amount = { resource = tungsten amount > 0 } }
+				
+				}
+				AND = {
+					
+					has_resources_amount = { resource = aluminium amount < 0 }
+					FROM = { has_resources_amount = { resource = aluminium amount > 0 } }
+				
+				}	
+			}
+	       }
+	    }
+			available = {
+				NOT = {
+					FROM = { has_war_with = AME }
+				}
+				FROM = { is_puppet = no }
+				has_opinion = { target = FROM value > -30 }
+			}
+			visible = {
+				FROM = { exists = yes }
+			}
+		
+		  cost = 30
+          fire_only_once = no
+          days_remove = 25 
+		  days_re_enable = 180
+		  remove_effect = {
+				FROM = { country_event = { id = ame.39 } }
+		  }
+          
+     }
+ 
+ }
+ 
+ AME_democracy_decisions = {
+	
+	 AME_hold_limited_elections = {
+	
+		icon = GFX_decision_generic_political_discourse
+		available = { has_country_flag = AME_elections_flag }
+		visible = {
+			
+			NOT = { 
+				has_country_flag = AME_no_elections 
+				has_country_flag = AME_free_elections
+			}
+		
+		}
+		 ai_will_do = {
+	       factor = 50
+	    }
+		cost = 30    
+		
+		fire_only_once = yes
+		complete_effect  = {
+			set_country_flag = AME_controlled_elections
+			country_event = { id = ame.43 }
+		}
+	
+	}
+	
+	 AME_hold_free_elections = {
+	
+		icon = GFX_decision_generic_nationalism
+		available = { has_country_flag = AME_elections_flag }
+		visible = {
+			
+			NOT = { 
+				has_country_flag = AME_no_elections 
+				has_country_flag = AME_controlled_elections
+			}
+		
+		}
+		 ai_will_do = {
+	       factor = 50
+	    }
+		cost = 75    
+		
+		fire_only_once = yes
+		complete_effect  = {
+			set_country_flag = AME_free_elections
+			country_event = { id = ame.44 }
+		}
+	
+	}
+	
+	 AME_ban_elections = {
+	
+		icon = GFX_decision_oppression
+		available = { has_country_flag = AME_elections_flag }
+		visible = {
+			
+			NOT = { 
+				has_country_flag = AME_free_elections 
+				has_country_flag = AME_controlled_elections
+			}
+		
+		}
+		 ai_will_do = {
+	       factor = 50
+	    }
+		cost = 50    
+		
+		fire_only_once = yes
+		complete_effect  = {
+			set_country_flag = AME_no_elections
+			add_stability = -0.075 
+			country_event = { id = ame.45 }
+		}
+	
+	}
  }

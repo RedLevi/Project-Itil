@@ -47,6 +47,15 @@ add_ideas = AME_great_depression
 add_ideas = AME_national_disunity
 
 reverse_add_opinion_modifier = { target = USA modifier = diplo_modifier_rival }
+reverse_add_opinion_modifier = { target = USA modifier = embargo }
+reverse_add_opinion_modifier = { target = ENG modifier = embargo }
+reverse_add_opinion_modifier = { target = GER modifier = embargo }
+reverse_add_opinion_modifier = { target = SOV modifier = embargo }
+reverse_add_opinion_modifier = { target = JAP modifier = embargo }
+reverse_add_opinion_modifier = { target = MEX modifier = embargo }
+reverse_add_opinion_modifier = { target = CAN modifier = embargo }
+reverse_add_opinion_modifier = { target = HOL modifier = embargo }
+reverse_add_opinion_modifier = { target = FRA modifier = embargo }
 
 set_politics = {
 

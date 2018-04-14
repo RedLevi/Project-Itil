@@ -657,6 +657,7 @@ focus_tree = {
 			OR = {
 				has_completed_focus = AME_ford_path_focus
 				has_completed_focus = AME_mil_path_focus
+			}
 		}
 		available_if_capitulated = no
 		completion_reward = {
@@ -955,6 +956,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = AME_fordist_trade_idea 
 			add_named_threat = { threat = -5 name = AME_ITC }
+			custom_effect_tooltip = AME_mil_economic_choice
 		}
 	
 	}

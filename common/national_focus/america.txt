@@ -1242,6 +1242,24 @@ focus_tree = {
 	
 	focus = {
 		
+		id = AME_ford_lat_focus
+		icon = GFX_goal_molotov_ribbentrop_pact 
+		x = 12
+		y = 3
+		cost = 10	 
+		available = {
+			has_completed_focus = AME_fordist_trade_focus
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = AME_ford_path_focus }
+		completion_reward = {
+			custom_effect_tooltip = AME_mil_economic_choice
+		}
+	
+	}
+	
+	focus = {
+		
 		id = AME_international_relations
 		icon = GFX_focus_generic_diplomatic_treaty 
 		x = 27

@@ -121,3 +121,14 @@ AME_democracy_decisions = {
 		has_completed_focus = AME_ford_constitution_focus
    }
 }
+
+AME_ford_latin_decisions = {
+	icon = GFX_decision_category_generic_economy
+	picture = GFX_decision_cat_generic_united_central_america
+   allowed = {
+       tag = AME
+   }
+   visible = {
+		has_completed_focus = AME_ford_lat_focus
+   }
+}

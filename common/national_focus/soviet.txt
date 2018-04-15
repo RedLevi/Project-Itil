@@ -1220,7 +1220,7 @@ focus = {
 }
 focus = {
 	id = World_Socialist_State
-	icon = GFX_goal_support_communism
+	icon = GFX_focus_ger_great_red_menace
 	cost = 10.00
 	prerequisite = {
 		focus = De_Colonization
@@ -2203,7 +2203,7 @@ focus = {
 	}
 	focus = {
 		id = Combined_Forces
-		icon = GFX_goal_generic_war_with_comintern
+		icon = GFX_focus_generic_combined_arms
 		cost = 10.00
 		prerequisite = {
 			focus = Red_Airforce

@@ -1142,6 +1142,11 @@ country_event = { #Manchurian aid
       SOV = {
          add_to_faction = NAA
       }
+      NAA = {
+         declare_war_on = {
+            target = MAN type = annex_everything
+         }
+      }
    }
 }
 
@@ -1175,6 +1180,11 @@ country_event = { #Korean aid
       SOV = {
          add_to_faction = KOR
       }
+      KOR = {
+         declare_war_on = {
+            target = JAP type = annex_everything
+         }
+      }
    }
 }
 
@@ -1200,6 +1210,7 @@ country_event = {#Conflicting economic policy
 	title = soviet.33.t
 	desc = soviet.33.d
 	fire_only_once = yes
+  hidden = yes
 	trigger = {
 
 		tag = SOV
@@ -1275,7 +1286,7 @@ country_event = { #Ukrainian consessions
    option = { #Dont yield 
       name = soviet.34.a 
       ai_chance = {
-         factor = 1
+         factor = 3
          modifier = {
             factor = 0 
             UKR = {

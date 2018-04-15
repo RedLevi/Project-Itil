@@ -150,6 +150,7 @@ country_event = { #Finns Refuse#
    id = sovnews.12
    title = sovnews.12.t
    desc = sovnews.12.d
+   fire_only_once = yes
 
    trigger = {
       has_global_flag = GER_ukraine_demands

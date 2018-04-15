@@ -6478,7 +6478,7 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_Soviet_Superheavy_shine"
+		name = "GFX_focus_Soviet_Superheavy_shine"
 		texturefile = "gfx/interface/goals/Soviet_Superheavy.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
@@ -6510,7 +6510,7 @@ spriteTypes = {
 		}
 
 		SpriteType = {
-			name = "GFX_lenin_soviet_shine"
+			name = "GFX_focus_lenin_soviet_shine"
 			texturefile = "gfx/interface/goals/Lenin_Soviet.dds"
 			effectFile = "gfx/FX/buttonstate.lua"
 			animation = {

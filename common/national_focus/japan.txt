@@ -260,7 +260,7 @@ focus_tree = {
 	focus = {
 
 		id = JAP_traditional_values
-		icon = GFX_focus_smiling_buddha 
+		icon = GFX_focus_jap_spiritual_mobilization 
 		x = 11 
 		y = 2 
 		cost = 10 
@@ -481,7 +481,7 @@ focus = {
 focus = {
 
 		id = JAP_zaibatsu_economy
-		icon = GFX_focus_generic_the_giant_wakes 
+		icon = GFX_focus_jap_zaibatsu 
 		x = 22 
 		y = 1 
 		cost = 10 

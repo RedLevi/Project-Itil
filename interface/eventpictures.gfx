@@ -1845,4 +1845,19 @@ spriteTypes = {
        name = "GFX_sovcongress1"
        texturefile = "gfx/event_pictures/sovcongress_1.dds"
     }
-
+    spriteType = {
+       name = "GFX_triumph_gate"
+       texturefile = "gfx/event_pictures/triumph_gate.dds"
+    }
+    spriteType = {
+       name = "GFX_maurras_reading"
+       texturefile = "gfx/event_pictures/maurras_reading.dds"
+    }
+    spriteType = {
+       name = "GFX_left_intro"
+       texturefile = "gfx/event_pictures/left_intro.dds"
+    }
+    spriteType = {
+       name = "GFX_pop_front"
+       texturefile = "gfx/event_pictures/pop_front.dds"
+    }

@@ -1,0 +1,3 @@
+NDefines.NCountry.EVENT_PROCESS_OFFSET = 1
+NDefines.NDiplomacy.MAX_OPINION_VALUE = 150
+NDefines.NDiplomacy.MIN_OPINION_VALUE = -150

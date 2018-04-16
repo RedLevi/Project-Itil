@@ -1,0 +1,40 @@
+focus_tree = {
+	id = french_cw_focus
+	
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			OR = {
+			tag = SFA
+			tag = SPF
+			tag = RFA
+			tag = IFA
+			tag = SYA
+			tag = NFA
+			}
+		}
+	}
+
+	default = no
+
+	focus = {
+		id = FRA_civil_war_cw
+		icon = ?
+		x = 5
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 0
+		}
+		
+        available_if_capitulated = no
+		 available = {
+			always = no
+		}	
+
+		completion_reward = {
+		}
+	}
+}	

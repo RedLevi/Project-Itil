@@ -94,6 +94,7 @@ FRA_new_bloc:0 "New French Bloc"
 FRA_turn_on_britain:0 "Turn on the British!"
 FRA_german_surprise:0 "Surprise the Germans!"
 FRA_save_america:0 "Save American Democracy!"
+FRA_civil_war_cw:0 "No Available Focus until End of Civil War"
 
 ###ideas###
 france_torn:0 "Republic in Chaos"

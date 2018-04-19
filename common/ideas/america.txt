@@ -2,6 +2,62 @@ ideas = {
 
 	country = {
 		
+		AME_support_KKK_idea = {
+		
+			available = {
+			
+				always = yes
+
+			}
+
+			picture = chi_army_corruption3
+			
+			allowed_civil_war = {
+			
+				always = yes  
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				political_power_gain = 0.5 
+				stability_factor = -0.075
+			
+			}
+		
+		}
+		
+		AME_relations_idea = {
+		
+			available = {
+			
+				always = yes
+
+			}
+
+			picture = generic_deal_with_the_devil2
+			
+			allowed_civil_war = {
+			
+				always = yes  
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				improve_relations_maintain_cost_factor = -0.25 
+				opinion_gain_monthly_factor = 0.25 
+				foreign_subversive_activites = -0.15 
+				subversive_activites_upkeep = 0.15 
+			
+			}
+		
+		}
+		
 		AME_civil_service_idea = {
 			
 			available = {

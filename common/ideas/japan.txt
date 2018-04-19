@@ -273,7 +273,7 @@ ideas = {
 			modifier = {
 
 				political_power_gain = 0.15
-				consumer_goods_factor = -0.5
+				consumer_goods_factor = -0.05
 
 			}
 

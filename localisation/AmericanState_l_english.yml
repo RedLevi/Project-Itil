@@ -244,6 +244,18 @@ ame.44.a:0 "Long Live Democracy!"
 ame.45.t:0 "Riots in Washington"
 ame.45.d:0 "Angry mobs have rioted in Washington D.C following our refusal to hold democratic elections this year. The police have gotten the protests under control, but the American people are still angry."
 ame.45.a:0 "We must not fall into anarchy."
+ame.46.t:0 "American General Elections"
+ame.46.d:0 "Today the American people got to elect a president out of several candidates from the American Party carefully selected by the party center. As expected, Pelley won the election with over 90% of the vote. While some have criticized the elections for being 'a shameful mockery of democracy', the people have at least enjoyed going to the ballot."
+ame.46.a:0 "Long live the president!"
+ame.47.t:0 "American general elections"
+ame.47.d:0 "Today the American people have reelected Pelley as president of the American State, despite heavy campaigning from opposition parties, the American Party managed to win the majority of the votes. This is a testiment to the strength and popular support of our regieme!"
+ame.47.a:0 "Long Live America!"
+ame.48.t:0 "American investments"
+ame.48.d:0 "A group of American companies represented by the AIC have begun investing in our struggling economy in order to better develop our economic sector."
+ame.48.a:0 "Why, thank you very much!"
+ame.49.t:0 "Pro-American coup!"
+ame.49.d:0 "One of our top generals have lead a military coup against our nation on behalf of American companies! We are now fully in the service of the American State."
+ame.49.a:0 "Terrible!"
 
 ####tooltips####
 AME_constitution_tooltip:0 "§BLiberalization reforms will commence"
@@ -268,6 +280,7 @@ AME_ITC:0 "Intercontinental Trade Coalition"
 embargo_lifted_good:0 "Lifted Embargo"
 embargo_lifted_bad:0 "Embargo stands"
 AME_elections_flag:0 "Increased freedoms"
+AME_economic_support:0 "Economic support"
 
 ####ideas####
 AME_military_citizenship_idea:0 "Military Citizenship"
@@ -327,8 +340,14 @@ AME_corporatism_idea_desc:0 "The economy have been reformed to be managed by the
 AME_universities_idea:0 "New Universities"
 AME_civil_service_idea:0 "Reformed Civil Service"
 AME_civil_service_idea_desc:0 "The civil service have been reformed to function like a private sector corporation, with the apparatus directly answering to the AIC and the party."
+AME_company_support:0 "American Invsetments"
+AME_company_support_desc:0 "American companies directed by the AIC have made investments in developing our economy and infrastructure."
+
 
 ###decisions###
+AME_ford_latin_decisions:0 "Spread Influence In Latin America"
+AME_ford_latin_decisions_desc:0 "American companies used to have significant sway in Latin American countries, and the AIC would like to reestablish our dominance in the region."
+AME_fund_lat:0 "Invest in [From.GetNameDef]"
 AME_democracy_decisions:0 "Reintroducing Democracy?"
 AME_democracy_decisions_desc:0 "After passing the Constitutional Restoration Act there have been growing calls from the people to reintroduce democratic elections to America. If we don't address their calls now we could be in trouble"
 AME_elections_mission:0 "The People Demand Elections"

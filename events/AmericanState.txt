@@ -816,3 +816,27 @@ country_event = {#free elections
 		add_stability = 0.05 
 	}
 }
+
+country_event = {#American investments 
+	id = ame.48 
+	title = ame.48.t
+	desc = ame.48.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.48.a 
+		add_ideas = AME_company_support
+		add_offsite_building = { type = arms_factory level = 1 }
+	}
+}
+
+country_event = {#Pro-American coup 
+	id = ame.49 
+	title = ame.49.t
+	desc = ame.49.d 
+	is_triggered_only = yes 
+	option = {
+		name = ame.49.a 
+		AME = { puppet = ROOT }
+		add_stability = -0.4
+	}
+}

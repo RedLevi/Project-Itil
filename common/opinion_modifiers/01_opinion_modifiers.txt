@@ -93,6 +93,7 @@ AME_good_relations = { value = 30 }
 AME_GER_cooperation = { value = 75 }
 AME_reconciliation = { value = 25 }
 AME_ally = { value = 50 }
+AME_economic_support = { value = 45 }
 #NOR# 
 GER_NOR_reject = { value = -50 }
 NOR_SWE_agree = { value = 45 }

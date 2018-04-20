@@ -1371,19 +1371,97 @@ focus_tree = {
 	focus = {
 		
 		id = AME_destroy_KKK_focus
-		icon = GFX_goal_generic_demand_territory 
+		icon = GFX_goal_continuous_suppression 
 		x = 11
 		y = 8
 		cost = 10	 
 		available = {
 			always = yes 
 		}
-		mutually_exclusive = { prerequisite = focus = AME_support_KKK_focus }
+		mutually_exclusive = { focus = AME_support_KKK_focus }
 		available_if_capitulated = no
 		prerequisite = { focus = AME_mil_industry_focus3 focus = AME_ford_recovery_focus }
 		completion_reward = {
 			add_stability = 0.05 
 			country_event = { id = ame.17 } 
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_anti_catholic_focus 
+		icon = GFX_focus_generic_strike_at_democracy1 
+		x = 7
+		y = 9
+		cost = 10	 
+		available = {
+			always = yes 
+		}
+		mutually_exclusive = { focus = AME_pan_christian_focus }
+		available_if_capitulated = no
+		prerequisite = { focus = AME_mil_industry_focus3 focus = AME_ford_recovery_focus }
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+			add_stability = -0.05 
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_pan_christian_focus 
+		icon = GFX_focus_ger_reichskommisariats 
+		x = 9
+		y = 9
+		cost = 10	 
+		available = {
+			always = yes 
+		}
+		mutually_exclusive = { focus = AME_anti_catholic_focus }
+		available_if_capitulated = no
+		prerequisite = { focus = AME_mil_industry_focus3 focus = AME_ford_recovery_focus }
+		completion_reward = {
+			add_ideas = AME_pan_christian_idea 
+			add_popularity = { ideology = national_integralism popularity = 0.1 }
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_ban_immigration_focus
+		icon = GFX_goal_continuous_restrict_freedom 
+		x = 11
+		y = 9
+		cost = 10	 
+		available = {
+			always = yes 
+		}
+		mutually_exclusive = { focus = AME_open_immigration_focus }
+		available_if_capitulated = no
+		prerequisite = { focus = AME_mil_industry_focus3 focus = AME_ford_recovery_focus }
+		completion_reward = {
+			add_ideas = AME_ban_immigration_idea
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_open_immigration_focus
+		icon = GFX_goal_continuous_increase_nu 
+		x = 13
+		y = 9
+		cost = 10	 
+		available = {
+			always = yes 
+		}
+		mutually_exclusive = { focus = AME_ban_immigration_focus }
+		available_if_capitulated = no
+		prerequisite = { focus = AME_mil_industry_focus3 focus = AME_ford_recovery_focus }
+		completion_reward = {
+			add_ideas = AME_open_immigration_idea
 		}
 	
 	}

@@ -1,6 +1,88 @@
 ideas = {
 
 	country = {
+	
+		AME_open_immigration_idea = {
+		
+			available = {
+			
+				always = yes
+
+			}
+
+			picture = prc_low_popular_support3
+			
+			allowed_civil_war = {
+			
+				always = yes  
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				MONTHLY_POPULATION = 0.035
+				stability_factor = -0.05 
+			
+			}
+		
+		}
+		
+		AME_ban_immigration_idea = {
+		
+			available = {
+			
+				always = yes
+
+			}
+
+			picture = ast_classify_aliens
+			
+			allowed_civil_war = {
+			
+				always = yes  
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				MONTHLY_POPULATION = -0.035
+				stability_factor = 0.05 
+			
+			}
+		
+		}
+		
+		AME_pan_christian_idea = {
+		
+			available = {
+			
+				always = yes
+
+			}
+
+			picture = YUG_orthodox_church_support
+			
+			allowed_civil_war = {
+			
+				always = yes  
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				stability_factor = 0.05
+				army_morale_factor = 0.1
+			
+			}
+		
+		}
+		
 		
 		AME_support_KKK_idea = {
 		
@@ -52,7 +134,8 @@ ideas = {
 				improve_relations_maintain_cost_factor = -0.25 
 				opinion_gain_monthly_factor = 0.25 
 				foreign_subversive_activites = -0.15 
-				subversive_activites_upkeep = 0.15 
+				subversive_activites_upkeep = -0.15 
+				decryption_factor = 0.1 
 			
 			}
 		

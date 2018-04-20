@@ -1,5 +1,13 @@
 ﻿l_english:
 ####focuses####
+AME_ban_immigration_focus:0 "Anti-Immigration Policies"
+AME_ban_immigration_focus_desc:0 "Enact various policies aimed at ending immigration into the country and encouraging foreign migrants to leave. This will please our WASP majority."
+AME_open_immigration_focus:0 "Welcome European Immigrants"
+AME_open_immigration_focus_desc:0 "Encourage European and other western immigrants to move into our country and integrate into our society, improving our economy."
+AME_anti_catholic_focus:0 "Anti-Catholicism"
+AME_anti_catholic_focus_desc:0 "The Catholic Church presents a dangerous foreign influence in our country and has many opponents especially among the more radical groups such as the KKK. There is a suggestion to execute a full crackdown on the church and confiscate its property."
+AME_pan_christian_focus:0 "Pan-Christianism"
+AME_pan_christian_focus_desc:0 "The party center have long been in favor of Pan-Christianism, a religious-political ideology combining all sects of christianity in the service of the state. By unifying all churches in America under one state church we can strengthen our control of the people."
 AME_ford_more_research_focus:0 "Technological Reinassance"
 AME_ford_more_research_focus_desc:0 "Our focus on civilian development and industrial growth have brought an era of technological advancement and enlightenment to the American people."
 AME_ford_relations_bonus:0 "Establish The CDA"
@@ -282,7 +290,8 @@ AME_GER_cooperation:0 "Military Cooperation"
 AME_reconciliation:0 "Reconciliation"
 AME_end_of_depression:0 "The industrial sector have been rebuilt, but the economy have yet to fully recover." 
 AME_revolt_var:0 "Revolutionary cells"
-AME_politicians_spared:0 "Congressmen and other representatives of the federal government will be released."
+AME_politicians_spared:0 "§HCongressmen and other representatives of the federal government will be released."
+AME_administrators_spared:0 "§HThe state administration will be left intact"
 AME_mil_decide_economy:0 "Can decide the fate of the market"
 AME_mil_economic_choice:0 "New decisions will be made available"
 AME_expansionism_threat:0 "American Expansionism"
@@ -293,6 +302,8 @@ AME_elections_flag:0 "Increased freedoms"
 AME_economic_support:0 "Economic support"
 
 ####ideas####
+AME_open_immigration_idea:0 "Immigrants Welcome"
+AME_ban_immigration_idea:0 "Banned Immigration"
 AME_support_KKK_idea:0 "Integrated Militias"
 AME_support_KKK_idea_desc:0 "The various vigilante groups roaming around the country have been officially integrated into our police force."
 AME_relations_idea:0 "Central Diplomatic Agency"
@@ -356,7 +367,8 @@ AME_civil_service_idea:0 "Reformed Civil Service"
 AME_civil_service_idea_desc:0 "The civil service have been reformed to function like a private sector corporation, with the apparatus directly answering to the AIC and the party."
 AME_company_support:0 "American Invsetments"
 AME_company_support_desc:0 "American companies directed by the AIC have made investments in developing our economy and infrastructure."
-
+AME_pan_christian_idea:0 "The Grand Unified American Church"
+AME_pan_christian_idea_desc:0 "The American State offically endorses the religious dogma of Pan-Christianism under the GUAC."
 
 ###decisions###
 AME_ford_latin_decisions:0 "Spread Influence In Latin America"

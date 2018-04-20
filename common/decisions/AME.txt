@@ -1718,3 +1718,290 @@ AME_join_england = {
      }
  
  }
+ 
+ AME_japan_decisions = {
+ 
+	AME_claim_JAP = {
+	
+		icon = GFX_decision_generic_nationalism
+		available = { 
+			NOT = { is_in_faction_with = JAP }
+			NOT = { has_war_with = JAP }
+		}
+		visible = {
+			
+			NOT = { is_in_faction_with = JAP }
+			NOT = { JAP = { is_subject_of = AME } }
+		
+		}
+		ai_will_do = {
+	       factor = 20
+	    }
+		
+		cost = 60    
+		days_remove = 15
+		fire_only_once = yes	
+		remove_effect = {
+			add_state_claim = 633
+			add_state_claim = 684  
+			add_state_claim = 647 
+			add_state_claim = 646  
+			add_state_claim = 648 
+			add_state_claim = 645 	
+			add_state_claim = 526
+			set_country_flag = AME_claimed_JAP_states
+	    }
+		
+		complete_effect = {
+			add_threat = 1 
+		}
+	
+	}
+	
+	AME_claim_JAP_2 = {
+	
+		icon = GFX_decision_generic_nationalism
+		available = { 
+			NOT = { is_in_faction_with = JAP }
+			NOT = { has_war_with = JAP }
+		}
+		visible = {
+			
+			NOT = { is_in_faction_with = JAP }
+			NOT = { JAP = { is_subject_of = AME } }
+		
+		}
+		ai_will_do = {
+	       factor = 20
+	    }
+		
+		cost = 75    
+		days_remove = 20
+		fire_only_once = yes	
+		remove_effect = {
+			add_state_claim = 744
+			add_state_claim = 637  
+			add_state_claim = 562  
+			add_state_claim = 560  
+			add_state_claim = 409 
+			add_state_claim = 408  	
+			add_state_claim = 657
+			set_country_flag = AME_claimed_JAP_states_2
+	    }
+		
+		complete_effect = {
+			add_threat = 1 
+		}
+	
+	}
+	
+	AME_war_JAP = {
+	
+		icon = GFX_decision_generic_operation
+		available = { 
+			NOT = { is_in_faction_with = JAP }
+			NOT = { has_war_with = JAP }
+		}
+		visible = {
+			
+			NOT = { is_in_faction_with = JAP }
+			NOT = { JAP = { is_subject_of = AME } }
+		
+		}
+		ai_will_do = {
+	       factor = 5 
+		   modifier = {
+			factor = 2 
+			has_country_flag = AME_claimed_JAP_states_2
+		   }
+		   modifier = {
+			factor = 2 
+			has_country_flag = AME_claimed_JAP_states
+			}
+			modifier = {
+			factor = 0 
+				OR = {
+					has_war_with = SOV
+					has_war_with = ENG 
+					has_war_with = GER
+				}
+			}
+	    }
+		
+		cost = 50    
+		days_remove = 30
+		war_with_on_remove = JAP 
+		fire_only_once = yes	
+		remove_effect = {
+			create_wargoal = { target = JAP type = puppet_wargoal_focus }
+	    }
+	
+	}
+ 
+ }
+ 
+ AME_england_decisions = {
+ 
+	AME_claim_ENG = {
+	
+		icon = GFX_decision_generic_nationalism
+		available = { 
+			NOT = { is_in_faction_with = ENG }
+			NOT = { has_war_with = ENG }
+		}
+		visible = {
+			
+			NOT = { is_in_faction_with = ENG }
+			NOT = { ENG = { is_subject_of = AME } }
+		
+		}
+		ai_will_do = {
+	       factor = 20
+	    }
+		
+		cost = 60    
+		days_remove = 15
+		fire_only_once = yes	
+		remove_effect = {
+			add_state_claim = 690
+			add_state_claim = 693   
+			add_state_claim = 689  
+			add_state_claim = 311  
+			add_state_claim = 685  
+			add_state_claim = 308 	
+			add_state_claim = 692
+			add_state_claim = 691 
+			add_state_claim = 687
+			add_state_claim = 331 
+			add_state_claim = 332
+			set_country_flag = AME_claimed_ENG_states
+	    }
+		
+		complete_effect = {
+			add_threat = 1 
+		}
+	
+	}
+	
+	AME_war_ENG = {
+	
+		icon = GFX_decision_generic_operation
+		available = { 
+			NOT = { is_in_faction_with = ENG }
+			NOT = { has_war_with = ENG }
+		}
+		visible = {
+			
+			NOT = { is_in_faction_with = ENG }
+			NOT = { ENG = { is_subject_of = AME } }
+		
+		}
+		ai_will_do = {
+	       factor = 5 
+		   modifier = {
+			factor = 4 
+			has_country_flag = AME_claimed_ENG_states
+		   }
+			modifier = {
+			factor = 0 
+				OR = {
+					has_war_with = SOV
+					has_war_with = JAP 
+					has_war_with = GER
+				}
+			}
+	    }
+		
+		cost = 50    
+		days_remove = 30
+		war_with_on_remove = ENG 
+		fire_only_once = yes	
+		remove_effect = {
+			create_wargoal = { target = ENG type = puppet_wargoal_focus }
+	    }
+	
+	}
+ 
+ }
+ 
+ AME_germany_decisions = {
+ 
+	AME_claim_GER = {
+	
+		icon = GFX_decision_generic_nationalism
+		available = { 
+			NOT = { is_in_faction_with = GER }
+			NOT = { has_war_with = GER }
+		}
+		visible = {
+			
+			NOT = { is_in_faction_with = GER }
+			NOT = { GER = { is_subject_of = AME } }
+		
+		}
+		ai_will_do = {
+	       factor = 20
+	    }
+		
+		cost = 60    
+		days_remove = 15
+		fire_only_once = yes	
+		remove_effect = {
+			add_state_claim = 694 
+			add_state_claim = 310   
+			add_state_claim = 641  
+			add_state_claim = 726  
+			add_state_claim = 635  
+			add_state_claim = 634 	
+			add_state_claim = 737
+			add_state_claim = 764
+			set_country_flag = AME_claimed_GER_states
+	    }
+		
+		complete_effect = {
+			add_threat = 1 
+		}
+	
+	}
+	
+	AME_germany_decisions = {
+	
+		icon = GFX_decision_generic_operation
+		available = { 
+			NOT = { is_in_faction_with = GER }
+			NOT = { has_war_with = GER }
+		}
+		visible = {
+			
+			NOT = { is_in_faction_with = GER }
+			NOT = { GER = { is_subject_of = AME } }
+		
+		}
+		ai_will_do = {
+	       factor = 5 
+		   modifier = {
+			factor = 4 
+			has_country_flag = AME_claimed_GER_states
+		   }
+			modifier = {
+			factor = 0 
+				OR = {
+					has_war_with = SOV
+					has_war_with = JAP 
+					has_war_with = ENG
+				}
+			}
+	    }
+		
+		cost = 50    
+		days_remove = 30
+		war_with_on_remove = GER 
+		fire_only_once = yes	
+		remove_effect = {
+			create_wargoal = { target = GER type = puppet_wargoal_focus }
+	    }
+	
+	}
+ 
+ }
+ 

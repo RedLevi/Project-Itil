@@ -1,7 +1,65 @@
 ideas = {
 
 	country = {
-	
+		
+		AME_general_strike = {
+		
+			picture = FRA_factory_strikes
+			
+			available = {
+			
+				always = yes
+
+			}
+			
+			allowed_civil_war = {
+			
+				always = yes 
+			
+			}
+			
+			removal_cost = -1 
+			
+			modifier = {
+			
+				industrial_capacity_factory = -0.1 
+				local_resources_factor = -0.2 
+				production_speed_buildings_factor = -0.5 
+				consumer_goods_factor = 0.1 
+				industry_repair_factor = -0.5 
+			
+			}
+		
+		}
+		
+		USA_AME_spy_ring = {
+		
+			available = {
+			
+				has_war_with = AME 
+
+			}
+
+			picture = generic_spy_political	
+			
+			allowed_civil_war = {
+			
+				always = yes  
+			
+			}
+			
+			removal_cost = -1 
+			
+			targeted_modifier = {
+
+					tag = AME
+
+					decryption_factor = 0.35 
+
+				}
+		
+		}
+		
 		AME_open_immigration_idea = {
 		
 			available = {

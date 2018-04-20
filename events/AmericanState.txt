@@ -318,7 +318,8 @@ country_event = { #purge politicians
 	option = {#spare them 
 		name = ame.19.b 
 		ai_chance = { factor = 40 }
-		add_to_variable = { var = AME_revolt_var value = 10 tooltip = AME_politicians_spared }
+		custom_effect_tooltip = AME_politicians_spared 
+		set_country_flag = AME_politicians_spared
 	}
 
 }
@@ -342,7 +343,8 @@ country_event = { #purge administrators
 	option = {#spare them 
 		name = ame.20.b 
 		ai_chance = { factor = 50 }
-		add_to_variable = { var = AME_revolt_var value = 10  }
+		custom_effect_tooltip = AME_administrators_spared
+		set_country_flag = AME_administrators_spared
 	}
 
 }
@@ -366,7 +368,8 @@ country_event = { #purge intellectuals
 	option = {#spare them 
 		name = ame.21.b 
 		ai_chance = { factor = 25 }
-		add_to_variable = { var = AME_revolt_var value = 10 }
+		custom_effect_tooltip = AME_intellectuals_spared
+		set_country_flag = AME_intellectuals_spared
 	}
 
 }
@@ -391,7 +394,8 @@ country_event = { #purge unionists
 	option = {#spare them 
 		name = ame.22.b 
 		ai_chance = { factor = 20 }
-		add_to_variable = { var = AME_revolt_var value = 10  }
+		custom_effect_tooltip = AME_unions_spared
+		set_country_flag = AME_unions_spared
 	}
 
 }
@@ -415,7 +419,8 @@ country_event = { #purge leaders
 	option = {#spare them 
 		name = ame.23.b 
 		ai_chance = { factor = 50 }
-		add_to_variable = { var = AME_revolt_var value = 10  }
+		custom_effect_tooltip = AME_leaders_spared
+		set_country_flag = AME_leaders_spared
 	}
 
 }
@@ -439,7 +444,8 @@ country_event = { #purge officers
 	option = {#spare them 
 		name = ame.23.b 
 		ai_chance = { factor = 70 }
-		add_to_variable = { var = AME_revolt_var value = 10  }
+		custom_effect_tooltip = AME_officers_spared
+		set_country_flag = AME_officers_spared
 	}
 
 }
@@ -838,5 +844,115 @@ country_event = {#Pro-American coup
 		name = ame.49.a 
 		AME = { puppet = ROOT }
 		add_stability = -0.4
+	}
+}
+
+###war malus events### 
+
+country_event = {#pro-federal rally
+	id = ame.50 
+	title = ame.50.t 
+	desc = ame.50.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = AME 
+		has_war_with = USA 
+		has_country_flag = AME_politicians_spared
+	}
+	mean_time_to_happen = { days = 30 }
+	option = {
+		name = ame.50.a 
+		add_stability = -0.05 
+	}
+}
+
+country_event = {#spy ring 
+	id = ame.51 
+	title = ame.51.t 
+	desc = ame.51.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = USA 
+		has_war_with = AME 
+		AME = { has_country_flag = AME_administrators_spared }
+	}
+	mean_time_to_happen = { days = 40 }
+	option = {
+		name = ame.51.a 
+		add_ideas = USA_AME_spy_ring
+	}
+}
+
+country_event = {#college protest
+	id = ame.52 
+	title = ame.52.t 
+	desc = ame.52.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = AME 
+		has_war_with = USA 
+		AME = { has_country_flag = AME_intellectuals_spared }
+	}
+	mean_time_to_happen = { days = 50 }
+	option = {
+		name = ame.52.a 
+		add_war_support = -0.05 
+	}
+}
+
+country_event = {#general strike
+	id = ame.53 
+	title = ame.53.t 
+	desc = ame.53.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = AME 
+		has_war_with = USA 
+		AME = { has_country_flag = AME_unions_spared }
+	}
+	mean_time_to_happen = { days = 20 }
+	option = {
+		name = ame.53.a 
+		add_timed_idea = { idea = AME_general_strike days = 200 } 
+	}
+}
+
+country_event = {#sabotage
+	id = ame.54 
+	title = ame.54.t 
+	desc = ame.54.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = AME 
+		has_war_with = USA 
+		AME = { has_country_flag = AME_leaders_spared }
+	}
+	mean_time_to_happen = { days = 60 }
+	option = {
+		name = ame.54.a 
+		659 = {
+		
+			damage_building = { type = arms_factory damage = 0.6 }
+			damage_building = { type = infrastructure damage = 0.1 }
+		
+		}
+		357 = {
+		
+			damage_building = { type = arms_factory damage = 0.6 }
+			damage_building = { type = infrastructure damage = 0.2 }
+		
+		}
+		383 = {
+		
+			damage_building = { type = arms_factory damage = 0.4 }
+			damage_building = { type = infrastructure damage = 0.2 }
+		
+		}
+		360 = {
+		
+			damage_building = { type = dockyard damage = 1.5 }
+			damage_building = { type = infrastructure damage = 0.3 }
+		
+		}
 	}
 }

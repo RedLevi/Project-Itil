@@ -1392,7 +1392,7 @@ focus_tree = {
 		
 		id = AME_anti_catholic_focus 
 		icon = GFX_focus_generic_strike_at_democracy1 
-		x = 7
+		x = 6
 		y = 9
 		cost = 10	 
 		available = {
@@ -1412,7 +1412,7 @@ focus_tree = {
 		
 		id = AME_pan_christian_focus 
 		icon = GFX_focus_ger_reichskommisariats 
-		x = 9
+		x = 8
 		y = 9
 		cost = 10	 
 		available = {
@@ -1432,7 +1432,7 @@ focus_tree = {
 		
 		id = AME_ban_immigration_focus
 		icon = GFX_goal_continuous_restrict_freedom 
-		x = 11
+		x = 12
 		y = 9
 		cost = 10	 
 		available = {
@@ -1451,7 +1451,7 @@ focus_tree = {
 		
 		id = AME_open_immigration_focus
 		icon = GFX_goal_continuous_increase_nu 
-		x = 13
+		x = 14
 		y = 9
 		cost = 10	 
 		available = {
@@ -1465,7 +1465,7 @@ focus_tree = {
 		}
 	
 	}
-	
+###diplomacy###	
 	focus = {
 		
 		id = AME_international_relations
@@ -1486,10 +1486,6 @@ focus_tree = {
 	
 	}
 	
-
-
-	
-
 	focus = {
 		
 		id = AME_isolationist
@@ -1545,6 +1541,73 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 		create_faction = america_faction  
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_strike_japan
+		icon = GFX_focus_AST_war_japan	
+		x = 29
+		y = 2
+		cost = 10	 
+		available = {
+			JAP = { exists = yes }
+			NOT = { is_in_faction_with = JAP }
+			is_subject = no
+			controls_state = 378
+		}
+		prerequisite = { focus = AME_our_own_way focus = AME_look_to_germany focus = AME_an_old_friend }
+		available_if_capitulated = no
+		completion_reward = {
+			custom_effect_tooltip = AME_mil_economic_choice 
+			reverse_add_opinion_modifier = { target = JAP modifier = AME_agression }
+			add_named_threat = { threat = 5 name = AME_expansionism_threat }
+		}
+	
+	}	
+	
+	focus = {
+		
+		id = AME_strike_england
+		icon = GFX_focus_AST_never_gallipoli	
+		x = 27
+		y = 2
+		cost = 10	 
+		available = {
+			ENG = { exists = yes }
+			NOT = { is_in_faction_with = ENG }
+			is_subject = no
+		}
+		prerequisite = { focus = AME_our_own_way focus = AME_look_to_germany }
+		available_if_capitulated = no
+		completion_reward = {
+			custom_effect_tooltip = AME_mil_economic_choice 
+			reverse_add_opinion_modifier = { target = ENG modifier = AME_agression }
+			add_named_threat = { threat = 5 name = AME_expansionism_threat }
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_strike_germany
+		icon = GFX_focus_ger_oppose_hitler	
+		x = 25
+		y = 2
+		cost = 10	 
+		available = {
+			GER = { exists = yes }
+			NOT = { is_in_faction_with = GER }
+			is_subject = no
+		}
+		prerequisite = { focus = AME_our_own_way focus = AME_an_old_friend }
+		available_if_capitulated = no
+		completion_reward = {
+			custom_effect_tooltip = AME_mil_economic_choice 
+			reverse_add_opinion_modifier = { target = GER modifier = AME_agression }
+			add_named_threat = { threat = 5 name = AME_expansionism_threat }
 		}
 	
 	}

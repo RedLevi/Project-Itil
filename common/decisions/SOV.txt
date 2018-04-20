@@ -37,6 +37,7 @@ SOV_expansion = {
 	       }
 	       add_war_support = -0.03
 	       add_stability = 0.03
+         set_global_flag = SOV_expansion
 	    }
 	}
 	SOV_attack_ukraine = {
@@ -77,6 +78,7 @@ SOV_expansion = {
 	       }
 	       add_war_support = 0.03
 	       add_stability = 0.05
+         set_global_flag = SOV_expansion
 	    }
 	}
 	SOV_attack_afghanistan = {
@@ -117,6 +119,7 @@ SOV_expansion = {
 	       }
 	       add_war_support = -0.03
 	       add_stability = -0.03
+         set_global_flag = SOV_expansion
 	    }
 	}
   SOV_attack_sinkiang = {
@@ -160,6 +163,7 @@ SOV_expansion = {
          }
          add_war_support = -0.03
          add_stability = -0.03
+         set_global_flag = SOV_expansion
       }
   }    
 }
@@ -197,6 +201,84 @@ SOV_diplomacy = {
          fire_only_once = yes 
          remove_effect = {
             GEO = {
+               country_event = {
+                  id = soviet.16 hours = 1
+               }
+            }
+        }
+    }
+    SOV_deal_with_azer = {
+         icon = GFX_decision_generic_operation
+         allowed = {
+            original_tag = SOV
+         }
+         visible = {
+          country_exists = AZR
+          has_completed_focus = Demand_Azerbaijan
+          NOT = {
+              AZR = {
+                    has_government = communism
+              }
+          }
+          NOT = {
+             SOV = {
+             has_war_with = AZR
+                }
+             }
+             NOT = {
+               AZR = {
+                  is_in_faction_with = SOV
+               }
+            }
+         }
+         ai_will_do = {
+         factor = 1
+         
+      }
+         cost = 45
+         days_remove = 5
+         fire_only_once = yes 
+         remove_effect = {
+            AZR = {
+               country_event = {
+                  id = soviet.16 hours = 1
+               }
+            }
+        }
+    }
+     SOV_deal_with_arm = {
+         icon = GFX_decision_generic_operation
+         allowed = {
+            original_tag = SOV
+         }
+         visible = {
+          country_exists = ARM
+          has_completed_focus = Demand_Armenia
+          NOT = {
+              ARM = {
+                    has_government = communism
+              }
+          }
+          NOT = {
+             SOV = {
+             has_war_with = ARM
+                }
+             }
+             NOT = {
+               ARM = {
+                  is_in_faction_with = SOV
+               }
+            }
+         }
+         ai_will_do = {
+         factor = 1
+         
+      }
+         cost = 45
+         days_remove = 5
+         fire_only_once = yes 
+         remove_effect = {
+            ARM = {
                country_event = {
                   id = soviet.16 hours = 1
                }
@@ -348,6 +430,7 @@ SOV_scandinavia = {
 	       FIN = {
 	          country_event = { id = soviet.21 days = 1 }
 	       }
+         set_global_flag = SOV_expansion
 	    }
 	}
 	SOV_demand_annexation = {
@@ -388,6 +471,7 @@ SOV_scandinavia = {
 	       }
            add_stability = 0.03
            add_war_support = 0.05
+           set_global_flag = SOV_expansion
 	    }
 	}
 }
@@ -513,6 +597,7 @@ SOV_japwar = {
        fire_only_once = yes 
        remove_effect = {
           SOV = { declare_war_on = { target = RUS type = annex_everything } }
+          set_global_flag = SOV_expansion
        }
     }
 }
@@ -649,4 +734,61 @@ SOV_claims = {
         add_threat = 5
      }
   }
+}
+SOV_middle_east = {
+   SOV_support_kemal = {
+      icon = GFX_decision_generic_political_discourse
+      allowed = {
+        original_tag = SOV 
+     }
+     visible = {
+        has_country_flag = SOV_ottomemes
+     }
+     ai_will_do = {
+        factor = 5
+        modifier = {
+           factor = 15
+           NOT = {
+              has_country_flag = Trotsky_Wins
+            }
+        }
+     }
+     cost = 100
+     fire_only_once = yes 
+     days_remove = 30
+     remove_effect = {
+        TUR = {
+           country_event = {
+              id = soviet.36 days = 1
+           }
+        }
+     }
+   }
+   SOV_support_communists = {
+      icon = GFX_decision_generic_political_discourse
+      allowed = {
+        original_tag = SOV 
+     }
+     visible = {
+        has_country_flag = SOV_ottomemes
+     }
+     ai_will_do = {
+        factor = 5
+        modifier = {
+           factor = 20
+           has_country_flag = Trotsky_Wins
+        }
+     }
+     cost = 30
+     fire_only_once = yes 
+     days_remove = 30
+     modifier = {
+        military_factory_use = 3
+     }
+     remove_effect = {
+        TUR = {
+           start_civil_war = { ideology = communism size = 1.5 }
+        }
+     }
+   }
 }

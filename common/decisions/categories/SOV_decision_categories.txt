@@ -60,6 +60,7 @@ SOV_claims = {
 }
 SOV_middle_east = {
 	icon = GFX_decision_category_generic_independence
+	picture = GFX_decision_cat_SOV_marching
 	allowed = {
 	   original_tag = SOV
 	}

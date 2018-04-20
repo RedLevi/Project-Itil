@@ -107,47 +107,47 @@ units = {
 		name = "2. Infanterie-Division"
 		location = 6334
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "12. Infanterie-Division"
 		location = 537
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	# III. Armeekorps
 	division= {	
 		name = "3. Infanterie-Division"
 		location = 3381
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "23. Infanterie-Division"
 		location = 6347
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	# Panzertruppenkommando
 	division= {	
 		name = "1. Panzer-Division"
 		location = 6375
 		division_template = "Panzer-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
 	}
 	division= {	
 		name = "2. Panzer-Division"
 		location = 6521
 		division_template = "Panzer-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
 	}
 	division= {	
 		name = "3. Panzer-Division"
 		location = 6521
 		division_template = "Panzer-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
 	}
 
@@ -155,7 +155,7 @@ units = {
 		name = "1. Kaiserliches-Verfügungstruppe" 
 		location = 3381
 		division_template = "Kaiserliches Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 
 	### 3. Armee (Kaiserliches Heer-Gruppenkommando) ###
@@ -164,32 +164,32 @@ units = {
 		name = "4. Infanterie-Division"
 		location = 6462
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "14. Infanterie-Division"
 		location = 6462
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "24. Infanterie-Division"
 		location = 6462
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	# VIII. Armeekorps
 	division= {	
 		name = "8. Infanterie-Division"
 		location = 11467
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "18. Infanterie-Division"
 		location = 11467
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 
 	# I. Armeekorps
@@ -197,25 +197,25 @@ units = {
 		name = "1. Infanterie-Division"
 		location = 6402
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "11. Infanterie-Division"
 		location = 266
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "21. Infanterie-Division"
 		location = 3384
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "Kavallerie-Kommando Insterburg" 
 		location = 281
 		division_template = "Kavallerie-Brigade"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 
 
@@ -224,52 +224,52 @@ units = {
 		name = "13. Infanterie-Division"
 		location = 6257
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	# VI. Armeekorps
 	division= {	
 		name = "6. Infanterie-Division"
 		location = 587
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "16. Infanterie-Division"
 		location = 11264
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	# IX. Armeekorps
 	division= {	
 		name = "9. Infanterie-Division"
 		location = 11388
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "15. Infanterie-Division"
 		location = 241
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	# X. Armeekorps
 	division= {	
 		name = "19. Infanterie-Division"
 		location = 6488
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "20. Infanterie-Division"
 		location = 9572
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "22. Infanterie-Division"
 		location = 9572
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 
 	# V. Armeekorps
@@ -277,7 +277,7 @@ units = {
 		name = "5. Infanterie-Division"
 		location = 9517
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 
 	# VII. Armeekorps
@@ -285,114 +285,114 @@ units = {
 		name = "7. Infanterie-Division"
 		location = 11544
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "10. Infanterie-Division"
 		location = 9532
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "17. Infanterie-Division"
 		location = 11544
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}			
 	division= {	
 		name = "1. Gebirgs-Brigade" 
 		location = 678
 		division_template = "Gebirgs-Brigade" 
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
 	division= {	
 		name = "2. Gebirgs-Brigade" 
 		location = 678
 		division_template = "Gebirgs-Brigade" 
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}		
     ### 3. Armee (Kaiserliches Heer-Westfront) ###
     division= {	
 		name = "25. Infanterie-Division"
 		location = 1346
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
     division= {	
 		name = "26. Infanterie-Division"
 		location = 11502
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
     division= {	
 		name = "27. Infanterie-Division"
 		location = 3629
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
     division= {	
 		name = "28. Infanterie-Division"
 		location = 9559
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}		
 	division= {	
 		name = "4. Panzer-Division"
 		location = 6521
 		division_template = "Panzer-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
 	}
 	division= {	
 		name = "5. Panzer-Division"
 		location = 6521
 		division_template = "Panzer-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
 	}	
 	division= {	
 		name = "1. Kavallerie-Brigade"
 		location = 9503
 		division_template = "Kavallerie-Brigade"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
 	}	
 	division= {	
 		name = "2. Kavallerie-Brigade"
 		location = 6583
 		division_template = "Kavallerie-Brigade"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
 	}	
 	division= {	
 		name = "2. Kaiserliches-Verfügungstruppe" 
 		location = 6583
 		division_template = "Kaiserliches Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "3. Kaiserliches-Verfügungstruppe" 
 		location = 6529
 		division_template = "Kaiserliches Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "4. Kaiserliches-Verfügungstruppe" 
 		location = 6529
 		division_template = "Kaiserliches Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	division= {	
 		name = "5. Kaiserliches-Verfügungstruppe" 
 		location = 3629
 		division_template = "Kaiserliches Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
 	division= {	
 		name = "6. Kaiserliches-Verfügungstruppe" 
 		location = 3629
 		division_template = "Kaiserliches Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
 
     #### Belgium Front ###
@@ -400,39 +400,39 @@ units = {
 		name = "6. Panzer-Division"
 		location = 13081
 		division_template = "Panzer-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
 	}	
 	division= {	
 		name = "3. Kavallerie-Brigade"
 		location = 516
 		division_template = "Kavallerie-Brigade"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
 	}	
     division= {	
 		name = "29. Infanterie-Division"
 		location = 3576
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
     division= {	
 		name = "30. Infanterie-Division"
 		location = 9444
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
     division= {	
 		name = "31. Infanterie-Division"
 		location = 9444
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
     division= {	
 		name = "32. Infanterie-Division"
 		location = 9536
 		division_template = "Infanterie-Division"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
 	
 	#### Kolonialkräfte Africa ### #Colonial Army
@@ -440,81 +440,81 @@ units = {
 		name = "1. Kolonialkräfte von Afrika"
 		location = 8244
 		division_template = "Kolonialkräfte"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
     division= {	
 		name = "2. Kolonialkräfte von Afrika"
 		location = 191
 		division_template = "Kolonialkräfte"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}		
     division= {	
 		name = "3. Kolonialkräfte von Afrika"
 		location = 3181
 		division_template = "Kolonialkräfte"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}		
     division= {	
 		name = "1. Kavallerie-Brigade von Afrika"
 		location = 5224
 		division_template = "Kavallerie-Brigade"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
     division= {	
 		name = "4. Kolonialkräfte von Afrika"
 		location = 5224
 		division_template = "Kolonialkräfte"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
     division= {
 		name = "5. Kolonialkräfte von Afrika"
 		location = 10919
 		division_template = "Kolonialkräfte"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
     division= {	#Madagaskar
 		name = "2. Kavallerie-Brigade von Afrika"
 		location = 5222
 		division_template = "Kavallerie-Brigade"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
     division= {	#Namibia
 		name = "3. Kavallerie-Brigade von Afrika"
 		location = 4879
 		division_template = "Kavallerie-Brigade"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
 	#### Kolonialkräfte Somalia ###
     division= {	
 		name = "Mogadischu Kolonialkräfte"
 		location = 12991
 		division_template = "Kolonialkräfte"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
     division= {	
 		name = "Eritrea Kolonialkräfte"
 		location = 12766
 		division_template = Kolonialkräfte
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
     division= {	
 		name = "Dschibuti Kolonialkräfte"
 		location = 4985
 		division_template = "Kolonialkräfte"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	#### Kolonialkräfte Indochina ###
     division= {	
 		name = "Hanoi Kolonialkräfte"
 		location = 4075
 		division_template = "Kolonialkräfte"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}	
     division= {	
 		name = "Saigon Kolonialkräfte"
 		location = 4401
 		division_template = "Kolonialkräfte"
-		start_experience_factor = 0.3
+		start_experience_factor = 0.2
 	}
 	
 	##### NAVAL UNITS #####
@@ -821,7 +821,7 @@ instant_effect = {
 			creator = "GER" 
 		}
 		requested_factories = 2
-		progress = 0.3
+		progress = 0.2
 		efficiency = 50
 	}
 
@@ -831,7 +831,7 @@ instant_effect = {
 			creator = "GER" 
 		}
 		requested_factories = 1
-		progress = 0.3
+		progress = 0.2
 		efficiency = 50
 	}
 

@@ -451,5 +451,13 @@ spriteTypes = {
 		name = "GFX_decision_cat_SOV_japwar"
 		texturefile = "gfx/interface/decisions/decision_cat_SOV_japwar.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_cat_SOV_japwar"
+		texturefile = "gfx/interface/decisions/decision_cat_SOV_japwar.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_SOV_marching"
+		texturefile = "gfx/interface/decisions/decision_cat_SOV_marching.dds"
+	}
 }
 }

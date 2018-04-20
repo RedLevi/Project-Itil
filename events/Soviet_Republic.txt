@@ -710,6 +710,7 @@ country_event = { #Fate of Bogd Khanate#
 		}
 	}
 	MON = { country_event = { id = soviet.23 } }
+	set_global_flag = SOV_expansion
   }
 }
 
@@ -774,6 +775,7 @@ country_event = { #Georgian Ultimatum
 	  ai_chance = { factor = 40 }
       create_wargoal = { type = annex_everything target = GEO }
 	  add_state_claim = 231
+	  set_global_flag = SOV_expansion
    }
    option = { #Ultimatum
       name = soviet.15.b
@@ -783,7 +785,7 @@ country_event = { #Georgian Ultimatum
 }
 
 
-country_event = { #Georgian response#
+country_event = { #annexation response#
    id = soviet.16
    title = soviet.16.t
    desc = soviet.16.d
@@ -791,16 +793,16 @@ country_event = { #Georgian response#
 
    option = { #Succumb
       name = soviet.16.a
-      SOV = { annex_country = { target = GEO transfer_troops = yes } }
+      SOV = { annex_country = { target = ROOT transfer_troops = yes } }
       SOV = { country_event = { id = sovnews.2 days = 1 } }
       ai_chance = { factor = 40 }
    }
    option = { #WAR
       name = soviet.16.a
-      SOV = { create_wargoal = { type = annex_everything target = GEO } }
-      SOV = { add_state_claim = 231 }
+      SOV = { create_wargoal = { type = annex_everything target = ROOT } }
       SOV = { country_event = { id = sovnews.1 days = 1 } }
       ai_chance = { factor = 60 }
+      set_global_flag = SOV_expansion
    }
 }
 
@@ -827,6 +829,7 @@ country_event = { #Latvia Integration#
       }
       add_stability = -0.3
       ai_chance = { factor = 10 }
+      set_global_flag = SOV_expansion
    }
 }
 
@@ -849,6 +852,7 @@ country_event = { #Estonian Integration#
       SOV = { country_event = { id = sovnews.6 hours = 1 } }
       add_stability = 0.2
       ai_chance = { factor = 80 }
+      set_global_flag = SOV_expansion
    }
 }
 
@@ -871,6 +875,7 @@ country_event = { #Lithuanian Integration#
       SOV = { country_event = { id = sovnews.8 hours = 1 } }
       add_stability = 0.2
       ai_chance = { factor = 80 }
+      set_global_flag = SOV_expansion
    }
 }
 
@@ -1346,6 +1351,38 @@ country_event = { #Ukrainian refusal
           add_war_support = -0.1
        }
    }
+}
+
+country_event = { #Ottoman event for ataturk 
+	id = soviet.36
+	title = soviet.36.t
+	desc = soviet.36.d 
+	is_triggered_only = yes 
+
+	option = { #welcome kemal
+       name = soviet.36.a 
+       ai_chance = {
+          factor = 80
+       }
+       create_country_leader = {
+	      name = "Mustafa Kemal"
+	      desc = "POLITICS_MUSTAFA_KEMAL_ATATÜRK_DESC"
+	      picture = "gfx/leaders/TUR/Mustafa_Kemal.dds"
+	      expire = "1965.1.1"
+	      ideology = social_reformism
+	      traits = {
+		     #
+	      }
+       }
+       add_popularity = { ideology = socialism popularity = 0.1 }
+       set_politics = { ruling_party = socialism elections_allowed = no } 
+	}
+	option = { #No kemal 
+	   name = soviet.36.b
+	   add_stability = -0.1
+	   add_popularity = { ideology = socialism popularity = -0.2 }
+	   set_global_flag = TUR_deny_kemal
+	}
 }
 
 

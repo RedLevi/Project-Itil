@@ -1,4 +1,4 @@
-﻿capital = 341
+capital = 341
 
 oob = "TUR_1936"
 
@@ -30,7 +30,7 @@ set_politics = {
 
 	parties = {
 	    conservatism = {
-			popularity = 25
+			popularity = 15
 		}
 
 		national_integralism = {
@@ -38,19 +38,19 @@ set_politics = {
 		}
 
 		liberalism = {
-			popularity = 15
+			popularity = 10
 		}
 		
 		communism = {
-			popularity = 2
+			popularity = 7
 		}
 		
 		socialism = {
-			popularity = 5
+			popularity = 25
 		}
 		
 		reactionarism = {
-			popularity = 43
+			popularity = 33
 		}
 		
 	}
@@ -67,9 +67,9 @@ set_stability = 0.55
 # Atatürk still alive in '36, however, Inönü was already Prime Minister (but not President)
 
 create_country_leader = {
-	name = "Mustafa Kemal Atatürk"
+	name = "Mustafa Kemal"
 	desc = "POLITICS_MUSTAFA_KEMAL_ATATÜRK_DESC"
-	picture = "gfx/leaders/TUR/Portrait_Turkey_Mustafa_Kemal_Ataturk.dds"
+	picture = "gfx/leaders/TUR/Mustafa_Kemal.dds"
 	expire = "1965.1.1"
 	ideology = social_reformism
 	traits = {
@@ -78,9 +78,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Sefik Hüsnü"
+	name = "Mustafa Suphi"
 	desc = "POLITICS_SEFIK_HUSNU_DESC"
-	picture = "gfx/leaders/TUR/Portrait_Turkey_Sefik_Husnu.dds"
+	picture = "gfx/leaders/TUR/Mustafa_Suphi.dds"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {

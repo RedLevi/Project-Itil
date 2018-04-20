@@ -108,9 +108,89 @@ create_country_leader = {
 create_field_marshal = {
 	name = "George Van Horn Moseley"
 		picture = "George_Moseley.dds"
-	traits = { inspirational_leader }
-	skill = 5
+	traits = { media_personality }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
 
+}
+
+create_corps_commander = {
+	name = "Douglas MacArthur"
+		picture = "Douglas_Macarthur.dds"
+	traits = { trait_reckless naval_invader }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+
+}
+
+create_corps_commander = {
+	name = "George S. Patton"
+		picture = "George_Patton.dds"
+	traits = { panzer_leader inspirational_leader }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
+
+}
+
+create_corps_commander = {
+	name = "Dwight D. Eisenhower"
+		picture = "Eisenhower.dds"
+	traits = { aggressive_assaulter fast_planner }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+
+}
+
+create_corps_commander = {
+	name = "Joseph Stilwell"
+		picture = "Joseph_Stilwell.dds"
+	traits = { commando trait_mountaineer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 5
+
+}
+
+create_corps_commander = {
+	name = "Mark Clark"
+		picture = "Mark_Wayne.dds"
+	traits = { trickster }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+
+}
+
+### Admirals ###
+
+create_navy_leader = {
+	name = "Chester Nimitz"
+	picture = "Chester_Nimitz.dds"
+	traits = { seawolf superior_tactician }
+	skill = 5
+}
+
+create_navy_leader = {
+	name = "William Halsey, Jr."
+		picture = "William_Halsey.dds"
+	traits = { superior_tactician spotter }
+	skill = 4
 }
 
 ### Ship Variants ###

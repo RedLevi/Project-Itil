@@ -1611,6 +1611,28 @@ focus_tree = {
 		}
 	
 	}
+	
+	focus = {
+		
+		id = AME_strike_soviets
+		icon = GFX_goal_generic_war_with_comintern	
+		x = 26
+		y = 3
+		cost = 10	 
+		available = {
+			SOV = { exists = yes }
+			NOT = { is_in_faction_with = SOV }
+			is_subject = no
+		}
+		prerequisite = { focus = AME_our_own_way focus = AME_an_old_friend focus = AME_look_to_germany }
+		available_if_capitulated = no
+		completion_reward = {
+			reverse_add_opinion_modifier = { target = SOV modifier = AME_agression }
+			add_named_threat = { threat = 5 name = AME_expansionism_threat }
+			create_wargoal = { target = SOV type = puppet_wargoal_focus }
+		}
+	
+	}
 
 	focus = {
 		
@@ -1629,6 +1651,473 @@ focus_tree = {
 		completion_reward = {
 		reverse_add_opinion_modifier = { target = ENG modifier = AME_ally }
 	    custom_effect_tooltip = AME_mil_economic_choice
+		}
+	
+	}
+	
+###military###
+
+	focus = {
+		
+		id = AME_military_reforms_focus
+		icon = GFX_goal_generic_military_sphere
+		x = 28
+		y = 10
+		cost = 10	 
+		available = {
+			OR = {
+				
+				has_completed_focus = AME_mil_path_focus 
+				has_completed_focus = AME_ford_path_focus
+			
+			}
+		}
+		
+		available_if_capitulated = no
+		completion_reward = {
+			army_experience = 35 
+			navy_experience = 35 
+			air_experience = 35 
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_land_reforms_focus
+		icon = GFX_goal_generic_army_doctrines
+		x = 33
+		y = 11
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_military_reforms_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.35 uses = 2 category = land_doctrine }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_guns_focus
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 31
+		y = 12
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_land_reforms_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.4 uses = 3 category = infantry_tech }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_special_forces_focus
+		icon = GFX_goal_generic_special_forces
+		x = 31
+		y = 13
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_guns_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = marine_tech category = para_tech category = mountaineers_tech }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_air_reforms_focus
+		icon = GFX_goal_generic_air_doctrine
+		x = 28
+		y = 11
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_military_reforms_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.35 uses = 2 category = air_doctrine }	
+		}
+	
+	}
+	
+	
+	focus = {
+		
+		id = AME_air_light_focus
+		icon = GFX_goal_generic_air_fighter
+		x = 29
+		y = 12
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_air_reforms_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.45 uses = 2 category = light_fighter category = cat_heavy_fighter }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_air_heavy_focus
+		icon = GFX_goal_generic_air_bomber
+		x = 27
+		y = 12
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_air_reforms_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.45 uses = 2 category = tactical_bomber category = cat_strategic_bomber }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_air_naval_focus
+		icon = GFX_goal_generic_air_bomber
+		x = 24
+		y = 12
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_air_reforms_focus } 
+		prerequisite = { focus = AME_naval_reforms_focus }
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2  category = naval_bomber }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_air_suicide_focus
+		icon = GFX_goal_generic_secret_weapon
+		x = 24
+		y = 13
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_air_naval_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			set_rule = {
+					can_use_kamikaze_pilots = yes
+				}
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_air_jet_focus
+		icon = GFX_goal_continuous_air_production
+		x = 28
+		y = 13
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_air_heavy_focus } 
+		prerequisite ={ focus = AME_air_light_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.33 uses = 2 category = jet_technology }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_air_rocket_focus
+		icon = GFX_focus_rocketry
+		x = 28
+		y = 14
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_air_jet_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.33 uses = 2 category = rocketry }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_naval_reforms_focus 
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 22
+		y = 11
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_military_reforms_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.35 uses = 2 category = naval_doctrine }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_naval_construction_focus
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 19
+		y = 12
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_naval_reforms_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+				
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_naval_battleship_focus 
+		icon = GFX_goal_generic_navy_battleship
+		x = 21
+		y = 12
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_naval_reforms_focus } 
+		mutually_exclusive = { focus = AME_carrier_focus }
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.40 uses = 2 category = bb_tech category = shbb_tech }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_carrier_focus 
+		icon = GFX_goal_generic_navy_carrier
+		x = 23
+		y = 12
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_naval_reforms_focus } 
+		mutually_exclusive = { focus = AME_naval_battleship_focus }
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.40 uses = 2 category = cv_tech }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_cruiser_focus 
+		icon = GFX_goal_generic_navy_carrier
+		x = 22
+		y = 13
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_carrier_focus focus = AME_naval_battleship_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.40 uses = 2 category = cl_tech category = ca_tech category = bc_tech }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_submarine_focus 
+		icon = GFX_goal_generic_navy_submarine
+		x = 21
+		y = 14
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite = { focus = AME_cruiser_focus }
+		mutually_exclusive = { focus = AME_destroyer_focus }
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.40 uses = 2 category = ss_tech }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_destroyer_focus 
+		icon = GFX_focus_generic_destroyer
+		x = 23
+		y = 14
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite = { focus = AME_cruiser_focus }
+		mutually_exclusive = { focus = AME_submarine_focus }
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.40 uses = 2 category = dd_tech }	
 		}
 	
 	}

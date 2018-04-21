@@ -1738,6 +1738,87 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = marine_tech category = para_tech category = mountaineers_tech }	
+			add_ideas = AME_special_forces_idea 
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_mobolized_focus
+		icon = GFX_goal_generic_army_motorized
+		x = 33
+		y = 12
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_land_reforms_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_mechanized_equipment }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_armor_focus
+		icon = GFX_goal_generic_build_tank
+		x = 33
+		y = 13
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_mobolized_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.35 uses = 2 category = armor }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_artillery_focus
+		icon = GFX_goal_generic_army_artillery
+		x = 35
+		y = 12
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_land_reforms_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = artillery }	
+		}
+	
+	}
+	
+	focus = {
+		
+		id = AME_anti_tank_focus
+		icon = GFX_goal_generic_army_artillery2
+		x = 35
+		y = 13
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_artillery_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.4 uses = 2 category = AME_artillery_focus }	
 		}
 	
 	}
@@ -1806,8 +1887,8 @@ focus_tree = {
 	focus = {
 		
 		id = AME_air_naval_focus
-		icon = GFX_goal_generic_air_bomber
-		x = 24
+		icon = GFX_goal_generic_air_naval_bomber
+		x = 25
 		y = 12
 		cost = 10	 
 		available = {
@@ -1828,7 +1909,7 @@ focus_tree = {
 		
 		id = AME_air_suicide_focus
 		icon = GFX_goal_generic_secret_weapon
-		x = 24
+		x = 25
 		y = 13
 		cost = 10	 
 		available = {

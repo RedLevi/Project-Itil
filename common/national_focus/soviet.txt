@@ -1444,6 +1444,7 @@ focus = {
 	}
     completion_reward = {
        custom_effect_tooltip = SOV_ottomemes
+       set_country_flag = SOV_ottomemes
     }
 }
 focus = {

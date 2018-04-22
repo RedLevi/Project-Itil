@@ -149,7 +149,7 @@ country_event = { #Finns Refuse#
    }
 }
 
-country_event = { #Finns Refuse#
+country_event = { #Ukraine Ultimatum#
    id = sovnews.12
    title = sovnews.12.t
    desc = sovnews.12.d
@@ -164,10 +164,10 @@ country_event = { #Finns Refuse#
    }
 }
 
-country_event = {
+country_event = { #Embargo
    id = sovnews.13
-   title = sovnews.12.t
-   desc = sovnews.12.d 
+   title = sovnews.13.t
+   desc = sovnews.13.d 
    is_triggered_only = yes 
 
    option = {
@@ -180,5 +180,27 @@ country_event = {
             reverse_add_opinion_modifier = { target = PREV modifier = embargo }
          }
       }
+   }
+}
+
+country_event = { #Kemal join#
+   id = sovnews.14
+   title = sovnews.14.t
+   desc = sovnews.14.d
+   is_triggered_only = yes
+
+   option = {
+      name = sovnews.14.a
+   }
+}
+
+country_event = { #commmies join#
+   id = sovnews.15
+   title = sovnews.15.t
+   desc = sovnews.15.d
+   is_triggered_only = yes
+
+   option = {
+      name = sovnews.15.a
    }
 }

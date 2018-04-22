@@ -941,8 +941,520 @@ ideas = {
 			
 			}
 		
+		}	
+	}
+	political_advisor = {
+	charles_coughlin = {
+			
+			
+			allowed = {
+				original_tag = "AME"
+			}
+			
+			traits = { fascist_demagogue propaganda_expert }
+	
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
 		}
+	USA_henry_stimson = {
+			
+			picture = generic_political_advisor_europe_2
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+			traits = { war_industrialist }
+		}
+	seward_collins = {
+			
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+			traits = { silent_workhorse }
+		}	
+	joe_mcwilliams = {
+			
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+			traits = { prince_of_terror }
+		}	
+  }	 
 
+
+  army_chief = {
+		
+	
+		douglas_macarthur = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		dwight_eisenhower = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+	
+	air_chief = {
+		
+		
+		carl_spaatz = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			traits = { air_chief_night_operations_2 }
+			# TODO Strategic bombing secondary trait?
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		george_kenney = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+	
+	navy_chief = {
+	
+		
+		william_halsey = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			traits = { navy_chief_naval_aviation_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+	
+	
+	high_command = {
+		courtney_hodges = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			traits = { army_commando_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		
+		
+		jimmy_doolittle = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			traits = { air_strategic_bombing_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		john_cannon = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		claire_lee_chennault = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			traits = { air_tactical_bombing_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 		
 	}
+
+  tank_manufacturer = { 
+  
+  army_ordnance_department = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { heavy_tank_manufacturer }
+			
+			modifier = {
+			}
+		}	
+	}
+
+naval_manufacturer = { 
+	
+		designer = yes
+		
+		norfolk_naval_yard = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		electric_boat_company = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		brooklyn_naval_yard = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		newport_news_shipbuilding = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+aircraft_manufacturer = { 
+
+designer = yes
+
+bell = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+		
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }	#TODO, make different from north american
+			
+			modifier = {
+			}
+		}	
+
+lockheed = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+boeing = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+grumman = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}		
+	}					
+
+ materiel_manufacturer = {
+			
+		designer = yes
+		
+		
+		ford_motor_company = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			research_bonus = {
+				motorized_equipment = 0.10
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+			
+			modifier = {
+			}
+		} 
+
+
+		springfield_armory = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+			}
+		}
+	
+		
+		rock_island_arsenal = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			research_bonus = {
+				artillery = 0.10
+			}
+			
+			traits = { artillery_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+theorist = {
+
+george_patton = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_mobile_warfare = 0.10
+			}
+			
+			traits = { mobile_warfare_expert }
+		} 
+
+		curtis_lemay = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_strategic_destruction = 0.10
+			}
+			
+			traits = { victory_through_airpower }
+		}
+
+marc_mitscher = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_base_strike = 0.10
+			}
+			
+			traits = { naval_aviation_pioneer }
+		}				
+	}		
 }

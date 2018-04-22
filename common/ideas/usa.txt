@@ -289,32 +289,6 @@ ideas = {
 				factor = 0
 			}
 		}	
-		
-		charles_coughlin = {
-			
-			
-			allowed = {
-				original_tag = "USA"
-			}
-			
-
-			
-			traits = { fascist_demagogue }
-	
-			on_add = {
-				country_event = political.7
-			}
-	
-			do_effect = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-			
-			ai_will_do = {
-				factor = 0
-			}
-		}
 
 		USA_robert_taft = {
 			
@@ -349,17 +323,6 @@ ideas = {
 			traits = { smooth_talking_charmer }
 		}
 
-		USA_henry_stimson = {
-			
-			picture = generic_political_advisor_europe_2
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-			traits = { war_industrialist }
-		}
-
 		USA_donald_nelson = {
 			
 			picture = generic_political_advisor_europe_3
@@ -375,22 +338,6 @@ ideas = {
 
 	army_chief = {
 		
-	
-		douglas_macarthur = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			traits = { army_chief_morale_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 		
 		george_marshall = {
 			
@@ -407,22 +354,6 @@ ideas = {
 				factor = 1
 			}
 		}
-		
-		dwight_eisenhower = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			traits = { army_chief_offensive_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}	
 	}
 	
 	air_chief = {
@@ -443,39 +374,6 @@ ideas = {
 				factor = 1
 			}
 		}
-		
-		carl_spaatz = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			traits = { air_chief_night_operations_2 }
-			# TODO Strategic bombing secondary trait?
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-		george_kenney = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			traits = { air_chief_safety_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}	
 	}
 	
 	navy_chief = {
@@ -512,40 +410,10 @@ ideas = {
 			}
 		}
 		
-		william_halsey = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			traits = { navy_chief_naval_aviation_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}	
 	}
 	
 	
 	high_command = {
-		courtney_hodges = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			traits = { army_commando_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 		
 		joseph_stilwell = {
 			
@@ -563,69 +431,6 @@ ideas = {
 			}
 		}
 		
-		mark_clark = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			traits = { army_infantry_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}	
-		
-		jimmy_doolittle = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			traits = { air_strategic_bombing_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-		john_cannon = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			traits = { air_close_air_support_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-		claire_lee_chennault = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			traits = { air_tactical_bombing_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 		
 		raymond_spruance = {
 			
@@ -659,6 +464,22 @@ ideas = {
 			}
 		}
 		
+		mark_clark = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+
 		thomas_kinkaid = {
 			
 			
@@ -716,106 +537,12 @@ ideas = {
 			modifier = {
 			}
 		}
-		
-		army_ordnance_department = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			research_bonus = {
-				armor = 0.10
-			}
-			
-			traits = { heavy_tank_manufacturer }
-			
-			modifier = {
-			}
-		}	
 	}
 	
 	naval_manufacturer = { 
 	
 		designer = yes
 		
-		norfolk_naval_yard = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			research_bonus = {
-				naval_equipment = 0.10
-			}
-			
-			traits = { coastal_defence_naval_manufacturer }
-			
-			modifier = {
-			}
-		}
-		
-		electric_boat_company = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			research_bonus = {
-				naval_equipment = 0.10
-			}
-			
-			traits = { raiding_fleet_naval_manufacturer }
-			
-			modifier = {
-			}
-		}
-		
-		brooklyn_naval_yard = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			research_bonus = {
-				naval_equipment = 0.10
-			}
-			
-			traits = { atlantic_fleet_naval_manufacturer }
-			
-			modifier = {
-			}
-		}
-		
-		newport_news_shipbuilding = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			research_bonus = {
-				naval_equipment = 0.10
-			}
-			
-			traits = { pacific_fleet_naval_manufacturer }
-			
-			modifier = {
-			}
-		}
 	}
 	
 	aircraft_manufacturer = { 
@@ -860,25 +587,6 @@ ideas = {
 		#	}
 		#}	
 		
-		lockheed = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			
-			traits = { medium_aircraft_manufacturer }
-			
-			modifier = {
-			}
-		}
-		
 		douglas_aircraft_company = {
 			
 			
@@ -893,26 +601,6 @@ ideas = {
 			}
 			
 			traits = { CAS_manufacturer }
-			
-			modifier = {
-			}
-		}
-
-		
-		boeing = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			
-			traits = { heavy_aircraft_manufacturer }
 			
 			modifier = {
 			}
@@ -935,92 +623,15 @@ ideas = {
 		#	
 		#	modifier = {
 		#	}
-		#}
-		grumman = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			
-			traits = { naval_aircraft_manufacturer }
-			
-			modifier = {
-			}
-		}		
+		#}	
 	}
 	
 	
 	materiel_manufacturer = {
 			
 		designer = yes
-		
-		springfield_armory = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			research_bonus = {
-				infantry_weapons = 0.10
-			}
-			
-			traits = { infantry_equipment_manufacturer }
-			
-			modifier = {
-			}
-		}
-		
-		ford_motor_company = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			research_bonus = {
-				motorized_equipment = 0.10
-			}
-			
-			traits = { motorized_equipment_manufacturer }
-			
-			modifier = {
-			}
-		}
-		
 	
-		
-		rock_island_arsenal = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-
-			
-			research_bonus = {
-				artillery = 0.10
-			}
-			
-			traits = { artillery_manufacturer }
-			
-			modifier = {
-			}
-		}
 	}
-	
 
 	
 	industrial_concern = {
@@ -1082,21 +693,6 @@ ideas = {
 			traits = { superior_firepower_expert }
 		}
 		
-		george_patton = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-			cost = 250
-			
-			research_bonus = {
-				cat_mobile_warfare = 0.10
-			}
-			
-			traits = { mobile_warfare_expert }
-		}
 		
 		dewitt_clinton_ramsey = {
 			
@@ -1114,37 +710,6 @@ ideas = {
 			traits = { naval_theorist }
 		}
 		
-		marc_mitscher = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-			cost = 250
-			
-			research_bonus = {
-				cat_base_strike = 0.10
-			}
-			
-			traits = { naval_aviation_pioneer }
-		}
-		
-		curtis_lemay = {
-			
-			
-			allowed = {
-				original_tag = USA
-			}
-			
-			cost = 250
-			
-			research_bonus = {
-				cat_strategic_destruction = 0.10
-			}
-			
-			traits = { victory_through_airpower }
-		}
 		
 		harold_mcclelland = {
 			

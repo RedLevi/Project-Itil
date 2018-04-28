@@ -3719,6 +3719,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/Prince_Paul.dds"
 	}
 	SpriteType = {
+		name = "GFX_idea_peter_II"
+		texturefile = "gfx/interface/ideas/Peter_II.dds"
+	}
+	SpriteType = {
 		name = "GFX_idea_rama_VII"
 		texturefile = "gfx/interface/ideas/Rama_VII.dds"
 	}

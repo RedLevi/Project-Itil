@@ -1,1 +1,71 @@
-﻿
+﻿add_namespace = tur 
+
+country_event = { #Join the soviets?
+	id = tur.1
+	title = tur.1.t
+	desc = tur.1.d 
+	fire_only_once = yes 
+	trigger = {
+	   tag = TUR
+	   has_global_flag = SOV_choose_kemal
+	   has_government = socialism
+	}
+
+    option = { #join 
+       name = tur.1.a
+       ai_chance = {
+         modifier = 60
+       }
+       SOV = {
+          add_to_faction = TUR 
+          country_event = { id = sovnews.14 hours = 1 }
+       }
+    }
+    option = { #betray
+       name = tur.1.b 
+       ai_chance = {
+          modifier = 40
+       }
+       SOV = {
+          add_opinion_modifier = {
+             target = TUR
+             modifier = Soviet_Betrayed
+          }
+       }
+    }
+
+
+country_event = { #Join the soviets?
+	id = tur.2
+	title = tur.2.t
+	desc = tur.2.d 
+	fire_only_once = yes 
+	trigger = {
+	   tag = TUR
+	   has_global_flag = SOV_choose_commies
+	   has_government = communism
+	}
+
+    option = { #join 
+       name = tur.1.a
+       ai_chance = {
+         modifier = 100
+       }
+       SOV = {
+          add_to_faction = TUR 
+          country_event = { id = sovnews.15 hours = 1 }
+       }
+    }
+    option = { #betray
+       name = tur.1.b 
+       ai_chance = {
+          modifier = 0
+       }
+       SOV = {
+          add_opinion_modifier = {
+             target = TUR
+             modifier = Soviet_Betrayed
+          }
+       }
+    }
+}

@@ -1376,6 +1376,9 @@ country_event = { #Ottoman event for ataturk
        }
        add_popularity = { ideology = socialism popularity = 0.1 }
        set_politics = { ruling_party = socialism elections_allowed = no } 
+       TUR = {
+          set_cosmetic_tag = TURK
+       }
 	}
 	option = { #No kemal 
 	   name = soviet.36.b

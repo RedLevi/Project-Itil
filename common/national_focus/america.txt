@@ -525,7 +525,7 @@ focus_tree = {
 		available_if_capitulated = no
 		prerequisite = { focus = AME_military_research }
 		completion_reward = {
-			
+			custom_effect_tooltip = AME_research_tooltip
 		}
 	
 	}
@@ -1887,7 +1887,7 @@ focus_tree = {
 	focus = {
 		
 		id = AME_air_naval_focus
-		icon = GFX_goal_generic_air_naval_bomber
+		icon = GFX_goal_generic_air_naval_bomber	
 		x = 25
 		y = 12
 		cost = 10	 

@@ -1161,6 +1161,27 @@ ideas = {
 
   tank_manufacturer = { 
   
+  ford_motor_company = {
+			
+			
+			allowed = {
+				original_tag = AME
+			}
+			
+			available = { has_completed_focus = AME_military_research_recover }
+			
+
+			
+			research_bonus = {
+				motorized_equipment = 0.10
+			}
+			
+			traits = { medium_tank_manufacturer fast_tank_manufacturer }
+			
+			modifier = {
+			}
+		}
+  
   army_ordnance_department = {
 			
 			
@@ -1348,24 +1369,7 @@ grumman = {
 		designer = yes
 		
 		
-		ford_motor_company = {
-			
-			
-			allowed = {
-				original_tag = AME
-			}
-			
-
-			
-			research_bonus = {
-				motorized_equipment = 0.10
-			}
-			
-			traits = { motorized_equipment_manufacturer }
-			
-			modifier = {
-			}
-		} 
+		 
 
 
 		springfield_armory = {

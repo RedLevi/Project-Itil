@@ -543,7 +543,25 @@ ideas = {
 	
 		designer = yes
 		
-	}
+		federal_naval_corporation = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}	
 	
 	aircraft_manufacturer = { 
 		

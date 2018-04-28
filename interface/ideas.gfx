@@ -1684,6 +1684,11 @@ spriteTypes = {
 		name = "GFX_idea_norfolk_naval_yard"
 		texturefile = "gfx/interface/ideas/idea_norfolk_naval_yard.dds"
 	}
+	###AME IDEAS
+	spriteType = {
+		name = "GFX_idea_federal_naval_corporation"
+		texturefile = "gfx/interface/ideas/idea_federal_naval_corporation.dds"
+	}
 
 	### TURKEY IDEAS
 	spriteType = {

@@ -545,7 +545,6 @@ ideas = {
 		
 		federal_naval_corporation = {
 			
-			
 			allowed = {
 				original_tag = USA
 			}

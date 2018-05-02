@@ -33,7 +33,7 @@ FRA_democratic_rep_desc:0 "Democratic Republic"
 FRA_proleteriat_rep:0 "Socialist Republic"
 FRA_proleteriat_rep_desc:0 "Socialist Republic"
 FRA_orleanist:0 "Choose Orleanist"
-FRA_legitimist:0 "Choose legitimist"
+FRA_legitimist:0 "Choose Legitimist"
 FRA_personal_cult:0 "Cult of Personality"
 FRA_economic_recovery:0 "Economic Recovery Plan"
 FRA_planned_economy:0 "Planned Economy"
@@ -98,7 +98,7 @@ FRA_civil_war_cw:0 "No Available Focus until End of Civil War"
 
 ###ideas###
 france_torn:0 "Republic in Chaos"
-france_torn_desc:0 "Dissent and despair are affecting the French nation out of many factors and as now, the French Republic is under threat of both of the radical Right and Left-wing politics. The elections are soon coming and our nation in chaos so the future doesn't seem bright."
+france_torn_desc:0 "Dissent and despair are affecting the French nation out of many factors and as now, the French Republic is under threat of both of the radical Right and Left-wing politics. Our nation is in chaos, and with elections fast approaching the future doesn’t seem all too bright."
 
 ###EVENTS###
 france.1.t:0 "The state of France"

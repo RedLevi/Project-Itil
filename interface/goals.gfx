@@ -189,7 +189,22 @@ spriteTypes = {
 	name = "GFX_focus_ger_revive_kaiserreich"
 	texturefile = "gfx/interface/goals/focus_ger_revive_kaiserreich.dds"
 	}
-
+	
+    ### Le France ###	
+	
+	SpriteType = {
+	name = "GFX_six_way_cw"
+	texturefile = "gfx/interface/goals/six_way_cw.dds"
+	}	
+	SpriteType = {
+	name = "GFX_maurras"
+	texturefile = "gfx/interface/goals/maurras.dds"
+	}	
+	SpriteType = {
+	name = "GFX_fra_royalist"
+	texturefile = "gfx/interface/goals/fra_royalist.dds"
+	}		
+	
 	#### Generic continuous goal icons
 
 	SpriteType = {

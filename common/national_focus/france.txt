@@ -14,7 +14,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_civil_war
-		icon = ?
+		icon = GFX_six_way_cw
 		x = 4
 		y = 0
 		cost = 10
@@ -143,7 +143,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_choose_maurras
-		icon = ?
+		icon = GFX_maurras
 		x = 3
 		y = 3
 		cost = 10
@@ -377,7 +377,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_le_roi
-		icon = ?
+		icon = GFX_fra_royalist
 		x = 3
 		y = 5
 		cost = 10
@@ -1774,6 +1774,7 @@ focus_tree = {
 
         available_if_capitulated = no	
 		prerequisite = { focus = FRA_foreign_policy }
+		mutually_exclusive = { focus = FRA_allign_uk focus = FRA_allign_soviet focus = FRA_new_bloc }
 
 		completion_reward = {
 		#event for lorraine hyptotetical exchange
@@ -1810,9 +1811,7 @@ focus_tree = {
 		
         available_if_capitulated = no	
 		prerequisite = { focus = FRA_foreign_policy }
-		available = {
-		#has_flag = uk_france_ally
-		}		
+		mutually_exclusive = { focus = FRA_german_exchange focus = FRA_allign_soviet focus = FRA_new_bloc }	
 
 		completion_reward = {
 		#event
@@ -1831,6 +1830,7 @@ focus_tree = {
 		
         available_if_capitulated = no	
 		prerequisite = { focus = FRA_foreign_policy }
+		mutually_exclusive = { focus = FRA_german_exchange focus = FRA_allign_uk focus = FRA_new_bloc }	
 
 		completion_reward = {
 		#event
@@ -1849,6 +1849,7 @@ focus_tree = {
 		
         available_if_capitulated = no	
 		prerequisite = { focus = FRA_foreign_policy }
+		mutually_exclusive = { focus = FRA_german_exchange focus = FRA_allign_uk focus = FRA_allign_soviet }
 
 		completion_reward = {
 		create_faction = "Nouvelle Entente"
@@ -1867,6 +1868,7 @@ focus_tree = {
 		
         available_if_capitulated = no
 		prerequisite = { focus = FRA_new_bloc focus = FRA_allign_soviet }
+		mutually_exclusive = { focus = FRA_save_america focus = FRA_german_surprise }
 
 		completion_reward = {
 		create_wargoal = { target = ENG type = annex_everything }
@@ -1885,6 +1887,7 @@ focus_tree = {
 		
         available_if_capitulated = no	
 		prerequisite = { focus = FRA_new_bloc focus = FRA_allign_soviet }
+		mutually_exclusive = { focus = FRA_save_america focus = FRA_turn_on_britain }
 
 		completion_reward = {
 		create_wargoal = { target = GER type = annex_everything }
@@ -1903,6 +1906,7 @@ focus_tree = {
 		
         available_if_capitulated = no	
 		prerequisite = { focus = FRA_new_bloc focus = FRA_allign_soviet focus = FRA_allign_uk }
+		mutually_exclusive = { focus = FRA_german_surprise focus = FRA_turn_on_britain }
 
 		completion_reward = {
 		create_wargoal = { target = AME type = annex_everything }

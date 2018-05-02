@@ -1861,3 +1861,11 @@ spriteTypes = {
        name = "GFX_pop_front"
        texturefile = "gfx/event_pictures/pop_front.dds"
     }
+    spriteType = {
+       name = "GFX_report_event_beginning_of_the_purge"
+       texturefile = "gfx/event_pictures/report_event_beginning_of_the_purge.dds"
+    }
+    spriteType = {
+       name = "GFX_report_event_purge_of_the_kkk"
+       texturefile = "gfx/event_pictures/report_event_purge_of_the_kkk.dds"
+    }

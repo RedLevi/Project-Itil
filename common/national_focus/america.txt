@@ -648,7 +648,7 @@ focus_tree = {
 	focus = {
 		
 		id = AME_prepare_for_war_focus 
-		icon = GFX_goal_generic_small_arms 
+		icon = GFX_focus_ame_1 
 		x = 19
 		y = 0
 		cost = 10	 
@@ -1660,7 +1660,7 @@ focus_tree = {
 	focus = {
 		
 		id = AME_military_reforms_focus
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_focus_ame_2
 		x = 28
 		y = 10
 		cost = 10	 

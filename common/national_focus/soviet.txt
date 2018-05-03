@@ -1787,7 +1787,8 @@ focus = {
 		x = 29
 		y = 1
 		completion_reward = {
-		add_political_power = -300
+		add_political_power = -150
+		add_ideas = SOV_oldguard_dismissed_idea
 		}
 
 	}

@@ -45,6 +45,25 @@ ideas = {
 
 	}
 
+	SOV_oldguard_dismissed_idea = {
+		removal_cost = -1
+		picture = generic_communist_army
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		modifier = {
+			army_morale_factor = -0.1
+			army_attack_factor = 0.1
+		}
+
+	}
+
 	SOV_local_government_idea = {
 
 		removal_cost = -1
@@ -96,7 +115,7 @@ ideas = {
 	SOV_secret_police_idea = {
 
 		removal_cost = -1
-		picture = generic_spy_coup
+		picture = nkvd_2
 
 		allowed = {
 			always = no

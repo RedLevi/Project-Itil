@@ -16,8 +16,8 @@ ideas = {
           stability_factor = 0.05
         }
       }
-        YUG_prince_paul = {
-        picture = GFX_idea_yug_prince_paul
+        YUG_peter_II = {
+        picture = peter_II
         available = {
           NOT = { has_government = communism }
         }
@@ -28,17 +28,16 @@ ideas = {
         }
         removal_cost = -1
         modifier = {
-          stability_factor = -0.05
+          
         }
         }
-    	YUG_prince_paul_liked = {
-    		picture = GFX_idea_yug_prince_paul
+    	YUG_prince_paul = {
+    		picture = prince_paul
     		available = { NOT = { has_government = communsim } }
     		allowed_civil_war = { NOT = { has_government = communsim } }
     		removal_cost = -1
     		modifier = {
-    			stability_factor = 0.05
-    			war_support_factor = 0.05
+    			stability_factor = -0.05
     		}
     	}
       YUG_executive_power = {
@@ -50,7 +49,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_HUN_hungarian_monarchy
+        picture = HUN_hungarian_monarchy
         modifier = {
           stability_factor = -0.1
           war_support_factor = 0.1
@@ -67,7 +66,7 @@ ideas = {
           NOT = { has_government = communism }
         }
         removal_cost = -1
-        picture = GFX_idea_HUN_hungarian_monarchy
+        picture = HUN_hungarian_monarchy
         modifier = {
           stability_factor = -0.1
           war_support_factor = 0.1
@@ -139,7 +138,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_generic_flexible_foreign_policy2
+        picture = generic_flexible_foreign_policy2
         modifier = {
           stability_factor = 0.10
           political_power_gain = -0.1
@@ -172,7 +171,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_generic_flexible_foreign_policy
+        picture = generic_flexible_foreign_policy
         modifier = {
           stability_factor = -0.05
           political_power_gain = 0.1
@@ -205,7 +204,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_generic_foreign_capital
+        picture = generic_foreign_capital
         modifier = {
           stability_factor = -0.10
           political_power_gain = -0.1
@@ -223,7 +222,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_generic_communism_drift_bonus
+        picture = generic_communism_drift_bonus
         modifier = {
           socialism_drift = 0.05
           stability_factor = -0.25
@@ -240,7 +239,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_FRA_national_mobilization_focus
+        picture = FRA_national_mobilization_focus
         modifier = {
           conscription_factor = 0.05
           planning_speed = 0.1
@@ -256,7 +255,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_FRA_scw_intervention_nationalists_focus
+        picture = FRA_scw_intervention_nationalists_focus
         modifier = {
           production_factory_efficiency_gain_factor = 0.05
           consumer_goods_factor = -0.02
@@ -273,7 +272,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_generic_intel_bonus
+        picture = generic_intel_bonus
         modifier = {
           consumer_goods_factor = -0.05
           army_core_defence_factor = 0.1
@@ -289,7 +288,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_generic_intel_bonus
+        picture = generic_intel_bonus
         modifier = {
           army_core_attack_factor = 0.1
           conscription = 0.01
@@ -307,7 +306,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_chi_war_of_resistance3
+        picture = chi_war_of_resistance3
         modifier = {
           production_factory_max_efficiency_factor = -0.3 # 'armed guards in factories' OR 'compromise with the workers'
           industrial_capacity_factory = -0.6 # 'armed guards in factories' OR 'compromise with the workers'
@@ -324,7 +323,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_chi_war_of_resistance3
+        picture = chi_war_of_resistance3
         modifier = {
           industrial_capacity_dockyard = -0.6 # 'establish order in the docks' OR 'compromise with the dockyards'
           political_power_factor = -0.1
@@ -340,7 +339,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_chi_war_of_resistance3
+        picture = chi_war_of_resistance3
         modifier = {
           production_speed_buildings_factor = -0.5 # 'forced construction' OR 'compromise with the construction workers'
           industry_repair_factor = -0.5 # 'forced construction' OR 'compromise with the construction workers'
@@ -357,7 +356,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_chi_war_of_resistance3
+        picture = chi_war_of_resistance3
         modifier = {
           consumer_goods_factor = 0.2 # 'attend to shortages'
           political_power_factor = -0.1
@@ -373,7 +372,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_chi_war_of_resistance3
+        picture = chi_war_of_resistance3
         modifier = {
         	stability_factor = -0.1
         	war_support_factor = -0.1
@@ -389,7 +388,7 @@ ideas = {
           always = no
         }
         removal_cost = -1
-        picture = GFX_idea_chi_war_of_resistance3
+        picture = chi_war_of_resistance3
         modifier = {
         	stability_factor = -0.05
         	war_support_factor = 0.05

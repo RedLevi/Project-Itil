@@ -592,3 +592,96 @@ country_event = {#petain refuses
 		name = germany.29.a 
 	}
 }
+
+####international summit####
+
+country_event = {#Preparation for the summit 
+	id = germany.30 
+	title = germany.30.t 
+	desc = germany.30.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = GER 
+		date > 1936.2.15 
+	}
+	option = {
+		name = germany.30.a 
+		add_political_power = -30 
+		country_event = { id = germany.31 days = 145 }
+	}
+}
+
+country_event = {#Invite all the delegates
+	id = germany.31 
+	title = germany.31.t 
+	desc = germany.31.d 
+	is_triggered_only = yes 
+	option = {
+		name = germany.30.a 
+		add_political_power = -30 
+		YUG = { country_event = { id = germany.32 } }
+		AUS = { country_event = { id = germany.33 } }
+		HUN = { country_event = { id = germany.33 } }
+		ROM = { country_event = { id = germany.33 } }
+		BUL = { country_event = { id = germany.33 } }
+		SWE = { country_event = { id = germany.33 } }
+		DEN = { country_event = { id = germany.33 } }
+		NOR = { country_event = { id = germany.33 } }
+		FIN = { country_event = { id = germany.33 } }
+		EST = { country_event = { id = germany.33 } }
+		LIT = { country_event = { id = germany.33 } }
+		GRE = { country_event = { id = germany.33 } }
+		UKR = { country_event = { id = germany.33 } }
+		FLA = { country_event = { id = germany.33 } }
+		HOL = { country_event = { id = germany.33 } }
+		POL = { country_event = { id = germany.33 } }
+		#these events are to be replaced with less generic ones in the future, for each tag
+		country_event = { id = germany.34 days = 10 }
+		country_event = { id = yug.37 days = 17 }
+		
+	}
+}
+
+country_event = { #germany invites us 
+	id = germany.32 
+	title = germany.32.t 
+	desc = germany.32.d 
+	is_triggered_only = yes 
+	option = {
+		name = germany.32.a 
+		reverse_add_opinion_modifier = { target = GER modifier = GER_summit_positive }
+		add_opinion_modifier = { target = GER modifier = GER_summit_positive }
+	}
+}
+
+country_event = { #germany invites us 
+	id = germany.33 
+	title = germany.33.t 
+	desc = germany.33.d 
+	is_triggered_only = yes 
+	option = {
+		name = germany.33.a 
+		reverse_add_opinion_modifier = { target = GER modifier = GER_summit_positive }
+		add_opinion_modifier = { target = GER modifier = GER_summit_positive }
+	}
+}
+
+news_event = {
+	id = germany.34 
+	title = germany.34.t 
+	desc = germany.34.d 
+	is_major = yes 
+	is_triggered_only = yes 
+	option = {
+		name = germany.34.a 
+		trigger = { 
+			NOT = { has_government = communism }
+		}
+	}
+	option = {
+		name = germany.34.b 
+		trigger = { 
+			has_government = communism
+		}
+	}
+}

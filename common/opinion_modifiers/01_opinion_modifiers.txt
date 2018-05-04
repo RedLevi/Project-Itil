@@ -79,6 +79,7 @@ GER_bad_diplomacy = { value = -50 }
 refused_GER_alliance = { value = -45 }
 GER_me_relations = { value = 40 }
 GER_asia_relations = { value = 50 }
+GER_summit_positive = { value = 15 }
 ###France###
 NFA_traitors = { value = -150 }
 GER_enemies = { value = -150 }

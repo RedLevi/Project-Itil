@@ -18,7 +18,7 @@ country_event = { #Join the soviets?
        }
        SOV = {
           add_to_faction = TUR 
-          country_event = { id = sovnews.14 hours = 1 }
+          country_event = { id = sovnews.14 }
        }
     }
     option = { #betray
@@ -31,6 +31,7 @@ country_event = { #Join the soviets?
              target = TUR
              modifier = Soviet_Betrayed
           }
+		  country_event = { id = tur.3 }
        }
     }
 
@@ -53,7 +54,7 @@ country_event = { #Join the soviets?
        }
        SOV = {
           add_to_faction = TUR 
-          country_event = { id = sovnews.15 hours = 1 }
+          country_event = { id = sovnews.15 }
        }
     }
     option = { #betray
@@ -66,6 +67,37 @@ country_event = { #Join the soviets?
              target = TUR
              modifier = Soviet_Betrayed
           }
+		  country_event = { id = tur.3 }
        }
     }
+}
+
+country_event = {#Turkey refuses
+	id = tur.3 
+	title = tur.3.t 
+	desc = tur.3.d 
+	is_triggered_only = yes 
+	option = {#war 
+		name = tur.3.a 
+		ai_chance = { factor = 50 }
+		declare_war_on = { target = TUR type = annex_everything }
+		TUR = { country_event = { id = tur.4 } }
+	}
+	option = {
+		name = tur.3.b 
+		ai_chance = { factor = 50 }
+		add_war_support = -0.035 
+	}
+}
+
+country_event = { # soviets attack us!
+	id = tur.4 
+	title = tur.4.t 
+	desc = tur.4.d 
+	is_triggered_only = yes 
+	option = {
+		name = tur.4.a 
+		add_war_support = 0.05 
+		add_stability = 0.05 
+	}
 }

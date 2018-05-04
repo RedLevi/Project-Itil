@@ -1451,11 +1451,27 @@ focus = {
 	id = Deal_with_Romania
 	icon = GFX_focus_rom_abdicate
 	cost = 10.00
+	available = {
+		ROM = { exists = yes }
+	}
+	bypass = {
+	ROM = {
+		OR = {
+		is_in_faction_with = SOV
+		has_government = communism
+		is_puppet_of = SOV
+		}
+		}
+	}
 	prerequisite = {
 		focus = Crush_The_Traitors
 	}
 	x = 67
 	y = 6
+	
+	 completion_reward = {
+       custom_effect_tooltip = SOV_expansion_tooltip
+    }
 
 }
 focus = {

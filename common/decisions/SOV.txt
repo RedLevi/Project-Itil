@@ -33,7 +33,7 @@ SOV_expansion = {
 	    fire_only_once = yes
 	    remove_effect = {
 	       SOV = {
-	          declare_war_on = { target = TUK type = annex_everything }
+	          create_wargoal = { target = TUK type = annex_everything }
 	       }
 	       add_war_support = -0.03
 	       add_stability = 0.03
@@ -74,7 +74,7 @@ SOV_expansion = {
 	    fire_only_once = yes
 	    remove_effect = {
 	       SOV = {
-	          declare_war_on = { target = UKR type = annex_everything }
+	          create_wargoal = { target = UKR type = annex_everything }
 	       }
 	       add_war_support = 0.03
 	       add_stability = 0.05
@@ -115,7 +115,7 @@ SOV_expansion = {
 	    fire_only_once = yes
 	    remove_effect = {
 	       SOV = {
-	          declare_war_on = { target = AFG type = annex_everything }
+	          create_wargoal = { target = AFG type = annex_everything }
 	       }
 	       add_war_support = -0.03
 	       add_stability = -0.03
@@ -159,7 +159,7 @@ SOV_expansion = {
       fire_only_once = yes
       remove_effect = {
          SOV = {
-            declare_war_on = { target = SIK type = annex_everything }
+            create_wargoal = { target = SIK type = annex_everything }
          }
          add_war_support = -0.03
          add_stability = -0.03
@@ -419,7 +419,7 @@ SOV_scandinavia = {
             }
 	    }
 	    ai_will_do = {
-	       factor = 1
+	       factor = 5
 	       
 	    }
       war_with_on_remove = FIN
@@ -503,7 +503,7 @@ SOV_demands = {
         timeout_effect = {
            GER = {
               add_to_faction = UKR 
-              declare_war_on = { target = SOV type = annex_everything }
+              create_wargoal = { target = SOV type = annex_everything }
            }
            add_stability = -0.1
            add_war_support = 0.1
@@ -539,7 +539,7 @@ SOV_demands = {
         timeout_effect = {
            GER = {
               add_to_faction = TUR
-              declare_war_on = { target = SOV type = annex_everything }
+              create_wargoal = { target = SOV type = annex_everything }
            }
            add_stability = -0.1
            add_war_support = 0.1
@@ -663,7 +663,7 @@ SOV_japwar = {
        days_remove = 7
        fire_only_once = yes 
        remove_effect = {
-          SOV = { declare_war_on = { target = RUS type = annex_everything } }
+          SOV = { create_wargoal = { target = RUS type = annex_everything } }
           set_global_flag = SOV_expansion
        }
     }
@@ -866,7 +866,7 @@ SOV_middle_east = {
      }
      remove_effect = {
         TUR = {
-           start_civil_war = { ideology = communism size = 0.7 }
+			country_event = { id = soviet.37 }
            set_global_flag = TUR_SOV_propped_cw
         }
      }
@@ -878,6 +878,13 @@ SOV_middle_east = {
      }
      visible = {
         has_country_flag = SOV_ottomemes
+		TUR = {
+			has_civil_war = no 
+			NOT = {
+				has_government = communism
+				has_government = socialism
+			}
+		}
      }
      ai_will_do = {
         factor = 1
@@ -901,11 +908,102 @@ SOV_middle_east = {
      days_remove = 7 
      remove_effect = {
         SOV = {
-           declare_war_on = {
+           create_wargoal = {
               target = TUR type = annex_everything
            }
         }
         set_global_flag = SOV_TUR_agression
      }
    }
+}
+
+SOV_romania_decisions = {
+
+	SOV_demand_bessarebia = {
+	    icon = GFX_decision_generic_independence
+	    allowed = {
+	       original_tag = SOV
+	    }
+		available = {
+			
+			OR = {
+				controls_state = 192 
+				controls_state = 198
+				controls_state = 199 
+				controls_state = 91 
+			}
+		
+		}
+	    visible = {
+	        country_exists = ROM 
+	        NOT = {
+     	        ROM = {
+                    has_government = communism
+     	        }
+				ROM = { 
+					is_in_faction_with = SOV
+				}
+				has_war_with = ROM
+     	    }
+	    }
+	    ai_will_do = {
+	       factor = 5
+	    }
+      war_with_on_remove = ROM
+	    cost = 75
+	    days_remove = 7
+	    fire_only_once = yes
+	    remove_effect = {
+	       ROM = {
+	          country_event = { id = soviet.44 }
+			  add_state_claim = 78 
+	       }
+		}   
+		  
+         set_global_flag = SOV_expansion
+	 }
+	 
+	 SOV_war-romania = {
+	    icon = GFX_decision_generic_independence
+	    allowed = {
+	       original_tag = SOV
+	    }
+		available = {
+			
+		
+		}
+	    visible = {
+	        country_exists = ROM 
+	        NOT = {
+     	        ROM = {
+                    has_government = communism
+     	        }
+				ROM = { 
+					is_in_faction_with = SOV
+				}
+				has_war_with = ROM
+     	    }
+	    }
+	    ai_will_do = {
+	       factor = 5
+		   modifier = {
+				controls_state = 78 
+				factor = 0.5 
+		   }
+		   modifier = {
+				has_country_flag = basserabia_refused
+				factor = 50 
+		   }
+	    }
+      war_with_on_remove = ROM
+	    cost = 40
+	    days_remove = 7
+	    fire_only_once = yes
+	    remove_effect = {
+	       create_wargoal = { target = ROM type = annex_everything }
+		}   
+		  
+         set_global_flag = SOV_expansion
+	    }
+
 }

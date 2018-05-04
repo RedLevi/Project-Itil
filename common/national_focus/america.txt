@@ -1661,8 +1661,8 @@ focus_tree = {
 		
 		id = AME_military_reforms_focus
 		icon = GFX_focus_ame_2
-		x = 28
-		y = 10
+		x = 34
+		y = 5
 		cost = 10	 
 		available = {
 			OR = {
@@ -1686,8 +1686,8 @@ focus_tree = {
 		
 		id = AME_land_reforms_focus
 		icon = GFX_goal_generic_army_doctrines
-		x = 33
-		y = 11
+		x = 40
+		y = 6
 		cost = 10	 
 		available = {
 			OR = {
@@ -1697,7 +1697,71 @@ focus_tree = {
 		prerequisite ={ focus = AME_military_reforms_focus } 
 		available_if_capitulated = no
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.35 uses = 2 category = land_doctrine }	
+		    army_experience = 10
+			add_tech_bonus = { bonus = 0.4 uses = 2 category = land_doctrine }	
+		}
+	
+	}
+
+	focus = {
+		
+		id = AME_land_reforms_focus_better
+		icon = GFX_focus_ame_5
+		x = 40
+		y = 10
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite = { focus = AME_armor_focus  } 
+		available_if_capitulated = no
+		completion_reward = {
+		    army_experience = 25
+			add_tech_bonus = { bonus = 0.4 uses = 2 category = land_doctrine }	
+		}
+	
+	}
+
+	focus = {
+		
+		id = AME_land_reforms_focus_artillery
+		icon = GFX_goal_poland_goal
+		x = 43
+		y = 9
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite = { focus = AME_artillery_focus  } 
+		available_if_capitulated = no
+		completion_reward = {
+		    army_experience = 15
+			add_tech_bonus = { bonus = 0.55 uses = 1 category = land_doctrine }	
+		}
+	
+	}
+
+	focus = {
+		
+		id = AME_land_reforms_focus_guns
+		icon = GFX_focus_chi_army_reform
+		x = 37
+		y = 9
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite = { focus = AME_guns_focus  } 
+		available_if_capitulated = no
+		completion_reward = {
+		    army_experience = 15
+			add_tech_bonus = { bonus = 0.55 uses = 1 category = land_doctrine }	
 		}
 	
 	}
@@ -1706,8 +1770,8 @@ focus_tree = {
 		
 		id = AME_guns_focus
 		icon = GFX_goal_generic_axis_build_infantry
-		x = 31
-		y = 12
+		x = 37
+		y = 7
 		cost = 10	 
 		available = {
 			OR = {
@@ -1726,9 +1790,9 @@ focus_tree = {
 		
 		id = AME_special_forces_focus
 		icon = GFX_goal_generic_special_forces
-		x = 31
-		y = 13
-		cost = 10	 
+		x = 36
+		y = 8
+		cost = 7.2	 
 		available = {
 			OR = {
 				always = yes 
@@ -1742,14 +1806,34 @@ focus_tree = {
 		}
 	
 	}
+
+	focus = {
+		
+		id = AME_support
+		icon = GFX_focus_ame_4
+		x = 38
+		y = 8
+		cost = 7.2	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_guns_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.4 uses = 2 category = support_tech }	
+		}
+	
+	}
 	
 	focus = {
 		
 		id = AME_mobolized_focus
 		icon = GFX_goal_generic_army_motorized
-		x = 33
-		y = 12
-		cost = 10	 
+		x = 40
+		y = 7
+		cost = 8.6	 
 		available = {
 			OR = {
 				always = yes 
@@ -1758,6 +1842,7 @@ focus_tree = {
 		prerequisite ={ focus = AME_land_reforms_focus } 
 		available_if_capitulated = no
 		completion_reward = {
+		army_experience = 5
 			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_mechanized_equipment }	
 		}
 	
@@ -1767,8 +1852,8 @@ focus_tree = {
 		
 		id = AME_armor_focus
 		icon = GFX_goal_generic_build_tank
-		x = 33
-		y = 13
+		x = 40
+		y = 8
 		cost = 10	 
 		available = {
 			OR = {
@@ -1778,17 +1863,59 @@ focus_tree = {
 		prerequisite ={ focus = AME_mobolized_focus } 
 		available_if_capitulated = no
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.35 uses = 2 category = armor }	
+			add_tech_bonus = { bonus = 0.4 uses = 2 category = armor }	
 		}
 	
 	}
+
+	focus = {
+		
+		id = AME_armor_focus_heavy
+		icon = GFX_focus_generic_army_tanks2
+		x = 41
+		y = 9
+		cost = 9.4	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		mutually_exclusive = { focus = AME_armor_focus_medium }
+		prerequisite ={ focus = AME_armor_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.4 uses = 2 category = armor }	
+		}
 	
+	}
+
+	focus = {
+		
+		id = AME_armor_focus_medium
+		icon = GFX_goal_generic_army_tanks
+		x = 39
+		y = 9
+		cost = 9.4	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		mutually_exclusive = { focus = AME_armor_focus_heavy }
+		prerequisite ={ focus = AME_armor_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = armor }	
+		}
+	
+	}	
+
 	focus = {
 		
 		id = AME_artillery_focus
 		icon = GFX_goal_generic_army_artillery
-		x = 35
-		y = 12
+		x = 43
+		y = 7
 		cost = 10	 
 		available = {
 			OR = {
@@ -1807,9 +1934,9 @@ focus_tree = {
 		
 		id = AME_anti_tank_focus
 		icon = GFX_goal_generic_army_artillery2
-		x = 35
-		y = 13
-		cost = 10	 
+		x = 42
+		y = 8
+		cost = 6.5	 
 		available = {
 			OR = {
 				always = yes 
@@ -1818,17 +1945,46 @@ focus_tree = {
 		prerequisite ={ focus = AME_artillery_focus } 
 		available_if_capitulated = no
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.4 uses = 2 category = AME_artillery_focus }	
+			add_tech_bonus = { bonus = 0.4 uses = 2 category = cat_anti_tank }	
 		}
 	
+	}
+
+	focus = {
+		
+		id = AME_anti_air_focus
+		icon = GFX_focus_ame_3
+		x = 44
+		y = 8
+		cost = 6.5	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite ={ focus = AME_artillery_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.4
+				uses = 2
+				technology = interwar_antiair
+				technology = antiair1
+				technology = antiair2
+				technology = antiair3
+				technology = antiair4
+				technology = antiair5
+			}
+		}
 	}
 	
 	focus = {
 		
 		id = AME_air_reforms_focus
 		icon = GFX_goal_generic_air_doctrine
-		x = 28
-		y = 11
+		x = 34
+		y = 6
 		cost = 10	 
 		available = {
 			OR = {
@@ -1848,8 +2004,8 @@ focus_tree = {
 		
 		id = AME_air_light_focus
 		icon = GFX_goal_generic_air_fighter
-		x = 29
-		y = 12
+		x = 35
+		y = 7
 		cost = 10	 
 		available = {
 			OR = {
@@ -1868,8 +2024,8 @@ focus_tree = {
 		
 		id = AME_air_heavy_focus
 		icon = GFX_goal_generic_air_bomber
-		x = 27
-		y = 12
+		x = 33
+		y = 7
 		cost = 10	 
 		available = {
 			OR = {
@@ -1888,8 +2044,8 @@ focus_tree = {
 		
 		id = AME_air_naval_focus
 		icon = GFX_goal_generic_air_naval_bomber	
-		x = 25
-		y = 12
+		x = 31
+		y = 7
 		cost = 10	 
 		available = {
 			OR = {
@@ -1909,8 +2065,8 @@ focus_tree = {
 		
 		id = AME_air_suicide_focus
 		icon = GFX_goal_generic_secret_weapon
-		x = 25
-		y = 13
+		x = 31
+		y = 8
 		cost = 10	 
 		available = {
 			OR = {
@@ -1931,8 +2087,8 @@ focus_tree = {
 		
 		id = AME_air_jet_focus
 		icon = GFX_goal_continuous_air_production
-		x = 28
-		y = 13
+		x = 34
+		y = 8
 		cost = 10	 
 		available = {
 			OR = {
@@ -1952,8 +2108,8 @@ focus_tree = {
 		
 		id = AME_air_rocket_focus
 		icon = GFX_focus_rocketry
-		x = 28
-		y = 14
+		x = 34
+		y = 9
 		cost = 10	 
 		available = {
 			OR = {
@@ -1972,8 +2128,8 @@ focus_tree = {
 		
 		id = AME_naval_reforms_focus 
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		x = 22
-		y = 11
+		x = 28
+		y = 6
 		cost = 10	 
 		available = {
 			OR = {
@@ -1992,8 +2148,8 @@ focus_tree = {
 		
 		id = AME_naval_construction_focus
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 19
-		y = 12
+		x = 25
+		y = 7
 		cost = 10	 
 		available = {
 			OR = {
@@ -2103,8 +2259,8 @@ focus_tree = {
 		
 		id = AME_naval_battleship_focus 
 		icon = GFX_goal_generic_navy_battleship
-		x = 21
-		y = 12
+		x = 27
+		y = 7
 		cost = 10	 
 		available = {
 			OR = {
@@ -2124,8 +2280,8 @@ focus_tree = {
 		
 		id = AME_carrier_focus 
 		icon = GFX_goal_generic_navy_carrier
-		x = 23
-		y = 12
+		x = 29
+		y = 7
 		cost = 10	 
 		available = {
 			OR = {
@@ -2144,10 +2300,10 @@ focus_tree = {
 	focus = {
 		
 		id = AME_cruiser_focus 
-		icon = GFX_goal_generic_navy_carrier
-		x = 22
-		y = 13
-		cost = 10	 
+		icon = GFX_focus_generic_cruiser2
+		x = 28
+		y = 8
+		cost = 7.2	 
 		available = {
 			OR = {
 				always = yes 
@@ -2165,8 +2321,8 @@ focus_tree = {
 		
 		id = AME_submarine_focus 
 		icon = GFX_goal_generic_navy_submarine
-		x = 21
-		y = 14
+		x = 27
+		y = 9
 		cost = 10	 
 		available = {
 			OR = {
@@ -2186,8 +2342,8 @@ focus_tree = {
 		
 		id = AME_destroyer_focus 
 		icon = GFX_focus_generic_destroyer
-		x = 23
-		y = 14
+		x = 29
+		y = 9
 		cost = 10	 
 		available = {
 			OR = {

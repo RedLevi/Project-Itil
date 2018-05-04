@@ -28,6 +28,7 @@ GER_red_scare = {
 	   remove_effect = {
 	      set_global_flag = GER_ukraine_demands
 	      add_war_support = -0.03
+		  SOV = { country_event = { id = soviet.42 } }
 	   }
 	}
 	GER_ottoman_ultimatum = {
@@ -47,10 +48,14 @@ GER_red_scare = {
 	      has_completed_focus = GER_middle_east_dip
 	   }
 	   ai_will_do = {
-	      factor = 1000
+	      factor = 20
 	      modifier = {
 	         factor = 0
 	         has_war = yes 
+	      }
+		  modifier = {
+	         factor = 2
+	         has_global_flag = SOV_TUR_agression
 	      }
 	   }
 	   cost = 50
@@ -59,6 +64,7 @@ GER_red_scare = {
 	   remove_effect = {
 	      set_global_flag = GER_turkey_demands
 	      add_war_support = -0.03
+		  SOV = { country_event = { id = soviet.43 } }
 	   }
 	}
 	GER_embargo_soviets = {

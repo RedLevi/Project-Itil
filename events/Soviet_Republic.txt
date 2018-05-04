@@ -1381,6 +1381,9 @@ country_event = { #Ottoman event for ataturk
        }
 	}
 	option = { #No kemal 
+		ai_chance = {
+			factor = 20
+		}
 	   name = soviet.36.b
 	   add_stability = -0.1
 	   add_popularity = { ideology = socialism popularity = -0.2 }
@@ -1388,6 +1391,146 @@ country_event = { #Ottoman event for ataturk
 	}
 }
 
+country_event = {#turkish civil war 
+	id = soviet.37 
+	title = soviet.37.t 
+	desc = soviet.37.d 
+	is_triggered_only = yes 
+	option = {
+		name = soviet.37.a 
+		start_civil_war = { ideology = communism size = 0.4 }
+		every_country = {
+			limit = { original_tag = TUR has_government = communism }
+			country_event = { id = soviet.38 days = 7 }
+		}
+	}
+}
+
+country_event = {#call the soviets  
+	id = soviet.38 
+	title = soviet.38.t 
+	desc = soviet.38.d 
+	is_triggered_only = yes 
+	option = {
+		name = soviet.38.a 
+		SOV = { country_event = { id = soviet.39 }  }
+	}
+} 	
+
+country_event = {#kemal asks for help 
+	id = soviet.39
+	title = soviet.39.t 
+	desc = soviet.39.d 
+	is_triggered_only = yes 
+	option = {
+		name = soviet.39.a 
+		ai_chance = { factor = 80 }
+		add_to_faction = FROM
+		declare_war_on = TUR 
+		FROM = { country_event = { id = soviet.40 }  }
+	}
+	option = {
+		name = soviet.39.a 
+		ai_chance = { factor = 20 }
+		add_to_faction = FROM
+		FROM = { country_event = { id = soviet.41 }  }
+	}
+} 	
+
+country_event = {#soviets aid us 
+	id = soviet.40 
+	title = soviet.40.t 
+	desc = soviet.40.d 
+	is_triggered_only = yes 
+	option = {
+		name = soviet.40.a 
+	}
+}
+
+country_event = {#soviets refuse aid 
+	id = soviet.41 
+	title = soviet.41.t 
+	desc = soviet.41.d 
+	is_triggered_only = yes 
+	option = {
+		name = soviet.41.a 
+	}
+}
+
+country_event = {#german intervention ukraine
+	id = soviet.42
+	title = soviet.42.t 
+	desc = soviet.42.d 
+	is_triggered_only = yes 
+	option = {
+		name = soviet.42.a 
+	}
+}
+
+country_event = {#german intervention turkey 
+	id = soviet.43
+	title = soviet.43.t 
+	desc = soviet.43.d 
+	is_triggered_only = yes 
+	option = {
+		name = soviet.43.a 
+	}
+}
+
+country_event = {#Soviets demand bessarebia 
+	id = soviet.44
+	title = soviet.44.t 
+	desc = soviet.44.d 
+	is_triggered_only = yes 
+	option = {#agree 
+		name = soviet.44.a 
+		ai_chance = { 
+			factor = 70 
+			modifier = {
+				is_in_faction = yes 
+				factor = -40 
+			}
+		}
+		SOV = { country_event = { id = soviet.45 } }
+		add_stability = -0.15 
+	}
+	option = {#refuse 
+		name = soviet.45.a 
+		ai_chance = { 
+			factor = 70 
+			modifier = {
+				is_in_faction = yes 
+				factor = 40 
+			}
+		}
+		SOV = { country_event = { id = soviet.46 } }
+		add_war_support = 0.1
+		SOV = { set_country_flag = basserabia_refused }
+	}
+}
+
+country_event = { #bessarebia is ours!
+	id = soviet.45 
+	title = soviet.45.t 
+	desc = soviet.45.d 
+	is_triggered_only = yes 
+	option = {
+		name = soviet.45.a 
+		add_stability = 0.01 
+		transfer_state = 78 
+	}
+}
+
+country_event = {#romania refuses 
+	id = soviet.46 
+	title = soviet.46.t 
+	desc = soviet.46.d 
+	is_triggered_only = yes 
+	option = {
+		name = soviet.46.a 
+		add_stability = -0.02 
+	}
+}
 
 country_event = { #TEST EVENT FOR USSR##NOT MEANT FOR NON-TEST USE##
   id = soviet.1000

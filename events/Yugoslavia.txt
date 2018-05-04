@@ -899,30 +899,26 @@ country_event = {
 	title = yug.37.t
 	desc = yug.37.d
 
-	trigger = {
-		tag = YUG
-	}
-
-	mean_time_to_happen = { days = 120 }
-
-	fire_only_once = yes
+	is_triggered_only = yes 
 
 	immediate = {
-		swap_ideas = { remove_idea = YUG_king_alexander add_idea = YUG_prince_paul }
+		swap_ideas = { remove_idea = YUG_king_alexander add_idea = YUG_peter_II }
 		set_country_flag = YUG_country_emergency
 	}
 
 	option = { # Dark times are ahead
 		name = yug.37.a
 		custom_effect_tooltip = YUG_disturbed_times
+		add_ideas = YUG_prince_paul
 		hidden_effect = {
 			add_ideas = YUG_dt_production
 			add_ideas = YUG_dt_docks
 			add_ideas = YUG_dt_construction
 			add_ideas = YUG_dt_shortages
 			add_ideas = YUG_ethnic_unrest
-			news_event = { id = yug.38 hours = 6 }
+			news_event = { id = yug.38 }
 		}
+		GER = { country_event = { id = yug.40 } }
 	}
 }
 
@@ -985,7 +981,7 @@ news_event = {
 	}
 }
 
-country_event = {
+country_event = {#fate of assasins
 	id = yug.39
 	title = yug.39.t
 	desc = yug.39.d
@@ -1007,5 +1003,16 @@ country_event = {
 	option = { # Life Imprisonment
 		name = yug.39.b
 		add_stability = 0.05
+	}
+}
+
+country_event = {#Event for Germany 
+	id = yug.40 
+	title = yug.40.t 
+	desc = yug.40.d 
+	is_triggered_only = yes 
+	option = {
+		name = yug.40
+		add_stability = -0.01 
 	}
 }

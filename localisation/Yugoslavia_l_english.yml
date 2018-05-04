@@ -81,9 +81,9 @@ yug.36.a:0 "Paul goes with the public opinion"
 yug.36.b:0 "The Prince appoints conservatives"
 ## Assasination Events ##
 yug.37.t:0 "The Assasination of King Alexander"
-yug.37.d:0 "Tragedy has struck! Alexander, our beloved King, has been slain! \nKing Alexander was participating in a state visit to Germany to dicuss co-operation in the containment of communist expanison in Europe, especially concerning the syndicalist state in Italy and political instability in France. King Alexander was assasinated at the hands of a young member of the Ustashe - the nationalistic Croatian independence group. Whilst tragic, there seems to be no sign of widespread unprisings in Croatia. \nThe country is starting to fall into chaos. King Alexander was very much at the centre of the entire beurocracy, so his assasination has immediately been felt. Alexander's son is too young to take up the throne, so Alexander's close cousin has been appointed as chief regent. He is expected to declare a state of emergency soon and take swift action to deal with the prevailing problems."
+yug.37.d:0 "Tragedy has struck! Alexander, our beloved King, has been slain! \nKing Alexander was on his way to hold a speech in the Anti-Socialist summit to dicuss co-operation in the containment of communist expansion in Europe, especially concerning the syndicalist state in Italy and the potential Russian expansion in the Balkans when he was approached by a young man affiliated with the Ustashe, and shot\nThe country is starting to fall into chaos as King Alexander was very much at the centre of the entire beurocracy. Alexander's son, Peter is too young to take up the throne, so Alexander's cousin Paul have been appointed as chief regent. He is expected to declare a state of emergency soon and take swift action to deal with the prevailing problems. The German authorities have handed the assasin and two of his accomplices to us."
 yug.37.a:0 "Dark times are ahead"
-yug.38.d:0 "The King of Yugoslavia, King Alexander, was assasinated today in Munich during a sate visit to Germany. He was shot whilst entering the conference hall to meet King Wilheilm II of Germany, where they would discuss the spread of communism in Europe. The shot was fired by a young member of the Ustashe - a far right Croatian nationalist group - with assistance of two others. He is now in the custody of the Yugoslavian authorities. The assasination means that the ethnic question, which the government claimed was delt with, is clearly still a large problem. Yugoslavia is weaker than it seems."
+yug.38.d:0 "Alexander I, king of Yugoslavia, was assasinated today in Munich while attending the Anti-Socialist summit. He was shot whilst entering the conference hall where he was supposed to hold a speech about the spread of Socialism in the Balkans. The Shooter was caught and revealed to have been a member of the Ustashe, a croation nationalist movemnet. The shooter was assisted by two other members and they are all now in the custody of the Yugoslavian authorities. The assasination have caused massive waves in both Germany and Yugoslavia, particularly highlighting ethnic tensions in the latter."
 yug.38.a:0 "We mourn"
 yug.38.b:0 "On our soil?"
 yug.38.c:0 "This may keep them off our backs for a bit"
@@ -93,6 +93,9 @@ yug.39.t:0 "The Trial of The Three"
 yug.39.d:0 "Today marks the final day of the Trial of Three - the three member of the Ustashe who perpetrated the assasination of King Alexander, Mijo Kralj, Zvonimir Popišil and Milan Rajić. The weight of evidence means they are inevitably guilty, but the question remains as to what punisment they recieve. Shall it be death, or shall they be imprisoned for life instead?"
 yug.39.a:0 "Capital Punishment is only fitting"
 yug.39.b:0 "Life Imprisonment is enough"
+yug.40.t:0 "King Alexander shot in Munich!"
+yug.40.d:0 "King Alexander of Yugoslavia was shot dead today in Munich while attending our summit by a Croatian nationalist posing as a journalist. The summit was called off following the event as security concerns led many attendees to pack their bags. The government is facing severe backlash in the Reichstag  for being unable to protect our guests, and calls for greater political restrictions have been made."
+yug.40.a:0 "This is a disaster! "
 
 ####focus####
 ### Emergency Stuff ###
@@ -229,6 +232,10 @@ YUG_ROM_no_land:0 "Refused to hand over Transylvania"
 YUG_aggression:0 "Yugoslavian Agression"
 
 ####tooltip####
+YUG_prince_paul:0 "Prince-Regent Paul"
+YUG_prince_paul_desc:0 "Prince Paul is the cousin of the late king Alexander I, and he heads the emergency council presiding over the country following Alexander's assasination."
+YUG_peter_II:0 "King Peter II"
+YUG_peter_II_desc:0 "King Peter II is the eldest son of the later king Alexander I. As Peter is still a minor, the country is held by Prince-Regent Paul."
 seryug_change:0 "We will release Bosnia as a puppet state, and change our name back to Serbia."
 albania_factories:0 "The building of factories for the Albanias will have an effect based on our chosen ethnic integration path."
 integrate_bos:0 "Efforts to integrate the Bosnians will begin"

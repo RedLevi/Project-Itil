@@ -1869,3 +1869,7 @@ spriteTypes = {
        name = "GFX_report_event_purge_of_the_kkk"
        texturefile = "gfx/event_pictures/report_event_purge_of_the_kkk.dds"
     }
+    spriteType = {
+       name = "GFX_report_event_ame_introduction"
+       texturefile = "gfx/event_pictures/report_event_ame_introduction.dds"
+    }

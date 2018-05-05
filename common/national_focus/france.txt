@@ -86,7 +86,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_civil_war_ends
-		icon = ?
+		icon = GFX_peace
 		x = 4
 		y = 2
 		cost = 10
@@ -108,7 +108,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_choose_petain
-		icon = ?
+		icon = GFX_petain
 		x = 1
 		y = 3
 		cost = 10
@@ -178,7 +178,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_choose_natsyn
-		icon = ?
+		icon = GFX_natsyn
 		x = 5
 		y = 3
 		cost = 10

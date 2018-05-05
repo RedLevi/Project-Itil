@@ -201,9 +201,21 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/maurras.dds"
 	}	
 	SpriteType = {
+	name = "GFX_petain"
+	texturefile = "gfx/interface/goals/petain.dds"
+	}	
+	SpriteType = {
 	name = "GFX_fra_royalist"
 	texturefile = "gfx/interface/goals/fra_royalist.dds"
 	}		
+	SpriteType = {
+	name = "GFX_peace"
+	texturefile = "gfx/interface/goals/peace.dds"
+	}
+	SpriteType = {
+	name = "GFX_natsyn"
+	texturefile = "gfx/interface/goals/natsyn.dds"
+	}	
 	
 	#### Generic continuous goal icons
 

@@ -1662,4 +1662,16 @@ spriteTypes = {
 		name = "GFX_focus_ame_5"
 		texturefile = "gfx/interface/goals/ame_5.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_ame_6"
+		texturefile = "gfx/interface/goals/ame_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ame_7"
+		texturefile = "gfx/interface/goals/ame_7.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ame_8"
+		texturefile = "gfx/interface/goals/ame_8.dds"
+	}
 }

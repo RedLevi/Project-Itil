@@ -1769,7 +1769,7 @@ focus_tree = {
 	focus = {
 		
 		id = AME_guns_focus
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_focus_ame_7
 		x = 37
 		y = 7
 		cost = 10	 
@@ -1994,7 +1994,8 @@ focus_tree = {
 		prerequisite ={ focus = AME_military_reforms_focus } 
 		available_if_capitulated = no
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.35 uses = 2 category = air_doctrine }	
+		air_experience = 10
+			add_tech_bonus = { bonus = 0.4 uses = 2 category = air_doctrine }	
 		}
 	
 	}
@@ -2036,6 +2037,46 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.45 uses = 2 category = tactical_bomber category = cat_strategic_bomber }	
+		}
+	
+	}
+
+	focus = {
+		
+		id = AME_air_cas_focus
+		icon = GFX_focus_chi_flying_tigers
+		x = 34
+		y = 8
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite = { focus = AME_air_heavy_focus focus = AME_air_light_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.45 uses = 2 category = cas_bomber }	
+		}
+	
+	}
+
+	focus = {
+		
+		id = AME_air_sky_focus
+		icon = GFX_focus_ame_6
+		x = 35
+		y = 9
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite = { focus = AME_air_cas_focus } 
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.45 uses = 2 category = air_doctrine }	
 		}
 	
 	}
@@ -2087,16 +2128,15 @@ focus_tree = {
 		
 		id = AME_air_jet_focus
 		icon = GFX_goal_continuous_air_production
-		x = 34
-		y = 8
+		x = 33
+		y = 9
 		cost = 10	 
 		available = {
 			OR = {
 				always = yes 
 			}
 		}
-		prerequisite ={ focus = AME_air_heavy_focus } 
-		prerequisite ={ focus = AME_air_light_focus } 
+		prerequisite ={ focus = AME_air_cas_focus } 
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.33 uses = 2 category = jet_technology }	
@@ -2109,7 +2149,7 @@ focus_tree = {
 		id = AME_air_rocket_focus
 		icon = GFX_focus_rocketry
 		x = 34
-		y = 9
+		y = 10
 		cost = 10	 
 		available = {
 			OR = {
@@ -2117,6 +2157,7 @@ focus_tree = {
 			}
 		}
 		prerequisite ={ focus = AME_air_jet_focus } 
+		prerequisite ={ focus = AME_air_sky_focus }
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.33 uses = 2 category = rocketry }	
@@ -2139,7 +2180,8 @@ focus_tree = {
 		prerequisite ={ focus = AME_military_reforms_focus } 
 		available_if_capitulated = no
 		completion_reward = {
-			add_tech_bonus = { bonus = 0.35 uses = 2 category = naval_doctrine }	
+		navy_experience = 10
+			add_tech_bonus = { bonus = 0.4 uses = 2 category = naval_doctrine }	
 		}
 	
 	}
@@ -2355,6 +2397,26 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.40 uses = 2 category = dd_tech }	
+		}
+	
+	}
+
+	focus = {
+		
+		id = AME_sea_focus 
+		icon = GFX_focus_ame_8
+		x = 28
+		y = 10
+		cost = 10	 
+		available = {
+			OR = {
+				always = yes 
+			}
+		}
+		prerequisite = { focus = AME_destroyer_focus focus = AME_submarine_focus   }
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.45 uses = 2 category = naval_doctrine }	
 		}
 	
 	}

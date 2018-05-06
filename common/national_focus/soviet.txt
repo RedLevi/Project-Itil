@@ -621,7 +621,7 @@ focus = {
 	}
 	focus = {
 		id = FYP_mil_1
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_focus_generic__mil_industry_1
 		cost = 10.00
 		prerequisite = {
 			focus = Draft_FYP
@@ -640,7 +640,7 @@ focus = {
 	}
 	focus = {
 		id = FYP_mil_2
-		icon = GFX_goal_generic_army_artillery
+		icon = GFX_focus_focus_generic__mil_industry_2
 		cost = 10.00
 		prerequisite = {
 			focus = FYP_mil_1
@@ -659,7 +659,7 @@ focus = {
 	}
 	focus = {
 		id = FYP_mil_3
-		icon = GFX_goal_generic_build_tank
+		icon = GFX_focus_focus_generic_mil_industry_3
 		cost = 10.00
 		prerequisite = {
 			focus = FYP_mil_2
@@ -678,7 +678,7 @@ focus = {
 	}
 	focus = {
 		id = FYP_civ_1
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_focus_generic_industry_1
 		cost = 10.00
 		prerequisite = {
 			focus = Draft_FYP
@@ -697,7 +697,7 @@ focus = {
 	}
 	focus = {
 		id = FYP_civ_2
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_generic_industry_2
 		cost = 10.00
 		prerequisite = {
 			focus = FYP_civ_1
@@ -714,7 +714,7 @@ focus = {
 	}
 	focus = {
 		id = FYP_civ_3
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_focus_generic_industry_3
 		cost = 10.00
 		prerequisite = {
 			focus = FYP_civ_2
@@ -1969,6 +1969,12 @@ focus = {
 		}
 		x = 32
 		y = 3
+		completion_reward = {
+		   swap_ideas = {
+		   remove_ideas = SOV_innovative_military_idea
+		   add_ideas = SOV_innovative_military_2_idea
+		   }
+		}
 
 	}
 	focus = {
@@ -1983,6 +1989,9 @@ focus = {
 		}
 		x = 31
 		y = 4
+		completion_reward = {
+		   add_ideas = SOV_tukha_deepbattle_idea
+		}
 
 	}
 	focus = {
@@ -1994,11 +2003,14 @@ focus = {
 		}
 		x = 31
 		y = 5
+		completion_reward = {
+		   add_ideas = SOV_mech_production_idea
+		}
 
 	}
 	focus = {
 		id = Frunze_Deep_Battle
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_focus_generic_army_tanks2
 		cost = 10.00
 		prerequisite = {
 			focus = Deep_Battle
@@ -2008,6 +2020,9 @@ focus = {
 		}
 		x = 33
 		y = 4
+		completion_reward = {
+		   add_ideas = SOV_frunze_deepbattle_idea
+		}
 
 	}
 	focus = {
@@ -2019,6 +2034,9 @@ focus = {
 		}
 		x = 33
 		y = 5
+		completion_reward = {
+		   add_ideas = SOV_tank_production_idea
+		}
 
 	}
 	focus = {

@@ -58,7 +58,7 @@ bookmarks = {
 			ideology = communism
 			ideas = {
 				home_of_revolution
-				innovative_military
+				SOV_innovative_military_idea
 			}
 			focuses = {
 				SOV_1936_assembly

@@ -23,9 +23,9 @@ ideas = {
 
 	}
 
-	innovative_military = {
+	SOV_innovative_military_idea = {
 		removal_cost = -1
-		picture = GFX_idea_innovative_military
+		picture = innovative_military
 
 		allowed = {
 			always = no
@@ -41,6 +41,114 @@ ideas = {
 		modifier = {
 			planning_speed = -0.1
             army_attack_factor = 0.05
+		}
+
+	}
+
+	SOV_tukha_deepbattle_idea = {
+		removal_cost = -1
+		picture = FRA_motorized_focus
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		modifier = {
+			motorized_attack_factor = 0.1
+			motorized_defence_factor = 0.1
+			mechanized_attack_factor = 0.2
+			mechanized_defence_factor = 0.2
+			supply_consumption_factor = -0.2
+		}
+
+	}
+
+	SOV_frunze_deepbattle_idea = {
+		removal_cost = -1
+		picture = generic_acquire_tanks
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		modifier = {
+			army_armor_attack_factor = 0.2
+			army_armor_speed_factor = 0.2
+			army_infantry_attack_factor = 0.1
+			army_infantry_defence_factor = 0.1
+			army_morale_factor = 0.1
+		}
+
+	}
+
+	SOV_mech_production_idea = {
+		removal_cost = -1
+		picture = man_five_year_plan_industry
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		equipment_bonus = {
+                motorized_equipment = {
+                    build_cost_ic = -0.3 instant = yes
+                }
+            }
+
+	}
+
+    SOV_tank_production_idea = {
+		removal_cost = -1
+		picture = man_five_year_plan_tank
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		equipment_bonus = {
+                armor = {
+                    build_cost_ic = -0.3 instant = yes
+                }
+            }
+
+	}
+
+	SOV_innovative_military_2_idea = {
+		removal_cost = -1
+		picture = innovative_military
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+		research_bonus = {
+				land_doctrine = 0.33
+		}
+
+		modifier = {
+			planning_speed = -0.5
+            army_attack_factor = 0.1
+            army_org = 0.05
+            land_reinforce_rate = 0.05
 		}
 
 	}

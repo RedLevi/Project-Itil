@@ -43,7 +43,7 @@ set_war_support = 0.7
 
 add_ideas = {
 	home_of_revolution
-	innovative_military
+	SOV_innovative_military_idea
 }
 
 reverse_add_opinion_modifier = { target = JAP modifier = diplo_modifier_rival }

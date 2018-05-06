@@ -301,8 +301,12 @@ World_Socialist_State_desc:0 "The bulwarks of captialism have been defeated, all
  sovnews.13.a:0 "Two can play at that game!" 
 
  ###Ideas###
-innovative_military:0 "Innovative General Staff"
-innovative_military_desc:0 "The Soviet Red army is one of the most revolutionary militaries in the world. After being formed during the 2nd Russo-Japanese war, the young Red Army is eager to reform the Soviet military using newly established military ideas from genius military theorists such as Tukhacehvsky, Trindafilov, Frunze and Yakir."
+SOV_innovative_military_idea:0 "Innovative General Staff"
+SOV_innovative_military_idea_desc:0 "The Soviet Red army is one of the most revolutionary militaries in the world. After being formed during the 2nd Russo-Japanese war, the young Red Army is eager to reform the Soviet military using newly established military ideas from genius military theorists such as Tukhacehvsky, Trindafilov, Frunze and Yakir."
+SOV_innovative_military_2_idea:0 "Reforming Military"
+SOV_innovative_military_2_idea_desc:0 "The Red Army has undergone reformation, implementing even more of the new military theory into it."
+SOV_tukha_deepbattle_idea:0 "Tukhacehvsky Deep Battle"
+SOV_frunze_deepbattle_idea:0 "Frunze Deep Battle"
 home_of_revolution:0 "Home of the Revolution"
 home_of_revolution_desc:0 "Since comrade Lenin formed the Social Democratic Soviet Republic in 1927, we have been the only major country in the world to embrace the wonderful ideas of Marx and Engels. We now carry their torch, and it is upon us to spread the light of revolution throught the world!"
 Alexei_Rykov:0 "Alexei Rykov"

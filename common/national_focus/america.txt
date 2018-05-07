@@ -17,7 +17,7 @@ focus_tree = {
 	focus = {
 		
 		id = AME_internal_party_focus 
-		icon = GFX_goal_generic_secret_weapon 
+		icon = GFX_focus_ame_9
 		x = 10 
 		y = 0 
 		cost = 6	 
@@ -1291,7 +1291,7 @@ focus_tree = {
 	focus = {
 		
 		id = AME_ford_constitution_focus
-		icon = GFX_goal_support_democracy 
+		icon = GFX_focus_ame_10 
 		x = 14
 		y = 5
 		cost = 10	 

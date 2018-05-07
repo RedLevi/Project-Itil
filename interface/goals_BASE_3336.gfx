@@ -204,22 +204,7 @@ spriteTypes = {
 	name = "GFX_fra_royalist"
 	texturefile = "gfx/interface/goals/fra_royalist.dds"
 	}		
-		SpriteType = {
-	name = "GFX_petain"
-	texturefile = "gfx/interface/goals/petain.dds"
-	}	
-	SpriteType = {
- 	name = "GFX_fra_royalist"
- 	texturefile = "gfx/interface/goals/fra_royalist.dds"
- 	}		
-	SpriteType = {
-	name = "GFX_peace"
-	texturefile = "gfx/interface/goals/peace.dds"
-	}
-	SpriteType = {
-	name = "GFX_natsyn"
-	texturefile = "gfx/interface/goals/natsyn.dds"
-	}
+	
 	#### Generic continuous goal icons
 
 	SpriteType = {
@@ -882,22 +867,6 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/focus_generic_industry_1.dds"
 			
 	}	
-
-		SpriteType = {
-	name = "GFX_focus_focus_generic__mil_industry_1"
-	texturefile = "gfx/interface/goals/focus_generic_mil_industry_1.dds"
-			
-	}
-		SpriteType = {
-	name = "GFX_focus_focus_generic__mil_industry_2"
-	texturefile = "gfx/interface/goals/focus_generic_mil_industry_2.dds"
-			
-	}
-		SpriteType = {
-	name = "GFX_focus_focus_generic_mil_industry_3"
-	texturefile = "gfx/interface/goals/focus_generic_mil_industry_3.dds"
-			
-	}
 	
 		SpriteType = {
 	name = "GFX_focus_generic_combined_arms"

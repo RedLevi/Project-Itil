@@ -1946,7 +1946,7 @@ focus = {
 		add_tech_bonus = {
 		name = Lenin_Heavy_Tank_Plant
 		bonus = 0.3
-		uses = 3
+		uses = 2
 		category = cat_heavy_armor
 		}
 		add_tech_bonus = {
@@ -1971,8 +1971,8 @@ focus = {
 		y = 3
 		completion_reward = {
 		   swap_ideas = {
-		   remove_ideas = SOV_innovative_military_idea
-		   add_ideas = SOV_innovative_military_2_idea
+		   remove_idea = SOV_innovative_military_idea
+		   add_idea = SOV_innovative_military_2_idea
 		   }
 		}
 
@@ -2049,6 +2049,12 @@ focus = {
 		}
 		x = 32
 		y = 6
+		completion_reward = {
+		swap_ideas = {
+		   remove_idea = SOV_innovative_military_2_idea
+		   add_idea = SOV_innovative_military_3_idea
+		}
+		}
 
 	}
 
@@ -2061,6 +2067,9 @@ focus = {
 		}
 		x = 32
 		y = 7
+		completion_reward = {
+		 add_tech_bonus = { bonus = 0.4 uses = 2 category = land_doctrine }	
+		}
 
 	}
 	focus = {

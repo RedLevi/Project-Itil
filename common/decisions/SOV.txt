@@ -859,7 +859,7 @@ SOV_middle_east = {
      fire_only_once = yes 
      days_remove = 30
      modifier = {
-        military_factory_use = 3
+        civilian_factory_use = 3
      }
      complete_effect = {
         set_country_flag = SOV_choose_commies
@@ -958,9 +958,8 @@ SOV_romania_decisions = {
 	          country_event = { id = soviet.44 }
 			  add_state_claim = 78 
 	       }
+        set_global_flag = SOV_expansion
 		}   
-		  
-         set_global_flag = SOV_expansion
 	 }
 	 
 	 SOV_war-romania = {
@@ -1001,9 +1000,10 @@ SOV_romania_decisions = {
 	    fire_only_once = yes
 	    remove_effect = {
 	       create_wargoal = { target = ROM type = annex_everything }
+         set_global_flag = SOV_expansion
 		}   
 		  
-         set_global_flag = SOV_expansion
+         
 	    }
 
 }

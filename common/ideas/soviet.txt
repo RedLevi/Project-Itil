@@ -25,7 +25,7 @@ ideas = {
 
 	SOV_innovative_military_idea = {
 		removal_cost = -1
-		picture = innovative_military
+		picture = innovative_2_military
 
 		allowed = {
 			always = no
@@ -147,8 +147,31 @@ ideas = {
 		modifier = {
 			planning_speed = -0.5
             army_attack_factor = 0.1
-            army_org = 0.05
+            army_org = 0.2
             land_reinforce_rate = 0.05
+		}
+
+	}
+
+	SOV_innovative_military_3_idea = {
+		removal_cost = -1
+		picture = innovative_military
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+		research_bonus = {
+				land_doctrine = 0.33
+		}
+
+		modifier = {
+            army_attack_factor = 0.2
+            army_org = 0.2
+            land_reinforce_rate = 0.1
 		}
 
 	}

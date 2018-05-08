@@ -3734,6 +3734,10 @@ spriteTypes = {
 		name = "GFX_idea_innovative_military"
 		texturefile = "gfx/interface/ideas/idea_innovative_military.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_innovative_2_military"
+		texturefile = "gfx/interface/ideas/idea_innovative_military_2.dds"
+	}
 	
 	### JAPANESE IDEAS
 

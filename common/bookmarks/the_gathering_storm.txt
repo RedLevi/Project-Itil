@@ -83,7 +83,7 @@ bookmarks = {
 				AME_national_disunity
 			}
 			focuses = {
-			AME_internal_KKK_focus 
+			AME_dealing_with_federalists
 			AME_great_purge_focus
 			AME_internal_party_focus 
 			}

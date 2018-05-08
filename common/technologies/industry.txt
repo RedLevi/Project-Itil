@@ -2,7 +2,7 @@ technologies = {
 
 	basic_machine_tools = {
 	
-		production_factory_max_efficiency_factor = 0.05
+		production_factory_max_efficiency_factor = 0.1
 
 		
 		path = {
@@ -59,6 +59,11 @@ technologies = {
 			leads_to_tech = advanced_machine_tools 
 			research_cost_coeff = 1
 		}
+
+		path = {
+			leads_to_tech = improved_equipment_conversion
+			research_cost_coeff = 1
+		}
 		
 		research_cost = 1.5
 		start_year = 1937
@@ -94,7 +99,7 @@ technologies = {
 	
 	advanced_machine_tools = {
 	
-		production_factory_max_efficiency_factor = 0.15
+		production_factory_max_efficiency_factor = 0.1
 
 		
 		path = {
@@ -136,7 +141,7 @@ technologies = {
 	
 	assembly_line_production = {
 	
-		production_factory_max_efficiency_factor = 0.20
+		production_factory_max_efficiency_factor = 0.1
 		
 		#path = {
 		#	leads_to_tech = improved_machine_tools 
@@ -188,7 +193,8 @@ technologies = {
 	
 	flexible_line = {
 
-		line_change_production_efficiency_factor = 0.5
+		production_factory_max_efficiency_factor = 0.1
+		line_change_production_efficiency_factor = 0.2
 		
 		research_cost = 2.5
 		start_year = 1943
@@ -228,7 +234,8 @@ technologies = {
 	
 	streamlined_line = {
 
-		production_factory_efficiency_gain_factor = 0.25
+		production_factory_max_efficiency_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.1
 			
 		research_cost = 2.5
 		start_year = 1943
@@ -265,10 +272,82 @@ technologies = {
 			industry
 		}
 	}
+
+	improved_equipment_conversion = {
+	
+		equipment_conversion_speed = 0.40
+
+		allow_branch = {
+			has_dlc = "Death or Dishonor"
+		}
+
+		path = {
+			leads_to_tech = advanced_equipment_conversion
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1937
+		
+		folder = {
+			name = industry_folder
+			position = { x = 2 y = 4 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 0
+				NOT = { has_government = fascism }
+			}
+		}
+		
+		categories = {
+			industry
+		}
+	}
+	
+	advanced_equipment_conversion = {
+		
+		equipment_conversion_speed = 0.40
+
+		research_cost = 1.5
+		start_year = 1939
+		
+		folder = {
+			name = industry_folder
+			position = { x = 2 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				date > "1937.1.1"
+			}
+
+			modifier = {
+				factor = 0
+				NOT = { has_government = fascism }
+			}
+		}
+		
+		categories = {
+			industry
+		}
+	}
 	
 	concentrated_industry = {
 
-		industrial_capacity_factory = 0.2
+		industrial_capacity_factory = 0.15
+		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
 		
 		path = {
@@ -347,7 +426,8 @@ technologies = {
 	
 	concentrated_industry2 = {
 
-		industrial_capacity_factory = 0.2
+		industrial_capacity_factory = 0.15
+		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
 		
 		path = {
@@ -393,7 +473,8 @@ technologies = {
 	
 	concentrated_industry3 = {
 
-		industrial_capacity_factory = 0.2
+		industrial_capacity_factory = 0.15
+		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
 		
 		path = {
@@ -439,7 +520,8 @@ technologies = {
 	
 	concentrated_industry4 = {
 
-		industrial_capacity_factory = 0.2
+		industrial_capacity_factory = 0.15
+		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
 		
 		path = {
@@ -485,7 +567,8 @@ technologies = {
 	
 	concentrated_industry5 = {
 
-		industrial_capacity_factory = 0.2
+		industrial_capacity_factory = 0.15
+		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
 		
 		research_cost = 2
@@ -527,8 +610,10 @@ technologies = {
 	dispersed_industry = {
 
 		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
+		equipment_conversion_speed = 0.20
 		industry_air_damage_factor = -0.1
 		global_building_slots_factor = 0.2
 		
@@ -609,6 +694,7 @@ technologies = {
 	dispersed_industry2 = {
 
 		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.1
@@ -658,6 +744,7 @@ technologies = {
 	dispersed_industry3 = {
 
 		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.1
@@ -707,6 +794,7 @@ technologies = {
 	dispersed_industry4 = {
 
 		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.1
@@ -756,6 +844,7 @@ technologies = {
 	dispersed_industry5 = {
 
 		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.1

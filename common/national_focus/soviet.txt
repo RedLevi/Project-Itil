@@ -551,6 +551,7 @@ focus = {
  		x = 6
  		y = 4
  		completion_reward = {
+ 		add_offsite_building = { type = industrial_complex level = 3 }
  		add_ideas = SOV_foreign_trade_nep_idea
  	}
 }
@@ -631,10 +632,10 @@ focus = {
 		completion_reward = {
 		219 = { add_building_construction = { type = arms_factory level = 5 instant_build = yes } }
 		195 = { add_building_construction = { type = arms_factory level = 5 instant_build = yes } }
-		342 = { add_building_construction = { type = arms_factory level = 5 instant_build = yes } }
+		223 = { add_building_construction = { type = arms_factory level = 5 instant_build = yes } }
 		219 = { add_extra_state_shared_building_slots = 5 }
 		195 = { add_extra_state_shared_building_slots = 5 }
-		342 = { add_extra_state_shared_building_slots = 5 }
+		223 = { add_extra_state_shared_building_slots = 5 }
 		}
 
 	}
@@ -688,7 +689,7 @@ focus = {
 		completion_reward = {
 		247 = { add_building_construction = { type = industrial_complex level = 3 instant_build = yes } }
 		248 = { add_building_construction = { type = industrial_complex level = 3 instant_build = yes } }
-		253 = { add_building_construction = { type = industrial_complex level = 3 instant_build = yes } }
+		253 = {  }
 		247 = { add_extra_state_shared_building_slots = 3 }
 		248 = { add_extra_state_shared_building_slots = 3 }
 		253 = { add_extra_state_shared_building_slots = 3 }
@@ -735,7 +736,7 @@ focus = {
 	focus = {
 		id = FYP_Complete
 		icon = GFX_focus_YUG_pan_slavic_congress
-		cost = 10.00
+		cost = 30.00
 		prerequisite = {
 			focus = FYP_civ_3
 		}
@@ -748,7 +749,7 @@ focus = {
 		x = 15
 		y = 6
 		completion_reward = {
-		remove_ideas = SOV_five_year_plan_draft
+		remove_ideas = SOV_five_year_plan_done
 		}
 	}
 ##################################################################
@@ -847,6 +848,31 @@ focus = {
 		x = 1
 		y = 4
 		completion_reward = {
+		   random_owned_controlled_state = {
+		      limit = {
+		         state_population > 1000000
+		      }
+		      add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+		   }
+		   random_owned_controlled_state = {
+		      limit = {
+		         state_population > 1000000
+		      }
+		      add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+		   }
+		   random_owned_controlled_state = {
+		      limit = {
+		         state_population > 1000000
+		      }
+		      add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+		   }
+		   random_owned_controlled_state = {
+		      limit = {
+		         state_population > 1000000
+		      }
+		      add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+		   }
+
 		}
 
 	}
@@ -2081,6 +2107,14 @@ focus = {
 		}
 		x = 25
 		y = 4
+		completion_reward = {
+		   add_tech_bonus = {
+		      name = SOV_new_navy
+		      bonus = 0.3
+		      uses = 1
+		      category = naval_doctrine
+		   }
+		}
 
 	}
 	focus = {
@@ -2095,6 +2129,14 @@ focus = {
 		}
 		x = 26
 		y = 5
+		completion_reward = {
+		   add_tech_bonus = {
+		      name = SOV_assym_tactics
+		      bonus = 0.3
+		      uses = 2
+		      category = submarine_doctrine
+		   }
+		}
 
 	}
 	focus = {
@@ -2106,6 +2148,14 @@ focus = {
 		}
 		x = 26
 		y = 6
+		completion_reward = {
+		   add_tech_bonus = {
+		      name = SOV_wolfpacks
+		      bonus = 0.3
+		      uses = 2
+		      category = ss_tech
+		   }
+		}
 
 	}
 	focus = {
@@ -2120,6 +2170,14 @@ focus = {
 		}
 		x = 24
 		y = 5
+		completion_reward = {
+		   add_tech_bonus = {
+		      name = SOV_standing_fleets
+		      bonus = 0.3
+		      uses = 2
+		      category = cat_base_strike
+		   }
+		}
 
 	}
 	focus = {
@@ -2131,6 +2189,14 @@ focus = {
 		}
 		x = 24
 		y = 6
+		completion_reward = {
+		   add_tech_bonus = {
+		      name = SOV_carriers
+		      bonus = 0.3
+		      uses = 2
+		      category = cv_tech
+		   }
+		}
 
 	}
 	focus = {
@@ -2143,6 +2209,11 @@ focus = {
 		}
 		x = 25
 		y = 7
+		completion_reward = {
+		   195 = {
+		      add_building_construction = { type = naval_base level = 4 instant_build = yes } 
+		   }
+		}
 
 	}
 	focus = {
@@ -2154,6 +2225,9 @@ focus = {
 		}
 		x = 25
 		y = 8
+		completion_reward = {
+		   add_ideas = SOV_red_fleet_idea
+		}
 
 	}
 	focus = {
@@ -2165,6 +2239,14 @@ focus = {
 		}
 		x = 20
 		y = 4
+		completion_reward = {
+		   add_tech_bonus = {
+		      name = SOV_fighter_forces
+		      bonus = 0.3
+		      uses = 2
+		      category = light_air
+		   }
+		}
 
 	}
 	focus = {
@@ -2176,6 +2258,14 @@ focus = {
 		}
 		x = 21
 		y = 5
+		completion_reward = {
+		   add_tech_bonus = {
+		      name = SOV_strat_path
+		      bonus = 0.3
+		      uses = 2
+		      category = cat_strategic_destruction
+		   }
+		}
 
 	}
 	focus = {
@@ -2187,6 +2277,14 @@ focus = {
 		}
 		x = 19
 		y = 5
+		completion_reward = {
+		   add_tech_bonus = {
+		      name = SOV_tac_path
+		      bonus = 0.3
+		      uses = 2
+		      category = cat_battlefield_support
+		   }
+		}
 
 	}
 	focus = {
@@ -2198,6 +2296,14 @@ focus = {
 		}
 		x = 21
 		y = 6
+		completion_reward = {
+		   add_tech_bonus = {
+		      name = SOV_strat_bombers
+		      bonus = 0.3
+		      uses = 1
+		      category = cat_strategic_bomber
+		   }
+		}
 
 	}
 	focus = {
@@ -2209,6 +2315,14 @@ focus = {
 		}
 		x = 19
 		y = 6
+		completion_reward = {
+		   add_tech_bonus = {
+		      name = SOV_tac_bombers
+		      bonus = 0.3
+		      uses = 1
+		      category = cat_tactical_bomber
+		   }
+		}
 
 	}
 	focus = {
@@ -2221,6 +2335,14 @@ focus = {
 		}
 		x = 20
 		y = 7
+		completion_reward = {
+		   add_tech_bonus = {
+		      name = SOV_cas_bombers
+		      bonus = 0.3
+		      uses = 1
+		      category = cas_bomber
+		   }
+		}
 
 	}
 	focus = {
@@ -2232,6 +2354,11 @@ focus = {
 		}
 		x = 20
 		y = 8
+		completion_reward = {
+		add_ideas = {
+		   SOV_red_air_idea
+		}
+		}
 
 	}
 	focus = {
@@ -2244,6 +2371,10 @@ focus = {
 		}
 		x = 32
 		y = 8
+		completion_reward = {
+		   add_ideas = SOV_red_army_idea
+		}
+
 
 	}
 	focus = {
@@ -2261,6 +2392,9 @@ focus = {
 		}
 		x = 26
 		y = 10
+		completion_reward = {
+		   add_ideas = SOV_combined_arms_idea
+		}
 
 	}
 	

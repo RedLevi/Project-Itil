@@ -1111,6 +1111,10 @@ country_event = { #Thing that unlocks last state capitalismm focus
       name = soviet.28.a
       add_stability = -0.15
       set_country_flag = fyp_done
+      swap_ideas = {
+      add_idea = SOV_five_year_plan_done
+      remove_idea = SOV_five_year_plan_draft
+      }
    }
 }
 

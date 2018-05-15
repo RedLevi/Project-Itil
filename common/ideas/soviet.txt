@@ -45,6 +45,86 @@ ideas = {
 
 	}
 
+	SOV_red_fleet_idea = {
+		removal_cost = -1
+		picture = SOV_red_navy
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		modifier = {
+			naval_coordination = 0.05
+            sortie_efficiency = 0.1
+            ships_at_battle_start = 0.05
+		}
+
+	}
+
+	SOV_red_air_idea = {
+		removal_cost = -1
+		picture = strategic_bombing_focus
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		modifier = {
+			air_air_superiority_attack_factor = 0.1
+			air_cas_present_factor = 0.1
+			air_strategic_bomber_bombing_factor = 0.1
+		}
+
+	}
+
+	SOV_red_army_idea = {
+		removal_cost = -1
+		picture = FRA_national_mobilization_focus
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		modifier = {
+			land_reinforce_rate = 0.05
+			winter_attrition_factor = -0.5
+		}
+
+	}
+
+	SOV_combined_arms_idea = {
+		removal_cost = -1
+		picture = ger_the_great_red_menace
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = communism
+		}
+
+		modifier = {
+			army_bonus_air_superiority_factor = 0.2
+			enemy_army_bonus_air_superiority_factor = -0.2
+			navy_carrier_air_targetting_factor = 0.1
+			army_core_attack_factor = 0.2
+		}
+
+	}
+
 	SOV_tukha_deepbattle_idea = {
 		removal_cost = -1
 		picture = FRA_motorized_focus
@@ -307,7 +387,7 @@ ideas = {
 	SOV_iron_fist_idea = {
 
 		removal_cost = -1
-		picture = generic_intel_bonus
+		picture = FRA_scw_intervention_republicans_focus
 
 		allowed = {
 			always = no
@@ -415,7 +495,7 @@ ideas = {
 
 
 	    SOV_New_economic_policy_idea = {
-
+                    picture = generic_central_management
 					allowed = {
 					   original_tag = SOV
 						 always = no
@@ -430,7 +510,7 @@ ideas = {
 			}
 
 		 SOV_nep_1_idea = {
-
+            picture = generic_production_bonus
 		    allowed = {
 				   original_tag = SOV
 					 always = no
@@ -444,7 +524,7 @@ ideas = {
 		 }
 
 		 SOV_nep_2_idea = {
-
+             picture = SOV_scientist_defect
 			 allowed = {
 					original_tag = SOV
 					always = no
@@ -460,7 +540,7 @@ ideas = {
 		}
 
 		SOV_foreign_trade_nep_idea = {
-
+            picture = generic_central_management
 			 allowed = {
 					original_tag = SOV
 					always = no
@@ -475,7 +555,7 @@ ideas = {
 		}
 
 		SOV_five_year_plan_draft = {
-
+            picture = factory_strikes
 			 allowed = {
 					original_tag = SOV
 					always = no
@@ -484,13 +564,28 @@ ideas = {
 			 removal_cost = -1
 
 			 modifier = {
-				production_speed_buildings_factor = -0.4
+				production_speed_buildings_factor = -0.6
+			 }
+		}
+
+		SOV_five_year_plan_done = {
+            picture = raj_risk_of_famine
+			 allowed = {
+					original_tag = SOV
+					always = no
+			 }
+
+			 removal_cost = -1
+
+			 modifier = {
+				production_speed_buildings_factor = -1
+				consumer_goods_factor = 0.1
 			 }
 		}
 
 
 	SOV_Military_Buildup_idea = {
-
+    picture = generic_bomber_production_diverted
 	allowed = {
 		 original_tag = SOV
 		 always = no
@@ -504,7 +599,7 @@ ideas = {
 	}
 
 	SOV_foreign_nep_1_idea = {
-
+         picture = generic_foreign_capital
 		 allowed = {
 				original_tag = SOV
 				always = no
@@ -519,7 +614,7 @@ ideas = {
 	}
 
 	SOV_foreign_nep_2_idea = {
-
+         picture = can_wartime_prices_and_trade_board
 		 allowed = {
 				original_tag = SOV
 				always = no
@@ -534,7 +629,7 @@ ideas = {
 	}
 
 	SOV_successful_nep_idea = {
-
+         picture = generic_goods_red_bonus
 		 allowed = {
 				original_tag = SOV
 				always = no
@@ -548,7 +643,7 @@ ideas = {
 	}
 
   syndicates_sov = {
-
+      picture = trotskyite_plot_purged
   allowed = {
      original_tag = SOV
      always = no
@@ -562,33 +657,36 @@ ideas = {
   }
 
   decentralized_planning = {
-  allowed = {
-     original_tag = SOV
-     always = no
-  }
+      picture = generic_local_self_management
+      allowed = {
+         original_tag = SOV
+         always = no
+      }
 
-  removal_cost = -1
+      removal_cost = -1
 
-  modifier = {
-   production_speed_buildings_factor = 0.15
-  }
+      modifier = {
+       production_speed_buildings_factor = 0.15
+      }
   }
 
   power_to_people = {
-  allowed = {
-     original_tag = SOV
-     always = no
-  }
+  picture = generic_flexible_foreign_policy2
+      allowed = {
+         original_tag = SOV
+         always = no
+      }
 
-  removal_cost = -1
+      removal_cost = -1
 
-  modifier = {
-   production_factory_max_efficiency_factor = 0.2
-   global_building_slots_factor = 0.1
-  }
+      modifier = {
+       production_factory_max_efficiency_factor = 0.2
+       global_building_slots_factor = 0.1
+      }
   }
 
   participatory_planning = {
+  picture = prc_low_popular_support3
   allowed = {
      original_tag = SOV
      always = no
@@ -597,26 +695,28 @@ ideas = {
   removal_cost = -1
 
   modifier = {
-     stability_factor = 0.5
+     stability_factor = 0.05
 
   }
   }
 
 
 	SOV_OKB_idea = {
-	allowed = {
-		original_tag = SOV
-		always = no
- }
+	   picture = socialist_science_focus
+	   allowed = {
+		   original_tag = SOV
+		   always = no
+       }
 
- removal_cost = -1
+       emoval_cost = -1
 
- modifier = {
-	research_time_factor = -0.05
- }
-}
+        modifier = {
+       	   research_time_factor = -0.05
+        }
+    }
 
 Kirov_General_Secretary = {
+   picture = generic_communism_drift_bonus
    allowed = {
       always = no
       original_tag = SOV

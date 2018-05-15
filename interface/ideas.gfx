@@ -4067,6 +4067,10 @@ spriteTypes = {
 		name = "GFX_idea_frunze_db"
 		texturefile = "gfx/interface/ideas/idea_frunze_db.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_SOV_red_navy"
+		texturefile = "gfx/interface/ideas/idea_red_navy.dds"
+	}
 	### FRA
 	SpriteType = {
 		name = "GFX_idea_france_torn"

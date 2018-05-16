@@ -100,6 +100,7 @@ focus_tree = {
 		
         available = {
 		    has_war = no
+			custom_trigger_tooltip = { tooltip = FRA_tooltip_cw_ends }
 		}		
 
 		completion_reward = {
@@ -544,6 +545,7 @@ focus_tree = {
 
 		completion_reward = {
 		  #custom_effect_tooltip = planned_eco
+		  add_ideas = { FRA_planned_economy_idea }
 		}
 	}	
 	
@@ -570,6 +572,7 @@ focus_tree = {
 
 		completion_reward = {
 		#custom_effect_tooltip = mixed_eco
+		add_ideas = { FRA_mixed_economy_idea }
 		}
 	}	
 
@@ -595,6 +598,7 @@ focus_tree = {
 
 		completion_reward = {
 		#custom_effect_tooltip = free_market
+		add_ideas = { FRA_free_market_idea }
 		}
 	}	
 	
@@ -620,6 +624,7 @@ focus_tree = {
 
 		completion_reward = {
 		#custom_effect_tooltip = syndie_eco
+		add_ideas = { FRA_syndic_thought_idea }
 		}
 	}		
 	

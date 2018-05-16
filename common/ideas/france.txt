@@ -19,6 +19,84 @@ ideas = {
 				stability_factor = -0.20 
 			}
 		}		
+		
+        FRA_free_market_idea = {
+	
+			allowed = {
+				original_tag = FRA
+				has_war = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1 
+				consumer_goods_factor = -0.05
+			}
+		}		
+		
+        FRA_syndic_thought_idea = {
+	
+			allowed = {
+				original_tag = FRA
+				has_war = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.10
+				consumer_goods_factor = 0.05
+			}
+		}		
+		
+        FRA_planned_economy_idea = {
+	
+			allowed = {
+				original_tag = FRA
+				has_war = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = -0.05
+				industrial_capacity_factory = 0.15
+				 conversion_cost_civ_to_mil_factor = -0.2 
+			}
+		}	
+
+        FRA_mixed_economy_idea = {
+	
+			allowed = {
+				original_tag = FRA
+				has_war = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1 
+				 local_resources_factor = 0.10
+				consumer_goods_factor = 0.05
+			}
+		}		
 	}
 	
 	# POLITICAL

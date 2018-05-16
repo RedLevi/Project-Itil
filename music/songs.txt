@@ -474,7 +474,7 @@ music = {
 		}
 		modifier = {
 			factor = 2
-			tag = FRA
+			original_tag = FRA
 		}
 	}
 }
@@ -486,7 +486,7 @@ music = {
 		}
 		modifier = {
 			factor = 2
-			tag = FRA
+			original_tag = FRA
 		}
 	}
 }
@@ -498,7 +498,7 @@ music = {
 		}
 		modifier = {
 			factor = 2
-			tag = FRA
+			original_tag = FRA
 		}
 	}
 }

@@ -1536,6 +1536,54 @@ country_event = {#romania refuses
 	}
 }
 
+country_event = {#guominjun choice
+	id = soviet.47 
+	title = soviet.47.t 
+	desc = soviet.47.d 
+	is_triggered_only = yes 
+	option = {
+		name = soviet.47.a 
+		SOV = {
+		   add_to_faction = GUO
+		}
+		GUO = {
+		   create_wargoal = { type = annex_everything target = CHI }
+		   create_wargoal = { type = annex_everything target = ZHI }
+		}
+		ai_will_do = {
+		  factor = 100
+		}
+	}
+	option = {
+       name = soviet.47.b 
+       add_political_power = -10
+	}
+}
+
+country_event = {#prf choice
+	id = soviet.48 
+	title = soviet.48.t 
+	desc = soviet.48.d 
+	is_triggered_only = yes 
+	option = {
+		name = soviet.48.a 
+		SOV = {
+		   add_to_faction = GUO
+		}
+		PRF = {
+		   create_wargoal = { type = annex_everything target = CHI }
+		   create_wargoal = { type = annex_everything target = ZHI }
+		}
+		ai_will_do = {
+		  factor = 100
+		}
+	}
+	option = {
+       name = soviet.48.b 
+       add_political_power = -10
+	}
+}
+
 country_event = { #TEST EVENT FOR USSR##NOT MEANT FOR NON-TEST USE##
   id = soviet.1000
   title = soviet.1000.t

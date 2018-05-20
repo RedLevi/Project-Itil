@@ -1,5 +1,6 @@
 ########################################
 # Yugoslavian Focus Tree - By HappyNTH #
+# fuck you happy
 ########################################
 
 focus_tree = {
@@ -7,11 +8,6 @@ focus_tree = {
 
 	country = {
 		factor = 0
-
-		modifier = {
-			add = 10
-			tag = YUG
-		}
 	}
 
 	### State of Emergency ###

@@ -459,5 +459,13 @@ spriteTypes = {
 		name = "GFX_decision_cat_SOV_marching"
 		texturefile = "gfx/interface/decisions/decision_cat_SOV_marching.dds"
 	}
+	spriteType = {
+		name = "GFX_decision_cat_SOV_planning"
+		texturefile = "gfx/interface/decisions/decision_cat_SOV_planning.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_SOV_germany"
+		texturefile = "gfx/interface/decisions/decision_cat_SOV_germany.dds"
+	}
 }
 }

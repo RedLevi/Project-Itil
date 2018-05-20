@@ -1007,3 +1007,76 @@ SOV_romania_decisions = {
 	    }
 
 }
+
+SOV_china_decisions = {
+   SOV_support_guominjun = {
+      icon = GFX_decision_generic_tank
+      allowed = {
+         original_tag = SOV
+      }
+      visible = {
+         has_completed_focus = Supply_Guominjun
+         NOT = {
+            has_country_flag = SOV_choose_prf
+            GUO = {
+               is_puppet = yes
+               is_in_faction = yes 
+               NOT = {
+                  has_government = communism
+               }
+            }
+         }
+      }
+      ai_will_do = {
+         factor = 5
+         modifier = {
+            has_country_flag = Kirov_Wins
+            factor = 10
+         }
+      }
+      cost = 50
+      days_remove = 7
+      fire_only_once =  yes 
+      remove_effect = {
+         GUO = {
+            country_event = { id = soviet.47 days = 1 }
+         }
+         set_country_flag = SOV_choose_guo
+      }
+   }
+   SOV_support_prf = {
+      icon = GFX_decision_generic_tank
+      allowed = {
+         original_tag = SOV
+      }
+      visible = {
+         has_completed_focus = Aid_PRF
+         NOT = {
+            has_country_flag = SOV_choose_guo
+            PRC = {
+               is_puppet = yes
+               is_in_faction = yes 
+               NOT = {
+                  has_government = communism
+               }
+            }
+         }
+      }
+      ai_will_do = {
+         factor = 5
+         modifier = {
+            has_country_flag = Trotsky_Wins
+            factor = 10
+         }
+      }
+      cost = 50
+      days_remove = 7
+      fire_only_once =  yes 
+      remove_effect = {
+         PRC = {
+            country_event = { id = soviet.48 days = 1 }
+         }
+         set_country_flag = SOV_choose_prf
+      }
+   }
+}

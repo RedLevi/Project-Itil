@@ -1509,6 +1509,11 @@ focus = {
 	}
 	x = 67
 	y = 7
+	completion_reward = {
+	   SOV = {
+	      create_wargoal = { type = annex_everything target = HUN }
+	   }
+	}
 
 }
 focus = {
@@ -1520,6 +1525,17 @@ focus = {
 	}
 	x = 71
 	y = 7
+	completion_reward = {
+	   SOV = {
+	      create_wargoal = { type = annex_everything target = SWE }
+	   }
+	   SOV = {
+	      create_wargoal = { type = annex_everything target = NOR }
+	   }
+	   SOV = {
+	      create_wargoal = { type = annex_everything target = DEN }
+	   }
+	}
 
 }
 focus = {
@@ -1534,6 +1550,9 @@ focus = {
 	}
 	x = 69
 	y = 8
+	completion_reward = {
+	   custom_effect_tooltip = SOV_topple_germany
+	}
 
 }
 focus = {
@@ -1699,7 +1718,7 @@ focus = {
 
 focus = {
 	id = Red_China
-	icon = GFX_goal_support_communism
+	icon = GFX_focus_chi_one_china_policy
 	cost = 10.00
 	prerequisite = {
 		focus = Denounce_Feng
@@ -1707,6 +1726,9 @@ focus = {
 	}
 	x = 59
 	y = 6
+	completion_reward = {
+	   custom_effect_tooltip = SOV_china_tooltip
+	}
 
 }
 focus = {
@@ -1771,16 +1793,19 @@ focus = {
 	x = 59
 	y = 4
 	completion_reward = {
-	   PRC = {
+	   hidden_effect = {
+	      PRC = {
 		    load_oob = SOV_vol_PRF
-		 }
-		 add_opinion_modifier = { target = PRC modifier = Sent_volunteers }
+		  }
+	   }
+	   custom_effect_tooltip = SOV_troops
+		PRC = { add_opinion_modifier = { target = SOV modifier = Sent_volunteers } }
 	}
 
 }
 focus = {
 	id = Supply_Guominjun
-	icon = GFX_goal_generic_occupy_states_ongoing_war
+	icon = GFX_focus_chi_whampoa_military_academy
 	cost = 10.00
 	prerequisite = {
 		focus = Aid_PRF
@@ -1791,10 +1816,13 @@ focus = {
 	x = 58
 	y = 5
 	completion_reward = {
-	   GUO = {
-		    load_oob = SOV_vol_PRF
-		 }
-		 add_opinion_modifier = { target = GUO modifier = Sent_volunteers }
+	     custom_effect_tooltip = SOV_troops
+	     hidden_effect = {
+	        GUO = {
+	           load_oob = SOV_Vol_GUO
+	        }
+	     }
+		 GUO = { reverse_add_opinion_modifier = { target = SOV modifier = Sent_volunteers } }
 	}
 
 }
@@ -1811,7 +1839,7 @@ focus = {
 	x = 60
 	y = 5
 	completion_reward = {
-	   add_opinion_modifier = { target = GUO modifier = Soviet_Denounce }
+	   GUO = { add_opinion_modifier = { target = SOV modifier = Soviet_Denounce } }
 	}
 
 }
@@ -1968,7 +1996,6 @@ focus = {
 		x = 29
 		y = 7
 		completion_reward = {
-		add_research_slot = 1
 		add_tech_bonus = {
 		name = Lenin_Heavy_Tank_Plant
 		bonus = 0.3

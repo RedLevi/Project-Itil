@@ -1,4 +1,4 @@
-capital = 341
+﻿capital = 341
 
 oob = "TUR_1936"
 
@@ -91,7 +91,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Celâl Bayar"
 	desc = "POLITICS_CELAL_BAYAR_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	picture = "gfx/leaders/TUR/Celal_Bayar.dds"
 	expire = "1965.1.1"
 	ideology = authoritarian_conservatism
 	traits = {
@@ -101,7 +101,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Fevzi Çakmak"
 	desc = "POLITICS_OGUZ_REMZI_ARIK_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+	picture = "gfx/leaders/TUR/Fevzi_cakmak.dds"
 	expire = "1965.1.1"
 	ideology = integralism
 	traits = {

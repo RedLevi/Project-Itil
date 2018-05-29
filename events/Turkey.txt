@@ -34,6 +34,7 @@ country_event = { #Join the soviets?
 		  country_event = { id = tur.3 }
        }
     }
+}
 
 
 country_event = { #Join the soviets?

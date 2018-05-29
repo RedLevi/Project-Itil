@@ -1429,15 +1429,15 @@ country_event = {#kemal asks for help
 	option = {
 		name = soviet.39.a 
 		ai_chance = { factor = 80 }
-		add_to_faction = FROM
+		add_to_faction = PREV
 		declare_war_on = TUR 
-		FROM = { country_event = { id = soviet.40 }  }
+		PREV = { country_event = { id = soviet.40 }  }
 	}
 	option = {
 		name = soviet.39.a 
 		ai_chance = { factor = 20 }
-		add_to_faction = FROM
-		FROM = { country_event = { id = soviet.41 }  }
+		add_to_faction = PREV
+		PREV = { country_event = { id = soviet.41 }  }
 	}
 } 	
 

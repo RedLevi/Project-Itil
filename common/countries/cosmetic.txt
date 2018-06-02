@@ -10,7 +10,7 @@ INS_HOL = {
 }
 
 
-FRA_AUT = {
+FRA_ROY = {
     color = { 20 20 100 }
     color_ui = rgb { 255 179 96 }
 }

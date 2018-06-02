@@ -220,6 +220,11 @@ spriteTypes = {
 	name = "GFX_natsyn"
 	texturefile = "gfx/interface/goals/natsyn.dds"
 	}
+	SpriteType = {
+	name = "GFX_frencharmee"
+	texturefile = "gfx/interface/goals/frencharmee.dds"
+	}
+	
 	#### Generic continuous goal icons
 
 	SpriteType = {

@@ -96,6 +96,62 @@ ideas = {
 				 local_resources_factor = 0.10
 				consumer_goods_factor = 0.05
 			}
+		}
+
+        FRA_capitalism_baby_idea = {
+		
+			allowed = {
+				original_tag = FRA
+				has_war = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1	
+			
+			modifier = {
+				global_building_slots_factor = 0.1
+				production_oil_factor = 0.1
+			}	
+		}	
+
+        FRA_research_cost_idea = {
+		
+			allowed = {
+				original_tag = FRA
+				has_war = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1	
+			
+			modifier = {
+				research_time_factor = -0.05
+			}	
+		}	
+
+        FRA_reduce_tax_idea = {
+		
+			allowed = {
+				original_tag = FRA
+				has_war = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1	
+			
+			modifier = {
+			    industrial_capacity_factory = 0.1  
+				industrial_capacity_dockyard = 0.05 
+			}	
 		}		
 	}
 	

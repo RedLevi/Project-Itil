@@ -34,7 +34,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_reactionary_war
-		icon = ?
+		icon = GFX_focus_ger_oppose_hitler
 		x = 3
 		y = 1
 		cost = 10
@@ -60,7 +60,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_commie_war
-		icon = ?
+		icon = GFX_focus_generic_soviet_politics
 		x = 5
 		y = 1
 		cost = 10
@@ -214,7 +214,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_choose_commie
-		icon = ?
+		icon = GFX_focus_generic_join_comintern
 		x = 7
 		y = 3
 		cost = 10
@@ -250,7 +250,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_choose_syn
-		icon = ?
+		icon = GFX_focus_ger_great_red_menace
 		x = 9
 		y = 3
 		cost = 10
@@ -286,7 +286,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_fraternite
-		icon = ?
+		icon = GFX_goal_generic_improve_relations
 		x = 3
 		y = 4
 		cost = 10
@@ -310,7 +310,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_liberte
-		icon = ?
+		icon = GFX_goal_support_democracy
 		x = 6
 		y = 4
 		cost = 10
@@ -332,7 +332,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_egalite
-		icon = ?
+		icon = GFX_goal_generic_neutrality_focus
 		x = 8
 		y = 4
 		cost = 10
@@ -354,7 +354,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_dictator_rep
-		icon = ?
+		icon = GFX_goal_support_fascism
 		x = 1
 		y = 5
 		cost = 10
@@ -396,13 +396,13 @@ focus_tree = {
 		completion_reward = {
 		add_political_power = -50
 		add_stability = 0.05
-		set_cosmetic_tag = FRA_royalist
+		set_cosmetic_tag = FRA_ROY
 		}
 	}	
 	
 	focus = {
 		id = FRA_democratic_rep
-		icon = ?
+		icon = GFX_goal_support_democracy
 		x = 6
 		y = 5
 		cost = 10
@@ -425,7 +425,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_proleteriat_rep
-		icon = ?
+		icon = GFX_goal_support_communism
 		x = 8
 		y = 5
 		cost = 10
@@ -448,7 +448,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_orleanist
-		icon = ?
+		icon = GFX_focus_generic_home_defense
 		x = 2
 		y = 6
 		cost = 10
@@ -461,13 +461,13 @@ focus_tree = {
 		mutually_exclusive = { focus = FRA_legitimist }
 
 		completion_reward = {
-        #FRA = {country_event} #elect legitimist, more lenient toward constitutionalism
+        country_event = { id = france.43  days = 0 }
 		}
 	}
 
 	focus = {
 		id = FRA_legitimist
-		icon = ?
+		icon = GFX_focus_rom_royal_dictatorship
 		x = 4
 		y = 6
 		cost = 10
@@ -480,13 +480,13 @@ focus_tree = {
 		mutually_exclusive = { focus = FRA_orleanist }
 
 		completion_reward = {
-		#FRA = {country_event} #elect legitimist, more lenient toward absolutism
+		country_event = { id = france.44  days = 0 }
 		}
 	}	
 	
 	focus = {
 		id = FRA_personal_cult
-		icon = ?
+		icon = GFX_goal_generic_propaganda
 		x = 6
 		y = 6
 		cost = 10
@@ -506,7 +506,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_economic_recovery
-		icon = ?
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 16
 		y = 0
 		cost = 10
@@ -528,7 +528,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_planned_economy
-		icon = ?
+		icon = GFX_focus_YUG_pan_slavic_congress
 		x = 13
 		y = 1
 		cost = 10
@@ -545,13 +545,13 @@ focus_tree = {
 
 		completion_reward = {
 		  #custom_effect_tooltip = planned_eco
-		  add_ideas = { FRA_planned_economy_idea }
+		  add_ideas = FRA_planned_economy_idea
 		}
 	}	
 	
 	focus = {
 		id = FRA_mixed_economy
-		icon = ?
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 15
 		y = 1
 		cost = 10
@@ -572,13 +572,13 @@ focus_tree = {
 
 		completion_reward = {
 		#custom_effect_tooltip = mixed_eco
-		add_ideas = { FRA_mixed_economy_idea }
+		add_ideas = FRA_mixed_economy_idea
 		}
 	}	
 
 	focus = {
 		id = FRA_free_market
-		icon = ?
+		icon = GFX_focus_generic_the_giant_wakes
 		x = 17
 		y = 1
 		cost = 10
@@ -597,14 +597,13 @@ focus_tree = {
 		}		
 
 		completion_reward = {
-		#custom_effect_tooltip = free_market
-		add_ideas = { FRA_free_market_idea }
+		add_ideas = FRA_free_market_idea
 		}
 	}	
 	
 	focus = {
 		id = FRA_syndic_thought
-		icon = ?
+		icon = GFX_focus_ger_great_red_menace
 		x = 19
 		y = 1
 		cost = 10
@@ -623,14 +622,13 @@ focus_tree = {
 		}		
 
 		completion_reward = {
-		#custom_effect_tooltip = syndie_eco
-		add_ideas = { FRA_syndic_thought_idea }
+		add_ideas = FRA_syndic_thought_idea
 		}
 	}		
 	
 	focus = {
 		id = FRA_proleteriat_arise
-		icon = ?
+		icon = GFX_goal_generic_soviet_construction
 		x = 12
 		y = 2
 		cost = 10
@@ -650,7 +648,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_proleteriat_mix
-		icon = ?
+		icon = GFX_focus_ger_bulwark_against_bolshevism
 		x = 14
 		y = 2
 		cost = 10
@@ -669,7 +667,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_capitalist_economy
-		icon = ?
+		icon = GFX_focus_focus_generic_industry_1
 		x = 16
 		y = 2
 		cost = 10
@@ -681,13 +679,13 @@ focus_tree = {
 		prerequisite = { focus = FRA_free_market focus = FRA_mixed_economy }		
 
 		completion_reward = {
-        # set_rule = { free_economy } 
+         add_ideas = FRA_capitalism_baby_idea
 		}
 	}	
 	
 	focus = {
 		id = FRA_syndicalist_rev
-		icon = ?
+		icon = GFX_focus_generic_industry_2
 		x = 19
 		y = 2
 		cost = 10
@@ -734,7 +732,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_industrial_boom_plan
-		icon = ?
+		icon = GFX_focus_generic_industry_3
 		x = 13
 		y = 3
 		cost = 10
@@ -841,7 +839,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_infrastructure_plan
-		icon = ?
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 13
 		y = 4
 		cost = 10
@@ -853,19 +851,40 @@ focus_tree = {
 		prerequisite = { focus = FRA_industrial_boom_plan }		
 
 		completion_reward = {
-			#? = {
-			#	add_building_construction = {
-			#		type = infrastructure
-			#		level = 2
-			#		instant_build = yes
-			#	}
-            #}				
+			24 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+            }		
+			27 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+            }
+			18 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+            }		
+			29 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+            }			
 		}
 	}	
 	
 	focus = {
 		id = FRA_equality_prevails
-		icon = ?
+		icon = GFX_focus_prc_agrarian_socialism
 		x = 12
 		y = 5
 		cost = 10
@@ -887,7 +906,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_equal_society
-		icon = ?
+		icon = GFX_focus_generic_soviet_politics
 		x = 14
 		y = 5
 		cost = 10
@@ -903,13 +922,12 @@ focus_tree = {
 
 		completion_reward = {
 		add_manpower = 50000
-		#enable women_conscription decision?
 		}
 	}	
 	
 	focus = {
 		id = FRA_scientific_progress
-		icon = ?
+		icon = GFX_focus_generic_socialist_science
 		x = 13
 		y = 6
 		cost = 10
@@ -921,13 +939,13 @@ focus_tree = {
 		prerequisite = { focus = FRA_equality_prevails focus = FRA_equal_society }		
 
 		completion_reward = {
-		#add_modifier = {research_cost = 5 }
+		add_ideas = FRA_research_cost_idea
 		}
 	}	
 	
 	focus = {
 		id = FRA_reduce_company_tax
-		icon = ?
+		icon = GFX_focus_generic_the_giant_wakes
 		x = 16
 		y = 3
 		cost = 10
@@ -939,13 +957,13 @@ focus_tree = {
 		prerequisite = { focus = FRA_capitalist_economy }		
 
 		completion_reward = {
-		#add_modifier = {factory_output = 10% }
+		add_ideas = FRA_reduce_tax_idea
 		}
 	}	
 	
 	focus = {
 		id = FRA_laizess_faire
-		icon = ?
+		icon = GFX_goal_generic_trade
 		x = 16
 		y = 4
 		cost = 10
@@ -1052,7 +1070,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_life_conditions_rise
-		icon = ?
+		icon = GFX_goal_generic_consumer_goods
 		x = 16
 		y = 5
 		cost = 10
@@ -1070,7 +1088,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_corporated_society
-		icon = ?
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 19
 		y = 3
 		cost = 10
@@ -1088,7 +1106,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_hierarcy_industry
-		icon = ?
+		icon = GFX_goal_generic_construction2
 		x = 19
 		y = 4
 		cost = 10
@@ -1165,7 +1183,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_corporative_councils
-		icon = ?
+		icon = GFX_goal_generic_national_unity
 		x = 19
 		y = 5
 		cost = 10
@@ -1177,13 +1195,13 @@ focus_tree = {
 		prerequisite = { focus = FRA_hierarcy_industry }		
 
 		completion_reward = {
-		#add_modifier = {factory_output = 5%}
+		add_ideas = FRA_research_cost_idea
 		}
 	}	
 	
 	focus = {
 		id = FRA_import_minds
-		icon = ?
+		icon = GFX_goal_generic_scientific_exchange
 		x = 17
 		y = 6
 		cost = 10
@@ -1213,7 +1231,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_army_rebuild
-		icon = ?
+		icon = GFX_frencharmee
 		x = 24
 		y = 0
 		cost = 10
@@ -1234,7 +1252,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_conscription_policy
-		icon = ?
+		icon = GFX_goal_generic_political_pressure
 		x = 22
 		y = 1
 		cost = 10
@@ -1244,6 +1262,7 @@ focus_tree = {
 		
         available_if_capitulated = no
 		prerequisite = { focus = FRA_army_rebuild }	
+		mutually_exclusive = { focus = FRA_professional_army }
 
 		completion_reward = {
 		#set_rule = {extended_conscription}
@@ -1252,7 +1271,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_professional_army
-		icon = ?
+		icon = GFX_goal_generic_small_arms
 		x = 21
 		y = 2
 		cost = 10
@@ -1262,6 +1281,7 @@ focus_tree = {
 		
         available_if_capitulated = no
 		prerequisite = { focus = FRA_conscription_policy }	
+		mutually_exclusive = { focus = FRA_universal_con }
 
 		completion_reward = {
 		add_manpower = 75000
@@ -1271,7 +1291,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_universal_con
-		icon = ?
+		icon = GFX_goal_generic_small_arms
 		x = 23
 		y = 2
 		cost = 10
@@ -1281,6 +1301,7 @@ focus_tree = {
 		
         available_if_capitulated = no
 		prerequisite = { focus = FRA_conscription_policy }		
+		mutually_exclusive = { focus = FRA_professional_army }
 
 		completion_reward = {
 		add_manpower = 100000
@@ -1289,7 +1310,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_women_con
-		icon = ?
+		icon = GFX_focus_prc_infiltration
 		x = 24
 		y = 3
 		cost = 10
@@ -1308,7 +1329,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_doctrine
-		icon = ?
+		icon = GFX_goal_generic_air_doctrine
 		x = 27
 		y = 1
 		cost = 10
@@ -1330,7 +1351,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_mobalization
-		icon = ?
+		icon = GFX_focus_secret_rearmament
 		x = 25
 		y = 2
 		cost = 10
@@ -1353,7 +1374,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_instant_equipment
-		icon = ?
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 26
 		y = 3
 		cost = 10
@@ -1366,14 +1387,14 @@ focus_tree = {
 		
 
 		completion_reward = {
-        add_equipment_to_stockpile = { type = infantry_equipment amount = 1500 producer = FRA } 
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 2500 producer = FRA } 
         add_equipment_to_stockpile = { type = artillery_equipment amount = 1500 producer = FRA }		
 		}
 	}	
 
 	focus = {
 		id = FRA_breakthrough
-		icon = ?
+		icon = GFX_goal_generic_axis_build_infantry
 		x = 28
 		y = 3
 		cost = 10
@@ -1396,7 +1417,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_firepower
-		icon = ?
+		icon = GFX_goal_generic_army_artillery2
 		x = 27
 		y = 2
 		cost = 10
@@ -1418,7 +1439,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_artillery
-		icon = ?
+		icon = GFX_goal_generic_army_artillery
 		x = 30
 		y = 3
 		cost = 10
@@ -1441,7 +1462,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_armor_army
-		icon = ?
+		icon = GFX_goal_generic_army_tanks
 		x = 29
 		y = 2
 		cost = 10
@@ -1461,7 +1482,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_armor_bonus
-		icon = ?
+		icon = GFX_goal_generic_build_tank
 		x = 32
 		y = 3
 		cost = 10
@@ -1484,7 +1505,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_motor_bonus
-		icon = ?
+		icon = GFX_goal_generic_army_motorized
 		x = 29
 		y = 4
 		cost = 10
@@ -1507,7 +1528,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_naval_air_command
-		icon = ?
+		icon = GFX_goal_generic_air_production
 		x = 25
 		y = 6
 		cost = 10
@@ -1527,7 +1548,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_abandon_old_ship
-		icon = ?
+		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 23
 		y = 7
 		cost = 10
@@ -1546,7 +1567,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_on_our_own
-		icon = ?
+		icon = GFX_focus_chi_reach_out_to_france
 		x = 27
 		y = 7
 		cost = 10
@@ -1564,7 +1585,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_repair_ships
-		icon = ?
+		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 27
 		y = 8
 		cost = 10
@@ -1582,7 +1603,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_launch_air_program
-		icon = ?
+		icon = GFX_goal_generic_air_fighter2
 		x = 27
 		y = 9
 		cost = 10
@@ -1600,7 +1621,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_renewal_in_charge
-		icon = ?
+		icon = GFX_focus_generic_cruiser2
 		x = 27
 		y = 10
 		cost = 10
@@ -1612,14 +1633,14 @@ focus_tree = {
 		prerequisite = { focus = FRA_launch_air_program }
 
 		completion_reward = {	
-        add_equipment_to_stockpile = { type = fighter_1 amount = 100 producer = FRA } 
-        add_equipment_to_stockpile = { type = bomber_1 amount = 50 producer = FRA }		
+        add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 100 producer = FRA } 
+        add_equipment_to_stockpile = { type = tac_bomber_equipment_1 amount = 150 producer = FRA }		
 		}
 	}	
 	
 	focus = {
 		id = FRA_missile_program
-		icon = ?
+		icon = GFX_focus_rocketry
 		x = 25
 		y = 11
 		cost = 10
@@ -1631,13 +1652,17 @@ focus_tree = {
 		prerequisite = { focus = FRA_renewal_in_charge focus = FRA_sov_air focus = FRA_brit_air focus = FRA_jap_air }
 
 		completion_reward = {
-        #add_site = {rocket_launcher level = 5}
+        add_tech_bonus = {
+				ahead_reduction = 0.5
+				uses = 2
+				category = rocketry
 		}
-	}		
+		}
+	}
 	
 	focus = {
 		id = FRA_sov_ship
-		icon = ?
+		icon = GFX_focus_chi_mission_to_the_soviet_union
 		x = 21
 		y = 8
 		cost = 10
@@ -1650,13 +1675,13 @@ focus_tree = {
 		mutually_exclusive = { focus = FRA_jap_ship focus = FRA_brit_ship }
 
 		completion_reward = {	
-        #sov = {country_event}		
+        SOV = { country_event = { id = france.45 days = 3 } }		
 		}
 	}	
 	
 	focus = {
 		id = FRA_brit_ship
-		icon = ?
+		icon = GFX_focus_chi_british_cooperation
 		x = 23
 		y = 8
 		cost = 10
@@ -1669,13 +1694,13 @@ focus_tree = {
 		mutually_exclusive = { focus = FRA_sov_ship focus = FRA_jap_ship }
 
 		completion_reward = {	
-        #eng = {country_event}		
+        ENG = { country_event = { id = france.46 days = 3 } }		
 		}
 	}	
 	
 	focus = {
 		id = FRA_jap_ship
-		icon = ?
+		icon = GFX_focus_chi_collaboration_with_the_japanese
 		x = 25
 		y = 8
 		cost = 10
@@ -1688,13 +1713,13 @@ focus_tree = {
 		mutually_exclusive = { focus = FRA_brit_ship focus = FRA_sov_ship }
 
 		completion_reward = {		
-        #jap = {country_event}		
+        JAP = { country_event = { id = france.47 days = 3 } }			
 		}
 	}
 	
 	focus = {
 		id = FRA_sov_air
-		icon = ?
+		icon = GFX_focus_chi_mission_to_the_soviet_union
 		x = 21
 		y = 9
 		cost = 10
@@ -1706,13 +1731,13 @@ focus_tree = {
 		prerequisite = { focus = FRA_sov_ship }	
 
 		completion_reward = {	
-        #sov = {country_event}		
+        SOV = { country_event = { id = france.50 days = 3 } }	
 		}
 	}		
 	
 	focus = {
 		id = FRA_brit_air
-		icon = ?
+		icon = GFX_focus_chi_british_cooperation
 		x = 23
 		y = 9
 		cost = 10
@@ -1724,13 +1749,13 @@ focus_tree = {
 		prerequisite = { focus = FRA_brit_ship }	
 
 		completion_reward = {		
-		#eng = {country_event}	
+		ENG = { country_event = { id = france.51 days = 3 } }
 		}
 	}		
 	
 	focus = {
 		id = FRA_jap_air
-		icon = ?
+		icon = GFX_focus_chi_collaboration_with_the_japanese
 		x = 25
 		y = 9
 		cost = 10
@@ -1742,13 +1767,13 @@ focus_tree = {
 		prerequisite = { focus = FRA_jap_ship }	
 
 		completion_reward = {	
-        #jap = {country_event}			
+        JAP = { country_event = { id = france.52 days = 3 } }		
 		}
 	}	
 	
 	focus = {
 		id = FRA_foreign_policy
-		icon = ?
+		icon = GFX_focus_generic_diplomatic_treaty
 		x = 4
 		y = 7
 		cost = 10
@@ -1769,7 +1794,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_german_exchange
-		icon = ?
+		icon = GFX_goal_fortify_the_westwall
 		x = 1
 		y = 8
 		cost = 10
@@ -1780,15 +1805,16 @@ focus_tree = {
         available_if_capitulated = no	
 		prerequisite = { focus = FRA_foreign_policy }
 		mutually_exclusive = { focus = FRA_allign_uk focus = FRA_allign_soviet focus = FRA_new_bloc }
-
+		available = { NOT = { has_government = communism } }
+		
 		completion_reward = {
-		#event for lorraine hyptotetical exchange
+		GER = { country_event = { id = france.53 days = 0 } }
 		}
 	}	
 	
 	focus = {
 		id = FRA_devil_alliance
-		icon = ?
+		icon = GFX_focus_generic_strike_at_democracy1
 		x = 1
 		y = 9
 		cost = 1
@@ -1798,15 +1824,18 @@ focus_tree = {
 		
         available_if_capitulated = no	
 		prerequisite = { focus = FRA_german_exchange }
+		available = { has_global_flag = accepted_alsace_and_now_peace }
 
 		completion_reward = {
-		#event
+		hidden_effect = {
+		GER = { add_to_faction = FRA }
+		}
 		}
 	}	
 	
 	focus = {
 		id = FRA_allign_uk
-		icon = ?
+		icon = GFX_focus_chi_british_cooperation
 		x = 3
 		y = 8
 		cost = 1
@@ -1817,15 +1846,16 @@ focus_tree = {
         available_if_capitulated = no	
 		prerequisite = { focus = FRA_foreign_policy }
 		mutually_exclusive = { focus = FRA_german_exchange focus = FRA_allign_soviet focus = FRA_new_bloc }	
+		available = { NOT = { has_government = communism has_government = national_integralism } }
 
 		completion_reward = {
-		#event
+		ENG = { country_event = { id = france.54 days = 0 } }
 		}
 	}	
 	
 	focus = {
 		id = FRA_allign_soviet
-		icon = ?
+		icon = GFX_focus_chi_mission_to_the_soviet_union
 		x = 5
 		y = 8
 		cost = 1
@@ -1836,15 +1866,16 @@ focus_tree = {
         available_if_capitulated = no	
 		prerequisite = { focus = FRA_foreign_policy }
 		mutually_exclusive = { focus = FRA_german_exchange focus = FRA_allign_uk focus = FRA_new_bloc }	
-
+        available = { has_government = communism }
+		
 		completion_reward = {
-		#event
+		SOV = { country_event = { id = france.55 days = 0 } }
 		}
 	}		
 	
 	focus = {
 		id = FRA_new_bloc
-		icon = ?
+		icon = GFX_focus_AST_squander_bug
 		x = 7
 		y = 8
 		cost = 10
@@ -1863,7 +1894,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_turn_on_britain
-		icon = ?
+		icon = GFX_focus_AST_never_gallipoli
 		x = 3
 		y = 9
 		cost = 10
@@ -1882,7 +1913,7 @@ focus_tree = {
 	
 	focus = {
 		id = FRA_german_surprise
-		icon = ?
+		icon = GFX_focus_generic_little_entente
 		x = 5
 		y = 9
 		cost = 10
@@ -1901,7 +1932,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_save_america
-		icon = ?
+		icon = GFX_focus_generic_strike_at_democracy3
 		x = 7
 		y = 9
 		cost = 10

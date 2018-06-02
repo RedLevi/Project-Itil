@@ -39,6 +39,9 @@ bookmarks = {
 			france_torn
 			}
 			focuses = {
+				FRA_civil_war_ends
+				FRA_le_roi
+				FRA_army_rebuild
 			}
 		}
 		"JAP"={

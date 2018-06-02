@@ -23,10 +23,10 @@ focus_tree = {
 		}
 		
         available_if_capitulated = no
-		bypass = { has_war = yes }
+		bypass = { has_global_flag = france_civil_war }
 		 available = {
-			always = no
-		}	
+			has_global_flag = france_civil_war 
+		}		
 
 		completion_reward = {
 		}
@@ -44,8 +44,10 @@ focus_tree = {
 		
         available_if_capitulated = no
 		prerequisite = { focus = FRA_civil_war }
-		bypass = { has_government = reactionarism }
-		
+		bypass = { has_government = reactionarism 
+			has_global_flag = france_civil_war 
+			}
+		mutually_exclusive = { focus = FRA_commie_war } 
         available = {
 			has_government = reactionarism
 		}		
@@ -70,12 +72,14 @@ focus_tree = {
 		
         available_if_capitulated = no
 		prerequisite = { focus = FRA_civil_war }
-		bypass = { has_government = communism }
+		bypass = { has_government = communism
+			has_global_flag = france_civil_war 
+		}
 		
         available = {
 			has_government = communism
 		}		
-
+		mutually_exclusive = { focus = FRA_reactionary_war }
 		completion_reward = {
 		 add_political_power = 50  
 		 add_stability = 0.1
@@ -96,7 +100,7 @@ focus_tree = {
 		
         available_if_capitulated = no
 		prerequisite = { focus = FRA_reactionary_war focus = FRA_commie_war }
-		bypass = { has_war = no }
+		bypass = { has_war = no has_global_flag = france_civil_war }
 		
         available = {
 		    has_war = no
@@ -215,42 +219,6 @@ focus_tree = {
 	focus = {
 		id = FRA_choose_commie
 		icon = GFX_focus_generic_join_comintern
-		x = 7
-		y = 3
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		
-        available_if_capitulated = no
-		prerequisite = { focus = FRA_civil_war_ends }
-		
-        available = {
-		    has_war = no
-			OR = {
-			has_government = communism
-			has_government = socialism	
-			has_government = liberalism
-			}		
-		}		
-
-		completion_reward = {
-		hidden_effect = {
-        create_country_leader = {
-	    name = "Boris Souvarine"
-	    desc = ""
-	    picture = "Boris_Souvarine.dds"
-	    expire = "1965.1.1"
-	    ideology = marxism
-	    traits = {}
-	    }
-        }
-		}
-	}	
-	
-	focus = {
-		id = FRA_choose_syn
-		icon = GFX_focus_ger_great_red_menace
 		x = 9
 		y = 3
 		cost = 10
@@ -269,8 +237,45 @@ focus_tree = {
 			has_government = liberalism
 			}		
 		}		
+		
+		completion_reward = {
+		hidden_effect = {
+        create_country_leader = {
+	    name = "Boris Souvarine"
+	    desc = ""
+	    picture = "Boris_Souvarine.dds"
+	    expire = "1965.1.1"
+	    ideology = marxism
+	    traits = {}
+	    }
+        }
+		}
+	}	
+	
+	focus = {
+		id = FRA_choose_syn
+		icon = GFX_focus_ger_great_red_menace
+		x = 11
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_civil_war_ends }
+		
+        available = {
+		    has_war = no
+			OR = {
+			has_government = communism
+			has_government = socialism	
+			has_government = liberalism
+			}		
+		}		
 
 		completion_reward = {
+		
 		hidden_effect = {
         create_country_leader = {
 	    name = "Pierre Monatte"
@@ -280,6 +285,50 @@ focus_tree = {
 	    ideology = syndicalism
 	    traits = {}
 	    }
+        }		
+		}
+	}
+	
+	focus = {
+		id = FRA_choose_lib
+		icon = GFX_goal_support_democracy
+		x = 7
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		
+        available_if_capitulated = no
+		prerequisite = { focus = FRA_civil_war_ends }
+		
+        available = {
+		    has_war = no
+			OR = {
+			has_government = liberalism
+			has_government = socialism 
+			has_government = communism	
+			}		
+		}		
+
+		completion_reward = {
+		hidden_effect = {
+		set_politics = {
+                ruling_party = liberalism
+                elections_allowed = no
+            }
+            add_popularity = { ideology = liberalism popularity = 0.2 }
+			 add_popularity = { ideology = conservatism popularity = 0.2 }
+        create_country_leader = {
+			name = "Louis Marin"
+			desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+			picture = "Louis_Marin.dds"
+			expire = "1965.1.1"
+			ideology = social_liberalism
+			traits = {
+				stout_defender
+				}
+			}
         }		
 		}
 	}
@@ -319,7 +368,7 @@ focus_tree = {
 		}
 		
         available_if_capitulated = no
-		prerequisite = { focus = FRA_choose_petain focus = FRA_choose_syn }
+		prerequisite = { focus = FRA_choose_lib }
 		
         available = {
 		    always = no

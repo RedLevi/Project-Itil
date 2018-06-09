@@ -1006,13 +1006,13 @@ country_event = {#fate of assasins
 	}
 }
 
-country_event = {#Event for Germany 
-	id = yug.40 
-	title = yug.40.t 
-	desc = yug.40.d 
-	is_triggered_only = yes 
-	option = {
-		name = yug.40
-		add_stability = -0.01 
-	}
-}
+#country_event = {#Event for Germany 
+#	id = yug.40 
+#	title = yug.40.t 
+#	desc = yug.40.d 
+#	is_triggered_only = yes 
+#	option = {
+#		name = yug.40
+#		add_stability = -0.01 
+#	}
+#}

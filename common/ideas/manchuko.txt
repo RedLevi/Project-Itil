@@ -1,4 +1,24 @@
 ideas = {
+    
+    country = {
+       MAN_bought_railway = {
+          picture = generic_build_infrastructure
+          removal_cost = -1
+
+          allowed = {
+			always = no
+		}
+
+        modifier = {
+
+			production_factory_start_efficiency_factor = 0.05
+			local_resources_factor = 0.1
+			consumer_goods_factor = -0.03
+
+		}
+
+       }
+    }
 
 	political_advisor = {
 

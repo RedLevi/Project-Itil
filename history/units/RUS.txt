@@ -62,10 +62,10 @@ units = {
 	}	
 
 	division= {			
-		name = "Black Hundreds"		
+		name = "White Hundreds"		
 		location = 1730
 		division_template = "Kavaleriyskaya Diviziya"
-		start_experience_factor = 0.4
+		start_experience_factor = 0.7
 		start_equipment_factor = 1.0
 
 	}

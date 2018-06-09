@@ -49,15 +49,15 @@ set_politics = {
 
 	parties = {
 	    conservatism = {
-			popularity = 10
+			popularity = 0
 		}
 
 		national_integralism = {
-			popularity = 25
+			popularity = 40
 		}
 
 		liberalism = {
-			popularity = 5
+			popularity = 0
 		}
 		
 		communism = {

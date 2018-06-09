@@ -13,19 +13,25 @@ state={
 		owner = MAN
 		add_core_of = MAN
 		buildings = {
-			infrastructure = 4
+			infrastructure = 6
 			arms_factory = 3
+			industrial_complex = 5
+			dockyard = 3
 			air_base = 5
 			1150 = {
-				naval_base = 6
+				naval_base = 7
 			}
 		}
 		victory_points = {
 			1150 1 
 		}
 		victory_points = {
-			11771 3 
+			6860 1 
 		}
+		victory_points = {
+			11771 5 
+		}
+
 
 	}
 	provinces={

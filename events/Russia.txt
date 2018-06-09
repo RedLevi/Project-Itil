@@ -53,4 +53,10 @@ country_event = { #railway question
           add_ideas = MAN_bought_railway
        }
 	}
+	option = { #refuse
+	   name = rus.2.b
+	   add_political_power = 50
+	   add_stability = 0.05
+	   set_country_flag = kornilov_refuses
+	}
 }

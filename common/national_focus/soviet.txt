@@ -971,7 +971,7 @@ focus = {
 		cost = 10.00
 		x = 29
 		y = 0
-		available = { has_country_flag = RKKA_Congress }
+		available = { has_country_flag = SOV_finished_congress }
 		completion_reward = {
 		army_experience = 30
 		}

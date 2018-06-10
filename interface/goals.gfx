@@ -1674,4 +1674,36 @@ spriteTypes = {
 		name = "GFX_focus_ame_2"
 		texturefile = "gfx/interface/goals/ame_2.dds"
 	}
+	SpriteType = {
+		name = "GFX_focus_ame_3"
+		texturefile = "gfx/interface/goals/ame_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ame_4"
+		texturefile = "gfx/interface/goals/ame_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ame_5"
+		texturefile = "gfx/interface/goals/ame_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ame_6"
+		texturefile = "gfx/interface/goals/ame_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ame_7"
+		texturefile = "gfx/interface/goals/ame_7.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ame_8"
+		texturefile = "gfx/interface/goals/ame_8.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ame_9"
+		texturefile = "gfx/interface/goals/ame_9.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ame_10"
+		texturefile = "gfx/interface/goals/ame_10.dds"
+	}
 }

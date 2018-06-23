@@ -95,3 +95,7 @@ FRA_ROY_socialism_DEF:0 "France"
 FRA_ROYreactionarism:0 "Kingdom of France"
 FRA_ROY_reactionarism_ADJ:0 "French"
 FRA_ROY_reactionarism_DEF:0 "France"
+
+FRA_COM_communism:0 "Fourth French Republic"
+FRA_COM_communism_ADJ:0 "French"
+FRA_COM_communism_DEF:0 "France"

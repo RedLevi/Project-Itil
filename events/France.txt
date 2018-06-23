@@ -16,7 +16,7 @@ country_event = { #INTRO EVENT#
 
 	option = {
 	    name = france.1.a
-		country_event = { id = france.2  days = 10 }
+		country_event = { id = france.3  days = 10 }
 		}
 	}
 
@@ -31,7 +31,7 @@ country_event = { #RIGHT WING INTRO#
 
 	option = {
 	    name = france.2.a
-	    country_event = { id = france.3 days = 20 }
+	   
 	    }
     }
 
@@ -46,6 +46,7 @@ country_event = { #LEFT WING INTRO#
 
 	option = {
 	    name = france.3.a
+		country_event = { id = france.2 days = 20 }
 		}
     }
 
@@ -59,17 +60,48 @@ country_event = { #1936 ELECTION#
 
 	trigger = {
 	    date > 1936.4.25
-	    date < 1936.4.27
 		tag = FRA
 		}
 
-	option = {
+	option = { #people's front win
         name = france.4.a
 		set_politics = { ruling_party = communism elections_allowed = no }
-		add_popularity = { ideology = communism popularity = 0.15 }
-		add_popularity = { ideology = socialism popularity = 0.15 }
+		create_country_leader = {
+		name = "Boris Souvarine"
+		picture = "Boris_Souvarine.dds"
+		expire = "1965.1.1"
+		ideology = marxism
+		traits = {
+			
+		}
+	}
+		add_popularity = { ideology = communism popularity = 0.1 }
+		add_popularity = { ideology = socialism popularity = 0.1 }
+		add_popularity = { ideology = liberalism popularity = 0.1 }
+		add_popularity = { ideology = conservatism popularity = 0.1 }
 		hidden_effect = {
-		    country_event = { id = france.5 days = 15 }
+			country_event = { id = france.58 days = 1 }
+		    country_event = { id = france.57 days = 10 }
+			country_event = { id = france.5 days = 15 }
+			}
+	}
+	option = { #national front win
+        name = france.4.b
+		set_politics = { ruling_party = national_integralism elections_allowed = no }
+		create_country_leader = {
+			name = "Hubert Lagardelle"
+			desc = ""
+			picture = "Hubert_Lagardelle.dds"
+			expire = "1965.1.1"
+			ideology = national_syndicalism
+			traits = {
+
+			}
+		}
+		add_popularity = { ideology = national_integralism popularity = 0.2 }
+		add_popularity = { ideology = reactionarism popularity = 0.2 }
+		hidden_effect = {
+		    country_event = { id = france.60 days = 1 }
 			}
 	}
 }
@@ -1642,4 +1674,70 @@ country_event = { #Didn't accept our alliance
     option = {
        name = france.56.a #oh...
     }	
+}
+
+##additional civil war events by Koach
+
+country_event = {#arm the workers?
+	id = france.57 
+	title = france.57.t
+	desc = france.57.d 
+	is_triggered_only = yes 
+	option = {
+		name = france.57.a 
+		ai_chance = { factor = 75 }
+		set_global_flag = FRA_armed_workers
+	}
+	option = {
+		name = france.57.b 
+		ai_chance = { factor = 25 }
+	}
+}
+
+country_event = {#Leauges protest 
+	id = france.58
+	title = france.58.t 
+	desc = france.58.d 
+	is_triggered_only = yes 
+	option = {
+		name = france.58.a 
+		add_stability = -0.05 
+		hidden_effect = { 
+			country_event = { id = france.59 days = 2 }
+		}
+	}
+}
+
+country_event = {#explosion in Paris
+	id = france.59
+	title = france.59.t 
+	desc = france.59.d 
+	is_triggered_only = yes 
+	option = {
+		name = france.59.a 
+		add_stability = -0.1 
+	}
+}
+
+country_event = {#Leftist protests
+	id = france.60 
+	title = france.60.t 
+	desc = france.60.d 
+	is_triggered_only = yes 
+	option = {
+		name = france.60.a 
+		add_stability = -0.05 
+		hidden_effect = { country_event = { id = france.61 days = 3 } }
+	}
+}
+
+country_event = {#arson
+	id = france.61
+	title = france.61.t 
+	desc = france.61.d 
+	is_triggered_only = yes 
+	option = {
+		name = france.61.a 
+		add_stability = -0.1 
+	}
 }

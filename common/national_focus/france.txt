@@ -13,8 +13,8 @@ focus_tree = {
 	default = no
 
 	focus = {
-		id = FRA_civil_war
-		icon = GFX_six_way_cw
+		id = FRA_political_crisis
+		icon = GFX_focus_generic_strike_at_democracy2
 		x = 4
 		y = 0
 		cost = 10
@@ -23,68 +23,13 @@ focus_tree = {
 		}
 		
         available_if_capitulated = no
-		bypass = { has_global_flag = france_civil_war }
+		bypass = { date > date > 1936.4.25 }
 		 available = {
-			has_global_flag = france_civil_war 
+			always = yes
 		}		
 
 		completion_reward = {
-		}
-	}
-	
-	focus = {
-		id = FRA_reactionary_war
-		icon = GFX_focus_ger_oppose_hitler
-		x = 3
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		
-        available_if_capitulated = no
-		prerequisite = { focus = FRA_civil_war }
-		bypass = { has_government = reactionarism 
-			has_global_flag = france_civil_war 
-			}
-		mutually_exclusive = { focus = FRA_commie_war } 
-        available = {
-			has_government = reactionarism
-		}		
-
-		completion_reward = {
-		 add_political_power = 50  
-		 add_stability = 0.1
-		 add_popularity = { ideology = national_integralism popularity = 0.1 }  
-		 add_popularity = { ideology = reactionarism popularity = 0.1 }
-		}
-	}
-
-	focus = {
-		id = FRA_commie_war
-		icon = GFX_focus_generic_soviet_politics
-		x = 5
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 10
-		}
-		
-        available_if_capitulated = no
-		prerequisite = { focus = FRA_civil_war }
-		bypass = { has_government = communism
-			has_global_flag = france_civil_war 
-		}
-		
-        available = {
-			has_government = communism
-		}		
-		mutually_exclusive = { focus = FRA_reactionary_war }
-		completion_reward = {
-		 add_political_power = 50  
-		 add_stability = 0.1
-		 add_popularity = { ideology = socialism popularity = 0.1 }  
-		 add_popularity = { ideology = communism popularity = 0.1 }
+			add_political_power = -150
 		}
 	}	
 
@@ -92,14 +37,14 @@ focus_tree = {
 		id = FRA_civil_war_ends
 		icon = GFX_peace
 		x = 4
-		y = 2
+		y = 1
 		cost = 10
 		ai_will_do = {
 			factor = 10
 		}
 		
         available_if_capitulated = no
-		prerequisite = { focus = FRA_reactionary_war focus = FRA_commie_war }
+		prerequisite = { focus = FRA_political_crisis }
 		bypass = { has_war = no has_global_flag = france_civil_war }
 		
         available = {

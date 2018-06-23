@@ -637,7 +637,7 @@ country_event = {#Invite all the delegates
 		POL = { country_event = { id = germany.33 } }
 		#these events are to be replaced with less generic ones in the future, for each tag
 		country_event = { id = germany.34 days = 10 }
-		country_event = { id = yug.37 days = 17 }
+		YUG = { country_event = { id = yug.37 days = 17 } }
 		
 	}
 }

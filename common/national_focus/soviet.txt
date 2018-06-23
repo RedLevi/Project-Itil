@@ -1233,20 +1233,7 @@ focus = {
 	   custom_effect_tooltip = SOV_ultimatum_tooltip
 	}
 }
-focus = {
-	id = Liberate_India
-	icon = GFX_focus_RAJ_seek_help_from_soviet
-	cost = 1.00
-	prerequisite = {
-		focus = Red_China
-	}
-	x = 60
-	y = 7
-	completion_reward = {
-	custom_effect_tooltip = PLACEHOLDER
-	}
 
-}
 
 
 focus = {
@@ -1545,44 +1532,13 @@ focus = {
 	}
 
 }
-focus = {
-	id = Dismantle_Syria
-	icon = GFX_goal_generic_forceful_treaty
-	cost = 1.00
-	prerequisite = {
-		focus = Demand_Armenia
-	}
-	prerequisite = {
-		focus = Demand_Azerbaijan
-	}
-	x = 62
-	y = 7
-	completion_reward = {
-	   custom_effect_tooltip = PLACEHOLDER
-	}
 
-}
-focus = {
-	id = Liberate_Indochina
-	icon = GFX_focus_generic_support_the_left_right
-	cost = 1.00
-	prerequisite = {
-		focus = Red_China
-	}
-	x = 58
-	y = 7
-	completion_reward = {
-	   custom_effect_tooltip = PLACEHOLDER
-	}
-
-}
 focus = {
 	id = Strike_at_Britain
 	icon = GFX_focus_AST_never_gallipoli
 	cost = 10.00
 	prerequisite = {
-		focus = Liberate_India
-		focus = Liberate_Indochina
+		focus = Invasion_of_Afghanistan
 	}
 	prerequisite = {
 		focus = Dismantle_Syria
@@ -2474,4 +2430,4 @@ focus = {
 	}
 	
 
-
+}

@@ -782,10 +782,12 @@ country_event = { #NATIONALIST VICTORY#
 	    }
 	option = { #PEACEFULLY MERGE#
 	    name = france.11.a
-		set_global_flag = end_fra_civil_war
-		NFA = { dismantle_faction = yes }
-		annex_country = { target = IFA transfer_troops = yes }
-		annex_country = { target = RFA transfer_troops = yes }
+		ai_chance = { factor = 50 }
+		#set_global_flag = end_fra_civil_war
+		#NFA = { dismantle_faction = yes }
+		set_global_flag = FRA_cooperate_SPF
+		NFA = { country_event = { id = france.66 } }
+		if = { limit = { is_in_faction_with = RFA } RFA = { country_event = { id = france.68 } } }		
 		hidden_effect = { 
 		SPF = {
         remove_state_core = 14
@@ -816,6 +818,66 @@ country_event = { #NATIONALIST VICTORY#
         remove_state_claim = 557
         remove_state_claim = 556 
         remove_state_claim = 272
+		}	
+		SFA = {
+        remove_state_core = 14
+        remove_state_core = 30
+        remove_state_core = 15
+        remove_state_core = 16
+        remove_state_core = 29
+        remove_state_core = 24
+        remove_state_core = 33
+        remove_state_core = 25
+        remove_state_core = 19
+        remove_state_core = 31
+        remove_state_core = 22
+        remove_state_core = 23
+        remove_state_core = 18
+        remove_state_core = 21
+        remove_state_core = 735
+        remove_state_core = 32
+        remove_state_core = 20
+		remove_state_core = 17
+        remove_state_core = 18
+        remove_state_core = 27
+        remove_state_claim = 459
+        remove_state_claim = 460
+        remove_state_claim = 513
+        remove_state_claim = 514
+        remove_state_claim = 515
+        remove_state_claim = 557
+        remove_state_claim = 556 
+        remove_state_claim = 272
+		}	
+		SYA = {
+        remove_state_core = 14
+        remove_state_core = 30
+        remove_state_core = 15
+        remove_state_core = 16
+        remove_state_core = 29
+        remove_state_core = 24
+        remove_state_core = 33
+        remove_state_core = 25
+        remove_state_core = 19
+        remove_state_core = 31
+        remove_state_core = 22
+        remove_state_core = 23
+        remove_state_core = 18
+        remove_state_core = 21
+        remove_state_core = 735
+        remove_state_core = 32
+        remove_state_core = 20
+		remove_state_core = 17
+        remove_state_core = 18
+        remove_state_core = 27
+        remove_state_claim = 459
+        remove_state_claim = 460
+        remove_state_claim = 513
+        remove_state_claim = 514
+        remove_state_claim = 515
+        remove_state_claim = 557
+        remove_state_claim = 556 
+        remove_state_claim = 272
 		}
 		NFA = {
         remove_state_core = 14
@@ -906,6 +968,48 @@ country_event = { #NATIONALIST VICTORY#
         remove_state_claim = 557
         remove_state_claim = 556 
         remove_state_claim = 272
+		}
+      }		
+	}
+	
+	option = { #cooperate with RFA
+	    name = france.8.b
+		trigger = { is_in_faction_with = RFA }
+		ai_chance = { factor = 40 }
+		RFA = { country_event = { id = france.66 } }
+		remove_from_faction = RFA 
+		declare_war_on = { target = IFA type = civil_war }
+        set_global_flag = FRA_cooperate_RFA	
+		hidden_effect = {
+		SPF = {
+        remove_state_core = 14
+        remove_state_core = 30
+        remove_state_core = 15
+        remove_state_core = 16
+        remove_state_core = 29
+        remove_state_core = 24
+        remove_state_core = 33
+        remove_state_core = 25
+        remove_state_core = 19
+        remove_state_core = 31
+        remove_state_core = 22
+        remove_state_core = 23
+        remove_state_core = 18
+        remove_state_core = 21
+        remove_state_core = 735
+        remove_state_core = 32
+        remove_state_core = 20
+		remove_state_core = 17
+        remove_state_core = 18
+        remove_state_core = 27
+        remove_state_claim = 459
+        remove_state_claim = 460
+        remove_state_claim = 513
+        remove_state_claim = 514
+        remove_state_claim = 515
+        remove_state_claim = 557
+        remove_state_claim = 556 
+        remove_state_claim = 272
 		}	
 		SFA = {
         remove_state_core = 14
@@ -938,6 +1042,36 @@ country_event = { #NATIONALIST VICTORY#
         remove_state_claim = 272
 		}	
 		SYA = {
+        remove_state_core = 14
+        remove_state_core = 30
+        remove_state_core = 15
+        remove_state_core = 16
+        remove_state_core = 29
+        remove_state_core = 24
+        remove_state_core = 33
+        remove_state_core = 25
+        remove_state_core = 19
+        remove_state_core = 31
+        remove_state_core = 22
+        remove_state_core = 23
+        remove_state_core = 18
+        remove_state_core = 21
+        remove_state_core = 735
+        remove_state_core = 32
+        remove_state_core = 20
+		remove_state_core = 17
+        remove_state_core = 18
+        remove_state_core = 27
+        remove_state_claim = 459
+        remove_state_claim = 460
+        remove_state_claim = 513
+        remove_state_claim = 514
+        remove_state_claim = 515
+        remove_state_claim = 557
+        remove_state_claim = 556 
+        remove_state_claim = 272
+		}
+		IFA = {
         remove_state_core = 14
         remove_state_core = 30
         remove_state_core = 15
@@ -967,48 +1101,16 @@ country_event = { #NATIONALIST VICTORY#
         remove_state_claim = 556 
         remove_state_claim = 272
 		}		
-		SPF = {
-		remove_state_core = 26
-		remove_state_core = 16
-		remove_state_core = 24
-		remove_state_core = 20
-		}
-		NFA = {
-		remove_state_core = 15
-		remove_state_core = 30
-		remove_state_core = 14
-		remove_state_core = 29
-		}
-		RFA = {
-		remove_state_core = 18
-		remove_state_core = 27
-		remove_state_core = 17
-		}
-		IFA = {
-		remove_state_core = 33
-		remove_state_core = 23
-		remove_state_core = 25
-		}
-		SFA = {
-		remove_state_core = 19
-		remove_state_core = 31
-		remove_state_core = 22
-		}
-		SYA = {
-		remove_state_core = 735
-		remove_state_core = 21
-		remove_state_core = 32
-		}
-	  }
-	}
-	#option = { #BETRAYAL#
-	#    name = france.11.b
-	#	NFA = { dismantle_faction = yes }
-	#	NFA = { declare_war_on = { target = RFA type = civil_war } }
-	#	NFA = { declare_war_on = { target = IFA type = civil_war } }
-    #RFA = { declare_war_on = { target = IFA type = civil_war } }
-	#	ai_chance = { factor = 50 }
-    #}
+	  }		
+	}	
+	option = { #BETRAYAL#
+	    name = france.11.b
+		NFA = { dismantle_faction = yes }
+		NFA = { declare_war_on = { target = RFA type = civil_war } }
+		NFA = { declare_war_on = { target = IFA type = civil_war } }
+        RFA = { declare_war_on = { target = IFA type = civil_war } }
+		ai_chance = { factor = 30 }
+    }
 }
 
 country_event = { #Peaceful annexation by NFA #
@@ -1078,7 +1180,7 @@ country_event = { #NFA victory #
     }
 }
 
-country_event = { ######ITALIAN INTERVENTION IN THE CIVIL WAR##### ##desc change needed##
+country_event = { ######ITALIAN INTERVENTION IN THE CIVIL WAR#####
     id =  france.14
 	title = france.14.t
 	desc = france.14.d
@@ -1102,7 +1204,7 @@ country_event = { ######ITALIAN INTERVENTION IN THE CIVIL WAR##### ##desc change
 	}
 }
 
-country_event = { ########GERMANY WARNS ITALY######## ##desc change needed##
+country_event = { ########GERMANY WARNS ITALY########
     id = france.15
 	title = france.15.t
 	desc = france.15.d
@@ -2051,7 +2153,7 @@ country_event = {#Socialists invite us to coalition SFA
 		SPF = { country_event = { id = france.64 } }
 	}
 	option = {#refuse 
-		name = france.63.a 
+		name = france.63.b 
 		ai_chance = { factor = 55 }
 		SPF = { country_event = { id = france.65 } }
 	}
@@ -2062,7 +2164,7 @@ country_event = {#SFA agrees
 	title = france.64.t
 	desc = france.64.d 
 	is_triggered_only = yes 
-	option = {# 
+	option = {
 		name = france.64.a 
 		annex_country = { target = SFA transfer_troops = yes }
 		set_global_flag = FRA_cooperate_SFA
@@ -2074,8 +2176,48 @@ country_event = {#SFA refuses
 	title = france.65.t
 	desc = france.65.d 
 	is_triggered_only = yes 
-	option = {# 
+	option = {
 		name = france.65.a 
 		declare_war_on = { target = SFA type = civil_war }
+	}
+}
+
+country_event = {#Salvation Front invite us to coalition RFA
+	id = france.66 
+	title = france.66.t
+	desc = france.66.d 
+	is_triggered_only = yes 
+	option = {#agree 
+		name = france.66.a 
+		ai_chance = { factor = 65 }
+		NFA = { country_event = { id = france.67 } }
+	}
+	option = {#refuse 
+		name = france.66.b
+		ai_chance = { factor = 35 }
+		NFA = { country_event = { id = france.68 } }
+	}
+}
+
+country_event = {#RFA agrees
+	id = france.67
+	title = france.67.t
+	desc = france.67.d 
+	is_triggered_only = yes 
+	option = { 
+		name = france.67.a 
+		annex_country = { target = SFA transfer_troops = yes }
+		set_global_flag = FRA_cooperate_RFA
+	}
+}
+
+country_event = {#RFA refuses
+	id = france.68
+	title = france.68.t
+	desc = france.68.d 
+	is_triggered_only = yes 
+	option = {
+		name = france.68.a 
+		declare_war_on = { target = RFA type = civil_war }
 	}
 }

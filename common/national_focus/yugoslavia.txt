@@ -1,6 +1,5 @@
 ########################################
 # Yugoslavian Focus Tree - By HappyNTH #
-# fuck you happy
 ########################################
 
 focus_tree = {

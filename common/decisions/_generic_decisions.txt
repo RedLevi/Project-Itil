@@ -43,7 +43,7 @@ political_actions = {
 
 		complete_effect = {
 			set_country_flag = racing_for_the_bomb
-			add_ideas = race_for_the_bomb
+			#add_ideas = race_for_the_bomb
 		}
 
 		ai_will_do = {
@@ -106,10 +106,10 @@ political_actions = {
 			always = yes
 		}
 
-		remove = {
-			has_war = yes
-			has_war_support < 0.05
-		}
+		#remove = { ##??
+		#	has_war = yes
+		#	has_war_support < 0.05
+		#}
 
 		fire_only_once = no
 
@@ -739,61 +739,61 @@ special_projects = {
 
 war_measures = {
 	
-	emergency_factory_conversion_defensive = {
+	#emergency_factory_conversion_defensive = {
+    #
+	#	icon = generic_industry
+    #
+	#	available = {
+	#		num_of_civilian_factories > 5 #Change this if amount of factories change
+	#	}
+    #
+	#	visible = {
+	#		has_defensive_war = yes
+	#		has_offensive_war = no			
+	#	}
+    #
+	#	fire_only_once = no
+    #
+	#	days_re_enable = 90
+    #
+	#	cost = 100
+    #
+	#	complete_effect = {
+	#		replace_civ_with_arms_factories = yes
+	#		add_war_support = -0.05
+	#	}
+	#	ai_will_do = {
+	#		factor = 0
+	#	}
+	#}
 
-		icon = generic_industry
-
-		available = {
-			num_of_civilian_factories > 5 #Change this if amount of factories change
-		}
-
-		visible = {
-			has_defensive_war = yes
-			has_offensive_war = no			
-		}
-
-		fire_only_once = no
-
-		days_re_enable = 90
-
-		cost = 100
-
-		complete_effect = {
-			replace_civ_with_arms_factories = yes
-			add_war_support = -0.05
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
-	emergency_factory_conversion_offensive = {
-
-		icon = generic_industry
-
-		available = {
-			num_of_civilian_factories > 5 #Change this if amount of factories change
-		}
-
-		visible = {
-			has_offensive_war = yes
-		}
-
-		fire_only_once = no
-
-		days_re_enable = 90
-
-		cost = 100
-
-		complete_effect = {
-			replace_civ_with_arms_factories = yes
-			add_war_support = -0.05
-			add_stability = -0.03
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
+	#emergency_factory_conversion_offensive = {
+    #
+	#	icon = generic_industry
+    #
+	#	available = {
+	#		num_of_civilian_factories > 5 #Change this if amount of factories change
+	#	}
+    #
+	#	visible = {
+	#		has_offensive_war = yes
+	#	}
+    #
+	#	fire_only_once = no
+    #
+	#	days_re_enable = 90
+    #
+	#	cost = 100
+    #
+	#	complete_effect = {
+	#		replace_civ_with_arms_factories = yes
+	#		add_war_support = -0.05
+	#		add_stability = -0.03
+	#	}
+	#	ai_will_do = {
+	#		factor = 0
+	#	}
+	#}
 
 	desperate_defense = {
 
@@ -876,9 +876,6 @@ war_measures = {
         }
         cost = 100
         days_remove = -1
-        remove = {
-            has_war = no
-        }
         modifier = {
             conscription = 0.03
             stability_factor = -0.05

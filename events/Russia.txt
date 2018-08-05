@@ -1,4 +1,4 @@
-add_namespace = rus
+﻿add_namespace = rus
 
 country_event = { #intro event 
 	id = rus.1

@@ -1,4 +1,4 @@
-add_namespace = man 
+﻿add_namespace = man 
 
 country_event = { #intro event
 	id = man.1

@@ -117,32 +117,32 @@ ideas = {
 				#	}
 				#}
 
-				if = {
-					limit = {
-						original_tag = AST
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = AST_citizen_military_forces
-					has_completed_focus = AST_fight_work_or_perish
-				}
+				#if = {
+				#	limit = {
+				#		original_tag = AST
+				#		has_dlc = "Together for Victory"
+				#	}
+				#	has_completed_focus = AST_citizen_military_forces
+				#	has_completed_focus = AST_fight_work_or_perish
+				#}
 
-				if = {
-					limit = {
-						original_tag = CAN
-						has_dlc = "Together for Victory"
-					}
-					OR = {
-						has_completed_focus = CAN_compromise_with_quebec
-						has_completed_focus = CAN_forced_quebec_conscription
-					}					
-				}
-				if = {
-					limit = {
-						original_tag = RAJ
-						has_dlc = "Together for Victory"
-					}
-					is_subject = no
-				}
+				#if = {
+				#	limit = {
+				#		original_tag = CAN
+				#		has_dlc = "Together for Victory"
+				#	}
+				#	OR = {
+				#		has_completed_focus = CAN_compromise_with_quebec
+				#		has_completed_focus = CAN_forced_quebec_conscription
+				#	}					
+				#}
+				#if = {
+				#	limit = {
+				#		original_tag = RAJ
+				#		has_dlc = "Together for Victory"
+				#	}
+				#	is_subject = no
+				#}
 
 			}
 		
@@ -175,32 +175,32 @@ ideas = {
 				#		ratio > 1
 				#	}
 				#}
-				if = {
-					limit = {
-						original_tag = AST
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = AST_citizen_military_forces
-					has_completed_focus = AST_fight_work_or_perish
-				}
+				#if = {
+				#	limit = {
+				#		original_tag = AST
+				#		has_dlc = "Together for Victory"
+				#	}
+				#	has_completed_focus = AST_citizen_military_forces
+				#     has_completed_focus = AST_fight_work_or_perish
+				#}
 
-				if = {
-					limit = {
-						original_tag = CAN
-						has_dlc = "Together for Victory"
-					}
-					OR = {
-						has_completed_focus = CAN_compromise_with_quebec
-						has_completed_focus = CAN_forced_quebec_conscription
-					}
-				}
-				if = {
-					limit = {
-						original_tag = RAJ
-						has_dlc = "Together for Victory"
-					}
-					is_subject = no
-				}
+				#if = {
+				#	limit = {
+				#		original_tag = CAN
+				#		has_dlc = "Together for Victory"
+				#	}
+				#	OR = {
+				#		has_completed_focus = CAN_compromise_with_quebec
+				#		has_completed_focus = CAN_forced_quebec_conscription
+				#	}
+				#}
+				#if = {
+				#	limit = {
+				#		original_tag = RAJ
+				#		has_dlc = "Together for Victory"
+				#	}
+				#	is_subject = no
+				#}
 
 			}
 			

@@ -708,7 +708,7 @@ ideas = {
 		   always = no
        }
 
-       emoval_cost = -1
+       removal_cost = -1
 
         modifier = {
        	   research_time_factor = -0.05
@@ -784,55 +784,55 @@ Head_of_Government = {
    }
   }
 
-   Minister_Of_Internal = {
-
-   Mikhail_Tomsky = {
-
-     allowed = {
-        original_tag = SOV
-     }
-     available = {
-        NOT = {
-           has_country_flag = Tomsky_Dead
-        }
-     }
-     picture = GFX_idea_Mikhail_Tomsky
-
-     traits = { trade_unionist }
-   }
-
-   Sergey_Kirov = {
-
-   allowed = {
-      original_tag = SOV
-   }
-   available = {
-      NOT = {
-         has_country_flag = kirov_dead
-      }
-   }
-   picture = GFX_idea_Sergey_Kirov
-
-   traits = { popular_figurehead }
-
-   }
-
-   Grigory_Zinoviev = {
-
-   allowed = {
-      original_tag = SOV
-   }
-   available = {
-      NOT = {
-         has_country_flag = zinoviev_dead
-      }
-   }
-   picture = GFX_idea_Grigory_Zinoviev
-
-   traits = { communist_revolutionary }
-
-   }
-   }
+ #  Minister_of_Internal = {
+ #
+ #  Mikhail_Tomsky = {
+ #
+ #    allowed = {
+ #       original_tag = SOV
+ #    }
+ #    available = {
+ #      NOT = {
+ #          has_country_flag = Tomsky_Dead
+ #       }
+ #    }
+ #    picture = GFX_idea_Mikhail_Tomsky
+ #
+ #    traits = { trade_unionist }
+ #  }
+ #
+ #  Sergey_Kirov = {
+ #
+ #  allowed = {
+ #     original_tag = SOV
+ #  }
+ #  available = {
+ #     NOT = {
+ #       has_country_flag = kirov_dead
+ #     }
+ #  }
+ #  picture = GFX_idea_Sergey_Kirov
+ #
+ #  traits = { popular_figurehead }
+ #
+ #  }
+ #
+ #  Grigory_Zinoviev = {
+ #
+ #  allowed = {
+ #     original_tag = SOV
+ #  }
+ #  available = {
+ #     NOT = {
+ #        has_country_flag = zinoviev_dead
+ #     }
+ #  }
+ #  picture = GFX_idea_Grigory_Zinoviev
+ #
+ #  traits = { communist_revolutionary }
+ #
+ #  }
+ #  }
 
    political_advisor = {
 		mikhail_kalinin = {

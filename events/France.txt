@@ -16,6 +16,7 @@ country_event = { #INTRO EVENT#
 
 	option = {
 	    name = france.1.a
+		complete_national_focus = FRA_political_crisis
 		country_event = { id = france.3  days = 10 }
 		}
 	}
@@ -1615,8 +1616,7 @@ country_event = { #Economic recession after CW and clearup#
 	
     option = {
        name = france.40.a
-	   remove_idea = { france_torn }
-	   unlock_national_focus = FRA_civil_war
+	   unlock_national_focus = FRA_civil_war_ends
 	   unlock_national_focus = FRA_economic_recovery
 	   unlock_national_focus = FRA_army_rebuild
 	   unlock_national_focus = FRA_naval_air_command
@@ -1700,9 +1700,9 @@ country_event = { #Soviet Naval Plan
     option = {
        name = france.45.a #OK
        ai_chance = { factor = 50 }
-	   send_equipment = { send_equipment = { target = FRA type = cruiser_equipment amount = 50 } }
-	   send_equipment = { send_equipment = { target = FRA type = battleship_equipment amount = 15 } }
-	   send_equipment = { send_equipment = { target = FRA type = destroyer_equipment amount = 15 } }
+	   send_equipment = { target = FRA type = cruiser_equipment amount = 50 }
+	   send_equipment = { target = FRA type = battleship_equipment amount = 15 }
+	   send_equipment = { target = FRA type = destroyer_equipment amount = 15 }
        FRA = { country_event = { id = france.48 days = 7 } }
 	}
     option = {
@@ -1723,9 +1723,9 @@ country_event = { #British Naval Plan
     option = {
        name = france.46.a #OK
        ai_chance = { factor = 50 }
-	   send_equipment = { send_equipment = { target = FRA type = cruiser_equipment amount = 50 } }
-	   send_equipment = { send_equipment = { target = FRA type = battleship_equipment amount = 15 } }
-	   send_equipment = { send_equipment = { target = FRA type = destroyer_equipment amount = 15 } }
+	   send_equipment = { target = FRA type = cruiser_equipment amount = 50 }
+	   send_equipment = { target = FRA type = battleship_equipment amount = 15 }
+	   send_equipment = { target = FRA type = destroyer_equipment amount = 15 }
 	   FRA = { country_event = { id = france.48 days = 7 } }
     }
     option = {
@@ -1746,9 +1746,9 @@ country_event = { #Japanese Naval Plan
     option = {
        name = france.47.a #OK
        ai_chance = { factor = 50 }
-	   send_equipment = { send_equipment = { target = FRA type = cruiser_equipment amount = 50 } }
-	   send_equipment = { send_equipment = { target = FRA type = battleship_equipment amount = 15 } }
-	   send_equipment = { send_equipment = { target = FRA type = destroyer_equipment amount = 15 } }
+	   send_equipment = { target = FRA type = cruiser_equipment amount = 50 }
+	   send_equipment = { target = FRA type = battleship_equipment amount = 15 }
+	   send_equipment = { target = FRA type = destroyer_equipment amount = 15 }
        FRA = { country_event = { id = france.48 days = 7 } }
 	}
     option = {
@@ -1794,9 +1794,9 @@ country_event = { #Soviet Air Plan
 	
     option = {
        name = france.50.a #OK
-	   send_equipment = { send_equipment = { target = FRA type = fighter_equipment amount = 50 } }
-	   send_equipment = { send_equipment = { target = FRA type = tac_bomber_equipment amount = 50 } }
-	   send_equipment = { send_equipment = { target = FRA type = str_bomber_equipment amount = 50 } }
+	   send_equipment = { target = FRA type = fighter_equipment amount = 50 }
+	   send_equipment = { target = FRA type = tac_bomber_equipment amount = 50 }
+	   send_equipment = { target = FRA type = str_bomber_equipment amount = 50 }
     }
 }
 
@@ -1810,9 +1810,9 @@ country_event = { #British Air Plan
 	
     option = {
        name = france.51.a #OK
-	   send_equipment = { send_equipment = { target = FRA type = fighter_equipment amount = 50 } }
-	   send_equipment = { send_equipment = { target = FRA type = tac_bomber_equipment amount = 50 } }
-	   send_equipment = { send_equipment = { target = FRA type = str_bomber_equipment amount = 50 } }
+	   send_equipment = { target = FRA type = fighter_equipment amount = 50 }
+	   send_equipment = { target = FRA type = tac_bomber_equipment amount = 50 }
+	   send_equipment = { target = FRA type = str_bomber_equipment amount = 50 }
     }
 }
 
@@ -1847,7 +1847,7 @@ country_event = { #Alsace-Lorraine transfer
 	   transfer_state = 28 #Alsace
 	   hidden_effect = {
 	   set_global_flag = accepted_alsace_and_now_peace
-	   complete_national_focus = { FRA_devil_alliance } #alliance
+	   complete_national_focus = FRA_devil_alliance #alliance
 	   }
 	   }
     }
@@ -2088,7 +2088,7 @@ country_event = {#civil war for NFA
 			}
 		}
 		option = {
-	    name = france.62.3 #IFA
+	    name = france.62.c #IFA
 	    news_event = flv.2
 		hidden_effect = {
 		    set_global_flag = fcw_start

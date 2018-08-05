@@ -2351,7 +2351,7 @@ focus = {
 		      name = SOV_tac_bombers
 		      bonus = 0.3
 		      uses = 1
-		      category = cat_tactical_bomber
+		      category = tactical_bomber
 		   }
 		}
 

@@ -40,7 +40,7 @@ ideas = {
 			traits = { smooth_talking_charmer }
 
 			available = {
-				has_completed_focus = AST_never_another_gallipoli
+				#has_completed_focus = AST_never_another_gallipoli
 			}
 		}
 
@@ -59,7 +59,7 @@ ideas = {
 			available = {
 				if = {
 					limit = { has_dlc = "Together for Victory" }
-					has_completed_focus = AST_support_the_policy_of_appeasement
+					#has_completed_focus = AST_support_the_policy_of_appeasement
 				}
 			}
 		}
@@ -89,37 +89,37 @@ ideas = {
 			traits = { compassionate_gentleman }
 		}
 
-		AST_generic_fascist_demagogue = {
-			
-			allowed = {
-				original_tag = AST
-				
-			}
-			available = {
-				if = {
-					limit = { has_dlc = "Together for Victory" }
-					has_completed_focus = AST_support_the_centre_party
-				}
-			}
-
-			picture = generic_political_advisor_europe_4
-			
-			traits = { fascist_demagogue }
-		
-			on_add = {
-				country_event = political.7
-			}
-		
-			do_effect = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-		
-			ai_will_do = {
-				factor = 0
-			}
-		}
+		#AST_generic_fascist_demagogue = {
+		#	
+		#	allowed = {
+		#		original_tag = AST
+		#		
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = { has_dlc = "Together for Victory" }
+		#			#has_completed_focus = AST_support_the_centre_party
+		#		}
+		#	}
+        #
+		#	picture = generic_political_advisor_europe_4
+		#	
+		#	traits = { fascist_demagogue }
+		#
+		#	on_add = {
+		#		country_event = political.7
+		#	}
+		#
+		#	do_effect = {
+		#		NOT = {
+		#			has_government = fascism
+		#		}
+		#	}
+		#
+		#	ai_will_do = {
+		#		factor = 0
+		#	}
+		#}
 
 		AST_lance_sharkey = {
 			
@@ -130,7 +130,7 @@ ideas = {
 			available = {
 				if = {
 					limit = { has_dlc = "Together for Victory" }
-					has_completed_focus = AST_empower_the_workers
+					#has_completed_focus = AST_empower_the_workers
 				}
 			}
 
@@ -274,7 +274,7 @@ high_command = {
 		}
 		cost = 100
 		available = {
-				has_completed_focus = AST_australian_army_catering_corps
+				#has_completed_focus = AST_australian_army_catering_corps
 			}
 
 		traits = { army_logistics_2 }
@@ -575,7 +575,7 @@ high_command = {
 			}
 
 			available = {
-				has_completed_focus = AST_commonwealth_aircraft_corporation
+				#has_completed_focus = AST_commonwealth_aircraft_corporation
 				is_subject_of = ENG
 			}
 			

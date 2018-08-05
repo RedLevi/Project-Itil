@@ -23,7 +23,8 @@ focus_tree = {
 		}
 		
         available_if_capitulated = no
-		bypass = { date > date > 1936.4.25 }
+		available = { always = no }
+		#bypass = { date > 1936.4.25 }
 
 		completion_reward = {
 			add_political_power = -150
@@ -116,7 +117,7 @@ focus_tree = {
 	    desc = ""
 	    picture = "Charles_Maurras.dds"
 	    expire = "1965.1.1"
-	    ideology = national_integralism
+	    ideology = integralism
 	    traits = {}		
 		}
 		}		
@@ -1512,7 +1513,7 @@ focus_tree = {
 		add_tech_bonus = {
 				ahead_reduction = 0.5
 				uses = 1
-				category = motor
+				category = motorized_equipment
 		}		
 		}
 	}

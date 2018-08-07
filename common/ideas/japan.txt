@@ -696,7 +696,7 @@ ideas = {
 
 			do_effect = {
 				NOT = {
-					has_government = fascism
+					has_government = national_integralism
 				}
 			}
 
@@ -1214,7 +1214,7 @@ ideas = {
 				original_tag = JAP
 			}
 			available = {
-				has_completed_focus = synth_oil_focus
+				#has_completed_focus = synth_oil_focus
 			}
 
 			research_bonus = {

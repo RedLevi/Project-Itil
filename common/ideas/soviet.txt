@@ -742,7 +742,7 @@ Head_of_Government = {
         }
         available = {
            NOT = {
-              has_completed_focus = Right_Dissolution
+              #has_completed_focus = Right_Dissolution
            }
           }
         picture = GFX_idea_Alexei_Rykov
@@ -759,7 +759,7 @@ Head_of_Government = {
        }
        available = {
           NOT = {
-             has_completed_focus = Temporary_General_Secretary
+             #has_completed_focus = Temporary_General_Secretary
           }
        }
        picture = GFX_idea_Andrei_Bubnov

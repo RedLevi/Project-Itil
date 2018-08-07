@@ -164,7 +164,7 @@ ideas = {
 				original_tag = "FRA"
 			}			
 			available = {
-				has_completed_focus = FRA_leftist_rhetoric
+				#has_completed_focus = FRA_leftist_rhetoric
 			}
 			
 			traits = { communist_revolutionary }
@@ -191,7 +191,7 @@ ideas = {
 				original_tag = "FRA"
 			}
 			available ={
-				has_completed_focus = FRA_right_wing_rhetoric
+				#has_completed_focus = FRA_right_wing_rhetoric
 			}
 			
 			traits = { fascist_demagogue }
@@ -364,7 +364,7 @@ ideas = {
 				original_tag = FRA
 			}
 			available = {
-				has_completed_focus = FRA_aggressive_focus
+				#has_completed_focus = FRA_aggressive_focus
 			}
 
 			cost = 50
@@ -383,7 +383,7 @@ ideas = {
 				original_tag = FRA
 			}
 			available = {
-				has_completed_focus = FRA_defensive_focus
+				#has_completed_focus = FRA_defensive_focus
 			}
 
 			cost = 50
@@ -719,7 +719,7 @@ ideas = {
 			picture = generic_tank_manufacturer_2
 
 			available = {
-				has_completed_focus = FRA_army_reform
+				#has_completed_focus = FRA_army_reform
 			}
 						
 			allowed = {

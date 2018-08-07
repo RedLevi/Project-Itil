@@ -11,7 +11,7 @@ ideas = {
 			available = {
 				if = {
 					limit = { has_dlc = "Together for Victory" }	
-					has_completed_focus = RAJ_all_india_forward_bloc
+					#has_completed_focus = RAJ_all_india_forward_bloc
 				}
 			}
 
@@ -39,7 +39,7 @@ ideas = {
 			available = {
 				if = {
 					limit = { has_dlc = "Together for Victory" }	
-					has_completed_focus = RAJ_all_india_forward_bloc
+					#has_completed_focus = RAJ_all_india_forward_bloc
 				}
 			}
 
@@ -48,7 +48,7 @@ ideas = {
 				
 			do_effect = {
 				NOT = {
-					has_government = fascism
+					has_government = national_integralism
 				}
 			}
 		
@@ -181,7 +181,7 @@ ideas = {
 		RAJ_homi_j_bhabha = {
 					
 			available = {
-				has_completed_focus = RAJ_institute_of_fundamental_research
+				#has_completed_focus = RAJ_institute_of_fundamental_research
 			}
 
 			allowed = {

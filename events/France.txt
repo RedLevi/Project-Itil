@@ -436,7 +436,7 @@ country_event = { #NATIONALIST LOSS#SPF
 		ai_chance = { factor = 30 }
 		set_global_flag = FRA_cooperate_SPF
 		SFA = { country_event = { id = france.63 } }
-		if = { limit = { is_in_faction_with = SYA } SYA = { country_event = { id = france.66 } } }
+		if = { limit = { is_in_faction_with = SYA } SYA = { country_event = { id = france.69 } } }
         		
 		hidden_effect = { 
 		
@@ -538,7 +538,7 @@ country_event = { #NATIONALIST LOSS#SPF
 	    name = france.8.b
 		trigger = { is_in_faction_with = SYA }
 		ai_chance = { factor = 40 }
-		SYA = { country_event = { id = france.66 } }
+		SYA = { country_event = { id = france.69 } }
 		remove_from_faction = SFA 
 		declare_war_on = { target = SFA type = civil_war }
         set_global_flag = FRA_cooperate_SPF		
@@ -645,11 +645,9 @@ country_event = { #NATIONALIST LOSS#SPF
 		SFA = { dismantle_faction = yes }
 		SPF = { declare_war_on = { target = SFA type = civil_war } }
 		SPF = { declare_war_on = { target = SYA type = civil_war } }
-    SFA = { declare_war_on = { target = SYA type = civil_war } }
-		}
-	}
+        SFA = { declare_war_on = { target = SYA type = civil_war } }
+		hidden_effect = {
 	SPF = {
-		
         remove_state_core = 14
         remove_state_core = 30
         remove_state_core = 15
@@ -739,6 +737,9 @@ country_event = { #NATIONALIST LOSS#SPF
         remove_state_claim = 556 
         remove_state_claim = 272
 		}
+	  }
+	}
+}
 
 country_event = { #SPF victory
     id = france.10
@@ -786,9 +787,9 @@ country_event = { #NATIONALIST VICTORY#
 		ai_chance = { factor = 50 }
 		#set_global_flag = end_fra_civil_war
 		#NFA = { dismantle_faction = yes }
-		set_global_flag = FRA_cooperate_SPF
+		set_global_flag = FRA_cooperate_RFA
 		NFA = { country_event = { id = france.66 } }
-		if = { limit = { is_in_faction_with = RFA } RFA = { country_event = { id = france.68 } } }		
+		if = { limit = { is_in_faction_with = IFA } IFA = { country_event = { id = france.72 } } }		
 		hidden_effect = { 
 		SPF = {
         remove_state_core = 14
@@ -1591,12 +1592,13 @@ country_event = { #puppet_fix
                 tag = NFA
              }
              is_puppet_of = ITA
-          }
+	      }
           SYA = {
              annex_country = {
-                target = PREV             }
+                target = PREV   
+		    }
           }
-       }
+		}
     }
 }
 
@@ -2182,7 +2184,7 @@ country_event = {#SFA refuses
 	}
 }
 
-country_event = {#Salvation Front invite us to coalition RFA
+country_event = {#Salvation Front invites us to coalition RFA
 	id = france.66 
 	title = france.66.t
 	desc = france.66.d 
@@ -2206,7 +2208,7 @@ country_event = {#RFA agrees
 	is_triggered_only = yes 
 	option = { 
 		name = france.67.a 
-		annex_country = { target = SFA transfer_troops = yes }
+		annex_country = { target = RFA transfer_troops = yes }
 		set_global_flag = FRA_cooperate_RFA
 	}
 }
@@ -2219,5 +2221,85 @@ country_event = {#RFA refuses
 	option = {
 		name = france.68.a 
 		declare_war_on = { target = RFA type = civil_war }
+	}
+}
+
+country_event = {#Socialists invite us to coalition SYA
+	id = france.69
+	title = france.69.t
+	desc = france.69.d 
+	is_triggered_only = yes 
+	option = {#agree 
+		name = france.69.a 
+		ai_chance = { factor = 45 }
+		SYA = { country_event = { id = france.64 } }
+	}
+	option = {#refuse 
+		name = france.69.b 
+		ai_chance = { factor = 55 }
+		SYA = { country_event = { id = france.65 } }
+	}
+}
+
+country_event = {#SYA agrees
+	id = france.70
+	title = france.70.t
+	desc = france.70.d 
+	is_triggered_only = yes 
+	option = {
+		name = france.70.a 
+		annex_country = { target = SYA transfer_troops = yes }
+		set_global_flag = FRA_cooperate_SYA
+	}
+}
+
+country_event = {#SYA refuses
+	id = france.71
+	title = france.71.t
+	desc = france.71.d 
+	is_triggered_only = yes 
+	option = {
+		name = france.71.a 
+		declare_war_on = { target = SYA type = civil_war }
+	}
+}
+
+country_event = {#Salvation Front invites us to coalition IFA
+	id = france.72
+	title = france.72.t
+	desc = france.72.d 
+	is_triggered_only = yes 
+	option = {#agree 
+		name = france.72.a 
+		ai_chance = { factor = 45 }
+		IFA = { country_event = { id = france.64 } }
+	}
+	option = {#refuse 
+		name = france.72.b 
+		ai_chance = { factor = 55 }
+		IFA = { country_event = { id = france.65 } }
+	}
+}
+
+country_event = {#IFA agrees
+	id = france.73
+	title = france.73.t
+	desc = france.73.d 
+	is_triggered_only = yes 
+	option = {
+		name = france.73.a 
+		annex_country = { target = IFA transfer_troops = yes }
+		set_global_flag = FRA_cooperate_IFA
+	}
+}
+
+country_event = {#IFA refuses
+	id = france.74
+	title = france.74.t
+	desc = france.74.d 
+	is_triggered_only = yes 
+	option = {
+		name = france.74.a 
+		declare_war_on = { target = IFA type = civil_war }
 	}
 }

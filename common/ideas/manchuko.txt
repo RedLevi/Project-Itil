@@ -18,6 +18,69 @@ ideas = {
 		}
 
        }
+       MAN_leftist = {
+          picture = jap_the_unthinkable_option
+          removal_cost = -1
+
+          allowed = {
+			always = no
+		}
+
+        modifier = {
+		 	communism_drift = 0.025
+		}
+
+       } 
+       MAN_manetsu = {
+          picture = ast_all_in
+          removal_cost = -1
+
+          allowed = {
+			always = no
+		}
+
+        modifier = {
+         	 stability_factor = -0.05  
+		 	 production_speed_buildings_factor = 0.075
+		 	 production_speed_infrastructure_factor = 0.1   
+
+		}
+
+       } 
+       MAN_pro_japanese_laws = {
+          picture = state_shintoism
+          removal_cost = -1
+
+          allowed = {
+			always = no
+		}
+
+        modifier = {
+             stability_factor = -0.05  
+             conscription_factor = -0.05 
+         	 political_power_gain = 0.1 
+             political_advisor_cost_factor = -0.25 
+             drift_defence_factor = 0.1  
+
+		}
+
+       }  
+       MAN_manetsu_1 = {
+          picture = ast_all_in
+          removal_cost = -1
+
+          allowed = {
+			always = no
+		}
+
+        modifier = {
+         	 stability_factor = -0.025  
+		 	 production_speed_buildings_factor = 0.05
+		 	 production_speed_infrastructure_factor = 0.025   
+
+		}
+
+       }       
     }
 
 	political_advisor = {

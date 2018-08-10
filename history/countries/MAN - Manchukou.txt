@@ -2,10 +2,25 @@
 
 oob = "MAN_1936"
 
+set_convoys = 30
+set_stability = 0.35
+set_war_support = 0.2 
+set_research_slots = 3
+
 set_technology = {
 	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
 	gw_artillery = 1
+	gwtank = 1
+	cv_early_fighter = 1
 	
+}
+
+add_ideas = {
+    MAN_leftist
+    MAN_manetsu
+    MAN_pro_japanese_laws
 }
 
 set_politics = {
@@ -20,11 +35,11 @@ set_politics = {
 		}
 
 		liberalism = {
-			popularity = 15
+			popularity = 17
 		}
 		
 		communism = {
-			popularity = 10
+			popularity = 8
 		}
 		
 		socialism = {
@@ -59,6 +74,10 @@ create_corps_commander = {
 	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
 	traits = {  }
 	skill = 2
+	attack_skill = 2
+    defense_skill = 2
+    planning_skill = 1
+    logistics_skill = 2
 	
 }
 
@@ -67,6 +86,10 @@ create_corps_commander = {
 	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
 	traits = {  }
 	skill = 2
+	attack_skill = 3
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 3
 	
 }
 
@@ -75,6 +98,10 @@ create_corps_commander = {
 	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
 	traits = { }
 	skill = 3
+	attack_skill = 4
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 4
 }
 
 1939.1.1 = {

@@ -91,6 +91,21 @@ bookmarks = {
 			AME_internal_party_focus 
 			}
 		}
+		"MAN"={
+		    minor = yes
+			history = "MAN_GATHERING_STORM_DESC"
+			ideology = absolutism
+			ideas = {
+				MAN_leftist
+				MAN_manetsu
+				MAN_pro_japanese_laws
+			}
+			focuses = {
+			MAN_mamoru_path
+			MAN_yosukes_path
+			MAN_zhang_path
+			}
+		}
 
 		"---"={
 			history = "OTHER_GATHERING_STORM_DESC"

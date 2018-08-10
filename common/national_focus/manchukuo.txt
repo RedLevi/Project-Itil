@@ -1,1 +1,702 @@
+focus_tree = {
+	id = manchurian_state_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = MAN
+		}
+	}
+
+continuous_focus_position = { x = 50 y = 1600 }	
+
+default = no
+	
+	
+	focus = {
+		
+		id = MAN_begin
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 20
+		y = 0 
+		cost = 5 
+		available_if_capitulated = no
+		
+		completion_reward = {
+		add_stability = 0.05
+        715 = {
+        add_extra_state_shared_building_slots = 4
+			if = {
+				limit = { is_controlled_by = MAN }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		714 = {
+		add_extra_state_shared_building_slots = 4
+			if = {
+				limit = { is_controlled_by = MAN }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_a_new_leader
+		icon = GFX_goal_generic_demand_territory
+		x = 20
+		y = 1
+		cost = 5	
+        prerequisite = { focus = MAN_begin }
+		available_if_capitulated = no
+		completion_reward = {
+
+        country_event = { id = man.3 }	
+
+		}
+	}
+
+	focus = {
+
+	    id = MAN_zhang_path
+		icon = GFX_focus_man_5
+		x = 45
+		y = 2
+		cost = 0	
+        prerequisite = { focus = MAN_a_new_leader }
+         mutually_exclusive = { focus = MAN_yosukes_path focus = MAN_mamoru_path  }
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_yosukes_path
+		icon = GFX_focus_man_4
+		x = 32
+		y = 2
+		cost = 0	
+        prerequisite = { focus = MAN_a_new_leader }
+        mutually_exclusive = { focus = MAN_mamoru_path_path focus = MAN_zhang_path  }
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_increase_power_yos
+		icon = GFX_focus_man_4
+		x = 32
+		y = 3
+		cost = 0	
+        prerequisite = { focus = MAN_yosukes_path }
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_hunt_leftist
+		icon = GFX_focus_man_4
+		x = 29
+		y = 4
+		cost = 0	
+        prerequisite = { focus = MAN_increase_power_yos }
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_force_labour
+		icon = GFX_focus_man_4
+		x = 36
+		y = 4
+		cost = 0	
+        prerequisite = { focus = MAN_increase_power_yos }
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_chinese_resource_plumping
+		icon = GFX_focus_man_4
+		x = 36
+		y = 5
+		cost = 0	
+        prerequisite = { focus = MAN_force_labour }
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_chinese_kannonenfutter
+		icon = GFX_focus_man_4
+		x = 38
+		y = 5
+		cost = 0	
+        prerequisite = { focus = MAN_increase_power_of_military }
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_increase_power_of_military
+		icon = GFX_focus_man_4
+		x = 38
+		y = 4
+		cost = 0	
+        prerequisite = { focus = MAN_increase_power_yos }
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_mamoru_path
+		icon = GFX_focus_man_2
+		x = 8 
+		y = 2
+		cost = 0	
+        prerequisite = { focus = MAN_a_new_leader }
+        mutually_exclusive = { focus = MAN_yosukes_path focus = MAN_zhang_path  }
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_install_parliamant
+		icon = GFX_goal_support_democracy
+		x = 10
+		y = 6
+		cost = 5	
+        prerequisite = { focus = MAN_decentralize_manetsu }
+        prerequisite = { focus = MAN_establish_a_constitution }
+        prerequisite = { focus = MAN_allow_political_parties }
+        prerequisite = { focus = MAN_civil_law }
+		available_if_capitulated = no
+		
+		completion_reward = {
+		add_poltical_power = 150
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_new_laws
+		icon = GFX_focus_ame_10
+		x = 9
+		y = 3
+		cost = 5	
+        prerequisite = { focus = MAN_mamoru_path }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_free_press
+		icon = GFX_goal_generic_radar
+		x = 8
+		y = 4
+		cost = 5	
+        prerequisite = { focus = MAN_new_laws }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_more_ministers
+		icon = GFX_focus_generic_self_management
+		x = 10
+		y = 4
+		cost = 5	
+        prerequisite = { focus = MAN_new_laws }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_civil_law	
+		icon =  GFX_goal_generic_defence
+		x = 7
+		y = 5
+		cost = 5	
+        prerequisite = { focus = MAN_more_ministers }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_allow_political_parties	
+		icon =  GFX_goal_generic_alliance
+		x = 9
+		y = 5
+		cost = 5	
+        prerequisite = { focus = MAN_more_ministers }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_establish_a_constitution
+		icon =  GFX_goal_generic_forceful_treaty
+		x = 11
+		y = 5
+		cost = 5	
+        prerequisite = { focus = MAN_more_ministers }
+        prerequisite = { focus = MAN_free_press }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_critize_manetsu
+		icon =  GFX_goal_generic_construction2
+		x = 13
+		y = 3
+		cost = 5	
+        prerequisite = { focus = MAN_mamoru_path }
+		available_if_capitulated = no
+		
+		completion_reward = {
+        swap_ideas = {
+        add_idea = MAN_manetsu_1
+        remove_idea = MAN_manetsu
+        }
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_lower_manetsu
+		icon =  GFX_goal_generic_neutrality_focus
+		x = 13
+		y = 4
+		cost = 5	
+        prerequisite = { focus = MAN_critize_manetsu }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_decentralize_manetsu
+		icon =  GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 13
+		y = 5
+		cost = 5	
+        prerequisite = { focus = MAN_lower_manetsu }
+         prerequisite = { focus = MAN_more_ministers }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+
+	focus = {
+
+	    id = MAN_socialize_the_chinese
+		icon = GFX_focus_jap_manchurian_project
+		x = 3
+		y = 3
+		cost = 5	
+        prerequisite = { focus = MAN_mamoru_path }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_russian_autonomy
+		icon = GFX_goal_generic_major_alliance
+		x = 0
+		y = 4
+		cost = 5	
+        prerequisite = { focus = MAN_socialize_the_chinese }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_grant_chinese_more_rights
+		icon = GFX_goal_generic_national_unity
+		x = 2
+		y = 4
+		cost = 5	
+        prerequisite = { focus = MAN_socialize_the_chinese }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_dual_education
+		icon = GFX_focus_ame_9
+		x = 4
+		y = 4
+		cost = 5	
+        prerequisite = { focus = MAN_socialize_the_chinese }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_embrace_manchurian_culture
+		icon = GFX_goal_generic_propaganda
+		x = 6
+		y = 4
+		cost = 5	
+        prerequisite = { focus = MAN_socialize_the_chinese }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_equal_rights
+		icon = GFX_goal_generic_improve_relations
+		x = 4
+		y = 5	
+		cost = 5	
+        prerequisite = { focus = MAN_grant_chinese_more_rights }
+        prerequisite = { focus = MAN_dual_education }
+        prerequisite = { focus = MAN_russian_autonomy }
+         prerequisite = { focus = MAN_embrace_manchurian_culture }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_chinese_japanese_friendship
+		icon = GFX_focus_man_3
+		x = 5
+		y = 7	
+		cost = 5	
+        prerequisite = { focus = MAN_research_university }
+         prerequisite = { focus = MAN_install_parliamant }
+        prerequisite = { focus = MAN_equal_rights } 
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_research_university
+		icon = GFX_focus_research
+		x = 2
+		y = 5
+		cost = 5	
+        prerequisite = { focus = MAN_grant_chinese_more_rights }
+        prerequisite = { focus = MAN_dual_education }
+        prerequisite = { focus = MAN_russian_autonomy }
+         prerequisite = { focus = MAN_embrace_manchurian_culture }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_mobilization
+		icon = GFX_goal_generic_military_sphere
+		x = 12
+		y = 7
+		cost = 5	
+        prerequisite = { focus = MAN_install_parliamant }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_democratic_country
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 10
+		y = 7
+		cost = 5	
+        prerequisite = { focus = MAN_install_parliamant }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_international_recovery
+		icon = GFX_goal_generic_scientific_exchange
+		x = 8
+		y = 7
+		cost = 5	
+        prerequisite = { focus = MAN_install_parliamant }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_attract_japan_loans
+		icon = GFX_goal_generic_construction
+		x = 17
+		y = 3
+		cost = 5	
+        prerequisite = { focus = MAN_mamoru_path focus = MAN_yosukes_path }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+
+	focus = {
+
+	    id = MAN_attract_japan_civ_companies
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 16
+		y = 4
+		cost = 5	
+        prerequisite = { focus = MAN_attract_japan_loans }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_attract_japan_mil_companies
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 18
+		y = 4
+		cost = 5	
+        prerequisite = { focus = MAN_attract_japan_loans }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_attract_japanese_workers
+		icon = GFX_goal_generic_consumer_goods
+		x = 17
+		y = 5
+		cost = 5	
+        prerequisite = { focus = MAN_attract_japan_mil_companies }
+        prerequisite = { focus = MAN_attract_japan_civ_companies }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+
+	}
+
+
+	focus = {
+
+	    id = MAN_co_spherity
+		icon = GFX_focus_jap_pacific_guardian
+		x = 23
+		y = 3
+		cost = 5	
+        prerequisite = { focus = MAN_mamoru_path focus = MAN_yosukes_path } 
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_trade_jap
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 22
+		y = 4
+		cost = 5	
+        prerequisite = { focus = MAN_co_spherity }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_collibartion_with_jap_army
+		icon = GFX_goal_generic_position_armies
+		x = 22
+		y = 5
+		cost = 5	
+        prerequisite = { focus = MAN_trade_jap }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_collibartion_with_rus_army
+		icon = GFX_goal_generic_position_armies
+		x = 24
+		y = 5
+		cost = 5	
+        prerequisite = { focus = MAN_relations_with_rus}
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
+
+	focus = {
+
+	    id = MAN_relations_with_rus
+		icon = GFX_focus_man_1
+		x = 24
+		y = 4
+		cost = 5	
+        prerequisite = { focus = MAN_co_spherity }
+		available_if_capitulated = no
+		
+		completion_reward = {
+ 
+		}
+	
+	}
 

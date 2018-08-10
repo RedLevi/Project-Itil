@@ -1706,4 +1706,25 @@ spriteTypes = {
 		name = "GFX_focus_ame_10"
 		texturefile = "gfx/interface/goals/ame_10.dds"
 	}
+	#Manchurian Focus Icons#########
+	SpriteType = {
+		name = "GFX_focus_man_1"
+		texturefile = "gfx/interface/goals/man_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_man_2"
+		texturefile = "gfx/interface/goals/man_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_man_3"
+		texturefile = "gfx/interface/goals/man_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_man_4"
+		texturefile = "gfx/interface/goals/man_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_man_5"
+		texturefile = "gfx/interface/goals/man_5.dds"
+	}
 }

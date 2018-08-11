@@ -83,7 +83,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Zhang Jinghui"
-	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_2.dds"
+	picture = "zhang_jinghui.dds" 
 	traits = {  }
 	skill = 2
 	attack_skill = 3

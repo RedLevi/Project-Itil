@@ -61,9 +61,11 @@ country_event = { #president
 		   desc = "POLITICS_Shigemitsu_Mamoru_DESC" 
 		   picture = "shigemitsu_mamoru.dds" 
 		   expire = "1965.1.1" 
-		   ideology = autocracy 
+		   ideology = market_liberalism 
 		   traits = { } 
 	   }
+	   set_politics = { ruling_party = liberalism elections_allowed = no }
+	   add_popularity = { ideology = liberalism popularity = 0.05 }
        set_country_flag = MAN_leader_mamoru
 	}
 	option = { #choose Zhang
@@ -144,3 +146,44 @@ country_event = {#intro for Zhang
 		name = man.5.a 
 	}
 }
+
+country_event = {#investments paid off
+	id = man.8 
+	title = man.8.t 
+	desc = man.8.d 
+	is_triggered_only = yes 
+	option = {
+		name = man.8.a 
+		328 = {
+		add_extra_state_shared_building_slots = 3
+			if = {
+				limit = { is_controlled_by = MAN }
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {#Mantetsu Buyout convention 
+	id = man.9 
+	title = man.9.t 
+	desc = man.9.d 
+	is_triggered_only = yes 
+	option = {#Agree to the merger, possible other options 
+		name = man.9.a 
+		swap_ideas = {
+				add_idea = MAN_joint_control_idea
+				remove_idea = MAN_anti_mantetsu_competition
+			}
+	}
+}
+
+###TO DO LIST for mamoru###
+#Add a potential mantetsu coup if you fail to reform effectively
+#add reaction events to the various focuses,such as leftist protests following liberalization etc.
+#add both parliamentary and presedential paths, both with election events
+#

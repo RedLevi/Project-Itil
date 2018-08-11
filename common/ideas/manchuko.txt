@@ -1,6 +1,96 @@
 ideas = {
     
     country = {
+		
+		MAN_mamoru_constitution = {
+		
+			picture = HUN_treaty_of_triannon
+            removal_cost = -1
+
+            allowed = {
+				always = no
+		    }
+
+			modifier = {
+				
+				political_power_gain = 0.3
+				stability_factor = 0.05 
+				autonomy_gain = 1 	
+
+			}
+		
+		}
+		
+		MAN_expand_cabinet = {
+		
+			picture = generic_political_support
+            removal_cost = -1
+
+            allowed = {
+				always = no
+		    }
+
+			modifier = {
+				
+				political_power_gain = 0.15
+
+			}
+		
+		}
+		
+		MAN_joint_control_idea = {
+			
+			picture = generic_build_infrastructure
+            removal_cost = -1
+
+            allowed = {
+				always = no
+		    }
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.35 
+				production_speed_arms_factory_factor = 0.35 
+
+			}
+			
+		}
+		
+		MAN_anti_mantetsu_competition = {
+		
+			picture = generic_build_infrastructure
+            removal_cost = -1
+
+            allowed = {
+				always = no
+		    }
+
+			modifier = {
+				stability_factor = -0.035
+				production_speed_infrastructure_factor = 0.3 
+				production_speed_arms_factory_factor = 0.3 
+				industrial_capacity_factory = -0.2 
+
+			}
+		
+		}
+		
+		MAN_state_investments_idea = {
+		
+			picture = generic_foreign_capital
+            removal_cost = -1
+
+            allowed = {
+				always = no
+		    }
+
+			modifier = {
+			
+				stability_factor = -0.04
+				consumer_goods_factor = 0.025
+
+			}
+		
+		}
        MAN_bought_railway = {
           picture = generic_build_infrastructure
           removal_cost = -1

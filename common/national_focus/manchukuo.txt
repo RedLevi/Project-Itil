@@ -21,7 +21,7 @@ default = no
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 20
 		y = 0 
-		cost = 5 
+		cost = 10 
 		available_if_capitulated = no
 		
 		completion_reward = {
@@ -48,6 +48,7 @@ default = no
 				}
 			}
 		}
+		hidden_effect = { country_event = { id = man.4 } }
 		}
 	
 	}
@@ -58,7 +59,7 @@ default = no
 		icon = GFX_goal_generic_demand_territory
 		x = 20
 		y = 1
-		cost = 5	
+		cost = 6	
         prerequisite = { focus = MAN_begin }
 		available_if_capitulated = no
 		completion_reward = {

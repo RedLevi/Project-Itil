@@ -45,12 +45,13 @@ country_event = { #railway question
 
 	option = { #agree 
        name = rus.2.a
-       add_offsite_building = { type = industrial_complex level = 3 }
+       add_offsite_building = { type = industrial_complex level = 2 }
        add_political_power = -50
        add_stability = -0.05
        set_country_flag = kornilov_accepts
+	   reverse_add_opinion_modifier = { target = MAN modifier = RUS_MAN_rail_sale }
        MAN = {
-          add_ideas = MAN_bought_railway
+          country_event = { id = rus.3 }
        }
 	}
 	option = { #refuse
@@ -58,5 +59,32 @@ country_event = { #railway question
 	   add_political_power = 50
 	   add_stability = 0.05
 	   set_country_flag = kornilov_refuses
+	   country_event = { id = rus.4 }
 	}
+}
+
+country_event = {#Russia agrees
+	 id = rus.3
+	 title = rus.3.t 
+	 desc = rus.3.d 
+	 is_triggered_only = yes 
+	 option = {
+		name = rus.3.a 
+		add_timed_idea = {
+			idea = MAN_bought_railway
+			days = 365
+		}
+		reverse_add_opinion_modifier = { target = RUS modifier = RUS_MAN_rail_sale }
+	 }
+}
+
+country_event = {#Russia refuses
+	 id = rus.4
+	 title = rus.4.t 
+	 desc = rus.4.d 
+	 is_triggered_only = yes 
+	 option = {
+		name = rus.4.a 
+		
+	 }
 }

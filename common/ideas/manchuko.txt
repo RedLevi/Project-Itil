@@ -12,8 +12,8 @@ ideas = {
         modifier = {
 
 			production_factory_start_efficiency_factor = 0.05
-			local_resources_factor = 0.1
-			consumer_goods_factor = -0.03
+			local_resources_factor = 0.05
+			consumer_goods_factor = -0.01
 
 		}
 
@@ -27,7 +27,7 @@ ideas = {
 		}
 
         modifier = {
-		 	communism_drift = 0.025
+			stability_factor = -0.05  
 		}
 
        } 

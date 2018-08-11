@@ -8,7 +8,6 @@ country_event = { #intro event
 	trigger = {
 	   tag = MAN 
 	   date > 1936.1.1
-	   date < 1936.1.3
 	}
 	fire_only_once = yes 
 
@@ -24,6 +23,11 @@ country_event = { #buy out trans-siberian railway
 
 	trigger = {
 	   tag = MAN
+	   NOT = { has_war_with = RUS }
+	   RUS = { 
+			exists = yes 
+			is_puppet_of = JAP
+	   }
 	   date > 1937.1.7
 	}
 	fire_only_once = yes 
@@ -39,23 +43,104 @@ country_event = { #president
 	title = man.3.t
 	desc = man.3.d
 
-	fire_only_once = yes 
+	is_triggered_only = yes 
 
-	option = {
+	option = {#keep Yosuke
 	   name = man.3.a
 	   add_political_power = -100
        add_stability = -0.05
+	   set_country_flag = MAN_leader_yosuke
+	   
 	}
-	option = {
+	option = { #Choose Mamoru
 	   name = man.3.b
 	   add_political_power = 50
        add_stability = 0.05
-       create_country_leader = { name = "Shigemitsu Mamoru" desc = "POLITICS_Shigemitsu_Mamoru_DESC" picture = "shigemitsu_mamoru.dds" expire = "1965.1.1" ideology = absolutism traits = { } }
-       hidden_effect = { unlock_national_focus = MAN_mamoru_path }
+       create_country_leader = { 
+		   name = "Mamoru Shigemitsu" 
+		   desc = "POLITICS_Shigemitsu_Mamoru_DESC" 
+		   picture = "shigemitsu_mamoru.dds" 
+		   expire = "1965.1.1" 
+		   ideology = autocracy 
+		   traits = { } 
+	   }
+       set_country_flag = MAN_leader_mamoru
 	}
-	option = {
+	option = { #choose Zhang
 	   name = man.3.c
 	   add_political_power = 100
        add_stability = 0.1
+	   create_country_leader = { 
+		   name = "Zhang Jinghui" 
+		   desc = "POLITICS_Shigemitsu_Mamoru_DESC" 
+		   picture = "zhang_jinghui.dds" 
+		   expire = "1965.1.1" 
+		   ideology = autocracy 
+		   traits = { } 
+	   }
+	   set_country_flag = MAN_leader_zhang
+	}
+}
+
+country_event = {#protest at Hsinking station 
+	
+	id = man.4 
+	title = man.4.t 
+	desc = man.4.d 
+	is_triggered_only = yes 
+	option = {
+		name = man.4.a 
+		add_stability = -0.05 
+	}
+}
+
+country_event = {#intro for yosuke 
+	id = man.5 
+	title = man.5.t 
+	desc = man.5.d 
+	trigger = {
+		tag = MAN 
+		focus_progress = {
+			focus = MAN_a_new_leader
+			progress > 0.3
+		}
+	}
+	fire_only_once = yes 
+	option = {
+		name = man.5.a 
+	}
+}
+
+country_event = {#intro for Mamoru 
+	id = man.6 
+	title = man.6.t 
+	desc = man.6.d 
+	trigger = {
+		tag = MAN 
+		focus_progress = {
+			focus = MAN_a_new_leader
+			progress > 0.6
+		}
+	}
+	fire_only_once = yes 
+	option = {
+		name = man.5.a 
+	}
+}
+
+country_event = {#intro for Zhang 
+	id = man.7 
+	title = man.7.t 
+	desc = man.7.d 
+	trigger = {
+		tag = MAN 
+		focus_progress = {
+			focus = MAN_a_new_leader
+			progress > 0.9
+		}
+	}
+	fire_only_once = yes 
+	option = {
+		name = man.5.a 
 	}
 }

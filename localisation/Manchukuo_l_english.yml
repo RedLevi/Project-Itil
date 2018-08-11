@@ -1,7 +1,10 @@
 ﻿l_english:
 ####focuses####
-MAN_begin:0 "Expand the North-Eastern Railways"
-MAN_a_new_leader:0 "A new Leader?"
+MAN_begin:0 "Open The Hsinking-Qiqihar Line"
+MAN_begin_desc:0 "Two years ago we began a massive program expanding the railway within Manchuria itself. We can now finally formally open the new train lines to the public."
+
+MAN_a_new_leader:0 "A Change In Leadership?"
+MAN_a_new_leader_desc:0 "The Yosuke administration have been less than popular with the Manchurian population, and there have been calls to replace him with a more popular candidate."
 MAN_follow_japan:0 "Follow Japan"
 MAN_socialize_the_chinese:0 "Socialize the State"
 MAN_grant_chinese_more_rights:0 "Grant the Chinese People more Rights"
@@ -44,22 +47,47 @@ MAN_yosukes_path:0 "Yosuke Matsuoka"
 MAN_zhang_path:0 "Zhang Jinghui"
 ####events####
 man.1.t:0 "The Republic of Manchuria"
-man.1.d:0 "The lands of Manchuria have prospered under in the last decades. During Chinese rule our lands were in ruins being raided by warlords and famines spreading through the country. The Japanese Occupation brought an end to this hell and since then the industry has been growing like never before. The Republic is currently ruled by the powerful railway company Manetsu and their president Yosuke. But it seems like a change in leading the government will soon happen."
-man.1.a:0 "For the Nation"
-
-man.2.t:0 "Offer the Russians to buy the Railway"
-
-man.3.t:0 "A new President for Mantetsu?"
+man.1.d:0 "Manchuria have found itself wartorn and famine-stricken throughout most of the early 20th century. The Fengtian clique was defeated by the NRA in 1928, but the Chinese control over the region was short lived, as the Mantetsu board succsesfuly lobbied the Japanese government to intervene in the chaos. by late 1929 Mukden was seized by the advancing Kwantung army, and only Hamaguchi's succsesful intervention prevented an all out war with China. In the last six years, the Mantetsu have assumed control of the country under the new 'Republic Of Manchuria' and greatly improved both the industry and infrastructure, as well as the general life quality in Manchuria. Internal tensions continue to rise however, as both the Chinese nationalists and leftist agitators oppose Yosuke and the Mantetsu."
+man.1.a:0 "Five Races Under One Republic!"
+man.2.t:0 "An offer for Russia"
+man.2.d:0 "In an effort to improve inter-spherical relations and to increase our profits and influence, some members of the board have suggested buying the Russian section of the Trans-Siberian railway from the Russian State authorities."
+man.2.a:0 "A great idea."
+man.3.t:0 "A new president for Mantetsu?"
+man.3.d:0 "After weeks of intense lobbying and backroom politics the Mantetsu board of directors have convened in Hsinking to determine the future president of the republic."
 man.3.a:0 "Yosuke is doing a fine job"
-man.3.b:0 "Mamoru will bring stability to this country"
-man.3.c:0 "Zhang Jinghui will appeal to the Chinese"
-
+man.3.b:0 "Mamoru will bring unity and progress to this country"
+man.3.c:0 "Zhang Jinghui will appease the Chinese"
+man.4.t:0 "Protests in Hsinking station"
+man.4.d:0 "During the official opening ceremony of the expanded Hsinking-Qiqihar Line in Hsinking station a mob of protesters attempted to distrupt the ceremony. The Police soon arrested the perpetrators and the ceremony went ahead without further incident. Later investigation found the protesters were Chinese students affiliated with the NRA movement."
+man.4.a:0 "Perhaps a change of leadership is in order..."
+man.5.t:0 "Matsuoka Yosuke"
+man.5.d:0 "Matsuoka Yosuke was born in the Yamaguchi prefecture in 1880, reciveing education both in America and in Japan. In 1904 Yosuke began his career in the foreign service of Japan where he was eventually posted in China, where he gained influence within the Mantetsu. In 1922 Yosuke joined the Mantetsu board of directors and quickly rose through the ranks of the company. Following the Second Russian Civil War Yosuke intended to return to Japan and pursue a political career, but the rising tensions in Manchuria convinced him to stay in Uraijo, where he helped orchastrate the Japanese invasion in 1930. Following the war Yosuke was promoted to the position of President of Mantetsu, which also gave him de-facto power in the new state of Manchuria. Yosuke established the Kyouwa Yukai party, which essentially serves as the Mantetsu's political wing, with Yosuke as its leader and president of the republic. Using his political and economic control of the country Yosuke began transforming Manchuria into a developed and prosperous nation. The rapid changes to society, and Yosuke's pro-Japanese attitude and his connection to ultra-nationalist groups have caused many tensions with the Chinese population, and his regime have also attracted opposition from left-wing groups protesting the harsh working conditions."
+man.5.a:0 "Interesting..."
+man.6.t:0 "Mamoru Shigemitsu"
+man.6.d:0 "Mamoru Shigemitsu was born in the Oita prefecture in 1887. After graduating from the Tokyo University Law School Mamoru joined the Japanese foreign service where he took part in numerous foreign delegations in Europe and America. Mamoru was instrumental in brokering the Sino-Japanese peace treaty in 1930 and in facilitating Hamaguchi's succsesful attempt at reigning in the Kwantung army. Following the Establishment of the Republic Mamoru was appointed to be Japan's ambassador to Manchuria and during his tenure he became involved with liberal reformists, eventually forming the underground 'Reformist Party'. Mamoru's expressed ambitions to liberalize and democratize Manchuria have gained him support from both Chinese moderate nationalists, Japanese urban settlers and the Minseito in Japan. His progressive views gained him many enemies within more nationalist groups, the Kyouwa Yukai cheif among them."
+man.7.t:0 "Zhang Jinghui"
+man.7.d:0 "Zhang Jinghui was born in Liaoning in 1871, and at a young age Joined Zhang Zoulin's forces. During the first Zhili-Fengtian war Zhang deserted Zoulin's clique and joined the Zhili clique's military force where his experience helped him rise through the ranks. Following the defeat of the Fengtian clique in the northern expedition Zhang was appointed as governer of Harbin and of the  China Eastern Railway Special District in northern Manchuria. After the Japanese invasion in 1930 Zhang was allowed to keep his post under the 'Manchuria Friend-State' treaty, and he soon became the leading figure of the Chinese Nationalist Confederacy in Manchuria, his powerful position protecting him from persecution. Zhang is quite popular among the Chinese population, but his ideology and ambitions make him an unpredictable choice..."
 ####tooltips####
-
+RUS_MAN_rail_sale:0 "Purchase of the Trans-Siberian Railway"
 
 ####ideas####
-MAN_leftist:0 "Leftist Legislation"
-MAN_manetsu:0 "Manetsu"
+MAN_leftist:0 "Leftist Agitation"
+MAN_leftist_desc:0 "The working class is agitated against the Mantetsu rule by both exiles from Japan and China, and local labor leaders."
+MAN_manetsu:0 "Mantetsu Corporation"
+MAN_manetsu_desc:0 "The South Manchuria Railway Company is the largest Zaibatsu in Japan, partially owned by the Japanese government itself. The Mantetsu holds de-facto control over the Republic of Manchuria and invested in numerous development projects to improve both the economy and its influence."
+MAN_bought_railway:0 "Russian Section Of The Trans-Siberian Railway"
+MAN_bought_railway_desc:0 "The Russian section of the Trans-Siberian Railway is now Mantetsu property, giving us additional revenue."
 MAN_manetsu_1:0 "Manetsu"
 MAN_pro_japanese_laws:0 "Pro Japanese Laws"
+MAN_pro_japanese_laws_desc:0 "The Yosuke administration have instituted numerous laws that favor Japanese citizens in various spheres of life, encouraging investments from Japan, but causing ethnic tensions in the country."
 ###decisions###
+
+###parties###
+
+ MAN_reactionary_party:0 "Kyouwa Yukai"
+ MAN_reactionary_party_long:0 "Republican Association"
+ MAN_reactionary_party:0 "Kaishin Kyouwakai"
+ MAN_reactionary_party_long:0 "Reformist Concord"
+ MAN_conservatism_party:0 "Guómín bānglián"
+ MAN_conservatism_party_long:0 "Nationalist Confederacy"
+ 

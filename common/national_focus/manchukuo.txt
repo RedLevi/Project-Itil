@@ -205,9 +205,10 @@ default = no
 
 	    id = MAN_install_parliamant
 		icon = GFX_goal_support_democracy
-		x = 10
+		x = 9
 		y = 6
-		cost = 5	
+		cost = 10	
+		mutually_exclusive = { focus = MAN_install_president }
         prerequisite = { focus = MAN_decentralize_manetsu }
         prerequisite = { focus = MAN_establish_a_constitution }
         prerequisite = { focus = MAN_allow_political_parties }
@@ -215,7 +216,28 @@ default = no
 		available_if_capitulated = no
 		
 		completion_reward = {
-			add_political_power = 150
+			country_event = { id = man.10 } 
+ 
+		}
+	
+	}
+	
+	focus = {
+
+	    id = MAN_install_president
+		icon = GFX_goal_support_democracy
+		x = 11
+		y = 6
+		cost = 10	
+		mutually_exclusive = { focus = MAN_install_parliamant }
+        prerequisite = { focus = MAN_decentralize_manetsu }
+        prerequisite = { focus = MAN_establish_a_constitution }
+        prerequisite = { focus = MAN_allow_political_parties }
+        prerequisite = { focus = MAN_civil_law }
+		available_if_capitulated = no
+		
+		completion_reward = {
+			country_event = { id = man.11 } 
  
 		}
 	
@@ -301,7 +323,7 @@ default = no
 		available_if_capitulated = no
 		
 		completion_reward = {
-			add_stability = 0.5 
+			add_stability = 0.05 
 			add_popularity = { ideology = liberalism popularity = 0.1 }
 			add_popularity = { ideology = conservatism popularity = 0.05 }
 			add_popularity = { ideology = socialism popularity = 0.1 }
@@ -417,7 +439,7 @@ default = no
 		available_if_capitulated = no
 		
 		completion_reward = {
- 
+			
 		}
 	
 	}

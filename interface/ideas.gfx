@@ -4076,5 +4076,23 @@ spriteTypes = {
 		name = "GFX_idea_france_torn"
 		texturefile = "gfx/interface/ideas/idea_france_torn.dds"
 	}	
+	
+	###Mod 
+	
+	spriteType = {
+		name = "GFX_idea_MAN_education_idea"
+		texturefile = "gfx/interface/ideas/MAN_education_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MAN_conscription_idea"
+		texturefile = "gfx/interface/ideas/MAN_conscription_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_MAN_concord_idea"
+		texturefile = "gfx/interface/ideas/MAN_racial_harmony.dds"
+	}
 
 }
+

@@ -9,7 +9,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "EventWindow"
 		position = { x=-282 y=-310 }	
-		size = { width = 581 height =427 }
+		size = { width = 581 height =547 }
 		moveable = yes
 		Orientation = CENTER		
 		
@@ -80,7 +80,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "bottom_Window"
 			position = { x=0 y=221 }	
-			size = { width = 581 height = 206 }
+			size = { width = 581 height = 326 }
 			moveable = yes
 			clipping = no
 			Orientation = UPPER_LEFT
@@ -281,7 +281,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "EventWindow_News"
 		position = { x=-282 y=-310 }	
-		size = { width = 528 height = 695 }
+		size = { width = 528 height = 595 }
 		moveable = yes
 		Orientation = CENTER
 		show_sound = world_news_effect
@@ -356,13 +356,13 @@ guiTypes = {
 		containerWindowType = {
 			name = "bottom_Window"
 			position = { x=0 y=221 }	
-			size = { width = 581 height = 455 }
+			size = { width = 581 height = 405 }
 			Orientation = UPPER_LEFT
 
 			gridBoxType = {
 				name = "options_grid"
 				position = { x = 80 y = -1 }
-				size = { width = 300 height = 90 }
+				size = { width = 300 height = 30 }
 				slotsize = { width = 300 height = 47 }
 				max_slots_horizontal = 1
 				format = "UPPER_LEFT"
@@ -372,9 +372,8 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "event_option_entry"
-		position = { x=0 y=58}
 		size = { width = 300 height = 47 }
-		clipping = yes
+		clipping = no
 		
 		background = {
 			name = "event_option_background"	

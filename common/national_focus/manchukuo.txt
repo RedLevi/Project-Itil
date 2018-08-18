@@ -93,7 +93,7 @@ default = no
 		y = 2
 		cost = 0	
         prerequisite = { focus = MAN_a_new_leader }
-        mutually_exclusive = { focus = MAN_mamoru_path_path focus = MAN_zhang_path  }
+        mutually_exclusive = { focus = MAN_mamoru_path focus = MAN_zhang_path  }
 		available_if_capitulated = no
 		completion_reward = {
 		}
@@ -205,11 +205,11 @@ default = no
 
 	    id = MAN_install_parliamant
 		icon = GFX_goal_support_democracy
-		x = 9
+		x = 7
 		y = 6
 		cost = 10	
 		mutually_exclusive = { focus = MAN_install_president }
-        prerequisite = { focus = MAN_decentralize_manetsu }
+ 
         prerequisite = { focus = MAN_establish_a_constitution }
         prerequisite = { focus = MAN_allow_political_parties }
         prerequisite = { focus = MAN_civil_law }
@@ -230,7 +230,7 @@ default = no
 		y = 6
 		cost = 10	
 		mutually_exclusive = { focus = MAN_install_parliamant }
-        prerequisite = { focus = MAN_decentralize_manetsu }
+
         prerequisite = { focus = MAN_establish_a_constitution }
         prerequisite = { focus = MAN_allow_political_parties }
         prerequisite = { focus = MAN_civil_law }
@@ -434,12 +434,12 @@ default = no
 		icon = GFX_focus_jap_manchurian_project
 		x = 3
 		y = 3
-		cost = 5	
+		cost = 10	
         prerequisite = { focus = MAN_mamoru_path }
 		available_if_capitulated = no
 		
 		completion_reward = {
-			
+			add_ideas = man_national_transformation
 		}
 	
 	}
@@ -450,12 +450,12 @@ default = no
 		icon = GFX_goal_generic_major_alliance
 		x = 0
 		y = 4
-		cost = 5	
+		cost = 6	
         prerequisite = { focus = MAN_socialize_the_chinese }
 		available_if_capitulated = no
 		
 		completion_reward = {
- 
+			add_stability = 0.025
 		}
 	
 	}
@@ -466,12 +466,12 @@ default = no
 		icon = GFX_goal_generic_national_unity
 		x = 2
 		y = 4
-		cost = 5	
+		cost = 12	
         prerequisite = { focus = MAN_socialize_the_chinese }
 		available_if_capitulated = no
 		
 		completion_reward = {
- 
+			remove_ideas = MAN_pro_japanese_laws
 		}
 	
 	}
@@ -482,12 +482,12 @@ default = no
 		icon = GFX_focus_ame_9
 		x = 4
 		y = 4
-		cost = 5	
+		cost = 10	
         prerequisite = { focus = MAN_socialize_the_chinese }
 		available_if_capitulated = no
 		
 		completion_reward = {
- 
+			add_ideas = MAN_state_education
 		}
 	
 	}
@@ -498,12 +498,12 @@ default = no
 		icon = GFX_goal_generic_propaganda
 		x = 6
 		y = 4
-		cost = 5	
+		cost = 8	
         prerequisite = { focus = MAN_socialize_the_chinese }
 		available_if_capitulated = no
 		
 		completion_reward = {
- 
+			add_stability = 0.035
 		}
 	
 	}
@@ -512,9 +512,9 @@ default = no
 
 	    id = MAN_equal_rights
 		icon = GFX_goal_generic_improve_relations
-		x = 4
+		x = 1
 		y = 5	
-		cost = 5	
+		cost = 10	
         prerequisite = { focus = MAN_grant_chinese_more_rights }
         prerequisite = { focus = MAN_dual_education }
         prerequisite = { focus = MAN_russian_autonomy }
@@ -522,7 +522,8 @@ default = no
 		available_if_capitulated = no
 		
 		completion_reward = {
- 
+			add_stability = 0.05 
+			add_political_power = -200 
 		}
 	
 	}
@@ -534,13 +535,18 @@ default = no
 		x = 5
 		y = 7	
 		cost = 5	
-        prerequisite = { focus = MAN_research_university }
-         prerequisite = { focus = MAN_install_parliamant }
+		prerequisite = { focus = MAN_decentralize_manetsu }
+        prerequisite = { focus = MAN_install_parliamant focus = MAN_install_president }
+		prerequisite = { focus = MAN_mobilization }
         prerequisite = { focus = MAN_equal_rights } 
 		available_if_capitulated = no
 		
 		completion_reward = {
- 
+			remove_idea = man_national_transformation
+			swap_ideas = {
+				remove_idea = MAN_ethnic_tensions
+				add_idea = MAN_concord_idea
+			}
 		}
 	
 	}
@@ -549,17 +555,14 @@ default = no
 
 	    id = MAN_research_university
 		icon = GFX_focus_research
-		x = 2
+		x = 5
 		y = 5
-		cost = 5	
-        prerequisite = { focus = MAN_grant_chinese_more_rights }
+		cost = 10	
         prerequisite = { focus = MAN_dual_education }
-        prerequisite = { focus = MAN_russian_autonomy }
-         prerequisite = { focus = MAN_embrace_manchurian_culture }
 		available_if_capitulated = no
 		
 		completion_reward = {
- 
+			add_research_slot = 1 
 		}
 	
 	}
@@ -568,49 +571,22 @@ default = no
 
 	    id = MAN_mobilization
 		icon = GFX_goal_generic_military_sphere
-		x = 12
-		y = 7
-		cost = 5	
-        prerequisite = { focus = MAN_install_parliamant }
+		x = 3
+		y = 5
+		cost = 10	
+        prerequisite = { focus = MAN_grant_chinese_more_rights }
+		prerequisite = { focus = MAN_dual_education }
+		prerequisite = { focus = MAN_russian_autonomy }
+		prerequisite = { focus = MAN_embrace_manchurian_culture }
+
 		available_if_capitulated = no
 		
 		completion_reward = {
- 
+			add_ideas = MAN_national_service
 		}
 	
 	}
 
-	focus = {
-
-	    id = MAN_democratic_country
-		icon = GFX_focus_generic_the_giant_wakes
-		x = 10
-		y = 7
-		cost = 5	
-        prerequisite = { focus = MAN_install_parliamant }
-		available_if_capitulated = no
-		
-		completion_reward = {
- 
-		}
-	
-	}
-
-	focus = {
-
-	    id = MAN_international_recovery
-		icon = GFX_goal_generic_scientific_exchange
-		x = 8
-		y = 7
-		cost = 5	
-        prerequisite = { focus = MAN_install_parliamant }
-		available_if_capitulated = no
-		
-		completion_reward = {
- 
-		}
-	
-	}
 
 	focus = {
 

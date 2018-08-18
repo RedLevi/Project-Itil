@@ -2,6 +2,92 @@ ideas = {
     
     country = {
 		
+		MAN_concord_idea = {
+		
+			picture = MAN_conscription_idea
+            removal_cost = -1
+
+            allowed = {
+				always = no
+		    }
+
+			modifier = {
+
+			}
+			
+		}
+		
+		MAN_national_service = {
+			
+			picture = MAN_conscription_idea
+            removal_cost = -1
+
+            allowed = {
+				always = no
+		    }
+
+			modifier = {
+				
+				conscription = 0.03
+				war_support_factor = 0.1
+
+			}
+		
+		}
+		
+		MAN_state_education = {
+			
+			picture = MAN_education_idea
+            removal_cost = -1
+
+            allowed = {
+				always = no
+		    }
+
+			modifier = {
+				
+				research_time_factor = -0.035 
+				stability_factor = 0.025 
+				war_support_factor = 0.025 
+
+			}
+			
+		}
+		
+		man_national_transformation = {
+		
+			picture = generic_morale_bonus
+            removal_cost = -1
+
+            allowed = {
+				always = no
+		    }
+
+			modifier = {
+				
+				political_power_gain = -0.5
+
+			}
+			
+		}
+		
+		MAN_ethnic_tensions = {
+		
+			picture = prc_low_popular_support3
+            removal_cost = -1
+
+            allowed = {
+				always = no
+		    }
+
+			modifier = {
+				
+				stability_factor = -0.2 
+
+			}
+		
+		}
+		
 		MAN_mamoru_constitution = {
 		
 			picture = HUN_treaty_of_triannon

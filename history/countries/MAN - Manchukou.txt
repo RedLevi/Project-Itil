@@ -58,6 +58,25 @@ set_politics = {
 	elections_allowed = no
 }
 
+create_country_leader = { 
+		   name = "Mamoru Shigemitsu" 
+		   desc = "POLITICS_Shigemitsu_Mamoru_DESC" 
+		   picture = "shigemitsu_mamoru.dds" 
+		   expire = "1965.1.1" 
+		   ideology = market_liberalism 
+		   traits = { } 
+	   }
+	   
+	   
+create_country_leader = { 
+		   name = "Zhang Jinghui" 
+		   desc = "POLITICS_Shigemitsu_Mamoru_DESC" 
+		   picture = "zhang_jinghui.dds" 
+		   expire = "1965.1.1" 
+		   ideology = authoritarian_conservatism 
+		   traits = { } 
+	   }
+
 create_country_leader = {
 			name = "Yosuke Matsuoka"
 			desc = "doesntmatter"

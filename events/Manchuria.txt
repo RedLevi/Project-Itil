@@ -72,12 +72,13 @@ country_event = { #president
 	   name = man.3.c
 	   add_political_power = 100
        add_stability = 0.1
+	   set_politics = { ruling_party = conservatism elections_allowed = no }
 	   create_country_leader = { 
 		   name = "Zhang Jinghui" 
 		   desc = "POLITICS_Shigemitsu_Mamoru_DESC" 
 		   picture = "zhang_jinghui.dds" 
 		   expire = "1965.1.1" 
-		   ideology = autocracy 
+		   ideology = authoritarian_conservatism 
 		   traits = { } 
 	   }
 	   set_country_flag = MAN_leader_zhang
@@ -189,7 +190,7 @@ country_event = {#first diet seat
 	is_triggered_only = yes 
 	option = {
 		name = man.10.a 
-		country_event = { id = man.? days = 30 } #elections
+		country_event = { id = man.13 days = 30 } #elections
 	}
 } 
 
@@ -204,6 +205,52 @@ country_event = {#Presidential address
 	}
 } 
 
+country_event = {#ethnic tensions 
+	id = man.12 
+	title = man.12.t 
+	desc = man.12.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = MAN 
+		date > 1936.2.1
+	}
+	mean_time_to_happen = { days = 30 }
+	option = {
+		name = man.12.a 
+		add_ideas = MAN_ethnic_tensions
+	}
+}
+
+country_event = {#First diet elections 
+	id = man.13 
+	title = man.13.t 
+	desc = man.13.d 
+	is_triggered_only = yes 
+	option = {#mamoru wins by a large margain
+		name = man.13.a 
+		ai_chance = { factor = 70 }
+		add_popularity = { ideology = liberalism popularity = 0.1 }
+		add_stability = 0.05 
+	}
+	option = {#mamoru wins with coalition
+		name = man.13.b 
+		ai_chance = { factor = 30 }
+		add_popularity = { ideology = liberalism popularity = 0.05 }
+		add_popularity = { ideology = socialism popularity = 0.05 }
+	}
+}
+
+country_event = {#first presidential elections 
+	id = man.14 
+	title = man.14.t 
+	desc = man.14.d 
+	is_triggered_only = yes
+	option = {#Mamoru wins 
+		name = man.14.a 
+		add_stability = 0.1 
+	}
+	
+}
 ###TO DO LIST for mamoru###
 #Add a potential mantetsu coup if you fail to reform effectively
 #add reaction events to the various focuses,such as leftist protests following liberalization etc.

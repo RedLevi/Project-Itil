@@ -754,7 +754,7 @@ country_event = { #SPF victory
     }
     option = {
         name = france.10.a
-		set_global_flag = end_fra_civil_war
+		#set_global_flag = end_fra_civil_war
         FRA = { transfer_state = 16 } 
 		FRA = { change_tag_from = SPF }
         FRA = { annex_country = { target = SPF transfer_troops = yes } }
@@ -765,8 +765,6 @@ country_event = { #SPF victory
             }
             add_popularity = { ideology = communism popularity = 1.0 }
         }
-		FRA = { annex_country = { target = SFA transfer_troops = yes } }
-		FRA = { annex_country = { target = SYA transfer_troops = yes } }
 
     }
 }

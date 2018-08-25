@@ -751,10 +751,12 @@ country_event = { #SPF victory
         IFA = { exists = no }
         NFA = { exists = no }
         RFA = { exists = no }
+		SFA = { exists = no }
+		SYA = { exists = no }	
     }
     option = {
         name = france.10.a
-		#set_global_flag = end_fra_civil_war
+		set_global_flag = end_fra_civil_war
         FRA = { transfer_state = 16 } 
 		FRA = { change_tag_from = SPF }
         FRA = { annex_country = { target = SPF transfer_troops = yes } }

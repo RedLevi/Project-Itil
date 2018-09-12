@@ -1877,3 +1877,11 @@ spriteTypes = {
        name = "GFX_intro_rus"
        texturefile = "gfx/event_pictures/rus_intro.dds"
     }
+	spriteType = {
+		name = "GFX_notredame"
+		texturefile = "gfx/event_pictures/notredame.dds"
+	}	
+	spriteType = {
+		name = "GFX_eiffeltower"
+		texturefile = "gfx/event_pictures/eiffeltower.dds"
+	}	

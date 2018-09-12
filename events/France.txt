@@ -757,6 +757,7 @@ country_event = { #SPF victory
     option = {
         name = france.10.a
 		set_global_flag = end_fra_civil_war
+		news_event = flv.3
         FRA = { transfer_state = 16 } 
 		FRA = { change_tag_from = SPF }
         FRA = { annex_country = { target = SPF transfer_troops = yes } }
@@ -1154,13 +1155,10 @@ country_event = { #NFA victory #
         IFA = { exists = no }
         SPF = { exists = no }
         RFA = { exists = no }
-        NOT = {
-           has_global_flag = ifa_accepts
-           has_global_flag = rfa_accepts
-        }
     }
     option = {
         name = france.13.a
+		news_event = flv.4
         FRA = { transfer_state = 16 }
 		FRA = { change_tag_from = NFA }
         FRA = { annex_country = { target = NFA transfer_troops = yes } }
@@ -1239,6 +1237,7 @@ country_event = { #SFA victory #
     }
     option = {
         name = france.20.a
+		news_event = flv.5
         FRA = { transfer_state = 16 }
 		FRA = { change_tag_from = SFA }
         FRA = { annex_country = { target = SFA transfer_troops = yes } }
@@ -1268,16 +1267,17 @@ country_event = { #RFA victory #
     }
     option = {
         name = france.21.a
+		news_event = flv.6
         FRA = { transfer_state = 16 }
 		FRA = { change_tag_from = RFA }
         FRA = { annex_country = { target = RFA transfer_troops = yes } }
         FRA = {
                 set_politics = {
-                ruling_party = national_integralism
+                ruling_party = liberalism
                 elections_allowed = no
             }
-            add_popularity = { ideology = national_integralism popularity = 0.7 }
-			add_popularity = { ideology = reactionarism popularity = 0.3 }
+            add_popularity = { ideology = liberalism popularity = 0.7 }
+			add_popularity = { ideology = socialism popularity = 0.3 }
         }
     }
 }
@@ -1297,6 +1297,7 @@ country_event = { #SYA victory #
     }
     option = {
         name = france.22.a
+        news_event = flv.7
         FRA = { transfer_state = 16 }
 		FRA = { change_tag_from = SYA }
         FRA = { annex_country = { target = SYA transfer_troops = yes } }
@@ -1306,6 +1307,35 @@ country_event = { #SYA victory #
                 elections_allowed = no
             }
             add_popularity = { ideology = communism popularity = 1.0 }
+        }
+    }
+}
+
+country_event = { #IFA victory #
+    id = france.23
+    title = france.23.t
+    desc = france.23.d
+    fire_only_once = yes
+    trigger = {
+        tag = SYA
+        NFA = { exists = no }
+        SFA = { exists = no }
+        IFA = { exists = no }
+        SPF = { exists = no }
+        RFA = { exists = no }
+    }
+    option = {
+        name = france.23.a
+		news_event = flv.8
+        FRA = { transfer_state = 16 }
+		FRA = { change_tag_from = IFA }
+        FRA = { annex_country = { target = SYA transfer_troops = yes } }
+        FRA = {
+                set_politics = {
+                ruling_party = national_integralism
+                elections_allowed = no
+            }
+            add_popularity = { ideology = national_integralism popularity = 1.0 }
         }
     }
 }

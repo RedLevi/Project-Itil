@@ -43,3 +43,122 @@ news_event = {
 
 }
 
+news_event = { #SPF victory news
+   id = flv.3
+	 desc = flv.3.d
+	 title = flv.3.t
+	 picture = GFX_eiffeltower
+	 fire_only_once = yes
+	 major = yes
+	 
+	 is_triggered_only = yes
+
+	 option = {
+	    name = flv.3.a	
+		trigger = {
+			NOT = { 
+			    TAG = FRA 
+			} 
+		}
+	}
+}
+
+news_event = { #NFA victory news
+   id = flv.4
+	 desc = flv.4.d
+	 title = flv.4.t
+	 picture = GFX_eiffeltower
+	 fire_only_once = yes
+	 major = yes
+	 
+	 is_triggered_only = yes
+
+	 option = {
+	    name = flv.4.a	
+		trigger = {
+			NOT = { 
+			    TAG = FRA 
+			} 
+		}
+	}
+}
+
+news_event = { #SFA victory news
+   id = flv.5
+	 desc = flv.5.d
+	 title = flv.5.t
+	 picture = GFX_eiffeltower
+	 fire_only_once = yes
+	 major = yes
+	 
+	 is_triggered_only = yes
+
+	 option = {
+	    name = flv.5.a	
+		trigger = {
+			NOT = { 
+			    TAG = FRA 
+			} 
+		}
+	}
+}
+
+news_event = { #RFA victory news
+   id = flv.6
+	 desc = flv.6.d
+	 title = flv.6.t
+	 picture = GFX_notredame
+	 fire_only_once = yes
+	 major = yes
+	 
+	 is_triggered_only = yes
+
+	 option = {
+	    name = flv.6.a	
+		trigger = {
+			NOT = { 
+			    TAG = FRA 
+			} 
+		}
+	}
+}
+
+news_event = { #SYA victory news
+   id = flv.7
+	 desc = flv.7.d
+	 title = flv.7.t
+	 picture = GFX_eiffeltower
+	 fire_only_once = yes
+	 major = yes
+	 
+	 is_triggered_only = yes
+
+	 option = {
+	    name = flv.7.a	
+		trigger = {
+			NOT = { 
+			    TAG = FRA 
+			} 
+		}
+	}
+}
+
+news_event = { #IFA victory news
+   id = flv.8
+	 desc = flv.8.d
+	 title = flv.8.t
+	 picture = GFX_eiffeltower
+	 fire_only_once = yes
+	 major = yes
+	 
+	 is_triggered_only = yes
+
+	 option = {
+	    name = flv.8.a	
+		trigger = {
+			NOT = { 
+			    TAG = FRA 
+			} 
+		}
+	}
+}

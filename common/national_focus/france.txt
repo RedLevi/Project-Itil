@@ -1186,8 +1186,8 @@ focus_tree = {
 				category = nuclear
 		}
 		add_tech_bonus = {
-				ahead_reduction = 0.5
-				uses = 2
+				ahead_reduction = 0.3
+				uses = 1
 				category = rocketry
 				category = jet_technology
 		}		

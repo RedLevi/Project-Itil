@@ -6,7 +6,7 @@ focus_tree = {
 
 		modifier = {
 			add = 10
-			tag = MAN
+			original_tag = MAN
 		}
 	}
 
@@ -306,8 +306,7 @@ default = no
 		available_if_capitulated = no
 		
 		completion_reward = {
-			add_stability = 0.05 
-			add_manpower = -65000
+			country_event = { id = man.23 }
 		}
 	
 	}
@@ -357,6 +356,7 @@ default = no
 		x = 13
 		y = 3
 		cost = 10	
+		bypass = { has_country_flag = MAN_mantetsu_defeated }
         prerequisite = { focus = MAN_mamoru_path }
 		available_if_capitulated = no
 		
@@ -382,6 +382,7 @@ default = no
 		x = 13
 		y = 4
 		cost = 9	
+		bypass = { has_country_flag = MAN_mantetsu_defeated }
         prerequisite = { focus = MAN_state_investments }
 		available_if_capitulated = no
 		
@@ -398,6 +399,7 @@ default = no
 		x = 13
 		y = 5
 		cost = 10	
+		bypass = { has_country_flag = MAN_mantetsu_defeated }
         prerequisite = { focus = MAN_lower_manetsu }
 		available_if_capitulated = no
 		
@@ -414,6 +416,7 @@ default = no
 		x = 13
 		y = 6
 		cost = 10	
+		bypass = { has_country_flag = MAN_mantetsu_defeated }
         prerequisite = { focus = MAN_critize_manetsu }
         prerequisite = { focus = MAN_civil_law }
 		available_if_capitulated = no
@@ -542,7 +545,7 @@ default = no
 		available_if_capitulated = no
 		
 		completion_reward = {
-			remove_idea = man_national_transformation
+			remove_ideas = man_national_transformation
 			swap_ideas = {
 				remove_idea = MAN_ethnic_tensions
 				add_idea = MAN_concord_idea
@@ -594,12 +597,12 @@ default = no
 		icon = GFX_goal_generic_construction
 		x = 17
 		y = 3
-		cost = 5	
+		cost = 10	
         prerequisite = { focus = MAN_mamoru_path focus = MAN_yosukes_path }
 		available_if_capitulated = no
 		
 		completion_reward = {
- 
+			add_ideas = MAN_japanese_investments
 		}
 	
 	}

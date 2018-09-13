@@ -113,13 +113,38 @@ man.13.b:0 "The reformists form a coalition government"
 man.14.t:0 "Manchurian Presidential Elections"
 man.14.d:0 "For the first time, the post of president of the republic was contended in democratic elections, and all male citizens of the republic were allowed to participate. Mamoru Shigemitsu, the provisinal president, have won 61% of the votes and began his first 4 years term."
 man.14.a:0 "Congratulations President Mamoru!"
-
-
+man.15.t:0 "The Mantetsu protests our policies."
+man.15.d:0 "The Mantetsu board have sent us a formal letter expressing their displeasure at our efforts to reform the country into a more democratic society, in particular our economic reforms. We don't know what kind of political power they can amass against us, but we should fear the worst..."
+man.15.a:0 "We must stabilize the republic!"
+man.16.t:0 "Mantetsu board carries out coup!"
+man.16.d:0 "At 07:31 this morning a large explosion could be heard from the presidential residence in Hsinking in an apperant terrorist attack. Troops loyal to the Mantetsu board have taken over the Parliamant, the Hsinking Police HQ and the national broadcasting station in what they claim is an attempt to restore order. Luckily, the president was out of town during the events and was safely escorted by loyal troops to Mukden. It appears that what was surely planned to be a simple coup by the Mantetsu board have turned into a military standoff, with the entire nation holding its breath with dread at which side the Japanese will take."
+man.16.a:0 "We must protect democracy!"
+man.17.t:0 "Coup in Manchuria"
+man.17.d:0 "We have recived urgent communications from our allies in Manchuria, informing us that the Mantetsu board of directors is attempting a military coup in a response to the democratic reforms initiated by the president. They are requesting we will lend forces from the Kwantung army to help supress this rebellion. Of course, we could also support the rebels instead..."
+man.17.a:0 "Deploy troops to quell the rebellion"
+man.17.b:0 "Its time to stop this democratic experiment"
+man.18.t:0 "Japan supports us!"
+man.18.d:0 "The Japanese have agreed to deploy troops in Hsinking and help us crush this uprising."
+man.18.a:0 "Great!"
+man.19.t:0 "Japan betrayes us!"
+man.19.d:0 "Not only did the Japanese refuse to aid us against the rebels in Hsinking, they have deployed troops to support them against us!"
+man.19.a:0 "We're doomed!"
+man.20.t:0 "Military coup in Manchuria"
+man.20.d:0 "Early this morning an explosion rocked the Manchurian capital of Hsinking as suspected Mantetsu agents attempted to assasinate the president Mamoru Shigemitsu in response to increased democratic reforms. The explosion was followed by a quick takeover of the city by units on the Mantetsu payroll. It is yet to be seen if this coup would mean the end of the democratic process in Manchuria."
+man.20.a:0 "Interesting..."
+man.21.t:0 "Mantetsu coup crushed!"
+man.21.d:0 "We have succsesfuly defeated the Mantetsu backed rebels and arrested their leaders, and a full investigation into Mantetsu activities have been launched. Mantetsu assets are now frozen until further noitce and its board members have been arrested. Yousuke Matsuoka is nowhere to be found though..."
+man.21.a:0 "Where could he have gone...?"
+man.22.t:0 "Trial of the Mantetsu directors"
+man.22.d:0 "Thanks to a thorough investigation, aided by pleas from lesser executives and raids on Mantetsu offices enough evidence was found to convict the Mantetsu board of directors of high treason, conspiracy to murder, bribery and subversion, along with a myriad of other smaller offenses. A speedy trial have found many executives and officers guilty with sentences ranging in severity from capital punishment for officers who participated in the bombing, up to minor prison time for lesser conspirators. Now that the Mantetsu have been all but eliminated remains the question of what to do with their extensive assets."
+man.22.a:0 "Justice has been served."
 ####tooltips####
 RUS_MAN_rail_sale:0 "Purchase of the Trans-Siberian Railway"
 MAN_leader_mamoru:0 "Mamoru is president"
 
 ####ideas####
+MAN_mantetsu_angry_idea:0 "Mantetsu Protests"
+MAN_mantetsu_angry_idea_desc:0 "The Mantetsu is unhappy with the reforms we are making in the country, and is using its vast resources to counter us politically. This could turn into a dangerous situation."
 MAN_concord_idea:0 "Concord Of People"
 MAN_concord_idea_desc:0 "Our nation is a diverse mosaic of Han, Manchu, Mongol, Japanese, Korean, Russian, Jewish and many more communities. Embracing this diversity is what gave us strength, and what drives us forward."
 MAN_anti_mantetsu_competition:0 "Fierce Competition"
@@ -151,6 +176,9 @@ MAN_state_education_desc:0 "The state established a multi-lingual, multi-tiered 
 MAN_national_service:0 "National Service"
 MAN_national_service_desc:0 "All citizens must serve a time period of 18 months either in the regular military force or in one of the many state projects in order to strengthen our national identity and increase our manpower."
 ###decisions###
+MAN_police_category:0 "Manchurian State Police"
+MAN_police_category_desc:0 "We have established a state police force subject directly to the civilian government's authority. We can further expand this force for our national defense and political stability."
+
 
 ###parties###
 

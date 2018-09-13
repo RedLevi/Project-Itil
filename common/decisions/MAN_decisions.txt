@@ -1,0 +1,32 @@
+MAN_police_category = {
+
+	MAN_mobilize_police = {
+	
+		icon = GFX_decision_generic_prepare_civil_war
+		available = { has_completed_focus = MAN_civil_law }
+		visible = {
+			has_tech = tech_military_police
+		}
+		 ai_will_do = {
+	       factor = 10
+	       modifier = {
+	          factor = 2
+	          has_civil_war = yes
+	       }
+		  
+	    }
+		cost = 45    
+		days_remove = 30
+		fire_only_once = yes	
+		remove_effect = {
+	      
+		  load_oob = MAN_police_brigades
+		   
+	    }
+		complete_effect  = {
+			add_stability = 0.025
+		}
+	
+	}
+
+}

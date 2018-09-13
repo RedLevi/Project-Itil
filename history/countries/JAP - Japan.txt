@@ -102,14 +102,8 @@ if = {
 		freedom_level = 0.1
 	}
 	
-	set_autonomy = {
-		target = MAN
-		autonomous_state = autonomy_dominion
-		freedom_level = 0.1
-	}
 	else = {
 		puppet = RUS
-		puppet = MAN
 	}
 }
 

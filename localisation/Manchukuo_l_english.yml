@@ -189,6 +189,8 @@ MAN_national_service:0 "National Service"
 MAN_national_service_desc:0 "All citizens must serve a time period of 18 months either in the regular military force or in one of the many state projects in order to strengthen our national identity and increase our manpower."
 MAN_labor_reforms:0 "Labor Reforms"
 MAN_labor_reforms_desc:0 "The socialist Diet have passed several progressive labor reforms, such as a minimum wage and a 8-hour work day, in hopes of staving off the more radical socialist agitation."
+MAN_japanese_investments:0 "Japanese Investments"
+MAN_japanese_investments_desc:0 "While Japanese Investments make us more depended on Japan they will help expanding the industry."
 
 ###decisions###
 MAN_police_category:0 "Manchurian State Police"

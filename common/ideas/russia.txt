@@ -1,0 +1,40 @@
+ideas = {
+
+country = {
+	
+	Kiril_I = {
+		
+			available = {
+			
+				NOT = { has_government = communism }
+			
+			}
+			
+			allowed_civil_war = {
+			
+				NOT = {
+				
+					has_government = communism
+				
+				}
+			}
+			
+			
+			removal_cost = -1
+			
+			modifier = {
+				
+				stability_factor = 0.05
+				
+			
+			}
+		
+		
+		}
+	}
+}
+
+
+
+
+}

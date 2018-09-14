@@ -888,29 +888,6 @@ Head_of_Government = {
 				factor = 0
 			}
 		}
-
-		alexander_kerensky = {
-
-
-			allowed = {
-				original_tag = "SOV"
-			}
-
-
-
-			traits = { democratic_reformer }
-
-
-			do_effect = {
-				NOT = {
-					has_government = democratic
-				}
-			}
-
-			ai_will_do = {
-				factor = 0
-			}
-		}
 	}
 
 	army_chief = {

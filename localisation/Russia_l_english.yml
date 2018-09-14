@@ -3,10 +3,16 @@
   rus.1.d:0 "The glorious Russian state, born from the fires of the 2nd Russo-Japanese war, aiming to return order and greatness to the Russian homeland, controlled by socialist traitors. Formed out of the White Hundreds, patriots of the homeland that fought against the soviet scourge. We know that liberation is imminent, however the great Russian state has no friends in this world. Our greatest enemy is our closest ally, and if we plan to achieve our goals, we must break the Japanese yoke. Soon, all rightful Russian land will be under our control. Onwards to glory!"
   rus.1.a:0 "Mother Russia is ours!"
   rus.2.t:0 "Manchurian "offer""
-  rus.2.d:0 "Today, we recieved a message from the Mantetsu, offering to buy our part of the Trans-Siberian railway in exchange for a considerable sum of money. While both sides can greatly benefit from this, the nationalist factions are fiercely against cooperating with the so called 'occupiers' and giving them Russian lands. If we are to accept, we will surely face internal conflict, However if we refuse, it could cause tensions with the Japanese."
+  rus.2.d:0 "Today, we recieved a telegram from the Mantetsu, offering to buy our part of the Trans-Siberian railway in exchange for a considerable sum of money. While both sides can greatly benefit from this, the nationalist factions are fiercely against cooperating with the so called 'occupiers' and giving them Russian lands. If we are to accept, we will surely face internal conflict, However if we refuse, it could cause tensions with the Japanese."
   rus.2.a:0 "It is for the greater good"
   rus.2.b:0 "No deal!"
-  rus.3.t:0 "The Russians Agree!"
-  rus.3.d:0 "The Russians have accepted our offer and the transfer of ownership over the railway have begun."
-  rus.3.a:0 "Great news!"
+  rus.3.t:0 "The Russians do not agree!"
+  rus.3.d:0 "The Russians refused our fair proposal for the purchase of the Trans-Siberian railway. This outrageous act is a huge disrespect to our aid in their independence war! We will get that railway, one way or another."
+  rus.3.a:0 "Ask Japan to depose their government"
+  rus.3.b:0 "Let it go"
+  rus.3.b:0 "Invade!"
+
+  ##ideas##
+  Kiril_I:0 "Imperator Kiril I"
+  Kiril_I_desc:0 "Emperor Kiril was placed as a puppet Emperor by the Japanese government to stabilize their Russian puppet regime. Formerly Grand Duke, he lived out his life in asylum in Japan after being captured in Vladivostok after the end of the 1st Russo-Japanese war."
   

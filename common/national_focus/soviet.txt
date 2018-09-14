@@ -1540,9 +1540,6 @@ focus = {
 	prerequisite = {
 		focus = Invasion_of_Afghanistan
 	}
-	prerequisite = {
-		focus = Dismantle_Syria
-	}
 	x = 59
 	y = 8
 	completion_reward = {

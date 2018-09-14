@@ -1,4 +1,4 @@
-﻿####koach####
+####koach####
 add_namespace = jfor
 ####Hawaii refferendum chain####
 country_event = {#arrange refferendum in hawaii
@@ -2218,4 +2218,33 @@ country_event = {#Shanxi refuses
 	option = {#AGREE
 		name = jfor.85.a
 	}
+}
+
+####Russian state problem####
+
+country_event = { #Manchuria asks for intervention in russia - non acception of railway
+	id = jfor.86
+	title = jfor.86.t
+	desc = jfor.86.d
+	is_triggered_only = yes 
+
+    option = { #Aid manchuria 
+       name = jfor.86.a 
+       RUS = { country_event = { id = rus.4 days = 1 } }
+       MAN = {
+          add_opinion_modifier = {
+             target = JAP modifier = MAN_japan_helped
+          }
+       }
+       add_political_power = -50
+    }
+
+    option = { #be neutral 
+       name = jfor.86.b 
+       MAN = {
+          add_opinion_modifier = {
+             target = JAP modifier = No_Help 
+          }
+       }
+    }
 }

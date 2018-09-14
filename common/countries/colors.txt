@@ -555,10 +555,6 @@ RUS = {
     color = rgb { 13 125 24 }
 	color_ui = rgb { 138 155 116 }
 }
-AND = {
-    color = rgb { 193 117 31 }
-	color_ui = rgb { 130 78 20 }
-}
 ISR = {
 	color = rgb { 40  140  255 }
 	color_ui = rgb { 255  204  204 }

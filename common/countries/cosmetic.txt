@@ -43,3 +43,8 @@ SOVRUS = {
     color = rgb {41 137 68}
     color_ui = rgb { 56 102 69 }
 }
+
+JAPRUS = {
+    color = rgb {103 168 0}
+	color_ui = rgb {84 137 0}
+}

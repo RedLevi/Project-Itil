@@ -1,4 +1,4 @@
-﻿add_namespace = rus
+add_namespace = rus
 
 country_event = { #intro event 
 	id = rus.1
@@ -42,49 +42,111 @@ country_event = { #railway question
 	title = rus.2.t
 	desc = rus.2.d 
 	is_triggered_only = yes 
+	picture = GFX_manchuria_railway
 
 	option = { #agree 
        name = rus.2.a
-       add_offsite_building = { type = industrial_complex level = 2 }
+       ai_chance = {
+          factor = 50
+       }
+       add_offsite_building = { type = industrial_complex level = 3 }
        add_political_power = -50
        add_stability = -0.05
        set_country_flag = kornilov_accepts
-	   reverse_add_opinion_modifier = { target = MAN modifier = RUS_MAN_rail_sale }
        MAN = {
-          country_event = { id = rus.3 }
+          add_ideas = MAN_bought_railway
        }
 	}
 	option = { #refuse
 	   name = rus.2.b
+	   ai_chance = {
+          factor = 50
+       }
 	   add_political_power = 50
 	   add_stability = 0.05
 	   set_country_flag = kornilov_refuses
-	   country_event = { id = rus.4 }
+	   MAN = {
+	      add_opinion_modifier = {
+	         target = RUS modifier = RUS_refused_railway
+	      }
+	      add_opinion_modifier = {
+	         target = RUS modifier = sanctions
+	      }
+	   }
+	   MAN = {
+	      country_event = {
+	         id = rus.3 days = 3
+	      }
+	   }
 	}
 }
 
-country_event = {#Russia agrees
-	 id = rus.3
-	 title = rus.3.t 
-	 desc = rus.3.d 
-	 is_triggered_only = yes 
-	 option = {
-		name = rus.3.a 
-		add_timed_idea = {
-			idea = MAN_bought_railway
-			days = 365
-		}
-		reverse_add_opinion_modifier = { target = RUS modifier = RUS_MAN_rail_sale }
-	 }
+country_event = { #Manchuria response
+   id = rus.3
+   title = rus.3.t 
+   desc = rus.3.d 
+   is_triggered_only = yes 
+   picture = GFX_manchuria_railway
+
+   option = { #Ask Japan to depose Kornilov
+      name = rus.3.a
+      ai_chance = {
+          factor = 70
+       }
+      trigger = {
+      OR = {
+         NOT = {
+            JAP = {
+               has_government = communism
+            }
+         }
+         MAN = {
+            is_in_faction_with = JAP
+         }
+      }
+      }
+      RUS = {
+         add_opinion_modifier = {
+	         target = RUS modifier = refused_railway
+	      }
+      }
+      JAP = { country_event = { id = jfor.86 days = 2 } }
+   }
+
+   option = { #Let it go 
+      ai_chance = {
+          factor = 30
+       }
+      name = rus.3.b 
+      add_stability = -0.05
+      add_political_power = -50
+   }
+
+   #option = { #invade Russia 
+    #  name = rus.3.c
+
+   #}
 }
 
-country_event = {#Russia refuses
-	 id = rus.4
-	 title = rus.4.t 
-	 desc = rus.4.d 
-	 is_triggered_only = yes 
-	 option = {
-		name = rus.4.a 
-		
-	 }
+country_event = { #Japan wants to depose kornilov
+	id = rus.4 
+	title = rus.4.t 
+	desc = rus.4.d 
+	is_triggered_only = yes 
+
+    option = {#accept ultimatum 
+       name = rus.4.a 
+       retire_country_leader = yes 
+       create_country_leader = {
+	        name = "Vladimir Kislitsin"
+	        desc = ""
+	        picture = "Vladimir_Kislitsin.dds"
+	        expire = "1965.1.1"
+	        ideology = authoritarian_conservatism
+	        traits = {
+	        }
+        }
+        add_popularity = { ideology = conservatism popularity = 0.5 }
+        set_politics = { ruling_party = conservatism elections_allowed = no }
+    }
 }

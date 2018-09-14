@@ -1885,3 +1885,7 @@ spriteTypes = {
 		name = "GFX_eiffeltower"
 		texturefile = "gfx/event_pictures/eiffeltower.dds"
 	}	
+	spriteType = {
+		name = "GFX_manchuria_railway"
+		texturefile = "gfx/event_pictures/manchuria_raiway.dds"
+	}	

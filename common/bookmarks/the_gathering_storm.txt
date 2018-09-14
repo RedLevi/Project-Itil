@@ -94,7 +94,7 @@ bookmarks = {
 		"MAN"={
 		    minor = yes
 			history = "MAN_GATHERING_STORM_DESC"
-			ideology = absolutism
+			ideology = reactionarism
 			ideas = {
 				MAN_leftist
 				MAN_manetsu
@@ -118,12 +118,8 @@ bookmarks = {
 			history = "YUG_GATHERING_STORM_DESC"
 			ideology = conservatism
 			ideas = {
-				YUG_dc
-				YUG_executive_power
 			}
 			focuses = {
-				YUG_ethnic_question
-				YUG_outwards_vision
 			}
 		}
 		

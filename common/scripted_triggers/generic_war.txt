@@ -4,13 +4,17 @@ is_friendly = {
 	
 		is_controlled_by = ROOT
 		
-		any_country = {
-		
-			is_in_faction_with = ROOT
-			controls_state = PREV
-			
+		AND = {
+		   ROOT = {
+		      is_faction_leader = yes
+		   }
+		   any_country = {
+		   
+		    	is_in_faction_with = ROOT
+		    	controls_state = PREV
+		   	
+		   }
 		}
-		
 		
 		
 		any_country = {

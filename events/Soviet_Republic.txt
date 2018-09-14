@@ -1434,7 +1434,7 @@ country_event = {#kemal asks for help
 		PREV = { country_event = { id = soviet.40 }  }
 	}
 	option = {
-		name = soviet.39.a 
+		name = soviet.39.b
 		ai_chance = { factor = 20 }
 		add_to_faction = PREV
 		PREV = { country_event = { id = soviet.41 }  }

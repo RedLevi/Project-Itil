@@ -1795,6 +1795,8 @@ spriteTypes = {
 		name = "GFX_news_event_romania_parliament"
 		texturefile = "gfx/event_pictures/news_event_romania_parliament.dds"
 	}
+	
+	###mod###
 
 	spriteType = {
 		name = "GFX_fra_communist"
@@ -1887,5 +1889,10 @@ spriteTypes = {
 	}	
 	spriteType = {
 		name = "GFX_manchuria_railway"
-		texturefile = "gfx/event_pictures/manchuria_raiway.dds"
+		texturefile = "gfx/event_pictures/manchuria_railway.dds"
 	}	
+	
+	spriteType = {
+		name = "GFX_mantetsu_coup"
+		texturefile = "gfx/event_pictures/mantetsu_coup.dds"
+	}

@@ -427,6 +427,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_generic_form_nation.dds"
 	}
 	
+	###mod
+	
 	spriteType = {
 		name = "GFX_decision_cat_SOV_diplomacy"
 		texturefile = "gfx/interface/decisions/decision_cat_SOV_diplomacy.dds"
@@ -467,5 +469,8 @@ spriteTypes = {
 		name = "GFX_decision_cat_SOV_germany"
 		texturefile = "gfx/interface/decisions/decision_cat_SOV_germany.dds"
 	}
-}
+	spriteType = {
+		name = "GFX_decision_cat_japanese_marx"
+		texturefile = "gfx/interface/decisions/decision_cat_japanese_marx.dds"
+	}
 }

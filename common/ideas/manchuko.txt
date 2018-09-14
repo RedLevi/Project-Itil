@@ -2,6 +2,26 @@ ideas = {
     
     country = {
 		
+		MAN_labor_reforms = {
+		
+			picture = generic_agrarian_reform
+            removal_cost = -1
+
+            allowed = {
+				always = yes
+		    }
+			allowed_civil_war = {
+				always  = yes
+			}
+			modifier = {
+					
+				industrial_capacity_factory = -0.05 
+				consumer_goods_factor = 0.035 
+
+			}
+		
+		}
+		
 		MAN_mantetsu_angry_idea = {
 		
 			picture = jap_zaibatsu_control
@@ -110,7 +130,7 @@ ideas = {
 			}
 			modifier = {
 				
-				stability_factor = -0.2 
+				stability_factor = -0.1 
 
 			}
 		

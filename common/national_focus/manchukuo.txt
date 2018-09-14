@@ -192,6 +192,7 @@ default = no
 		x = 8 
 		y = 2
 		cost = 0	
+		available = { has_country_flag = MAN_leader_mamoru }
         prerequisite = { focus = MAN_a_new_leader }
         mutually_exclusive = { focus = MAN_yosukes_path focus = MAN_zhang_path  }
 		bypass = { has_country_flag = MAN_leader_mamoru }
@@ -205,10 +206,9 @@ default = no
 
 	    id = MAN_install_parliamant
 		icon = GFX_goal_support_democracy
-		x = 7
+		x = 9
 		y = 6
 		cost = 10	
-		mutually_exclusive = { focus = MAN_install_president }
  
         prerequisite = { focus = MAN_establish_a_constitution }
         prerequisite = { focus = MAN_allow_political_parties }
@@ -222,26 +222,6 @@ default = no
 	
 	}
 	
-	focus = {
-
-	    id = MAN_install_president
-		icon = GFX_goal_support_democracy
-		x = 11
-		y = 6
-		cost = 10	
-		mutually_exclusive = { focus = MAN_install_parliamant }
-
-        prerequisite = { focus = MAN_establish_a_constitution }
-        prerequisite = { focus = MAN_allow_political_parties }
-        prerequisite = { focus = MAN_civil_law }
-		available_if_capitulated = no
-		
-		completion_reward = {
-			country_event = { id = man.11 } 
- 
-		}
-	
-	}
 
 	focus = {
 
@@ -535,11 +515,11 @@ default = no
 
 	    id = MAN_chinese_japanese_friendship
 		icon = GFX_focus_man_3
-		x = 5
-		y = 7	
+		x = 9
+		y = 8	
 		cost = 5	
 		prerequisite = { focus = MAN_decentralize_manetsu }
-        prerequisite = { focus = MAN_install_parliamant focus = MAN_install_president }
+        prerequisite = { focus = MAN_install_parliamant }
 		prerequisite = { focus = MAN_mobilization }
         prerequisite = { focus = MAN_equal_rights } 
 		available_if_capitulated = no

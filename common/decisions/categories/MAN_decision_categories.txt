@@ -24,3 +24,17 @@ MAN_leftist_category = {
       has_idea = MAN_leftist
    }
 }
+
+MAN_post_mantetsu_economics = {
+   icon = GFX_decision_category_generic_prospect_for_resources
+   picture = GFX_decision_cat_MAN_post_mantetsu
+   allowed = {
+       original_tag = MAN
+   }
+   available = {
+      has_completed_focus = MAN_decentralize_manetsu
+   }
+   visible = {
+      has_completed_focus = MAN_decentralize_manetsu
+   }
+}

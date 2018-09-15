@@ -536,7 +536,7 @@ country_event = {#Manchurian Movies
 	option = {
 		name = man.25.a 
 		add_stability = 0.05 
-		add_offsite_building = { type = industrial_complex level = 2 }
+		add_offsite_building = { type = industrial_complex level = 1 }
 	}
 }
 
@@ -558,7 +558,44 @@ country_event = {#Socialist protests
 	}
 }
 	
-country_event 
+country_event = {#Investments succsesful 
+
+	id = man.27 
+	title = man.27.t 
+	desc = man.27.d 
+	is_triggered_only = yes 
+	option = {
+		name = man.27.a 
+		328 = {
+			add_extra_state_shared_building_slots = 2 
+		    add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		715 = {
+			add_extra_state_shared_building_slots = 2 
+		    add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+
+}
+
+country_event = {#investments failed 
+	id = man.28
+	title = man.28.t 
+	desc = man.28.d 
+	is_triggered_only = yes 
+	option = {
+		name = man.28.a 
+		add_stability = -0.025 
+	}
+}
 ###TO DO LIST for mamoru###
 #Add a potential mantetsu coup if you fail to reform effectively X
 #add a path for a succsesful mantetsu coup (probably just the Mamoru path)

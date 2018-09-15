@@ -3620,124 +3620,7 @@ spriteTypes = {
 		name = "GFX_idea_firm_nation"
 		texturefile = "gfx/interface/ideas/firm_nation.dds"
 	}
-	spriteType = {
-		name = "GFX_idea_GRE_Megali_Idea"
-		texturefile = "gfx/interface/ideas/generic_intel_bonus.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_GRE_fortification_focus"
-		texturefile = "gfx/interface/ideas/GRE_fortification_focus.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_Nikolai_Bukharin"
-		texturefile = "gfx/interface/ideas/Bukharin.dds"
-	}
-    spriteType = {
-		name = "GFX_idea_Alexei_Rykov"
-		texturefile = "gfx/interface/ideas/Rykov.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_Andrei_Bubnov"
-		texturefile = "gfx/interface/ideas/Bubnov.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_Sergey_Kirov"
-		texturefile = "gfx/interface/ideas/Kirov.dds"
-	}
-    spriteType = {
-		name = "GFX_idea_Grigory_Zinoviev"
-		texturefile = "gfx/interface/ideas/Zinoviev.dds"
-	}
-	spriteType = {
-		name = "GFX_idea_Mikhail_Tomsky"
-		texturefile = "gfx/interface/ideas/Tomsky.dds"
-	}
 	
-	SpriteType = {
-		name = "GFX_idea_adenauer_pm"
-		texturefile = "gfx/interface/ideas/idea_adenauer_pm.dds"
-	}	
-	SpriteType = {
-		name = "GFX_idea_overconfident_general_staff"
-		texturefile = "gfx/interface/ideas/idea_overconfident_general_staff.dds"
-	}	
-	SpriteType = {
-		name = "GFX_idea_kaiser_wilhelm_ii_original"
-		texturefile = "gfx/interface/ideas/idea_kaiser_wilhelm_ii.dds"
-	}		
-	SpriteType = {
-		name = "GFX_idea_kaiser_wilhelm_ii_puppet"
-		texturefile = "gfx/interface/ideas/idea_kaiser_wilhelm_ii.dds"
-	}
-
-	SpriteType = {
-		name = "GFX_idea_yug_divided_nation"
-		texturefile = "gfx/interface/ideas/idea_yug_divided_nation.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_george_v"
-		texturefile = "gfx/interface/ideas/George_V.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_carol_II"
-		texturefile = "gfx/interface/ideas/idea_Carol_II.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_christian_X"
-		texturefile = "gfx/interface/ideas/Christian_X.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_pedro_III"
-		texturefile = "gfx/interface/ideas/Pedro_III.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_ferdinand_I"
-		texturefile = "gfx/interface/ideas/Ferdinand_I.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_george_II"
-		texturefile = "gfx/interface/ideas/George_II.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_gustav_v"
-		texturefile = "gfx/interface/ideas/idea_gustav_v.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_haakon_VII"
-		texturefile = "gfx/interface/ideas/Haakon_VII.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_hirohito"
-		texturefile = "gfx/interface/ideas/Hirohito.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_karl_I"
-		texturefile = "gfx/interface/ideas/Karl_I.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_prince_paul"
-		texturefile = "gfx/interface/ideas/Prince_Paul.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_peter_II"
-		texturefile = "gfx/interface/ideas/Peter_II.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_rama_VII"
-		texturefile = "gfx/interface/ideas/Rama_VII.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_wilhelmina"
-		texturefile = "gfx/interface/ideas/Wilhelmina.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_innovative_military"
-		texturefile = "gfx/interface/ideas/idea_innovative_military.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_innovative_2_military"
-		texturefile = "gfx/interface/ideas/idea_innovative_military_2.dds"
-	}
 	
 	### JAPANESE IDEAS
 
@@ -4054,11 +3937,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_man_low_legitimacy.dds"
 	}
 	
+	
+	
+	###Mod 
+	
 	spriteType = {
 		name = "GFX_idea_fidelatis_ad_america"
 		texturefile = "gfx/interface/ideas/idea_fidelatis_ad_america.dds"
 	}
-
 	spriteType = {
 		name = "GFX_idea_tukha_db"
 		texturefile = "gfx/interface/ideas/idea_tukha_db.dds"
@@ -4071,14 +3957,10 @@ spriteTypes = {
 		name = "GFX_idea_SOV_red_navy"
 		texturefile = "gfx/interface/ideas/idea_red_navy.dds"
 	}
-	### FRA
 	SpriteType = {
 		name = "GFX_idea_france_torn"
 		texturefile = "gfx/interface/ideas/idea_france_torn.dds"
 	}	
-	
-	###Mod 
-	
 	spriteType = {
 		name = "GFX_idea_MAN_education_idea"
 		texturefile = "gfx/interface/ideas/MAN_education_idea.dds"
@@ -4092,6 +3974,130 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_MAN_concord_idea"
 		texturefile = "gfx/interface/ideas/MAN_racial_harmony.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GRE_Megali_Idea"
+		texturefile = "gfx/interface/ideas/generic_intel_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GRE_fortification_focus"
+		texturefile = "gfx/interface/ideas/GRE_fortification_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Nikolai_Bukharin"
+		texturefile = "gfx/interface/ideas/Bukharin.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_Alexei_Rykov"
+		texturefile = "gfx/interface/ideas/Rykov.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Andrei_Bubnov"
+		texturefile = "gfx/interface/ideas/Bubnov.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Sergey_Kirov"
+		texturefile = "gfx/interface/ideas/Kirov.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_Grigory_Zinoviev"
+		texturefile = "gfx/interface/ideas/Zinoviev.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Mikhail_Tomsky"
+		texturefile = "gfx/interface/ideas/Tomsky.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_adenauer_pm"
+		texturefile = "gfx/interface/ideas/idea_adenauer_pm.dds"
+	}	
+	SpriteType = {
+		name = "GFX_idea_overconfident_general_staff"
+		texturefile = "gfx/interface/ideas/idea_overconfident_general_staff.dds"
+	}	
+	SpriteType = {
+		name = "GFX_idea_kaiser_wilhelm_ii_original"
+		texturefile = "gfx/interface/ideas/idea_kaiser_wilhelm_ii.dds"
+	}		
+	SpriteType = {
+		name = "GFX_idea_kaiser_wilhelm_ii_puppet"
+		texturefile = "gfx/interface/ideas/idea_kaiser_wilhelm_ii.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_yug_divided_nation"
+		texturefile = "gfx/interface/ideas/idea_yug_divided_nation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_george_v"
+		texturefile = "gfx/interface/ideas/George_V.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_carol_II"
+		texturefile = "gfx/interface/ideas/idea_Carol_II.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_christian_X"
+		texturefile = "gfx/interface/ideas/Christian_X.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_pedro_III"
+		texturefile = "gfx/interface/ideas/Pedro_III.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ferdinand_I"
+		texturefile = "gfx/interface/ideas/Ferdinand_I.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_george_II"
+		texturefile = "gfx/interface/ideas/George_II.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_gustav_v"
+		texturefile = "gfx/interface/ideas/idea_gustav_v.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_haakon_VII"
+		texturefile = "gfx/interface/ideas/Haakon_VII.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_hirohito"
+		texturefile = "gfx/interface/ideas/Hirohito.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_karl_I"
+		texturefile = "gfx/interface/ideas/Karl_I.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_prince_paul"
+		texturefile = "gfx/interface/ideas/Prince_Paul.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_peter_II"
+		texturefile = "gfx/interface/ideas/Peter_II.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_rama_VII"
+		texturefile = "gfx/interface/ideas/Rama_VII.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_wilhelmina"
+		texturefile = "gfx/interface/ideas/Wilhelmina.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_innovative_military"
+		texturefile = "gfx/interface/ideas/idea_innovative_military.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_innovative_2_military"
+		texturefile = "gfx/interface/ideas/idea_innovative_military_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_MAN_mantetsu_idea"
+		texturefile = "gfx/interface/ideas/MAN_mantetsu_idea.dds"
 	}
 
 }

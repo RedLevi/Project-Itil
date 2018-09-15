@@ -364,6 +364,7 @@ default = no
 		cost = 9	
 		bypass = { has_country_flag = MAN_mantetsu_defeated }
         prerequisite = { focus = MAN_state_investments }
+		prerequisite = { focus = MAN_new_laws }
 		available_if_capitulated = no
 		
 		completion_reward = {
@@ -381,6 +382,7 @@ default = no
 		cost = 10	
 		bypass = { has_country_flag = MAN_mantetsu_defeated }
         prerequisite = { focus = MAN_lower_manetsu }
+		prerequisite = { focus = MAN_more_ministers }
 		available_if_capitulated = no
 		
 		completion_reward = {
@@ -575,14 +577,60 @@ default = no
 
 	    id = MAN_attract_japan_loans
 		icon = GFX_goal_generic_construction
-		x = 17
-		y = 3
+		x = 11
+		y = 7
 		cost = 10	
-        prerequisite = { focus = MAN_mamoru_path focus = MAN_yosukes_path }
+        prerequisite = { focus = MAN_decentralize_manetsu }
 		available_if_capitulated = no
 		
 		completion_reward = {
 			add_ideas = MAN_japanese_investments
+		}
+	
+	}
+	
+	focus = {
+
+	    id = MAN_nationalize_mantetsu
+		icon = GFX_focus_generic_self_management
+		x = 13
+		y = 7
+		cost = 10	
+		mutually_exclusive = { focus = MAN_privatize_mantetsu }
+        prerequisite = { focus = MAN_decentralize_manetsu }
+		available_if_capitulated = no
+		
+		completion_reward = {
+		
+			swap_ideas = {
+				
+				remove_idea = MAN_manetsu_1
+				add_idea = MAN_nationalized_mantetsu
+			
+			}
+		}
+	
+	}
+	
+	focus = {
+
+	    id = MAN_privatize_mantetsu
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 15
+		y = 7
+		cost = 10	
+		mutually_exclusive = { focus = MAN_nationalize_mantetsu }
+        prerequisite = { focus = MAN_decentralize_manetsu }
+		available_if_capitulated = no
+		
+		completion_reward = {
+		
+			swap_ideas = {
+				
+				remove_idea = MAN_manetsu_1
+				add_idea = MAN_privatized_mantetsu
+			
+			}
 		}
 	
 	}
@@ -592,14 +640,32 @@ default = no
 
 	    id = MAN_attract_japan_civ_companies
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 16
-		y = 4
-		cost = 5	
-        prerequisite = { focus = MAN_attract_japan_loans }
+		x = 12
+		y = 8
+		cost = 10	
+        prerequisite = { focus = MAN_privatize_mantetsu focus = MAN_nationalize_mantetsu }
 		available_if_capitulated = no
 		
 		completion_reward = {
- 
+			hidden_effect = {
+				random_list = {
+				
+					50 = {
+						
+						country_event = { id = man.27 days = 120 }
+						
+					}
+					
+					50 = {
+						
+						country_event = { id = man.28 days = 120 }
+						
+					}
+				
+				}
+				
+			}
+			custom_effect_tooltip = MAN_private_subsidies
 		}
 	
 	}
@@ -608,13 +674,15 @@ default = no
 
 	    id = MAN_attract_japan_mil_companies
 		icon = GFX_goal_generic_construct_mil_factory
-		x = 18
-		y = 4
-		cost = 5	
-        prerequisite = { focus = MAN_attract_japan_loans }
+		x = 14
+		y = 8
+		cost = 9	
+        prerequisite = { focus = MAN_privatize_mantetsu focus = MAN_nationalize_mantetsu }
 		available_if_capitulated = no
 		
 		completion_reward = {
+		
+			custom_effect_tooltip = MAN_state_industries
  
 		}
 	

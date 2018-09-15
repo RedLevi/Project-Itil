@@ -2,6 +2,65 @@ ideas = {
     
     country = {
 		
+		MAN_privatized_mantetsu = {
+		
+			picture = jap_zaibatsu_ally
+            removal_cost = -1
+
+            allowed = {
+				always = yes
+		    }
+			allowed_civil_war = {
+				always  = yes
+			}
+			modifier = {
+					
+				consumer_goods_factor = -0.05
+
+			}
+		
+		}
+		
+		MAN_nationalized_mantetsu = {
+		
+			picture = jap_zaibatsu_control
+            removal_cost = -1
+
+            allowed = {
+				always = yes
+		    }
+			allowed_civil_war = {
+				always  = yes
+			}
+			modifier = {
+					
+				industrial_capacity_factory = 0.1
+
+			}
+		
+		}
+		
+		MAN_japanese_investments = {
+		
+			picture = jap_zaibatsu_ally
+            removal_cost = -1
+
+            allowed = {
+				always = yes
+		    }
+			allowed_civil_war = {
+				always  = yes
+			}
+			modifier = {
+					
+				production_speed_arms_factory_factor = 0.15 
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.15 	
+
+			}
+		
+		}
+		
 		MAN_labor_reforms = {
 		
 			picture = generic_agrarian_reform
@@ -270,7 +329,7 @@ ideas = {
 
        } 
        MAN_manetsu = {
-          picture = ast_all_in
+          picture = MAN_mantetsu_idea
           removal_cost = -1
 
           allowed = {
@@ -308,7 +367,7 @@ ideas = {
 
        }  
        MAN_manetsu_1 = {
-          picture = ast_all_in
+          picture = MAN_mantetsu_idea
           removal_cost = -1
 
           allowed = {

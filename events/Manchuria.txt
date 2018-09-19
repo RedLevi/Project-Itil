@@ -344,7 +344,7 @@ country_event = {#Japanese choice in Mantetsu coup
 		
 			limit = {
 				original_tag = MAN 
-				has_war_with = MAN
+				has_government = reactionarism
 			}
 			
 			JAP = {
@@ -388,7 +388,7 @@ country_event = {#Japanese choice in Mantetsu coup
 		
 			limit = {
 				original_tag = MAN 
-				has_war_with = MAN
+				has_government = reactionarism
 			}
 			
 			JAP = {
@@ -596,9 +596,49 @@ country_event = {#investments failed
 		add_stability = -0.025 
 	}
 }
+ 
+country_event = {#manchuria supports the sphere 
+	id = man.29
+	title = man.29.t 
+	desc = man.29.d 
+	is_triggered_only = yes 
+	option = {
+		name = man.29.a 
+		reverse_add_opinion_modifier = { target = MAN modifier = MAN_JAP_improve_relation } 
+	}
+}
+
+news_event = {#manchuria creates new sphere 
+	id = man.30 
+	title = man.30.t 
+	desc = man.30.d 
+	is_triggered_only = yes 
+	option = {
+		name = man.30.a 
+	}
+}
+
+country_event = {#recreate the sphere?
+	id = man.31
+	title = man.31.t 
+	desc = man.31.d 
+	fire_only_once = yes 
+	trigger = {
+		tag = MAN 
+		NOT = { is_in_faction_with = JAP }
+		is_in_fation = no
+		has_completed_focus = MAN_co_spherity
+	}
+	mean_time_to_happen = { days = 40 }
+	option = {
+		name = man.29.a 
+		create_faction = MAN_co_prosperity_sphere
+		country_event = { id = man.30 }
+	}
+}
 ###TO DO LIST for mamoru###
 #Add a potential mantetsu coup if you fail to reform effectively X
 #add a path for a succsesful mantetsu coup (probably just the Mamoru path)
-#add reaction events to the various focuses,such as leftist protests following liberalization etc.
-#add both parliamentary and presedential paths, both with election events
+#add reaction events to the various focuses,such as leftist protests following liberalization etc. X
+#add both parliamentary and presedential paths, both with election events. NO. instead invest in the parliamentary path
 #add decisions to embrace Jewish and Russian immigrants

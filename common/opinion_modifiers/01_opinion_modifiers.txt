@@ -107,4 +107,6 @@ YUG_ROM_axis_denied = { value = -40 }
 YUG_ROM_land = { value = 50 }
 YUG_ROM_no_land = { value = 50 }
 YUG_aggression = { value = -40 }
+### Manchuria ###
+MAN_JAP_improve_relation = { value = 30 }
 }

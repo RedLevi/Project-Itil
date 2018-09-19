@@ -2,6 +2,26 @@ ideas = {
     
     country = {
 		
+		MAN_resource_rush_idea = {
+		
+			picture = generic_exploit_mines
+            removal_cost = -1
+
+            allowed = {
+				always = yes
+		    }
+			allowed_civil_war = {
+				always  = yes
+			}
+			modifier = {
+					
+				local_resources_factor = 0.15
+				
+
+			}
+		
+		}
+		
 		MAN_privatized_mantetsu = {
 		
 			picture = jap_zaibatsu_ally

@@ -206,7 +206,7 @@ default = no
 
 	    id = MAN_install_parliamant
 		icon = GFX_goal_support_democracy
-		x = 9
+		x = 7
 		y = 6
 		cost = 10	
  
@@ -692,33 +692,45 @@ default = no
 
 	    id = MAN_attract_japanese_workers
 		icon = GFX_goal_generic_consumer_goods
-		x = 17
-		y = 5
+		x = 13
+		y = 9
 		cost = 5	
         prerequisite = { focus = MAN_attract_japan_mil_companies }
         prerequisite = { focus = MAN_attract_japan_civ_companies }
 		available_if_capitulated = no
 		
 		completion_reward = {
- 
+			add_ideas = MAN_resource_rush_idea
 		}
 	
 
 	}
 
+###foreign tree 
+#ideas:
+#split into co-prosperity path and independence path
+#co-prosperity path will create better ties with Japan and other memebers, and focus on adding new members more peacefully and strengthen the alliance
+#independence path will allow for more aggresive actions, and actions against Japan 
+#maybe instead have 3 paths one for each leader
 
 	focus = {
 
 	    id = MAN_co_spherity
 		icon = GFX_focus_jap_pacific_guardian
-		x = 23
-		y = 3
-		cost = 5	
-        prerequisite = { focus = MAN_mamoru_path focus = MAN_yosukes_path } 
+		x = 5
+		y = 7
+		cost = 10	
+        prerequisite = { focus = MAN_install_parliamant } 
 		available_if_capitulated = no
-		
 		completion_reward = {
- 
+			if = { limit = { is_in_faction_with = JAP } 
+					reverse_add_opinion_modifier = { target = JAP modifier = MAN_JAP_improve_relation } 
+					JAP = { country_event = { id = man.29 } }
+				else = { 
+					create_faction = MAN_co_prosperity_sphere
+					country_event = { id = man.30 }
+					}
+				}
 		}
 	
 	}
@@ -727,9 +739,9 @@ default = no
 
 	    id = MAN_trade_jap
 		icon = GFX_goal_generic_positive_trade_relations
-		x = 22
-		y = 4
-		cost = 5	
+		x = 4
+		y = 8
+		cost = 10	
         prerequisite = { focus = MAN_co_spherity }
 		available_if_capitulated = no
 		
@@ -743,10 +755,10 @@ default = no
 
 	    id = MAN_collibartion_with_jap_army
 		icon = GFX_goal_generic_position_armies
-		x = 22
-		y = 5
-		cost = 5	
-        prerequisite = { focus = MAN_trade_jap }
+		x = 6
+		y = 8
+		cost = 10	
+        prerequisite = { focus = MAN_co_spherity }
 		available_if_capitulated = no
 		
 		completion_reward = {
@@ -759,10 +771,10 @@ default = no
 
 	    id = MAN_collibartion_with_rus_army
 		icon = GFX_goal_generic_position_armies
-		x = 24
-		y = 5
-		cost = 5	
-        prerequisite = { focus = MAN_relations_with_rus}
+		x = 4
+		y = 9
+		cost = 10	
+        prerequisite = { focus = MAN_trade_jap }
 		available_if_capitulated = no
 		
 		completion_reward = {
@@ -775,10 +787,10 @@ default = no
 
 	    id = MAN_relations_with_rus
 		icon = GFX_focus_man_1
-		x = 24
-		y = 4
+		x = 6
+		y = 9
 		cost = 5	
-        prerequisite = { focus = MAN_co_spherity }
+        prerequisite = { focus = MAN_collibartion_with_jap_army }
 		available_if_capitulated = no
 		
 		completion_reward = {
@@ -787,3 +799,5 @@ default = no
 	
 	}
 
+
+}

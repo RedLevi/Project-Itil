@@ -2,6 +2,27 @@ ideas = {
     
     country = {
 		
+		MAN_trade_comission = {
+		
+			picture = generic_flexible_foreign_policy2
+            removal_cost = -1
+
+            allowed = {
+				always = yes
+		    }
+			allowed_civil_war = {
+				always  = yes
+			}
+			modifier = {
+					
+				consumer_goods_factor = -0.01 
+				industrial_capacity_factory = 0.025
+				
+
+			}
+		
+		}
+		
 		MAN_resource_rush_idea = {
 		
 			picture = generic_exploit_mines

@@ -636,9 +636,12 @@ country_event = {#recreate the sphere?
 		country_event = { id = man.30 }
 	}
 }
+
+
 ###TO DO LIST for mamoru###
 #Add a potential mantetsu coup if you fail to reform effectively X
 #add a path for a succsesful mantetsu coup (probably just the Mamoru path)
 #add reaction events to the various focuses,such as leftist protests following liberalization etc. X
 #add both parliamentary and presedential paths, both with election events. NO. instead invest in the parliamentary path
 #add decisions to embrace Jewish and Russian immigrants
+#events to add countries to asian trade block

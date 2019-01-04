@@ -746,7 +746,10 @@ default = no
 		available_if_capitulated = no
 		
 		completion_reward = {
- 
+			every_country = {
+				add_ideas = MAN_trade_comission
+				custom_effect_tooltip = MAN_state_industries
+			} 
 		}
 	
 	}
@@ -762,7 +765,7 @@ default = no
 		available_if_capitulated = no
 		
 		completion_reward = {
- 
+			custom_effect_tooltip = MAN_state_industries 
 		}
 	
 	}

@@ -38,3 +38,17 @@ MAN_post_mantetsu_economics = {
       has_completed_focus = MAN_decentralize_manetsu
    }
 }
+
+MAN_cultural_union = {
+   icon = GFX_decision_category_generic_propaganda
+
+   allowed = {
+       original_tag = MAN
+   }
+   available = {
+      has_completed_focus = MAN_collibartion_with_jap_army
+   }
+   visible = {
+      has_completed_focus = MAN_collibartion_with_jap_army
+   }
+}

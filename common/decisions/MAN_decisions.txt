@@ -318,12 +318,12 @@ MAN_post_mantetsu_economics = {
 
 MAN_cultural_union = {
 
-	MAN_cultural_event = {
+	MAN_cultural_society = {
 	
 		icon = GFX_decision_generic_industry
-		available = { has_government = socialism }
+		available = { has_war = no }
 		visible = {
-			has_completed_focus = MAN_allow_political_parties
+			has_completed_focus = MAN_collibartion_with_jap_army
 		}
 		 ai_will_do = {
 	       factor = 10
@@ -334,17 +334,14 @@ MAN_cultural_union = {
 		  
 	    }
 		cost = 65    
-		days_remove = 30
+		days_remove = 60
 		fire_only_once = yes	
-		remove_effect = {
-	      
-		  remove_ideas = MAN_leftist
-		   
-	    }
 		complete_effect  = {
-			add_ideas = MAN_labor_reforms
+			country_event = man.32 
+			set_country_flag = MAN_cultural_society_flag 
 		}
 	
 	}
-
-}
+	
+ 
+ }

@@ -363,10 +363,8 @@ communist_peace = {
 			is_puppet = yes
 			FROM = {
 				NOT = {
-					OR = { 
 						is_claimed_by = ROOT
 						is_core_of = ROOT
-					}
 				}
 			}
 		}

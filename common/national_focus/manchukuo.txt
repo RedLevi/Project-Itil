@@ -748,7 +748,6 @@ default = no
 		completion_reward = {
 			every_country = {
 				add_ideas = MAN_trade_comission
-				custom_effect_tooltip = MAN_state_industries
 			} 
 		}
 	
@@ -770,37 +769,6 @@ default = no
 	
 	}
 
-	focus = {
-
-	    id = MAN_collibartion_with_rus_army
-		icon = GFX_goal_generic_position_armies
-		x = 4
-		y = 9
-		cost = 10	
-        prerequisite = { focus = MAN_trade_jap }
-		available_if_capitulated = no
-		
-		completion_reward = {
- 
-		}
-	
-	}
-
-	focus = {
-
-	    id = MAN_relations_with_rus
-		icon = GFX_focus_man_1
-		x = 6
-		y = 9
-		cost = 5	
-        prerequisite = { focus = MAN_collibartion_with_jap_army }
-		available_if_capitulated = no
-		
-		completion_reward = {
- 
-		}
-	
-	}
 
 
 }

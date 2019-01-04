@@ -109,4 +109,5 @@ YUG_ROM_no_land = { value = 50 }
 YUG_aggression = { value = -40 }
 ### Manchuria ###
 MAN_JAP_improve_relation = { value = 30 }
+MAN_JAP_culture = { value = 20 }
 }

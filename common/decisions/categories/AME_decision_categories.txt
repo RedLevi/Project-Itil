@@ -43,7 +43,7 @@ AME_CAN_decisions = {
        tag = AME
    }
    visible = {
-      has_completed_focus = AME_military_MEX_focus
+      has_completed_focus = AME_military_CAN_focus
    }
 
 }

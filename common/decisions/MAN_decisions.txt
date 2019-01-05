@@ -345,3 +345,196 @@ MAN_cultural_union = {
 	
  
  }
+ 
+ MAN_massive_industrialization = {
+
+	MAN_industry_north = {
+	
+		icon = GFX_decision_generic_industry
+		available = { 
+			controls_state = 714
+			num_of_civilian_factories > 10
+		}
+		visible = {
+			has_completed_focus = MAN_mantetsu_industry
+		}
+		 ai_will_do = {
+	       factor = 15
+		   modifier = {
+	          factor = 2
+	          num_of_civilian_factories > 10
+	       }
+		   modifier = {
+	          factor = 2
+	          num_of_civilian_factories > 20
+	       }
+	
+	    }
+		cost = 15    
+		days_remove = 85
+		modifier = {
+			civilian_factory_use = 10
+		}
+		fire_only_once = yes	
+		remove_effect = {
+	      
+		  714 = {
+			add_extra_state_shared_building_slots = 2 
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		  
+		  }
+		   
+	    }
+		complete_effect  = {
+			add_stability = -0.01 
+		}
+	
+	}
+	
+	MAN_industry_east = {
+	
+		icon = GFX_decision_generic_industry
+		available = { 
+			controls_state = 717
+			num_of_civilian_factories > 10
+		}
+		visible = {
+			has_completed_focus = MAN_mantetsu_industry
+		}
+		 ai_will_do = {
+	       factor = 15
+		   modifier = {
+	          factor = 2
+	          num_of_civilian_factories > 10
+	       }
+		   modifier = {
+	          factor = 2
+	          num_of_civilian_factories > 20
+	       }
+	
+	    }
+		cost = 15    
+		days_remove = 85
+		modifier = {
+			civilian_factory_use = 10
+		}
+		fire_only_once = yes	
+		remove_effect = {
+	      
+		  717 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		  
+		  }
+		   
+	    }
+		complete_effect  = {
+			add_stability = -0.01 
+		}
+	
+	}
+	
+	MAN_industry_south = {
+	
+		icon = GFX_decision_generic_industry
+		available = { 
+			controls_state = 328
+			num_of_civilian_factories > 10
+		}
+		visible = {
+			has_completed_focus = MAN_mantetsu_industry
+		}
+		 ai_will_do = {
+	       factor = 15
+		   modifier = {
+	          factor = 2
+	          num_of_civilian_factories > 10
+	       }
+		   modifier = {
+	          factor = 2
+	          num_of_civilian_factories > 20
+	       }
+	
+	    }
+		cost = 15    
+		days_remove = 85
+		modifier = {
+			civilian_factory_use = 10
+		}
+		fire_only_once = yes	
+		remove_effect = {
+	      
+		  328 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		  
+		  }
+		   
+	    }
+		complete_effect  = {
+			add_stability = -0.01 
+		}
+	
+	}
+	
+	MAN_industry_naval = {
+	
+		icon = GFX_decision_generic_industry
+		available = { 
+			controls_state = 716
+			num_of_civilian_factories > 10
+		}
+		visible = {
+			has_completed_focus = MAN_mantetsu_industry
+		}
+		 ai_will_do = {
+	       factor = 15
+		   modifier = {
+	          factor = 2
+	          num_of_civilian_factories > 10
+	       }
+		   modifier = {
+	          factor = 2
+	          num_of_civilian_factories > 20
+	       }
+	
+	    }
+		cost = 15    
+		days_remove = 115
+		modifier = {
+			civilian_factory_use = 10
+		}
+		fire_only_once = yes	
+		remove_effect = {
+	      
+		  716 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = dockyard
+				level = 4
+				instant_build = yes
+			}
+		  
+		  }
+		   
+	    }
+		complete_effect  = {
+			add_stability = -0.01 
+		}	
+	
+	}
+	
+ 
+ }

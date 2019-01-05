@@ -52,3 +52,17 @@ MAN_cultural_union = {
       has_completed_focus = MAN_collibartion_with_jap_army
    }
 }
+
+MAN_massive_industrialization = {
+   icon = GFX_decision_category_generic_industry
+	picture = GFX_decision_cat_MAN_post_mantetsu
+   allowed = {
+       original_tag = MAN
+   }
+   available = {
+      has_completed_focus = MAN_mantetsu_industry
+   }
+   visible = {
+      has_completed_focus = MAN_mantetsu_economics
+   }
+}

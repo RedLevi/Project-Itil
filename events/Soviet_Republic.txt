@@ -1134,6 +1134,7 @@ country_event = { #Manchurian aid
 
    mean_time_to_happen = { days = 30 }
    option = {
+	
       name = soviet.29.a
          NAA = {
             add_state_core = 717
@@ -1146,7 +1147,8 @@ country_event = { #Manchurian aid
          transfer_state = 717
       }
       NAA = {
-         load_oob = Manchuria_Partisans
+		if = { limit = { MAN = { has_idea = MAN_leftist } } load_oob = Manchuria_Partisans }  
+        if = { limit = { MAN = { has_idea = MAN_leftist_2 } } load_oob = Manchuria_Partisans_2 }  
       }
       SOV = {
          add_to_faction = NAA

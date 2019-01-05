@@ -473,6 +473,7 @@ country_event = {#Trial of the directors
 	is_triggered_only = yes 
 	option = {
 		name = man.22.a 
+		add_stability = 0.75
 	}
 	
 }
@@ -666,6 +667,54 @@ country_event = {#Pan-Asian event
 		add_opinion_modifier = { target = JAP modifier = MAN_JAP_culture }
 	}
 }
+
+country_event = {#Leftist agitation
+	id = man.34
+	title = man.34.t 
+	desc = man.34.d 
+	is_triggered_only = yes 
+	option = {
+		name = man.34.a 
+		swap_ideas = {
+			remove_idea = MAN_leftist
+			add_idea = MAN_leftist_2
+		}
+	}
+}
+
+country_event = {#export crops?
+	id = man.35
+	title = man.35.t 
+	desc = man.35.d 
+	fire_only_once = yes 
+	trigger = {  
+		tag = MAN 
+		has_completed_focus = MAN_mantetsu_agriculture
+		is_in_faction_with = JAP 
+	}
+	mean_time_to_happen = { days = 70 }
+	option = {
+		name = man.35.a 
+			add_ideas = MAN_exporting_crops
+			JAP = { country_event = { id = man.36 days = 1 } }
+		}
+
+}
+	
+country_event = {#Manchrian imports
+	id = man.36
+	title = man.36.t 
+	desc = man.36.d 
+	is_triggered_only = yes
+	option = {
+		name = man.35.a 
+			add_stability = -0.02 
+		}
+
+}
+###TO DO LIST FOR yosuke 
+#a famine brought about by cash crops focus and exports 
+#Events/decisions to export crops to various countries 
 
 ###TO DO LIST for mamoru###
 #Add a potential mantetsu coup if you fail to reform effectively X

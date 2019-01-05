@@ -6,7 +6,7 @@ focus_tree = {
 
 		modifier = {
 			add = 10
-			original_tag = MAN
+			tag = MAN
 		}
 	}
 
@@ -89,9 +89,11 @@ default = no
 
 	    id = MAN_yosukes_path
 		icon = GFX_focus_man_4
-		x = 32
+		x = 20
 		y = 2
 		cost = 0	
+		available = { has_country_flag = MAN_leader_yosuke }
+		bypass = { has_country_flag = MAN_leader_yosuke }
         prerequisite = { focus = MAN_a_new_leader }
         mutually_exclusive = { focus = MAN_mamoru_path focus = MAN_zhang_path  }
 		available_if_capitulated = no
@@ -103,14 +105,17 @@ default = no
 	focus = {
 
 	    id = MAN_increase_power_yos
-		icon = GFX_focus_man_4
-		x = 32
+		icon = GFX_goal_generic_demand_territory
+		x = 18
 		y = 3
-		cost = 0	
+		cost = 5	
         prerequisite = { focus = MAN_yosukes_path }
 		
 		available_if_capitulated = no
 		completion_reward = {
+			add_war_support = 0.05 
+			add_political_power = 50 
+			hidden_effect = { country_event = { id = man.34 days = 20 } }
 		}
 	
 	}
@@ -118,9 +123,9 @@ default = no
 	focus = {
 
 	    id = MAN_hunt_leftist
-		icon = GFX_focus_man_4
-		x = 29
-		y = 4
+		icon = GFX_goal_anti_comintern_pact
+		x = 30
+		y = 6
 		cost = 0	
         prerequisite = { focus = MAN_increase_power_yos }
 		available_if_capitulated = no
@@ -128,17 +133,84 @@ default = no
 		}
 	
 	}
-
+	
 	focus = {
 
-	    id = MAN_force_labour
-		icon = GFX_focus_man_4
-		x = 36
+	    id = MAN_mantetsu_economics
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 16
 		y = 4
-		cost = 0	
+		cost = 10	
         prerequisite = { focus = MAN_increase_power_yos }
 		available_if_capitulated = no
 		completion_reward = {
+			add_ideas = MAN_mantetsu_economics_idea
+			custom_effect_tooltip = MAN_state_industries
+		}
+	
+	}
+	
+	focus = {
+
+	    id = MAN_mantetsu_politics
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 20
+		y = 4
+		cost = 10	
+        prerequisite = { focus = MAN_increase_power_yos }
+		available_if_capitulated = no
+		completion_reward = {
+			custom_effect_tooltip = MAN_state_industries
+			add_stability = 0.05 
+			add_war_support = 0.05 
+		}
+	
+	}
+	
+	
+	focus = {
+
+	    id = MAN_mantetsu_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 17
+		y = 5
+		cost = 10	
+        prerequisite = { focus = MAN_mantetsu_economics }
+		available_if_capitulated = no
+		completion_reward = {
+			 custom_effect_tooltip = MAN_state_industries
+			 add_ideas = MAN_heavy_industrialize
+		}
+	
+	}
+	
+	focus = {
+
+	    id = MAN_mantetsu_agriculture 
+		icon = GFX_goal_generic_construct_civilian
+		x = 17
+		y = 6
+		cost = 10	
+        prerequisite = { focus = MAN_mantetsu_industry }
+		available_if_capitulated = no
+		completion_reward = {
+			 custom_effect_tooltip = MAN_state_industries
+			 add_ideas = MAN_mantetsu_agriculture
+		}
+	
+	}
+	
+	focus = {
+
+	    id = MAN_force_labour
+		icon = GFX_goal_generic_construction2
+		x = 15
+		y = 5
+		cost = 10	
+        prerequisite = { focus = MAN_mantetsu_economics }
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = man_forced_labor 
 		}
 	
 	}
@@ -286,6 +358,7 @@ default = no
 		available_if_capitulated = no
 		
 		completion_reward = {
+			custom_effect_tooltip = MAN_state_industries
 			country_event = { id = man.23 }
 		}
 	
@@ -404,6 +477,7 @@ default = no
 		available_if_capitulated = no
 		
 		completion_reward = {
+			custom_effect_tooltip = MAN_state_industries
 			swap_ideas = {
 				add_idea = MAN_manetsu_1
 				remove_idea = MAN_manetsu
@@ -746,9 +820,7 @@ default = no
 		available_if_capitulated = no
 		
 		completion_reward = {
-			every_country = {
 				add_ideas = MAN_trade_comission
-			} 
 		}
 	
 	}
